@@ -7,6 +7,6 @@
  "supersedes": null,
  "fingerprint": "sha256:34bb81872471a542",
  "account": "the operator's Claude account (riskmandate.ai)",
- "task": null,
+ "task": "trig_017ioREjx6jKCDzubSXQ64ot",
  "note": "The first dev session (rounds 1 to 4). Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys; key.json built from the public k1. link only."
 }
