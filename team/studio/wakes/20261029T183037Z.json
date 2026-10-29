@@ -24,10 +24,24 @@
    "verdict": "partial",
    "comment": "1 done: deck 083, the correction in the agreed wording, no key or contact; vault_check, pushed. 2 done: open-source showcase, the byline with its contact link cut out of the image itself, checked by eye; page, hub, test beat. 3 not done this wake: the security-product cases, left for the next follow-up so they get care. Gate clean.",
    "at": "2026-10-29T18:34:32Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (post_review brief)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "shot.jpg viewed: hero, founders cards and quotes only; no byline, contact link, key, QR or token. Diff only in studio scope; gate clean; vault_check clean. deck 083 carries the agreed correction wording, no key or contact.",
+   "at": "2026-10-29T18:35:20Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (post_check brief)",
+   "model": "sonnet",
+   "verdict": "partial",
+   "comment": "1 kept: deck 083 with the agreed correction. 2 kept: open-source showcase, byline cut in the image. 3 deferred as the plan allowed (security cases). Nothing unplanned.",
+   "at": "2026-10-29T18:35:20Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-29T18:35:20Z",
+ "outcome": "partial",
  "history": [
   {
    "step": "pre_review",
