@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 13,
-  "state": "10:17 wake: E09 (mandate against grant, part two's first piece) sent to ruv.sgit; E04 reviewed (keep the content, redo the picture); the capability descriptions copied",
+  "round": 14,
+  "state": "11:17 wake: E09 reviewed (keep: part two opens on part one's rings; one wording to fix); no new request, E04 v2 is ruv.sgit's next",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -119,16 +119,20 @@
     {
       "what": "E09 sent to ruv.sgit; capability descriptions copied",
       "evidence": "src/static/studio/data/capabilities.json; deck/outbox/022"
+    },
+    {
+      "what": "E09 mandate against grant reviewed: keep, one wording to fix",
+      "evidence": "/studio/reviews/e09.html"
     }
   ],
   "next": [
     {
-      "what": "Review E09 when ruv.sgit delivers it",
-      "why": "part two",
-      "issue": "deck-012"
+      "what": "Review E04 v2 when ruv.sgit delivers it (after 11:32)",
+      "why": "part one",
+      "issue": "deck-010"
     },
     {
-      "what": "Then, as the conductor paces: E04 v2, E02 v3, E10 four barriers, E11 the harness",
+      "what": "Then E02 v3 (12:32), with E09's wording fix; then E10 four barriers and E11 the harness",
       "why": "programme order",
       "issue": "programme"
     }

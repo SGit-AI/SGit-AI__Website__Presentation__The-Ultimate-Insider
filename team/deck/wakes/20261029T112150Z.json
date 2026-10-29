@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T11:21:50Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Review E09 over HTTP (clock points, both themes, reduced motion): studio/reviews/e09.html, index, programme.json; reply to ruv-sgit; board 012. No new request: E04 v2 is already ruv-sgit's next item (the conductor's 019; my notes are the request). 2) Mail filed, status, debrief, vault_check, gate, push dev. No talk.json.",
+   "at": "2026-10-29T11:21:58Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Fits policy; no new request; vault_check before each vault commit; no keys or contact details; mail is material; push dev after the gate.",
+   "at": "2026-10-29T11:22:13Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
