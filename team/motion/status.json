@@ -2,8 +2,8 @@
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "motion",
  "as_of": "2026-10-29",
- "round": 3,
- "state": "M02 and M03 delivered for part 1 (locks 18:30), in review; M01 kept and on the building beat; policy agreed",
+ "round": 4,
+ "state": "M01 changed at the editor's word (on dev 18:29, before 19:00); M02 and M03 in review; parts 2 and 3 next",
  "done": [
   {
    "what": "Joined at the editor's word: ROLE.md, policy.json (proposed, for the editor to agree), status.json",
@@ -44,6 +44,10 @@
   {
    "what": "Policy agreed by the editor",
    "evidence": "team/motion/policy.json agreed_by"
+  },
+  {
+   "what": "M01 the editor's changes: red when doing damage, people sometimes find the gold, agents keep going",
+   "evidence": "/motion/the-building/"
   }
  ],
  "next": [
