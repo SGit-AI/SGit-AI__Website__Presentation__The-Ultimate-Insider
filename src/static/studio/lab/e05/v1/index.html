@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E05 v1: pivoting, one system to the next</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:56px;right:260px;font-size:40px;white-space:nowrap}
+#id{position:absolute;right:40px;top:10px;font:800 72px/1 system-ui;letter-spacing:-.02em;color:var(--head)}
+#g{position:absolute;left:0;top:0;width:1280px;height:720px}
+.lh{position:absolute;left:40px;white-space:nowrap;font:800 24px/30px system-ui;color:var(--head)}
+.lh i{font:600 20px/30px system-ui;font-style:normal;color:var(--dim);margin-left:14px}
+.zt{position:absolute;font:700 20px/24px system-ui;color:var(--head)}
+.zt i{display:block;font-weight:400;font-style:normal;color:var(--dim)}
+.zs{position:absolute;font:600 20px/24px system-ui}
+.zs.infra{color:var(--infra)}.zs.agent{color:var(--agent)}.zs.risk{color:var(--risk)}
+.gap{position:absolute;font:20px/24px system-ui;color:var(--dim)}
+.gap b{display:block;color:var(--head);font-weight:700}
+#foot{position:absolute;left:40px;right:40px;top:664px;font:20px/26px system-ui;color:var(--dim)}
+#foot b{color:var(--head)}
+</style>
+<script>
+window.RUV_STEPS = [{ t: 0, label: 'the question' }, { t: 3, label: 'Nx s1ngularity' }, { t: 18, label: 'the espionage campaign' }, { t: 28, label: 'what the files do not say' }, { t: 33, label: 'the still' }]
+</script>
+<script src="../../../../talk/engine/slide.js"></script>
+</head>
+<body>
+<div id="cv" data-end="44">
+  <p class="kk">Studio experiment E05 · v1, driven</p>
+  <div class="hl" data-in="0">One step it was able to take, <em>then the next.</em></div>
+  <div id="id">E05</div>
+  <svg id="g" viewBox="0 0 1280 720" aria-label="Two public cases drawn as one path each, hop by hop across the lines between systems, changing colour as it goes: Nx s1ngularity and the AI-orchestrated espionage campaign"></svg>
+  <div id="html"></div>
+  <div id="foot"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // Two cases, read at load: Nx s1ngularity from injection-sources.json (the "install scripts" source) and the
+  // espionage incident from incidents.json. Only the hops those files state are drawn. The short words in each zone
+  // restate the case's own fields (what_happened, target_agent, impact; what, agent, figure); the explainer quotes them.
+  // The incident's "targets" field is marked to_confirm and is never shown.
+  var NS = 'http://www.w3.org/2000/svg', I = null, N = null, B = null
+  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  var COLS = [[40, 200], [240, 210], [450, 330], [780, 230], [1010, 230]]
+  Promise.all([fetch('../../../data/injection-sources.json').then(function (r) { return r.json() }), fetch('../../../data/incidents.json').then(function (r) { return r.json() })])
+    .then(function (j) { I = j[0]; N = j[1] }).catch(function (e) { console.error('E05: a data file did not load', e) })
+
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function div(cls, html, css, p) { var d = document.createElement('div'); d.className = cls; d.innerHTML = html; for (var k in css) d.style[k] = css[k]; p.appendChild(d); return d }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;') }
+  function month(s) { var p = String(s).split('-'); return MON[+p[1] - 1] + ' ' + p[0] }
+  function dash(p) { var l = p.getTotalLength(); p.setAttribute('stroke-dasharray', l + ' ' + l); p.setAttribute('stroke-dashoffset', l); return { p: p, l: l } }
+
+  function lanes() {
+    var nx = I.sources_an_agent_consumes.filter(function (s) { return s.source === 'install scripts' })[0].case
+    var es = N.incidents.filter(function (x) { return x.id === 'espionage' })[0]
+    var agents = nx.target_agent.replace(/\s+on victims' machines$/, '')
+    return [
+      { top: 120, at: 3, name: nx.title, tag: nx.label + ' · ' + month(nx.date) + ' · grade ' + nx.grade,
+        zones: [
+          { t: 'npm', s: 'a compromised release', c: 'infra' },
+          { t: 'a victim\'s machine', s: 'it ran on install', c: 'infra' },
+          { t: 'its coding agents', sub: agents, s: 'called, with permission checks off', c: 'agent' },
+          { t: 'the whole machine', s: 'searched for secrets', c: 'agent' },
+          { t: 'public', s: nx.impact, c: 'risk' }] },
+      { top: 404, at: 18, name: es.name, tag: es.kind + ': ' + N.kinds[es.kind] + ' · reported ' + month(es.when),
+        zones: [
+          { t: 'a state actor', s: N.kinds[es.kind], c: 'infra' },
+          { t: es.agent, s: 'driven through the whole campaign', c: 'agent' },
+          { t: 'an espionage campaign', s: es.figure.value + ' of the work done by the model, as Anthropic reported it', c: 'risk' }],
+        gap: { t: 'Each system it reached, hop by hop', s: 'not in our files yet: the researcher is asked for more cases' } }]
+  }
+
+  function build(S) {
+    var svg = S.$('g'), host = S.$('html')
+    B = lanes().map(function (L) {
+      var T = L.top, n = L.zones.length, py = T + (L.zones.some(function (z) { return z.sub }) ? 138 : 92)
+      var y0 = T + 40, y1 = py + (n > 4 ? 120 : 98), o = { L: L, hops: [], nodes: [], txt: [], walls: [], py: py }
+      o.head = div('lh', esc(L.name) + '<i>' + esc(L.tag) + '</i>', { top: T + 'px' }, host)
+      o.frame = el('g', {}, svg)
+      for (var d = 1; d < Math.min(n, 5); d++) {                          // the line between two systems; it opens where the path crosses
+        var wa = { stroke: 'var(--line2)', 'stroke-width': 2, 'stroke-dasharray': '6 6' }
+        o.walls.push({ a: el('line', Object.assign({ x1: COLS[d][0], y1: y0, x2: COLS[d][0], y2: py }, wa), o.frame), b: el('line', Object.assign({ x1: COLS[d][0], y1: py, x2: COLS[d][0], y2: y1 }, wa), o.frame) })
+      }
+      L.zones.forEach(function (z, i) {
+        var x = COLS[i][0] + 20, w = COLS[i][1] - 34
+        var t = div('zt', esc(z.t) + (z.sub ? '<i>' + esc(z.sub) + '</i>' : ''), { left: x + 'px', top: (T + 44) + 'px', width: w + 'px' }, host)
+        var s = div('zs ' + z.c, esc(z.s), { left: x + 'px', top: (py + 22) + 'px', width: w + 'px' }, host)
+        if (i > 0) {                                                       // one hop: the source's colour up to the line, the next system's after it
+          var px = COLS[i - 1][0] + 20, lx = COLS[i][0], pc = L.zones[i - 1].c, sw = { fill: 'none', 'stroke-width': 5, 'stroke-linecap': 'round' }
+          o.hops.push({ pre: dash(el('path', Object.assign({ d: 'M' + px + ' ' + py + 'H' + lx, stroke: 'var(--' + pc + ')' }, sw), svg)),
+            post: dash(el('path', Object.assign({ d: 'M' + lx + ' ' + py + 'H' + x, stroke: 'var(--' + z.c + ')' }, sw), svg)) })
+        }
+        o.nodes.push(el('circle', { cx: x, cy: py, r: 10, fill: 'var(--' + z.c + ')' }, svg))
+        o.txt.push([t, s])
+      })
+      if (L.gap) {
+        var gx = COLS[n][0], gw = 1240 - gx
+        o.gapBox = el('rect', { x: gx, y: y0, width: gw, height: y1 - y0, rx: 14, fill: 'none', stroke: 'var(--line2)', 'stroke-width': 2, 'stroke-dasharray': '8 8' }, svg)
+        o.gap = div('gap', '<b>' + esc(L.gap.t) + '</b>' + esc(L.gap.s), { left: (gx + 24) + 'px', top: (y0 + 40) + 'px', width: (gw - 48) + 'px' }, host)
+      }
+      return o
+    })
+    S.$('foot').innerHTML = '<b>Each hop: a step it was able to take.</b> Only the hops our files state; more cases are coming from the researcher.'
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!I || !N) return
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .6))) }
+    B.forEach(function (o) {
+      var a = o.L.at, step = 2.6
+      o.head.style.opacity = k(a); o.frame.style.opacity = k(a, .8)
+      o.nodes.forEach(function (nd, i) {
+        var at = a + .6 + i * step
+        nd.style.opacity = k(at, .4); o.txt[i][0].style.opacity = k(at, .5); o.txt[i][1].style.opacity = k(at + .5, .5)
+        if (i > 0) {
+          var h = o.hops[i - 1], f1 = S.ease(S.seg(t, at - 1.8, at - .5)), op = S.ease(S.seg(t, at - .7, at - .4)), f2 = S.seg(t, at - .4, at)
+          h.pre.p.setAttribute('stroke-dashoffset', h.pre.l * (1 - f1)); h.post.p.setAttribute('stroke-dashoffset', h.post.l * (1 - f2))
+          var wl = o.walls[i - 1]; wl.a.setAttribute('y2', o.py - 18 * op); wl.b.setAttribute('y1', o.py + 18 * op)
+        }
+      })
+      if (o.gap) { var g = a + .6 + o.nodes.length * step + 1.8; o.gapBox.style.opacity = k(g); o.gap.style.opacity = k(g + .5) }
+    })
+    S.$('foot').style.opacity = k(33)
+  }
+})()
+</script>
+</body>
+</html>

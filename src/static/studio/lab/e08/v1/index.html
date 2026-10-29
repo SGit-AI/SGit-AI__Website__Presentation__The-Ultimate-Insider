@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E08 v1: the lethal trifecta, made visible</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<script>window.RUV_STEPS = [{ t: 0, label: 'three switches' }, { t: 7, label: 'all three on: open' }, { t: 16, label: 'private data off' }, { t: 24, label: 'untrusted content off' }, { t: 32, label: 'a way out off' }, { t: 41, label: 'three on, any one off' }]</script>
+<script src="../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:56px;font-size:40px;right:230px}
+.hl em{color:var(--risk)}
+#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--head);letter-spacing:.02em}
+#q{position:absolute;left:60px;right:230px;top:112px;font:20px/1.3 system-ui;color:var(--dim)}
+#q b{color:var(--head)}
+#pic{position:absolute;left:0;top:0;width:1280px;height:720px}
+#pic text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#foot{position:absolute;left:60px;right:40px;top:626px;height:60px;font:22px/1.3 system-ui;color:var(--text)}
+#foot b{color:var(--head)}
+#foot i{font-style:normal;color:var(--accent);font-weight:700}
+#foot u{text-decoration:none;color:var(--agent);font-weight:700}
+</style>
+</head>
+<body>
+<div id="cv" data-end="48">
+  <p class="kk">Studio experiment E08 · v1, driven</p>
+  <div id="id">E08</div>
+  <div class="hl" data-in="0">Three switches on, <em>and a document can turn the agent.</em></div>
+  <div id="q" data-in=".6">The lethal trifecta, <b>Simon Willison's idea</b>: private data, untrusted content, a way out.</div>
+  <svg id="pic" viewBox="0 0 1280 720" aria-label="Three switches feed one agent: untrusted content, private data and a way out. With all three on, a path runs from a document through the agent to the outside; with any one off, that path stops at a wall."></svg>
+  <div id="foot"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  var NS = 'http://www.w3.org/2000/svg', B = null
+  // the three switches, top to bottom on the slide; a = when its own turn off begins
+  var SW = {
+    doc: { x: 430, y: 250, label: 'untrusted content', a: 24 },
+    data: { x: 430, y: 530, label: 'private data', a: 16 },
+    out: { x: 900, y: 390, label: 'a way out', a: 32 } }
+  var AX = 680, AY = 390, AR = 42
+  var LANE = {                                                     // each lane: the path, and its length to the wall at its switch
+    doc: 'M250 250H560Q660 250 664 350',
+    data: 'M250 530H560Q660 530 664 430',
+    out: 'M' + (AX + AR) + ' ' + AY + 'H1030' }
+  var CAP = { doc: 'M250 250H370', data: 'M250 530H370', out: 'M' + (AX + AR) + ' ' + AY + 'H840' }
+  var COL = { doc: 'var(--risk)', data: 'var(--head)', out: 'var(--agent)' }
+  // the order a path runs: the document's words reach the agent, it is turned, it takes the data, it sends it out
+  var SEQ = [['doc', 0, .3], ['turn', .3, .4], ['data', .4, .65], ['out', .65, 1]]
+  var LINES = {
+    0: [1, 'Three switches on one agent.'],
+    7: [7.5, 'All three on: the document\'s words <b>turn the agent</b>, and it sends <b>your data</b> out. <u>The path is open.</u>'],
+    16: [17, '<b>Private data off:</b> the agent can still be turned, but it holds nothing private to send. <i>Closed.</i>'],
+    24: [25, '<b>Untrusted content off:</b> the document never reaches the agent. <i>Closed.</i>'],
+    32: [33, '<b>A way out off:</b> the data reaches the agent and stops at the wall. <i>Closed.</i>'],
+    41: [41.4, '<b>Three on: the path is open. Any one off: that path is closed.</b><br><span style="color:var(--dim)">One path, the one this picture draws; the idea is Simon Willison\'s.</span>'] }
+
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function txt(p, x, y, s, a) { var t = el('text', Object.assign({ x: x, y: y, 'font-size': 20, fill: 'var(--text)' }, a || {}), p); t.textContent = s; return t }
+  function dash(p) { var L = p.getTotalLength(); p.setAttribute('stroke-dasharray', L + ' ' + L); p.L = L; return p }
+
+  function build(S) {
+    var svg = S.$('pic'), b = { ov: {}, sw: {} }
+    // the base lanes, neutral
+    for (var k in LANE) el('path', { d: LANE[k], fill: 'none', stroke: 'var(--line2)', 'stroke-width': 5, 'stroke-linecap': 'round' }, svg)
+    // the document: a page with a folded corner
+    var g = el('g', { id: 'n-doc' }, svg)
+    el('path', { d: 'M90 222h34l14 14v44h-48z', fill: 'var(--panel)', stroke: 'var(--risk)', 'stroke-width': 3, 'stroke-linejoin': 'round' }, g)
+    el('path', { d: 'M100 246h28M100 258h28M100 270h20', stroke: 'var(--risk)', 'stroke-width': 2.5 }, g)
+    txt(g, 60, 316, 'a document', { 'font-weight': 700, fill: 'var(--head)' }); txt(g, 60, 340, 'from anyone', { fill: 'var(--dim)' })
+    // private data: a store
+    g = el('g', { id: 'n-data' }, svg)
+    el('path', { d: 'M90 512v38c0 8 48 8 48 0v-38', fill: 'var(--panel)', stroke: 'var(--head)', 'stroke-width': 3 }, g)
+    el('ellipse', { cx: 114, cy: 512, rx: 24, ry: 7, fill: 'var(--panel)', stroke: 'var(--head)', 'stroke-width': 3 }, g)
+    txt(g, 60, 596, 'your files', { 'font-weight': 700, fill: 'var(--head)' })
+    // the agent
+    g = el('g', { id: 'n-agent' }, svg)
+    b.ring = el('circle', { cx: AX, cy: AY, r: AR + 12, fill: 'none', stroke: 'var(--risk)', 'stroke-width': 4 }, g)
+    el('circle', { cx: AX, cy: AY, r: AR, fill: 'var(--agent)' }, g)
+    txt(g, AX - 52, AY + 62, 'the agent', { 'text-anchor': 'end', 'font-weight': 800, fill: 'var(--agent)' })
+    b.turned = txt(g, AX - 52, AY + 88, 'turned', { 'text-anchor': 'end', 'font-weight': 700, fill: 'var(--risk)' })
+    // the outside
+    g = el('g', { id: 'n-out' }, svg)
+    b.box = el('rect', { x: 1040, y: AY - 40, width: 190, height: 80, rx: 14, fill: 'var(--panel)', stroke: 'var(--line2)', 'stroke-width': 3 }, g)
+    txt(g, 1135, AY + 7, 'the outside', { 'text-anchor': 'middle', 'font-weight': 700, fill: 'var(--head)' })
+    b.state = txt(g, 1135, AY + 74, '', { 'text-anchor': 'middle', 'font-weight': 800, 'font-size': 24 })
+    // the lit path, drawn over the lanes
+    for (k in LANE) b.ov[k] = dash(el('path', { d: LANE[k], fill: 'none', stroke: COL[k], 'stroke-width': 6, 'stroke-linecap': 'round' }, svg))
+    for (k in CAP) b.ov[k].cap = dash(el('path', { d: CAP[k], fill: 'none', stroke: 'none' }, svg)).L
+    // the switches, each with its label, its wall and its tag
+    for (k in SW) {
+      var s = SW[k], w = { s: s }
+      g = el('g', { id: 'sw-' + k }, svg)
+      el('rect', { x: s.x - 40, y: s.y - 20, width: 80, height: 40, rx: 20, fill: 'var(--bg)', stroke: 'none' }, g)
+      w.pill = el('rect', { x: s.x - 38, y: s.y - 19, width: 76, height: 38, rx: 19, 'stroke-width': 3 }, g)
+      w.knob = el('circle', { cx: s.x + 19, cy: s.y, r: 13 }, g)
+      txt(g, s.x, s.y - 36, s.label, { 'text-anchor': 'middle', 'font-weight': 800, fill: 'var(--head)', 'font-size': 22 })
+      w.wall = el('rect', { x: s.x - 54, y: s.y - 34, width: 10, height: 68, rx: 3, fill: 'var(--accent)' }, g)
+      w.tag = txt(g, s.x, s.y + 52, 'turn off: closed', { 'text-anchor': 'middle', 'font-weight': 700, fill: 'var(--accent)' })
+      w.g = g; b.sw[k] = w
+    }
+    b.nodes = ['n-doc', 'n-data', 'n-agent', 'n-out'].map(function (id) { return S.$(id) })
+    B = b
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .6))) }
+    // appear: the agent and the outside, then the three switches with what they feed
+    B.nodes[2].style.opacity = k(.8); B.nodes[3].style.opacity = k(1.2)
+    B.nodes[0].style.opacity = k(2.2); B.sw.doc.g.style.opacity = k(2.2)
+    B.nodes[1].style.opacity = k(3.4); B.sw.data.g.style.opacity = k(3.4)
+    B.sw.out.g.style.opacity = k(4.6)
+    // how far off each switch is, and how far the path has run (p, 0 to 1 along SEQ)
+    var off = {}, p = 0, fade = 1, any = null
+    for (var n in SW) { var a = SW[n].a; off[n] = S.ease(S.seg(t, a, a + .6)) * (1 - S.ease(S.seg(t, a + 6, a + 6.6))); if (t >= a && t < a + 8) any = n }
+    if (t >= 7) p = S.seg(t, 7.5, 13)
+    if (any) {
+      var a0 = SW[any].a, cf = B.ov[any].cap / B.ov[any].L, p0 = any === 'doc' ? .3 * cf : any === 'data' ? .4 + .25 * cf : .65 + .35 * cf
+      if (t < a0 + .6) { p = 1; fade = 1 - S.seg(t, a0, a0 + .5) }
+      else if (t < a0 + 6.6) p = p0 * S.seg(t, a0 + 1.2, a0 + 4)
+      else p = S.lerp(p0, 1, S.seg(t, a0 + 6.6, a0 + 7.6))
+    }
+    SEQ.forEach(function (q) {
+      var f = S.clamp((p - q[1]) / (q[2] - q[1]), 0, 1)
+      if (q[0] === 'turn') { B.ring.style.opacity = f * fade; B.turned.style.opacity = f * fade; return }
+      var o = B.ov[q[0]]; o.setAttribute('stroke-dashoffset', o.L * (1 - f)); o.style.opacity = fade
+    })
+    var open = p >= .999 && fade >= 1, shut = any && off[any] > .5
+    B.state.textContent = open ? 'open' : shut ? 'closed' : ''
+    B.state.setAttribute('fill', open ? 'var(--agent)' : 'var(--accent)')
+    B.box.setAttribute('stroke', open ? 'var(--agent)' : 'var(--line2)')
+    for (n in B.sw) {
+      var w = B.sw[n], o = off[n], s = w.s
+      w.pill.setAttribute('fill', o > .5 ? 'var(--bg)' : 'var(--head)')
+      w.pill.setAttribute('stroke', o > .5 ? 'var(--accent)' : 'var(--head)')
+      w.knob.setAttribute('cx', s.x + 19 - 38 * o)
+      w.knob.setAttribute('fill', o > .5 ? 'var(--accent)' : 'var(--bg)')
+      var wl = S.ease(S.seg(t, s.a + .6, s.a + 1.1)) * (1 - S.ease(S.seg(t, s.a + 6, s.a + 6.5)))
+      w.wall.style.opacity = wl; w.wall.style.transformOrigin = (s.x - 49) + 'px ' + (s.y + 34) + 'px'; w.wall.style.transform = 'scaleY(' + Math.max(wl, .001) + ')'
+      w.tag.style.opacity = k(s.a + 1)
+    }
+    var keys = Object.keys(LINES).map(Number).filter(function (x) { return t >= x }), last = LINES[keys[keys.length - 1]]
+    var f = S.$('foot'); if (f.innerHTML !== last[1]) f.innerHTML = last[1]
+    f.style.opacity = k(last[0], .5)
+  }
+})()
+</script>
+</body>
+</html>

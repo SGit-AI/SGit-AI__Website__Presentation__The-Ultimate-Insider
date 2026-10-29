@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E06 v1: hard outside, soft inside</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<script>
+window.RUV_STEPS = [
+  { t: 0, label: 'The shell' },
+  { t: 5, label: 'From outside, the wall holds' },
+  { t: 13, label: 'Inside, systems that never met an adversary' },
+  { t: 21, label: 'An agent already inside' },
+  { t: 24, label: 'It reaches each in turn' },
+  { t: 41, label: 'Hard outside, soft inside' }
+]
+</script>
+<script src="../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px;margin:0}
+.hl{top:52px;font-size:40px;right:240px}
+#id{position:absolute;right:40px;top:10px;font:800 72px/1 system-ui;letter-spacing:-.02em;color:var(--head)}
+#note{position:absolute;left:60px;right:240px;top:104px;font:italic 20px/26px system-ui;color:var(--dim);white-space:nowrap}
+#pic{position:absolute;left:0;top:0;width:1280px;height:720px}
+#end{position:absolute;left:40px;right:40px;top:642px;font:700 24px/30px Georgia,serif;color:var(--head);text-align:center}
+#end i{font-style:normal;color:var(--infra)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="50">
+  <p class="kk">Studio experiment E06 · v1, driven</p>
+  <div id="id">E06</div>
+  <div class="hl" data-in="0">Hard outside, <em>soft inside.</em></div>
+  <div id="note" data-in=".6" data-rise="0">Illustrative: the shape, not a measurement; the data is coming from the researcher.</div>
+  <svg id="pic" viewBox="0 0 1280 720" aria-label="A hard shell, the perimeter. Paths from outside stop at its wall, which holds. Inside, four systems that trust whatever is inside: an internal admin page, an internal API with no rate limit, a service account with broad rights, an internal database. An agent already inside reaches each in turn, and each lights up."></svg>
+  <div id="end"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // Illustrative only: generic kinds of system, no numbers, no names. The shape comes from the programme's E06 idea.
+  var SH = { x: 320, y: 160, w: 920, h: 468 }                       // the shell
+  var OUT = [300, 500]                                                // the two paths from outside, by height
+  var AG = [420, 400]                                                 // where the agent already is
+  var SYS = [                                                         // x, y, row (t: label above, b: below), name, what it trusts
+    [600, 300, 't', 'an internal admin page', 'trusted because it is inside'],
+    [780, 480, 'b', 'an internal API', 'no rate limit'],
+    [980, 300, 't', 'a service account', 'broad rights to everything'],
+    [1100, 480, 'b', 'an internal database', 'trusts any caller inside']]
+  var SHOW = [13.5, 15, 16.5, 18], REACH = [24, 28, 32, 36], HOP = 2  // each system: appears, path starts, path takes HOP s
+  var NS = 'http://www.w3.org/2000/svg', B = null
+  function el(tag, a, p, txt) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); if (txt) e.textContent = txt; p.appendChild(e); return e }
+  function line(p, len) { p.setAttribute('stroke-dasharray', len + ' ' + len); return len }
+
+  function build(S) {
+    var svg = S.$('pic'), b = {}
+    // the shell: a hard wall, drawn once
+    b.shell = el('rect', { x: SH.x, y: SH.y, width: SH.w, height: SH.h, rx: 30, fill: 'var(--panel)', stroke: 'var(--head)', 'stroke-width': 10 }, svg)
+    b.shellLen = line(b.shell, 2 * (SH.w + SH.h))
+    b.perim = el('g', {}, svg)
+    el('rect', { x: 690, y: 144, width: 180, height: 32, fill: 'var(--bg)' }, b.perim)
+    el('text', { x: 780, y: 168, 'text-anchor': 'middle', 'font-size': 22, 'font-weight': 800, fill: 'var(--head)' }, b.perim, 'the perimeter')
+    b.outL = el('text', { x: 40, y: 196, 'font-size': 20, 'font-weight': 800, 'letter-spacing': '.08em', fill: 'var(--dim)' }, svg, 'OUTSIDE')
+    b.inL = el('text', { x: 350, y: 204, 'font-size': 20, 'font-weight': 800, 'letter-spacing': '.08em', fill: 'var(--dim)' }, svg, 'INSIDE')
+    // from outside: a path that stops at the wall, which holds
+    b.out = OUT.map(function (y) {
+      var g = el('g', {}, svg), o = { g: g }
+      el('circle', { cx: 60, cy: y, r: 8, fill: 'var(--head)' }, g)
+      o.p = el('path', { d: 'M60 ' + y + 'H302', fill: 'none', stroke: 'var(--head)', 'stroke-width': 4, 'stroke-linecap': 'round' }, g)
+      o.len = line(o.p, 242)
+      o.mark = el('rect', { x: SH.x - 7, y: y - 34, width: 14, height: 68, rx: 4, fill: 'var(--accent)' }, svg)
+      return o
+    })
+    b.holds = el('g', {}, svg)
+    el('text', { x: 170, y: 394, 'text-anchor': 'middle', 'font-size': 24, 'font-weight': 800, fill: 'var(--accent)' }, b.holds, 'the wall holds')
+    el('text', { x: 170, y: 422, 'text-anchor': 'middle', 'font-size': 20, fill: 'var(--dim)' }, b.holds, 'built for this')
+    // the agent's path, system to system: nothing in the way
+    var pts = [AG].concat(SYS.map(function (s) { return [s[0], s[1]] }))
+    b.hops = SYS.map(function (s, i) {
+      var a = pts[i], z = pts[i + 1], p = el('path', { d: 'M' + a[0] + ' ' + a[1] + 'L' + z[0] + ' ' + z[1], fill: 'none', stroke: 'var(--agent)', 'stroke-width': 5, 'stroke-linecap': 'round' }, svg)
+      return { p: p, len: line(p, Math.hypot(z[0] - a[0], z[1] - a[1])) }
+    })
+    // the systems: a quiet box, and the same box lit when the agent reaches it
+    b.sys = SYS.map(function (s) {
+      var g = el('g', {}, svg), o = { g: g }, x = s[0], y = s[1]
+      el('rect', { x: x - 30, y: y - 30, width: 60, height: 60, rx: 12, fill: 'var(--bg)', stroke: 'var(--line2)', 'stroke-width': 4 }, g)
+      o.ring = el('rect', { x: x - 30, y: y - 30, width: 60, height: 60, rx: 12, fill: 'none', stroke: 'var(--infra)', 'stroke-width': 4 }, g)
+      o.lit = el('rect', { x: x - 30, y: y - 30, width: 60, height: 60, rx: 12, fill: 'var(--infra)', stroke: 'var(--infra)', 'stroke-width': 4 }, g)
+      var ty = s[2] === 't' ? y - 72 : y + 64
+      o.nm = el('text', { x: x, y: ty, 'text-anchor': 'middle', 'font-size': 22, 'font-weight': 800, fill: 'var(--head)' }, g, s[3])
+      o.tr = el('text', { x: x, y: ty + 28, 'text-anchor': 'middle', 'font-size': 20, fill: 'var(--dim)' }, g, s[4])
+      return o
+    })
+    // the agent, already inside
+    b.ag = el('g', {}, svg)
+    el('circle', { cx: AG[0], cy: AG[1], r: 16, fill: 'var(--agent)' }, b.ag)
+    el('text', { x: AG[0], y: AG[1] + 50, 'text-anchor': 'middle', 'font-size': 22, 'font-weight': 800, fill: 'var(--agent)' }, b.ag, 'an agent,')
+    el('text', { x: AG[0], y: AG[1] + 76, 'text-anchor': 'middle', 'font-size': 22, 'font-weight': 800, fill: 'var(--agent)' }, b.ag, 'already inside')
+    b.head = el('circle', { r: 11, fill: 'var(--agent)' }, svg)
+    B = b
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .6))) }
+    B.shell.setAttribute('stroke-dashoffset', B.shellLen * (1 - S.ease(S.seg(t, 1, 4))))
+    B.shell.style.fillOpacity = k(3.4, .8)
+    B.perim.style.opacity = k(3.6); B.outL.style.opacity = k(3.8); B.inL.style.opacity = k(4)
+    // from outside: two paths reach the wall and stop; the wall flashes the accent and holds
+    B.out.forEach(function (o, i) {
+      var a = 5 + i * 3.4
+      o.g.style.opacity = k(a, .3)
+      o.p.setAttribute('stroke-dashoffset', o.len * (1 - S.ease(S.seg(t, a + .2, a + 2.2))))
+      o.mark.style.opacity = k(a + 2.2, .3)
+    })
+    B.holds.style.opacity = k(7.6)
+    // the systems appear, quiet
+    B.sys.forEach(function (o, i) { o.g.style.opacity = k(SHOW[i]) })
+    B.ag.style.opacity = k(21)
+    // the agent's path, hop by hop; each system lights up as it is reached
+    var hx = AG[0], hy = AG[1], moving = false
+    B.hops.forEach(function (h, i) {
+      var f = S.ease(S.seg(t, REACH[i], REACH[i] + HOP)), s = B.sys[i]
+      h.p.setAttribute('stroke-dashoffset', h.len * (1 - f))
+      h.p.style.opacity = f > 0 ? 1 : 0
+      if (f > 0) { var a = i ? SYS[i - 1] : AG; hx = S.lerp(a[0], SYS[i][0], f); hy = S.lerp(a[1], SYS[i][1], f); moving = f < 1 }
+      var lit = k(REACH[i] + HOP, .5)
+      s.lit.style.opacity = lit
+      var pulse = S.seg(t, REACH[i] + HOP, REACH[i] + HOP + 1.2)
+      s.ring.style.opacity = pulse > 0 && pulse < 1 ? 1 - pulse : 0
+      s.ring.setAttribute('transform', 'translate(' + SYS[i][0] + ' ' + SYS[i][1] + ') scale(' + (1 + .6 * pulse) + ') translate(' + -SYS[i][0] + ' ' + -SYS[i][1] + ')')
+      s.tr.setAttribute('fill', lit > .5 ? 'var(--infra)' : 'var(--dim)')
+    })
+    B.head.setAttribute('cx', hx); B.head.setAttribute('cy', hy)
+    B.head.style.opacity = moving ? 1 : 0
+    var e = t >= 41 ? 'Built to stop what comes from outside; <i>nothing inside asks who is calling.</i>' : ''
+    if (S.$('end').innerHTML !== e) S.$('end').innerHTML = e
+    S.$('end').style.opacity = k(41)
+  }
+})()
+</script>
+</body>
+</html>
