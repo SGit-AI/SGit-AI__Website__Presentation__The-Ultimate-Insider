@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "the editor's chat, 17:20: live technology in the slides",
+ "started": "2026-10-29T17:21:30Z",
+ "steps": {
+  "plan": {
+   "by": "deck (the editor's words in chat, about 17:20)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Recorded after the work, honestly: the editor asked live for the technology embedded in the slides (SHarness's Linux demos, a vault, sgit.ai's demos), and deck built it while he waited. Plan as done: six live slides under src/static/talk/slides/live/ framing the real public pages (sharness.ai demo and playground, sgit.ai's Risk Mandate vault demo and demos index, abp.sgit.ai, what-can-it-do), loaded only when shown, a still card for thumbnails, an open-in-a-new-tab fallback; in talk.json after the demos intro in the same 6:30. No keys beyond what the owners' own pages already publish.",
+   "at": "2026-10-29T17:21:30Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan recorded after the work, flagged; matches the diff; all paths in scope; no keys, only owners' published pages.",
+   "at": "2026-10-29T17:21:55Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "Six live slides (sharness Linux kernel and playground, sgit.ai Risk Mandate vault and demos, abp.sgit.ai, what-can-it-do) in the demos slot; the Linux kernel checked booting inside the player; thumbnails show a card. Out of order: built before plan and pre_review while the editor waited.",
+   "at": "2026-10-29T17:21:55Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "7 files in scope (0 outside); bare public https iframes, no key or token, skipped for ?static and ?t=; no em-dashes; nothing attack-shaped.",
+   "at": "2026-10-29T17:21:55Z"
+  },
+  "post_check": {
+   "by": "deck (the editor watching live)",
+   "model": "",
+   "verdict": "partial",
+   "comment": "Done as the plan describes, but the order was work first, plan after: partial on process, not on content. A recorded fallback for the Linux demo is still owed (dev or motion@).",
+   "at": "2026-10-29T17:21:55Z"
+  }
+ },
+ "closed": "2026-10-29T17:21:55Z",
+ "outcome": "ok"
+}

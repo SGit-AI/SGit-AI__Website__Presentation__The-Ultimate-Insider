@@ -543,13 +543,79 @@
     {
       "id": "demos",
       "act": "Part three: brakes, and the opportunity",
-      "dur": 390,
+      "dur": 30,
       "title": "Live demos, all open source",
       "slide": {
         "src": "slides/demos/index.html"
       },
-      "say": "Let me show you, live. Everything you are about to see is open source.",
+      "say": "Let me show you, live. Everything you are about to see is open source, and running in this slide.",
       "cue": "Demo list to be confirmed by Dinis before the talk. Have each one open in its own tab, and a recorded fallback for each."
+    },
+    {
+      "id": "live-sharness-linux",
+      "dur": 120,
+      "title": "A real Linux kernel, in this tab",
+      "slide": {
+        "src": "slides/live/sharness-linux/index.html"
+      },
+      "say": "This is not a video. This slide is running a real Linux kernel, in this browser tab, with SHarness inside it. The policy is applied by the kernel before the agent starts, and nothing is installed on this machine.",
+      "cue": "LIVE: the real page, loaded in the slide. It takes about a minute or two to boot: open this slide early, or start talking over the boot log. Fallback: the link at the foot, or a recording.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "live-sharness-playground",
+      "dur": 60,
+      "title": "The SHarness playground",
+      "slide": {
+        "src": "slides/live/sharness-playground/index.html"
+      },
+      "say": "And here you can type the commands yourself. Try to get out of the harness, and tell me what you find.",
+      "cue": "LIVE: the real page, loaded in the slide. The invitation to escape: the project's own pages say what is in scope and where to report.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "live-vault-risk-mandate",
+      "dur": 60,
+      "title": "A vault, opened live",
+      "slide": {
+        "src": "slides/live/vault-risk-mandate/index.html"
+      },
+      "say": "This bit in the middle is a vault, encrypted, being opened right now in the page with a read key its owner published. The server that holds it cannot read it.",
+      "cue": "LIVE: the real page, loaded in the slide. Only read keys their owners already published.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "live-abp",
+      "dur": 45,
+      "title": "Agent Behaviour Policies, live",
+      "slide": {
+        "src": "slides/live/abp/index.html"
+      },
+      "say": "These are the published behaviour policy examples, live on abp.sgit.ai: the reach, the mandate, the gap and the barriers, for real agents.",
+      "cue": "LIVE: the real page, loaded in the slide. ",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "live-what-can-it-do",
+      "dur": 45,
+      "title": "What can it do",
+      "slide": {
+        "src": "slides/live/what-can-it-do/index.html"
+      },
+      "say": "And this is the reach, measured: what an agent can actually do, capability by capability.",
+      "cue": "LIVE: the real page, loaded in the slide. ",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "live-sgit-demos",
+      "dur": 30,
+      "title": "The sgit.ai demos",
+      "slide": {
+        "src": "slides/live/sgit-demos/index.html"
+      },
+      "say": "Everything you have just seen is open source, and runs in the browser. It is all on sgit.ai.",
+      "cue": "LIVE: the real page, loaded in the slide. ",
+      "act": "Part three: brakes, and the opportunity"
     },
     {
       "id": "brakes",
