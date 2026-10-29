@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "deck request 005: issue and reply, slice 1 delivered (evidence/studio/studio-e02-e09.json, mail deck 008); decisions deck: evidence/proposals/editor-decisions-deck.md and editor-decisions.json, request conductor 006, notice editor 004, board 006; token-shaped values redacted in the vault's captures (a check printed most of several public tokens to the log; three were in the 02:22 push); the 03:09 scheduled wake folded into this one",
    "at": "2026-10-29T03:16:13Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "finding",
+   "comment": "Gate clean; 0 outside scope; vault_check clean on all three; no token-shaped values left in evidence/, team/ or the vaults; no agent-directing text in the new mail. Finding, not a stop: public third-party tokens (write-only append tokens sites publish, news page tokens) went out in the 02:22 push and a check printed most of several to the session log; now redacted, the 02:22 commit stays in history. Tell the editor.",
+   "at": "2026-10-29T03:17:07Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) deck request: issue 005, reply deck/004, slice 1 delivered (f28c639, studio-e02-e09.json, deck/008); E13 included, a small extra. 2) decisions deck as design only (b2ec3d6, 59ac8ab), conductor/006, editor/004, issue 006; no build, tools or src files changed: condition kept. 3) board, status, debrief done. Unplanned: token redaction in captures (security's finding, for the editor).",
+   "at": "2026-10-29T03:17:31Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T03:17:31Z",
+ "outcome": "ok"
 }
