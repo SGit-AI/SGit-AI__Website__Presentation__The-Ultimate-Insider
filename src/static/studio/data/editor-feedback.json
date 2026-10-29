@@ -80,6 +80,25 @@
         "a view of the prompt itself: how data from an email or a calendar invite ends up inside one big prompt beside the system instructions, which is the problem of prompt injection"
       ],
       "priority": "later: after the feedback round"
+    },
+    {
+      "id": "E04",
+      "at": "14:55",
+      "verdict": "his favourite so far: v2 (the four paths) into the talk; expand E04 into a series",
+      "likes": [
+        "the jump: the path jumping over the wall and turning from one colour to another, or breaking the wall apart; 'such a cool thing to do, and we need to do more like this'",
+        "v2, four paths: 'my favourite slide so far'",
+        "the four beats (goal, in the way, what it did, the loss) are good"
+      ],
+      "v3": [
+        "too much information on screen: find a better way to present the text, there is a lot of good meat in it"
+      ],
+      "new_pieces": [
+        "zoomed-in case studies, one per piece, in v2's animated style but more infographic: OpenAI's evaluation agent breaking into Hugging Face, Antigravity, OpenClaw, the Claude evaluations (Irregular), three or four to start",
+        "a case not yet in the data: the agent that found a vulnerability in a Pilates class booking system and bumped people off the waiting list to get its user in (the researcher to find and grade it first)",
+        "for a security and hacking audience: show how far beyond the task the agents went, and how creatively they attacked; then 'imagine this on steroids'"
+      ],
+      "priority": "high: worth creating a lot of these"
     }
   ],
   "deck": [
