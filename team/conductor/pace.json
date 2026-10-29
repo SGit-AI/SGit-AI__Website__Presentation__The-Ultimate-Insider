@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T13:11:24Z",
+ "updated": "2026-10-29T14:05:50Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -19,11 +19,15 @@
   },
   "dev": {
    "slot": ":47",
-   "in_flight": "dev 016 the label (13:47)"
+   "in_flight": "the editor's feedback pane and lane, with voice (now, the editor wakes dev)"
   },
   "designer": {
    "slot": ":39",
    "in_flight": "design note 1, waiting on dev"
+  },
+  "storyteller": {
+   "slot": ":54 (proposed)",
+   "in_flight": "joining: the story tree, Wardley maps, the arc against the beats, for the editor"
   }
  },
  "nodes": [
@@ -427,6 +431,20 @@
    "kind": "review",
    "by": "deck",
    "verdict": "keep, ready for the editor"
+  },
+  {
+   "id": "editor-lane",
+   "kind": "request",
+   "by": "the editor",
+   "for": "dev",
+   "status": "in flight"
+  },
+  {
+   "id": "editor-player-build",
+   "kind": "request",
+   "by": "the editor",
+   "for": "dev",
+   "status": "queued"
   }
  ],
  "edges": [
@@ -741,6 +759,11 @@
    "at": "2026-10-29T13:11:24Z",
    "by": "conductor",
    "what": "E04 v2 kept; E02 v3 delivered; E11 13:32; dev 016 13:47, the sequence 14:47; the edge to no node fixed; the pre-review brief names scope.holds"
+  },
+  {
+   "at": "2026-10-29T14:05:50Z",
+   "by": "conductor",
+   "what": "the editor's briefs: dev's feedback pane and lane first, then the player with a build mode; storyteller proposed at :54; the register taken from the researcher"
   }
  ],
  "queue": {
@@ -751,7 +774,7 @@
  "next": {
   "ruv-sgit": "13:32 E11; then E13",
   "researcher": "nothing new until the data request is answered",
-  "dev": "13:47 dev 016; 14:47 the dashboard part 4, the sequence"
+  "dev": "now: the feedback pane and lane with voice; next wakes: the player with the build mode (iPad first); after 19:00: the dashboard part 4"
  },
  "routed": [
   "team/deck/requests/conductor__pace-the-studio.md",
@@ -827,12 +850,18 @@
     "item": "dev 016: the third circle's label (designer's note 5, in dev's holds)"
    },
    {
-    "at": "14:47",
-    "item": "the dashboard part 4: the sequence"
+    "at": "now",
+    "item": "the editor's feedback pane and lane, with voice by OpenRouter (newsroom.sgit.ai's pattern)",
+    "from": "the editor, 14:00"
    },
    {
-    "at": "later",
-    "item": "part 5 the artifacts, then dev's own 003 and 004"
+    "at": "next",
+    "item": "the player from ruv.sgit.ai with a build mode: order, show or hide, comments, steps up and down on every piece; iPad first",
+    "from": "the editor, 13:50 and 14:10"
+   },
+   {
+    "at": "after 19:00",
+    "item": "the dashboard part 4 (the sequence), part 5, dev's own 003 and 004"
    }
   ],
   "designer": [
@@ -886,5 +915,22 @@
     "item": "E13"
    }
   ]
- }
+ },
+ "waits_on_editor": [
+  {
+   "what": "'Empower' in the list of projects: its real name"
+  },
+  {
+   "what": "'the billing' in the list of projects: which project"
+  },
+  {
+   "what": "which 'blast radius' piece: ruv.sgit.ai's or /ruv-sgit/blast-radius/"
+  },
+  {
+   "what": "Sharness.ai: confirm or correct the researcher's capture (harness.json)"
+  },
+  {
+   "what": "D12, D02, item 4, the draft policy files, the handover zips"
+  }
+ ]
 }

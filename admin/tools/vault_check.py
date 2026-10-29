@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'build'))
 from validate import Gate                                           # one list of leak patterns for the site and the vaults
 
 EXTRA = [('sgit private credential', re.compile(r'sgit_private_[a-z]+_')),
+         ('OpenRouter key',          re.compile(r'\bsk-or-v1-[0-9A-Za-z]{20,}')),   # the editor's voice key lives in his browser only
          ('email address',           re.compile(r'\b[\w.+-]+@[\w-]+(\.[\w-]+)+\b'))]
 
 
