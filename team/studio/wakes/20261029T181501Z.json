@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "studio",
+ "kind": "scheduled, hourly at :12",
+ "started": "2026-10-29T18:15:01Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (plan brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Requests: none new; 008 is the open ask. 2. Screenshot newsroom.sgit.ai where-to-invest-in-sgit and the-fork-next-door, checked by eye for keys, key QRs, read keys, fingerprints and private content; showcase slides at src/static/studio-ports/lab/<slug>/ with pages in src/pages/studio-ports/<slug>/, own-site claims marked as the editor's; PHP October's security-product cases pending the researcher's links. 3. Gate, debrief, status; deck told by mail; release to dev; follow-up at 18:29.",
+   "at": "2026-10-29T18:15:43Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (pre_review brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Writes only in studio-ports and team/studio; talk.json, studio/** and ruv-sgit/** untouched; no stop condition. Conditions: cut any key, read key, fingerprint or QR region out of the image file itself; check the final JPEG by eye; no external script; QR of the public link only; sources kept; no em-dashes.",
+   "at": "2026-10-29T18:15:55Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "done",
+   "comment": "1 done: no new requests at the start; dev's urgent 013 arrived mid-wake: E08 is ruv.sgit's file, answered with the owner's name and the fix (dev 045, ruv-sgit 001), the editor asked. 2 done: invest and fork showcases, shots taken by studio, cut above any vault section, checked by eye; pages, hub, test beats. 3 done: gate clean, debrief, status, deck 079, board 004.",
+   "at": "2026-10-29T18:20:06Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (post_review brief)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Gate clean, agents check 0 outside scope, vault_check clean. Only studio paths changed; src/static/studio/lab/** unchanged (013 declined, the fix given to ruv.sgit in 045 and 001). Both shots: article tops only, no key, read key, QR, fingerprint or token. Mails public-safe.",
+   "at": "2026-10-29T18:20:53Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (post_check brief)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1-3 done: invest and fork showcases, pages, hub, test beats; gate, debrief, status, deck 079, board 004. Unplanned: dev's urgent 013 answered with the owner's name, ruv.sgit's file untouched. Conditions kept.",
+   "at": "2026-10-29T18:20:53Z"
+  }
+ },
+ "closed": "2026-10-29T18:20:53Z",
+ "outcome": "ok"
+}

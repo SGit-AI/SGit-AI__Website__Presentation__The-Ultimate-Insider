@@ -75,6 +75,26 @@
     "src": "../studio-ports/lab/abp-enforcement/index.html"
    },
    "say": "Showcase for part 3, Agent Behaviour Policies, live."
+  },
+  {
+   "id": "show-invest",
+   "act": "Showcase: the way out",
+   "dur": 18,
+   "title": "Where to invest in sgit",
+   "slide": {
+    "src": "../studio-ports/lab/invest/index.html"
+   },
+   "say": "Showcase for the solution section (conductor 008)."
+  },
+  {
+   "id": "show-fork",
+   "act": "Showcase: the way out",
+   "dur": 18,
+   "title": "The fork next door",
+   "slide": {
+    "src": "../studio-ports/lab/fork/index.html"
+   },
+   "say": "Showcase for the solution section (conductor 008)."
   }
  ]
 }
