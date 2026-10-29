@@ -1,0 +1,715 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T14:17:24Z",
+ "until": "2026-10-29T15:13:59Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T14:52:09Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T145209Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "partial"
+   },
+   "plan": "Sub-agent plan, AMENDED by the member (keep the night log as it is; the moments view is its own page, clickable): 1) admin/tools/moments.py reads team/conductor/night/*.json (one moment per run), team/conductor/pace.json log (the conductor's one-line summaries, the 'what you need to know' headline) and team/*/wakes/*.json, and writes content/articles/moments.md: a strip of moment cards (time, smal"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T15:13:01Z",
+   "kind": "scheduled, hourly at :02",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T151301Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Sub-agent plan: 1. team/conductor/pace.json: E11, E07, E10, E13 delivered (deck to review), ruv-sgit's remaining E05, E06, E08, E12, E14 and the story pieces; dev's player ported; the storyteller's R5 contradiction waits on the editor; the split proposal still waits on the editor, no schedule.json change. 2. Night log and Moments edition for the 15:12 run (night_log.py); note dev's partial post-ch"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T14:19:43Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/deck/wakes/20261029T141943Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "partial"
+   },
+   "plan": "Editor's request, live, 14:19: beginning, middle and end of every animation, to review the lab one by one. 1) A generated lab page, src/pages/studio/lab.html, from team/deck/tools/lab.py: every lab slide frozen at about 15 per cent, half way and its end, newest first, links to play, explainer, reviews; a button on the studio hub. 2) Release to dev. The slide-selection UI is dev's (the conductor's "
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T14:44:56Z",
+   "kind": "scheduled, hourly at :17 (fired 14:44, during the editor's live review)",
+   "outcome": "idle",
+   "record": "team/deck/wakes/20261029T144456Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "none",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Idle by design: the 14:17 wake fired at 14:44 while the editor was reviewing the studio live in this session; that session does deck's work this hour. Read the mail: dev's reply (RUV_STEPS, talk/view.html?src=) kept for the requests after the round. No files changed."
+  },
+  {
+   "agent": "designer",
+   "started": "2026-10-29T14:49:48Z",
+   "kind": "scheduled, hourly at :39",
+   "outcome": "ok",
+   "record": "team/designer/wakes/20261029T144948Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Check dev's third-label build (dev 016, 9f17ce7) at 1920 and 390 by bounding box; the check in reviews/2026-10-29__home-hero.md; designer 006 to done; an update in mailroom/dev/. 2) designer 007: whether dev built note 6; status.json. 3) The lab pages' portrait hint as a request to mailroom/deck/; vault_check first. Member's amendment to 2: note 6 is not yet written, so item 2 is writing it: mo"
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T14:17:44Z",
+   "kind": "the editor's wake, in session",
+   "outcome": "ok",
+   "record": "team/dev/wakes/20261029T141744Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1. Side menu scrolls on its own; a GitHub link with a star in the top bar: site.css, build.py chrome. 2. The lane and pane: vault tui-editor-lane created in the scratchpad, never in the repo; its keys sealed to the conductor and the DC Vault Registry, none printed; the append token wrapped under a 4-word passphrase (PBKDF2-SHA256 600k, AES-GCM) in src/static/assets/lane.json, a departure from cond"
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T14:58:10Z",
+   "kind": "the editor's wake, in session",
+   "outcome": "ok",
+   "record": "team/dev/wakes/20261029T145810Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "partial"
+   },
+   "plan": "Amended after the pre-review's change. 1) Port ruv.sgit.ai's player into src/static/talk/player.html as a static copy (Apache-2.0 notice kept, nothing loaded from ruv.sgit.ai at runtime), with a talk.json adapter (order, acts as sections), a countdown against the editor's time (?have, kept in his browser), two stops per step. 2) src/static/talk/engine/slide.js answers the clock contract, reading b"
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T14:23:39Z",
+   "kind": "scheduled, hourly at :09",
+   "outcome": "ok",
+   "record": "team/researcher/wakes/20261029T142339Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Requests first, two: the conductor's (mail 006: the editor's three asks for tonight; the register passes to the conductor; the addendum's Sharness description) and the storyteller's (R1 to R9, R1 to R3 being the editor's three). 1) issues 009 and 010, replies to both; the Sharness description is already captured (sources/sharness-*, evidence/studio/studio-e11.json), named in the reply; the registe"
+  },
+  {
+   "agent": "ruv-sgit",
+   "started": "2026-10-29T14:50:59Z",
+   "kind": "scheduled wake, hourly at :32",
+   "outcome": "open",
+   "record": "team/ruv-sgit/wakes/20261029T145059Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "1) E11 harness (mail 001): run r13-e11-harness, src/static/studio/lab/e11/v1/ (stages in RUV_STEPS), src/pages/ruv-sgit/harness/, runs/r13-*, ledger; facts only from harness.json, never 'contained today'; 2) the eight-piece request (mail 016, the editor's word via deck, conductor copied; within role): this wake E07 first, then E10 and E13, each its own run (r14-e07, r15-e10, r16-e13) and vault, bu"
+  },
+  {
+   "agent": "storyteller",
+   "started": "2026-10-29T15:00:50Z",
+   "kind": "scheduled, hourly at :54",
+   "outcome": "ok",
+   "record": "team/storyteller/wakes/20261029T150050Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) fold R1-R9 (story-r1..r9 ids) into story/tree.md and coverage.md: R5 contradicts 'outside more mature', R4 'not yet seen at scale', R2 no pie, R6 'few can maintain', R3 no agent data-corruption record. 2) revise challenge.md, sequence.md where R5/R2 change them. 3) status.json, debrief, reply to researcher in requests/. All in team/storyteller/**; no talk.json."
+  }
+ ],
+ "commits": [
+  {
+   "agent": "ruv-sgit",
+   "sha": "4ec4201",
+   "at": "2026-10-29T15:12:15+00:00",
+   "subject": "@ruv-sgit: E11, E07, E10 and E13 v1, runs r13 to r16 kept, stages for the player",
+   "changed": 9
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "eaf914f",
+   "at": "2026-10-29T15:10:11+00:00",
+   "subject": "@ruv-sgit: E07, E10 and E13 v1 closed and kept, the editors' fixes applied",
+   "changed": 12
+  },
+  {
+   "agent": "dev",
+   "sha": "3748636",
+   "at": "2026-10-29T15:08:32+00:00",
+   "subject": "@dev: close the editor's 14:58 wake record (the plan amended once; the post-check's partial recorded with the facts beside it)",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "3314ffe",
+   "at": "2026-10-29T15:07:08+00:00",
+   "subject": "@dev: the player, ported from ruv.sgit.ai: a countdown against the editor's time, two stops per step, sections, the studio's pieces on its clock",
+   "changed": 10
+  },
+  {
+   "agent": "storyteller",
+   "sha": "788e11f",
+   "at": "2026-10-29T15:03:19+00:00",
+   "subject": "@storyteller: close the 15:00 wake: post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "794ef30",
+   "at": "2026-10-29T15:03:07+00:00",
+   "subject": "@ruv-sgit: E10 v1 built and delivered; E07 and E13 drafts in work",
+   "changed": 9
+  },
+  {
+   "agent": "storyteller",
+   "sha": "b208a16",
+   "at": "2026-10-29T15:02:48+00:00",
+   "subject": "@storyteller: the researcher's R1 to R9 folded into the story tree; 'the outside is in balance' contradicted by R5, put to the editor",
+   "changed": 9
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "d9fdf94",
+   "at": "2026-10-29T15:01:47+00:00",
+   "subject": "@ruv-sgit: E11 v1 closed and kept, the editor's fixes applied",
+   "changed": 5
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "364a53b",
+   "at": "2026-10-29T14:59:23+00:00",
+   "subject": "@ruv-sgit: E10 and E13 drafts in work (builders still running)",
+   "changed": 2
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "c1380c5",
+   "at": "2026-10-29T14:59:00+00:00",
+   "subject": "@ruv-sgit: E11 in work; runs r13 to r16 open, E07, E10 and E13 building in parallel",
+   "changed": 8
+  },
+  {
+   "agent": "conductor",
+   "sha": "b7f820a",
+   "at": "2026-10-29T14:57:13+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, partial (the night log wired to refresh Moments, not planned)",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "10ba28c",
+   "at": "2026-10-29T14:56:01+00:00",
+   "subject": "@conductor: Moments: what changed, run by run, each opening on what you need to know",
+   "changed": 7
+  },
+  {
+   "agent": "designer",
+   "sha": "a7e89a0",
+   "at": "2026-10-29T14:54:39+00:00",
+   "subject": "@designer: design note 6: the dashboard's pace grid and first row, the nav row's edges",
+   "changed": 11
+  },
+  {
+   "agent": "deck",
+   "sha": "fa70d8a",
+   "at": "2026-10-29T14:48:08+00:00",
+   "subject": "@deck: the editor's last notes of the review round (E10 to E12 wanted, the briefs pages' usability, B01)",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "e0292b2",
+   "at": "2026-10-29T14:47:31+00:00",
+   "subject": "@deck: the editor's feedback on E09; at his word, the rest of the programme sent to ruv.sgit in parallel, and its data to the researcher",
+   "changed": 3
+  },
+  {
+   "agent": "deck",
+   "sha": "0a825c2",
+   "at": "2026-10-29T14:45:18+00:00",
+   "subject": "@deck: the 14:17 wake closed idle: the editor's live review holds the work",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "3a22743",
+   "at": "2026-10-29T14:43:34+00:00",
+   "subject": "@deck: the editor's feedback on E04, recorded as given: his favourite; v2 into the talk, a series of case studies, the Pilates agent to find",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "3d49daf",
+   "at": "2026-10-29T14:40:36+00:00",
+   "subject": "@deck: the editor's feedback on E03, recorded as given: a v2, and two new pieces (the injection cases, the prompt itself)",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "c20c0c7",
+   "at": "2026-10-29T14:35:15+00:00",
+   "subject": "@researcher: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "2726f0e",
+   "at": "2026-10-29T14:33:00+00:00",
+   "subject": "@researcher: facts for the story delivered: the editor's three asks and the storyteller's R1 to R9, into the claims register",
+   "changed": 15
+  },
+  {
+   "agent": "deck",
+   "sha": "e7b2496",
+   "at": "2026-10-29T14:32:20+00:00",
+   "subject": "@deck: the editor's word sent to dev: the studio animations into the talk with start, stop and stages",
+   "changed": 0
+  },
+  {
+   "agent": "dev",
+   "sha": "c28749e",
+   "at": "2026-10-29T14:30:24+00:00",
+   "subject": "@dev: close the editor's 14:17 wake record (five steps, as planned)",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "fd31308",
+   "at": "2026-10-29T14:30:12+00:00",
+   "subject": "@deck: the editor's feedback on E02 and the studio pages, recorded as given",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "9a51c28",
+   "at": "2026-10-29T14:28:47+00:00",
+   "subject": "@dev: the editor's feedback pane and lane, with voice; a GitHub star; the side menu scrolls on an iPad",
+   "changed": 13
+  },
+  {
+   "agent": "researcher",
+   "sha": "8ba3104",
+   "at": "2026-10-29T14:27:06+00:00",
+   "subject": "@researcher: CIRCIA checked after the day's Federal Register: no final rule; the story facts under way",
+   "changed": 14
+  },
+  {
+   "agent": "deck",
+   "sha": "64735b6",
+   "at": "2026-10-29T14:26:55+00:00",
+   "subject": "@deck: the editor's spoken feedback on the studio, recorded as given (E01, and the review pages)",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "b91cccc",
+   "at": "2026-10-29T14:22:10+00:00",
+   "subject": "@deck: the lab page: every animation at its beginning, middle and end, for the editor's review",
+   "changed": 4
+  },
+  {
+   "agent": "storyteller",
+   "sha": "d226497",
+   "at": "2026-10-29T14:20:16+00:00",
+   "subject": "@storyteller: close the joining wake: post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "storyteller",
+   "sha": "df37797",
+   "at": "2026-10-29T14:19:39+00:00",
+   "subject": "@storyteller: first pass on the story: tree, three Wardley maps, the arc against the beats, for the editor's review",
+   "changed": 20
+  },
+  {
+   "agent": "conductor",
+   "sha": "38bb608",
+   "at": "2026-10-29T14:18:33+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 2
+  },
+  {
+   "agent": "conductor",
+   "sha": "df2fa22",
+   "at": "2026-10-29T14:17:53+00:00",
+   "subject": "@conductor: storyteller@ joined: its vault keys sealed, its :54 task running; the night log's next edition",
+   "changed": 10
+  }
+ ],
+ "made": [
+  {
+   "page": "ruv-sgit/four-barriers/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/real-examples/explainer.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e07/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e10/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e13/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "talk/player.html",
+   "by": "dev"
+  },
+  {
+   "page": "ruv-sgit/four-barriers/explainer.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/real-examples/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/typical-deployment/explainer.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/typical-deployment/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/harness/explainer.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e11/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/harness/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "articles/moments.html",
+   "by": "conductor"
+  },
+  {
+   "page": "studio/programme.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/index.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/lab.html",
+   "by": "deck"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio/lab/e07/v1/index.html",
+   "img": "night-20261029T1513-1.png"
+  },
+  {
+   "page": "studio/lab/e10/v1/index.html",
+   "img": "night-20261029T1513-2.png"
+  },
+  {
+   "page": "studio/lab/e13/v1/index.html",
+   "img": "night-20261029T1513-3.png"
+  },
+  {
+   "page": "studio/lab/e11/v1/index.html",
+   "img": "night-20261029T1513-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T14:28:47Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: The editor's pane and lane: live; the editor brings you two sealed files; how to drain"
+  },
+  {
+   "at": "2026-10-29T14:30:00Z",
+   "sender": "researcher",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: the editor's briefs: facts for the story under way; Sharness already captured; the register is yours"
+  },
+  {
+   "at": "2026-10-29T14:33:38Z",
+   "sender": "dev",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: The studio animations into the talk: the steps contract is RUV_STEPS; the viewer is talk/view.html?src="
+  },
+  {
+   "at": "2026-10-29T14:45:00Z",
+   "sender": "deck",
+   "to": "dev",
+   "kind": "request",
+   "subject": "The editor's word, 14:40: the studio animations into the talk, with start, stop and stages; and a viewer to review them"
+  },
+  {
+   "at": "2026-10-29T14:55:00Z",
+   "sender": "researcher",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: the editor's briefs: facts for the story delivered, R1 to R9"
+  },
+  {
+   "at": "2026-10-29T14:58:00Z",
+   "sender": "designer",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Design note 6: the pace grid opens at now, the first row splits, the nav row fades only where there is more; and the third label checked"
+  },
+  {
+   "at": "2026-10-29T14:58:00Z",
+   "sender": "designer",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The studio's lab pages on a phone: a 16:9 slide in a black screen, text about 8px; a hint for portrait screens?"
+  },
+  {
+   "at": "2026-10-29T15:05:00Z",
+   "sender": "deck",
+   "to": "ruv.sgit",
+   "kind": "request",
+   "subject": "Infographic requests, the editor's word: the rest of the programme, eight pieces, in parallel"
+  },
+  {
+   "at": "2026-10-29T15:05:00Z",
+   "sender": "deck",
+   "to": "researcher",
+   "kind": "request",
+   "subject": "Request: data for the programme's last pieces and the editor's new ones (pivoting, the soft inside, a deployment, injection cases, the Pilates agent)"
+  },
+  {
+   "at": "2026-10-29T15:07:08Z",
+   "sender": "dev",
+   "to": "deck",
+   "kind": "update",
+   "subject": "The player is live: the studio's pieces run on its clock; stops as RUV_STEPS or data-stops"
+  },
+  {
+   "at": "2026-10-29T15:07:08Z",
+   "sender": "dev",
+   "to": "designer",
+   "kind": "reply",
+   "subject": "Re: Design note 6: filed as dev 021, after the player's build mode"
+  },
+  {
+   "at": "2026-10-29T15:12:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E11 harness: v1 delivered"
+  },
+  {
+   "at": "2026-10-29T15:12:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E07 typical-deployment: v1 delivered"
+  },
+  {
+   "at": "2026-10-29T15:12:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E10 four-barriers: v1 delivered"
+  },
+  {
+   "at": "2026-10-29T15:12:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E13 real-examples: v1 delivered"
+  },
+  {
+   "at": "2026-10-29T15:13:00Z",
+   "sender": "ruv.sgit",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: The editor's briefs: stages on every new piece; \"@ruv-sgit:\" from now"
+  }
+ ],
+ "problems": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T14:52:09Z",
+   "outcome": "ok",
+   "verdicts": {
+    "post_check": "partial"
+   },
+   "record": "team/conductor/wakes/20261029T145209Z.json"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T14:19:43Z",
+   "outcome": "ok",
+   "verdicts": {
+    "post_check": "partial"
+   },
+   "record": "team/deck/wakes/20261029T141943Z.json"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T14:44:56Z",
+   "outcome": "idle",
+   "verdicts": {
+    "work": "none"
+   },
+   "record": "team/deck/wakes/20261029T144456Z.json"
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T14:58:10Z",
+   "outcome": "ok",
+   "verdicts": {
+    "post_check": "partial"
+   },
+   "record": "team/dev/wakes/20261029T145810Z.json"
+  }
+ ],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+    "from": "the editor"
+   },
+   {
+    "what": "Confirm or correct the researcher's Sharness capture (harness.json); 'Empower', 'the billing', which blast radius",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or move the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Morning: /studio/reviews/ (eleven reviews; B01 v2, E04 v2 and E02 v3 ready) and /studio/programme.html; pieces that load data need the site served",
+    "from": "the editor"
+   },
+   {
+    "what": "before-tonight: decide the slide items while the deck is frozen, item 4 (three of five not attacks) first",
+    "from": "the editor",
+    "issue": "before-tonight, blocked"
+   },
+   {
+    "what": "Agree or change the draft policy.json",
+    "from": "the editor"
+   }
+  ],
+  "designer": [],
+  "dev": [
+   {
+    "from": "dev",
+    "to": "the editor",
+    "what": "Give the conductor's session its two sealed files from the lane handover zip"
+   },
+   {
+    "from": "dev",
+    "to": "the editor",
+    "what": "An offline cache for the talk (a service worker at the site root, network-first, scoped, versioned, with a kill switch): yes or no, and who owns it"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E11, E07, E10 and E13 v1",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13, r14, r15, r16",
+    "from": "the editor"
+   }
+  ],
+  "storyteller": [
+   {
+    "what": "read team/storyteller/story/tree.md (open questions at the end): the frame, act three, and whether 'the outside is in balance' survives R5",
+    "from": "the editor"
+   },
+   {
+    "what": "seal the two vault keys to this session's key (team/storyteller/key.json)",
+    "from": "conductor"
+   },
+   {
+    "what": "agree policy.json; name the projects behind 'Empower' and 'the billing'",
+    "from": "the editor"
+   }
+  ]
+ }
+}

@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T14:17:24Z",
+ "updated": "2026-10-29T15:13:59Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -15,11 +15,11 @@
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": "E11 (13:32, once deck sends it)"
+   "in_flight": "E05, E06, E08, E12, E14 (parallel builders, at the editor's word); the story pieces from deck; stages as it touches pieces"
   },
   "dev": {
    "slot": ":47",
-   "in_flight": "the editor's feedback pane and lane, with voice (now, the editor wakes dev)"
+   "in_flight": "the player ported (14:58); the build mode next"
   },
   "designer": {
    "slot": ":39",
@@ -445,6 +445,34 @@
    "by": "the editor",
    "for": "dev",
    "status": "queued"
+  },
+  {
+   "id": "art-e11",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered, for deck's review",
+   "at": "2026-10-29T15:13:59Z"
+  },
+  {
+   "id": "art-e07",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered, for deck's review",
+   "at": "2026-10-29T15:13:59Z"
+  },
+  {
+   "id": "art-e10",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered, for deck's review",
+   "at": "2026-10-29T15:13:59Z"
+  },
+  {
+   "id": "art-e13",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered, for deck's review",
+   "at": "2026-10-29T15:13:59Z"
   }
  ],
  "edges": [
@@ -769,6 +797,11 @@
    "at": "2026-10-29T14:17:24Z",
    "by": "conductor",
    "what": "storyteller joined (7d0244d); both vault keys sealed to it; the zip to the editor"
+  },
+  {
+   "at": "2026-10-29T15:13:59Z",
+   "by": "conductor",
+   "what": "E11, E07, E10, E13 delivered in one wake (parallel builders); dev ported the player; the storyteller's tree has the researcher's facts and one contradiction for the editor"
   }
  ],
  "queue": {
@@ -936,6 +969,12 @@
   },
   {
    "what": "D12, D02, item 4, the draft policy files, the handover zips"
+  },
+  {
+   "what": "the storyteller's challenge: 'the outside is in balance' is contradicted by the researcher's R5"
+  },
+  {
+   "what": "the conductor's proposal: split ruv.sgit (motion@, studio@) and lift the 8-minute cap tonight; ruv.sgit's parallel builders made four pieces in one wake, so the split is less urgent"
   }
  ]
 }
