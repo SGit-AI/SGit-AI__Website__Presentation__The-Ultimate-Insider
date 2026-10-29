@@ -54,3 +54,13 @@ So the player and the studio become one tool, in two modes:
 - **Steps on every piece**: start, stop, and step forward and back through each animation's stages, in the studio as well as in the player. Every piece runs on the player's clock (`clock.js`) and declares its stages; ruv.sgit gives every new and existing piece its stages.
 
 The order for dev: the feedback pane and lane first (the editor's comments travel through it), then the player with the build mode, iPad first.
+
+## The editor's decisions of 15:00 (`1-editor-decisions-1500.md`)
+
+Committed as he handed them over, and routed at 15:15 UTC: sections 1 to 3 to the storyteller, deck, the researcher and ruv.sgit, each its own part (section 4); dev unchanged, the player first. Two facts checked before routing:
+
+- **Seven members, not eight**: seven sessions hold keys (conductor, dev, deck, researcher, ruv.sgit, designer, storyteller); security is a proposed role with no session. Beat 3c should say seven, or count the editor.
+- **"v0.1.107 to v0.1.125 in about ninety minutes"** holds: v0.1.107 was tagged at 13:20 UTC and v0.1.125 at 14:48 UTC, 88 minutes.
+- Beat 3c stays benign, as the editor wrote: this team as the example, nothing attack-shaped built or described.
+
+To confirm with the editor: "newsroom.esquito.ai" read as newsroom.sgit.ai; "attrition" on the Wardley maps read as commoditisation (genesis, custom, product, commodity).

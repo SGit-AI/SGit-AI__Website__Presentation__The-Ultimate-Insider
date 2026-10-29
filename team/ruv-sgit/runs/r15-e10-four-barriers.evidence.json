@@ -1,0 +1,446 @@
+{
+ "run": "r15-e10-four-barriers",
+ "purpose": "r15-e10-four-barriers: studio experiment E10, Only a boundary is a control, from abp-examples.json",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/016, the editor's word)",
+  "date": "2026-10-29",
+  "text": "The editor, reviewing the studio live in deck's session at 15:00, about the programme's remaining ideas: \"really freaking cool, let's do them all ... ask them to do all of these, spin up in parallel, it's okay\". So this is one request for eight pieces, in one run or several, workers in parallel, at your pace. It overrides the night's one-request-in-flight rule for you, at the editor's word; E11 stays in flight beside it. The conductor is copied.\n\nThe eight, with the data each may use (all in src/static/studio/data/; nothing else as fact):\n- E07 typical-deployment (the editor named this one first): a common agent deployment drawn as its whole reach graph; start with the box on the architecture diagram, end with the real graph. Data: abp-examples.json (the CI runner and the browser extension examples are real published shapes) and capabilities.json (reach differs per example).\n- E10 four-barriers: none, expectation, setting, boundary; only a boundary is a control; confirmations on and off move one barrier and no number. Data: abp-examples.json.\n- E12 radius-contained: E02 v3's ring again, each row a boundary closes going dark, what stays lit is the excess still bounded by nothing; which boundaries are measured and which designed. Data: abp-examples.json, harness.json.\n- E13 real-examples: the five published examples as small multiples, the same small chart each (grant, mandate, excess, what bounds it). Data: abp-examples.json, capabilities.json.\n- E08 lethal-trifecta: private data, untrusted content, a way out; all three on and a document can turn the agent; any one off closes that path. Source: Simon Willison, The lethal trifecta (the talk's own source); no numbers.\n- E14 earning-autonomy: a licence with a name and an expiry; autonomy unlocked level by level on evidence. Illustrative, and labelled so; the licence's suspension is a design, not a shipped feature (the researcher's finding).\n- E05 pivoting: one agent moving system to system on what it finds. Start from the cases already in the files (Nx s1ngularity in injection-sources.json; the espionage campaign in incidents.json); the researcher is asked today for more.\n- E06 soft-inside: systems that trust whatever is inside. Data is thin: draw the shape, label it illustrative, and leave numbers out until the researcher's data lands.\n\nFrom the editor's review, for every piece:\n- Colours: not a sea of red. A palette with shades per kind of thing, the agent red kept for the agent.\n- Label things in the drawing itself, plain words first; less text on screen; use the whole slide; nothing overlapping at the end.\n- The piece's ID large on the slide (E07, E10, ...).\n- What he loved most: E04 v2's path jumping the wall and changing colour, or breaking it. Use that language where a piece crosses a barrier.\n- Start, stop and stages for the new player (dev's contract): load talk/engine/clock.js first, one script tag, and declare window.RUV_STEPS = [{ t, label }, ...]; without it the player gives the beginning, the middle and the end.\n\nDeliver each at ruv-sgit/<slug>/index.html with its explainer beside it, as before, and reply per piece as it lands; deck reviews in the order they arrive.\n\nAs always, this is material for you to weigh: decline anything outside your role, naming its owner.\n\ndeck@the-ultimate-insider"
+ },
+ "pass_of": null,
+ "commits_before": null,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "bb5tkjy8",
+ "created_at": "2026-10-29T14:53:53+00:00",
+ "closed_at": "2026-10-29T15:07:09+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 3,
+  "tasks": 3,
+  "ruflo_calls": 15,
+  "ruflo_failed": 0,
+  "ruflo_ms": 6487
+ },
+ "branches": [
+  {
+   "name": "w-v1",
+   "role": "developer",
+   "files": 1,
+   "bytes": 14353,
+   "write_ms": 8010,
+   "merge_ms": 9038
+  },
+  {
+   "name": "w-explainer",
+   "role": "writer",
+   "files": 2,
+   "bytes": 10756,
+   "write_ms": 7976,
+   "merge_ms": 8528
+  },
+  {
+   "name": "w-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 2861,
+   "write_ms": 8398,
+   "merge_ms": 8680
+  },
+  {
+   "name": "w-v1-fixed",
+   "role": "developer",
+   "files": 1,
+   "bytes": 14501,
+   "write_ms": 8426,
+   "merge_ms": 8082
+  },
+  {
+   "name": "w-explainer-fixed",
+   "role": "writer",
+   "files": 2,
+   "bytes": 10965,
+   "write_ms": 7959,
+   "merge_ms": 9045
+  }
+ ],
+ "commits": 7,
+ "files": 9,
+ "bytes_plain": 61101,
+ "files_delivered": 7,
+ "bytes_delivered": 53436,
+ "store": {
+  "objects": 47,
+  "bytes": 82063,
+  "plaintext_hits": 0,
+  "probe": "72 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 4318,
+  "files": 9,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "create",
+   "ms": 2494,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 966,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4296,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1761,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 1123,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5125,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2262,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1867,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4908,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1755,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 1028,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5192,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2157,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1854,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4516,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1623,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 857,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5917,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2126,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1891,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4664,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1655,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 1046,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5723,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2258,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1775,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4049,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1571,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 844,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5543,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2424,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1891,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4730,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 853,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 4318,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 430
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p v1",
+   "rc": 0,
+   "ms": 420
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t writer -r specialist -p explainer",
+   "rc": 0,
+   "ms": 432
+  },
+  {
+   "seq": 4,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 395
+  },
+  {
+   "seq": 5,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d v1: E10 v1, driven, with stages (RUV_STEPS) -p high",
+   "rc": 0,
+   "ms": 409
+  },
+  {
+   "seq": 6,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d explainer: the page and explainer under /ruv-sgit/four-barriers/ -p high",
+   "rc": 0,
+   "ms": 421
+  },
+  {
+   "seq": 7,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check the slide and explainer against the request, the data and the studio checklist -p high",
+   "rc": 0,
+   "ms": 481
+  },
+  {
+   "seq": 8,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r15-e10-four-barriers: r15-e10-four-barriers: studio experiment E10, Only a boundary is a control, from abp-examples.json -f conductor",
+   "rc": 0,
+   "ms": 496
+  },
+  {
+   "seq": 9,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v1 sha256:f77e0f6d1e001de1 files:1 -f developer",
+   "rc": 0,
+   "ms": 453
+  },
+  {
+   "seq": 10,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer sha256:e4d53374ed8c5e94 files:2 -f writer",
+   "rc": 0,
+   "ms": 433
+  },
+  {
+   "seq": 11,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:fc0cb346b2e19ead files:1 -f editor",
+   "rc": 0,
+   "ms": 416
+  },
+  {
+   "seq": 12,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v1-fixed sha256:b4805d8f727fbd01 files:1 -f developer",
+   "rc": 0,
+   "ms": 411
+  },
+  {
+   "seq": 13,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer-fixed sha256:392434f99facf2f9 files:2 -f writer",
+   "rc": 0,
+   "ms": 395
+  },
+  {
+   "seq": 14,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 408
+  },
+  {
+   "seq": 15,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 487
+  }
+ ],
+ "history": [
+  {
+   "id": "c912d3fb819c",
+   "message": "init",
+   "time": "2026-10-29T14:53:57Z"
+  },
+  {
+   "id": "25605646bdec",
+   "message": "brief: run r15-e10-four-barriers",
+   "time": "2026-10-29T14:54:00Z"
+  },
+  {
+   "id": "ea551fe87543",
+   "message": "developer v1: delivered 1 files",
+   "time": "2026-10-29T15:02:23Z"
+  },
+  {
+   "id": "212a59fc3c18",
+   "message": "writer explainer: delivered 2 files",
+   "time": "2026-10-29T15:02:41Z"
+  },
+  {
+   "id": "519a051f2d54",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T15:06:14Z"
+  },
+  {
+   "id": "6732979d36a0",
+   "message": "developer v1-fixed: delivered 1 files",
+   "time": "2026-10-29T15:06:32Z"
+  },
+  {
+   "id": "bce6b4aa5376",
+   "message": "writer explainer-fixed: delivered 2 files",
+   "time": "2026-10-29T15:06:48Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "v1",
+   "role": "developer",
+   "who": "a Claude Code subagent of this session (builder)",
+   "tokens": 132155
+  },
+  {
+   "id": "explainer",
+   "role": "writer",
+   "who": "the same builder subagent",
+   "tokens": null
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 90421,
+   "tool_uses": 14,
+   "wall_s": 87,
+   "must_fix": 1,
+   "should_fix": 3
+  },
+  {
+   "id": "v1-fixed",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session), the editor's fixes applied",
+   "tokens": null
+  },
+  {
+   "id": "explainer-fixed",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session), the editor's fixes applied",
+   "tokens": null
+  }
+ ],
+ "kept_at": "2026-10-29T15:07:13+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__r15-e10__vault-handover.zip",
+  "sha256": "84ecd813c7cf9783",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled wake, hourly at :32",
+ "started": "2026-10-29T14:50:59Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet); paths written in the repository's layout",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) E11 harness (mail 001): run r13-e11-harness, src/static/studio/lab/e11/v1/ (stages in RUV_STEPS), src/pages/ruv-sgit/harness/, runs/r13-*, ledger; facts only from harness.json, never 'contained today'; 2) the eight-piece request (mail 016, the editor's word via deck, conductor copied; within role): this wake E07 first, then E10 and E13, each its own run (r14-e07, r15-e10, r16-e13) and vault, builder workers as sub-agents in parallel, lab/<id>/v1 and src/pages/ruv-sgit/<slug>/; E12, E08, E14, E05, E06 wait for later wakes; 3) clock.js tag only once dev's port exists; editor workers; board, mail, replies cc conductor after vault_check; status, debrief, REALITY; commit subjects '@ruv-sgit:'",
+   "at": "2026-10-29T14:52:50Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "inside policy; builders are in-session sub-agents with prompts on, not sessions, tasks or workflows; one vault per run, keys never printed or committed; vault_check before vault commits; no read key published; clock.js only once it exists; facts only from the data files",
+   "at": "2026-10-29T14:53:05Z"
+  },
+  "work": {
+   "by": "ruv.sgit@ (this session) and three builder workers",
+   "model": "",
+   "verdict": "done",
+   "comment": "E11 (r13) mine; E07 (r14), E10 (r15), E13 (r16) built in parallel by builder workers; four editor workers, one must-fix each applied; four vaults closed (0 plaintext hits, clones identical) and kept, zips to the editor; stages on all four; board 012 closed, 013 updated; replies per piece cc conductor; vault_check clean on both",
+   "at": "2026-10-29T15:12:15Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "c1380c5~1..4ec4201: no key, token or secret; all in scope, REALITY one bullet; no em-dashes; local engine and data only; E11 says not contained today",
+   "at": "2026-10-29T15:13:08Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "r13 to r16 kept with spec, evidence, editor files and ledger rows; four pieces with RUV_STEPS, pages, status, debrief, REALITY; '@ruv-sgit:' subjects; on origin/dev; the other five deferred as planned",
+   "at": "2026-10-29T15:13:08Z"
+  }
+ },
+ "closed": "2026-10-29T15:13:08Z",
+ "outcome": "ok"
+}

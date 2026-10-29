@@ -1791,10 +1791,639 @@
     "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
     "given_to": "the editor"
    }
+  },
+  {
+   "run": "r13-e11-harness",
+   "purpose": "r13-e11-harness: studio experiment E11, SHarness: the kernel was told first, from harness.json",
+   "request": {
+    "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/001-infographic-request-harness-e11.eml)",
+    "date": "2026-10-29",
+    "text": "# Infographic request: harness\n\n- For: the studio programme, experiment E11, part two. Not a beat of the talk; the talk is frozen.\n- One sentence the audience must understand: a boundary the agent cannot widen is one the kernel was told about before the tool started, by something the agent's grant does not include.\n- The data, and where it comes from: only src/static/studio/data/harness.json: the six hello probes under a deny-all policy (one read allowed; a write outside the workspace, a TCP connect and a wrong hash refused; the workspace write; the memory cap), the five environments, the status labels and the seven components.\n- The sequence, in SHarness's own order: write the policy (files, ports, memory, processes; anything not named is denied); hash it (the hash is its name); the kernel enforces it before the tool starts; the probes run; six of six held.\n- The researcher's cautions, which the slide must keep: six of six held on 25 October 2026 (not \"24 to 29 October\"); five environments on two kernels, all uid 0 (say five environments, not five platforms); the components are running as MVPs (fs, net), runnable (policy hash, check, translate) or designed (kms, bash, llm); the launcher above the agent is designed, with a first slice (sharness-ai shell) running since 28 October. sharness.ai is the editor's own project and every run is its own: no third-party report yet. And the caveat the site itself makes: a process cannot bind its own session; only a launcher above the agent makes the policy a boundary for the agent.\n- What moves, if you know: connect it to E09's last line, \"12 of 12 excess with no control\". Show one row of that excess (for example \"reach any host on the internet\") meeting a policy the kernel holds: the connect refused. Then the six probes, one by one, each held. End on the honest caveat, so the room sees what is measured and what is still designed.\n- Length: 40 to 60 seconds; must read as a still at the end.\n- Needed by: your next free slot.\n- What it must not say: never that the agent is contained today (the launcher is designed); no \"platforms\"; no number not in the file; nothing measured that is designed.\n\nAs before: label the drawing itself, plain words first, text clear of the headline at the end, and the piece at ruv-sgit/harness/index.html with its explainer beside it.\n\ndeck@the-ultimate-insider"
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "g9sne8wy",
+   "created_at": "2026-10-29T14:53:19+00:00",
+   "closed_at": "2026-10-29T15:01:26+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 3,
+    "tasks": 3,
+    "ruflo_calls": 15,
+    "ruflo_failed": 0,
+    "ruflo_ms": 17576
+   },
+   "branches": [
+    {
+     "name": "w-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 9382,
+     "write_ms": 16684,
+     "merge_ms": 9313
+    },
+    {
+     "name": "w-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 11589,
+     "write_ms": 8235,
+     "merge_ms": 8924
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 2603,
+     "write_ms": 8522,
+     "merge_ms": 8887
+    },
+    {
+     "name": "w-v1-fixed",
+     "role": "developer",
+     "files": 1,
+     "bytes": 9481,
+     "write_ms": 8189,
+     "merge_ms": 9365
+    },
+    {
+     "name": "w-explainer-fixed",
+     "role": "writer",
+     "files": 2,
+     "bytes": 11701,
+     "write_ms": 8323,
+     "merge_ms": 9786
+    }
+   ],
+   "commits": 7,
+   "files": 9,
+   "bytes_plain": 50524,
+   "files_delivered": 7,
+   "bytes_delivered": 44756,
+   "store": {
+    "objects": 47,
+    "bytes": 71470,
+    "plaintext_hits": 0,
+    "probe": "72 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 4792,
+    "files": 9,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "f5114d0348e5",
+     "message": "init",
+     "time": "2026-10-29T14:53:35Z"
+    },
+    {
+     "id": "1619342909de",
+     "message": "brief: run r13-e11-harness",
+     "time": "2026-10-29T14:53:37Z"
+    },
+    {
+     "id": "b2645d8f7f0a",
+     "message": "developer v1: delivered 1 files",
+     "time": "2026-10-29T14:58:01Z"
+    },
+    {
+     "id": "8ed2af9504f7",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T14:58:27Z"
+    },
+    {
+     "id": "43cdea854859",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T15:00:27Z"
+    },
+    {
+     "id": "f8021d2299b3",
+     "message": "developer v1-fixed: delivered 1 files",
+     "time": "2026-10-29T15:00:44Z"
+    },
+    {
+     "id": "676ffa163a7b",
+     "message": "writer explainer-fixed: delivered 2 files",
+     "time": "2026-10-29T15:01:03Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "v1",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "explainer",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 84086,
+     "tool_uses": 11,
+     "wall_s": 69,
+     "must_fix": 1,
+     "should_fix": 3
+    },
+    {
+     "id": "v1-fixed",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    },
+    {
+     "id": "explainer-fixed",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    }
+   ],
+   "kept_at": "2026-10-29T15:01:29+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r13-e11__vault-handover.zip",
+    "sha256": "21ba46b7caefc9f8",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
+  },
+  {
+   "run": "r15-e10-four-barriers",
+   "purpose": "r15-e10-four-barriers: studio experiment E10, Only a boundary is a control, from abp-examples.json",
+   "request": {
+    "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/016, the editor's word)",
+    "date": "2026-10-29",
+    "text": "The editor, reviewing the studio live in deck's session at 15:00, about the programme's remaining ideas: \"really freaking cool, let's do them all ... ask them to do all of these, spin up in parallel, it's okay\". So this is one request for eight pieces, in one run or several, workers in parallel, at your pace. It overrides the night's one-request-in-flight rule for you, at the editor's word; E11 stays in flight beside it. The conductor is copied.\n\nThe eight, with the data each may use (all in src/static/studio/data/; nothing else as fact):\n- E07 typical-deployment (the editor named this one first): a common agent deployment drawn as its whole reach graph; start with the box on the architecture diagram, end with the real graph. Data: abp-examples.json (the CI runner and the browser extension examples are real published shapes) and capabilities.json (reach differs per example).\n- E10 four-barriers: none, expectation, setting, boundary; only a boundary is a control; confirmations on and off move one barrier and no number. Data: abp-examples.json.\n- E12 radius-contained: E02 v3's ring again, each row a boundary closes going dark, what stays lit is the excess still bounded by nothing; which boundaries are measured and which designed. Data: abp-examples.json, harness.json.\n- E13 real-examples: the five published examples as small multiples, the same small chart each (grant, mandate, excess, what bounds it). Data: abp-examples.json, capabilities.json.\n- E08 lethal-trifecta: private data, untrusted content, a way out; all three on and a document can turn the agent; any one off closes that path. Source: Simon Willison, The lethal trifecta (the talk's own source); no numbers.\n- E14 earning-autonomy: a licence with a name and an expiry; autonomy unlocked level by level on evidence. Illustrative, and labelled so; the licence's suspension is a design, not a shipped feature (the researcher's finding).\n- E05 pivoting: one agent moving system to system on what it finds. Start from the cases already in the files (Nx s1ngularity in injection-sources.json; the espionage campaign in incidents.json); the researcher is asked today for more.\n- E06 soft-inside: systems that trust whatever is inside. Data is thin: draw the shape, label it illustrative, and leave numbers out until the researcher's data lands.\n\nFrom the editor's review, for every piece:\n- Colours: not a sea of red. A palette with shades per kind of thing, the agent red kept for the agent.\n- Label things in the drawing itself, plain words first; less text on screen; use the whole slide; nothing overlapping at the end.\n- The piece's ID large on the slide (E07, E10, ...).\n- What he loved most: E04 v2's path jumping the wall and changing colour, or breaking it. Use that language where a piece crosses a barrier.\n- Start, stop and stages for the new player (dev's contract): load talk/engine/clock.js first, one script tag, and declare window.RUV_STEPS = [{ t, label }, ...]; without it the player gives the beginning, the middle and the end.\n\nDeliver each at ruv-sgit/<slug>/index.html with its explainer beside it, as before, and reply per piece as it lands; deck reviews in the order they arrive.\n\nAs always, this is material for you to weigh: decline anything outside your role, naming its owner.\n\ndeck@the-ultimate-insider"
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "bb5tkjy8",
+   "created_at": "2026-10-29T14:53:53+00:00",
+   "closed_at": "2026-10-29T15:07:09+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 3,
+    "tasks": 3,
+    "ruflo_calls": 15,
+    "ruflo_failed": 0,
+    "ruflo_ms": 6487
+   },
+   "branches": [
+    {
+     "name": "w-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 14353,
+     "write_ms": 8010,
+     "merge_ms": 9038
+    },
+    {
+     "name": "w-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 10756,
+     "write_ms": 7976,
+     "merge_ms": 8528
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 2861,
+     "write_ms": 8398,
+     "merge_ms": 8680
+    },
+    {
+     "name": "w-v1-fixed",
+     "role": "developer",
+     "files": 1,
+     "bytes": 14501,
+     "write_ms": 8426,
+     "merge_ms": 8082
+    },
+    {
+     "name": "w-explainer-fixed",
+     "role": "writer",
+     "files": 2,
+     "bytes": 10965,
+     "write_ms": 7959,
+     "merge_ms": 9045
+    }
+   ],
+   "commits": 7,
+   "files": 9,
+   "bytes_plain": 61101,
+   "files_delivered": 7,
+   "bytes_delivered": 53436,
+   "store": {
+    "objects": 47,
+    "bytes": 82063,
+    "plaintext_hits": 0,
+    "probe": "72 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 4318,
+    "files": 9,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "c912d3fb819c",
+     "message": "init",
+     "time": "2026-10-29T14:53:57Z"
+    },
+    {
+     "id": "25605646bdec",
+     "message": "brief: run r15-e10-four-barriers",
+     "time": "2026-10-29T14:54:00Z"
+    },
+    {
+     "id": "ea551fe87543",
+     "message": "developer v1: delivered 1 files",
+     "time": "2026-10-29T15:02:23Z"
+    },
+    {
+     "id": "212a59fc3c18",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T15:02:41Z"
+    },
+    {
+     "id": "519a051f2d54",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T15:06:14Z"
+    },
+    {
+     "id": "6732979d36a0",
+     "message": "developer v1-fixed: delivered 1 files",
+     "time": "2026-10-29T15:06:32Z"
+    },
+    {
+     "id": "bce6b4aa5376",
+     "message": "writer explainer-fixed: delivered 2 files",
+     "time": "2026-10-29T15:06:48Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "v1",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (builder)",
+     "tokens": 132155
+    },
+    {
+     "id": "explainer",
+     "role": "writer",
+     "who": "the same builder subagent",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 90421,
+     "tool_uses": 14,
+     "wall_s": 87,
+     "must_fix": 1,
+     "should_fix": 3
+    },
+    {
+     "id": "v1-fixed",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    },
+    {
+     "id": "explainer-fixed",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    }
+   ],
+   "kept_at": "2026-10-29T15:07:13+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r15-e10__vault-handover.zip",
+    "sha256": "84ecd813c7cf9783",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
+  },
+  {
+   "run": "r16-e13-real-examples",
+   "purpose": "r16-e13-real-examples: studio experiment E13, Real agents, mapped, from abp-examples.json, capabilities.json",
+   "request": {
+    "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/016, the editor's word)",
+    "date": "2026-10-29",
+    "text": "The editor, reviewing the studio live in deck's session at 15:00, about the programme's remaining ideas: \"really freaking cool, let's do them all ... ask them to do all of these, spin up in parallel, it's okay\". So this is one request for eight pieces, in one run or several, workers in parallel, at your pace. It overrides the night's one-request-in-flight rule for you, at the editor's word; E11 stays in flight beside it. The conductor is copied.\n\nThe eight, with the data each may use (all in src/static/studio/data/; nothing else as fact):\n- E07 typical-deployment (the editor named this one first): a common agent deployment drawn as its whole reach graph; start with the box on the architecture diagram, end with the real graph. Data: abp-examples.json (the CI runner and the browser extension examples are real published shapes) and capabilities.json (reach differs per example).\n- E10 four-barriers: none, expectation, setting, boundary; only a boundary is a control; confirmations on and off move one barrier and no number. Data: abp-examples.json.\n- E12 radius-contained: E02 v3's ring again, each row a boundary closes going dark, what stays lit is the excess still bounded by nothing; which boundaries are measured and which designed. Data: abp-examples.json, harness.json.\n- E13 real-examples: the five published examples as small multiples, the same small chart each (grant, mandate, excess, what bounds it). Data: abp-examples.json, capabilities.json.\n- E08 lethal-trifecta: private data, untrusted content, a way out; all three on and a document can turn the agent; any one off closes that path. Source: Simon Willison, The lethal trifecta (the talk's own source); no numbers.\n- E14 earning-autonomy: a licence with a name and an expiry; autonomy unlocked level by level on evidence. Illustrative, and labelled so; the licence's suspension is a design, not a shipped feature (the researcher's finding).\n- E05 pivoting: one agent moving system to system on what it finds. Start from the cases already in the files (Nx s1ngularity in injection-sources.json; the espionage campaign in incidents.json); the researcher is asked today for more.\n- E06 soft-inside: systems that trust whatever is inside. Data is thin: draw the shape, label it illustrative, and leave numbers out until the researcher's data lands.\n\nFrom the editor's review, for every piece:\n- Colours: not a sea of red. A palette with shades per kind of thing, the agent red kept for the agent.\n- Label things in the drawing itself, plain words first; less text on screen; use the whole slide; nothing overlapping at the end.\n- The piece's ID large on the slide (E07, E10, ...).\n- What he loved most: E04 v2's path jumping the wall and changing colour, or breaking it. Use that language where a piece crosses a barrier.\n- Start, stop and stages for the new player (dev's contract): load talk/engine/clock.js first, one script tag, and declare window.RUV_STEPS = [{ t, label }, ...]; without it the player gives the beginning, the middle and the end.\n\nDeliver each at ruv-sgit/<slug>/index.html with its explainer beside it, as before, and reply per piece as it lands; deck reviews in the order they arrive.\n\nAs always, this is material for you to weigh: decline anything outside your role, naming its owner.\n\ndeck@the-ultimate-insider"
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "avcrx6ne",
+   "created_at": "2026-10-29T14:54:04+00:00",
+   "closed_at": "2026-10-29T15:08:09+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 3,
+    "tasks": 3,
+    "ruflo_calls": 15,
+    "ruflo_failed": 0,
+    "ruflo_ms": 6371
+   },
+   "branches": [
+    {
+     "name": "w-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 13307,
+     "write_ms": 7961,
+     "merge_ms": 8557
+    },
+    {
+     "name": "w-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 12737,
+     "write_ms": 7715,
+     "merge_ms": 9069
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 2411,
+     "write_ms": 8158,
+     "merge_ms": 8011
+    },
+    {
+     "name": "w-v1-fixed",
+     "role": "developer",
+     "files": 1,
+     "bytes": 13126,
+     "write_ms": 7835,
+     "merge_ms": 8560
+    },
+    {
+     "name": "w-explainer-fixed",
+     "role": "writer",
+     "files": 2,
+     "bytes": 12764,
+     "write_ms": 7843,
+     "merge_ms": 8784
+    }
+   ],
+   "commits": 7,
+   "files": 9,
+   "bytes_plain": 62020,
+   "files_delivered": 7,
+   "bytes_delivered": 54345,
+   "store": {
+    "objects": 47,
+    "bytes": 82982,
+    "plaintext_hits": 0,
+    "probe": "72 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 4340,
+    "files": 9,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "fdee359c09c4",
+     "message": "init",
+     "time": "2026-10-29T14:54:09Z"
+    },
+    {
+     "id": "f456f1fc3646",
+     "message": "brief: run r16-e13-real-examples",
+     "time": "2026-10-29T14:54:11Z"
+    },
+    {
+     "id": "e52b355217f3",
+     "message": "developer v1: delivered 1 files",
+     "time": "2026-10-29T15:03:35Z"
+    },
+    {
+     "id": "a1049f1ed53b",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T15:03:52Z"
+    },
+    {
+     "id": "3f64a1b78c3e",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T15:07:15Z"
+    },
+    {
+     "id": "790964a9be27",
+     "message": "developer v1-fixed: delivered 1 files",
+     "time": "2026-10-29T15:07:32Z"
+    },
+    {
+     "id": "24f2c740419c",
+     "message": "writer explainer-fixed: delivered 2 files",
+     "time": "2026-10-29T15:07:48Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "v1",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (builder)",
+     "tokens": 154279
+    },
+    {
+     "id": "explainer",
+     "role": "writer",
+     "who": "the same builder subagent",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 87487,
+     "tool_uses": 12,
+     "wall_s": 77,
+     "must_fix": 1,
+     "should_fix": 4
+    },
+    {
+     "id": "v1-fixed",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    },
+    {
+     "id": "explainer-fixed",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    }
+   ],
+   "kept_at": "2026-10-29T15:08:13+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r16-e13__vault-handover.zip",
+    "sha256": "365efe1b731050fa",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
+  },
+  {
+   "run": "r14-e07-typical-deployment",
+   "purpose": "r14-e07-typical-deployment: studio experiment E07, A typical agentic deployment, mapped, from abp-examples.json, capabilities.json",
+   "request": {
+    "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/016, the editor's word)",
+    "date": "2026-10-29",
+    "text": "The editor, reviewing the studio live in deck's session at 15:00, about the programme's remaining ideas: \"really freaking cool, let's do them all ... ask them to do all of these, spin up in parallel, it's okay\". So this is one request for eight pieces, in one run or several, workers in parallel, at your pace. It overrides the night's one-request-in-flight rule for you, at the editor's word; E11 stays in flight beside it. The conductor is copied.\n\nThe eight, with the data each may use (all in src/static/studio/data/; nothing else as fact):\n- E07 typical-deployment (the editor named this one first): a common agent deployment drawn as its whole reach graph; start with the box on the architecture diagram, end with the real graph. Data: abp-examples.json (the CI runner and the browser extension examples are real published shapes) and capabilities.json (reach differs per example).\n- E10 four-barriers: none, expectation, setting, boundary; only a boundary is a control; confirmations on and off move one barrier and no number. Data: abp-examples.json.\n- E12 radius-contained: E02 v3's ring again, each row a boundary closes going dark, what stays lit is the excess still bounded by nothing; which boundaries are measured and which designed. Data: abp-examples.json, harness.json.\n- E13 real-examples: the five published examples as small multiples, the same small chart each (grant, mandate, excess, what bounds it). Data: abp-examples.json, capabilities.json.\n- E08 lethal-trifecta: private data, untrusted content, a way out; all three on and a document can turn the agent; any one off closes that path. Source: Simon Willison, The lethal trifecta (the talk's own source); no numbers.\n- E14 earning-autonomy: a licence with a name and an expiry; autonomy unlocked level by level on evidence. Illustrative, and labelled so; the licence's suspension is a design, not a shipped feature (the researcher's finding).\n- E05 pivoting: one agent moving system to system on what it finds. Start from the cases already in the files (Nx s1ngularity in injection-sources.json; the espionage campaign in incidents.json); the researcher is asked today for more.\n- E06 soft-inside: systems that trust whatever is inside. Data is thin: draw the shape, label it illustrative, and leave numbers out until the researcher's data lands.\n\nFrom the editor's review, for every piece:\n- Colours: not a sea of red. A palette with shades per kind of thing, the agent red kept for the agent.\n- Label things in the drawing itself, plain words first; less text on screen; use the whole slide; nothing overlapping at the end.\n- The piece's ID large on the slide (E07, E10, ...).\n- What he loved most: E04 v2's path jumping the wall and changing colour, or breaking it. Use that language where a piece crosses a barrier.\n- Start, stop and stages for the new player (dev's contract): load talk/engine/clock.js first, one script tag, and declare window.RUV_STEPS = [{ t, label }, ...]; without it the player gives the beginning, the middle and the end.\n\nDeliver each at ruv-sgit/<slug>/index.html with its explainer beside it, as before, and reply per piece as it lands; deck reviews in the order they arrive.\n\nAs always, this is material for you to weigh: decline anything outside your role, naming its owner.\n\ndeck@the-ultimate-insider"
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "x7hggl3g",
+   "created_at": "2026-10-29T14:53:42+00:00",
+   "closed_at": "2026-10-29T15:09:56+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 3,
+    "tasks": 3,
+    "ruflo_calls": 14,
+    "ruflo_failed": 0,
+    "ruflo_ms": 6107
+   },
+   "branches": [
+    {
+     "name": "w-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11244,
+     "write_ms": 8714,
+     "merge_ms": 8234
+    },
+    {
+     "name": "w-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 12942,
+     "write_ms": 7546,
+     "merge_ms": 8767
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 2854,
+     "write_ms": 8069,
+     "merge_ms": 9297
+    },
+    {
+     "name": "w-v1-fixed",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11257,
+     "write_ms": 7656,
+     "merge_ms": 8963
+    }
+   ],
+   "commits": 6,
+   "files": 7,
+   "bytes_plain": 46019,
+   "files_delivered": 5,
+   "bytes_delivered": 38297,
+   "store": {
+    "objects": 39,
+    "bytes": 62823,
+    "plaintext_hits": 0,
+    "probe": "56 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 4355,
+    "files": 7,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "d49fa75b1b1d",
+     "message": "init",
+     "time": "2026-10-29T14:53:46Z"
+    },
+    {
+     "id": "c676960163b7",
+     "message": "brief: run r14-e07-typical-deployment",
+     "time": "2026-10-29T14:53:48Z"
+    },
+    {
+     "id": "6c3f7a4765f3",
+     "message": "developer v1: delivered 1 files",
+     "time": "2026-10-29T15:04:33Z"
+    },
+    {
+     "id": "dd79236add47",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T15:04:50Z"
+    },
+    {
+     "id": "79378f3eb4f7",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T15:09:08Z"
+    },
+    {
+     "id": "6a0615ba0e95",
+     "message": "developer v1-fixed: delivered 1 files",
+     "time": "2026-10-29T15:09:26Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "v1",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (builder)",
+     "tokens": 152610
+    },
+    {
+     "id": "explainer",
+     "role": "writer",
+     "who": "the same builder subagent",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 81970,
+     "tool_uses": 11,
+     "wall_s": 82,
+     "must_fix": 1,
+     "should_fix": 3
+    },
+    {
+     "id": "v1-fixed",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    }
+   ],
+   "kept_at": "2026-10-29T15:09:59+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r14-e07__vault-handover.zip",
+    "sha256": "defd2a26a7749434",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
   }
  ],
  "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
- "updated": "2026-10-29T12:51:45+00:00",
+ "updated": "2026-10-29T15:09:59+00:00",
  "server": "https://dev.send.sgraph.ai",
  "viewer": "https://dev.vault.sgraph.ai/en-gb/",
  "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"

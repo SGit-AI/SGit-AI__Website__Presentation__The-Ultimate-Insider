@@ -1,0 +1,59 @@
+<!--meta {"title": "E10 explained: only a boundary is a control, frame by frame", "description": "How studio experiment E10 draws the four barrier kinds as walls the agent's path meets, and Claude Code's confirmations on and off as one row moving: each frame with its time, where every word comes from, the technique, and what was left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E10</a></nav>
+<p class="kicker">Studio experiment E10 · the explainer</p>
+<h1>Only a boundary is a control, frame by frame</h1>
+<p class="lead">The one sentence: of the four kinds of barrier an Agent Behaviour Policy records per capability, only a boundary bounds anything, because only a boundary is enforced by something the grant does not include. Claude Code's confirmations are a setting: turning them off moves one row's barrier and changes no count.</p>
+
+<h2>The frames (v1)</h2>
+<p>Seconds from the start; it ends at 52 s and holds still. The line under the headline changes with each stage.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>The headline and, under it, the model's definition of the barrier. From 1 s, every 1.6 s, the four kinds appear down the left in the source's order, weakest first: each with abp.sgit.ai's glyph (filled for none, a double circle for expectation, half filled for setting, an empty circle for boundary), its name and its published meaning. On the right of each, a wall; the agent sits in the middle.</td></tr>
+<tr><td>9 s</td><td>The agent's path meets each wall in turn, 3.4 s apart. None (9 s): the wall is a dashed outline, nothing there, and the path goes straight on, changing from white to the agent's red. Expectation (12.4 s): the path jumps the wall and turns red. Setting (15.8 s): the wall breaks in two and the path goes through, red. Boundary (19.2 s): the wall nudges and holds, the path stops short. Under each wall, "not a control" or "a control: holds", from the file's <code>is_control</code>. The line under the headline gives the enforcer test, quoted.</td></tr>
+<tr><td>24 s</td><td>"Claude Code, confirmations on": its 16 rows appear as glyphs beside the wall of their barrier, with the count: 13 at none, 1 at expectation, 2 at setting, 0 at a boundary ("none here").</td></tr>
+<tr><td>33 s</td><td>"Confirmations off": from 34 s to 36 s one row, in amber, leaves the setting row and lands at the end of the none row, its glyph changing from half filled to filled; a dashed ring marks where it was and a dashed line its way. Its label in the drawing: "Run programs as the account", "in the mandate; setting to none". The counts become 14, 1, 1, 0.</td></tr>
+<tr><td>41 s</td><td>The numbers, confirmations on and then off: grant 16, mandate 5, excess 12, unbounded excess 12, irreversible 8, the same in both. At 44 s the claim: "One barrier moved, and not one number did." The line under the headline: published drafts from one author's network, derived, 0 of 22 rows measured, no score.</td></tr>
+</tbody></table></div>
+
+<h2>The row that moves</h2>
+<p>The slide compares the two examples' rows capability by capability and draws every row whose <code>barrier_kind</code> differs. Exactly one does:</p>
+<div class="tbl"><table>
+<thead><tr><th>Capability</th><th>Confirmations on</th><th>Confirmations off</th></tr></thead>
+<tbody>
+<tr><td>Run programs as the account<br><code>execute.process.host</code>, in the mandate</td><td>setting: the tool's own directory restriction and its confirmation prompt, enforced by the tool, which runs inside the grant; anything that can execute as you steps around it</td><td>none: none, confirmations disabled; the tool runs whatever it decides to run</td></tr>
+</tbody></table></div>
+<p>Why no count moves, in the data file's own note: the row "is in the mandate (aligned), which is why no count moves." The other setting row, "the settings file is owned by the same account" (<code>grant.credential.self</code>), stays at setting in both. The single expectation row is <code>write.repository.tenant</code>, "branch discipline in prose, if any".</p>
+
+<h2>Where every word comes from</h2>
+<ul>
+<li><b>The four kinds</b>, their order, their published meanings and which one is a control: <code>barrier_kinds</code> in <code>abp-examples.json</code> (abp.sgit.ai's barriers.json). The verdicts under the walls read <code>is_control</code>; the file notes that <code>is_control</code> and its "why" are abp.sgit.ai's own reading, and the claim that three of the four kinds bound nothing is a definitional position by one author, shown as a position, not graded as a fact.</li>
+<li><b>The two lines from the model</b>: the barrier's definition and the enforcer test, quoted.</li>
+<li><b>The rows and counts</b>: the two examples' <code>rows</code>, counted per barrier kind on the slide; the numbers in the table are each example's own fields (<code>grant</code>, <code>mandate</code>, <code>excess</code>, <code>unbounded_excess</code>, <code>irreversible</code>), compared on both.</li>
+<li><b>The example names</b> under the headline are the file's: "A coding agent on your own machine, confirmations on" and "The same coding agent, confirmations off"; the heading "Claude Code" is from each example's <code>agent</code> field.</li>
+<li><b>The label of the row that moves</b>, "Run programs as the account", is <code>capabilities.json</code>'s.</li>
+<li><b>The end line</b> is the data file's claim <code>abp-cc-one-barrier-moved</code>, checked by its author by diffing the two raw profile files.</li>
+<li><b>The caution</b>: both examples are derived, 0 of 22 tool-level rows measured; the mandate is the site's own first draft; both sites are one author's network. No score, rating or traffic light, as the model's own rule says.</li>
+<li><b>Words the slide adds</b>: "the agent", "not a control", "a control: holds", "none here", "row moves", the column headings. Each restates a field (<code>is_control</code>, an empty row count), not a new claim.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: the SVG and the table are built once from the two data files, then every frame is drawn from the slide's clock by <code>SLIDE_RENDER</code>, so the player can seek, pause and replay it, and <code>?static</code> shows the end state. The stages are declared in <code>window.RUV_STEPS</code>: 0, 9, 24, 33 and 41 s.</li>
+<li>E04 v2's language for a path at a wall: the path draws itself, and where it gets past it jumps or breaks the wall and changes colour; the boundary is the one wall it does not get past.</li>
+<li>Three colours of meaning: the agent's red for the agent and its path past a wall, the accent for the one kind that is a control, amber for the row that moves. Everything else is neutral. Every text is 20 px or larger on the 1280 by 720 canvas; both themes (<code>?theme=light</code>).</li>
+<li><b>It runs only over HTTP.</b> The slide reads both files with <code>fetch</code> when it loads; opened as a file from disk it shows only the headline.</li>
+</ul>
+
+<h2>What was tried and left out</h2>
+<ul>
+<li><b>The "why" of each kind</b> on screen: too much text beside four walls; it is in the data file, and the enforcer test carries it in one line.</li>
+<li><b>An example with a row at a boundary.</b> Neither Claude Code example has one, so the slide says "none here"; the CI runner example, the only one with a boundary row, is outside this request's data and left for E13.</li>
+<li><b>The full row control texts</b> on the slide: long; they are in the table above.</li>
+<li><b>A dot per row labelled in place.</b> Sixteen labels at 20 px do not fit; only the row that moves is named in the drawing.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 by ruv.sgit@the-ultimate-insider in run r15-e10-four-barriers, at deck@'s request, the editor's word: a Ruflo hive with a builder who made the slide and these pages from the request and the data, screenshotted in both themes at several times. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</article>
