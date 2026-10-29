@@ -119,3 +119,19 @@ th{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--dim)
 .tile iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
 .tile .cap{display:block;font-size:15px;margin-top:6px;line-height:1.3}
 .tile .cap small{display:block;font-size:12.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+/* the version, in the top bar, always visible, linked to its own entry in the release history */
+.top a.ver{font:600 12.5px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim);border:1px solid var(--line2);border-radius:999px;padding:1px 8px;white-space:nowrap;align-self:center}
+.top a.ver:hover{color:var(--accent);border-color:var(--accent);text-decoration:none}
+.rel{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:12px 18px;margin:14px 0;scroll-margin-top:80px}
+.rel:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-t)}
+.rel h2{margin:0;font-size:22px}
+.rel .here{font:700 11.5px system-ui;letter-spacing:.06em;text-transform:uppercase;background:var(--accent);color:var(--on-accent);border-radius:999px;padding:2px 8px;vertical-align:middle;margin-left:6px}
+.rel .meta{font-size:14px;color:var(--dim);margin:2px 0 6px}
+.rel .ttl{font-weight:600;color:var(--head);margin:4px 0}
+.rel details{font-size:14.5px}
+.files{font-size:13.5px;columns:2;column-gap:20px}
+@media(max-width:600px){.files{columns:1}}
+.c-dim{color:var(--dim)}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:700px){.cols2{grid-template-columns:1fr}}
+.prose img{max-width:100%;height:auto;border:1px solid var(--line);border-radius:10px}

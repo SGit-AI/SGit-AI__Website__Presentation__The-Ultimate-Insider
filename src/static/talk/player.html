@@ -24,6 +24,7 @@ button{font:inherit;cursor:pointer}
 #hud .pos{font:600 14px ui-monospace,monospace;padding:0 6px;white-space:nowrap}
 #hud .ttl{font-size:14px;max-width:34vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:6px}
 #hud a{color:#2dd4bf;font-size:14px;padding:0 6px;text-decoration:none}
+#hud a.ver{font:600 12px ui-monospace,monospace;color:#8d94a5;border:1px solid #2a3245;border-radius:999px;padding:2px 8px}
 @media(max-width:720px){#hud .ttl,#hud .opt{display:none}}
 #help{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.7);z-index:5}
 #help.on{display:flex}
@@ -75,6 +76,7 @@ body.pres #aud,body.pres #hud{display:none}
   <button id="fs" aria-label="Full screen">full screen</button>
   <button id="helpBtn" aria-label="Keyboard shortcuts">?</button>
   <a href="index.html" class="opt">site</a>
+  <a href="../admin/versions.html#{{version}}" class="opt ver" title="Release history">{{version}}</a>
 </div>
 <div id="help" role="dialog" aria-label="Keyboard shortcuts"><div>
   <h2>Keys</h2>

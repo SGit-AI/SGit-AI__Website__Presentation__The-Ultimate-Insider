@@ -14,4 +14,4 @@ node admin/tools/pki-agent.mjs keygen --name "<role>@the-ultimate-insider (Claud
 node admin/tools/pki-agent.mjs keyqr --out <scratchpad>/<role>.png
 ```
 
-Then write `team/keys/<role>.json` (fingerprint, encryption fingerprint, the `k1.` public key from the keyqr link, both public PEMs, session, time, `replaces`), copy the QR image beside it, add `team/<role>/sessions/<session id>/` (`SESSION.json`, `key.json`, `key.png`), mark the previous session `superseded` with an `until`, and push. The conductor's own files are the worked example. Never commit anything from `~/.sg-send/`.
+Then write `team/<role>/key.json` (fingerprint, encryption fingerprint, the `k1.` public key from the keyqr link, both public PEMs, session, time, `replaces`), copy the QR image beside it as `key.png`, add `team/<role>/sessions/<session id>/` (`SESSION.json`, `key.json`, `key.png`), mark the previous session `superseded` with an `until`, and push. The conductor's own files are the worked example. Never commit anything from `~/.sg-send/`.
