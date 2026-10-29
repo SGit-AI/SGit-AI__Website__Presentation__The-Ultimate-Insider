@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "deck's notice to done; D08 quotes ruv.sgit's six zips; the blocked sources retried: SC Media, ThousandEyes and gartner.com 403, the archive 429 (left as gaps, nothing got round); Gartner's 25 June 2025 release captured from a Gartner host, the 40 per cent claim to A6 (adjudications, rechecks), deck-talk-changes.md updated, mail deck 014; status, debrief.",
    "at": "2026-10-29T11:25:44Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and validate pass; agents check 0 outside scope; vault_check clean on both clones. The Gartner capture (page.html, page.txt, status.txt): no cookie, token-shaped or form token values; one email redacted; a Gartner host with HTTP 200; the 403s and the archive's 429 stay gaps. No agent-directed text; no credentials used.",
+   "at": "2026-10-29T11:26:48Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) deck's notice to done. 2) D08 quotes ruv.sgit's six zips. 3) retries: SC Media, ThousandEyes, gartner.com 403 and the archive 429 left as gaps; Gartner's release captured from a Gartner host and graded A6; status and debrief done. Conditions kept. Beyond the plan only the assembler's count refreshes.",
+   "at": "2026-10-29T11:27:12Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T11:27:12Z",
+ "outcome": "ok"
 }
