@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T03:44:51Z",
+ "updated": "2026-10-29T04:05:38Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -15,11 +15,15 @@
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": "deck-req-e01"
+   "in_flight": "b01-v1 (deck's go with five notes)"
   },
   "dev": {
    "slot": ":47",
-   "in_flight": "conductor-dashboard"
+   "in_flight": "dev-009 studio chrome (04:47)"
+  },
+  "designer": {
+   "slot": ":39",
+   "in_flight": "design note 1, waiting on dev"
   }
  },
  "nodes": [
@@ -280,6 +284,14 @@
    "status": "scheduled 05:47",
    "at": "2026-10-29T03:09:42Z",
    "conditions": "published read keys only, never a vault key"
+  },
+  {
+   "id": "art-e01",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "page": "/ruv-sgit/agent-evolution/",
+   "at": "2026-10-29T03:55:00Z"
   }
  ],
  "edges": [
@@ -452,6 +464,11 @@
    "from": "editor-brief",
    "to": "dev-vault-embed",
    "kind": "asks"
+  },
+  {
+   "from": "deck-req-e01",
+   "to": "art-e01",
+   "kind": "delivers"
   }
  ],
  "log": [
@@ -479,6 +496,11 @@
    "at": "2026-10-29T03:44:51Z",
    "by": "conductor",
    "what": "designer joined; vault keys sealed to it; design note 1 routed to dev (mailroom/dev/004) and its studio request to deck (mailroom/deck/010); dev's schedule: width 04:47, email reader 05:47, vault embed 06:47"
+  },
+  {
+   "at": "2026-10-29T04:05:38Z",
+   "by": "conductor",
+   "what": "E01 delivered (review at 04:17); B01 v1 in flight with ruv.sgit; dev 009 at 04:47 ahead of the width note (05:47)"
   }
  ],
  "queue": {
@@ -487,9 +509,9 @@
   "rule": "one experiment in flight with ruv.sgit, one data request with researcher; the conductor names the next by id at :02, deck asks at :17"
  },
  "next": {
-  "ruv-sgit": "E02 once E01 is back and its data has landed",
+  "ruv-sgit": "04:32 B01 v1; 05:32 E02 once deck asks (its data landed in slice 1)",
   "researcher": "nothing new until the data request is answered",
-  "dev": "03:47 the dashboard part 1; 04:47 the email reader; 05:47 the embedded vault"
+  "dev": "04:47 dev 009; 05:47 width note; 06:47 email reader; 07:47 vault embed"
  },
  "routed": [
   "team/deck/requests/conductor__pace-the-studio.md",
@@ -505,30 +527,46 @@
   "dev": [
    {
     "at": "03:47",
-    "item": "conductor-dashboard, part 1: now and the pace grid"
+    "item": "conductor-dashboard, part 1: now and the pace grid",
+    "status": "done"
    },
    {
     "at": "04:47",
+    "item": "dev 009: studio documents lost the top bar and navigation",
+    "from": "dev, a regression the editor found at 03:20"
+   },
+   {
+    "at": "05:47",
     "item": "designer note 1 (width), items 1 to 4; item 5 when it fits",
     "from": "designer@, at the editor's ask for width"
    },
    {
-    "at": "05:47",
+    "at": "06:47",
     "item": "dev-email-reader"
    },
    {
-    "at": "06:47",
+    "at": "07:47",
     "item": "dev-vault-embed"
    },
    {
     "at": "later",
-    "item": "the dashboard's flow graph and other parts, then dev's own 003 and 004"
+    "item": "the dashboard's other parts, then dev's own ideas"
    }
   ],
   "designer": [
    {
-    "at": "04:39",
-    "item": "check design note 1 after dev builds it (05:39 if dev builds at 04:47)"
+    "at": "05:39",
+    "item": "check dev 009 does not undo anything; 06:39 check design note 1 as built"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "at": "04:32",
+    "item": "B01 v1"
+   },
+   {
+    "at": "05:32",
+    "item": "E02, once deck asks"
    }
   ]
  }

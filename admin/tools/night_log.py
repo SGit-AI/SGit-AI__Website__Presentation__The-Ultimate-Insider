@@ -124,7 +124,7 @@ def shoot(pages, tag):
           "for(const [u,o] of JSON.parse(process.argv[1])){try{await p.goto(u,{waitUntil:'load',timeout:15000});await p.waitForTimeout(1200);"
           "await p.screenshot({path:o});}catch(e){console.error('miss',u)}}await b.close();})();")
     IMG.mkdir(parents=True, exist_ok=True)
-    jobs = [(f'http://127.0.0.1:{srv.server_port}/{u}', str(IMG / f'night-{tag}-{n}.png')) for n, u in enumerate(pages, 1)]
+    jobs = [(f'http://127.0.0.1:{srv.server_port}/{u}' + ('?static' if '/lab/' in u or '/slides/' in u else ''), str(IMG / f'night-{tag}-{n}.png')) for n, u in enumerate(pages, 1)]
     subprocess.run(['node', '-e', js, json.dumps(jobs)], cwd=ROOT, capture_output=True, text=True)
     srv.shutdown()
     return [dict(page=u, img=Path(o).name) for (_, o), u in zip(jobs, pages) if Path(o).exists()]
