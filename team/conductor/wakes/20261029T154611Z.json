@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Within ROLE items 2 and 5. motion and studio key.json each added by that member's own join commit (f1cbca0, 8d208d3). The three requests are ordinary: no keys, personal details or directives. No HOLD. Conditions: vault_check before the mail commit; zips in the scratchpad.",
    "at": "2026-10-29T15:46:42Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) Vault keys sealed to motion (sha256:d2bd2d8029971854) and studio (sha256:cc6cd6e2e5425109); zips in the scratchpad, given to the editor; nothing printed. 2) Three requests routed verbatim: mailroom/deck/049 (motion, the building), deck/050 and dev/027 (studio); vault_check clean, pushed; pace.json routed. 3) schedule.json both running with their task ids; pace producers; status; night log and Moments. Checks: both keys from their own commits, both first wakes five steps clean, both inside their policies, no overlaps, gate clean. Commit 4adc04a.",
+   "at": "2026-10-29T15:47:33Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Commit 4adc04a inside the pre-review's conditions and scope. Night PNGs show no key or QR; no .zip or .enc tracked; vault_check on the mail clone clean; build, gate and agents check clean.",
+   "at": "2026-10-29T15:48:13Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "4adc04a matches the plan item by item: pace.json routed the three requests; schedule.json both running with task ids; status, night log and Moments. The sealing and the mail push are outside git, in the work step. Nothing unplanned.",
+   "at": "2026-10-29T15:48:13Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:48:13Z",
+ "outcome": "ok"
 }
