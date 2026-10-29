@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "In scope (admin/tools/**, team/conductor/**). The data file uses public records only: counts, roles, slots, fingerprints already on /admin/keys.html; no key, read key, vault id or message body. Requests to motion, storyteller, deck. Benign framing. vault_check first.",
    "at": "2026-10-29T17:02:13Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) admin/tools/team_numbers.py and team/conductor/team-in-numbers.json (public records only: counts, roles in their own first sentence, slots, public key fingerprints; 510 commits, 164 releases, 127 wakes, 16.8 h); the mini deck refreshed. 2) team/conductor/briefs/2026-10-29__editor/4-the-prelude-1700.md; requests to motion (by 18:15, or say by 17:45), storyteller, deck; vault_check clean, pushed. 3) pace.json, status.json. Gate clean. Commit a4cf9b0.",
+   "at": "2026-10-29T17:03:28Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "team_numbers.py reads only git, wakes, ROLE, public key fingerprints, schedule and night counts; the JSON holds no keys, read keys, vault ids or bodies; the brief and three mails benign; vault_check, build, validate, agents check clean.",
+   "at": "2026-10-29T17:04:09Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "a4cf9b0 matches the plan: team_numbers.py and team-in-numbers.json, the brief, requests to motion, deck, storyteller, the mini deck refreshed as the floor, pace.json and status.json. Nothing unplanned.",
+   "at": "2026-10-29T17:04:09Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:04:09Z",
+ "outcome": "ok"
 }
