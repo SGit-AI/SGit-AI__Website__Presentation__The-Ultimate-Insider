@@ -1,0 +1,15 @@
+{
+ "run": "r5-e02-blast-radius",
+ "purpose": "r5-e02-blast-radius: studio experiment E02, the blast radius: one example agent's grant rows, the mandate a small core, the excess around it, from the researcher's capture of abp.sgit.ai",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/003-infographic-request-blast-radius-e02.eml)",
+  "date": "2026-10-29",
+  "text": "One sentence the audience must understand: if one agent inside the company goes wrong, the damage reaches everything its grant reaches, and the grant is far larger than what it is for. The data: only src/static/studio/data/abp-examples.json. Draw from the grant rows, not from totals. The main example is the Claude Code CLI: grant 16, mandate 5, excess 12. Draw the shortfall too: one mandate item, send.endpoint.allowed, is not in the grant, so the excess is 16 minus the 4 granted mandate items. Label every example a published draft: none of the Claude Code rows is measured. What moves: start where E01's v2 ends, the model with its reach shaded. Then turn the shading into rows: each capability it can reach placed by how far it is from what the agent is for. The mandate lights up as a small core; the excess around it is the blast radius. Then, optionally, the barrier kind on each excess row. Length: 40 to 60 seconds; must read as a still at the end. What it must not say: no risk score or level; no product logos; no number that is not in the file; never 'measured' for these rows. An explainer beside it, as E01's."
+ },
+ "ending": "keep or delete: the editor's call after review",
+ "workers": [
+  {"id": "v1", "role": "developer", "task": "v1, driven: the 16 grant rows from the data file, core, excess, shortfall, barrier kinds", "out": "src/static/studio/lab/e02/v1/"},
+  {"id": "explainer", "role": "writer", "task": "the page and the explainer under /ruv-sgit/blast-radius/", "out": "src/pages/ruv-sgit/blast-radius/"},
+  {"id": "editor", "role": "editor", "task": "check the slide and the explainer against the request, the data file and the studio checklist", "out": "team/ruv-sgit/runs/r5-e02-blast-radius.editor.md"}
+ ]
+}

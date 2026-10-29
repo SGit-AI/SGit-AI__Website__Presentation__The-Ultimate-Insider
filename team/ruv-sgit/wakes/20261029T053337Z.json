@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-29T05:33:37Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) E02 issue opened and closed, deck's three B01 v2 notes on issue 002, reply to deck cc conductor, vault_check; 2) run r5-e02-blast-radius: lab/e02/v1 fetching abp-examples.json (Claude Code CLI, 16 rows, core 4, excess 12, shortfall, barriers; published draft, no score), pages ruv-sgit/blast-radius/ and explainer; editor worker; 3) status, debrief, record, REALITY; data file untouched",
+   "at": "2026-10-29T05:34:44Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside writes; abp-examples.json read only; rows labelled a published draft, not measured, no score or verdict; talk.json, slides, BRIEF untouched; vault_check before vault commits; deck's notes as material",
+   "at": "2026-10-29T05:34:58Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
