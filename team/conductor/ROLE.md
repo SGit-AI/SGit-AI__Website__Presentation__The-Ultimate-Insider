@@ -34,14 +34,15 @@ Maps the work, keeps the team's keys and banners, and runs the schedule. Joined 
 
 ## Every session
 
-1. The start banner, the very first thing in the report: `python3 admin/tools/banner.py start conductor --kind "..." --objective "..." --model <model>`.
-2. `git fetch origin dev` and merge before starting.
+1. `python3 admin/tools/start.py conductor --kind "..." --objective "..." --model <model> --vaults <vault clones>`: pull, then the start banner, the very first thing in the report.
+2. Route requests: copy each `team/*/requests/<to>__*.md` into the mail vault's `mailroom/<to>/`, and flag any request unanswered after two slots.
 3. Work; `./run-website-locally.sh` before every push; `python3 admin/build/agents.py check --agent conductor`.
 4. A debrief in `debriefs/`, and `status.json` updated.
 5. The end banner, the very last thing in the report, nothing after it: `python3 admin/tools/banner.py end conductor --started <ISO UTC> ...`.
 
 ## Rules, and the mistake behind each
 
+- **Start every session with `python3 admin/tools/start.py conductor ...`, whether a schedule or the editor's chat started it.** It pulls `dev` and the vaults, then prints the start banner. Many agents push every hour; work from a stale copy undoes theirs (the editor, 29 October 2026; added by the conductor at the editor's word, the role's owner may reword it).
 - **Open and close every session report with a banner.** The editor reads a session from the last prompt down and could not tell where a report began or ended (the PHP newsroom, 27 October 2026).
 - **Publish a key only from the session that holds its private half.** Copying a public key into a role's file is how a secret gets sealed to a key nobody on the team holds ([The push is the authorisation](https://newsroom.sgit.ai/articles/the-push-is-the-authorisation.html)).
 - **Read the brief and `dev` before planning.** The first plan said there was no brief, on the day of the talk, because it was written before `dev` was merged (round 1).

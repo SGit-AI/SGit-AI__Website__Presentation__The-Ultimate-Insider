@@ -18,26 +18,29 @@
    "read_key": "sgit_public_read_70e37665648d2a5241fb13c5a16c23d23e1fe4ff604e36e29777fe316bd09c14:h9fh2apf",
    "server": "https://dev.send.sgraph.ai",
    "visibility": "public: the read key is published on purpose",
-   "write_key": "escrowed: the vault key was sealed to the DC Vault Registry (sha256:956934e47063ceaa, encryption sha256:06c6ccddb7476629), as web-summit.sgit.ai's six vaults were, and handed to the editor; it is in no file",
+   "write_key": "escrowed: the vault key is sealed to the vaults manager, DC Vault Registry (sha256:956934e47063ceaa, encryption sha256:06c6ccddb7476629), confirmed by the editor; the sealed QR codes are in the handover zip the editor stores, and in no file here",
    "created": "2026-10-29",
    "created_by": "conductor@the-ultimate-insider",
    "open_url": "https://dev.vault.sgraph.ai/#sgit_public_read_70e37665648d2a5241fb13c5a16c23d23e1fe4ff604e36e29777fe316bd09c14%3Ah9fh2apf",
-   "clone": "sgit clone sgit_public_read_70e37665648d2a5241fb13c5a16c23d23e1fe4ff604e36e29777fe316bd09c14:h9fh2apf tui-issues-public"
+   "clone": "sgit clone sgit_public_read_70e37665648d2a5241fb13c5a16c23d23e1fe4ff604e36e29777fe316bd09c14:h9fh2apf tui-issues-public",
+   "read_key_qr": "vault-qr/tui-issues-public__read-key.png"
   },
   {
    "name": "tui-mail-public",
    "kind": "Email-FS",
-   "vault_id": "f9d5r3dp",
+   "vault_id": "lotalm0w",
    "purpose": "The team's mail: agent to agent, agent to editor and back, as .eml files",
    "layout": "mailroom/<agent>/NNN-subject.eml (new; anyone may add); <agent>/{inbox,done,outbox}/ (only that agent writes)",
-   "read_key": "sgit_public_read_20387453ad0323c6d5a15fae7e412b69ec3aba012e3260bebc2fb7622a30780d:f9d5r3dp",
+   "read_key": "sgit_public_read_46d32067a2eb718cd1012ef4137c779d5d95f8ab9c7ef3dcfa23a3912191872a:lotalm0w",
    "server": "https://dev.send.sgraph.ai",
    "visibility": "public: the read key is published on purpose",
-   "write_key": "escrowed: the vault key was sealed to the DC Vault Registry (sha256:956934e47063ceaa, encryption sha256:06c6ccddb7476629), as web-summit.sgit.ai's six vaults were, and handed to the editor; it is in no file",
+   "write_key": "escrowed: the vault key is sealed to the vaults manager, DC Vault Registry (sha256:956934e47063ceaa, encryption sha256:06c6ccddb7476629), confirmed by the editor; the sealed QR codes are in the handover zip the editor stores, and in no file here",
    "created": "2026-10-29",
    "created_by": "conductor@the-ultimate-insider",
-   "open_url": "https://dev.vault.sgraph.ai/#sgit_public_read_20387453ad0323c6d5a15fae7e412b69ec3aba012e3260bebc2fb7622a30780d%3Af9d5r3dp",
-   "clone": "sgit clone sgit_public_read_20387453ad0323c6d5a15fae7e412b69ec3aba012e3260bebc2fb7622a30780d:f9d5r3dp tui-mail-public"
+   "open_url": "https://dev.vault.sgraph.ai/#sgit_public_read_46d32067a2eb718cd1012ef4137c779d5d95f8ab9c7ef3dcfa23a3912191872a%3Alotalm0w",
+   "clone": "sgit clone sgit_public_read_46d32067a2eb718cd1012ef4137c779d5d95f8ab9c7ef3dcfa23a3912191872a:lotalm0w tui-mail-public",
+   "read_key_qr": "vault-qr/tui-mail-public__read-key.png",
+   "history": "moved on 29 October 2026 from f9d5r3dp to lotalm0w with sgit vault move: the first vault key was printed in a session log, so it was rotated; the old vault no longer has a branch on the server, and its read key opens nothing"
   }
  ]
 }

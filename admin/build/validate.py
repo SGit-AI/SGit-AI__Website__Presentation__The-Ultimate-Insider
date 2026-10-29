@@ -93,8 +93,11 @@ class Gate:
 
     def check_banners(self):                                        # every member opens and closes its session report with a banner
         for role in sorted((ROOT / 'team').glob('*/ROLE.md')):
-            if 'admin/tools/banner.py' not in role.read_text():
+            text = role.read_text()
+            if 'admin/tools/banner.py' not in text:
                 self.fail('banners', role.relative_to(ROOT), 'does not tell its agent to open and close each session with admin/tools/banner.py')
+            if 'admin/tools/start.py' not in text:
+                self.fail('banners', role.relative_to(ROOT), 'does not tell its agent to start each session with admin/tools/start.py (pull first)')
 
     def check_vendored(self):                                       # vendored files are unmodified copies, pinned by checksum
         import hashlib

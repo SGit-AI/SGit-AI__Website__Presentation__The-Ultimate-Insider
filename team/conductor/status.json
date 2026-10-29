@@ -2,11 +2,31 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "conductor",
   "as_of": "2026-10-29",
-  "round": 3,
-  "state": "round 3 closed: the two public vaults (Issues-FS, Email-FS) are open, their read keys on the site, their vault keys sealed to the DC Vault Registry",
+  "round": 4,
+  "state": "round 4 closed: the vaults manager's key published with its QR; a handover zip of sealed QR codes; every session pulls first; an hourly schedule, fifteen minutes apart, waits for the editor",
   "done": [
     {
-      "what": "Two public vaults on dev.send.sgraph.ai: tui-issues-public (h9fh2apf, Issues-FS lite) and tui-mail-public (f9d5r3dp, Email-FS lite), each with a README, a folder per agent, and the first issues and messages",
+      "what": "The vaults manager's key (DC Vault Registry, sha256:956934e47063ceaa) published as a known key, with a QR image read back by pki-agent.mjs read-qr",
+      "evidence": "team/conductor/known-keys/, /admin/keys.html#known"
+    },
+    {
+      "what": "A handover zip for both vaults: each vault key sealed as a QR code to the vaults manager, each read key as a QR code, a manifest; and the tool for every agent",
+      "evidence": "admin/tools/vault_handover.py, admin/tools/qr.mjs, CLAUDE.md"
+    },
+    {
+      "what": "Every session starts by pulling: admin/tools/start.py, the rule in CLAUDE.md and every ROLE.md, checked by the gate",
+      "evidence": "admin/tools/start.py, admin/build/validate.py (banners)"
+    },
+    {
+      "what": "The hourly schedule, each member fifteen minutes apart, and how members ask each other for work",
+      "evidence": "team/conductor/schedule.json, /team/schedule.html, the mail vault's README"
+    },
+    {
+      "what": "The mail vault's key rotated after it was printed in a session log",
+      "evidence": "team/conductor/vaults.json (history), the round 4 debrief"
+    },
+    {
+      "what": "Two public vaults on dev.send.sgraph.ai: tui-issues-public (h9fh2apf, Issues-FS lite) and tui-mail-public (lotalm0w, moved from f9d5r3dp, Email-FS lite), each with a README, a folder per agent, and the first issues and messages",
       "evidence": "team/conductor/vaults.json, /admin/keys.html#vaults, team/conductor/debriefs/2026-10-29__two-public-vaults.md"
     },
     {
@@ -28,8 +48,12 @@
   ],
   "next": [
     {
-      "what": "Brief each agent on the two vaults in its ROLE.md (conductor's issue 004)",
-      "why": "the rule is in CLAUDE.md; each role should say what it reads and writes there"
+      "what": "At the editor's go: create the conductor's hourly task into this session; ask deck, ruv-sgit and dev to create theirs",
+      "why": "each task fires into its own member's session"
+    },
+    {
+      "what": "Route repository requests into the mail vault at :02",
+      "why": "one record of every request"
     },
     {
       "what": "Create the scheduled tasks from schedule.json",
@@ -42,15 +66,15 @@
   ],
   "asks": [
     {
-      "what": "Hand the two sealed vault-key files to the DC Vault Registry agent",
+      "what": "Store the handover zip and give it to the vaults manager; discard the two .enc files of round 3",
+      "from": "the editor"
+    },
+    {
+      "what": "Approve the hourly schedule (hours, and the four members in it), or change it",
       "from": "the editor"
     },
     {
       "what": "Agree or change the conductor's policy.json and the proposed security and researcher roles",
-      "from": "the editor"
-    },
-    {
-      "what": "Approve the schedule (team/conductor/schedule.json), or change it",
       "from": "the editor"
     },
     {

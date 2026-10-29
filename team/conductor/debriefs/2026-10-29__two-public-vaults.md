@@ -12,6 +12,8 @@ outside_scope: 9
 out_of_scope_requests: 1
 ---
 
+> **Corrected in round 4, the same night.** `tui-mail-public` is now vault `lotalm0w`, not `f9d5r3dp`: its first vault key was printed in a session log by `sgit vault info`, so it was rotated with `sgit vault move`. The old vault has no branch on the server and its read key opens nothing. The sealed `.enc` file for it is stale; the handover zip of round 4 replaces both files. The table below is left as it was.
+
 ## What the editor asked
 
 Two vaults, 100% public, for the team to communicate through: one for Issues-FS and one for Email-FS, pushed with sgit using the access token the editor gave, in the pattern web-summit.sgit.ai uses (public and private vaults for Issues-FS, Email-FS and a CRM; this team needs the two public ones).

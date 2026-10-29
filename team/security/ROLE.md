@@ -17,12 +17,13 @@ Proposed by the conductor on 29 October 2026; not yet agreed by the editor, and 
 
 ## Every session
 
-1. The start banner, the very first thing in the report: `python3 admin/tools/banner.py start security --kind "..." --objective "..." --model <model>`.
+1. `python3 admin/tools/start.py security --kind "..." --objective "..." --model <model>`: pull, then the start banner, the very first thing in the report.
 2. Its own key, made in the session and published in `team/security/key.json` (`admin/tools/pki-agent.README.md`).
 3. The end banner, the very last thing in the report, nothing after it: `python3 admin/tools/banner.py end security --started <ISO UTC> ...`.
 
 ## Rules, and the mistake behind each
 
+- **Start every session with `python3 admin/tools/start.py security ...`, whether a schedule or the editor's chat started it.** It pulls `dev` and the vaults, then prints the start banner. Many agents push every hour; work from a stale copy undoes theirs (the editor, 29 October 2026; added by the conductor at the editor's word, the role's owner may reword it).
 - **Open and close every session report with a banner.** The editor reads a session from the last prompt down and could not tell where a report began or ended (the PHP newsroom, 27 October 2026).
 - A finding never quotes the secret it found: a report that repeats a key has leaked it a second time.
 - A pinned tool that nobody has read is a pinned risk: the PHP newsroom's copy of the same tool was recorded as "not read line by line" and given to security as a card.

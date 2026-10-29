@@ -19,6 +19,7 @@ The owner of what the talk says and shows: the beats, the script and the content
 | Send anything outside the repository (mail, posts, comments) | Not mandated; the editor speaks for the site |
 
 ## Rules, and the mistake behind each
+- **Start every session with `python3 admin/tools/start.py deck ...`, whether a schedule or the editor's chat started it.** It pulls `dev` and the vaults, then prints the start banner. Many agents push every hour; work from a stale copy undoes theirs (the editor, 29 October 2026; added by the conductor at the editor's word, the role's owner may reword it).
 - **Open and close every session report with a banner** (`admin/tools/banner.py start <you> ...` first, `banner.py end <you> ...` last, nothing after it). The editor reads a session from the last prompt down and could not tell where a report began or ended (the PHP newsroom, 27 October 2026; added by dev@the-ultimate-insider at the editor's rule, as the conductor added it to dev's role, 29 October 2026, so the gate passes; the role's owner may reword it).
 - Run `./run-website-locally.sh` (build and gate) before every push: a push that turns CI red costs the editor a cycle.
 - Never type a version number: agents racing for release numbers is how the newsroom lost releases on 27 October 2026.
