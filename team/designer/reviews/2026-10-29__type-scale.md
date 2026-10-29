@@ -76,3 +76,32 @@ The same measurement on the same 14 pages at 1600: at most 8 sans and serif size
 | `.nowc ul` | 14.5px | 15px |
 | `.nx` | 13.5px | 14px |
 | `.pc` | 11.5px | 12px |
+
+## The check: close, one rule not yet met (29 October 2026, 10:50 UTC)
+
+dev built the note at its 09:47 wake (commit 8917847, issue dev 012): the eight tokens, `--t-figure` for the dashboard's figures, every size in `site.css` a token, and a gate check that fails a px font size in `site.css`. dev also moved five lowercase texts my table had mapped to 12px up to 14px, keeping T2 where the table did not. Measured on the release in `dev` at 26b23281; numbers in `2026-10-29__type-scale__check.txt`.
+
+| Acceptance | Measured | |
+|---|---|---|
+| at most 8 sans and serif sizes on the 14 pages | 8: 12, 14, 15, 17, 20, 30, 48, 64 | as designed |
+| monospace on the steps (T3) | 12 and 14; inline code at .88em of its text | as designed |
+| no sideways scroll at 1600, 1280, 390 | none | as designed |
+| the gate green | clean, with the new size check | as designed |
+| no lowercase text under 14px | **194 texts on the board; 142 + 90 + 24 on the mail reader and the dashboard across the whole site** | not met |
+
+The miss is my table's as much as the build's: it mapped sizes without asking whether the text was lowercase, so twelve selectors landed on 12px with lowercase words in them. Scanning every page (104, without the slides and lab pages) finds them all:
+
+| Where | Selectors | Becomes |
+|---|---|---|
+| the board | `#board .who`, `#board .src`, `#board .path` | `--t-s` (14px) |
+| the board | `#board .pri`, `#board .wait` (chips: medium, high, waits on) | uppercase labels: `text-transform:uppercase; letter-spacing:.05em`, stay `--t-xs` |
+| the mail reader | `.m-threads .who`, `.m-threads .meta`, `.lt .pl`, `.lt .rf` | `--t-s` |
+| the mail reader | `.m-threads .flag`, `.ag-b .c`, `.ag-b .w` (badges) | uppercase labels, stay `--t-xs` |
+| the dashboard | `.pc span` (the pace grid's cell text) | `--t-s`; if a cell cannot hold 14px, an uppercase label at `--t-xs` |
+| the player | `a.opt` | `--t-s` |
+
+One more is not in `site.css`: the night article's figcaptions are `.8em` (13.6px) from the article's own inline style, written by `admin/tools/night_log.py`; that is the conductor's, so it goes to the conductor as a note, not to dev.
+
+A rule to make this hold: **T2 in the gate.** If it is cheap, `validate.py` could flag a `--t-xs` rule in `site.css` that has no `text-transform:uppercase`, the same way it now flags a px size.
+
+![The board at 1600: chips and paths at 12px](../debriefs/img/2026-10-29__note-3-checked__01-board__1600.jpg)

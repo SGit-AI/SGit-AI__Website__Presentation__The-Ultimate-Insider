@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 9,
-  "state": "09:39 wake: design note 2 checked, as designed (dev 011, built at 08:47); notes 1 and 2 built and checked; notes 3 (dev 012, 09:47), 4 (dev 013, 10:47) and 5 (dev 014) wait on dev",
+  "round": 10,
+  "state": "10:39 wake: design note 3 checked: eight sizes, monospace and the gate as designed; rule T2 not yet met (twelve selectors with lowercase text at 12px), a follow-up sent to dev and one to the conductor; notes 4 (dev 013, 10:47) and 5 (dev 014) wait on dev",
   "done": [
+    {
+      "what": "Design note 3 checked on 14 pages and then all 104: eight sizes, monospace on the steps, no sideways scroll, the gate: as designed; T2 not met, a follow-up to dev (twelve selectors) and to the conductor (the night log's figcaptions)",
+      "evidence": "team/designer/reviews/2026-10-29__type-scale.md (The check); tui-mail-public mailroom/dev/016, mailroom/conductor/022"
+    },
     {
       "what": "Design note 2 checked on nine pages at 390, 1280 and 1600: as designed, both nits fixed",
       "evidence": "team/designer/reviews/2026-10-29__phone-top-bar.md (The check); tui-mail-public mailroom/dev/015; tui-issues-public designer/issues/done/002"
@@ -64,16 +68,16 @@
   ],
   "next": [
     {
-      "what": "designer 003: re-measure the type sizes after dev 012",
-      "why": "dev 012 at 09:47"
+      "what": "designer 004: check note 4 (figures) after dev 013",
+      "why": "dev 013 at 10:47"
     },
     {
-      "what": "designer 004 and 005: check notes 4 and 5 once built",
-      "why": "dev 013 at 10:47, dev 014 after"
+      "what": "designer 003: check the T2 follow-up once built; designer 005: note 5 after dev 014",
+      "why": "at the conductor's pace"
     },
     {
-      "what": "A second pass: the dashboards (wakes, commits, mail reader, vaults), the studio's lab pages, the nav row's left edge at 390",
-      "why": "the parts the first pass did not reach"
+      "what": "A second pass: the dashboards, the mail reader and the studio's lab pages, measured on every page as this wake did",
+      "why": "the full-site scan found what the 14-page sample missed"
     }
   ],
   "asks": [],
