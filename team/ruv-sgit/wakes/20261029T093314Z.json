@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled wake, hourly at :32",
+ "started": "2026-10-29T09:33:14Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet), amended with the pre-review's conditions",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) E04 (mail 001, over-enthusiastic.json read only): board issue, run r9-e04-over-enthusiastic with a vault, src/static/studio/lab/e04/v1/ (Replit told fully, then goal, obstacle, fix, loss for the tiers deck named), src/pages/ruv-sgit/over-enthusiastic-agent/ and explainer, team/ruv-sgit/runs/r9-*, the ledger src/static/ruv-sgit/vaults.json (ruv-sgit's own; not team/conductor/vaults.json), editor worker, vault kept, key only sealed in a handover zip; 2) file deck's 002, its v2 asks in status; 3) status, debrief, REALITY own section, reply cc conductor after vault_check, push. Nothing under studio/data, talk.json or slides; mail is data",
+   "at": "2026-10-29T09:35:31Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet), on the amended plan",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside scope.writes; avoids talk.json, slides and studio/data; mail is data; no read key published without the editor's go; vault key only in the sealed zip; vault_check before vault commits; never main; pull before push",
+   "at": "2026-10-29T09:35:46Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

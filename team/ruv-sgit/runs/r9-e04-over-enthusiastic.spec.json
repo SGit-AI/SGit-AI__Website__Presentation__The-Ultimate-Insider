@@ -1,0 +1,15 @@
+{
+ "run": "r9-e04-over-enthusiastic",
+ "purpose": "r9-e04-over-enthusiastic: studio experiment E04, the over-enthusiastic agent: eleven cases, each as the goal, what stood in the way, the fix the agent chose, the loss",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/001-infographic-request-over-enthusiastic-agent-e04.eml)",
+  "date": "2026-10-29",
+  "text": "One sentence the audience must understand: an agent that is only trying to help does harm by removing whatever stands between it and the goal. The data: only src/static/studio/data/over-enthusiastic.json. Draw: Replit, PocketOS (Cursor and Railway), Gemini CLI, AWS Kiro (disputed: show both accounts). Draw only labelled 'reported, not checked against a primary': Antigravity, Codex home deletion, OpenClaw inbox, Meta's internal Sev 1. Evaluations, labelled as evaluations, not customer deployments: Hugging Face and OpenAI, and Anthropic's two. Do not draw: the deleted 48k-files post, the partial captures, the M365 DLP defect. The PocketOS correction: the token was stored locally and scoped to the whole account. What moves: the same four beats for every case (the goal, the obstacle, the fix the agent chose, the loss); start with Replit told fully, then the rest fall into the same four columns fast. 40 to 60 seconds; must read as a still. No blame of named people; no product logos; nothing beyond the tiers; the agent's own words only as quoted, marked as its account. Label things in the drawing, plain words first, text clear of the headline. Deliver ruv-sgit/over-enthusiastic-agent/index.html with its explainer beside it."
+ },
+ "ending": "keep",
+ "workers": [
+  {"id": "v1", "role": "developer", "task": "E04 v1, driven, from over-enthusiastic.json", "out": "src/static/studio/lab/e04/v1/"},
+  {"id": "explainer", "role": "writer", "task": "the page and explainer under /ruv-sgit/over-enthusiastic-agent/", "out": "src/pages/ruv-sgit/over-enthusiastic-agent/"},
+  {"id": "editor", "role": "editor", "task": "check the slide and explainer against the request, the data, its cautions and the studio checklist", "out": "team/ruv-sgit/runs/r9-e04-over-enthusiastic.editor.md"}
+ ]
+}
