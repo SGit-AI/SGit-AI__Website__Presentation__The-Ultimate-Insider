@@ -46,9 +46,10 @@ button.theme{font:600 var(--t-s) system-ui,sans-serif;background:var(--card);col
 .hero{padding:44px 0 30px;border-bottom:1px solid var(--line)}
 .hero .g{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:36px;align-items:center}
 @media(max-width:900px){.hero .g{grid-template-columns:1fr}}
+@media(min-width:901px){.hero .g{grid-template-columns:minmax(0,960px) minmax(0,600px);justify-content:start;gap:clamp(36px,5vw,112px)}}   /* design note 5: the columns stop growing apart */
 .hero h1{font-size:var(--t-0);margin:.1em 0 .25em}
 .hero h1 em{font-style:normal;color:var(--agent)}
-.hero .sub{font-size:var(--t-l);color:var(--text);max-width:40ch;margin:0 0 18px}
+.hero .sub{font-size:var(--t-lead);color:var(--text);max-width:40ch;margin:0 0 18px}
 .event{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:var(--t-ui);color:var(--dim);margin:0 0 20px;padding:0;list-style:none}
 .event li b{color:var(--text)}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
@@ -56,6 +57,7 @@ button.theme{font:600 var(--t-s) system-ui,sans-serif;background:var(--card);col
 .btn.p{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn:hover{text-decoration:none;border-color:var(--accent)}
 .venn{width:100%;height:auto;display:block}
+.hero .venn{max-width:600px;margin-inline:auto}
 .venn text{font-family:system-ui,sans-serif}
 .venn .c{fill-opacity:.13;stroke-width:3}
 .venn .c1{fill:var(--agent);stroke:var(--agent)}.venn .c2{fill:var(--infra);stroke:var(--infra)}.venn .c3{fill:var(--risk);stroke:var(--risk)}

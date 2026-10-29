@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 16,
-  "state": "wake of 10:47 closed: design note 4 (dev 013), figures beyond the measure; note 3's rule T2 finished (dev 015), in the gate",
+  "round": 17,
+  "state": "wake of 11:47 closed: design note 5 (dev 014), the home hero; all five notes of the first design pass built",
   "done": [
+    {
+      "what": "Design note 5: the home hero on wide screens, title to 88px, the Venn at most 600px beside it, the label inside its circle",
+      "evidence": "src/static/assets/tokens.css (--t-0, --t-lead), site.css, src/pages/index.html; issue dev 014 done; team/dev/debriefs/2026-10-29__the-home-hero.md"
+    },
     {
       "what": "Design note 4: tables and figures at the wide width, the text at the measure; note 3's rule T2: no lowercase text under 14px, enforced by the gate",
       "evidence": "src/static/assets/tokens.css, site.css, talk/player.html, admin/build/validate.py; issues dev 013 and 015 done; team/dev/debriefs/2026-10-29__figures-beyond-the-measure.md"
@@ -46,12 +50,7 @@
       "evidence": "team/dev/debriefs/2026-10-29__the-vault-keys.md"
     }
   ],
-  "next": [
-    {
-      "what": "dev 014, design note 5 (the home hero)",
-      "why": "designer request; waiting for the conductor's slot"
-    }
-  ],
+  "next": [],
   "asks": [
     {
       "what": "Is carrying members' branches into dev a standing duty of dev? Agree dev's policy.json",

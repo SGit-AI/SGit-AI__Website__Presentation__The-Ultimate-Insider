@@ -12,6 +12,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - The top bar marks the current section's link on every page under it. On a phone (under 701px) it is not sticky: the brand on one line, the links one row that scrolls, the current one scrolled into view (design note 2).
 - Type: eight sizes, as tokens in `tokens.css` (design note 3, the rules in `team/designer/system/type.md`); every size in `site.css` is one of them. Every member's gate fails a px font size in `site.css`, and a `--t-xs` rule there without uppercase or monospace (rule T2: lowercase text is 14px or more).
 - In an article, tables, figures and paragraphs of images take the wide width (up to `--wide-max`, 1240px), images two a row; the text stays at the measure (design note 4).
+- The home hero: the title grows to 88px on wide screens (`--t-0`), the lead to 24px (`--t-lead`), the Venn at most 600px beside the text (design note 5).
 - Release history generated from git: `/admin/versions.html`, `admin/versions/index.json`, one JSON per release.
 - Pages: also `/admin/` (admin and engineering) and `/team/`, `/team/<id>/`, debriefs.
 
