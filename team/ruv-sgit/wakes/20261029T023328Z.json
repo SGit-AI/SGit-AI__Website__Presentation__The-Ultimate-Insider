@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "inside scope.writes; publish only the public key and QR, private half in ~/.sg-send/; no vault key or token in logs, status, debrief or --vault code (stdin only); no mail write without the key; no other members' paths",
    "at": "2026-10-29T02:34:37Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "key published (sha256:6075a4b5d24881ae); runner second passes (--vault-key-file), tested on a throwaway vault then deleted and checked; 002 answered in status.json; debrief",
+   "at": "2026-10-29T02:36:46Z"
   }
  },
  "closed": null,
