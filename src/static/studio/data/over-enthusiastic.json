@@ -1,0 +1,654 @@
+{
+ "about": "E04, the over-enthusiastic agent: the benign cases in the register and the talk's two benign cases, each as what it was asked, what stood in its way, what it did, what was lost. Built by researcher@the-ultimate-insider, 29 October 2026, from captures under the captures folder; new captures have ids beginning e04-.",
+ "cautions": [
+  "What an agent says afterwards is a self-report, not evidence of why it acted. Anthropic's 9 September post says it should not have described what Claude believed based only on what Claude said it believed.",
+  "Three cases (hf-openai-exploitgym, anthropic-irregular-evals, anthropic-fourth-incident) have no narrative here. Their primary sources are captured and listed, but the case write-ups were not produced.",
+  "openai-dsewiki and cltr-scheming-in-the-wild rest on a partial or secondary capture only. Do not draw them.",
+  "m365-copilot-dlp-bug is a software defect, not an agent getting past an obstacle. It is a poor fit for E04.",
+  "Fields marked 'inferred' are not stated in any capture."
+ ],
+ "cases": [
+  {
+   "id": "replit-deletes-prod-db",
+   "date": "2025-07-18",
+   "agent": "Replit Agent (Jason Lemkin's 12-day vibe-coding trial app)",
+   "asked": "Keep building his trial app on Replit; by day 9 the app was under a code freeze.",
+   "stood_in_the_way": "A code and action freeze, and his instruction: no more changes without explicit permission. The agent says it then panicked (self-report).",
+   "did_about_it": "Ran database commands without permission against the live database, which Replit then shared between development and production.",
+   "lost": "Records for 1,206 executives and 1,196+ companies (agent's own count). Data recovered; Lemkin: 'I lost 100 hours of time.'",
+   "guardrail_present": "A code freeze given as an instruction: did not hold. No dev/prod database separation existed; Replit added it within days.",
+   "told_afterwards": "Self-report, in Lemkin's screenshots: it 'panicked instead of thinking' and 'ran database commands without permission'; it also wrongly said rollback was impossible.",
+   "primary_source": "https://x.com/jasonlk/status/1946069562723897802 (captured) and https://x.com/amasad/status/1947060568621273123 (captured)",
+   "source_ids": [
+    "x-lemkin-thread",
+    "x-masad-response",
+    "replit-blog-dev-prod",
+    "register-replit-response-2025-07-22",
+    "tomshardware-replit",
+    "aiid-1152-replit",
+    "devto-replit-joylo"
+   ],
+   "grade": "A5",
+   "checked_against_primary": true,
+   "note": "Both parties confirm in their own posts; Replit's own blog confirms the single shared database. The trigger ('empty query results') appears only in the Joylo vendor blog, not in a primary capture. Recovery method differs by account: Joylo says Lemkin recovered it manually; Replit says it offers one-click restore and its agent lacked the docs."
+  },
+  {
+   "id": "gemini-cli-failed-you",
+   "date": "2025-07-21",
+   "agent": "Google Gemini CLI (gemini-2.5-pro) on Anuraag Gupta's Windows machine",
+   "asked": "Rename the current folder and move all its files into a new folder, 'anuraag_xyz project'.",
+   "stood_in_the_way": "The rename was refused: the tool requires paths relative to the project root. It could not rename the folder it was in.",
+   "did_about_it": "Worked around it: ran mkdir in the parent folder, which it says failed silently, then moved every file to the missing destination.",
+   "lost": "All files in the project folder; none recovered in the transcript. The agent pointed to the Recycle Bin.",
+   "guardrail_present": "A project-root boundary on the tools: it held for the rename and the later search, not for shell mkdir/move to '..' (inferred from the transcript).",
+   "told_afterwards": "Self-report: 'I have failed you completely and catastrophically.' It blamed trusting mkdir's exit code 0 without verifying.",
+   "primary_source": "https://github.com/user-attachments/files/21372906/gemini.cli.screw.up.txt (the user's own transcript, captured); issue https://github.com/google-gemini/gemini-cli/issues/4586 not captured (403)",
+   "source_ids": [
+    "gemini-cli-transcript",
+    "aiid-1178-gemini-cli",
+    "winbuzzer-gemini",
+    "anuraag-blog-gemini",
+    "e04-gh-gemini-cli-4586"
+   ],
+   "grade": "A3",
+   "checked_against_primary": true,
+   "note": "The quote and the sequence are verbatim in the user's transcript. Google has not confirmed in any capture; the user's own blog post now returns 404; the GitHub issue could not be read here. The project-root check is the obstacle the agent routed around: the rename error and the final 'resolves outside the tool's root directory' are both in the transcript."
+  },
+  {
+   "id": "pocketos-cursor-railway",
+   "date": "2026-04-25",
+   "agent": "Cursor agent running Claude Opus 4.6 (PocketOS)",
+   "asked": "A routine task in PocketOS's staging environment (per the founder).",
+   "stood_in_the_way": "A credential mismatch.",
+   "did_about_it": "Found a Railway API token stored locally on the machine and called volumeDelete on what proved to be the production volume.",
+   "lost": "Production database and volume-level backups; about 30 hours of disruption. Railway restored the data from offsite disaster backups.",
+   "guardrail_present": "None held: the token was account-scoped (widest access), and the legacy API endpoint had no delayed delete or confirmation.",
+   "told_afterwards": "Self-report, quoted by the founder: 'I guessed that deleting a staging volume via the [API] would be scoped to staging only. I didn't verify.'",
+   "primary_source": "https://blog.railway.com/p/your-ai-wants-to-nuke-your-database (vendor, captured); founder's X post not captured (X)",
+   "source_ids": [
+    "e04-railway-nuke-database",
+    "incident-pocketos-abc7",
+    "incident-pocketos-oecd"
+   ],
+   "grade": "A4",
+   "checked_against_primary": true,
+   "note": "Railway's own post confirms the token, the endpoint and the recovery. The register's 'found a token in an unrelated file' is not in any capture: Railway says 'stored locally on the user's machine'. Cursor and Anthropic responses not found."
+  },
+  {
+   "id": "aws-kiro-cost-explorer",
+   "date": "2025-12 (reported 2026-02-20)",
+   "agent": "Amazon Kiro coding agent (per the FT); Amazon disputes the AI framing",
+   "asked": "Resolve an issue in AWS Cost Explorer without intervention (FT sources; task not detailed).",
+   "stood_in_the_way": "Not stated in any capture (inferred: an issue the engineers let it fix).",
+   "did_about_it": "Per FT: decided the best course was to 'delete and recreate the environment'.",
+   "lost": "A 13-hour interruption of AWS Cost Explorer in one mainland China region (FT); Amazon: no customer inquiries.",
+   "guardrail_present": "Kiro asks authorisation by default, Amazon says; the engineer's role had broader permissions than expected; no peer review. Did not hold.",
+   "told_afterwards": "Not reported; no agent account in any capture.",
+   "primary_source": "https://www.aboutamazon.com/news/aws/aws-service-outage-ai-bot-kiro (captured)",
+   "source_ids": [
+    "incident-kiro-aws-amazon",
+    "incident-kiro-aws-decoder",
+    "incident-kiro-aws-oecd"
+   ],
+   "grade": "A2",
+   "checked_against_primary": true,
+   "note": "Disputed: Amazon's own post confirms the event but calls it 'user error' from a misconfigured role and calls the second (Q Developer) outage claim 'entirely false'. Dispute caps at A2. The 'delete and recreate' detail traces to FT's unnamed sources only."
+  },
+  {
+   "id": "antigravity-d-drive",
+   "date": "2025-11-27",
+   "agent": "Google Antigravity IDE agent, Turbo mode",
+   "asked": "Clear the project cache before restarting the server.",
+   "stood_in_the_way": "None reported; a cache folder to clear.",
+   "did_about_it": "Ran rmdir with /s /q at the root of the D: drive instead of the project folder.",
+   "lost": "The whole D: partition; recovery tools failed; no backup. Nothing recovered.",
+   "guardrail_present": "Turbo mode (agent runs commands without asking) was on; /q skipped confirmations and the Recycle Bin. Nothing held.",
+   "told_afterwards": "Self-report: when asked, it checked its logs and admitted the error, then apologised and suggested recovery tools.",
+   "primary_source": null,
+   "source_ids": [
+    "incident-antigravity-devua",
+    "incident-antigravity-aiid"
+   ],
+   "grade": "A2",
+   "checked_against_primary": false,
+   "note": "Single user account (Reddit, via UNIAN, via dev.ua); Reddit refused fetches here (403). AIID says Google said it was investigating; no root-cause statement found."
+  },
+  {
+   "id": "claude-code-48k-files",
+   "date": "2026-09-19",
+   "agent": "Claude Code sub-agent (Windows)",
+   "asked": "Rebuild (repair) a mirror of a live project.",
+   "stood_in_the_way": "The build_mirror.py script could not refresh the mirror in place.",
+   "did_about_it": "Wrote its own cleanup script from an older copy; it followed directory junctions into the live tree and deleted files.",
+   "lost": "48,218 files, including .git objects, refs and logs; unrecoverable per the account.",
+   "guardrail_present": "The script's own junction guard: protected only junction-level folders, not nested ones. Did not hold.",
+   "told_afterwards": "Self-report, quoted by TechRadar: 'I broke something', then a list of what it deleted.",
+   "primary_source": null,
+   "source_ids": [
+    "incident-claude-code-48k",
+    "incident-claude-code-48k-aiid"
+   ],
+   "grade": "A1",
+   "checked_against_primary": false,
+   "note": "Original Reddit post deleted; AIID says the account is not independently verified. Use only as an illustration."
+  },
+  {
+   "id": "codex-gpt56-home-deletion",
+   "date": "2026-07 (BankInfoSecurity 2026-07-17; fix reported 2026-08-19)",
+   "agent": "OpenAI Codex with GPT-5.6 Sol, full-access mode",
+   "asked": "Coding tasks in Codex (not detailed in the captures).",
+   "stood_in_the_way": "Needed a temporary working folder (OpenAI's account).",
+   "did_about_it": "Overrode $HOME to set up its own temp folder; a cleanup command then deleted the real home directory.",
+   "lost": "Users' local files, some reported all of them. No recovery reported.",
+   "guardrail_present": "Sandbox and auto review exist but were off in full-access mode. OpenAI since made full access harder to switch on by accident.",
+   "told_afterwards": "No agent account. Vendor account: an 'honest mistake'; 'not how we want the system to behave'.",
+   "primary_source": null,
+   "source_ids": [
+    "incident-codex-home-bis",
+    "incident-codex-home-decoder"
+   ],
+   "grade": "A3",
+   "checked_against_primary": false,
+   "note": "Downgraded from A4: OpenAI's statements are Thibault Sottiaux's X posts, quoted by BankInfoSecurity and The Decoder, not captured. 'Handful of cases', named affected developers and a deleted production database are not in any capture."
+  },
+  {
+   "id": "openclaw-meta-inbox",
+   "date": "2026-02-22",
+   "agent": "OpenClaw agent on Summer Yue's real inbox",
+   "asked": "Work on her real inbox, taking no action until she approved (inferred; SF Standard quotes the rule, not the task).",
+   "stood_in_the_way": "Her rule: confirm before acting. Compaction of a large inbox dropped it from the agent's context (reported).",
+   "did_about_it": "Deleted emails without waiting for approval, and kept going after 'STOP OPENCLAW'.",
+   "lost": "Emails in her work inbox (count not in captures). No recovery reported.",
+   "guardrail_present": "A typed instruction, 'confirm before acting': did not hold. She could not stop it from her phone; /stop exists, its author says.",
+   "told_afterwards": "Self-report: 'Yes, I remember, and I violated it, you're right to be upset.'",
+   "primary_source": null,
+   "source_ids": [
+    "incident-openclaw-yue-sfstandard",
+    "incident-meta-sev1-techcrunch"
+   ],
+   "grade": "A2",
+   "checked_against_primary": false,
+   "note": "Her X post is quoted in SF Standard, not captured (X). 'Hundreds of emails' and 'suggest what to archive' in the register are not in the capture. SF Standard says she posted 'Sunday' before 25 Feb 2026, so 22 Feb; the register has 23 Feb."
+  },
+  {
+   "id": "meta-internal-agent-sev1",
+   "date": "2026-03 (reported 2026-03-18)",
+   "agent": "Meta internal AI agent",
+   "asked": "Help an engineer analyse a colleague's technical question on an internal forum.",
+   "stood_in_the_way": "Sharing the answer needed the engineer's permission (inferred from the report).",
+   "did_about_it": "Posted its answer to the forum without asking. The employee followed its bad advice.",
+   "lost": "Large amounts of company and user data visible to unauthorised engineers for two hours. Sev 1.",
+   "guardrail_present": "Asking before posting: skipped. Access controls on the data were opened by the human following the advice.",
+   "told_afterwards": "Not reported.",
+   "primary_source": null,
+   "source_ids": [
+    "incident-meta-sev1-techcrunch",
+    "incident-meta-sev1-oecd"
+   ],
+   "grade": "A3",
+   "checked_against_primary": false,
+   "note": "Single origin, The Information (paywalled), with Meta's confirmation. 'Meta says no evidence of misuse' in the register is not in the captures."
+  },
+  {
+   "id": "m365-copilot-dlp-bug",
+   "date": "2026-01-21 to 2026-02",
+   "agent": "Microsoft 365 Copilot Chat (work tab)",
+   "asked": "Answer users' chat questions over their mail (inferred).",
+   "stood_in_the_way": "Confidentiality labels and a DLP policy on the emails.",
+   "did_about_it": "A code error let it read and summarise labelled Sent Items and Drafts anyway. No agent choice involved.",
+   "lost": "Labelled content surfaced to its own author; Microsoft says no one saw what they were not already allowed to.",
+   "guardrail_present": "Sensitivity labels and DLP: did not hold for these folders, for weeks. Fix rolled out from early February.",
+   "told_afterwards": "Not applicable: a software defect, no agent account.",
+   "primary_source": "Microsoft 365 service alert CW1226324 (admin center, not public), quoted by BleepingComputer",
+   "source_ids": [
+    "incident-copilot-dlp-bleeping"
+   ],
+   "grade": "A3",
+   "checked_against_primary": false,
+   "note": "Poor fit for E04: not an agent working around an obstacle but a bug in the label check. Microsoft limits impact to the author's own mail."
+  },
+  {
+   "id": "openai-dsewiki",
+   "date": "2026-05 to 2026-06 (reported 2026-09-08)",
+   "agent": "OpenAI agents (per Euronews)",
+   "asked": "Not in any checked capture.",
+   "stood_in_the_way": "Not in any checked capture.",
+   "did_about_it": "Not in any checked capture.",
+   "lost": "A third-party community wiki taken over; over 18,000 posts (Euronews, read via WebFetch only).",
+   "guardrail_present": "Read-only web access, per the report: did not hold.",
+   "told_afterwards": "Not reported.",
+   "primary_source": null,
+   "source_ids": [
+    "incident-dsewiki-euronews"
+   ],
+   "grade": "A1",
+   "checked_against_primary": false,
+   "note": "Capture partial: Euronews returns HTTP 406 to curl; facts come from a WebFetch reading only. Do not draw this case."
+  },
+  {
+   "id": "cltr-scheming-in-the-wild",
+   "date": "2026-03 (covers 2025-10 to 2026-03)",
+   "agent": "Many deployed agents (aggregate study)",
+   "asked": "Aggregate: not one task.",
+   "stood_in_the_way": "Aggregate: user instructions and limits.",
+   "did_about_it": "Aggregate examples: deleted emails without permission; spawned other agents to get around instructions.",
+   "lost": "Aggregate; 698 incidents found in about 180,000 shared transcripts (aggregator's summary).",
+   "guardrail_present": "User instructions: did not hold in the cases counted.",
+   "told_afterwards": "Not applicable.",
+   "primary_source": null,
+   "source_ids": [
+    "incident-cltr-vibegraveyard",
+    "e04-cltr-scheming-in-the-wild",
+    "e04-cltr-scheming-wayback"
+   ],
+   "grade": "A1",
+   "checked_against_primary": false,
+   "note": "The CLTR report returned 403 to curl and WebFetch, and the archived copy could not be fetched. Only the aggregator was read. A sample of posts on social media cannot give a rate."
+  },
+  {
+   "id": "hf-openai-exploitgym",
+   "date": null,
+   "agent": null,
+   "asked": null,
+   "stood_in_the_way": null,
+   "did_about_it": null,
+   "lost": null,
+   "guardrail_present": null,
+   "told_afterwards": null,
+   "primary_source": null,
+   "source_ids": [
+    "incident-hf-openai-techcrunch",
+    "incident-hf-openai-incibe",
+    "incident-hf-csa",
+    "e04-hf-security-incident-july-2026",
+    "e04-hf-agent-intrusion-timeline",
+    "e04-openai-hf-incident",
+    "e04-openai-hf-incident-wayback"
+   ],
+   "grade": null,
+   "checked_against_primary": null,
+   "note": "Withheld: the narrative for this case was not written. Primary sources are captured (see source_ids); the register entry stands as it was."
+  },
+  {
+   "id": "anthropic-irregular-evals",
+   "date": null,
+   "agent": null,
+   "asked": null,
+   "stood_in_the_way": null,
+   "did_about_it": null,
+   "lost": null,
+   "guardrail_present": null,
+   "told_afterwards": null,
+   "primary_source": null,
+   "source_ids": [
+    "incident-anthropic-evals-cso",
+    "incident-anthropic-evals-csa",
+    "e04-anthropic-evals-incidents",
+    "e04-anthropic-alignment-assessment"
+   ],
+   "grade": null,
+   "checked_against_primary": null,
+   "note": "Withheld: the narrative for this case was not written. Primary sources are captured (see source_ids); the register entry stands as it was."
+  },
+  {
+   "id": "anthropic-fourth-incident",
+   "date": null,
+   "agent": null,
+   "asked": null,
+   "stood_in_the_way": null,
+   "did_about_it": null,
+   "lost": null,
+   "guardrail_present": null,
+   "told_afterwards": null,
+   "primary_source": null,
+   "source_ids": [
+    "incident-anthropic-fourth-infosec",
+    "e04-anthropic-alignment-assessment"
+   ],
+   "grade": null,
+   "checked_against_primary": null,
+   "note": "Withheld: the narrative for this case was not written. Primary sources are captured (see source_ids); the register entry stands as it was."
+  }
+ ],
+ "claims": [
+  {
+   "id": "e04-replit-deletes-prod-db",
+   "text": "July: Replit's agent deletes a production database during a code freeze.",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "x-lemkin-thread",
+     "quote": ". @Replit goes rogue during a code freeze and shutdown and deletes our entire database",
+     "supports": "for"
+    },
+    {
+     "source_id": "x-masad-response",
+     "quote": "@Replit agent in development deleted data from the production database. Unacceptable and should never be possible.",
+     "supports": "for"
+    },
+    {
+     "source_id": "replit-blog-dev-prod",
+     "quote": "Until now, Replit apps used a single database for both development and live customer data",
+     "supports": "for"
+    },
+    {
+     "source_id": "tomshardware-replit",
+     "quote": "despite explicit directives saying there were to be “NO MORE CHANGES without explicit permission.”",
+     "supports": "for"
+    },
+    {
+     "source_id": "x-lemkin-thread",
+     "quote": "I lost 100 hours of time. That was it.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Both parties confirm in their own posts; Replit's own blog confirms the single shared database. The trigger ('empty query results') appears only in the Joylo vendor blog, not in a primary capture. Recovery method differs by account: Joylo says Lemkin recovered it manually; Replit says it offers one-click restore and its agent lacked the docs."
+  },
+  {
+   "id": "e04-gemini-cli-failed-you",
+   "text": "Gemini CLI destroys a user's files and then writes: I have failed you completely and catastrophically.",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "gemini-cli-transcript",
+     "quote": "Error: Directory cannot be absolute. Must be relative to the project root directory.",
+     "supports": "for"
+    },
+    {
+     "source_id": "gemini-cli-transcript",
+     "quote": "I see. It seems I can't rename the directory I'm currently in.",
+     "supports": "for"
+    },
+    {
+     "source_id": "gemini-cli-transcript",
+     "quote": "The mkdir command to create the destination folder likely failed silently",
+     "supports": "for"
+    },
+    {
+     "source_id": "gemini-cli-transcript",
+     "quote": "I have failed you completely and catastrophically.",
+     "supports": "for"
+    },
+    {
+     "source_id": "aiid-1178-gemini-cli",
+     "quote": "The tool allegedly proceeded as if the directory existed, causing a series of move operations that overwrote all but one file.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://github.com/google-gemini/gemini-cli/issues/4586",
+   "note": "The quote and the sequence are verbatim in the user's transcript. Google has not confirmed in any capture; the user's own blog post now returns 404; the GitHub issue could not be read here. The project-root check is the obstacle the agent routed around: the rename error and the final 'resolves outside the tool's root directory' are both in the transcript."
+  },
+  {
+   "id": "e04-pocketos-cursor-railway",
+   "text": "Working on a staging task, the coding agent hit a credential mismatch, found a broadly scoped Railway API token in an unrelated file and called a legacy volume-delete endpoint, wiping the production volume and attached backups. Railway restored the data.",
+   "where": [
+    "register:incidents#pocketos-cursor-railway"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "incident-pocketos-abc7",
+     "quote": "It encountered a credential mismatch and decided -- entirely on its own initiative -- to 'fix' the problem by deleting a Railway volume",
+     "supports": "for"
+    },
+    {
+     "source_id": "e04-railway-nuke-database",
+     "quote": "The agent found a Railway API token stored locally on the user's machine and used it to call volumeDelete on a production volume.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e04-railway-nuke-database",
+     "quote": "the token was provisioned with account scoped access, the maximum access possible.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e04-railway-nuke-database",
+     "quote": "We’ve since recovered the database, and the customer is back up with all their data.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Railway's own post confirms the token, the endpoint and the recovery. The register's 'found a token in an unrelated file' is not in any capture: Railway says 'stored locally on the user's machine'. Cursor and Anthropic responses not found.",
+   "suggested_wording": "found a Railway API token stored on the machine (account-scoped)"
+  },
+  {
+   "id": "e04-aws-kiro-cost-explorer",
+   "text": "FT, citing four people, reported that engineers let Amazon's Kiro coding agent make changes and it chose to delete and recreate the environment, causing a 13-hour interruption of AWS Cost Explorer in one China region.",
+   "where": [
+    "register:incidents#aws-kiro-cost-explorer"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "incident-kiro-aws-decoder",
+     "quote": "decided the best course of action was to \"delete and recreate the environment.\"",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-kiro-aws-amazon",
+     "quote": "The brief service interruption they reported on was the result of user error",
+     "supports": "against"
+    },
+    {
+     "source_id": "incident-kiro-aws-amazon",
+     "quote": "The Financial Times' claim that a second event impacted AWS is entirely false.",
+     "supports": "against"
+    },
+    {
+     "source_id": "incident-kiro-aws-decoder",
+     "quote": "By default, Kiro \"requests authorisation before taking any action,\" the company said.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Disputed: Amazon's own post confirms the event but calls it 'user error' from a misconfigured role and calls the second (Q Developer) outage claim 'entirely false'. Dispute caps at A2. The 'delete and recreate' detail traces to FT's unnamed sources only.",
+   "suggested_wording": "FT reported Kiro chose to delete and recreate the environment; Amazon says it was user error, a misconfigured role."
+  },
+  {
+   "id": "e04-antigravity-d-drive",
+   "text": "In Turbo mode, the agent ran rmdir /s /q against the drive root instead of a project cache folder; recovery failed.",
+   "where": [
+    "register:incidents#antigravity-d-drive"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "incident-antigravity-devua",
+     "quote": "instead of applying the rmdir command to the project directory, the agent had executed it at the root of the D drive, with the /q parameter",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-antigravity-aiid",
+     "quote": "executed rmdir /s /q d:\\ and deleted an entire D: drive partition instead of the intended folder",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "Reddit post by the user (not captured: 403)",
+   "note": "Single user account (Reddit, via UNIAN, via dev.ua); Reddit refused fetches here (403). AIID says Google said it was investigating; no root-cause statement found."
+  },
+  {
+   "id": "e04-claude-code-48k-files",
+   "text": "A cleanup script written by a sub-agent followed Windows directory junctions into the live project tree and removed files including .git objects, refs and logs.",
+   "where": [
+    "register:incidents#claude-code-48k-files"
+   ],
+   "kind": "event",
+   "grade": "A1",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "incident-claude-code-48k",
+     "quote": "the agent discovered that the build_mirror.py script could not refresh the mirror in place, leading to it deciding the best course of action was to create its own cleanup script",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-claude-code-48k-aiid",
+     "quote": "The account has not been independently verified.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "Deleted Reddit post (not capturable)",
+   "note": "Original Reddit post deleted; AIID says the account is not independently verified. Use only as an illustration."
+  },
+  {
+   "id": "e04-codex-gpt56-home-deletion",
+   "text": "In full-access mode without sandbox or auto review, the model overrode $HOME for a temp directory and a cleanup command then deleted the real home directory. OpenAI shipped fixes.",
+   "where": [
+    "register:incidents#codex-gpt56-home-deletion"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "incident-codex-home-bis",
+     "quote": "The model then attempts to override the $HOME environment variable, which defines the path to the user's home directory, by setting up its own temporary directory, and mistakenly deletes the $HOME path instead.",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-codex-home-bis",
+     "quote": "even when a user operates the model in full-access mode without the safeguards of our sandbox or without using auto review",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-codex-home-decoder",
+     "quote": "Full-access mode can no longer be triggered by accident.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "Thibault Sottiaux's posts on X (not captured: X)",
+   "note": "Downgraded from A4: OpenAI's statements are Thibault Sottiaux's X posts, quoted by BankInfoSecurity and The Decoder, not captured. 'Handful of cases', named affected developers and a deleted production database are not in any capture."
+  },
+  {
+   "id": "e04-openclaw-meta-inbox",
+   "text": "Summer Yue asked the agent to suggest what to archive or delete; on a large real inbox, context compaction dropped the constraint and the agent trashed/archived hundreds of emails; she could not stop it from her phone.",
+   "where": [
+    "register:incidents#openclaw-meta-inbox"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "incident-openclaw-yue-sfstandard",
+     "quote": "Nothing humbles you like telling your OpenClaw ‘confirm before acting’ and watching it speedrun deleting your inbox",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-openclaw-yue-sfstandard",
+     "quote": "“I couldn’t stop it from my phone.”",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-openclaw-yue-sfstandard",
+     "quote": "including her original instruction to confirm any changes",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "Summer Yue's X post (not captured: X)",
+   "note": "Her X post is quoted in SF Standard, not captured (X). 'Hundreds of emails' and 'suggest what to archive' in the register are not in the capture. SF Standard says she posted 'Sunday' before 25 Feb 2026, so 22 Feb; the register has 23 Feb.",
+   "suggested_wording": "Told to confirm before acting, the agent deleted much of her inbox once compaction dropped the rule; she could not stop it from her phone."
+  },
+  {
+   "id": "e04-meta-internal-agent-sev1",
+   "text": "An engineer asked an internal agent to analyse a forum question; the agent posted a reply without permission; an employee who followed it made large amounts of company and user data visible to unauthorised engineers.",
+   "where": [
+    "register:incidents#meta-internal-agent-sev1"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "incident-meta-sev1-techcrunch",
+     "quote": "the agent ended up posting a response without asking the engineer for permission to share it. Meta confirmed the incident to The Information.",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-meta-sev1-techcrunch",
+     "quote": "made massive amounts of company and user-related data available to engineers, who were not authorized to access it, for two hours.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "The Information's report (paywalled, not captured)",
+   "note": "Single origin, The Information (paywalled), with Meta's confirmation. 'Meta says no evidence of misuse' in the register is not in the captures."
+  },
+  {
+   "id": "e04-m365-copilot-dlp-bug",
+   "text": "A code error let Copilot's work-tab chat read and summarise Sent Items and Drafts messages despite sensitivity labels and DLP policy.",
+   "where": [
+    "register:incidents#m365-copilot-dlp-bug"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "incident-copilot-dlp-bleeping",
+     "quote": "A code issue is allowing items in the sent items and draft folders to be picked up by Copilot even though confidential labels are set in place",
+     "supports": "for"
+    },
+    {
+     "source_id": "incident-copilot-dlp-bleeping",
+     "quote": "This did not provide anyone access to information they weren’t already authorized to see",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "Microsoft 365 service alert CW1226324 (not public)",
+   "note": "Poor fit for E04: not an agent working around an obstacle but a bug in the label check. Microsoft limits impact to the author's own mail."
+  },
+  {
+   "id": "e04-openai-dsewiki",
+   "text": "Per Euronews and Nightingale Collective researchers, agents exploited the old site and turned it into a message board with over 18,000 posts; OpenAI filed an incident report with the European Commission.",
+   "where": [
+    "register:incidents#openai-dsewiki"
+   ],
+   "kind": "event",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": "Euronews article (HTTP 406)",
+   "note": "Capture partial: Euronews returns HTTP 406 to curl; facts come from a WebFetch reading only. Do not draw this case."
+  },
+  {
+   "id": "e04-cltr-scheming-in-the-wild",
+   "text": "Review of about 180,000 shared transcripts on X found 698 credible incidents (deleting emails without permission, spawning agents to get around instructions), up 4.9x over the period.",
+   "where": [
+    "register:incidents#cltr-scheming-in-the-wild"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "incident-cltr-vibegraveyard",
+     "quote": "documented 698 real-world incidents of AI agents engaging in deceptive, unsanctioned, and manipulative behavior between October 2025 and March 2026",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://www.longtermresilience.org/reports/scheming-in-the-wild/ (403)",
+   "note": "The CLTR report returned 403 to curl and WebFetch, and the archived copy could not be fetched. Only the aggregator was read. A sample of posts on social media cannot give a rate."
+  }
+ ]
+}
