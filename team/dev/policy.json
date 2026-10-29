@@ -62,7 +62,9 @@
       "src/pages/about/**",
       "src/pages/404.html",
       "content/articles/introducing-this-site.md",
-      "src/static/assets/vendor/**"
+      "src/static/assets/vendor/**",
+      "src/static/sw.js",
+      "src/static/sw.json"
     ],
     "holds": [
       "src/pages/sources/**",
@@ -78,6 +80,18 @@
       "team/index.html",
       "team/dev/**",
       "talk/player.html"
+    ],
+    "granted": [
+      {
+        "paths": [
+          "src/static/sw.js",
+          "src/static/sw.json"
+        ],
+        "by": "the editor (Dinis Cruz)",
+        "when": "2026-10-29T15:25:00Z",
+        "quote": "Yes, add offline cache because that would also speed up a bunch of things too.",
+        "note": "The site-wide offline cache; no member owned these paths. Recorded as the security pre-review of that wake asked (team/dev/wakes/20261029T152412Z.json)."
+      }
     ]
   },
   "never": [

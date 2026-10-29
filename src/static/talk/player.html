@@ -8,7 +8,7 @@
 <!-- The talk player, ported on 29 October 2026 by dev@the-ultimate-insider from ruv.sgit.ai's player
      (talk/player.html and assets/clock.js, github.com/SGit-AI/SGit-AI__Website__Ruv), Apache-2.0, which this file keeps.
      What changed here: this site's talk.json (beats in order, acts as sections), its two themes, the time the presenter
-     has (a countdown and a plan scaled to it), acts in the picker, and no service worker. team/dev/briefs/2026-10-29__the-player.md -->
+     has (a countdown and a plan scaled to it), acts in the picker, the build mode, and the site's own offline cache (../sw.js). team/dev/briefs/2026-10-29__the-player.md -->
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="stylesheet" href="../assets/tokens.css">
 <script src="../assets/pane.js" defer></script>
@@ -48,7 +48,7 @@ body.build #build { display:flex }
 #blist .tt { min-width:0 } #blist .tt b { display:block; font:600 15px/1.25 Georgia,serif; color:var(--head); overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
 #blist .tt span { font-size:12px; color:var(--dim); text-transform:uppercase; letter-spacing:.05em }
 #blist input.dur { width:78px; height:34px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); font:600 14px ui-monospace,monospace; padding:0 6px }
-#blist .acts { display:flex; gap:4px } #blist .row button.has { border-color:var(--amber); color:var(--amber) }
+#blist .acts { display:flex; gap:4px } #blist a.vw { display:inline-flex; align-items:center; height:36px; padding:0 10px; border:1px solid var(--line); border-radius:9px; color:var(--teal); text-decoration:none; font:600 14px ui-sans-serif,system-ui } #blist .row button.has { border-color:var(--amber); color:var(--amber) }
 #blist textarea { grid-column:2 / -1; width:100%; min-height:64px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); font:15px/1.4 ui-sans-serif,system-ui; padding:8px }
 #blist .act { margin:12px 4px 6px; font:700 12px ui-sans-serif,system-ui; letter-spacing:.08em; text-transform:uppercase; color:var(--accent) }
 @media (max-width:700px) { #blist .row { grid-template-columns:30px 26px minmax(0,1fr) 64px } #blist .acts { grid-column:3 / -1 } #blist input.dur { width:64px } }
@@ -314,6 +314,7 @@ function drawBuild() {
     const dn = document.createElement('button'); dn.type = 'button'; dn.textContent = '↓'; dn.title = 'move down'
     const cm = document.createElement('button'); cm.type = 'button'; cm.textContent = '✎'; cm.title = 'a comment on this'; if (x.comment) cm.className = 'has'
     ac.appendChild(up); ac.appendChild(dn); ac.appendChild(cm)
+    if (x.ref.startsWith('piece:')) { const vw = document.createElement('a'); vw.className = 'vw'; vw.textContent = 'view'; vw.href = 'engine/view.html?id=' + encodeURIComponent(x.ref.slice(6)); vw.title = 'open it in the viewer'; ac.appendChild(vw) }
     r.appendChild(hd); r.appendChild(cb); r.appendChild(tt); r.appendChild(du); r.appendChild(ac)
     const it = RUN.items[i]
     cb.addEventListener('change', () => { it.show = cb.checked; r.classList.toggle('off', !cb.checked); saveRun(); buildStat() })
@@ -683,7 +684,12 @@ $('steps').addEventListener('click', e => { const d = e.target.closest('.st'); i
 // slide once, quietly, in the background, so the next time they come from this machine
 function warm() {
   if (location.protocol === 'file:' || VIEW === 'audience') return
-  Promise.resolve().then(async () => {
+  const sw = navigator.serviceWorker
+  const reg = !sw || qs.has('nosw') ? Promise.resolve(false) : fetch('../sw.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : {}).catch(() => ({})).then(j => {   // the kill switch first
+    if (j && j.enabled === false) { sw.getRegistrations().then(rs => rs.forEach(r => r.unregister())); caches?.keys().then(ks => ks.forEach(k => k.startsWith('tui-') && caches.delete(k))); return false }
+    return sw.register('../sw.js', { scope: '../', updateViaCache: 'none' }).then(() => sw.ready).then(() => true)
+  }).catch(() => false)
+  reg.then(async offline => {
     const pages = [...new Set(B.filter(b => b.slide.layout === 'iframe').map(b => b.slide.src))], imgs = B.flatMap(b => [b.slide.layout === 'image' && b.slide.src, b.slide.fallback]).filter(Boolean)
     for (const u of imgs) fetch(u).catch(() => {})
     let n = 0
@@ -695,9 +701,9 @@ function warm() {
         const done = () => { setTimeout(() => { try { const r = f.contentWindow.RUV_STEPS; if (r?.length) KS[src] = r.map(x => ({ t: +x.t, label: x.label })) } catch {} f.remove(); res() }, 1500) }
         f.onload = done; setTimeout(done, 15000); document.body.appendChild(f)
       })
-      $('cache').textContent = `warmed ${++n}/${pages.length} live slides`
+      $('cache').textContent = `${offline ? 'cached' : 'warmed'} ${++n}/${pages.length} live slides`
     }
-    $('cache').textContent = `warmed: ${pages.length} live slides`; setTimeout(() => { $('cache').textContent = '' }, 4000)
+    $('cache').textContent = offline ? `ready offline: ${pages.length} live slides cached` : `warmed: ${pages.length} live slides`; setTimeout(() => { $('cache').textContent = '' }, 6000)
   }).catch(() => {})
 }
 // the talk timer: wall-clock time since you started speaking. It is yours: no slide button changes it. It is kept in this

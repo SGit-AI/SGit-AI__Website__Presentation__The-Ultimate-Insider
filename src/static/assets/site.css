@@ -36,8 +36,10 @@ button.theme{font:600 var(--t-s) system-ui,sans-serif;background:var(--card);col
   .top{position:static}
   .top .wrap{min-height:0;gap:6px 12px;padding-top:6px;padding-bottom:4px}
   .brand small{display:none}
-  nav.main{order:3;flex-basis:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:0 18px;padding-bottom:6px;
-    -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  nav.main{order:3;flex-basis:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:0 18px;padding-bottom:6px}
+  nav.main.more-r{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}   /* the fade only on a side with more (design note 6) */
+  nav.main.more-l{-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%);mask-image:linear-gradient(90deg,transparent,#000 12%)}
+  nav.main.more-l.more-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
   nav.main::-webkit-scrollbar{display:none}
   nav.main a{white-space:nowrap}
 }
@@ -280,7 +282,8 @@ body.adm .foot{margin-top:0}
 .wst.v-missing{opacity:.6}
 
 /* the dashboard */
-.now{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}
+.now{display:grid;grid-template-columns:repeat(2,minmax(0,360px));gap:14px;margin:16px 0}   /* Now and Hold as two tiles; Waits on the editor below (design note 6) */
+.now .nowc.ed{grid-column:1 / -1}
 @media(max-width:900px){.now{grid-template-columns:1fr}}
 .nowc{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:12px 16px}
 .nowc .kk{font:700 var(--t-xs) system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
@@ -291,7 +294,10 @@ body.adm .foot{margin-top:0}
 table.dash td:nth-child(4){font-size:var(--t-s);color:var(--text);max-width:70ch}
 .nx{font:600 var(--t-s) ui-monospace,monospace}
 table.pace th,table.pace td{text-align:left;vertical-align:top;padding:6px 8px}
-table.pace td{min-width:92px}
+table.pace td{min-width:0}
+table.pace th:not(:first-child){min-width:64px}
+table.pace .pc.o-ok > span{display:none}   /* an ok wake is its dots; the word stays in its title (design note 6) */
+table.pace tr > th:first-child{position:sticky;left:0;z-index:1;background:var(--bg)}
 .pc{display:flex;align-items:center;gap:3px;padding:3px 6px;margin:0 0 4px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font-size:var(--t-s);width:max-content}
 .pc:hover{border-color:var(--accent);text-decoration:none}
 .pc span{margin-left:4px;color:var(--dim)}

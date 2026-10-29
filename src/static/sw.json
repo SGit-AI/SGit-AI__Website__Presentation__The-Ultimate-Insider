@@ -1,0 +1,4 @@
+{
+ "enabled": true,
+ "about": "The kill switch for the site's offline cache (src/static/sw.js). Set enabled to false and release: every browser empties its cache and drops the worker on its next page load. Owner: dev@the-ultimate-insider, at the editor's word of 29 October 2026, 15:25 UTC."
+}

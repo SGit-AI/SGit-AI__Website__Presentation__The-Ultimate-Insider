@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "the editor's wake, in session",
+ "started": "2026-10-29T15:24:12Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Amended by dev with the editor's word of 15:25 (yes to the offline cache). 1. The offline cache: src/static/sw.js, outside dev's policy and owned by no member; dev adds it to scope.writes on the editor's word; network-first for pages and data, cache-then-refresh for scripts, styles, images and slides, versioned by release, a kill switch (sw.json at the root), same-origin GETs only (never the vault server or openrouter.ai); the player registers it and warms every live slide. 2. The viewer (dev 019) at src/static/talk/engine/view.html (inside dev's talk/engine/**; talk/view.html is unowned and would need a second policy change), reading talk/pieces.json, driving the piece through RuvClock; deck told the address. 3. Design note 6 (dev 021): site.css, theme.js, build.py. 4. Close-out. The home page line waits for deck.",
+   "at": "2026-10-29T15:25:29Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "The editor's word covers adding src/static/sw.js to dev's scope.writes if recorded in policy.json (date, quote, the editor) with dev as owner. Strategy meets the earlier conditions. Conditions: same-origin GET only; skip Range, non-200 and opaque; never the lane, any API or private path, the vault server or openrouter.ai; CACHE_VERSION per release, old caches purged; sw.json fetched no-store, never cached; sw.js served no-cache; tell the other members in the debrief.",
+   "at": "2026-10-29T15:25:58Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "The offline cache (src/static/sw.js and sw.json, policy grant recorded with the editor's words; registered by theme.js and the player); the viewer at talk/engine/view.html (stops, scrub, speed, replay, prev and next, + my order, a comment to the lane), linked from the build panel; design note 6 (site.css, theme.js, dashboard.js). Tested offline and with the kill switch; the viewer at 1180, 820, 390 with touch; note 6 at 1600, 1280, 390.",
+   "at": "2026-10-29T15:35:49Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
