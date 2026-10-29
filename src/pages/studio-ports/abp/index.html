@@ -1,0 +1,31 @@
+<!--meta {"title": "Port: What an Agent Behaviour Policy is", "description": "ruv.sgit.ai's ABP slide (run r8-explain), rebuilt on this site's slide engine: where it came from, what changed, its sources and the Apache-2.0 notice."} -->
+<style>
+.pf{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg);margin:10px 0 6px}
+.pf iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+</style>
+<section class="wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio-ports/index.html">Studio ports</a></nav>
+<p class="kicker">Port · from ruv.sgit.ai · by studio@the-ultimate-insider</p>
+<h1>What an Agent Behaviour Policy is</h1>
+<p class="lead">An ABP is a written mandate, one row per capability, per role. It compiles into Ruflo's own policy engine, and real actions then hit it: in POC1, 6 of 11 actions stopped, 4 denied and 2 sent to a human, every decision on a hash-chained receipt.</p>
+<div class="pf"><iframe src="{{root}}studio-ports/lab/abp/index.html" title="What an Agent Behaviour Policy is, the port" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio-ports/lab/abp/index.html">Open it on its own</a> · <a href="{{root}}studio-ports/lab/abp/index.html?review">the end state</a> · 26 seconds, five stops: a written mandate, mandate why barrier, compiled into Ruflo, actions hit it, enforced with receipts.</p>
+<h2>Where it came from</h2>
+<p>Slide 7 of ruv.sgit.ai's ten-minute talk, <a href="https://ruv.sgit.ai/talk/slides/abp/index.html">talk/slides/abp/</a>, made in ruv.sgit run r8-explain. Source file: <code>site/talk/slides/abp/index.html</code> in SGit-AI/SGit-AI__Website__Ruv at commit <code>47b4475</code>.</p>
+<h2>What changed</h2>
+<ul>
+<li>The clock is this site's slide engine, so the player pauses, steps and seeks it; the five stops (<code>RUV_STEPS</code>) are the source's own.</li>
+<li>The canvas is 1280 by 720 (the source is 1280 by 600), re-laid so there are no bands; the act line became the headline, and the slide's ID, ABP, is drawn large.</li>
+<li>All 11 actions are on screen at the end (the source scrolls a feed of 5), so nothing is hidden in the final frame; the tally and the closing line sit below, with nothing overlapping.</li>
+<li>This site's colour tokens, in both themes: yes and allowed in teal, approval in amber, no and denied in red, used only where the decision is.</li>
+<li>The rule count finishes before the step's built stop, so the paused frame shows the full number.</li>
+</ul>
+<h2>Every number, and its source</h2>
+<ul>
+<li>The coder's rows, owner and end date: <code>abp.json</code> (role coder, 10 rows).</li>
+<li>36 rules, 15 allow, 14 deny, 7 require approval, 6 roles: <code>rules.json</code>.</li>
+<li>11 actions, 4 denied, 2 sent to a human, ledger length 11, chain valid: <code>report.json</code> (POC1).</li>
+<li>23 primitives: <code>abp/vocabulary/capabilities.json</code>, <code>count</code>, in the same repository and commit.</li>
+</ul>
+<p class="note">The data files are copies of ruv.sgit.ai's <code>/data/</code>, unmodified and pinned by sha256 (<a href="{{root}}studio-ports/data/SOURCES.md">SOURCES.md</a>). Licence: <a href="{{root}}studio-ports/LICENSE-ruv-sgit.txt">Apache-2.0</a>; the notice is kept in the port's source. Ruflo is MIT, by rUv / ruvnet.</p>
+</section>

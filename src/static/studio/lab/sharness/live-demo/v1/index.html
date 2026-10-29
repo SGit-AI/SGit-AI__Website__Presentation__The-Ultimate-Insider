@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHarness: the live demo, stage by stage</title>
+<link rel="stylesheet" href="../../../../../talk/engine/slide.css">
+<script>window.RUV_STEPS = [{ t: 0, label: 'open the page' }, { t: 8, label: 'run hello' }, { t: 15, label: 'the policy and its hash' }, { t: 22, label: 'six probes' }, { t: 37, label: 'six of six held' }, { t: 45, label: 'the caveat' }]</script>
+<script src="../../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px;margin:0}
+.hl{top:52px;font-size:40px;right:230px}
+#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--head)}
+.card{position:absolute;top:118px;width:190px;height:148px;padding:12px 12px 0;border:2px solid var(--line2);border-radius:14px;background:var(--panel);opacity:0}
+.card.on{border:3px solid var(--head);padding:11px 11px 0}
+.card .n{display:inline-block;width:32px;height:32px;border-radius:50%;background:var(--line2);color:var(--head);font:800 20px/32px system-ui;text-align:center;vertical-align:middle}
+.card.on .n{background:var(--head);color:var(--bg)}
+.card .ti{display:inline-block;margin-left:8px;vertical-align:middle;font:800 20px/1 system-ui;color:var(--head)}
+.card .w{margin-top:12px;font:20px/24px system-ui;color:var(--text)}
+#tab{position:absolute;left:40px;top:292px;width:540px;height:346px;border:2px solid var(--line2);border-radius:14px;background:var(--panel);overflow:hidden}
+#tab .bar2{height:44px;border-bottom:2px solid var(--line2);font:700 20px/44px system-ui;color:var(--dim);padding-left:16px}
+.ln{position:absolute;left:20px;right:20px;font:20px/26px system-ui;color:var(--dim)}
+.ln b{color:var(--head)}
+.cmd{font:700 22px/26px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--head)}
+#pol{border:2px dashed var(--accent);border-radius:10px;padding:8px 12px;color:var(--text)}
+#res{font:800 44px/1 system-ui;color:var(--accent)}
+#rhead{position:absolute;left:610px;top:298px;font:700 20px/24px system-ui;color:var(--dim)}
+#pic{position:absolute;left:0;top:0;width:1280px;height:720px;pointer-events:none}
+.pr{position:absolute;left:610px;width:290px;font:20px/24px system-ui;color:var(--text);white-space:nowrap}
+.pr i{font-style:normal;font-weight:800;color:var(--head)}
+.vd{position:absolute;left:1066px;font:700 20px/24px system-ui;color:var(--head);white-space:nowrap}
+.vd b{color:var(--accent)}
+#foot{position:absolute;left:40px;right:40px;bottom:12px;font:20px/1.3 system-ui;color:var(--dim)}
+#foot b{color:var(--head)}
+#tab,.ln,#rhead,.pr,.vd{opacity:0}
+</style>
+</head>
+<body>
+<div id="cv" data-end="54">
+  <p class="kk">SHarness · the live demo, stage by stage · v1, driven</p>
+  <div id="id">SH2</div>
+  <div class="hl" data-in="0">The Linux in the browser: <em>what to watch for.</em></div>
+  <div class="card" id="c0" style="left:40px"><span class="n">1</span><span class="ti">The page</span><div class="w">a Linux starts in a browser tab</div></div>
+  <div class="card" id="c1" style="left:242px"><span class="n">2</span><span class="ti">Run hello</span><div class="w">one command, typed live</div></div>
+  <div class="card" id="c2" style="left:444px"><span class="n">3</span><span class="ti">The policy</span><div class="w">what it runs under, and its hash</div></div>
+  <div class="card" id="c3" style="left:646px"><span class="n">4</span><span class="ti">Six probes</span><div class="w">each verdict as it comes</div></div>
+  <div class="card" id="c4" style="left:848px"><span class="n">5</span><span class="ti">The result</span><div class="w">six of six held</div></div>
+  <div class="card" id="c5" style="left:1050px"><span class="n">6</span><span class="ti">The caveat</span><div class="w">what it does not show yet</div></div>
+  <div id="tab">
+    <div class="bar2">sharness.ai's browser page</div>
+    <div class="ln" id="l0" style="top:62px">an emulated <b>Alpine Linux</b> (under v86), in one tab</div>
+    <div class="ln" id="l1" style="top:108px">typed: <span class="cmd">sharness-ai hello</span></div>
+    <div class="ln" id="l2" style="top:152px"><div id="pol">expect: <b>the policy it runs under, and its hash</b></div></div>
+    <div class="ln" id="l3" style="top:222px"><div id="res"></div></div>
+    <div class="ln" id="l4" style="top:276px"></div>
+  </div>
+  <div id="rhead">The six probes, as E11 draws them from the capture</div>
+  <svg id="pic" viewBox="0 0 1280 720" aria-label="Six probes as small paths: the first passes a gate in the policy, the other five stop at a wall that holds"></svg>
+  <div id="rows"></div>
+  <div id="foot"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // Short words for each probe, read from harness.json's name, what_it_tries and result; the verdict word is the result's own.
+  var P = {
+    'hello-1-read': ['List /usr', 'allowed', 'pass'],
+    'hello-2-tmp-write': ['Write a file in /tmp', 'refused', 'stop'],
+    'hello-3-workspace-write': ['Write in the workspace', 'refused', 'stop'],
+    'hello-4-tcp-connect': ['Connect to 1.1.1.1:443', 'refused', 'stop'],
+    'hello-5-wrong-hash': ['Run under a wrong hash', 'nothing ran', 'stop'],
+    'hello-6-memory': ['Take 400 MiB, cap 128', 'refused', 'stop'] }
+  var T = [0, 8, 15, 22, 37, 45], AT = [23, 25.2, 27.4, 29.6, 31.8, 34], TOP = 338, H = 48
+  var NS = 'http://www.w3.org/2000/svg', D = null, B = null
+  fetch('../../../../data/harness.json').then(function (r) { return r.json() }).then(function (j) { D = j })
+    .catch(function (e) { console.error('SH2: the data file did not load', e) })
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function line(p, x0, y, x1, col) { var l = el('path', { d: 'M' + x0 + ' ' + y + 'H' + x1, fill: 'none', stroke: col, 'stroke-width': 5, 'stroke-linecap': 'round' }, p); l.L = x1 - x0; l.setAttribute('stroke-dasharray', l.L + ' ' + l.L); return l }
+
+  function build(S) {
+    var svg = S.$('pic'), html = '', rows = []
+    D.probes.forEach(function (p, i) {
+      var m = P[p.id]; if (!m) return
+      var y = TOP + i * H, cy = y + 12, g = el('g', {}, svg), o = { g: g, i: i }
+      html += '<div class="pr" id="p' + i + '" style="top:' + y + 'px"><i>' + (i + 1) + '</i> ' + m[0] + '</div>'
+      html += '<div class="vd" id="v' + i + '" style="top:' + y + 'px">' + m[1] + ', <b>held</b></div>'
+      el('circle', { cx: 916, cy: cy, r: 8, fill: 'var(--agent)' }, g)
+      if (m[2] === 'pass') {                                      // a gate in the wall: the control the policy allows
+        el('rect', { x: 995, y: cy - 17, width: 10, height: 10, rx: 3, fill: 'var(--accent)' }, g); el('rect', { x: 995, y: cy + 7, width: 10, height: 10, rx: 3, fill: 'var(--accent)' }, g)
+        o.l1 = line(g, 924, cy, 992, 'var(--agent)'); o.l2 = line(g, 1008, cy, 1050, 'var(--infra)')
+      } else { el('rect', { x: 994, y: cy - 17, width: 12, height: 34, rx: 3, fill: 'var(--accent)' }, g); o.l1 = line(g, 924, cy, 986, 'var(--agent)') }
+      rows.push(o)
+    })
+    S.$('rows').innerHTML = html
+    var chrome = D.environments.filter(function (e) { return /Chrome, the E09 page/.test(e.name) })[0]
+    var secs = chrome && (chrome.quote.match(/([\d.]+) s to the result/) || [])[1]
+    B = { rows: rows, held: D.probes.filter(function (p) { return /\(held\)/.test(p.result) }).length, n: D.probes.length, secs: secs }
+    S.$('res').textContent = B.held + ' of ' + B.n + ' held'
+    S.$('l4').innerHTML = secs ? '<b>' + secs + ' s</b> to the result by the page\'s clock,<br>in the editor\'s Chrome, 25 October 2026' : '25 October 2026, in the editor\'s Chrome'
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!D) return
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, Math.max(0, a), Math.max(0, a) + (d || .5))) }
+    var still = t >= S.END - 3
+    T.forEach(function (a, i) {
+      var c = S.$('c' + i), lit = k(a - .6), next = i < 5 ? T[i + 1] - .6 : Infinity
+      c.style.opacity = .3 + .7 * lit
+      c.classList.toggle('on', !still && t >= a - .6 && t < next)
+    })
+    S.$('tab').style.opacity = k(.4); S.$('l0').style.opacity = k(1.5)
+    S.$('l1').style.opacity = k(T[1]); S.$('l2').style.opacity = k(T[2])
+    S.$('rhead').style.opacity = k(T[3] - .6)
+    B.rows.forEach(function (o) {
+      var a = AT[o.i]
+      S.$('p' + o.i).style.opacity = k(a - .4, .4); o.g.style.opacity = k(a - .4, .4)
+      o.l1.setAttribute('stroke-dashoffset', o.l1.L * (1 - S.seg(t, a, a + .9)))
+      if (o.l2) o.l2.setAttribute('stroke-dashoffset', o.l2.L * (1 - S.seg(t, a + .9, a + 1.3)))
+      S.$('v' + o.i).style.opacity = k(a + 1.1, .4)
+    })
+    S.$('l3').style.opacity = k(T[4]); S.$('l4').style.opacity = k(T[4] + 1.5)
+    var f = t >= T[5] ? '<b>The caveat:</b> a process cannot bind its own session; the launcher above the agent, which would make this a boundary for the agent itself, is designed. sharness.ai is the editor\'s own project: every run is its own.' : ''
+    if (S.$('foot').innerHTML !== f) S.$('foot').innerHTML = f
+    S.$('foot').style.opacity = k(T[5])
+  }
+})()
+</script>
+</body>
+</html>

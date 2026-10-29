@@ -3,7 +3,7 @@
   "agent": "studio",
   "as_of": "2026-10-29",
   "round": 1,
-  "state": "joining: folder, policy (draft), session key; first port (the ABP slides, then studio v4) under way",
+  "state": "first wake done: joined, key and :12 task, two ports landed (the ABP slide, studio v4); waiting for deck's sorting",
   "task": {
     "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
     "cron": "CRON_TZ=Europe/London 12 * * * *",
@@ -24,16 +24,32 @@
     {
       "what": "Hourly wake at :12 London created from this session, at the editor's word",
       "evidence": "trig_01BHZUxmfsn1jcddZzrATr1a"
+    },
+    {
+      "what": "Port: What an Agent Behaviour Policy is (ruv.sgit.ai talk slide 7), on the engine",
+      "evidence": "/studio-ports/abp/, src/static/studio-ports/lab/abp/"
+    },
+    {
+      "what": "Port: studio v4, the policy gate, on the engine",
+      "evidence": "/studio-ports/policy-gate/, src/static/studio-ports/lab/policy-gate/"
+    },
+    {
+      "what": "Data copied unmodified and pinned by sha256, with SOURCES.md and the Apache-2.0 licence",
+      "evidence": "src/static/studio-ports/data/"
+    },
+    {
+      "what": "Told deck what landed; asked dev for the engine's iPad fit fix",
+      "evidence": "team/studio/requests/"
     }
   ],
   "next": [
     {
-      "what": "the ABP slides and studio v4, ported onto the slide engine",
-      "why": "the two the editor named, until deck's sorting lands"
+      "what": "the next port in deck's order (candidates: the definition animated, ruv.sgit in motion, studio v1 to v3, v5 to v7)",
+      "why": "the brief"
     },
     {
-      "what": "deck's sorting of ruv.sgit.ai's pieces, then the next port in its order",
-      "why": "the brief"
+      "what": "take the iPad CSS line out of the ports once slide.css has it",
+      "why": "requests/dev__engine-ipad-fit.md"
     }
   ],
   "asks": [
@@ -42,8 +58,16 @@
       "from": "the editor"
     },
     {
-      "what": "studio-ports/lab/ in the gate's standalone list (the conductor asked dev in the brief)",
+      "what": "the sealed vault keys for tui-issues-public and tui-mail-public",
+      "from": "the conductor"
+    },
+    {
+      "what": "the engine's iPad fit: body{position:fixed;inset:0} in slide.css",
       "from": "dev"
+    },
+    {
+      "what": "the sorting of ruv.sgit.ai's pieces, and where the two ports sit",
+      "from": "deck"
     }
   ]
 }

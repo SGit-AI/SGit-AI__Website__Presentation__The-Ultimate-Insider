@@ -1,0 +1,42 @@
+{
+ "run": "r22-sharness-series",
+ "purpose": "r22-sharness-series: a SHarness series at the editor's word: a storyline, SH1 without and with, SH2 the live demo stage by stage, SH3 what runs today and what is still a design",
+ "request": {
+  "from": "the editor, in ruv.sgit's session, 29 October 2026 about 15:35 UTC",
+  "date": "2026-10-29",
+  "text": "I'm sure it's already there, but can you really go to town on the S-harness, the sharness.ai animations and workflows, because that's new and this audience is really, really powerful. So I think a lot of the even animations and infographics that we have on the sharness.ai website that you might want to recreate here, because they're very powerful, especially when you show without and with it. And especially because I can then open up a Linux in the browser and show it. So that's quite cool, right? That's also a great way to show, maybe even get me a storyline for that. And if you need the agents to write this, then just relay them this message. Then they can create the brief for you."
+ },
+ "ending": "keep",
+ "workers": [
+  {
+   "id": "storyline",
+   "role": "writer",
+   "task": "the storyline page",
+   "out": "src/pages/ruv-sgit/sharness-storyline.html"
+  },
+  {
+   "id": "sh1",
+   "role": "developer",
+   "task": "SH1 without and with",
+   "out": "src/static/studio/lab/sharness/without-with/v1/"
+  },
+  {
+   "id": "sh2",
+   "role": "developer",
+   "task": "SH2 the live demo, stage by stage",
+   "out": "src/static/studio/lab/sharness/live-demo/v1/"
+  },
+  {
+   "id": "sh3",
+   "role": "developer",
+   "task": "SH3 what runs today and what is a design",
+   "out": "src/static/studio/lab/sharness/components/v1/"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "task": "check the three pieces and the storyline against harness.json",
+   "out": "team/ruv-sgit/runs/r22-sharness-series.editor.md"
+  }
+ ]
+}

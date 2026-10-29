@@ -1,0 +1,49 @@
+<!--meta {"title": "E14 explained: autonomy, earned level by level, frame by frame", "description": "How studio experiment E14 draws a licence to operate and autonomy earned level by level, with the suspension as a design: each frame with its time, where every word comes from, the technique, and what was left out. Illustrative throughout."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E14</a></nav>
+<p class="kicker">Studio experiment E14 · the explainer</p>
+<h1>Autonomy, earned level by level, frame by frame</h1>
+<p class="lead">The one sentence: make the risk decision in advance, put a name and a date on it, and let the agent earn more room one level at a time, each level unlocked by evidence that the one below held. Today a licence is a record of a decision; its suspension by the system is what is being built, so the slide draws it dashed and says so.</p>
+
+<h2>The frames (v1)</h2>
+<p>Seconds from the start; it ends at 52 s and holds still. The line under the headline changes with each stage. Everything on it is illustrative, and the slide says so in its kicker, on the card and in its last line.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>The headline, "Autonomy, earned level by level", and under it the four questions a licence answers. At 1 s the licence card appears on the left, tagged "illustrative: placeholders"; from 2 s, one a second, its six rows: for "an agent" (in the agent's red), authorised by "a named owner", held by "a named holder", runs under "a policy: the mandate", expires on "an expiry date", accepted risks "expire; accepted again".</td></tr>
+<tr><td>9 s</td><td>The mandate, a plain outline, and inside it four steps: level 1 "read only", level 2 "suggest", level 3 "act, checked", level 4 "act alone". Level 1 is open "on day one"; between each level and the next, a closed gate. At 11 s the agent appears on level 1.</td></tr>
+<tr><td>13 s</td><td>The climb. The agent walks level 1 to the first gate from 11.5 s to 15 s. Then three rounds 6 s apart (13, 19 and 25 s): at 2.5 s into a round (15.5, 21.5, 27.5 s) the step above reads "unlocked on, level N held"; at 3.5 s (16.5, 22.5, 28.5 s) the gate, a grey post (the second is labelled "gate"), turns the accent colour and swings open, and the level's name brightens; from 4.3 s to 6 s (17.3 to 19, 23.3 to 25, 29.3 to 31 s) the path climbs, then walks the new level to its gate in 2 s (19 to 21, 25 to 27 s), or on level 4 to its stop (31 to 32.5 s). At 32.6 s the label "the agent" appears beside it.</td></tr>
+<tr><td>34 s</td><td>A step outside: a dashed red line rises from the agent through the top of the mandate to a dashed ring, "a step outside"; where it crosses (35.2 s) the mandate's top border breaks into a dashed line in the third colour. Dashed because it has not happened; it is what the designed suspension would catch.</td></tr>
+<tr><td>37 s</td><td>The suspension, dashed in the third colour: a line from the step outside to a box, "Designed, not shipped: if a footprint leaves the mandate, the system suspends the licence" (38.2 s), and at 39.4 s a dashed arrow from the box to the licence card. The line under the headline: "by the system, not a quarterly review".</td></tr>
+<tr><td>44 s</td><td>The last line: "Today a licence is a record of a decision, with a name and an expiry. The suspension is what is being built." Under the headline: no real agent, person or date; names and levels are placeholders. It holds still from 52 s.</td></tr>
+</tbody></table></div>
+
+<h2>Where every word comes from</h2>
+<ul>
+<li><b>The four questions on the card</b> (who authorised it, who holds it, the policy it runs under, when it expires), the accepted risks that expire and must be accepted again, and the suspension "by the system, not by a quarterly review": the talk's own words on the licence to operate, which cite RiskMandate's licence to operate (in <a href="{{root}}sources/index.html">the sources</a>).</li>
+<li><b>Autonomy earned level by level</b>, "each level unlocked by evidence that the one below held": the talk's own words, and the programme's entry for E14.</li>
+<li><b>"Designed, not shipped"</b> and the last line: the talk says "Today a licence is a record of a decision, with a name and an expiry; the suspension is what we are building towards"; the researcher's finding is that the suspension is a design, not a shipped feature.</li>
+<li><b>Placeholders, not data</b>: "an agent", "a named owner", "a named holder", "an expiry date" and the four level names are the slide's own, chosen to read as placeholders. They are not RiskMandate's level names or any product's; no real person, agent or date appears.</li>
+<li><b>Words the slide adds</b>: "the mandate", "on day one", "unlocked on, level N held", "a step outside", "the agent". Each labels a part of the drawing; none is a new claim.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: the SVG is built once, then every frame is drawn from the slide's clock by <code>SLIDE_RENDER</code>, so the player can seek, pause and replay it, and <code>?static</code> shows the end state. The stages are declared in <code>window.RUV_STEPS</code>: 0, 9, 13, 34, 37 and 44 s.</li>
+<li>E04 v2's language for a gate: the agent's path draws itself up to it; here the gate does not break but opens, turning from grey to the accent colour as the evidence comes in, and the path crosses it. The one wall that breaks is the mandate's, where the step outside crosses it, and it breaks dashed, as a design.</li>
+<li>Three colours of meaning: the agent's red for the agent and its path only; the accent for a level unlocked on evidence; the third colour, dashed, for the suspension that is designed. The step outside is red because it is the agent's, and dashed because it has not happened. Everything else is neutral. Every text is 20 px or larger on the 1280 by 720 canvas; both themes (<code>?theme=light</code>).</li>
+<li>No data file and no fetch: it runs opened from disk too.</li>
+</ul>
+
+<h2>What was tried and left out</h2>
+<ul>
+<li><b>Real names, dates or a real agent on the card.</b> The request forbids them, and a real-looking licence would read as a record. The placeholders are written as placeholders.</li>
+<li><b>A suspension that fires.</b> Showing the licence suspended, stamped or greyed out, would show a feature that is not shipped. The slide stops at "would": a dashed step and a dashed box.</li>
+<li><b>An expiry that runs out on screen</b>, a clock ticking down to the expiry date: it would need a date, and it would take the eye from the climb. The card names the expiry; the talk tells it.</li>
+<li><b>More levels or named products' levels.</b> Four steps read at a glance; any real scheme's levels would be a claim about that scheme.</li>
+<li><b>The evidence itself</b> (what counts as "the level below held"): the talk does not say, so the slide only says it was in.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 by ruv.sgit@the-ultimate-insider in run r19-e14-earning-autonomy, at deck@'s request, the editor's word: a Ruflo hive with a builder who made the slide and these pages from the request, the talk's own words and the programme's entry, screenshotted in both themes at several times. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</article>
