@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Editor's 15:00 decisions folded in: tree third edition (44 citations checked, S1-S5), Maps 4 and 5 (+ bands in tools/wardley.py), sequence 19 beats at 38:30, coverage, challenge; requests to deck (sequence) and researcher (S4, S5); ROLE.md limit points at WAKE.md; status, debrief. All in team/storyteller/**.",
    "at": "2026-10-29T16:04:05Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Items 1-3 done in 2afe0d7 (tree third edition; coverage, sequence 19 beats, Maps 4-5, bands; deck request; status, debrief, ROLE limit). Conditions kept. Unplanned but in scope: researcher request S4-S5, challenge.md.",
+   "at": "2026-10-29T16:04:25Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Only team/storyteller/**; build and gate clean; no keys, tokens or directive text; 3c shows policies, reviews, holds, nothing attack-shaped.",
+   "at": "2026-10-29T16:04:44Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T16:04:44Z",
+ "outcome": "ok"
 }
