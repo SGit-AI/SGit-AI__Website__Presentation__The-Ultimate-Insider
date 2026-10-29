@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "D08 copied from ruv.sgit's status.json ask (r5 covers r7 and r12); status, debrief.",
    "at": "2026-10-29T13:18:16Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and gate clean; agents check 0 outside scope; vault_check clean. D08 quotes ruv.sgit's status.json word for word. No secrets; only evidence/** and team/researcher/** touched.",
+   "at": "2026-10-29T13:19:16Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 (D08 with r12) and item 2 (status round 15, debrief, wake record) done exactly; four files, all in scope.writes; conditions kept.",
+   "at": "2026-10-29T13:19:16Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T13:19:16Z",
+ "outcome": "ok"
 }
