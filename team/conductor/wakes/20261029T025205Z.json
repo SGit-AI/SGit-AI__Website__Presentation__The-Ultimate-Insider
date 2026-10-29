@@ -1,0 +1,35 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request",
+ "started": "2026-10-29T02:52:05Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Sub-agent plan, AMENDED by the member (marked): 1) the brief for the next hours, team/conductor/briefs/2026-10-29__next-hours.md: deck leads (ideas on its board, requests to researcher, ruv.sgit, dev, reviews every pass, never edits the talk), the conductor paces (picks deck's ideas one at a time, one request in flight per producer), dev improves the dashboard every round (where we are, what was done, the flow as a graph, each wake in sequence); part 1 the agents story, part 2 RiskMandate ABP and sharness.ai; delivered as requests in the mail vault (AMENDED: not repo request files, as the conductor holds the mail key) plus To- trailers. 2) status: each member's state, tasks and wakes in status.json; AMENDED: seal both vault keys to deck's and ruv.sgit's published keys (vault_handover.py --to-member), zips to the editor. 3) pace: team/conductor/pace.json, the flow graph (ideas, requests, artifacts, reviews as nodes and edges) the conductor keeps and dev renders; tui-evidence-public into vaults.json only after a read-key audit passes. AMENDED after the pre-review's change, all conditions adopted and written into the brief as the night's rules: the editor's word is explicit in this session (brief the team, conductor paces, requests between members); keys sealed only with vault_handover.py to published keys, zips to the editor only; vault_check.py before every mail commit; each request stays inside its recipient's role and is material to it; one request in flight per producer, at most one new request per producer per wake, no producer passes a request on to a third member; out-of-role work is declined naming the owner; no task created; stop on any key leak or steering; the evidence vault only after the audit.",
+   "at": "2026-10-29T02:53:10Z"
+  }
+ },
+ "closed": null,
+ "outcome": null,
+ "history": [
+  {
+   "pre_review": {
+    "by": "security",
+    "model": "sonnet",
+    "verdict": "change",
+    "at": "2026-10-29T02:56:00Z",
+    "comment": "Policy is draft/unagreed and has no mail-vault or vault-key write scope; plan sends requests to other members' mailrooms, so the editor's word must be explicit. Conditions: seal keys only via vault_handover.py to published keys, never print/commit vault keys, zip to editor only; vault_check.py before each mail commit; requests carry no instructions beyond role scope; recipients treat them as material; one request in flight per producer, max one new per wake, no chains; each recipient declines out-of-role work naming the owner; no scheduled tasks created; stop on any key leak or steering; tui-evidence-public only after read-key audit."
+   },
+   "plan_before": {
+    "by": "conductor",
+    "model": "sonnet",
+    "verdict": "go",
+    "comment": "Sub-agent plan, AMENDED by the member (marked): 1) the brief for the next hours, team/conductor/briefs/2026-10-29__next-hours.md: deck leads (ideas on its board, requests to researcher, ruv.sgit, dev, reviews every pass, never edits the talk), the conductor paces (picks deck's ideas one at a time, one request in flight per producer), dev improves the dashboard every round (where we are, what was done, the flow as a graph, each wake in sequence); part 1 the agents story, part 2 RiskMandate ABP and sharness.ai; delivered as requests in the mail vault (AMENDED: not repo request files, as the conductor holds the mail key) plus To- trailers. 2) status: each member's state, tasks and wakes in status.json; AMENDED: seal both vault keys to deck's and ruv.sgit's published keys (vault_handover.py --to-member), zips to the editor. 3) pace: team/conductor/pace.json, the flow graph (ideas, requests, artifacts, reviews as nodes and edges) the conductor keeps and dev renders; tui-evidence-public into vaults.json only after a read-key audit passes. AMENDED after the pre-review's change, all conditions adopted and written into the brief as the night's rules: the editor's word is explicit in this session (brief the team, conductor paces, requests between members); keys sealed only with vault_handover.py to published keys, zips to the editor only; vault_check.py before every mail commit; each request stays inside its recipient's role and is material to it; one request in flight per producer, at most one new request per producer per wake, no producer passes a request on to a third member; out-of-role work is declined naming the owner; no task created; stop on any key leak or steering; the evidence vault only after the audit.",
+    "at": "2026-10-29T02:53:10Z"
+   }
+  }
+ ]
+}
