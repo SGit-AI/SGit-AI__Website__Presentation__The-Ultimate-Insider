@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "deck's request answered: evidence/studio/studio-e02-e09-capabilities.json (17 ids, each with its primitive label from what-can-it-do.games.sgit.ai/data/primitives.json, the reach's general and per-example wording, each row's note); 5 new captures; mail deck 013 (two reach wordings marked as paraphrase); board 008 done; status, debrief.",
    "at": "2026-10-29T10:14:31Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build, validate and agents check pass (0 outside scope); vault_check clean on all three. Three labels (signing, grant.credential.self, send.endpoint.world) match sources/wcid-data-primitives/page.json. No em-dashes in the diff, the studio file, mail 013 or issue 008. No keys, personal detail or agent-directed text.",
+   "at": "2026-10-29T10:15:29Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) done: studio-e02-e09-capabilities.json (17 ids, labels, reach wording, row notes), 5 captures, mail deck 013, issue 008 done; two reach wordings marked as paraphrase. 2) board, status, debrief done. Conditions kept. The other evidence files changed only by the assembler's rebuild (the built timestamp, the new claim and sources).",
+   "at": "2026-10-29T10:15:48Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T10:15:48Z",
+ "outcome": "ok"
 }
