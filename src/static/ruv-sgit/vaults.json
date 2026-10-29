@@ -3744,10 +3744,210 @@
     "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
     "given_to": "the editor"
    }
+  },
+  {
+   "run": "r24-sharness-capture",
+   "purpose": "r24-sharness-capture: the SHarness series rebuilt from the researcher's capture of sharness.ai (mail 023, 024): SH1 v2 the playground's measured without and with, SH4 to SH7, and the storyline",
+   "request": {
+    "from": "the editor, in ruv.sgit's session, 29 October 2026 about 15:35 UTC",
+    "date": "2026-10-29",
+    "text": "Go to town on SHarness: recreate sharness.ai's animations and infographics, without and with, the Linux in the browser, and a storyline."
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "o6f6oqdm",
+   "created_at": "2026-10-29T16:37:35+00:00",
+   "closed_at": "2026-10-29T16:49:00+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 7,
+    "tasks": 7,
+    "ruflo_calls": 25,
+    "ruflo_failed": 0,
+    "ruflo_ms": 12217
+   },
+   "branches": [
+    {
+     "name": "w-sh1v2",
+     "role": "developer",
+     "files": 1,
+     "bytes": 8467,
+     "write_ms": 8367,
+     "merge_ms": 8667
+    },
+    {
+     "name": "w-sh4",
+     "role": "developer",
+     "files": 1,
+     "bytes": 6327,
+     "write_ms": 7968,
+     "merge_ms": 8786
+    },
+    {
+     "name": "w-sh5",
+     "role": "developer",
+     "files": 1,
+     "bytes": 8120,
+     "write_ms": 8338,
+     "merge_ms": 8819
+    },
+    {
+     "name": "w-sh6",
+     "role": "developer",
+     "files": 1,
+     "bytes": 6410,
+     "write_ms": 7885,
+     "merge_ms": 12393
+    },
+    {
+     "name": "w-sh7",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11034,
+     "write_ms": 8440,
+     "merge_ms": 9110
+    },
+    {
+     "name": "w-storyline",
+     "role": "writer",
+     "files": 1,
+     "bytes": 9549,
+     "write_ms": 7852,
+     "merge_ms": 8758
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 7832,
+     "write_ms": 7738,
+     "merge_ms": 8883
+    }
+   ],
+   "commits": 9,
+   "files": 9,
+   "bytes_plain": 59770,
+   "files_delivered": 7,
+   "bytes_delivered": 57739,
+   "store": {
+    "objects": 59,
+    "bytes": 87948,
+    "plaintext_hits": 0,
+    "probe": "66 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 4863,
+    "files": 9,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "34742b2afdc9",
+     "message": "init",
+     "time": "2026-10-29T16:37:45Z"
+    },
+    {
+     "id": "5a2c5a950dff",
+     "message": "brief: run r24-sharness-capture",
+     "time": "2026-10-29T16:37:47Z"
+    },
+    {
+     "id": "98e0cd2a456a",
+     "message": "developer sh1v2: delivered 1 files",
+     "time": "2026-10-29T16:46:50Z"
+    },
+    {
+     "id": "96e6af197319",
+     "message": "developer sh4: delivered 1 files",
+     "time": "2026-10-29T16:47:08Z"
+    },
+    {
+     "id": "83a2a9c81944",
+     "message": "developer sh5: delivered 1 files",
+     "time": "2026-10-29T16:47:25Z"
+    },
+    {
+     "id": "63ed6855c31a",
+     "message": "developer sh6: delivered 1 files",
+     "time": "2026-10-29T16:47:43Z"
+    },
+    {
+     "id": "dc595357d0ef",
+     "message": "developer sh7: delivered 1 files",
+     "time": "2026-10-29T16:48:04Z"
+    },
+    {
+     "id": "a5c293bd5487",
+     "message": "writer storyline: delivered 1 files",
+     "time": "2026-10-29T16:48:22Z"
+    },
+    {
+     "id": "22c3eb6cec66",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T16:48:39Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "sh1v2",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+     "tokens": 86814
+    },
+    {
+     "id": "sh4",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+     "tokens": 74756
+    },
+    {
+     "id": "sh5",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+     "tokens": 94847
+    },
+    {
+     "id": "sh6",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+     "tokens": 81914
+    },
+    {
+     "id": "sh7",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+     "tokens": 100409
+    },
+    {
+     "id": "storyline",
+     "role": "writer",
+     "who": "the conductor (ruv.sgit's session), the editor's fixes applied",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 121351,
+     "tool_uses": 22,
+     "wall_s": 137,
+     "must_fix": 4,
+     "should_fix": 19
+    }
+   ],
+   "kept_at": "2026-10-29T16:49:04+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r24-sharness-capture__vault-handover.zip",
+    "sha256": "280be27e6df59a4c",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
   }
  ],
  "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
- "updated": "2026-10-29T15:58:38+00:00",
+ "updated": "2026-10-29T16:49:04+00:00",
  "server": "https://dev.send.sgraph.ai",
  "viewer": "https://dev.vault.sgraph.ai/en-gb/",
  "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"

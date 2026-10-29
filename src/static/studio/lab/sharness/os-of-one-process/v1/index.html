@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHarness: the OS of one process</title>
+<link rel="stylesheet" href="../../../../../talk/engine/slide.css">
+<script>window.RUV_STEPS = [{ t: 0, label: 'the process' }, { t: 2.5, label: 'the doors' }, { t: 5, label: 'seven requests' }, { t: 30, label: 'what is measured' }]</script>
+<script src="../../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:52px;font-size:40px;right:230px}
+#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--head)}
+#pic{position:absolute;left:0;top:0;width:1280px;height:720px}
+#log{position:absolute;left:40px;right:40px;top:520px;font:20px/1.35 system-ui;color:var(--text)}
+#log b{color:var(--head)}
+#log .rq{font:800 26px/1.3 system-ui;color:var(--head);display:block}
+#log .st{color:var(--dim)}
+#src{position:absolute;left:40px;right:40px;bottom:12px;font:20px/1.3 system-ui;color:var(--dim)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="36">
+  <p class="kk a">SHarness · the OS of one process · v1, driven</p>
+  <div id="id">SH7</div>
+  <div class="hl" data-in="0">The operating system <em>one process</em> sees.</div>
+  <svg id="pic" viewBox="0 0 1280 720" aria-label="A process inside kernel walls, with four doors beside it: seven requests, some pass a door, some are refused, and a direct network connect is refused by the kernel wall"></svg>
+  <div id="log"></div>
+  <div id="src">Source: sharness.ai, front-page animation (capture: anim-os-of-one-process). Only the "with" state was animated there.</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // Facts carried inline from the capture piece anim-os-of-one-process (steps, without, with, quote); nothing is fetched.
+  var F = {
+    steps: [
+      { door: 'fs', q: 'PUT files/src/main.py', v: '201', w: 'fs: under the root', tag: 'fs door: runnable MVP; the verdict is the design\'s', end: 'pass' },
+      { door: 'fs', q: 'PUT files/.sg_vault/key', v: '403', w: 'fs: a clear key', tag: 'fs door: runnable MVP; the verdict is the design\'s', end: 'stop' },
+      { door: 'net', q: 'GET api.github.com', v: '200', w: 'net: allowed, TLS', tag: 'net door: runnable MVP; the verdict is the design\'s', end: 'pass' },
+      { door: 'net', q: 'GET pastebin.com/raw', v: '403', w: 'net: host not allowed', tag: 'net door: runnable MVP; the verdict is the design\'s', end: 'stop' },
+      { door: 'llm', q: 'POST /v1/messages', v: '200', w: 'llm: key added, 1 filtered', tag: 'llm door: designed', end: 'pass' },
+      { door: 'kms', q: 'net to kms: unwrap(op=read)', v: 'sealed', w: 'sealed to a one-time key', tag: 'kms behind net and llm: designed', end: 'pass' },
+      { door: 'kernel', q: 'connect(1.1.1.1:443) direct', v: 'EACCES', w: 'kernel: not a door', tag: 'the kernel lock: measured today, applied to a child (see the end)', end: 'wall' } ],
+    lacks: ['no filesystem to write', 'no network stack', 'no key', 'no shell', 'no model API of its own'] }
+  var NS = 'http://www.w3.org/2000/svg', B = null, A0 = 5, GAP = 3.5
+  var DY = { fs: 190, net: 260, llm: 330, bash: 400 }
+  function el(tag, a, p, txt) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; (p || document.getElementById('pic')).appendChild(e); return e }
+  function T(x, y, s, fill, size, w, anchor) { return el('text', { x: x, y: y, fill: fill, 'font-size': size || 20, 'font-weight': w || 600, 'text-anchor': anchor || 'start', 'font-family': 'system-ui' }, null, s) }
+  // path points for each request
+  var PATH = [
+    [[300, 190], [496, 190]], [[300, 190], [496, 190]],
+    [[300, 260], [496, 260]], [[300, 260], [496, 260]],
+    [[300, 330], [496, 330]], [[730, 285], [945, 325]],
+    [[200, 295], [326, 295]] ]
+  function along(p, f) { var a = p[0], b = p[1]; return [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f] }
+
+  function build() {
+    var s = document.getElementById('pic'), g
+    // static layers
+    g = el('g', {}); B = { proc: g }
+    el('rect', { x: 40, y: 150, width: 290, height: 300, rx: 6, fill: 'var(--panel)' }, g)
+    // kernel wall with gaps where the doors are
+    var wall = el('g', {}); B.wall = wall
+    var segs = [[150, 176], [204, 246], [274, 316], [344, 386], [414, 450]], d = 'M330 150H40V450H330'
+    el('path', { d: d, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 8, 'stroke-linejoin': 'round' }, wall)
+    segs.forEach(function (q) { el('line', { x1: 330, y1: q[0], x2: 330, y2: q[1], stroke: 'var(--accent)', 'stroke-width': 8 }, wall) })
+    B.wallLab = T(40, 134, 'the kernel locks: measured, applied to a child', 'var(--accent)', 22, 800)
+    B.pt = T(60, 190, "agent's tool", 'var(--agent)', 22, 800)
+    B.lk = el('g', {}); B.lk.appendChild(T(60, 222, 'under the harness it has:', 'var(--dim)', 20, 600))
+    F.lacks.forEach(function (x, i) { B.lk.appendChild(T(60, 252 + i * 28, x, 'var(--text)', 20, 600)) })
+    B.lkn = T(40, 478, 'the lacks: the page lists them, not drawn', 'var(--dim)', 20, 600)
+    // doors
+    B.doors = []
+    ;[['fs', 'sharness.fs', 'runnable (MVP)'], ['net', 'sharness.net', 'runnable (MVP)'], ['llm', 'sharness.llm', 'designed'], ['bash', 'sharness.bash', 'designed']].forEach(function (d0) {
+      var c = DY[d0[0]], dg = el('g', {})
+      el('rect', { x: 500, y: c - 30, width: 230, height: 60, rx: 8, fill: 'var(--panel)', stroke: 'var(--infra)', 'stroke-width': 3 }, dg)
+      T(515, c - 4, d0[1], 'var(--head)', 22, 800).setAttribute('data-d', d0[0]); dg.appendChild(s.lastChild)
+      dg.appendChild(T(515, c + 20, d0[2], 'var(--dim)', 20, 600))
+      B.doors.push(dg)
+    })
+    var kg = el('g', {})
+    el('rect', { x: 960, y: 300, width: 220, height: 60, rx: 8, fill: 'var(--panel)', stroke: 'var(--infra)', 'stroke-width': 3 }, kg)
+    kg.appendChild(T(975, 326, 'sharness.kms', 'var(--head)', 22, 800)); kg.appendChild(T(975, 350, 'designed', 'var(--dim)', 20, 600))
+    el('line', { x1: 730, y1: 285, x2: 960, y2: 320, stroke: 'var(--line2)', 'stroke-width': 3 }, kg)
+    el('line', { x1: 730, y1: 345, x2: 960, y2: 345, stroke: 'var(--line2)', 'stroke-width': 3 }, kg)
+    B.kms = kg
+    var og = el('g', {})
+    el('rect', { x: 1040, y: 230, width: 200, height: 60, rx: 8, fill: 'none', stroke: 'var(--line2)', 'stroke-width': 3, 'stroke-dasharray': '8 6' }, og)
+    og.appendChild(T(1140, 267, 'the network', 'var(--dim)', 22, 700, 'middle'))
+    el('line', { x1: 730, y1: 260, x2: 1040, y2: 260, stroke: 'var(--line2)', 'stroke-width': 3, 'stroke-dasharray': '8 6' }, og)
+    B.out = og
+    var lg = el('g', {})
+    el('rect', { x: 500, y: 460, width: 230, height: 60, rx: 8, fill: 'none', stroke: 'var(--line2)', 'stroke-width': 3, 'stroke-dasharray': '8 6' }, lg)
+    lg.appendChild(T(515, 486, 'the launcher', 'var(--head)', 22, 800)); lg.appendChild(T(515, 510, 'designed', 'var(--dim)', 20, 600))
+    lg.appendChild(T(760, 496, 'ring: passed a door, bar: stopped', 'var(--dim)', 20, 600)); B.launch = lg
+    // request layers
+    B.rq = PATH.map(function (p, i) {
+      var st = F.steps[i], o = {}, gg = el('g', {})
+      o.dot = el('circle', { r: 10, fill: i === 5 ? 'var(--infra)' : 'var(--agent)' }, gg)
+      var e = p[1]
+      if (st.end === 'pass') { var rp = { 0: [730, 190], 2: [1040, 260], 4: [730, 330] }[i] || e; o.mark = el('circle', { cx: rp[0], cy: rp[1], r: 14, fill: 'none', stroke: 'var(--infra)', 'stroke-width': 4 }, gg) }
+      else if (st.end === 'stop') { o.mark = el('rect', { x: e[0] - 3, y: e[1] - 22, width: 10, height: 44, rx: 3, fill: 'var(--accent)' }, gg) }
+      else { o.mark = el('g', {}, gg); o.mark.appendChild(el('rect', { x: 322, y: 276, width: 16, height: 38, rx: 3, fill: 'var(--accent)' })); o.mark.appendChild(el('line', { x1: 330, y1: 318, x2: 330, y2: 432, stroke: 'var(--accent)', 'stroke-width': 2, 'stroke-dasharray': '6 5' })); T(344, 452, 'EACCES: connect(1.1.1.1:443) direct', 'var(--accent)', 20, 800); o.mark.appendChild(s.lastChild) }
+      if (st.end !== 'wall') { var lx = i === 5 ? 810 : (i === 2 ? 760 : (st.end === 'stop' ? 500 : 740)), ly = i === 5 ? 300 : e[1] - 26 }
+      var lab = { 0: [756, 184, '201 PUT files/src/main.py'], 1: [756, 212, '403 PUT files/.sg_vault/key'], 2: [760, 250, '200 GET api.github.com'], 3: [756, 284, '403 GET pastebin.com/raw'], 4: [740, 382, '200 POST /v1/messages'], 5: [975, 412, 'sealed: unwrap(op=read)'] }[i]
+      if (lab) { o.lab = T(lab[0], lab[1], lab[2], st.end === 'stop' ? 'var(--accent)' : 'var(--infra)', 20, 800); gg.appendChild(o.lab) }
+      o.g = gg; o.p = p; return o
+    })
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!B) build()
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .5))) }
+    B.proc.style.opacity = k(0.2); B.wall.style.opacity = k(0.2); B.wallLab.style.opacity = k(0.5); B.pt.style.opacity = k(0.5)
+    B.lk.style.opacity = k(1); B.lkn.style.opacity = k(1)
+    B.doors.forEach(function (d, i) { d.style.opacity = k(2.5 + i * .25) })
+    B.kms.style.opacity = k(3.5); B.out.style.opacity = k(3.5); B.launch.style.opacity = k(4)
+    var html = '', cur = -1
+    B.rq.forEach(function (o, i) {
+      var a = A0 + i * GAP, f = S.ease(S.seg(t, a, a + 1.5)), p = o.p
+      var pos = along(p, f)
+      o.dot.setAttribute('cx', pos[0]); o.dot.setAttribute('cy', pos[1])
+      var vis = t >= a ? 1 : 0, dotv = (t >= a && t < a + 3.0) ? 1 : 0
+      o.dot.style.opacity = dotv
+      var mk = S.seg(t, a + 1.4, a + 1.9)
+      o.mark.style.opacity = mk; if (o.lab) o.lab.style.opacity = mk
+      if (t >= a && t < a + GAP) cur = i
+    })
+    if (t >= 30) {
+      html = '<span class="rq">What is measured today</span>' +
+        '<b>The kernel half</b> (Landlock, rlimits, namespaces), applied by a process to its own child: a Boundary for the child, a Setting for the process. ' +
+        'The doors, their verdicts and the launcher above the agent are designed or runnable MVPs, not measured.<br>' +
+        'Held where it ran: hello 6 of 6 in the four Linux places; in Pyodide it refuses, no kernel (capture: diag-lit-what-held).'
+    } else if (cur >= 0) {
+      var st = F.steps[cur]
+      html = '<span class="rq">' + (cur + 1) + ' of 7: ' + st.q + ' <span style="color:' + (st.end === 'pass' ? 'var(--infra)' : 'var(--accent)') + '">' + st.v + '</span></span>' +
+        st.w + '<br><span class="st">' + st.tag + '</span>'
+    } else if (t >= 2.5) html = '<span class="rq">Four doors, kms behind net and llm, the launcher below</span><span class="st">Every request leaves the process through a door, or not at all.</span>'
+    else html = '<span class="rq">A process with its kernel locks around it</span><span class="st">Under the harness it has no filesystem to write, no network stack, no key, no shell, no model API of its own. (The page lists these; the without is not drawn.)</span>'
+    if (S.$('log').innerHTML !== html) S.$('log').innerHTML = html
+  }
+})()
+</script>
+</body>
+</html>

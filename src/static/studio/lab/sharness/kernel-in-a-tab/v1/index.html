@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHarness: the kernel in a tab</title>
+<link rel="stylesheet" href="../../../../../talk/engine/slide.css">
+<script>window.RUV_STEPS = [{ t: 0, label: 'a tab opens' }, { t: 5, label: 'Linux boots' }, { t: 11, label: 'Landlock is up' }, { t: 15, label: 'hello runs' }, { t: 28, label: 'six of six held' }, { t: 34, label: 'the time' }]</script>
+<script src="../../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:52px;font-size:40px;right:230px}
+#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--head)}
+#pic{position:absolute;left:0;top:0;width:1280px;height:720px}
+.ab{position:absolute;white-space:nowrap}
+#url{left:96px;top:140px;font:20px/24px ui-monospace,monospace;color:var(--dim)}
+.con{left:60px;font:20px/24px ui-monospace,monospace;color:var(--text)}
+.con b{color:var(--head)}
+.pl{left:620px;font:700 20px/24px system-ui;color:var(--text)}
+.pl i{font-style:normal;color:var(--head)}
+.pr{font:700 20px/24px system-ui;white-space:nowrap}
+.ok{color:var(--infra)}
+.no{color:var(--accent)}
+#tl{left:40px;top:632px;font:700 20px/24px system-ui;color:var(--head)}
+#foot{position:absolute;left:40px;right:40px;bottom:12px;font:20px/1.3 system-ui;color:var(--dim)}
+#foot b{color:var(--head)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="40">
+  <p class="kk a">SHarness · kernel in a tab · a replay drawn by us, the offline fallback</p>
+  <div id="id">SH5</div>
+  <div class="hl" data-in="0">A real Linux kernel in a browser tab, <em>nothing installed.</em></div>
+  <svg id="pic" viewBox="0 0 1280 720" aria-label="A browser tab holding an emulated Linux, and the six probes of hello drawn as paths: one allowed, five refused at a wall"></svg>
+  <div id="ov"></div>
+  <div id="foot"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // Facts carried inline from the capture (evidence/studio/studio-sharness-series.json), not fetched.
+  var F = {
+    probes: [
+      ['Read /usr', 'allowed', 1], ['Write in /tmp', 'refused, Errno 13', 0], ['Write in the workspace', 'refused, Errno 13', 0],
+      ['Connect out', 'refused, Errno 13', 0], ['Memory past the cap', 'refused, MemoryError', 0], ['Wrong hash', 'refused, nothing ran', 0]],
+    con: [
+      [5.5, 'booting ...'], [6.5, 'Linux version 6.18.58-0-virt'], [8, 'x86 PC in WebAssembly, 512 MiB'], [11.2, 'LSM: ... landlock'], [12.2, '<b>landlock: Up and running.</b>'],
+      [14, 'probe: uid 0, Landlock ABI 7']],
+    AP: [16, 17.5, 19, 20.5, 22, 23.5], PY: 178, PH: 54 }
+  var NS = 'http://www.w3.org/2000/svg', B = null
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function line(p, x0, y, x1, col) { var l = el('path', { d: 'M' + x0 + ' ' + y + 'H' + x1, fill: 'none', stroke: col, 'stroke-width': 5, 'stroke-linecap': 'round' }, p); l.L = x1 - x0; l.setAttribute('stroke-dasharray', l.L + ' ' + l.L); return l }
+  function build(S) {
+    var svg = S.$('pic'), html = '', rows = []
+    // the browser window
+    B = { win: el('g', {}, svg), rows: rows, lines: [] }
+    el('rect', { x: 40, y: 130, width: 520, height: 390, rx: 12, fill: 'var(--panel)', stroke: 'var(--line2)', 'stroke-width': 3 }, B.win)
+    el('rect', { x: 40, y: 130, width: 520, height: 44, rx: 12, fill: 'var(--line2)' }, B.win)
+    ;[62, 82, 102].forEach(function (x) { el('circle', { cx: x, cy: 152, r: 6, fill: 'var(--dim)' }, B.win) })
+    html += '<div class="ab" id="url" style="left:124px">a browser tab</div>'
+    // the guest label
+    html += '<div class="ab" id="gl" style="left:60px;top:186px;font:700 20px/24px system-ui;color:var(--infra)">emulated Linux, one tab</div>'
+    F.con.forEach(function (c, i) { html += '<div class="ab con" id="c' + i + '" style="top:' + (224 + i * 30) + 'px">' + c[1] + '</div>' })
+    html += '<div class="ab con" id="cd" style="top:' + (224 + 6 * 30) + 'px;color:var(--head)"><b>sharness-ai hello</b> is running</div>'
+    html += '<div class="ab con" id="ce" style="top:' + (224 + 7 * 30) + 'px"><b>hello: every expectation held</b></div>'
+    html += '<div class="ab con" id="cf" style="top:' + (224 + 8 * 30) + 'px">done, guest powered off</div>'
+    // the probes as paths
+    html += '<div class="ab" id="ph" style="left:620px;top:132px;font:800 24px/1.2 system-ui;color:var(--head)">hello\'s six probes, as paths</div>'
+    el('path', { d: 'M900 ' + (F.PY - 8) + 'V' + (F.PY + 6 * F.PH - 24), stroke: 'var(--line2)', 'stroke-width': 2, fill: 'none' }, svg)
+    F.probes.forEach(function (p, i) {
+      var y = F.PY + i * F.PH, py = y + 36, g = el('g', {}, svg), o = { g: g, i: i }
+      html += '<div class="ab pl" id="pl' + i + '" style="top:' + y + 'px"><i>' + (i + 1) + '</i> ' + p[0] + '</div>'
+      el('circle', { cx: 630, cy: py, r: 8, fill: 'var(--agent)' }, g)
+      if (p[2]) { el('rect', { x: 894, y: py - 15, width: 10, height: 9, rx: 3, fill: 'var(--accent)' }, g); el('rect', { x: 894, y: py + 6, width: 10, height: 9, rx: 3, fill: 'var(--accent)' }, g); o.l = line(g, 640, py, 1090, 'var(--infra)') }
+      else { el('rect', { x: 892, y: py - 15, width: 14, height: 30, rx: 3, fill: 'var(--accent)' }, g); o.l = line(g, 640, py, 886, 'var(--agent)') }
+      html += '<div class="ab pr ' + (p[2] ? 'ok' : 'no') + '" id="pr' + i + '" style="left:' + (p[2] ? 1110 : 920) + 'px;top:' + (py - 12) + 'px">' + p[1] + '</div>'
+      rows.push(o)
+    })
+    html += '<div class="ab" id="wl" style="left:780px;top:' + (F.PY + 6 * F.PH + 4) + 'px;font:700 20px/24px system-ui;color:var(--accent)">the policy, applied by the kernel</div>'
+    // timeline
+    var ty = 574
+    el('path', { d: 'M40 ' + ty + 'H1240', stroke: 'var(--line2)', 'stroke-width': 4, fill: 'none' }, svg)
+    B.tl = el('path', { d: 'M40 ' + ty + 'H1240', stroke: 'var(--infra)', 'stroke-width': 4, fill: 'none', 'stroke-dasharray': '1200 1200' }, svg)
+    ;[[0, 'tab opens', 40, 'left'], [28.5, '28.5 s hello', 420, 'right'], [32.2, '32.2 s done', 469, 'left']].forEach(function (m) { el('circle', { cx: 40 + m[0] / 90 * 1200, cy: ty, r: 7, fill: 'var(--head)' }, svg); var q = el('text', { x: m[2] + (m[3] === 'right' ? 6 : (m[2] > 100 ? -6 : 0)), y: ty + 34, 'text-anchor': m[3] === 'right' ? 'end' : 'start', 'font-size': 20, 'font-weight': 700, fill: 'var(--head)' }, svg); q.textContent = m[1] })
+    html += '<div class="ab" id="tl" style="top:534px;opacity:0">about 28.5 s in one run; plan for up to 90 s</div>'
+    S.$('ov').innerHTML = html
+  }
+  window.SLIDE_RENDER = function (t, S) {
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .5))) }
+    B.win.style.opacity = k(.3, .8); S.$('url').style.opacity = k(.6); S.$('gl').style.opacity = k(5)
+    F.con.forEach(function (c, i) { S.$('c' + i).style.opacity = k(c[0], .3) })
+    S.$('cd').style.opacity = k(15, .3); S.$('ce').style.opacity = k(28, .3); S.$('cf').style.opacity = k(32, .3)
+    S.$('ph').style.opacity = k(15.5)
+    B.rows.forEach(function (o) {
+      var a = F.AP[o.i]
+      S.$('pl' + o.i).style.opacity = k(a, .4); o.g.style.opacity = k(a, .4)
+      o.l.setAttribute('stroke-dashoffset', o.l.L * (1 - S.seg(t, a + .2, a + 1)))
+      S.$('pr' + o.i).style.opacity = k(a + 1, .4)
+    })
+    S.$('wl').style.opacity = k(17.5)
+    S.$('tl').style.opacity = k(34, .5)
+    B.tl.setAttribute('stroke-dashoffset', 1200 * (1 - Math.min(1, S.seg(t, 4, 36) * 1)))
+    var f = ''
+    if (t >= 28) f = '<b>Six of six held</b> (one allowed, five refused), 25 October 2026. The 28.5 s is one run in the editor\'s Chrome, reported by the project, browser and machine not recorded (A2); the replay\'s clock is ours. '
+    if (t >= 34) f += 'Cloud runs took 58 to 96 s. '
+    if (t >= 28) f += '<br>Source: sharness.ai (capture: anim-kernel-in-a-tab, anim-hello-replay, sharness2-linux-in-a-tab). Only the "with" is shown.'
+    if (S.$('foot').innerHTML !== f) S.$('foot').innerHTML = f
+  }
+})()
+</script>
+</body>
+</html>
