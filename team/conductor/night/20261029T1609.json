@@ -1,0 +1,473 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T15:47:16Z",
+ "until": "2026-10-29T16:09:41Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T16:08:32Z",
+   "kind": "scheduled, hourly at :02",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T160832Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Plan by the member (one request is time-bound: motion wakes at 16:24). 1) Route team/deck/requests/motion__the-building.md verbatim into mailroom/motion/ (motion has no mailroom yet; created), vault_check first; pace.json routed. 2) Reply to ruv.sgit's 035: the SHarness series (the editor's own ask in its session) stays with ruv.sgit, it is made and its vault kept; motion's queue is the story anim"
+  },
+  {
+   "agent": "designer",
+   "started": "2026-10-29T15:49:01Z",
+   "kind": "scheduled, hourly at :39",
+   "outcome": "ok",
+   "record": "team/designer/wakes/20261029T154901Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Check note 6 (dev 021) on the dashboard and the board at 1600/1280/390 with ?nosw against the note's acceptance; the check in reviews/2026-10-29__dashboard.md, a debrief; designer 007 to done; an update to mailroom/dev/; vault_check first. 2) Look at talk/player.html, which the editor presents with, at 1600/1280/390; findings recorded, any request to its owner. 3) status.json; ROLE.md's 8 minut"
+  },
+  {
+   "agent": "ruv-sgit",
+   "started": "2026-10-29T15:52:43Z",
+   "kind": "scheduled wake, hourly at :32",
+   "outcome": "ok",
+   "record": "team/ruv-sgit/wakes/20261029T155243Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) stages (window.RUV_STEPS) on the nine earlier engine pieces, src/static/studio/lab/{e01/v1,e01/v2,e02/v1,e02/v2,e02/v3,e03/v1,e04/v1,e04/v2,e09/v1}/index.html, at the editor's ask (the conductor's mail 017), one run r23-stages with a vault; 2) status, debrief, REALITY own section, a note to deck cc conductor after vault_check; 3) B01 (not on the engine) and the SHarness series wait"
+  },
+  {
+   "agent": "storyteller",
+   "started": "2026-10-29T16:00:06Z",
+   "kind": "scheduled, hourly at :54",
+   "outcome": "ok",
+   "record": "team/storyteller/wakes/20261029T160006Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) fold the editor's 15:00 decisions (1-editor-decisions-1500.md sections 1-3) into story/tree.md: frame wraps, act three leads with explorer coding, worm-era meaning, integrity definition, R5 kept by the editor, beats 3a-3g; facts with ids or researcher requests. 2) coverage.md, sequence.md for 3a-3g; maps for 3e (evolution; pioneers, settlers, town planners) and 3f via tools/wardley.py; sequence"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "storyteller",
+   "sha": "aed5a6e",
+   "at": "2026-10-29T16:04:44+00:00",
+   "subject": "@storyteller: close the 16:00 wake: post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "storyteller",
+   "sha": "2afe0d7",
+   "at": "2026-10-29T16:04:05+00:00",
+   "subject": "@storyteller: the editor's 15:00 decisions folded into the story: beats 3a to 3g placed, Maps 4 and 5, a 19-beat sequence to deck",
+   "changed": 18
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "66f6f4f",
+   "at": "2026-10-29T16:00:19+00:00",
+   "subject": "@ruv-sgit: wake closed, post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "d41a765",
+   "at": "2026-10-29T15:59:25+00:00",
+   "subject": "@ruv-sgit: stages on every earlier piece, run r23 kept",
+   "changed": 6
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "a606774",
+   "at": "2026-10-29T15:55:33+00:00",
+   "subject": "@ruv-sgit: E03's last stop moved to 41.8 s, the editor's fix",
+   "changed": 2
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "0ffa9c8",
+   "at": "2026-10-29T15:54:52+00:00",
+   "subject": "@ruv-sgit: stages for the player on the nine earlier pieces (run r23 in work)",
+   "changed": 11
+  },
+  {
+   "agent": "designer",
+   "sha": "72025ae",
+   "at": "2026-10-29T15:54:11+00:00",
+   "subject": "@designer: design note 6 checked; the player before tonight, note 7 for after",
+   "changed": 11
+  },
+  {
+   "agent": "conductor",
+   "sha": "035b888",
+   "at": "2026-10-29T15:48:22+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "93227d9",
+   "at": "2026-10-29T15:48:20+00:00",
+   "subject": "@deck: the 15:17 wake closed",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "4adc04a",
+   "at": "2026-10-29T15:47:33+00:00",
+   "subject": "@conductor: motion@ and studio@ checked and keyed; their first requests routed",
+   "changed": 11
+  },
+  {
+   "agent": "deck",
+   "sha": "c72b791",
+   "at": "2026-10-29T15:47:27+00:00",
+   "subject": "@deck: round 17 debrief, status and the wake's work step",
+   "changed": 13
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "0777ac3",
+   "at": "2026-10-29T15:47:24+00:00",
+   "subject": "@ruv-sgit: session closed, post-review clean, post-check as planned",
+   "changed": 1
+  }
+ ],
+ "made": [
+  {
+   "page": "studio/lab/e03/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e01/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e01/v2/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e02/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e02/v2/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e02/v3/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e04/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e04/v2/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e09/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "articles/moments.html",
+   "by": "conductor"
+  },
+  {
+   "page": "studio/programme.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/e07.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/e10.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/e11.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/e13.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/index.html",
+   "by": "deck"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio/lab/e03/v1/index.html",
+   "img": "night-20261029T1609-1.png"
+  },
+  {
+   "page": "studio/lab/e01/v1/index.html",
+   "img": "night-20261029T1609-2.png"
+  },
+  {
+   "page": "studio/lab/e01/v2/index.html",
+   "img": "night-20261029T1609-3.png"
+  },
+  {
+   "page": "studio/lab/e02/v1/index.html",
+   "img": "night-20261029T1609-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T15:55:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Data for the last pieces, items 1 and 2 of 6: E05 pivoting, and the Pilates agent found"
+  },
+  {
+   "at": "2026-10-29T16:02:00Z",
+   "sender": "designer",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Design note 6 checked: as designed. Design note 7: the player on a phone held sideways, and its small labels (not before tonight unless you are sure)"
+  },
+  {
+   "at": "2026-10-29T16:05:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E12 radius-contained: v1 delivered"
+  },
+  {
+   "at": "2026-10-29T16:05:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E08 lethal-trifecta: v1 delivered"
+  },
+  {
+   "at": "2026-10-29T16:05:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E14 earning-autonomy: v1 delivered"
+  },
+  {
+   "at": "2026-10-29T16:05:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E05 pivoting: v1 delivered"
+  },
+  {
+   "at": "2026-10-29T16:05:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E06 soft-inside: v1 delivered; the programme's eight are all in"
+  },
+  {
+   "at": "2026-10-29T16:05:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "update",
+   "subject": "Stages on every earlier piece: E01 to E04 and E09 now step on the player"
+  },
+  {
+   "at": "2026-10-29T16:06:00Z",
+   "sender": "ruv.sgit",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: two animators join: the SHarness series came to me from the editor directly; first three pieces made"
+  },
+  {
+   "at": "2026-10-29T16:07:15Z",
+   "sender": "dev",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: The home page's words: done; the studio's pages that still say \"one story\" are yours"
+  },
+  {
+   "at": "2026-10-29T16:07:15Z",
+   "sender": "dev",
+   "to": "studio",
+   "kind": "reply",
+   "subject": "Re: Engine: on an iPad, a piece opened on its own is not scaled: fixed in slide.css"
+  },
+  {
+   "at": "2026-10-29T16:07:15Z",
+   "sender": "dev",
+   "to": "designer",
+   "kind": "reply",
+   "subject": "Re: Design note 7: after the talk, as dev 024"
+  },
+  {
+   "at": "2026-10-29T16:09:13Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "reply",
+   "subject": "Re: the SHarness series stays with you"
+  }
+ ],
+ "problems": [],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or move the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
+    "from": "the editor"
+   },
+   {
+    "what": "Confirm 'newsroom.esquito.ai' = newsroom.sgit.ai and 'attrition' = commoditisation on the Wardley maps; 'Empower', 'the billing', which blast radius",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload the motion and studio vault-key zips into their sessions",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Go on the placement table: which studio pieces go into the talk, where (or set it in the player's build mode)",
+    "from": "the editor"
+   },
+   {
+    "what": "The collision line 'It just was not reported as one story': keep or recast",
+    "from": "the editor"
+   },
+   {
+    "what": "/studio/reviews/: E07, E10, E11 and E13 are new, all keep",
+    "from": "the editor"
+   },
+   {
+    "what": "Agree or change the draft policy.json",
+    "from": "the editor"
+   }
+  ],
+  "designer": [],
+  "dev": [
+   {
+    "from": "dev",
+    "to": "the editor",
+    "what": "Give the conductor's session its two sealed files from the lane handover zip"
+   }
+  ],
+  "motion": [
+   {
+    "to": "deck",
+    "what": "the building's request: go or changes on the picture, the claims, the beat and duration",
+    "where": "team/motion/requests/deck__the-building.md"
+   },
+   {
+    "to": "editor",
+    "what": "agree team/motion/policy.json (status proposed)"
+   },
+   {
+    "to": "conductor",
+    "what": "seal the two vault keys to motion's key (team/motion/key.json); mark the motion row of schedule.json running with the task id"
+   },
+   {
+    "to": "dev",
+    "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E12, E08, E14, E05, E06 and the SHarness series",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Capture sharness.ai's animations and workflows, and the browser Linux page",
+    "from": "researcher@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r23",
+    "from": "the editor"
+   }
+  ],
+  "storyteller": [
+   {
+    "what": "confirm 'attrition' means Wardley's evolution in 3e; the talk's slot length (the sequence keeps 38:30 by cutting the demos to 6:30)",
+    "from": "the editor"
+   },
+   {
+    "what": "seal the two vault keys to team/storyteller/key.json",
+    "from": "conductor"
+   },
+   {
+    "what": "agree policy.json; 'Empower' and 'the billing'",
+    "from": "the editor"
+   }
+  ],
+  "studio": [
+   {
+    "what": "agree team/studio/policy.json (a draft from the brief)",
+    "from": "the editor"
+   },
+   {
+    "what": "the sealed vault keys for tui-issues-public and tui-mail-public",
+    "from": "the conductor"
+   },
+   {
+    "what": "the engine's iPad fit: body{position:fixed;inset:0} in slide.css",
+    "from": "dev"
+   },
+   {
+    "what": "the sorting of ruv.sgit.ai's pieces, and where the two ports sit",
+    "from": "deck"
+   }
+  ]
+ }
+}

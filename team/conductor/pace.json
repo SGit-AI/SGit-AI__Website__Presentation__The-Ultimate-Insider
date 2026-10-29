@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T15:47:16Z",
+ "updated": "2026-10-29T16:09:41Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -15,7 +15,7 @@
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": "E12, E08, E14, E05, E06 (parallel builders); redos and stages on its own pieces; the story animations now go to motion@"
+   "in_flight": "the programme's eight all delivered; stages on every earlier piece (r23); the SHarness series (SH1 to SH3, the editor's ask in its session)"
   },
   "dev": {
    "slot": ":47",
@@ -31,11 +31,15 @@
   },
   "motion": {
    "slot": ":24",
-   "in_flight": "the building, once deck sends it (its request to deck routed 15:46)"
+   "in_flight": "the building (deck's request routed to mailroom/motion/001 at 16:08)"
   },
   "studio": {
    "slot": ":12",
    "in_flight": "the ABP slide and studio v4 landed; waiting for deck's sorting"
+  },
+  "deck": {
+   "slot": ":17",
+   "in_flight": "the opening recast (the perfect storm); reviewing E07, E10, E11, E13; the storyteller's 19-beat sequence to weigh"
   }
  },
  "nodes": [
@@ -886,6 +890,11 @@
    "at": "2026-10-29T15:47:16Z",
    "by": "conductor",
    "what": "motion@ and studio@ joined and checked: keys from their own commits, tasks at :24 and :12, first wakes clean; vault keys sealed; their first three requests routed; studio's two ports landed"
+  },
+  {
+   "at": "2026-10-29T16:09:41Z",
+   "by": "conductor",
+   "what": "the programme's eight delivered and every earlier piece staged (ruv.sgit); the opening recast as the perfect storm (deck); a 19-beat sequence to deck (storyteller); the building routed to motion@; the SHarness series stays with ruv.sgit"
   }
  ],
  "queue": {
@@ -908,7 +917,8 @@
   "team/designer/requests/deck__studio-prose-measure.md",
   "team/motion/requests/deck__the-building.md",
   "team/studio/requests/deck__first-ports-landed.md",
-  "team/studio/requests/dev__engine-ipad-fit.md"
+  "team/studio/requests/dev__engine-ipad-fit.md",
+  "team/deck/requests/motion__the-building.md"
  ],
  "schedule": {
   "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
