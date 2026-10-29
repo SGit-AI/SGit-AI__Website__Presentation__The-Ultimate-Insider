@@ -33,6 +33,10 @@
     {
       "at": "14:35",
       "note": "Replaying a piece today means reloading the page: replay and scrub are needed."
+    },
+    {
+      "at": "15:10",
+      "note": "The briefs pages (B01's frames, B02) have the same problem: each click opens a new page and loses the context; give them the same treatment as the lab, and connect them."
     }
   ],
   "pieces": [
@@ -111,6 +115,12 @@
         "show what the behaviour policy does: capturing the mandate, and the delta between mandate and grant, made visible"
       ],
       "priority": "after the feedback round"
+    },
+    {
+      "id": "B01",
+      "at": "15:10",
+      "verdict": "likes where it is going (frame 2 named); the B01/B02 variations look similar to each other",
+      "priority": "usability first"
     }
   ],
   "deck": [
@@ -129,6 +139,10 @@
     {
       "at": "15:00",
       "note": "The programme's ideas: 'really freaking cool, let's do them all', the typical deployment's blast radius (E07) named; ask ruv.sgit to make all of them, spun up in parallel: 'it's okay'. This overrides the night's one-request-in-flight rule for ruv.sgit, at the editor's word."
+    },
+    {
+      "at": "15:10",
+      "note": "E10, E11 and E12 'would be good to have ... great ... keep doing; these are absolutely amazing, we just need more of them', taking the new workflows into account."
     }
   ]
 }
