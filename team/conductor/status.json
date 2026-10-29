@@ -1,9 +1,9 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T13:11:40Z",
+ "as_of": "2026-10-29T14:06:58Z",
  "round": 9,
- "state": "13:02 wake (fired 13:09): every member ok; E11 next for ruv.sgit; dev 016 13:47, the sequence 14:47; the pre-review brief names scope.holds; D12 waits on the editor.",
+ "state": "14:03 editor's request: the editor's briefs committed and routed; dev's feedback pane and lane with voice now, then the player with a build mode; storyteller proposed at :54.",
  "done": [
   {
    "what": "The morning review: every piece with deck verdict, what went wrong, what waits on the editor",
@@ -84,7 +84,7 @@
  ],
  "next": [
   {
-   "what": "14:02: pace, route, night log"
+   "what": "15:02: read the lane once it exists, pace, route, night log"
   }
  ],
  "asks": [
@@ -93,7 +93,19 @@
    "from": "the editor"
   },
   {
-   "what": "D12 (evidence/proposals/editor-decisions.json): the evidence vault's history holds the researcher's redacted capture values (anonymous cookies, sites' anti-forgery tokens; no team credential); keep the history, or move the vault to a new read key",
+   "what": "Wake dev for the feedback pane and lane (dev 018-style request in its mailroom)",
+   "from": "the editor"
+  },
+  {
+   "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+   "from": "the editor"
+  },
+  {
+   "what": "Confirm or correct the researcher's Sharness capture (harness.json); 'Empower', 'the billing', which blast radius",
+   "from": "the editor"
+  },
+  {
+   "what": "D12: keep the evidence vault's history, or move the vault",
    "from": "the editor"
   }
  ],
