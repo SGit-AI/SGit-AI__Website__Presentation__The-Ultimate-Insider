@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "dev 012 built: tokens.css (8 sizes + --t-figure), site.css 104 sizes as tokens, 5 lowercase texts raised to 14px, validate.py check_type_scale (site.css only); measured 14 pages; dev 012 closed, reply to designer, mail filed; debrief, status, REALITY.",
    "at": "2026-10-29T09:54:08Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff touches REALITY.md, validate.py, site.css, tokens.css and team/dev only; 0 outside scope; no keys, tokens, personal details or agent-directing text; build and gate clean; check_type_scale reads only site.css, as required and as the debrief says; vault_check clean on both vaults.",
+   "at": "2026-10-29T09:54:35Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done (8917847): tokens.css, site.css (104 sizes to tokens, 5 lowercase raised to 14px), validate.py check_type_scale; 14 pages measured, 3 screenshots. Item 2 done: dev 012 closed, designer reply, mail filed, debrief, status, REALITY. Condition kept: check covers site.css only, said in the debrief. Nothing unplanned.",
+   "at": "2026-10-29T09:54:53Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T09:54:53Z",
+ "outcome": "ok"
 }
