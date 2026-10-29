@@ -1,6 +1,6 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T04:20Z",
+ "built": "2026-10-29T04:22Z",
  "count": 114,
  "claims": [
   {
@@ -1713,7 +1713,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T04:20Z"
+   "adjudicated": "researcher, 2026-10-29T04:22Z"
   },
   {
    "id": "autonomy-earned-ladder",

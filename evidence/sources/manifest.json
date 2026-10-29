@@ -1,6 +1,6 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T04:20Z",
+ "built": "2026-10-29T04:22Z",
  "count": 361,
  "sources": [
   {
@@ -896,8 +896,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "a6f1d16b6b5f09fbd28fb2667b89e41e90fa76bdeab00db1d224d31fcd74089c",
      "bytes_as_fetched": 1788,
-     "sha256": "a6f1d16b6b5f09fbd28fb2667b89e41e90fa76bdeab00db1d224d31fcd74089c",
-     "bytes": 1788
+     "redacted": 2,
+     "sha256": "dab59261d83f248f01d924de69e49596dde953249ea20dbd588a1f7932f2e8f5",
+     "bytes": 1179
     },
     {
      "name": "meta.json",
@@ -1337,8 +1338,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "445ce9e108735303508ddbbecfacce4a07d6dfe54d1fd158a10689a78e112ae4",
      "bytes_as_fetched": 1385,
-     "sha256": "445ce9e108735303508ddbbecfacce4a07d6dfe54d1fd158a10689a78e112ae4",
-     "bytes": 1385
+     "redacted": 1,
+     "sha256": "f4211ba35c633fb100f2a7ba6dbe1add5304426454ed5d983893edeb471d4301",
+     "bytes": 1196
     },
     {
      "name": "meta.json",
@@ -1557,8 +1559,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "09cb651edd0f6610e053aacdf0570e475ea3026be6275b513b54a2158bffefb5",
      "bytes_as_fetched": 870,
-     "sha256": "09cb651edd0f6610e053aacdf0570e475ea3026be6275b513b54a2158bffefb5",
-     "bytes": 870
+     "redacted": 2,
+     "sha256": "6a53e91f9683569fb2963c70585c1fdbe058a9f8fd431361c1f7654652b83c80",
+     "bytes": 648
     },
     {
      "name": "meta.json",
@@ -1766,8 +1769,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "ad6f10f66b4c39a4ab95a557ea4b49f18b6628cd3359639824d8d0b089a2ea86",
      "bytes_as_fetched": 1859,
-     "sha256": "ad6f10f66b4c39a4ab95a557ea4b49f18b6628cd3359639824d8d0b089a2ea86",
-     "bytes": 1859
+     "redacted": 1,
+     "sha256": "03c0fedb2d368ac0878199988094fe12f948a08156fb51685dc0fcac329ecc49",
+     "bytes": 1473
     },
     {
      "name": "meta.json",
@@ -2084,8 +2088,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "0cc76ed2330be94a099fc947faae86b5ff6e40c2bf0b79deed07b1e73ee89d34",
      "bytes_as_fetched": 2452,
-     "sha256": "0cc76ed2330be94a099fc947faae86b5ff6e40c2bf0b79deed07b1e73ee89d34",
-     "bytes": 2452
+     "redacted": 2,
+     "sha256": "4e674f27f03c4fdc3ee34a9cf47561f5c6ba4dac8b249514cb1112aea66cc180",
+     "bytes": 2089
     },
     {
      "name": "meta.json",
@@ -2134,8 +2139,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "3cb3ad8de954a227443ec3cbf16fb32963c5b9a78e06c2588c705eec49fab96a",
      "bytes_as_fetched": 7051,
-     "sha256": "3cb3ad8de954a227443ec3cbf16fb32963c5b9a78e06c2588c705eec49fab96a",
-     "bytes": 7051
+     "redacted": 2,
+     "sha256": "3792f074bc286ad8f0b5042688c11d90d0e9000ad5623f47c84baf01012d4d10",
+     "bytes": 6556
     },
     {
      "name": "meta.json",
@@ -3509,8 +3515,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "6cdf8cbb0ce6ddab9192c12e4c30661b0e5a9bd0220f3627529e0fb1483d6321",
      "bytes_as_fetched": 7555,
-     "sha256": "6cdf8cbb0ce6ddab9192c12e4c30661b0e5a9bd0220f3627529e0fb1483d6321",
-     "bytes": 7555
+     "redacted": 1,
+     "sha256": "95cce55f73999945fc86edc7252d496740c61120c16737a79a2bf201f88edac3",
+     "bytes": 7476
     },
     {
      "name": "meta.json",
@@ -4271,8 +4278,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "b2fc2729b8cdfed54b833cbe68f49624b5f267de51547cee8590d55bdeebc9b0",
      "bytes_as_fetched": 901,
-     "sha256": "b2fc2729b8cdfed54b833cbe68f49624b5f267de51547cee8590d55bdeebc9b0",
-     "bytes": 901
+     "redacted": 1,
+     "sha256": "f2dc0bef874fbc48061dc9a657fb5df8c391de35bff3acf5da418e631a6aafc9",
+     "bytes": 803
     },
     {
      "name": "meta.json",
@@ -4968,8 +4976,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "d6f750ec52aba71be3bd881307727e657226964351c73632c8d505306fdef20b",
      "bytes_as_fetched": 1907,
-     "sha256": "d6f750ec52aba71be3bd881307727e657226964351c73632c8d505306fdef20b",
-     "bytes": 1907
+     "redacted": 1,
+     "sha256": "f40a834343c5e615b75533bed6d8776933985952a4975f7abe23ab1b9e0c7952",
+     "bytes": 1527
     },
     {
      "name": "meta.json",
@@ -5286,8 +5295,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "6acc51856725b32cf68505a08f5f66f8079370122c1f0bc257aee666ff5db34e",
      "bytes_as_fetched": 1177,
-     "sha256": "6acc51856725b32cf68505a08f5f66f8079370122c1f0bc257aee666ff5db34e",
-     "bytes": 1177
+     "redacted": 5,
+     "sha256": "533281365996db63c50a745b6d289e47eedf8b11f163821e054a0a56d51cbcf2",
+     "bytes": 549
     },
     {
      "name": "meta.json",
@@ -5419,8 +5429,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "5d0584282cbc1ea001cd943487ca683ac5ecb21ea4780741dc7d00c47ae4310e",
      "bytes_as_fetched": 1145,
-     "sha256": "5d0584282cbc1ea001cd943487ca683ac5ecb21ea4780741dc7d00c47ae4310e",
-     "bytes": 1145
+     "redacted": 1,
+     "sha256": "f6f2dcbdb10a5a0fc578650740904d5e9404627cdc122174ae0e94fd5a043a5a",
+     "bytes": 837
     },
     {
      "name": "meta.json",
@@ -7204,8 +7215,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "80321f1c0484ae4c98458cc4b04da03f5613ff3240b14ecd822c9cb95f33d1b2",
      "bytes_as_fetched": 1479,
-     "sha256": "80321f1c0484ae4c98458cc4b04da03f5613ff3240b14ecd822c9cb95f33d1b2",
-     "bytes": 1479
+     "redacted": 3,
+     "sha256": "645a160919a02658ec7eabb402ef1f1019f6a1a656469a59550a9a26d1dee0cf",
+     "bytes": 1353
     },
     {
      "name": "meta.json",
@@ -7278,8 +7290,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "4bc22e44b6ffb338d1799a71e79edaddab1e129e4e0468eff70bb1fffa73a059",
      "bytes_as_fetched": 3943,
-     "sha256": "4bc22e44b6ffb338d1799a71e79edaddab1e129e4e0468eff70bb1fffa73a059",
-     "bytes": 3943
+     "redacted": 3,
+     "sha256": "1a0cd0ea16768d337b2529c41cebe701f4e654a1d73b7f52bfb307aa4ac709d9",
+     "bytes": 3513
     },
     {
      "name": "meta.json",
@@ -7315,8 +7328,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "c8d42500b5dcf7d42e57b501818cddf408777b7fac96c367ccfb53cebc2bf61b",
      "bytes_as_fetched": 904,
-     "sha256": "c8d42500b5dcf7d42e57b501818cddf408777b7fac96c367ccfb53cebc2bf61b",
-     "bytes": 904
+     "redacted": 1,
+     "sha256": "6214f646338c664763d01102f78ae22af15c2f87791bc16d85f6edb92eb0b8b4",
+     "bytes": 595
     },
     {
      "name": "meta.json",
@@ -7352,8 +7366,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "e028ce9c6ca9ffcc38f39e0557b9564fb1b0a973d92c065a301a82e6aa529452",
      "bytes_as_fetched": 903,
-     "sha256": "e028ce9c6ca9ffcc38f39e0557b9564fb1b0a973d92c065a301a82e6aa529452",
-     "bytes": 903
+     "redacted": 1,
+     "sha256": "7947984f24d140f1dcb646264766db97d81f1547aa753f5ac470d11efe2d5655",
+     "bytes": 595
     },
     {
      "name": "meta.json",
@@ -7463,8 +7478,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "054a551969eae742aa73294765f2979b31e853726ab5d11d6d919ef50e3be51a",
      "bytes_as_fetched": 3236,
-     "sha256": "054a551969eae742aa73294765f2979b31e853726ab5d11d6d919ef50e3be51a",
-     "bytes": 3236
+     "redacted": 4,
+     "sha256": "8878064c12277b16f703c65596b731e645ed5e2fc4f89ed075a0e9d19eb0d4c2",
+     "bytes": 2481
     },
     {
      "name": "meta.json",
@@ -7574,8 +7590,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "468eafe7e4514d1efe68434e359dc7ab27ae821eb560cb3a27328c80ddacf6e3",
      "bytes_as_fetched": 1240,
-     "sha256": "468eafe7e4514d1efe68434e359dc7ab27ae821eb560cb3a27328c80ddacf6e3",
-     "bytes": 1240
+     "redacted": 1,
+     "sha256": "5d0261d6364757ef24e8470972deefa371ffe5f592a85eebbe8e819136ac7b54",
+     "bytes": 1047
     },
     {
      "name": "meta.json",
@@ -7611,8 +7628,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "f6e5da888999873eb379c5f0268f1fdd5970382d3748a1478433080e51d5c624",
      "bytes_as_fetched": 6337,
-     "sha256": "f6e5da888999873eb379c5f0268f1fdd5970382d3748a1478433080e51d5c624",
-     "bytes": 6337
+     "redacted": 1,
+     "sha256": "91b3a6926f148cd36b6576519aa042909d681a339ba4340ddc8964b47a247a71",
+     "bytes": 6010
     },
     {
      "name": "meta.json",
@@ -8234,8 +8252,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "c264e34b1177024f2957c659f1f62ea2c2155b757be1a96f0e9c64e4d4cef913",
      "bytes_as_fetched": 6739,
-     "sha256": "c264e34b1177024f2957c659f1f62ea2c2155b757be1a96f0e9c64e4d4cef913",
-     "bytes": 6739
+     "redacted": 4,
+     "sha256": "0216b4f151e432ebe9e9a5a35c49a90901d77b8d749c9ea08720875b4c35d995",
+     "bytes": 5491
     },
     {
      "name": "meta.json",
@@ -8335,8 +8354,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "ef0538357dc2ec7ac07b78d89395f851c65665c9e023b84dbe722c21a7ee6289",
      "bytes_as_fetched": 3993,
-     "sha256": "ef0538357dc2ec7ac07b78d89395f851c65665c9e023b84dbe722c21a7ee6289",
-     "bytes": 3993
+     "redacted": 3,
+     "sha256": "b0229e8a6ce570a089c375db2d3fce77d375cce01f1dbfc83d5fbf4702ae29dc",
+     "bytes": 2829
     },
     {
      "name": "meta.json",
@@ -8385,8 +8405,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "ac3fca335a99ade3465018a63b8d1c171958045add34409015f6f9d6a801d26c",
      "bytes_as_fetched": 772,
-     "sha256": "ac3fca335a99ade3465018a63b8d1c171958045add34409015f6f9d6a801d26c",
-     "bytes": 772
+     "redacted": 1,
+     "sha256": "69bc15fb2153d1b8cd8e82b9fadc8beee220fb4652b37aac65eb27eec4d8838d",
+     "bytes": 720
     },
     {
      "name": "meta.json",
@@ -8435,8 +8456,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "dd46076149bf4c2d2e9cdd39574796959f0a0bbde087b12cf91fa69907a5936b",
      "bytes_as_fetched": 6751,
-     "sha256": "dd46076149bf4c2d2e9cdd39574796959f0a0bbde087b12cf91fa69907a5936b",
-     "bytes": 6751
+     "redacted": 4,
+     "sha256": "968d2dc13ef18cac0846d1bc0db5e2197d500dea31b3a3bb9e57e093136f6bb6",
+     "bytes": 5507
     },
     {
      "name": "meta.json",
@@ -8681,8 +8703,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "d4d4712318a87568d02c462867896f60849e6cf1991d3872c25385904f88c3d0",
      "bytes_as_fetched": 641,
-     "sha256": "d4d4712318a87568d02c462867896f60849e6cf1991d3872c25385904f88c3d0",
-     "bytes": 641
+     "redacted": 1,
+     "sha256": "725b69eab25006446ff51e3b231a2d66d0b5cb50484a0457c7aabff509e085a3",
+     "bytes": 537
     },
     {
      "name": "meta.json",
@@ -8776,8 +8799,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "ef9e190eb3b22b0263a80019ba7e36c5462349362ed1f3ce6244df74235a839c",
      "bytes_as_fetched": 636,
-     "sha256": "ef9e190eb3b22b0263a80019ba7e36c5462349362ed1f3ce6244df74235a839c",
-     "bytes": 636
+     "redacted": 1,
+     "sha256": "3a6d6cdd6524f5a1f91f98174c357e086b7f5cc31fe2303a036035c94ff3c45a",
+     "bytes": 532
     },
     {
      "name": "meta.json",
@@ -10244,8 +10268,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "eb44ed95d1b41becf809db951126ea1a6a4c11e988e08ed61870f1720ecf24e2",
      "bytes_as_fetched": 2710,
-     "sha256": "eb44ed95d1b41becf809db951126ea1a6a4c11e988e08ed61870f1720ecf24e2",
-     "bytes": 2710
+     "redacted": 3,
+     "sha256": "545b82ad2bff2d0a2c082a487343a209be66173d572b6a059e90f1da61ce49cf",
+     "bytes": 2131
     },
     {
      "name": "meta.json",
@@ -10382,8 +10407,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "e5a8a33c12c1762d86f895090480b3c39aa00f9b570352910f3855da9c624e7e",
      "bytes_as_fetched": 2711,
-     "sha256": "e5a8a33c12c1762d86f895090480b3c39aa00f9b570352910f3855da9c624e7e",
-     "bytes": 2711
+     "redacted": 3,
+     "sha256": "831c0e9e6cb91ea7f1a312ff01d15b86a0dd42d7b2971e9750ecf621373fe567",
+     "bytes": 2132
     },
     {
      "name": "meta.json",
@@ -10433,8 +10459,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "13662816e3f7f9b9a4672748f274ce5672b53125627f6cb42fb0ba9c83b41dbc",
      "bytes_as_fetched": 2711,
-     "sha256": "13662816e3f7f9b9a4672748f274ce5672b53125627f6cb42fb0ba9c83b41dbc",
-     "bytes": 2711
+     "redacted": 3,
+     "sha256": "200ad89315be349a62c981444cc9a669c166b5a7fd1c4c8be7e741e43db76fca",
+     "bytes": 2132
     },
     {
      "name": "meta.json",
@@ -14529,8 +14556,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "f0e7750ae29ee946f7cdfb5b97fc772b2833d5d4d501cb221a1ba3ab3634d3f3",
      "bytes_as_fetched": 1346,
-     "sha256": "f0e7750ae29ee946f7cdfb5b97fc772b2833d5d4d501cb221a1ba3ab3634d3f3",
-     "bytes": 1346
+     "redacted": 3,
+     "sha256": "2ecdc8f64b7961ad42f61ba679fb1df39ad4f2e2e9c2e6ce98935d9a5afae753",
+     "bytes": 652
     },
     {
      "name": "meta.json",
@@ -14689,8 +14717,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "2a6226a3016491ce8d0bd71aff811ffd0706437ed9db57aa52d2751efcfcc169",
      "bytes_as_fetched": 1041,
-     "sha256": "2a6226a3016491ce8d0bd71aff811ffd0706437ed9db57aa52d2751efcfcc169",
-     "bytes": 1041
+     "redacted": 1,
+     "sha256": "2b472f22510857787b6c92d9763a6b6098ed244c929c0585685f2c602a8c5f3c",
+     "bytes": 734
     },
     {
      "name": "meta.json",
@@ -14777,8 +14806,9 @@
      "name": "headers.txt",
      "sha256_as_fetched": "dec5ced0c701c5cbf1298109832004d623b2a2de13c67c5581f5bf56a2dc2658",
      "bytes_as_fetched": 6414,
-     "sha256": "dec5ced0c701c5cbf1298109832004d623b2a2de13c67c5581f5bf56a2dc2658",
-     "bytes": 6414
+     "redacted": 6,
+     "sha256": "5e154bd62bdf03fd4febce8e86f316f89616449bc80ae1cc7496cfe15ea9117a",
+     "bytes": 5909
     },
     {
      "name": "meta.json",

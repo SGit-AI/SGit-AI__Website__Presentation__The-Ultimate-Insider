@@ -1,6 +1,6 @@
 # The claims register
 
-Built 2026-10-29T04:20Z. 114 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
+Built 2026-10-29T04:22Z. 114 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
 
 | Grade | Claims |
 |---|---|

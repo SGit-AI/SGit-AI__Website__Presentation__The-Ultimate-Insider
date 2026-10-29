@@ -24,10 +24,24 @@
    "verdict": "done",
    "comment": "E03 delivered: evidence/studio/studio-e03.json (16 sources, 16 cases, 17 defanged captures, raw not kept, hashes as fetched recorded); claims e03-*; mail deck 009 (case ids only); board 005 progress; editor-decisions.json D01 carries the freeze; status, debrief. The research pass stopped before writing the catalogue; the researcher built it from the capture records and checked dates against the extracts (two corrected).",
    "at": "2026-10-29T04:21:36Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "finding",
+   "comment": "Gate, agents check (0 outside scope) and vault_check pass. inj-* hold only page.txt, meta.json, headers.txt; no raw HTML or PDF. Imperative words outside brackets in 12 pages are descriptive prose on spot check, no directive at an assistant. studio-e03 quotes no payload; deck mail names case ids only. Finding: set-cookie values (anonymous Cloudflare cookies issued to the fetcher) in headers.txt, 28 across all sources; fixed in this wake: 30 files redacted, 0 left.",
+   "at": "2026-10-29T04:23:19Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "E03 done (studio-e03.json, 16 cases, defanged captures, raw not kept; claims e03-*; inj-* text, meta and headers only); deck mail 009 names case ids only; D01 freeze note done; status, debrief, wake record done. Conditions kept: defanged excerpts, vault_check, no posting; set-cookie values redacted after the post-review, committed with the close. Nothing unplanned.",
+   "at": "2026-10-29T04:23:44Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-29T04:23:44Z",
+ "outcome": "ok",
  "history": [
   {
    "step": "pre_review",

@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T04:20Z. 361 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T04:22Z. 361 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
