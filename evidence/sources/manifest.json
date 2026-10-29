@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T02:12Z",
- "count": 325,
+ "built": "2026-10-29T03:11Z",
+ "count": 343,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -39,6 +39,646 @@
    ],
    "capture": "partial: paywalled after the lede; lede and injected prompt quote captured",
    "recorded_by": "act1"
+  },
+  {
+   "id": "abp-sgit-barriers-json",
+   "url": "https://abp.sgit.ai/data/barriers.json",
+   "final_url": "https://abp.sgit.ai/data/barriers.json",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "data/barriers.json (abp/barriers/v1)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:03Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "barriers.json",
+     "sha256_as_fetched": "5f23ff5966eaabc399c7be14c361362a1f7003a9413a158c0a1070de26080f38",
+     "bytes_as_fetched": 2212,
+     "sha256": "5f23ff5966eaabc399c7be14c361362a1f7003a9413a158c0a1070de26080f38",
+     "bytes": 2212
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "561ae16988f7187b541776d09cf2dd4b439d4cab79349ad5467cf307108851f0",
+     "bytes_as_fetched": 87,
+     "sha256": "561ae16988f7187b541776d09cf2dd4b439d4cab79349ad5467cf307108851f0",
+     "bytes": 87
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-browserext-data",
+   "url": "https://abp.sgit.ai/data/profiles/generic/browser-extension/broad-host-permissions.json",
+   "final_url": "https://abp.sgit.ai/data/profiles/generic/browser-extension/broad-host-permissions.json",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "Raw JSON for generic/browser-extension/broad-host-permissions: profile.json (grant rows), delta.json, mandate.json",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:09:03Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "delta.json",
+     "sha256_as_fetched": "a4f4751ced30a6752e51cd7199779191eee6bfffa62a0a8bf0a6a805be7a58b4",
+     "bytes_as_fetched": 1574,
+     "sha256": "a4f4751ced30a6752e51cd7199779191eee6bfffa62a0a8bf0a6a805be7a58b4",
+     "bytes": 1574
+    },
+    {
+     "name": "mandate.json",
+     "sha256_as_fetched": "9ac28306e1296c63a67f3537ade1bcfe5c78aebde48f65b5851d3c6b4c3bd996",
+     "bytes_as_fetched": 2202,
+     "sha256": "9ac28306e1296c63a67f3537ade1bcfe5c78aebde48f65b5851d3c6b4c3bd996",
+     "bytes": 2202
+    },
+    {
+     "name": "profile.json",
+     "sha256_as_fetched": "84e9d74665b08901d6885bd25e0eb6a2d52b50161d26eccbe8582b950d4caf58",
+     "bytes_as_fetched": 3368,
+     "sha256": "84e9d74665b08901d6885bd25e0eb6a2d52b50161d26eccbe8582b950d4caf58",
+     "bytes": 3368
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "56e227a1995789f1053a405ecb26b3b9c2b113a8a90012d36c5b81717f510c0e",
+     "bytes_as_fetched": 426,
+     "sha256": "56e227a1995789f1053a405ecb26b3b9c2b113a8a90012d36c5b81717f510c0e",
+     "bytes": 426
+    }
+   ],
+   "capture": "full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/)",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-cc-off-data",
+   "url": "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-confirmations-off.json",
+   "final_url": "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-confirmations-off.json",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "Raw JSON for anthropic/claude-code/local-confirmations-off: profile.json (grant rows), delta.json (mandate shared with abp-sgit-cc-on-data)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:37Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "delta.json",
+     "sha256_as_fetched": "3b54663f01f528d0bf67fd31b37d208e768b806eed38b9379c8eaeb02ce8d00f",
+     "bytes_as_fetched": 2531,
+     "sha256": "3b54663f01f528d0bf67fd31b37d208e768b806eed38b9379c8eaeb02ce8d00f",
+     "bytes": 2531
+    },
+    {
+     "name": "facts.json",
+     "sha256_as_fetched": "ac25b08490de862c1baa56bebcf37d4ab9ad4e29d2d112f2ce02d1751c6745fa",
+     "bytes_as_fetched": 10347,
+     "sha256": "ac25b08490de862c1baa56bebcf37d4ab9ad4e29d2d112f2ce02d1751c6745fa",
+     "bytes": 10347
+    },
+    {
+     "name": "profile.json",
+     "sha256_as_fetched": "0df07d463171a2b647471258998394185c368c1de0263b4b46e80ee106dd17a2",
+     "bytes_as_fetched": 8058,
+     "sha256": "0df07d463171a2b647471258998394185c368c1de0263b4b46e80ee106dd17a2",
+     "bytes": 8058
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "c1aeff5aeb1c756cc88df210a1b620704a147a9c851c5b11339002ee8a0b49ff",
+     "bytes_as_fetched": 456,
+     "sha256": "c1aeff5aeb1c756cc88df210a1b620704a147a9c851c5b11339002ee8a0b49ff",
+     "bytes": 456
+    }
+   ],
+   "capture": "full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/)",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-cc-on-data",
+   "url": "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json",
+   "final_url": "https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "Raw JSON for anthropic/claude-code/local-default: profile.json (grant rows), delta.json, mandate.json",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:37Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "delta.json",
+     "sha256_as_fetched": "19227b1c866fa06815873360104a686a1da1a6ccad8b90bf13070dbbb06df2d1",
+     "bytes_as_fetched": 2511,
+     "sha256": "19227b1c866fa06815873360104a686a1da1a6ccad8b90bf13070dbbb06df2d1",
+     "bytes": 2511
+    },
+    {
+     "name": "facts.json",
+     "sha256_as_fetched": "03ca8f09ad388b15529c9cf1cf7fb4fc98bd2c2e972c9968c4aae9464294aa10",
+     "bytes_as_fetched": 10316,
+     "sha256": "03ca8f09ad388b15529c9cf1cf7fb4fc98bd2c2e972c9968c4aae9464294aa10",
+     "bytes": 10316
+    },
+    {
+     "name": "mandate.json",
+     "sha256_as_fetched": "47250d13230a7c737dd6cfb9acffdb27db5e100adb9734a141e539a6ee99aecb",
+     "bytes_as_fetched": 2738,
+     "sha256": "47250d13230a7c737dd6cfb9acffdb27db5e100adb9734a141e539a6ee99aecb",
+     "bytes": 2738
+    },
+    {
+     "name": "profile.json",
+     "sha256_as_fetched": "1a4fedb6bd66d35d0a618ae2adbaced720b629d7b6a3b0740aa0de9b3f5ed0d4",
+     "bytes_as_fetched": 8158,
+     "sha256": "1a4fedb6bd66d35d0a618ae2adbaced720b629d7b6a3b0740aa0de9b3f5ed0d4",
+     "bytes": 8158
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "c0801b957f4f20f67d1f8668ba215f0f0d060ca9273a4da1e97c7ff39bb1c66a",
+     "bytes_as_fetched": 538,
+     "sha256": "c0801b957f4f20f67d1f8668ba215f0f0d060ca9273a4da1e97c7ff39bb1c66a",
+     "bytes": 538
+    }
+   ],
+   "capture": "full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/)",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-chatgpt-data",
+   "url": "https://abp.sgit.ai/data/profiles/openai/chatgpt-web/default.json",
+   "final_url": "https://abp.sgit.ai/data/profiles/openai/chatgpt-web/default.json",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "Raw JSON for openai/chatgpt-web/default: profile.json (grant rows), delta.json, mandate.json",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:09:02Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "delta.json",
+     "sha256_as_fetched": "6b4513051c4328fcb4d84bcb4dd0e6f320014949b1b3a94ec1c007393bd7dd0d",
+     "bytes_as_fetched": 1295,
+     "sha256": "6b4513051c4328fcb4d84bcb4dd0e6f320014949b1b3a94ec1c007393bd7dd0d",
+     "bytes": 1295
+    },
+    {
+     "name": "mandate.json",
+     "sha256_as_fetched": "82edf5f57b780e6eaa2af6b71cc828cc0b04f48e05129742a2131bbaec16ed56",
+     "bytes_as_fetched": 1928,
+     "sha256": "82edf5f57b780e6eaa2af6b71cc828cc0b04f48e05129742a2131bbaec16ed56",
+     "bytes": 1928
+    },
+    {
+     "name": "profile.json",
+     "sha256_as_fetched": "ae22c16e4b9d3c7dfde2309aa6fbf54a22c437c4d553d03a5059068480c19caa",
+     "bytes_as_fetched": 2523,
+     "sha256": "ae22c16e4b9d3c7dfde2309aa6fbf54a22c437c4d553d03a5059068480c19caa",
+     "bytes": 2523
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "4994be0fd09ab9f2f5f5ff02e104b3af8a551c5f30b6b1a7100a7df2e6fc7b56",
+     "bytes_as_fetched": 351,
+     "sha256": "4994be0fd09ab9f2f5f5ff02e104b3af8a551c5f30b6b1a7100a7df2e6fc7b56",
+     "bytes": 351
+    }
+   ],
+   "capture": "full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/)",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-ex-browserext",
+   "url": "https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/",
+   "final_url": "https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "A browser extension with broad host permissions",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:35Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "aeccdf9c7a6d965a35499087b7f32f0ad97a19af8b0880d2c805cc2ddd3ffe43",
+     "bytes_as_fetched": 28514,
+     "sha256": "aeccdf9c7a6d965a35499087b7f32f0ad97a19af8b0880d2c805cc2ddd3ffe43",
+     "bytes": 28514
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a223f6dded665ed39ce7d8b0edc955322bb6cab8f2cfd331df86346dd0f70ede",
+     "bytes_as_fetched": 14030,
+     "sha256": "a223f6dded665ed39ce7d8b0edc955322bb6cab8f2cfd331df86346dd0f70ede",
+     "bytes": 14030
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "b8a7ee948c2a49d3e762c4889d593fec08f8d70baa726295ce90ad18f4d87620",
+     "bytes_as_fetched": 119,
+     "sha256": "b8a7ee948c2a49d3e762c4889d593fec08f8d70baa726295ce90ad18f4d87620",
+     "bytes": 119
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-ex-cc-off",
+   "url": "https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/",
+   "final_url": "https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "The same coding agent, confirmations off",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:04Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2267db7f0cb08d8d336a23f084f9e8ac3fb6f444d7e48e4c3d47833e4926b8fd",
+     "bytes_as_fetched": 37501,
+     "sha256": "2267db7f0cb08d8d336a23f084f9e8ac3fb6f444d7e48e4c3d47833e4926b8fd",
+     "bytes": 37501
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "dccf08505feaa2c20b04c27086b4a97ec038aecf6577ce14c0b5a41274a768c4",
+     "bytes_as_fetched": 17823,
+     "sha256": "dccf08505feaa2c20b04c27086b4a97ec038aecf6577ce14c0b5a41274a768c4",
+     "bytes": 17823
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "0cd67507ff1a3e1065279bbc178d5a01f4b65047a5374090d96704c5db9f70a8",
+     "bytes_as_fetched": 113,
+     "sha256": "0cd67507ff1a3e1065279bbc178d5a01f4b65047a5374090d96704c5db9f70a8",
+     "bytes": 113
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-ex-cc-on",
+   "url": "https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/",
+   "final_url": "https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "A coding agent on your own machine, confirmations on",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:04Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "70a0c9bc6c23fc518a82fb6843be53b166e119e4f01f6d3768251d0844a0cb3f",
+     "bytes_as_fetched": 37540,
+     "sha256": "70a0c9bc6c23fc518a82fb6843be53b166e119e4f01f6d3768251d0844a0cb3f",
+     "bytes": 37540
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1e6a07dbe4a3d25226b26d81486d663ac33d509e352182f621c7685e5ee91e8e",
+     "bytes_as_fetched": 17894,
+     "sha256": "1e6a07dbe4a3d25226b26d81486d663ac33d509e352182f621c7685e5ee91e8e",
+     "bytes": 17894
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "738fcb2f84e9f2ffe51ee173346392213f3cf3703ab976fa8931f70962a2369c",
+     "bytes_as_fetched": 111,
+     "sha256": "738fcb2f84e9f2ffe51ee173346392213f3cf3703ab976fa8931f70962a2369c",
+     "bytes": 111
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-ex-chatgpt",
+   "url": "https://abp.sgit.ai/examples/chatgpt-web-no-connectors/",
+   "final_url": "https://abp.sgit.ai/examples/chatgpt-web-no-connectors/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "Chat in the browser, nothing connected",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:35Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e09e83f9e78dc08ded15fa859e6460e5dcf2226165d6b36f03629b8cb340b216",
+     "bytes_as_fetched": 26597,
+     "sha256": "e09e83f9e78dc08ded15fa859e6460e5dcf2226165d6b36f03629b8cb340b216",
+     "bytes": 26597
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ca96e29ca397bcce44fc3c78e7cbfc5ae947fb494fb00111b1745ea2b2793035",
+     "bytes_as_fetched": 13370,
+     "sha256": "ca96e29ca397bcce44fc3c78e7cbfc5ae947fb494fb00111b1745ea2b2793035",
+     "bytes": 13370
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "ea6a8a95a11bed7e3a810c2eca350c7baef96b0d8a85105066267848de32e70c",
+     "bytes_as_fetched": 101,
+     "sha256": "ea6a8a95a11bed7e3a810c2eca350c7baef96b0d8a85105066267848de32e70c",
+     "bytes": 101
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-ex-gha",
+   "url": "https://abp.sgit.ai/examples/github-actions-hosted-runner/",
+   "final_url": "https://abp.sgit.ai/examples/github-actions-hosted-runner/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "A CI job on a hosted runner, under a service account",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:35Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3705ddd2e8023fb37512f05d5e57d5b99f3aff8730a45217b691545d6b13ecfd",
+     "bytes_as_fetched": 31113,
+     "sha256": "3705ddd2e8023fb37512f05d5e57d5b99f3aff8730a45217b691545d6b13ecfd",
+     "bytes": 31113
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "59bc3a21d185de8c29329497622bdd44aa83b07b5ac89dc294715ce7bceeecae",
+     "bytes_as_fetched": 14749,
+     "sha256": "59bc3a21d185de8c29329497622bdd44aa83b07b5ac89dc294715ce7bceeecae",
+     "bytes": 14749
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "fe057cf39e2823eb605bb1f9f8b386ca63521a1c41d9f5f2889d6a61a74e026d",
+     "bytes_as_fetched": 100,
+     "sha256": "fe057cf39e2823eb605bb1f9f8b386ca63521a1c41d9f5f2889d6a61a74e026d",
+     "bytes": 100
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-examples",
+   "url": "https://abp.sgit.ai/examples/",
+   "final_url": "https://abp.sgit.ai/examples/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "Five worked examples",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:03Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "8a1865f9ceece4e5d8b25d74b16ed794a9f7982ff7578c76e89774435502fc39",
+     "bytes_as_fetched": 17758,
+     "sha256": "8a1865f9ceece4e5d8b25d74b16ed794a9f7982ff7578c76e89774435502fc39",
+     "bytes": 17758
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cf24dea20087e5c30857cf4ff8da9fef1e16111c46a074d060ee23922a34cb40",
+     "bytes_as_fetched": 7083,
+     "sha256": "cf24dea20087e5c30857cf4ff8da9fef1e16111c46a074d060ee23922a34cb40",
+     "bytes": 7083
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "204a25cafb71e71fe5ff4346fe4811fbe39c62cb08ed496b906e373ccd6d99a5",
+     "bytes_as_fetched": 73,
+     "sha256": "204a25cafb71e71fe5ff4346fe4811fbe39c62cb08ed496b906e373ccd6d99a5",
+     "bytes": 73
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-gha-data",
+   "url": "https://abp.sgit.ai/data/profiles/github/actions-runner/ci.json",
+   "final_url": "https://abp.sgit.ai/data/profiles/github/actions-runner/ci.json",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "Raw JSON for github/actions-runner/ci: profile.json (grant rows), delta.json, mandate.json",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:09:04Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "delta.json",
+     "sha256_as_fetched": "0d59b45ddba8fd350cf493e825e786c53bc72e3a89d8ba603ba2169a45c4a193",
+     "bytes_as_fetched": 1658,
+     "sha256": "0d59b45ddba8fd350cf493e825e786c53bc72e3a89d8ba603ba2169a45c4a193",
+     "bytes": 1658
+    },
+    {
+     "name": "mandate.json",
+     "sha256_as_fetched": "cafcd730dcf8af59d911af537b0e8d51eb31ebc2d9f23fc661c22169d02b59d3",
+     "bytes_as_fetched": 2206,
+     "sha256": "cafcd730dcf8af59d911af537b0e8d51eb31ebc2d9f23fc661c22169d02b59d3",
+     "bytes": 2206
+    },
+    {
+     "name": "profile.json",
+     "sha256_as_fetched": "c4b4153167b90dda0b71f7388f2517a6f6f646ea6bb04d122a2e0ae91aa8c9bc",
+     "bytes_as_fetched": 5350,
+     "sha256": "c4b4153167b90dda0b71f7388f2517a6f6f646ea6bb04d122a2e0ae91aa8c9bc",
+     "bytes": 5350
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "5b8336946f8591efaf700cb616d5d266c1c7410a8e8a1bb35e1ab80a3df4de3c",
+     "bytes_as_fetched": 311,
+     "sha256": "5b8336946f8591efaf700cb616d5d266c1c7410a8e8a1bb35e1ab80a3df4de3c",
+     "bytes": 311
+    }
+   ],
+   "capture": "full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/)",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-home",
+   "url": "https://abp.sgit.ai/",
+   "final_url": "https://abp.sgit.ai/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "abp.sgit.ai home (v0.12.1)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:03Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e998cce5e4505f52d34918aab4483038e3676810d6b47fa060c175f1a6a2ee0d",
+     "bytes_as_fetched": 23869,
+     "sha256": "e998cce5e4505f52d34918aab4483038e3676810d6b47fa060c175f1a6a2ee0d",
+     "bytes": 23869
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "944f5330486738f4f6a3781df2ac2adf884852d4eb77e79b6fde4c2a7d974edc",
+     "bytes_as_fetched": 12171,
+     "sha256": "944f5330486738f4f6a3781df2ac2adf884852d4eb77e79b6fde4c2a7d974edc",
+     "bytes": 12171
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "5e9b52b30f49c27abe8c325fddf029282d3197f03895bd74bc38ead7f74ac5e9",
+     "bytes_as_fetched": 60,
+     "sha256": "5e9b52b30f49c27abe8c325fddf029282d3197f03895bd74bc38ead7f74ac5e9",
+     "bytes": 60
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-llms",
+   "url": "https://abp.sgit.ai/llms.txt",
+   "final_url": "https://abp.sgit.ai/llms.txt",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "abp.sgit.ai llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:04Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes_as_fetched": 62669,
+     "sha256": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes": 62669
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "e3583401857e7f10b9e68157905792243003a74c05e20463f7e82417f17a8784",
+     "bytes_as_fetched": 68,
+     "sha256": "e3583401857e7f10b9e68157905792243003a74c05e20463f7e82417f17a8784",
+     "bytes": 68
+    }
+   ],
+   "capture": "full (raw only, not quoted)",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-model",
+   "url": "https://abp.sgit.ai/model/",
+   "final_url": "https://abp.sgit.ai/model/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "The model: the four objects",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:35Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e7fd49bb16fb6c79b420b7898ef6d2638e057ce1dc933bf51c671d30e28336a0",
+     "bytes_as_fetched": 16906,
+     "sha256": "e7fd49bb16fb6c79b420b7898ef6d2638e057ce1dc933bf51c671d30e28336a0",
+     "bytes": 16906
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3b8daa133bcc382c414a9172160aaa6ed49a5e60a3bf667476758d3a7a9159e6",
+     "bytes_as_fetched": 6733,
+     "sha256": "3b8daa133bcc382c414a9172160aaa6ed49a5e60a3bf667476758d3a7a9159e6",
+     "bytes": 6733
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "da1bb6fdd1f678db44eba1dd9c827eaa44f85f1f8526cf8e412df270ed88f68c",
+     "bytes_as_fetched": 67,
+     "sha256": "da1bb6fdd1f678db44eba1dd9c827eaa44f85f1f8526cf8e412df270ed88f68c",
+     "bytes": 67
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-model-barriers",
+   "url": "https://abp.sgit.ai/model/barriers/",
+   "final_url": "https://abp.sgit.ai/model/barriers/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "The barrier: what is actually in the way",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:04Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f11b2d70ee0f8760adee9f7148b3da272b8ea43f006e0f811ae6e472e292c9a2",
+     "bytes_as_fetched": 13950,
+     "sha256": "f11b2d70ee0f8760adee9f7148b3da272b8ea43f006e0f811ae6e472e292c9a2",
+     "bytes": 13950
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3a16107b3476e8a82102f14f73cbdb4dc6810f738f773854e797d1a4e4e25167",
+     "bytes_as_fetched": 4688,
+     "sha256": "3a16107b3476e8a82102f14f73cbdb4dc6810f738f773854e797d1a4e4e25167",
+     "bytes": 4688
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "21a55ab3514f9119c24985e791c182f3d71f99ddf37a65d154bacae6163e878c",
+     "bytes_as_fetched": 85,
+     "sha256": "21a55ab3514f9119c24985e791c182f3d71f99ddf37a65d154bacae6163e878c",
+     "bytes": 85
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-model-delta",
+   "url": "https://abp.sgit.ai/model/delta/",
+   "final_url": "https://abp.sgit.ai/model/delta/",
+   "publisher": "abp.sgit.ai (sgit.ai network)",
+   "title": "The delta",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:36Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2584ad2190ead8b8a02f5d38d76b03cfb0d007427d54c556f8303377d4c678e3",
+     "bytes_as_fetched": 28740,
+     "sha256": "2584ad2190ead8b8a02f5d38d76b03cfb0d007427d54c556f8303377d4c678e3",
+     "bytes": 28740
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0221d8f6fb40ca5e6ff7c0f9e2cfe8c7cdd00dfa4ec548274aa60fc8b2185061",
+     "bytes_as_fetched": 16086,
+     "sha256": "0221d8f6fb40ca5e6ff7c0f9e2cfe8c7cdd00dfa4ec548274aa60fc8b2185061",
+     "bytes": 16086
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "be0da33d2a68a8613617fdae38cecbc510f5c51456f577297f82968e6ce39d1c",
+     "bytes_as_fetched": 79,
+     "sha256": "be0da33d2a68a8613617fdae38cecbc510f5c51456f577297f82968e6ce39d1c",
+     "bytes": 79
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09"
   },
   {
    "id": "aembit-spiffe-cost",
@@ -11708,6 +12348,35 @@
    ],
    "capture": "full",
    "recorded_by": "sgit-php-ideas"
+  },
+  {
+   "id": "rm-abp-md",
+   "url": "https://riskmandate.ai/abp.md",
+   "final_url": "https://riskmandate.ai/abp.md",
+   "publisher": "RiskMandate (riskmandate.ai)",
+   "title": "RiskMandate ABP page, markdown twin",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:08:05Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "74942e72cf10158bcf24dd0e6d3fe3595ff960c34a41fde066a343081c46b131",
+     "bytes_as_fetched": 11503,
+     "sha256": "74942e72cf10158bcf24dd0e6d3fe3595ff960c34a41fde066a343081c46b131",
+     "bytes": 11503
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "12b76f74fb7eff6f359bf77f27cab289177eee4551bf6a6f36281b5848c54492",
+     "bytes_as_fetched": 65,
+     "sha256": "12b76f74fb7eff6f359bf77f27cab289177eee4551bf6a6f36281b5848c54492",
+     "bytes": 65
+    }
+   ],
+   "capture": "full (raw only, not quoted)",
+   "recorded_by": "studio-e02-e09"
   },
   {
    "id": "rm-llms",

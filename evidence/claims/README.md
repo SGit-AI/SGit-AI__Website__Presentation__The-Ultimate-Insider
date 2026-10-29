@@ -1,22 +1,22 @@
 # The claims register
 
-Built 2026-10-29T02:12Z. 88 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
+Built 2026-10-29T03:11Z. 98 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
 
 | Grade | Claims |
 |---|---|
 | A0 | 9 |
 | A1 | 16 |
-| A2 | 31 |
-| A3 | 8 |
+| A2 | 32 |
+| A3 | 9 |
 | A4 | 3 |
 | A5 | 7 |
-| A6 | 14 |
+| A6 | 22 |
 
 | Holds | Claims |
 |---|---|
 | does not hold | 2 |
-| holds | 41 |
-| holds in part | 23 |
+| holds | 50 |
+| holds in part | 24 |
 | not checked | 22 |
 
 ## The talk: opening and act one
@@ -121,4 +121,19 @@ Built 2026-10-29T02:12Z. 88 claims. Grades A0 to A6 as in `../METHOD.md`; "holds
 | **article-hack-soho-ioactive**: my talk at hack::soho on 29 October 2026, hosted by IOActive in London and livestreamed from about 7pm | article:introducing-this-site#in-short | event | A0 | not checked | No event listing captured. A web search found IOActive describing hack::soho as a monthly gathering at its London office, but no October 2026 listing. Link the event page. |
 | **article-82-machine-identities**: there are 82 machine identities for every human ... it is a survey of security leaders, not a census | article:introducing-this-site#why-one-talk-gets-a-whole-site, talk:identities | measured | A0 | not checked | Not captured by this agent (another research agent covers the talk's act-one sources). Needs the CyberArk link in the article. |
 | **article-other-outside-claims**: Other outside-world claims in this site's three articles that carry no source: 'the public incidents of the last eighteen months, most of which were not attacks' (introducing); 'the date of the US incident reporting rule' (CIRCIA, flagged by the article itself); 'Agentic Engineering Live: rUv in London on 15 October 2026' (ruv); 'the newsroom adopted [CI owns the version] on 27 October after two version races and a refused release in one day' (introducing, links a newsroom article); 'The newsroom ended with six repositories' and 'The scheduler fires late (2 to 40 minutes there)' (running); 'dev.sgraph.sgit.ai did not resolve' and sgit behaviours such as 'sgit vault info prints the vault key' (running, first-hand) | article:introducing-this-site, article:how-ruv-sgit-works, article:running-this-agent-team | observation | A0 | not checked | Most are the team's own first-hand observations (fine as observation, label them so). The ones about the outside world that should carry a link: the incident record (talk:incidents sources), CIRCIA status (CISA), the rUv event page, and the newsroom article on CI owns the version (already linked). |
+
+## Studio data: the ABP model and its examples (E02, E09, E13)
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **abp-cc-grant-16**: Grant 16 (Claude Code CLI, both settings) | riskmandate:abp.html#worked-example, abp:examples/claude-code-cli-* | measured | A6 | holds | Holds as a count of the published record (16 grant rows in profile.json, listed one by one). It is a derived model, not a measurement: 0 of 22 rows measured. As a claim about what Claude Code can do on a real machine it rests on one party's architectural reasoning (A2 at most). |
+| **abp-cc-mandate-5**: Mandate 5 | riskmandate:abp.html#worked-example | measured | A6 | holds | The mandate is a first draft written by the site, not elicited from a real deployer: 'authored 2026-09-09 by the site, as a starting point - not measured, not surveyed'. The 5 are read.file.project, write.file.project, execute.process.host, write.repository.project, send.endpoint.allowed. |
+| **abp-cc-excess-12**: Excess 12 (with grant 16 and mandate 5) | riskmandate:abp.html#worked-example | measured | A6 | holds | The numbers add up, but not by 16 - 5. Excess is grant minus the mandate items actually granted: 16 - 4 aligned = 12. The fifth mandate item, send.endpoint.allowed (reach only the hosts it needs), is not in the grant; the grant has send.endpoint.world instead, which counts as excess. So mandate 5 = aligned 4 + shortfall 1. No row is 'in the mandate but over-granted' in the data; the over-grant shows up as a different capability id (world reach instead of allowed reach). A deck that draws 16 bars with 5 in the mandate must show 4 inside the grant and 1 outside it. **Suggested:** Grant 16, mandate 5 (4 of them granted, 1 it cannot do), excess 12 |
+| **abp-cc-unbounded-12**: Unbounded excess 12, both settings | riskmandate:abp.html#worked-example | measured | A6 | holds | No excess row sits at 'boundary': 10 at none, 1 at expectation (write.repository.tenant), 1 at setting (grant.credential.self). |
+| **abp-cc-one-barrier-moved**: One barrier moved, and not one number did. | riskmandate:abp.html#worked-example | measured | A6 | holds | Checked by diffing the two raw profile.json files: the only change in the grant is execute.process.host barrier setting to none (plus row order and descriptions). It is in the mandate (aligned), which is why no count moves. |
+| **abp-cc-irreversible-8**: Irreversible 8 (Claude Code) | abp:examples/claude-code-cli-* | measured | A6 | holds | 8 rows with undo 'no'; all 8 are excess. |
+| **abp-five-examples-table**: The five, side by side: chat 1/1/0, CLI on 16/5/12, CLI off 16/5/12, browser extension 3/1/2, CI runner 8/5/4 (grant/mandate/excess) | abp:examples | measured | A6 | holds | Every row reconciles with its delta.json: excess = grant - aligned in all five; mandate = aligned + shortfall. Two examples have a shortfall (CLI: send.endpoint.allowed; CI: write.repository.tenant), so grant - mandate understates excess by 1 in both. |
+| **abp-ci-only-boundary**: The CI runner is the only example with a control: unbounded excess 3 of excess 4 | abp:examples/github-actions-hosted-runner | measured | A6 | holds | write.repository.project at barrier 'boundary'. Useful for E09 as the one row on the fourth kind. |
+| **abp-three-of-four-bound-nothing**: There are four kinds, and three of them bound nothing. | riskmandate:abp.html#the-barrier | position | A3 | holds | A definitional position (the enforcer test) by one author across riskmandate.ai and abp.sgit.ai; the is_control flag is abp.sgit.ai's own reading, not upstream data. Shown as a position, not graded as a fact. |
+| **abp-site-measured-21-of-99**: 21 of 99 capability rows on this page were measured | abp:examples, abp:model | measured | A2 | holds in part | Does not reconcile with the five examples: their profiles sum to 56 rows (1+22+22+3+8) with 8 measured. The model page words it as rows 'from the published map', i.e. the whole map (18 stored deltas), so the examples page's 'on this page' looks like a wording error. Do not draw 21/99 as the five examples. **Suggested:** 21 of 99 rows in the published capability map were measured; in these five examples, 8 of 56 were |
 

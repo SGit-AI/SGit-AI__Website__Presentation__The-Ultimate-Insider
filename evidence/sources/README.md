@@ -1,10 +1,27 @@
 # Sources
 
-Built 2026-10-29T02:12Z. 325 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T03:11Z. 343 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
 | [404media-amazon-q](https://www.404media.co/hacker-plants-computer-wiping-commands-in-amazons-ai-coding-agent/) | 404 Media (Joseph Cox) | news | 2026-10-29T01:53:41Z | 200 | partial: paywalled after the lede; lede and injected prompt quote captured | 3 |
+| [abp-sgit-barriers-json](https://abp.sgit.ai/data/barriers.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:03Z | 200 | full | 2 |
+| [abp-sgit-browserext-data](https://abp.sgit.ai/data/profiles/generic/browser-extension/broad-host-permissions.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:09:03Z | 200 | full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/) | 4 |
+| [abp-sgit-cc-off-data](https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-confirmations-off.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:37Z | 200 | full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/) | 4 |
+| [abp-sgit-cc-on-data](https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:37Z | 200 | full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/) | 5 |
+| [abp-sgit-chatgpt-data](https://abp.sgit.ai/data/profiles/openai/chatgpt-web/default.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:09:02Z | 200 | full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/) | 4 |
+| [abp-sgit-ex-browserext](https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:35Z | 200 | full | 3 |
+| [abp-sgit-ex-cc-off](https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:04Z | 200 | full | 3 |
+| [abp-sgit-ex-cc-on](https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:04Z | 200 | full | 3 |
+| [abp-sgit-ex-chatgpt](https://abp.sgit.ai/examples/chatgpt-web-no-connectors/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:35Z | 200 | full | 3 |
+| [abp-sgit-ex-gha](https://abp.sgit.ai/examples/github-actions-hosted-runner/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:35Z | 200 | full | 3 |
+| [abp-sgit-examples](https://abp.sgit.ai/examples/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:03Z | 200 | full | 3 |
+| [abp-sgit-gha-data](https://abp.sgit.ai/data/profiles/github/actions-runner/ci.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:09:04Z | 200 | full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/) | 4 |
+| [abp-sgit-home](https://abp.sgit.ai/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:03Z | 200 | full | 3 |
+| [abp-sgit-llms](https://abp.sgit.ai/llms.txt) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:04Z | 200 | full (raw only, not quoted) | 2 |
+| [abp-sgit-model](https://abp.sgit.ai/model/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:35Z | 200 | full | 3 |
+| [abp-sgit-model-barriers](https://abp.sgit.ai/model/barriers/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:04Z | 200 | full | 3 |
+| [abp-sgit-model-delta](https://abp.sgit.ai/model/delta/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:36Z | 200 | full | 3 |
 | [aembit-spiffe-cost](https://aembit.io/blog/everyone-wants-spiffe-almost-no-one-can-afford-to-build-it-right/) | Aembit (vendor of a commercial workload-identity broker) | vendor-survey | 2026-10-29T01:56:40Z | 200 | full | 4 |
 | [aiid-1152-replit](https://incidentdatabase.ai/cite/1152/) | AI Incident Database | secondary | 2026-10-29T01:51:44Z | 200 | full | 3 |
 | [aiid-1178-gemini-cli](https://incidentdatabase.ai/cite/1178/) | AI Incident Database | secondary | 2026-10-29T01:50:21Z | 200 | full | 3 |
@@ -290,6 +307,7 @@ Built 2026-10-29T02:12Z. 325 sources; `manifest.json` has every file's SHA-256. 
 | [risks-sgit](https://risks.sgit.ai/) | sgit project (risks.sgit.ai) | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
 | [risks-sgit-llms](https://risks.sgit.ai/llms.txt) | sgit project (risks.sgit.ai) | own-site | 2026-10-29T01:50:23Z | 200 | full | 3 |
 | [rm-abp](https://riskmandate.ai/abp.html) | RiskMandate (Dinis Cruz) | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
+| [rm-abp-md](https://riskmandate.ai/abp.md) | RiskMandate (riskmandate.ai) | own-site | 2026-10-29T03:08:05Z | 200 | full (raw only, not quoted) | 2 |
 | [rm-llms](https://riskmandate.ai/llms.txt) | RiskMandate (Dinis Cruz) | own-site | 2026-10-29T01:50:23Z | 200 | full | 3 |
 | [rm-lto](https://riskmandate.ai/licence-to-operate.html) | RiskMandate (Dinis Cruz) | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
 | [ruflo-license](https://raw.githubusercontent.com/ruvnet/ruflo/main/LICENSE) | ruvnet (GitHub) | primary | 2026-10-29T01:56:20Z | 200 | full | 3 |

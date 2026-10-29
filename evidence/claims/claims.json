@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T02:12Z",
- "count": 88,
+ "built": "2026-10-29T03:11Z",
+ "count": 98,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1713,7 +1713,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T02:12Z"
+   "adjudicated": "researcher, 2026-10-29T03:11Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -2423,6 +2423,265 @@
    "note": "Most are the team's own first-hand observations (fine as observation, label them so). The ones about the outside world that should carry a link: the incident record (talk:incidents sources), CIRCIA status (CISA), the rUv event page, and the newsroom article on CI owns the version (already linked).",
    "suggested_wording": null,
    "register": "sgit-php-ideas"
+  },
+  {
+   "id": "abp-cc-grant-16",
+   "text": "Grant 16 (Claude Code CLI, both settings)",
+   "where": [
+    "riskmandate:abp.html#worked-example",
+    "abp:examples/claude-code-cli-*"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "rm-abp",
+     "quote": "Grant 16 16",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-cc-on-data",
+     "quote": "\"grant_size\": 16",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-ex-cc-on",
+     "quote": "Everything the agent can do: 16 of 23 primitives.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Holds as a count of the published record (16 grant rows in profile.json, listed one by one). It is a derived model, not a measurement: 0 of 22 rows measured. As a claim about what Claude Code can do on a real machine it rests on one party's architectural reasoning (A2 at most).",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-cc-mandate-5",
+   "text": "Mandate 5",
+   "where": [
+    "riskmandate:abp.html#worked-example"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "rm-abp",
+     "quote": "Mandate 5 5",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-ex-cc-on",
+     "quote": "It authorises 5 primitives, refuses 11 and says nothing either way about 7 .",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The mandate is a first draft written by the site, not elicited from a real deployer: 'authored 2026-09-09 by the site, as a starting point - not measured, not surveyed'. The 5 are read.file.project, write.file.project, execute.process.host, write.repository.project, send.endpoint.allowed.",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-cc-excess-12",
+   "text": "Excess 12 (with grant 16 and mandate 5)",
+   "where": [
+    "riskmandate:abp.html#worked-example"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "rm-abp",
+     "quote": "Excess 12 12",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-cc-on-data",
+     "quote": "\"aligned\": 4",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-ex-cc-on",
+     "quote": "Shortfall: 1. Asked for and cannot: send.endpoint.allowed .",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The numbers add up, but not by 16 - 5. Excess is grant minus the mandate items actually granted: 16 - 4 aligned = 12. The fifth mandate item, send.endpoint.allowed (reach only the hosts it needs), is not in the grant; the grant has send.endpoint.world instead, which counts as excess. So mandate 5 = aligned 4 + shortfall 1. No row is 'in the mandate but over-granted' in the data; the over-grant shows up as a different capability id (world reach instead of allowed reach). A deck that draws 16 bars with 5 in the mandate must show 4 inside the grant and 1 outside it.",
+   "suggested_wording": "Grant 16, mandate 5 (4 of them granted, 1 it cannot do), excess 12",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-cc-unbounded-12",
+   "text": "Unbounded excess 12, both settings",
+   "where": [
+    "riskmandate:abp.html#worked-example"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "rm-abp",
+     "quote": "Unbounded excess 12 12",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-ex-cc-on",
+     "quote": "Every one of the 12 excess capabilities here is unbounded.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "No excess row sits at 'boundary': 10 at none, 1 at expectation (write.repository.tenant), 1 at setting (grant.credential.self).",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-cc-one-barrier-moved",
+   "text": "One barrier moved, and not one number did.",
+   "where": [
+    "riskmandate:abp.html#worked-example"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "rm-abp",
+     "quote": "One barrier moved, and not one number did.",
+     "supports": "for"
+    },
+    {
+     "source_id": "rm-abp",
+     "quote": "Barrier on execute.process.host setting - not a control none - not a control",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-cc-off-data",
+     "quote": "\"control\": \"none - confirmations disabled; the tool runs whatever it decides to run\"",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Checked by diffing the two raw profile.json files: the only change in the grant is execute.process.host barrier setting to none (plus row order and descriptions). It is in the mandate (aligned), which is why no count moves.",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-cc-irreversible-8",
+   "text": "Irreversible 8 (Claude Code)",
+   "where": [
+    "abp:examples/claude-code-cli-*"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "abp-sgit-ex-cc-on",
+     "quote": "Irreversible 8 Granted capabilities with undo: no, as published",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "8 rows with undo 'no'; all 8 are excess.",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-five-examples-table",
+   "text": "The five, side by side: chat 1/1/0, CLI on 16/5/12, CLI off 16/5/12, browser extension 3/1/2, CI runner 8/5/4 (grant/mandate/excess)",
+   "where": [
+    "abp:examples"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "abp-sgit-examples",
+     "quote": "A CI job on a hosted runner, under a service account Persistence, and reach beyond the turn 8 5 4 3 3 world 8 of 8",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-examples",
+     "quote": "A browser extension with broad host permissions Other people's data, and the mandate nobody wrote down 3 1 2 2 3 world 0 of 3",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Every row reconciles with its delta.json: excess = grant - aligned in all five; mandate = aligned + shortfall. Two examples have a shortfall (CLI: send.endpoint.allowed; CI: write.repository.tenant), so grant - mandate understates excess by 1 in both.",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-ci-only-boundary",
+   "text": "The CI runner is the only example with a control: unbounded excess 3 of excess 4",
+   "where": [
+    "abp:examples/github-actions-hosted-runner"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "abp-sgit-gha-data",
+     "quote": "\"control\": \"the checkout is writable, but the token is contents:read, so nothing written can leave\"",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "write.repository.project at barrier 'boundary'. Useful for E09 as the one row on the fourth kind.",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-three-of-four-bound-nothing",
+   "text": "There are four kinds, and three of them bound nothing.",
+   "where": [
+    "riskmandate:abp.html#the-barrier"
+   ],
+   "kind": "position",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "rm-abp",
+     "quote": "There are four kinds, and three of them bound nothing.",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-barriers-json",
+     "quote": "\"note\": \"The four ids and their published meanings are the pack's control_tiers, unchanged. is_control and why are this site's reading of them, stated as such, and are not in the pack.\"",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "A definitional position (the enforcer test) by one author across riskmandate.ai and abp.sgit.ai; the is_control flag is abp.sgit.ai's own reading, not upstream data. Shown as a position, not graded as a fact.",
+   "register": "studio-e02-e09"
+  },
+  {
+   "id": "abp-site-measured-21-of-99",
+   "text": "21 of 99 capability rows on this page were measured",
+   "where": [
+    "abp:examples",
+    "abp:model"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "abp-sgit-examples",
+     "quote": "Provenance. 21 of 99 capability rows on this page were measured",
+     "supports": "for"
+    },
+    {
+     "source_id": "abp-sgit-model",
+     "quote": "21 of 99 capability rows from the published map were measured",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Does not reconcile with the five examples: their profiles sum to 56 rows (1+22+22+3+8) with 8 measured. The model page words it as rows 'from the published map', i.e. the whole map (18 stored deltas), so the examples page's 'on this page' looks like a wording error. Do not draw 21/99 as the five examples.",
+   "suggested_wording": "21 of 99 rows in the published capability map were measured; in these five examples, 8 of 56 were",
+   "register": "studio-e02-e09"
   }
  ]
 }
