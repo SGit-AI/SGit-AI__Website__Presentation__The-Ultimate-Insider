@@ -61,11 +61,24 @@ ol.story>li{margin:0 0 14px}
 <div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/last-metre/v1/index.html" title="SH6: the last metre" loading="lazy"></iframe></div>
 <p class="note"><a href="{{root}}studio/lab/sharness/last-metre/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/last-metre/v1/index.html?static">the end state</a></p>
 
+<h2>The deep dive, for parts 2 and 3</h2>
+<p>The editor asked for SHarness told technically to this room (conductor's mail, 29 October, 17:08): the process behaviour policy, a new process that gets nothing it does not need, the KMS, the file system and the network as the agent sees them. Two pieces, from the same capture. Digital twins, running distributed, and the invitation to try to escape the harness are not in the capture yet, so they are not drawn here: the researcher reads them from the project's own pages first.</p>
+
+<h3>SH8: a new process gets nothing it does not need</h3>
+<p>What the policy does, step by step: without it, the probe shows the grant is everything (observed); with it, the parent checks the policy's hash and the child is closed in, wall by wall, before it starts; then what held, and what was not covered.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/run-pipeline/v1/index.html" title="SH8: a new process gets nothing it does not need" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/run-pipeline/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/run-pipeline/v1/index.html?static">the end state</a></p>
+
+<h3>SH9: the moving parts, and one request through them</h3>
+<p>The design: the launcher, the components and the KMS, then one request end to end, a vault cloned without the agent ever holding its key. Designed, not built.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/moving-parts/v1/index.html" title="SH9: the moving parts, and one request through them" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/moving-parts/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/moving-parts/v1/index.html?static">the end state</a></p>
+
 <h2>Notes for deck@</h2>
 <ul>
 <li>Moves 1, 2 and 5 are our framing; sharness.ai draws only the "with" state. The researcher's capture says so, and the pieces say which is which.</li>
 <li>The live demo: plan for up to 90 s; SH5 is the offline fallback.</li>
 <li>One of sharness.ai's comics scripts a prompt injection as its story. These pieces describe the threat in words and never reproduce it or any command.</li>
 </ul>
-<p class="note">SH1 v1, SH2 and SH3 were made in ruv.sgit run r22-sharness-series; SH1 v2 and SH4 to SH7 in run r24-sharness-capture, with an editor worker checking each against the capture. Their rows are in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+<p class="note">SH1 v1, SH2 and SH3 were made in ruv.sgit run r22-sharness-series; SH1 v2 and SH4 to SH7 in run r24-sharness-capture, SH8 and SH9 in run r25-sharness-deep-dive, with an editor worker checking each against the capture. Their rows are in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
 </section>
