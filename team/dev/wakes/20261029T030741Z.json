@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "editor's request",
+ "started": "2026-10-29T03:07:41Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Sub-agent plan: 1) the conductor's dashboard request (mailroom/dev/001, due 03:47): start one part now in src/pages/admin/** and admin/build/**. 2) Capture the editor's two asks as open issues on dev's board (A: an email-like reader for tui-mail-public; B: an embedded vault via vault-ui-embed.js), build neither now. 3) status.json next, debrief, agents.py check, release. Member's amendment to 1: open the dashboard issue and reply only; the work runs at the 03:47 wake the conductor scheduled, since the editor asked that the conductor schedule and dev execute. Plus a request to the conductor to review and schedule A and B.",
+   "at": "2026-10-29T03:08:30Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Fits dev's scope; no secrets, no other members' paths, no rule changes, no main. Conditions: mail to the conductor only through the mail vault; vault_check before any vault commit; issues A and B are board entries only, with no vault keys in them (read keys may be named as published); the dashboard work at the 03:47 wake, not now.",
+   "at": "2026-10-29T03:08:40Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 6,
-  "state": "wake of 02:47 closed partial: wake.py check in the gate and wake records on the site (the conductor's request); deck's note on the sources page waits for the next wake",
+  "round": 7,
+  "state": "editor's session of 03:07: the mail reader (dev 007) and the embedded vault (dev 008) captured and sent to the conductor to review and schedule; the dashboard (dev 006) accepted for the 03:47 wake",
   "done": [
     {
       "what": "The five-step wake in the gate (wake.py check) and on the site (/admin/wakes.html, each member's page)",
@@ -32,16 +32,16 @@
   ],
   "next": [
     {
-      "what": "Update the sources page: ASRS from NASA's programme briefing, CIRCIA as of 1 October 2026 (BankInfoSecurity), matching deck's slide",
-      "why": "deck@'s To-dev note of 79b6709; the page is held by dev"
+      "what": "dev 006: the dashboard, Now and the pace grid, at the 03:47 wake",
+      "why": "the conductor's request, scheduled"
     },
     {
-      "what": "Issue dev 003: pin the workflow's actions to commit SHAs",
-      "why": "a tag can move"
+      "what": "dev 007: a mail reader for tui-mail-public; dev 008: an embedded vault",
+      "why": "the editor's asks; waiting on the conductor's review and schedule (mailroom/conductor/006)"
     },
     {
-      "what": "Issue dev 004: a Stop hook reminding a session to debrief",
-      "why": "rounds should not end without one"
+      "what": "The sources page from deck's note; dev 003 and 004",
+      "why": "held, behind the conductor's queue"
     }
   ],
   "asks": [
