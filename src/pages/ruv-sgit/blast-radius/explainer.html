@@ -50,6 +50,15 @@
 <li><b>The glyph on each dot</b>, from 35 s: abp.sgit.ai's filled circle for nothing in the way, double circle for a rule in prose, half filled for a switch the agent's own account can flip. In this example that marks one rule in prose and two switches (one of them on a mandate row); the other 13 rows have nothing in the way. The last summary line carries the key to the shapes.</li>
 <li><b>It runs only over HTTP.</b> The slide reads its data with <code>fetch</code> when it loads, so opened as a file from disk it shows the frame and no rows; on the site, or any local web server, it works.</li>
 </ul>
+<h2>v3, after deck's review of v2</h2>
+<p>v3 keeps v2's timings and its numbering, and makes deck's two changes, now that the researcher has added a description for each capability.</p>
+<ul>
+<li><b>The source's labels.</b> Each line is the capability's label from <code>capabilities.json</code>, in the source's own words (for example <code>read.credential.host</code> is "Read credentials stored where it runs"); v2's readings of each id are gone. Two labels lose a trailing bracketed aside for width: "Push to a code host (any branch it can reach)" and "Create something that outlives the turn where it runs (a cron, a service)". The ids are in the data file and on v2's slide.</li>
+<li><b>Grouped by sector on the ring.</b> The twelve excess dots sit in five arcs, one per group, in the same groups as the list: credentials (4), files and disk (3), network and world (2), records and repositories (2), schedule (1). Each dot keeps its distance: unstated (2) on the inner ring, refused (10) on the outer. The four credential dots, in four places in v2, are now together at the top.</li>
+<li><b>The summary clear of the list.</b> The columns start below the two-line summary in the end state; the ring is smaller to make room for the sector names.</li>
+<li><b>The shortfall</b>, <code>send.endpoint.allowed</code>, has no label in the capabilities file; it stays "asked for, not granted".</li>
+</ul>
+
 <h2>How it was made</h2>
-<p>v1 in ruv.sgit run r5-e02-blast-radius, v2 in run r7-e02-v2, a second pass on the same vault: a Ruflo hive with a builder and an editor who checked the slide and this page against the request and the data, and one sgit vault holding the request, each worker's branch and the history. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+<p>v1 in ruv.sgit run r5-e02-blast-radius, v2 in run r7-e02-v2 and v3 in run r12-e02-v3, later passes on the same vault: a Ruflo hive with a builder and an editor who checked the slide and this page against the request and the data, and one sgit vault holding the request, each worker's branch and the history. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
 </article>

@@ -1,0 +1,37 @@
+{
+ "run": "r12-e02-v3",
+ "purpose": "r12-e02-v3: studio experiment E02 v3, a third pass on r5's vault: the source's labels from capabilities.json, the excess grouped by sector on the ring, the summary clear of the list; and E09's mandate heading reworded",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public ruv-sgit/done/007-re-e02-v2-reviewed-keep.eml and ruv-sgit/done/013-re-e09-reviewed-keep.eml)",
+  "date": "2026-10-29",
+  "text": "E02 v2 review: two things for a v3: in the end state the two-line summary runs into 'The mandate, granted (4)'; and group the dots on the ring by sector (the four credential dots are in four places), so the picture alone says what is at risk. v3 waits for a description per row. E09 review: the list heading 'The mandate · elicited' reads as a fact about this example, but this mandate is the site's own draft. Say 'elicited (here, the site's own draft)'; it can ride on E02 v3's run."
+ },
+ "pass_of": "r5-e02-blast-radius",
+ "ending": "keep",
+ "workers": [
+  {
+   "id": "v3",
+   "role": "developer",
+   "task": "E02 v3, driven, from abp-examples.json and capabilities.json",
+   "out": "src/static/studio/lab/e02/v3/"
+  },
+  {
+   "id": "e09-wording",
+   "role": "developer",
+   "task": "E09's mandate heading reworded",
+   "out": "src/static/studio/lab/e09/v1/"
+  },
+  {
+   "id": "explainer",
+   "role": "writer",
+   "task": "the E02 page and explainer updated for v3",
+   "out": "src/pages/ruv-sgit/blast-radius/"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "task": "check v3, the E09 wording and the pages against the reviews and the data",
+   "out": "team/ruv-sgit/runs/r12-e02-v3.editor.md"
+  }
+ ]
+}

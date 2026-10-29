@@ -93,7 +93,7 @@
       var label = plain(p.r.capability)
       return '<div class="r ' + p.cls + '" data-n="' + p.n + '"><i>' + p.n + '</i><span class="gk" data-k="' + p.r.barrier_kind + '" data-c="' + (p.cls === 'm' ? 'var(--head)' : 'var(--agent)') + '"></span>' + (label || '<code>' + p.r.capability + '</code>') + '</div>'
     }
-    h += '<div class="s" id="s1">1 The mandate <span>· elicited · ' + ex.mandate + ', ' + ex.aligned + ' of them granted</span></div>'
+    h += '<div class="s" id="s1">1 The mandate <span>· ' + ex.mandate + ' · elicited (here, the site\'s own draft)</span></div>'
     h += pts.filter(function (p) { return p.cls === 'm' }).map(row).join('')
     h += '<div class="r sf" id="sfrow"><i></i><svg viewBox="0 0 22 22"><circle cx="11" cy="11" r="9" fill="none" stroke="var(--head)" stroke-width="3" stroke-dasharray="4 3"/></svg>asked, not granted: <code>' + ex.shortfall_capabilities[0] + '</code></div>'
     h += '<div class="s" id="s2">2 The grant <span>· measured in the model, derived here · ' + ex.grant + '</span></div>'
