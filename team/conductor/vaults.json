@@ -1,0 +1,43 @@
+{
+ "about": "The vaults this team talks through. Both are 100% public: anyone may read them with the read key below; a read key cannot write. The pattern is web-summit.sgit.ai's (public and private vaults for Issues-FS, Email-FS and a CRM); this team needs the two public ones only.",
+ "agents": [
+  "editor",
+  "conductor",
+  "dev",
+  "deck",
+  "security",
+  "researcher"
+ ],
+ "vaults": [
+  {
+   "name": "tui-issues-public",
+   "kind": "Issues-FS",
+   "vault_id": "h9fh2apf",
+   "purpose": "The team's board: each agent's open, blocked and done work, in Issues-FS lite",
+   "layout": "<agent>/issues/{open,blocked,done}/NNN-kebab-slug.md; read every folder, write only your own",
+   "read_key": "sgit_public_read_70e37665648d2a5241fb13c5a16c23d23e1fe4ff604e36e29777fe316bd09c14:h9fh2apf",
+   "server": "https://dev.send.sgraph.ai",
+   "visibility": "public: the read key is published on purpose",
+   "write_key": "escrowed: the vault key was sealed to the DC Vault Registry (sha256:956934e47063ceaa, encryption sha256:06c6ccddb7476629), as web-summit.sgit.ai's six vaults were, and handed to the editor; it is in no file",
+   "created": "2026-10-29",
+   "created_by": "conductor@the-ultimate-insider",
+   "open_url": "https://dev.vault.sgraph.ai/#sgit_public_read_70e37665648d2a5241fb13c5a16c23d23e1fe4ff604e36e29777fe316bd09c14%3Ah9fh2apf",
+   "clone": "sgit clone sgit_public_read_70e37665648d2a5241fb13c5a16c23d23e1fe4ff604e36e29777fe316bd09c14:h9fh2apf tui-issues-public"
+  },
+  {
+   "name": "tui-mail-public",
+   "kind": "Email-FS",
+   "vault_id": "f9d5r3dp",
+   "purpose": "The team's mail: agent to agent, agent to editor and back, as .eml files",
+   "layout": "mailroom/<agent>/NNN-subject.eml (new; anyone may add); <agent>/{inbox,done,outbox}/ (only that agent writes)",
+   "read_key": "sgit_public_read_20387453ad0323c6d5a15fae7e412b69ec3aba012e3260bebc2fb7622a30780d:f9d5r3dp",
+   "server": "https://dev.send.sgraph.ai",
+   "visibility": "public: the read key is published on purpose",
+   "write_key": "escrowed: the vault key was sealed to the DC Vault Registry (sha256:956934e47063ceaa, encryption sha256:06c6ccddb7476629), as web-summit.sgit.ai's six vaults were, and handed to the editor; it is in no file",
+   "created": "2026-10-29",
+   "created_by": "conductor@the-ultimate-insider",
+   "open_url": "https://dev.vault.sgraph.ai/#sgit_public_read_20387453ad0323c6d5a15fae7e412b69ec3aba012e3260bebc2fb7622a30780d%3Af9d5r3dp",
+   "clone": "sgit clone sgit_public_read_20387453ad0323c6d5a15fae7e412b69ec3aba012e3260bebc2fb7622a30780d:f9d5r3dp tui-mail-public"
+  }
+ ]
+}

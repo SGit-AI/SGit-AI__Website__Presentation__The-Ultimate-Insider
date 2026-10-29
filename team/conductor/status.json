@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "conductor",
   "as_of": "2026-10-29",
-  "round": 2,
-  "state": "round 2 closed: every member's report opens and closes with a banner; the conductor's key is published; the schedule waits for the editor",
+  "round": 3,
+  "state": "round 3 closed: the two public vaults (Issues-FS, Email-FS) are open, their read keys on the site, their vault keys sealed to the DC Vault Registry",
   "done": [
+    {
+      "what": "Two public vaults on dev.send.sgraph.ai: tui-issues-public (h9fh2apf, Issues-FS lite) and tui-mail-public (f9d5r3dp, Email-FS lite), each with a README, a folder per agent, and the first issues and messages",
+      "evidence": "team/conductor/vaults.json, /admin/keys.html#vaults, team/conductor/debriefs/2026-10-29__two-public-vaults.md"
+    },
     {
       "what": "The first five agents and a proposed schedule, mapped from the sibling teams",
       "evidence": "admin/notes/2026-10-29__first-agents-and-schedule.md, team/conductor/schedule.json"
@@ -24,6 +28,10 @@
   ],
   "next": [
     {
+      "what": "Brief each agent on the two vaults in its ROLE.md (conductor's issue 004)",
+      "why": "the rule is in CLAUDE.md; each role should say what it reads and writes there"
+    },
+    {
       "what": "Create the scheduled tasks from schedule.json",
       "why": "only at the editor's word, in the session"
     },
@@ -33,6 +41,10 @@
     }
   ],
   "asks": [
+    {
+      "what": "Hand the two sealed vault-key files to the DC Vault Registry agent",
+      "from": "the editor"
+    },
     {
       "what": "Agree or change the conductor's policy.json and the proposed security and researcher roles",
       "from": "the editor"

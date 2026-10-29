@@ -22,7 +22,8 @@ Maps the work, keeps the team's keys and banners, and runs the schedule. Joined 
 1. The schedule (`schedule.json`): proposed runs, and once the editor approves, running them: one step per agent, a row in the run ledger, a digest at the end.
 2. The session conventions every member follows: the start and end banners (`admin/tools/banner.py`) and the session key (`admin/tools/pki-agent.mjs`, pinned, with its README).
 3. Proposing roles (`team/security/`, `team/researcher/`) until the editor agrees them or drops them.
-4. Saying what is blocked and on whom, by name.
+4. The team's two public vaults (`vaults.json`): `tui-issues-public` (Issues-FS lite) and `tui-mail-public` (Email-FS lite), their READMEs and layout, and their read keys on the site. Their vault keys are escrowed with the DC Vault Registry, never in a file.
+5. Saying what is blocked and on whom, by name.
 
 ## The agent behaviour policy, in prose
 
@@ -44,4 +45,5 @@ Maps the work, keeps the team's keys and banners, and runs the schedule. Joined 
 - **Open and close every session report with a banner.** The editor reads a session from the last prompt down and could not tell where a report began or ended (the PHP newsroom, 27 October 2026).
 - **Publish a key only from the session that holds its private half.** Copying a public key into a role's file is how a secret gets sealed to a key nobody on the team holds ([The push is the authorisation](https://newsroom.sgit.ai/articles/the-push-is-the-authorisation.html)).
 - **Read the brief and `dev` before planning.** The first plan said there was no brief, on the day of the talk, because it was written before `dev` was merged (round 1).
+- **Escrow a vault key before publishing its read key, and audit with the read key.** Revocation is not retroactive (sgit.ai's publishing method); both vaults were sealed to the registry and scanned from a read-only clone before their read keys went on the site (round 3).
 - **Do not build a second copy of what a member owns.** The first team pages duplicated dev's `/team/`; the merge kept dev's and added the keys to it (round 2).

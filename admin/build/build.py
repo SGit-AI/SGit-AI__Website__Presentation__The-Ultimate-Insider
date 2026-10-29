@@ -559,9 +559,25 @@ class Site_Build:
                 f'<li>It writes the public half to <code>team/&lt;id&gt;/key.json</code> with its QR image, adds <code>team/&lt;id&gt;/sessions/&lt;session&gt;/</code>, '
                 f'marks the previous session superseded, and pushes. From that commit it is the agent.</li>'
                 f'<li>To hand it a secret, read its fingerprint here, seal to it, and send the sealed QR or link. Only that session can open it.</li></ol>'
+                + self.vaults_section() +
                 f'<p>As data: <a href="keys/index.json">keys/index.json</a>. The pattern is the PHP newsroom\'s, argued in '
                 f'<a href="https://newsroom.sgit.ai/articles/the-push-is-the-authorisation.html">The push is the authorisation</a>.</p></section>')
-        self.page('admin/keys.html', 'The key register', 'The current public key of every agent on the team, published by the session that holds it.', body)
+        self.page('admin/keys.html', 'The key register', 'The current public key of every agent on the team, and the read keys of the public vaults it talks through.', body)
+
+    def vaults_section(self):                                       # the team's public vaults, from team/conductor/vaults.json
+        path = ROOT / 'team' / 'conductor' / 'vaults.json'
+        if not path.exists():
+            return ''
+        data = json.loads(path.read_text())
+        shutil.copyfile(path, OUT / 'admin' / 'vaults.json')
+        esc  = html.escape
+        rows = ''.join(f'<h3 id="{esc(v["name"])}">{esc(v["kind"])}: <code>{esc(v["name"])}</code></h3><p>{esc(v["purpose"])}. Vault <code>{esc(v["vault_id"])}</code> on '
+                       f'<code>{esc(v["server"])}</code>.</p><p><b>Layout.</b> <code>{esc(v["layout"])}</code></p>'
+                       f'<p><b>Read key</b> (read only, published on purpose):</p><pre><code>{esc(v["read_key"])}</code></pre>'
+                       f'<pre><code>{esc(v["clone"])}</code></pre><p><a href="{esc(v["open_url"])}">Open it in the vault browser</a> · '
+                       f'write key: {esc(v["write_key"])}.</p>' for v in data['vaults'])
+        return (f'<h2 id="vaults">The vaults the team talks through</h2><p>{esc(data["about"])}</p>{rows}'
+                f'<p>As data: <a href="vaults.json">vaults.json</a>. Each vault\'s README says how to use it.</p>')
 
     def build_indexes(self):
         cfg   = self.config
