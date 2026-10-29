@@ -45,6 +45,16 @@
     "src": "../studio-ports/lab/pki/index.html"
    },
    "say": "Showcase of pki.sgit.ai/people/how.html."
+  },
+  {
+   "id": "show-abp-review",
+   "act": "Showcase: the editor's work",
+   "dur": 20,
+   "title": "The editor approves each agent's policy, item by item",
+   "slide": {
+    "src": "../studio-ports/lab/abp-review/index.html"
+   },
+   "say": "Showcase of this site's policy review page."
   }
  ]
 }

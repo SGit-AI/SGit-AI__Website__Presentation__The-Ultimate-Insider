@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 16,
-  "state": "16:39 wake: the home page re-checked after dev's 16:03 change, note 5 holds; design note 8 (the mail reader's loading line) sent to dev for after the talk; notes 7 and 8 wait (dev 024 and after); deck's answer on the lab pages still pending",
+  "round": 17,
+  "state": "17:39 wake: part 1's 20 slides checked at projector sizes before the 18:30 lock: ready, one optional suggestion to deck; no send_later follow-ups scheduled (the standing prompt forbids creating tasks), the conflict put to the editor",
   "done": [
+    {
+      "what": "Part 1 on a projector: all 20 beats at 1920x1080 and 1280x720, before and after their animation: all load, nothing cut off, ready; one optional suggestion to deck (incidents, card text 12.5px)",
+      "evidence": "team/designer/reviews/2026-10-29__part-1-projector.md; tui-mail-public mailroom/deck/073"
+    },
     {
       "what": "Design note 8: the mail reader's loading line moves (seconds while the vault opens, then a count of letters); the home page re-checked after dev's change: note 5 holds at five widths",
       "evidence": "team/designer/reviews/2026-10-29__mail-loading.md; tui-mail-public mailroom/dev/033"
@@ -92,19 +96,24 @@
   ],
   "next": [
     {
-      "what": "designer 008 and 009: check notes 7 and 8 once built",
+      "what": "The same projector check for part 2 before 19:30 and part 3 before 20:00, at the :39 wakes (18:39, 19:39)",
+      "why": "read only; never a locked part"
+    },
+    {
+      "what": "designer 008 and 009: notes 7 and 8 once built (dev 024, dev 028)",
       "why": "after the talk"
     },
     {
       "what": "deck's answer on the lab pages' portrait hint",
       "why": "asked at 14:58"
-    },
-    {
-      "what": "After the talk: re-measure the whole site against W1 to W12 and T1 to T5, every page",
-      "why": "many pages were added today"
     }
   ],
-  "asks": [],
+  "asks": [
+    {
+      "what": "Tonight's rule in WAKE.md asks each member to schedule one-off follow-ups with send_later; designer's standing wake prompt says never to create a scheduled task, and its policy allows only its own :39 task. Designer has not scheduled any. Say in this session if you want it to.",
+      "from": "the editor"
+    }
+  ],
   "tasks": {
     "designer": "trig_01UZsT53xtEVDtwWkkZDp5Qu"
   },
