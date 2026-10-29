@@ -53,7 +53,7 @@
         <text x="56" y="434" font-size="20" font-weight="600" fill="var(--dim)">the components</text></g>
       <g id="g-app"><rect id="r-app" x="360" y="260" width="170" height="80" rx="10" fill="var(--bg)" stroke="var(--agent)" stroke-width="3"/>
         <text x="376" y="293" font-size="22" font-weight="800" fill="var(--head)">The app</text><text x="376" y="320" font-size="20" font-weight="600" fill="var(--dim)">the agent</text></g>
-      <text id="t-mtls" x="545" y="244" font-size="20" font-weight="700" fill="var(--dim)" transform="rotate(-16 545 244)">mTLS</text>
+      <text id="t-mtls" x="545" y="236" font-size="20" font-weight="700" fill="var(--dim)" transform="rotate(-16 545 236)">mTLS</text>
       <g id="g-fs"><rect id="r-fs" x="640" y="160" width="180" height="60" rx="8" fill="var(--panel)" stroke="var(--infra)" stroke-width="3"/><text x="656" y="198" font-size="22" font-weight="800" fill="var(--head)">fs</text></g>
       <g id="g-net"><rect id="r-net" x="640" y="240" width="180" height="60" rx="8" fill="var(--panel)" stroke="var(--infra)" stroke-width="3"/><text x="656" y="278" font-size="22" font-weight="800" fill="var(--head)">net</text></g>
       <g id="g-bash"><rect id="r-bash" x="640" y="320" width="180" height="60" rx="8" fill="var(--panel)" stroke="var(--infra)" stroke-width="3"/><text x="656" y="358" font-size="22" font-weight="800" fill="var(--head)">bash</text></g>
@@ -62,7 +62,8 @@
         <text x="976" y="342" font-size="22" font-weight="800" fill="var(--head)">kms</text>
         <text x="976" y="372" font-size="20" font-weight="600" fill="var(--accent)">never returns</text><text x="976" y="396" font-size="20" font-weight="600" fill="var(--accent)">a clear key</text></g>
       <text id="t-only" x="1220" y="442" font-size="20" font-weight="700" fill="var(--infra)" text-anchor="end" opacity="0">only net and llm talk to kms</text>
-            <circle id="dot" r="12" fill="var(--agent)" cx="445" cy="300" opacity="0"/>
+            <text id="t-key" x="40" y="474" font-size="20" font-weight="600" fill="var(--dim)" opacity="0">dot: where the request has got to</text>
+      <circle id="dot" r="12" fill="var(--agent)" cx="445" cy="356" opacity="0"/>
     </g>
   </svg>
 
@@ -76,13 +77,13 @@
   // Facts carried inline from the captures diag-moving-parts (sharness2-design-brief) and diag-one-request
   // (sharness2-design-svg-one-request). The capture file is not served; nothing is fetched. No command is reproduced.
   var STEPS = [
-    { t: 14, hot: ['app'], n: '1. The agent asks to clone a vault from a sealed handover.', x: 'A request in words to the app. The handover is an image the agent cannot read as a key.', p: [445, 300] },
-    { t: 17.5, hot: ['app'], n: '2. Strict checks on the QR.', x: 'The handover is parsed strictly before anything leaves the app. The sealed first message is read, not opened.', p: [445, 300] },
+    { t: 14, hot: ['app'], n: '1. The agent asks to clone a vault from a sealed handover.', x: '<b>Our reading:</b> the handover is an image, not a key the agent can read.', p: [445, 356] },
+    { t: 17.5, hot: ['app'], n: '2. Strict JSON checks on the handover.', x: '<b>Our reading:</b> the sealed first message is read, not opened, before anything leaves the app.', p: [445, 356] },
     { t: 21, hot: ['net', 'kms'], n: '3. net makes a one-time key E, and asks kms to unwrap.', x: 'It sends E\'s public half, a nonce, a timestamp and the operation. Only net and llm may talk to kms.', p: [730, 270], q: [1170, 385] },
     { t: 24.5, hot: ['kms'], n: '4. kms checks, derives, scrubs, seals.', x: '<b>To me? Signed? Unexpired? Nonce new?</b> Then it derives the keys, scrubs the vault key from memory and seals the keys to E.', p: [1170, 385] },
-    { t: 28.5, hot: ['net', 'kms'], n: '5. net opens them with E, drops E, fetches and decrypts the packs.', x: 'E lived for this one request. The keys reach net sealed; they never reach the app.', p: [1170, 385], q: [730, 270] },
-    { t: 32, hot: ['fs'], n: '6. fs writes the tree and a sealed key file.', x: 'The working tree appears on disk. The key file next to it is sealed, not readable by the agent.', p: [730, 190] },
-    { t: 35, hot: ['app'], n: '7. The agent sees only a status line.', x: '<span class="ok">Cloned. Sealed to a fingerprint. Expires 30 Oct.</span> Nothing else comes back.', p: [445, 300] } ]
+    { t: 28.5, hot: ['net', 'kms'], n: '5. net opens them with E, drops E, fetches and decrypts the packs.', x: '<b>Our reading:</b> E lives for this one request; the keys reach net sealed and never reach the app.', p: [1170, 385], q: [730, 270] },
+    { t: 32, hot: ['fs'], n: '6. fs writes the tree and a sealed key file.', x: '<b>Our reading:</b> the key file next to the tree is sealed, so the agent cannot read it.', p: [730, 190] },
+    { t: 35, hot: ['app'], n: '7. The agent sees only a status line.', x: '<span class="ok">Cloned. Sealed to a fingerprint. Expires 30 Oct.</span> Nothing else comes back.', p: [445, 356] } ]
   var NODES = ['app', 'fs', 'net', 'bash', 'llm', 'kms']
   var END = { n: 'What the transcript sees', x: '<b>The request in words, ciphertext, fingerprints</b> (sha256:...). <span class="ok">Never a key.</span> Only net and llm touch kms, and kms never returns a clear key.' }
   window.SLIDE_RENDER = function (t, S) {
@@ -92,21 +93,21 @@
     g('g-person', k(2)); g('lp', k(3)); g('g-launch', k(3.5)); g('ll', k(5)); g('g-app', k(6))
     ;['fs', 'net', 'bash', 'llm'].forEach(function (n, i) { g('g-' + n, k(7.5 + i * .5)) })
     ;['a1', 'a2', 'a3', 'a4'].forEach(function (id, i) { g(id, k(7.5 + i * .5)) }); g('t-mtls', k(8))
-    g('g-kms', k(11)); g('k1', k(11.5)); g('k2', k(11.5)); g('t-only', k(12))
+    g('t-key', act2 ? 1 : 0); g('g-kms', k(11)); g('k1', k(11.5)); g('k2', k(11.5)); g('t-only', k(12))
     var cur = -1
     STEPS.forEach(function (s, i) { if (t >= s.t) cur = i })
     var ended = t >= 36.5, hot = []
     if (cur >= 0 && !ended) hot = STEPS[cur].hot
     NODES.forEach(function (n) {
       var on = !act2 || ended || hot.indexOf(n) >= 0
-      S.$('g-' + n).style.opacity = (n === 'app' ? k(6) : n === 'kms' ? k(11) : k(7.5)) * (on ? 1 : .35)
+      S.$('g-' + n).style.opacity = (n === 'app' ? k(6) : n === 'kms' ? k(11) : k(7.5)) * (on ? 1 : .55)
     })
     var dot = S.$('dot')
     if (cur >= 0 && !ended) {
       var s = STEPS[cur], f = S.ease(S.seg(t, s.t, s.t + 1.5)), q = s.q || s.p
       var from = cur > 0 && STEPS[cur - 1].q ? STEPS[cur - 1].q : (cur > 0 ? STEPS[cur - 1].p : s.p)
       var a = s.q ? s.p : from, b = s.q ? s.q : s.p
-      dot.setAttribute('cx', S.lerp(a[0], b[0], f)); dot.setAttribute('cy', S.lerp(a[1], b[1], f)); dot.setAttribute('opacity', 1)
+      dot.setAttribute('cx', S.lerp(a[0], b[0], f)); dot.setAttribute('cy', S.lerp(a[1], b[1], f)); dot.setAttribute('opacity', 1); dot.setAttribute('fill', (cur === 0 || cur === 1 || cur === 6) ? 'var(--agent)' : 'var(--head)')
     } else dot.setAttribute('opacity', 0)
     var h = ''
     if (ended) h = '<span class="n">' + END.n + '</span>' + END.x
