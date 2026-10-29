@@ -10,14 +10,14 @@
       "id": "title", "act": "Opening", "dur": 60,
       "title": "The ultimate insider",
       "slide": { "src": "slides/title/index.html" },
-      "say": "Good evening. I am Dinis. Tonight is about three problems you already know, and the reason I think they are one story. Agents, the infrastructure that is supposed to hold them, and the risk management that is supposed to decide what to do about both.",
+      "say": "Good evening. I am Dinis. Tonight is about a perfect storm we are brewing, out of three problems you already know: agents, the infrastructure that is supposed to hold them, and the risk management that is supposed to decide what to do about both.",
       "cue": "Livestream starts around 7 pm. Wait for the room. The site is on the slide: everything tonight, slides and sources, is there."
     },
     {
       "id": "three", "act": "Opening", "dur": 120,
-      "title": "Three known problems, one story",
+      "title": "The perfect storm we are brewing",
       "slide": { "src": "slides/three/index.html" },
-      "say": "Three things are arriving at the same time, and nobody is presenting them as one story. One: AI agents are the insider threat that never scaled before. Two: the infrastructure that has to contain them was built for static code, and it struggles to stay up on its own. Three: the risk management that has to decide what to do about both still runs on spreadsheets, at the speed of quarters. Each one is a known problem. Where they overlap is the scenario this talk is about.",
+      "say": "We are brewing a perfect storm, and its ingredients are three things each of you already knows, now arriving at the same time. One: AI agents are the insider threat that never scaled before. Two: the infrastructure that has to contain them was built for static code, and it struggles to stay up on its own. Three: the risk management that has to decide what to do about both still runs on spreadsheets, at the speed of quarters. Each one is a known problem on its own. Together they make the storm, and where they overlap is the scenario this talk is about.",
       "cue": "Let the circles move together before the last sentence."
     },
     {
