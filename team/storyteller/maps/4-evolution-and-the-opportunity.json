@@ -1,0 +1,23 @@
+{
+ "title": "Map 4 (3e): where exploitation sits, what will evolve, and who builds it",
+ "bands": [
+  {"label": "Pioneers", "from": 0.0, "to": 0.25, "fill": "#fbeee6"},
+  {"label": "Settlers", "from": 0.25, "to": 0.62, "fill": "#eef6ee"},
+  {"label": "Town planners", "from": 0.62, "to": 1.0, "fill": "#eef4fb"}
+ ],
+ "components": [
+  {"id": "biz", "label": "A business that trusts its agents", "vis": 0.9, "evo": 0.47},
+  {"id": "agent", "label": "Agents at work", "vis": 0.8, "evo": 0.35, "move": 0.6},
+  {"id": "expl", "label": "Exploitation at the edge", "vis": 0.66, "evo": 0.8},
+  {"id": "agentic-attack", "label": "Autonomous attack pipelines", "vis": 0.62, "evo": 0.06, "move": 0.3},
+  {"id": "policy", "label": "Behaviour policies, licences", "vis": 0.48, "evo": 0.1, "inside": true, "move": 0.4},
+  {"id": "contain", "label": "Containment (Sharness.ai, sandboxes)", "vis": 0.36, "evo": 0.24, "inside": true, "move": 0.55},
+  {"id": "reach", "label": "Measured reach", "vis": 0.26, "evo": 0.18, "inside": true, "move": 0.5},
+  {"id": "patch", "label": "Scanning, patching, WAF", "vis": 0.2, "evo": 0.85},
+  {"id": "iam", "label": "Identity and roles", "vis": 0.08, "evo": 0.82}
+ ],
+ "links": [["biz","agent"],["biz","expl"],["agent","policy"],["agent","contain"],["policy","reach"],["contain","iam"],["reach","iam"],["expl","patch"],["expl","agentic-attack"]],
+ "notes": [
+  {"text": "the opportunity: settler and town-planner services for agent security", "vis": 0.02, "evo": 0.27}
+ ]
+}

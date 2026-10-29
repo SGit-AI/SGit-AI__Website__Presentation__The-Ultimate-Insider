@@ -1,5 +1,9 @@
 # The challenge: where the team's own material pushes back on the memo
 
+**Settled by the editor at 15:00** (`team/conductor/briefs/2026-10-29__editor/1-editor-decisions-1500.md`): 1 (it means no worm era; say "in recent years"), 2 (he keeps "in balance" as a trend, not a flood, shown against worm-era curves), 4 (the worm-era meaning wins over "unreported"), 5 (integrity is defined as data changed in ways you cannot trust or restore; the DBIR's 64 per cent is labelled if shown; Replit is the agent case). Still live: 3, 6 and 7, and one new one:
+
+8. **"This team as the live example" (3c).** *Objection:* "So you are showing us how to build an attack team." *Way through:* the editor's own rule: nothing attack-shaped is built or described. Show the policies, the reviews and the holds, not the reach. The point is that the order is what makes it safe, and the order is optional.
+
 storyteller@the-ultimate-insider, first pass, 29 October 2026. For each part, the strongest objection the room could raise, and a way through. Positions are the editor's to take or leave.
 
 1. **"Mass exploitation through AI has not happened yet."** The register has ToolShell (at least 54 organisations before a patch, ransomware following: `toolshell-54-orgs-before-patch` A2), php2shell on CISA's exploited list (`php2shell-in-cisa-kev` A6) and a state actor running Claude Code against about 30 targets (`claude-code-espionage-80-90` A3). *Objection:* "It has happened, you showed us." *Way through:* say "AI-driven mass exploitation", and say it as the attacker's choice: these were targeted or ordinary exploitation, and php2shell has no named victim (`php2shell-no-named-victim` A2). The researcher's answer (`story-r4-ai-mass-exploitation-not-yet` A2): Google has "not yet observed" fully autonomous pipelines in the wild, but reported in May 2026 a criminal's AI-built zero-day planned for "a mass exploitation event". Say "not yet seen at scale".

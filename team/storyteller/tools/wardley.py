@@ -2,7 +2,7 @@
 """Render a Wardley map from a small JSON file to SVG.
 
 The map file: {"title", "anchor", "components": [{"id", "label", "vis", "evo", "note"?, "move"?}],
-"links": [[from, to]], "notes": [{"text", "vis", "evo"}]}. vis is 0 (invisible) to 1 (the user's need),
+"links": [[from, to]], "notes": [{"text", "vis", "evo"}], "bands": [{"label", "from", "to", "fill"?}]}. vis is 0 (invisible) to 1 (the user's need),
 evo is 0 (genesis) to 1 (commodity); "move" is the evo it is heading to, drawn as a red arrow.
 Usage: python3 team/storyteller/tools/wardley.py team/storyteller/maps/<name>.json
 """
@@ -25,6 +25,10 @@ def render(m):
     out.append(f'<line x1="{L}" y1="{H-B}" x2="{W-R}" y2="{H-B}" stroke="#333"/><line x1="{L}" y1="{T}" x2="{L}" y2="{H-B}" stroke="#333"/>')
     out.append(f'<text x="{W/2}" y="{H-20}" text-anchor="middle" fill="#333">Evolution</text>')
     out.append(f'<text transform="translate(22 {H/2}) rotate(-90)" text-anchor="middle" fill="#333">Value chain (visible to invisible)</text>')
+    for band in m.get('bands', []):
+        x1, _ = xy(0, band['from']); x2, _ = xy(0, band['to'])
+        out.append(f'<rect x="{x1}" y="{T}" width="{x2 - x1}" height="{H - T - B}" fill="{band.get("fill", "#eef4fb")}" opacity="0.6"/>')
+        out.append(f'<text x="{(x1 + x2) / 2}" y="{T + 16}" text-anchor="middle" fill="#2c5d8a" font-weight="600">{html.escape(band["label"])}</text>')
     c = {x['id']: x for x in m['components']}
     for a, b in m['links']:
         (x1, y1), (x2, y2) = xy(c[a]['vis'], c[a]['evo']), xy(c[b]['vis'], c[b]['evo'])

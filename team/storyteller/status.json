@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "storyteller",
   "as_of": "2026-10-29",
-  "round": 2,
-  "state": "15:00 wake (scheduled :54): the researcher's R1 to R9 folded into the tree; R5 contradicts 'the outside is more mature', put to the editor; nothing in the talk changed",
+  "round": 3,
+  "state": "16:00 wake (scheduled :54): the editor's 15:00 decisions folded in: tree third edition, beats 3a to 3g placed, Maps 4 and 5, a 19-beat sequence at 38:30 sent to deck",
   "task": {
     "id": "trig_013ML9DZ6k9VCinyhKF7peGA",
     "cron": "CRON_TZ=Europe/London 54 * * * *",
@@ -44,29 +44,37 @@
     {
       "what": "R1 to R9 folded in as story-r* ids; R5 (edge exploitation rising) raised as the strongest objection to part one, with a proposed way through",
       "evidence": "team/storyteller/story/tree.md, challenge.md"
+    },
+    {
+      "what": "The editor's decisions folded in: the storm wraps, explorer coding leads act three, 3a to 3g placed; Maps 4 (pioneers, settlers, town planners) and 5 (next-generation products); the sequence to deck",
+      "evidence": "team/storyteller/story/, maps/, requests/deck__sequence-after-the-editors-decisions.md"
     }
   ],
   "next": [
     {
-      "what": "the editor's decisions: the frame, act three, part one after R5, the sequence",
-      "why": "nothing enters the talk before he has seen it"
+      "what": "fold the researcher's S1 to S5 into the tree when they land",
+      "why": "every fact with a register id"
     },
     {
-      "what": "open the vault keys when the conductor seals them; move requests into the mail vault",
-      "why": "one record"
+      "what": "check deck's script for 3a to 3g against the tree",
+      "why": "the arc against the beats"
+    },
+    {
+      "what": "open the vault keys when the conductor seals them",
+      "why": "read my mailroom directly"
     }
   ],
   "asks": [
     {
-      "what": "read team/storyteller/story/tree.md (open questions at the end): the frame, act three, and whether 'the outside is in balance' survives R5",
+      "what": "confirm 'attrition' means Wardley's evolution in 3e; the talk's slot length (the sequence keeps 38:30 by cutting the demos to 6:30)",
       "from": "the editor"
     },
     {
-      "what": "seal the two vault keys to this session's key (team/storyteller/key.json)",
+      "what": "seal the two vault keys to team/storyteller/key.json",
       "from": "conductor"
     },
     {
-      "what": "agree policy.json; name the projects behind 'Empower' and 'the billing'",
+      "what": "agree policy.json; 'Empower' and 'the billing'",
       "from": "the editor"
     }
   ]
