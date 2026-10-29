@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside scope.writes; no key or vault key moves; mailroom sends go through the vault with vault_check first. Conditions: mail only into mailroom/<recipient>/, nothing private; the note to ruv.sgit is a plain trailer note; no key made outside this session; no edits to other members' paths.",
    "at": "2026-10-29T09:04:40Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) mailroom/deck/015: the researcher's 002 closed, deck's held ask named for 09:17, E04 09:32; mailroom/dev/014: dev 014 at 11:47; vault_check clean, pushed. 2) pace.json: E03 delivered, E02 v2 kept, dev 011 done, dev 014 11:47; ruv.sgit's unmarked commits told in a To- trailer. 3) Night log edition 7; night_log.py also counts a bare member-id subject (it had missed E03); status.json. Gate clean. Commit cf7d742.",
+   "at": "2026-10-29T09:05:47Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff 592e290..HEAD touches only conductor-scope paths; agents.py 0 outside scope. vault_check clean on both new .eml files (plain pace replies, no key, no personal detail, no directive text). Four PNGs show a chart and pages, no key or QR. No secrets in the diff. Build and gate clean.",
+   "at": "2026-10-29T09:06:20Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done (mailroom/deck/015, mailroom/dev/014, vault_check clean). Item 2 done (cf7d742: pace.json, To-ruv-sgit trailer). Item 3 done (night log edition 7, status.json). Extra but small: night_log.py counts a bare member-id subject (disclosed). Conditions kept.",
+   "at": "2026-10-29T09:06:36Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T09:06:36Z",
+ "outcome": "ok"
 }
