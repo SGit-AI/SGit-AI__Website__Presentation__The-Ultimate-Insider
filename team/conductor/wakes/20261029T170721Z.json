@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "In scope; no stop condition. Conditions: embed only owner-published read keys, never a write or vault key; the minute poll loads nothing from a host the gate refuses; the escape-SHarness invitation states what is in scope and where to report.",
    "at": "2026-10-29T17:07:46Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) team/conductor/briefs/2026-10-29__editor/5-parts-2-and-3-1715.md (the editor's asks, who does what, the rules incl. the pre-review's three conditions). 2) Requests to researcher, storyteller, deck, dev, ruv-sgit, studio, motion, each with the rules; vault_check clean, pushed. 3) pace.json, status.json. Gate clean. Commit e86b0aa.",
+   "at": "2026-10-29T17:08:41Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "e86b0aa touches only the brief, pace, status and wake record; the brief carries all three conditions; the seven mails carry the rules, no key or personal detail. vault_check, build, validate, agents check clean.",
+   "at": "2026-10-29T17:09:21Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "e86b0aa matches the plan: the brief, requests to all seven, pace.json, status.json. No locked part or extra file touched.",
+   "at": "2026-10-29T17:09:21Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:09:21Z",
+ "outcome": "ok"
 }
