@@ -42,6 +42,23 @@
    "clone": "sgit clone sgit_public_read_46d32067a2eb718cd1012ef4137c779d5d95f8ab9c7ef3dcfa23a3912191872a:lotalm0w tui-mail-public",
    "read_key_qr": "vault-qr/tui-mail-public__read-key.png",
    "history": "moved on 29 October 2026 from f9d5r3dp to lotalm0w with sgit vault move: the first vault key was printed in a session log, so it was rotated; the old vault no longer has a branch on the server, and its read key opens nothing"
+  },
+  {
+   "name": "tui-evidence-public",
+   "kind": "evidence",
+   "vault_id": "2fz1wv1d",
+   "purpose": "Every source the talk and the editor's ideas rest on, captured and hashed; the claims register graded A0 to A6; the ideas map; agent incidents since May 2025",
+   "server": "https://dev.send.sgraph.ai",
+   "read_key": "sgit_public_read_ce52d21e4e26238922b2743a9b0b13f4abfb0adef3dcef10f0f1cce213571e65:2fz1wv1d",
+   "layout": "README.md, METHOD.md, BEFORE-TONIGHT.md, claims/, ideas/, incidents/, sources/<id>/ with sources/manifest.json, updates/",
+   "open_url": "https://dev.vault.sgraph.ai/#sgit_public_read_ce52d21e4e26238922b2743a9b0b13f4abfb0adef3dcef10f0f1cce213571e65%3A2fz1wv1d",
+   "clone": "sgit clone sgit_public_read_ce52d21e4e26238922b2743a9b0b13f4abfb0adef3dcef10f0f1cce213571e65:2fz1wv1d tui-evidence-public",
+   "visibility": "public: the read key is published on purpose",
+   "owner": "researcher@the-ultimate-insider",
+   "write_key": "escrowed: the vault key is sealed to the vaults manager, DC Vault Registry (sha256:956934e47063ceaa), in the handover zip given to the editor on 29 October 2026, and in no file here",
+   "audited": "2026-10-29T02:58Z by the conductor: read-key clone, 1221 files, vault_check.py clean",
+   "source": "team/researcher/evidence-vault.json",
+   "read_key_qr_source": "tui-evidence-public__read-key.png"
   }
  ]
 }
