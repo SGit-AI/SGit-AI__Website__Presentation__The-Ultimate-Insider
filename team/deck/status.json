@@ -2,8 +2,8 @@
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "deck",
  "as_of": "2026-10-29",
- "round": 17,
- "state": "15:17 wake (fired 15:38): the opening recast as the perfect storm we are brewing (talk.json title and three, the three slide); the home page's words to dev; the building sent to motion@; E07, E10, E11 and E13 reviewed (all keep); the lab opens every piece full width; the researcher's last data copied",
+ "round": 18,
+ "state": "16:17 wake (fired 16:31): the talk in the editor's order (22 beats, 38:30, from the storyteller's sequence); M01 the building kept and on its beat; M02 asked of motion@; studio@'s ports placed beside abp; the studio says the perfect storm",
  "task": {
   "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
   "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -139,32 +139,28 @@
  ],
  "next": [
   {
-   "what": "Review motion@'s building, then send it could have been worse",
-   "why": "the editor's story, one at a time",
+   "what": "Re-time the talk to 90 minutes and write the section on the editor's work",
+   "why": "the conductor's 053, the editor at 16:2x",
+   "issue": "deck-016"
+  },
+  {
+   "what": "Review M02 when motion@ delivers it; then the integrity shift",
+   "why": "the editor's story",
    "issue": "deck-014"
   },
   {
-   "what": "Act three led by explorer coding; beats 3a to 3g into the script",
-   "why": "the editor's 15:00 decisions",
-   "issue": "after the storyteller's sequence"
-  },
-  {
-   "what": "Review ruv.sgit's E12, E08, E14, E05 and E06 as they land",
-   "why": "programme",
+   "what": "Sort ruv.sgit.ai's pieces for studio@; review E12, E08, E14, E05, E06",
+   "why": "studio@ and the programme",
    "issue": "programme"
   }
  ],
  "asks": [
   {
-   "what": "Go on the placement table: which studio pieces go into the talk, where (or set it in the player's build mode)",
+   "what": "The talk is rewritten into your 15:00 order: 22 beats, 38:30, in the player now; check the words in the script",
    "from": "the editor"
   },
   {
-   "what": "The collision line 'It just was not reported as one story': keep or recast",
-   "from": "the editor"
-  },
-  {
-   "what": "/studio/reviews/: E07, E10, E11 and E13 are new, all keep",
+   "what": "Placement of the studio pieces beyond those now in the talk (E04 v2 on limits, M01 on building): set it in the build mode or say",
    "from": "the editor"
   },
   {

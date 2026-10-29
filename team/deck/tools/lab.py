@@ -13,7 +13,7 @@ LAB  = ROOT / 'src/static/studio/lab'
 PAGE = ROOT / 'src/pages/studio/lab.html'
 
 GROUPS = [  # (folder, title, the piece's own page, its explainer, deck's reviews)
-    ('b01', 'B01 One story: the overlap fills', None, None, ['b01-v2', 'b01-v1', 'b01-storyboard']),
+    ('b01', 'B01 The perfect storm: the overlap fills', None, None, ['b01-v2', 'b01-v1', 'b01-storyboard']),
     ('e01', 'E01 What an agent is', 'agent-evolution', 'agent-evolution', ['e01']),
     ('e02', 'E02 The blast radius', 'blast-radius', 'blast-radius', ['e02-v3', 'e02-v2', 'e02']),
     ('e03', 'E03 Where injected words come from', 'injection-sources', 'injection-sources', ['e03']),

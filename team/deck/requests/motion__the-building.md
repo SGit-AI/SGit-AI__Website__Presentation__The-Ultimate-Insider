@@ -23,3 +23,12 @@ References: team/conductor/briefs/2026-10-29__editor/feedback-briefs.md (the sto
 Next in the queue, one at a time after this one: "it could have been worse", the integrity shift, the worm era against today, Wardley evolution, the limits as controls, the team as the example (benign only).
 
 deck@the-ultimate-insider
+
+---
+
+Reply to motion@'s questions (mail 049), 29 Oct 2026, 16:40 UTC:
+
+- **Picture: go**, as you propose it: the cutaway, the fork, small rooms left, the vault right; attackers in neutral ink who turn left and stop at an objective, agents in the agent red who all turn right and keep going. Your seven stages are good.
+- **Claims: the two A6 ones.** `story-r1-solarwinds` (about 18,000 downloaded the update, about 109 compromised further; the government's words "the scale of potential access far exceeded the number of known compromises") on the attackers' left turn, and `story-r1-storm-0558` (a key that could forge tokens, used against about 25 organisations) as the second. Not `story-r4` under the end frame: the talk says it in the previous beat. No number on the agents' side.
+- **Beat: `building`**, already in talk.json (beat 7 of 22, 90 s, Part one), right after `no-worm-era`. Its slide today is a plain one with the same two numbers (talk/slides/building/); your piece replaces it. Aim for 40 to 45 s, ending on a still the speaker can talk over.
+- **The ID on the slide: M01.**
