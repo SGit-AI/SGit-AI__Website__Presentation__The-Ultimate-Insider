@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Showcase: the editor approves an agent's policy, item by item</title>
+<link rel="stylesheet" href="../../../talk/engine/slide.css">
+<link rel="stylesheet" href="../../../talk/engine/showcase.css">
+<script src="../../../talk/engine/slide.js"></script>
+<script src="../../../talk/engine/qrcode.js"></script>
+<script src="../../../talk/engine/showcase.js"></script>
+<!-- studio@the-ultimate-insider, 29 October 2026, for the conductor's 007 (the editor, 17:30: this team's own ABPs). shot.jpg is this
+     site's /ruv-sgit/policy-review.html at 1440 wide (site v0.1.178), with the page's sticky progress bar and notes button hidden,
+     two parts joined: the top (title, intro, the first cards) and the bottom (the verdict, the review to paste). No key, no local
+     path, no session id; the only hash is the policy file's own. The count: the editor agreed the last six at about 17:40 UTC (the conductor's mail 009);
+     at 18:00 UTC six files recorded it (conductor, deck, designer, motion, researcher, ruv-sgit); dev, storyteller, security and studio not yet. -->
+<script type="application/json" id="showcase">
+{
+ "kicker": "Agent Behaviour Policies, live · this team",
+ "title": "The editor approves each agent's policy, item by item",
+ "text": "Every agent here works to a written policy. By 17:40 the editor had agreed all ten; each agent records it in its own file.",
+ "image": "shot.jpg", "size": [1440, 2080],
+ "link": "https://the-ultimate-insider.presentation.sgit.ai/ruv-sgit/policy-review.html",
+ "source": "Review ruv.sgit@'s draft policy (this site)",
+ "stages": [
+  { "at": 0, "crop": [0, 0, 1440, 2080], "label": "the page" },
+  { "at": 3, "crop": [300, 0, 840, 570], "label": "every line, one card", "dim": true,
+    "callouts": [ { "box": [350, 120, 740, 300], "text": "Each line of the policy is a card, tied to the file's hash" } ] },
+  { "at": 7, "crop": [300, 440, 840, 570], "label": "agree, change or question", "dim": true,
+    "callouts": [ { "box": [352, 510, 734, 160], "text": "Agree, change or question, one at a time" } ] },
+  { "at": 11, "crop": [300, 1370, 840, 570], "label": "the verdict", "dim": true,
+    "callouts": [ { "box": [350, 1735, 740, 190], "text": "Agreed only when the whole policy is" } ] }
+ ],
+ "end": 16
+}
+</script>
+</head>
+<body>
+<div id="cv" data-end="16"></div><!-- data-end here as well as "end" in the JSON: the engine reads it before showcase.js runs (told dev) -->
+</body>
+</html>
