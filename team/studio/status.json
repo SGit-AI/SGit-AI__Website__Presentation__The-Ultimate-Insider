@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "studio",
   "as_of": "2026-10-29",
-  "round": 3,
-  "state": "16:29 editor's wake: vault keys opened, both vaults cloned, studio's board and mail folders live; three ports landed; the next port waits for deck's sorting (board 003, blocked)",
+  "round": 4,
+  "state": "17:12 wake: the PKI showcase landed; deck asked which piece for 'definition'; the next showcase in deck's order; no 15-minute follow-ups without the editor's word",
   "task": {
     "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
     "cron": "CRON_TZ=Europe/London 12 * * * *",
@@ -52,12 +52,20 @@
     {
       "what": "Vault keys opened from the conductor's sealed zip; tui-issues-public and tui-mail-public cloned; studio's board and mail folders pushed; opened key files shredded",
       "evidence": "tui-issues-public studio/, tui-mail-public studio/"
+    },
+    {
+      "what": "Showcase: how the register of people works (pki.sgit.ai), no key on the screenshot",
+      "evidence": "/studio-ports/pki/, src/static/studio-ports/lab/pki/"
     }
   ],
   "next": [
     {
-      "what": "the next port in deck's order (candidates: the equation and the layers of r3-define, ruv.sgit in motion, studio v1 to v3, v5 to v7)",
-      "why": "the brief"
+      "what": "the next showcase slides: SGit's architecture, the vault applications, newsroom.sgit.ai and its API",
+      "why": "conductor 002 and 006, in deck's order; part 2 locks 19:30, part 3 at 20:00"
+    },
+    {
+      "what": "the definition beat, once deck answers",
+      "why": "board 005"
     }
   ],
   "asks": [
@@ -66,8 +74,16 @@
       "from": "the editor"
     },
     {
-      "what": "the sorting of ruv.sgit.ai's pieces, and where the two ports sit",
+      "what": "the 15-minute follow-ups tonight (WAKE.md, Tonight only): yes or no, in studio's session",
+      "from": "the editor"
+    },
+    {
+      "what": "which piece for the definition beat; where the PKI showcase sits; the next showcase",
       "from": "deck"
+    },
+    {
+      "what": "the showcase's \"end\" reaches the engine",
+      "from": "dev"
     }
   ]
 }
