@@ -8,7 +8,9 @@
 # llms.txt and sitemap.xml, and write a .md twin next to every page. Apache-2.0.
 
 import html
+import hashlib
 import json
+import posixpath
 import re
 import shutil
 import subprocess
@@ -497,6 +499,19 @@ class Site_Build:
                 out.append({'id': pid, 'title': html.unescape(t.group(1).strip()) if t else pid, 'src': f'../{area}{rel}/index.html',
                             'end': float(e.group(1)) if e else None, 'engine': 'engine/slide.js' in text})
         self.write('talk/pieces.json', json.dumps({'about': "The studio's lab pieces, listed when the site is built, for the player's build mode.", 'pieces': out}, indent=1) + '\n')
+
+    def build_fingerprints(self):                                   # the player's what-changed view (conductor 034): a hash of each beat's slide folder, from the sources
+        talk, out = json.loads((SRC / 'static' / 'talk' / 'talk.json').read_text()), {}
+        for b in talk.get('beats', []):
+            src = ((b.get('slide') or {}).get('src') or '').split('?')[0]
+            folder = SRC / 'static' / posixpath.normpath('talk/' + src) if src else None
+            if not folder or '..' in posixpath.normpath('talk/' + src).split('/') or not folder.is_file():
+                continue
+            h = hashlib.sha256()
+            for f in sorted(q for q in folder.parent.rglob('*') if q.is_file()):
+                h.update(str(f.relative_to(folder.parent)).encode()); h.update(f.read_bytes())
+            out[b['id']] = h.hexdigest()[:16]
+        self.write('talk/fingerprints.json', json.dumps({'about': "A hash of each beat's slide folder, from the sources, so the player can say which slides changed.", 'beats': out}, indent=1) + '\n')
 
     def build_lab_documents(self):                                  # the studio's documents get the top bar, the footer and a way back (dev 009)
         briefs = {p.stem.split('-')[0]: p for p in (SRC / 'pages' / 'studio' / 'briefs').glob('*.html')} if (SRC / 'pages' / 'studio' / 'briefs').exists() else {}
@@ -1111,6 +1126,7 @@ class Site_Build:
         self.build_pages()
         self.build_lab_documents()
         self.build_pieces()
+        self.build_fingerprints()
         self.build_articles()
         self.build_script()
         self.build_brief()

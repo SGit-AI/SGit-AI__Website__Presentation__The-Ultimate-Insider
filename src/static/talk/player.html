@@ -39,6 +39,7 @@ body.tui-pane-on #stage, body.tui-pane-on #touch, body.tui-pane-on #bar, body.tu
 body.tui-pane-on.presenter #stage, body.tui-pane-on.presenter #touch { right:calc(min(400px,100vw) + 36vw) } body.tui-pane-on #side { right:min(400px,100vw) }
 #fb.on, #ovb.on { border-color:var(--teal); color:var(--teal) }
 /* the overview: every slide at once, by section (W) */
+#count { display:none }   /* the per-slide countdown: a distraction (the editor, 18:05) */
 #ov { position:fixed; inset:0 0 var(--barh) 0; z-index:44; background:var(--bg); display:none; flex-direction:column }
 body.ov #ov { display:flex } body.ov.tui-pane-on #ov { right:min(400px,100vw) }
 #ov .oh { display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; padding:10px 16px; border-bottom:1px solid var(--line) }
@@ -202,7 +203,7 @@ ul.bul { list-style:none; padding:0; font-size:3.4vh; margin:0 } ul.bul li { mar
 <div id="bar">
  <div class="row"><div class="ctl"><button data-k=" " id="pp" class="pp" aria-label="play or pause" title="play / pause (Space)">▶</button></div><span class="clock" id="clock">0:00</span><span class="dim" id="beatno"></span><div id="prog" title="click to seek"><b id="progb"></b></div><span class="dim" id="state">paused</span>
   <div class="ctl"><button class="nav" data-k="PageUp" aria-label="previous slide" title="previous slide (↑ or PageUp)">«<small>slide</small></button><button class="nav" data-k="ArrowLeft" aria-label="previous step" title="previous step (←)">‹<small>step</small></button><button class="nav" data-k="ArrowRight" aria-label="next step" title="next step (→, or tap the slide)">›<small>step</small></button><button class="nav" data-k="PageDown" aria-label="next slide" title="next slide (↓ or PageDown, or swipe)">»<small>slide</small></button><button data-k="s" id="sp" aria-label="speed" title="speed (S)">1×</button></div></div>
- <div class="row"><div class="ctl small"><button data-k="x" id="ex" aria-label="leave the presentation" title="leave (X)">✕</button><button data-k="g" id="go" aria-label="go to any slide" title="go to any slide or step (G)">☰ slides</button><button data-k="w" id="ovb" aria-label="overview: every slide by section" title="overview: every slide by section, each playable; show or skip (W)">overview</button><button data-k="e" id="fb" aria-label="feedback" title="your feedback pane: a note on this slide, to your lane (E)">feedback</button><button data-k="j" id="sk" aria-label="skip this slide in your order" title="skip this slide: out of your order, on to the next (J)">skip</button><button data-k="u" id="un" aria-label="undo the last skip" title="undo the last skip (U)" style="display:none">undo</button><button data-k="o" id="bm" aria-label="build: your running order" title="build: your running order, show or hide, a comment on each (O)">build</button><button data-k="v" id="rv" aria-label="review mode: everything at once, no animation" title="review (V)">review</button><button data-k="p" id="nb" aria-label="speaker notes" title="notes (P)">notes</button><button data-k="t" id="th" aria-label="next theme" title="theme (T)">◐</button><button data-k="f" aria-label="fullscreen" title="fullscreen (F)">⛶</button></div><div id="steps" title="this slide's steps: click to jump"></div><span id="cache"></span><span id="count"></span><div class="ctl small"><button data-k="h" id="hd" aria-label="auto-advance to the next slide" title="auto: move to the next slide when one ends (H); off: stop at the end of each slide">auto</button><button data-k="reset-timer" id="tr" aria-label="reset the talk timer" title="reset the talk timer to 0:00" style="display:none">↺</button><button data-k="have" id="hv" class="have" aria-label="how much time you have" title="the time you have: the countdown and the plan follow it (?have=40)">⏱ time</button><button data-k="z" id="tm" class="timer" aria-label="start or stop the talk timer" title="talk timer: start when you start speaking (Z); it keeps running whatever you click, until you stop it">▶ start talk</button></div></div>
+ <div class="row"><div class="ctl small"><button data-k="x" id="ex" aria-label="leave the presentation" title="leave (X)">✕</button><button data-k="g" id="go" aria-label="go to any slide" title="go to any slide or step (G)">☰ slides</button><button data-k="w" id="ovb" aria-label="overview: every slide by section" title="overview: every slide by section, each playable; show or skip (W)">overview</button><button data-k="e" id="fb" aria-label="feedback" title="your feedback pane: a note on this slide, to your lane (E)">feedback</button><button data-k="j" id="sk" aria-label="skip this slide in your order" title="skip this slide: out of your order, on to the next (J)">skip</button><button data-k="u" id="un" aria-label="undo the last skip" title="undo the last skip (U)" style="display:none">undo</button><button data-k="o" id="bm" aria-label="build: your running order" title="build: your running order, show or hide, a comment on each (O)">build</button><button data-k="v" id="rv" aria-label="review mode: everything at once, no animation" title="review (V)">review</button><button data-k="p" id="nb" aria-label="speaker notes" title="notes (P)">notes</button><button data-k="t" id="th" aria-label="next theme" title="theme (T)">◐</button><button data-k="f" aria-label="fullscreen" title="fullscreen (F)">⛶</button></div><div id="steps" title="this slide's steps: click to jump"></div><span id="cache"></span><span id="count"></span><div class="ctl small"><button data-k="h" id="hd" aria-label="auto-advance to the next slide" title="auto: move to the next slide when one ends (H); off: stop at the end of each slide">auto</button><button data-k="reset-timer" id="tr" aria-label="reset the talk timer" title="reset the whole clock: the timer to 0:00, the talk to its start">↺ reset</button><button data-k="have" id="hv" class="have" aria-label="how much time you have" title="the time you have: the countdown and the plan follow it (?have=40)">⏱ time</button><button data-k="z" id="tm" class="timer" aria-label="start or stop the talk timer" title="talk timer: start when you start speaking (Z); it keeps running whatever you click, until you stop it">▶ start talk</button></div></div>
 </div>
 <div id="intro"><div><h2 id="ttl">Talk player</h2><p id="sub"></p><p class="dim">site <a class="ver" href="../admin/versions.html#{{version}}" title="release history">{{version}}</a> · ported from <a href="https://ruv.sgit.ai/articles/the-talk-player.html">ruv.sgit.ai's player</a></p><p>Tap ▶ or press <kbd>Space</kbd> to start · tap the slide for the next step, swipe for the next slide · <b>‹ ›</b> steps, <b>« »</b> slides · <b>1×</b> speed · <b>auto</b> moves on when a slide ends (off: it stops) · <b>start talk</b> starts your timer · <b>☰ slides</b> jumps anywhere · <b>review</b> everything at once · <b>notes</b> the words · <kbd>?</kbd> all keys</p></div></div>
 <div id="black"></div>
@@ -678,7 +679,7 @@ function tick(now) {
   const local = t - b.at
   update(b, local)
   paintSteps(b, review ? b.dur : local)
-  $('clock').textContent = b.extra ? `extra · ${fmt(MAIN)}` : `${fmt(t)} / ${fmt(MAIN)}`
+  $('clock').textContent = b.extra ? `extra · ${fmt(MAIN)}` : `${fmt(t * SC())} / ${fmt(HAVE || MAIN)}`   // the plan, scaled to the time he has
   $('beatno').textContent = b.extra ? `+${ix + 1 - talk.beats.length}` : `${ix + 1}/${talk.beats.length}`
   $('progb').style.width = pos(t) + '%'
   $('state').textContent = (review ? 'review' : held ? 'holding' : playing ? 'playing' : 'paused') + (rate !== 1 ? ` · ${rate}×` : '') + (rehearse ? ' · rehearsing' : '') + (VIEW === 'audience' ? ' · audience' : '')
@@ -739,7 +740,7 @@ function step(dir) {
   else to = [...sp].reverse().find(x => x.t < local - 0.15)
   if (to) { t = b.at + to.t; held = false; if (to.end || dir < 0) playing = false; return }
   if (dir > 0) goBeat(ix + 1)
-  else if (ix > 0) { const pb = B[ix - 1], ps = stops(pb); beatIx = -1; t = pb.at + ps[ps.length - 1].t; held = false; playing = false }
+  else if (ix > 0) { const pb = B[ix - 1]; beatIx = -1; t = pb.at + Math.max(0, pb.dur - 0.4); held = false; playing = false }   // the previous slide's built end: its steps are not loaded yet, and stops() would read this slide's (the editor, 18:05: back did not always work)
 }
 function onKey(e) {
   if (!talk) return
@@ -767,7 +768,7 @@ function onKey(e) {
   else if (k === 's' || k === 'S') rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length] || 1
   else if (k === 'h' || k === 'H') { hold = !hold; if (!hold && held) { held = false; step(1) } }
   else if (k === 'z' || k === 'Z') toggleTimer()
-  else if (k === 'reset-timer') { timer = null; saveTimer() }
+  else if (k === 'reset-timer') { if (!confirm('Reset the talk clock: the timer to 0:00 and the talk to its first slide?')) return; timer = null; saveTimer(); t = 0; beatIx = -1; playing = false; held = false }
   else if (k === 'g' || k === 'G') { document.body.classList.toggle('pick'); if (document.body.classList.contains('pick')) drawPick() }
   else if (k === '0' || k === 'Home') { t = 0; beatIx = -1; playing = false; held = false }
   else if (k === 'p' || k === 'P') document.body.classList.toggle('presenter')
@@ -851,7 +852,7 @@ const saveTimer = () => { try { localStorage.setItem('tui-talk-timer', JSON.stri
 // the time the presenter has, in minutes (?have=40, or ⏱; kept in this browser): the timer counts down what is left of it,
 // and the plan for each slide is scaled to it, so ahead and behind are against his time, not the talk's planned length
 let HAVE = 0
-try { HAVE = +(qs.get('have') || localStorage.getItem('tui-talk-have') || 0) * 60 } catch {}
+try { HAVE = +(qs.get('have') || localStorage.getItem('tui-talk-have') || 90) * 60 } catch {}   // the talk is 90 minutes (the editor, 16:20 and 18:05)
 const SC = () => HAVE && MAIN ? HAVE / MAIN : 1
 function setHave() {
   const v = prompt('How many minutes do you have? (0: the planned ' + fmt(MAIN) + ')', HAVE ? String(Math.round(HAVE / 60)) : '')
@@ -870,7 +871,7 @@ function toggleTimer() {
 let resetAsk = -1e9
 function confirmReset() { const n = performance.now(); if (n - resetAsk < 2500) return true; resetAsk = n; return false }   // press twice within 2.5 s to reset
 function paintTimer(b) {
-  const el = $('tm'), s = timerS(); $('tr').style.display = timer ? '' : 'none'
+  const el = $('tm'), s = timerS(); $('tr').style.display = ''
   $('hv').textContent = HAVE ? '⏱ ' + Math.round(HAVE / 60) + (innerWidth > 1100 ? ' min' : '') : (innerWidth > 1100 ? '⏱ time' : '⏱')
   if (!timer) { el.className = 'timer'; el.innerHTML = '▶ start talk' + (HAVE ? `<small>${fmt(HAVE)}</small>` : ''); return }
   const stopped = timer.stopped_ms != null

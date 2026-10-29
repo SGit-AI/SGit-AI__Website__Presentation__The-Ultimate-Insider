@@ -60,7 +60,7 @@
     requestAnimationFrame(frame)
   }
   // a step for every reveal (the editor, 16:20: "every little transition to have a step"): the moment each element starts
-  // to appear, labelled by its own text; reveals within 0.15 s are one step. null when the slide declares no reveals.
+  // to appear, labelled by its own text; reveals within 0.6 s are one step (the editor, 18:05: steps that close look the same). null when the slide declares no reveals.
   function revealSteps() {
     var marks = []
     var add = function (t, el) { if (t >= 0 && t <= END) marks.push({ t: t, label: (el.getAttribute('aria-label') || (el.innerText || el.textContent || '').split('\n').map(function (l) { return l.trim() }).filter(Boolean)[0] || '').replace(/\s+/g, ' ').slice(0, 32) }) }   // its first visible line
@@ -69,7 +69,7 @@
     if (!marks.length) return null
     marks.sort(function (a, b) { return a.t - b.t })
     var out = []
-    marks.forEach(function (m) { var l = out[out.length - 1]; if (l && m.t - l.t < 0.15) { if (!l.label && m.label) l.label = m.label } else out.push({ t: m.t, label: m.label }) })
+    marks.forEach(function (m) { var l = out[out.length - 1]; if (l && m.t - l.t < 0.6) { if (!l.label && m.label) l.label = m.label } else out.push({ t: m.t, label: m.label }) })
     if (out[0].t > 0.05) out.unshift({ t: 0, label: 'the beginning' })
     out.forEach(function (x, i) { if (!x.label) x.label = 'step ' + (i + 1) })
     return out.length > 1 ? out : null   // one mark is no steps: the beginning and the middle serve better
