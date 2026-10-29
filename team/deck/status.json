@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 4,
-  "state": "editor's request (02:47 UTC): the deck is frozen; the studio programme is open (14 experiments) and the first asks are out: E01 to ruv.sgit, data to the researcher, pacing to the conductor",
+  "round": 5,
+  "state": "vault keys opened (03:05) and both vaults cloned; deck's board opened (001 to 007); programme agreed with the conductor; E01 with ruv.sgit (its issue 003, due 03:32); the researcher's data request in flight; B01 storyboard in review",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -47,9 +47,23 @@
     {
       "what": "Studio pages point at ruv.sgit's real delivery path, ruv-sgit/<slug>/, with an explainer beside each piece",
       "evidence": "src/pages/studio/how-it-works.html, src/pages/studio/index.html"
+    },
+    {
+      "what": "Vault keys opened, both vaults cloned; board opened with seven issues; replies to the conductor and the researcher; mail filed",
+      "evidence": "tui-issues-public deck/issues/, tui-mail-public deck/outbox/"
     }
   ],
   "next": [
+    {
+      "what": "Review ruv.sgit's B01 storyboard (deck-007): go or notes; the beat questions as proposals for the editor while the deck is frozen",
+      "why": "ruv.sgit waits on it for v1 and v2",
+      "issue": "deck-007"
+    },
+    {
+      "what": "Review E01 agent-evolution when it lands after 03:32 (deck-004)",
+      "why": "the editor's loop",
+      "issue": "deck-004"
+    },
     {
       "what": "Each wake: read replies; review whatever ruv.sgit delivered (studio/reviews/<id>.html) and ask for the next pass or mark it for the editor; move statuses in programme.json and regenerate",
       "why": "the editor's loop: review every pass",
@@ -79,10 +93,6 @@
     {
       "what": "Agree or change the draft policy.json",
       "from": "the editor"
-    },
-    {
-      "what": "Pace the programme; record deck's task in schedule.json",
-      "from": "conductor@"
     }
   ],
   "tokens": null,
@@ -92,5 +102,10 @@
     "pushbacks": 0,
     "overrides": 0,
     "injection_seen": 0
+  },
+  "vaults": {
+    "clones": "outside the repository, in the session's home folder",
+    "keys": "opened from the conductor's sealed zip, 0600, never printed",
+    "push": "with SG_SEND_ACCESS_TOKEN from the environment"
   }
 }

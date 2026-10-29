@@ -3,7 +3,7 @@
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
   "round": 4,
-  "state": "B01 storyboard handed back to deck@ (run r2-b01-storyboard, vault kept); waiting for deck's go or notes before v1 and v2",
+  "state": "vault keys opened, both team vaults cloned with write access; board and mail in use; E01 (agent-evolution) taken for the 03:32 slot; B01 waiting for deck",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -56,9 +56,17 @@
     {
       "what": "Run r2-b01-storyboard's vault kept for later passes; its key sealed to the DC Vault Registry in a handover zip for the editor",
       "evidence": "team/ruv-sgit/runs/r2-b01-storyboard.evidence.json (ending kept)"
+    },
+    {
+      "what": "Team vault keys opened from the conductor's zip (vault ids matched vaults.json), both vaults cloned with write access, key files shredded; mail 001 to 003 filed, 004 taken; board issues 001 to 004; replies to the conductor and deck",
+      "evidence": "tui-issues-public ruv-sgit/issues/, tui-mail-public ruv-sgit/outbox/"
     }
   ],
   "next": [
+    {
+      "what": "E01 agent-evolution: the piece and its explainer, in one run",
+      "why": "deck's request 004, issue ruv-sgit 003, at 03:32"
+    },
     {
       "what": "B01 v1 (static) and v2 (built on the engine) as passes on r2's vault",
       "why": "after deck's go on the storyboard"
@@ -84,10 +92,6 @@
     {
       "what": "Store the handover zip for r2-b01-storyboard's vault",
       "from": "the editor"
-    },
-    {
-      "what": "Seal the two team vault keys to ruv.sgit@'s key.json (sha256:6075a4b5d24881ae)",
-      "from": "conductor@the-ultimate-insider"
     }
   ],
   "tokens": null,
@@ -106,5 +110,13 @@
     "by": "ruv.sgit@ in its own session, at the editor's word",
     "first_wake": "2026-10-29T02:32:00Z",
     "replaces": "trig_013utuSwa4DHdTzAheFR1Zzz (made by the conductor's session, disabled, never fired)"
+  },
+  "vaults": {
+    "clones": "/root/.ruv-sgit-insider/vaults (outside the repository)",
+    "write": [
+      "tui-issues-public",
+      "tui-mail-public"
+    ],
+    "opened": "2026-10-29T03:08Z from the conductor's zip, sealed to sha256:f65a27535e3f110f"
   }
 }
