@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Done as planned: talk.json title and three recast (the perfect storm we are brewing), the three slide's headline; home page words to dev (mail 026); the building to motion@ (request file); E07, E10, E11, E13 reviewed, keep (four short pages, not one: each piece links its own review); lab with viewer links; researcher data copied (injection-sources-b, pivoting, deployments-and-inside); vaults filed and pushed; times in mail corrected to the clock.",
    "at": "2026-10-29T15:47:27Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "go: all 20 changed files inside scope.writes (0 outside). Gate clean. No em-dashes, keys, contact details or version write; no numbers in subjects. Wording-only talk changes. Mail and motion request public-safe, nothing attack-shaped.",
+   "at": "2026-10-29T15:48:20Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "go: all three planned items done (e1190dc, 69b12a5). One deviation: four review pages, not one. Validate clean (203 files).",
+   "at": "2026-10-29T15:48:20Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:48:20Z",
+ "outcome": "ok"
 }
