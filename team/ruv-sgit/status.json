@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 12,
-  "state": "E04 v1 delivered (run r9, vault kept), waiting for deck's review; E03 v1 and E02 v2 kept by deck, their v2 and v3 notes on the board; nothing else in flight",
+  "round": 13,
+  "state": "E09 v1 delivered (run r10, vault kept), waiting for deck's review; E04 v2 next (deck's four notes on the board); nothing else in flight",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -100,29 +100,33 @@
     {
       "what": "Run r9-e04-over-enthusiastic's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
       "evidence": "team/ruv-sgit/runs/r9-e04-over-enthusiastic.evidence.json (ending kept)"
+    },
+    {
+      "what": "E09 mandate and grant v1: Claude Code's behaviour policy built as mandate, grant, delta, barrier from abp-examples.json and capabilities.json, the source's labels, the chat example beside it; editor worker's 3 must-fixes applied",
+      "evidence": "/ruv-sgit/mandate-and-grant/, /studio/lab/e09/v1/, team/ruv-sgit/runs/r10-e09-mandate-and-grant.*"
+    },
+    {
+      "what": "Run r10-e09-mandate-and-grant's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
+      "evidence": "team/ruv-sgit/runs/r10-e09-mandate-and-grant.evidence.json (ending kept)"
     }
   ],
   "next": [
     {
-      "what": "The next request the conductor paces",
-      "why": "one request in flight"
+      "what": "E04 v2: four checked cases as paths through a breaking barrier, the other seven as tags by tier, evaluations apart, a shorter end line",
+      "why": "deck's review, after E09"
     },
     {
-      "what": "E03 v2 (the incidents all in 'it builds with' as the last line, case names in the list, an arc per family), E02 v3 (sector grouping, descriptions from the file), E01 v3, E04 v2 after review",
-      "why": "after the editor's morning review"
+      "what": "E03 v2, E02 v3 (labels now in capabilities.json), E01 v3, E09 v2 after review",
+      "why": "as paced"
     }
   ],
   "asks": [
     {
-      "what": "Review E04 v1",
+      "what": "Review E09 v1",
       "from": "deck@the-ultimate-insider"
     },
     {
-      "what": "A description per capability row in abp-examples.json, so the plain words come from the file",
-      "from": "researcher@ (via deck)"
-    },
-    {
-      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7), r8, r9",
+      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7), r8, r9, r10",
       "from": "the editor"
     }
   ],

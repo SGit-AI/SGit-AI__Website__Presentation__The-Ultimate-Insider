@@ -1197,10 +1197,172 @@
     "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
     "given_to": "the editor"
    }
+  },
+  {
+   "run": "r10-e09-mandate-and-grant",
+   "purpose": "r10-e09-mandate-and-grant: studio experiment E09, mandate against grant: one example's Agent Behaviour Policy built in the source's order, mandate, grant, delta, barrier, then the chat example beside it",
+   "request": {
+    "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/001-infographic-request-mandate-and-grant-e09.eml)",
+    "date": "2026-10-29",
+    "text": "One sentence the audience must understand: an Agent Behaviour Policy writes down, for one agent in one deployment, what it is for (the mandate), what it can actually do (the grant), the gap between them, and what stands in the way of each thing in the gap. The data: abp-examples.json and capabilities.json (a description of each capability in the source's own words, with each example's own wording of the reach). Use the descriptions, not readings. Keep the source's order: the mandate is elicited, the grant is measured, the delta is derived (excess and shortfall), and every row carries its barrier. Only a boundary is a control. Cautions: the same id means different things per example; show the example's own reach. Published drafts from one author's network, defining what a row means, not that it was measured. No score. What moves: start from E02's rings, now named as the four objects, built in the source's order; then, if it fits, the chat example (1, 1, 0) beside Claude Code (16, 5, 12). 40 to 60 seconds; must read as a still. No score or rating; nothing measured that is derived; no product logos. Label the drawing itself, plain words first, text clear of the headline; the piece at ruv-sgit/mandate-and-grant/index.html with its explainer beside it."
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "ag2a1h8p",
+   "created_at": "2026-10-29T10:36:15+00:00",
+   "closed_at": "2026-10-29T10:45:39+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 3,
+    "tasks": 3,
+    "ruflo_calls": 15,
+    "ruflo_failed": 0,
+    "ruflo_ms": 7051
+   },
+   "branches": [
+    {
+     "name": "w-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11678,
+     "write_ms": 15772,
+     "merge_ms": 9157
+    },
+    {
+     "name": "w-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 11794,
+     "write_ms": 7260,
+     "merge_ms": 9076
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 4939,
+     "write_ms": 8381,
+     "merge_ms": 8532
+    },
+    {
+     "name": "w-v1-fixed",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11950,
+     "write_ms": 7950,
+     "merge_ms": 8913
+    },
+    {
+     "name": "w-explainer-fixed",
+     "role": "writer",
+     "files": 2,
+     "bytes": 12559,
+     "write_ms": 7324,
+     "merge_ms": 7655
+    }
+   ],
+   "commits": 7,
+   "files": 9,
+   "bytes_plain": 56638,
+   "files_delivered": 7,
+   "bytes_delivered": 52920,
+   "store": {
+    "objects": 47,
+    "bytes": 77612,
+    "plaintext_hits": 0,
+    "probe": "72 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 4217,
+    "files": 9,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "f4fb3aff511e",
+     "message": "init",
+     "time": "2026-10-29T10:36:20Z"
+    },
+    {
+     "id": "870ef0ea8f9f",
+     "message": "brief: run r10-e09-mandate-and-grant",
+     "time": "2026-10-29T10:36:22Z"
+    },
+    {
+     "id": "9f30bd89bc5a",
+     "message": "developer v1: delivered 1 files",
+     "time": "2026-10-29T10:39:40Z"
+    },
+    {
+     "id": "94da2d24ee72",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T10:40:05Z"
+    },
+    {
+     "id": "c33c0944a57b",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T10:44:45Z"
+    },
+    {
+     "id": "36e50c8fa9f5",
+     "message": "developer v1-fixed: delivered 1 files",
+     "time": "2026-10-29T10:45:02Z"
+    },
+    {
+     "id": "89e212bae6e6",
+     "message": "writer explainer-fixed: delivered 2 files",
+     "time": "2026-10-29T10:45:20Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "v1",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "explainer",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 104947,
+     "tool_uses": 14,
+     "wall_s": 138,
+     "must_fix": 3,
+     "should_fix": 7
+    },
+    {
+     "id": "v1-fixed",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    },
+    {
+     "id": "explainer-fixed",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    }
+   ],
+   "kept_at": "2026-10-29T10:45:43+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r10-e09__vault-handover.zip",
+    "sha256": "33b87c42771fd1cf",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
   }
  ],
  "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
- "updated": "2026-10-29T09:46:17+00:00",
+ "updated": "2026-10-29T10:45:43+00:00",
  "server": "https://dev.send.sgraph.ai",
  "viewer": "https://dev.vault.sgraph.ai/en-gb/",
  "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"
