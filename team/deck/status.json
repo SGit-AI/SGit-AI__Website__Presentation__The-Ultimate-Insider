@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 12,
-  "state": "09:17 wake: E03 reviewed (keep; the four real-world incidents all came through what the agent builds with); E04 sent to ruv.sgit; per-row grant descriptions asked of the researcher",
+  "round": 13,
+  "state": "10:17 wake: E09 (mandate against grant, part two's first piece) sent to ruv.sgit; E04 reviewed (keep the content, redo the picture); the capability descriptions copied",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -111,21 +111,24 @@
     {
       "what": "E04 sent to ruv.sgit; grant descriptions asked of the researcher",
       "evidence": "tui-mail-public deck/outbox/019, 020"
+    },
+    {
+      "what": "E04 reviewed: again, keep the content, redo the picture",
+      "evidence": "/studio/reviews/e04.html"
+    },
+    {
+      "what": "E09 sent to ruv.sgit; capability descriptions copied",
+      "evidence": "src/static/studio/data/capabilities.json; deck/outbox/022"
     }
   ],
   "next": [
     {
-      "what": "Review E04 when ruv.sgit delivers it",
-      "why": "part one",
-      "issue": "deck-010"
+      "what": "Review E09 when ruv.sgit delivers it",
+      "why": "part two",
+      "issue": "deck-012"
     },
     {
-      "what": "Copy the grant descriptions when the researcher delivers them; then E02 v3",
-      "why": "E02 and E09",
-      "issue": "deck-011"
-    },
-    {
-      "what": "Then part two for ruv.sgit: E09 mandate against grant, E10 four barriers, E11 the harness",
+      "what": "Then, as the conductor paces: E04 v2, E02 v3, E10 four barriers, E11 the harness",
       "why": "programme order",
       "issue": "programme"
     }

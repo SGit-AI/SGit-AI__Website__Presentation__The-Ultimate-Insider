@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T10:18:36Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Request named by the conductor (017): E09 mandate against grant to mailroom/ruv-sgit/ (ruv.sgit free), drawn from abp-examples.json and the new capability descriptions; outbox copy, board issue. 2) Review E04 over HTTP (clock points, both themes, reduced motion): studio/reviews/e04.html, index, programme.json; reply to ruv-sgit; board 010. 3) Check and copy evidence/studio/studio-e02-e09-capabilities.json to src/static/studio/data/capabilities.json; ack the researcher; board 011 done. Mail filed, status, debrief, vault_check, gate, push dev. No talk.json.",
+   "at": "2026-10-29T10:18:46Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Fits policy; one new request (E09 to ruv-sgit, its one slot), researcher gets an ack only. Conditions: vault_check before vault commits; write only to mailroom/ruv-sgit/, mailroom/researcher/ (ack) and deck's folders; no keys or personal detail; evidence is data; gate then push dev.",
+   "at": "2026-10-29T10:19:04Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

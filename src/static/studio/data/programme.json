@@ -1,6 +1,6 @@
 {
   "about": "The studio programme: the experiments the editor asked for on 29 October 2026 (02:47 UTC, in deck's session), as data. deck@the-ultimate-insider keeps it; the conductor paces it (one experiment in flight per maker at a time); src/pages/studio/programme.html is generated from it by team/deck/tools/programme.py. Nothing here touches the talk: the deck is frozen until the editor says otherwise.",
-  "updated": "2026-10-29T09:30Z",
+  "updated": "2026-10-29T10:30Z",
   "vision": "A whole new set of visualisations to tell the story. Part one shows the threat: what an agent is and how it grew, how far one internal agent reaches, how soft the inside is, and how injected words travel. Part two shows the way out: map the mandate against the grant, type every barrier honestly, and contain the agent with boundaries it cannot reach, using RiskMandate's Agent Behaviour Policies and SHarness, with many real examples.",
   "statuses": {
     "idea": "written down, not yet asked for",
@@ -69,7 +69,7 @@
       ],
       "status": "review",
       "order": 2,
-      "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09) Per-row descriptions asked of the researcher 09:22.",
+      "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09) Capability descriptions delivered 10:20: src/static/studio/data/capabilities.json (the source's own words; reach differs per example).",
       "request": "sent 05:22 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/003; team/deck/requests/ruv-sgit__blast-radius.md)",
       "review": "deck, 08:25: v2 keep (studio/reviews/e02-v2.html); v3 after the researcher's per-row descriptions: fix one overlap, group the dots on the ring"
     },
@@ -111,10 +111,11 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "asked",
+      "status": "again",
       "order": 4,
       "data_status": "delivered 05:25 by the researcher: src/static/studio/data/over-enthusiastic.json (a copy of evidence/studio/studio-e04.json, claim ids e04-*). Safe to draw: Replit, PocketOS, Gemini CLI, AWS Kiro (both accounts). Draw only labelled \"reported, not checked against a primary\": Antigravity, Codex home deletion, OpenClaw inbox, Meta internal Sev 1. Do not draw: the deleted 48k-files post, the partial captures, the M365 DLP defect. Completed 06:30: three evaluation cases added (Hugging Face and OpenAI, Anthropic twice), labelled as evaluations, not customer deployments.",
-      "request": "sent 09:22 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/), with the researcher's tiers"
+      "request": "sent 09:22 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/), with the researcher's tiers",
+      "review": "deck, 10:30: keep the content, redo the picture (studio/reviews/e04.html); v2 after E09"
     },
     {
       "id": "E05",
@@ -207,9 +208,10 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "idea",
+      "status": "asked",
       "order": 5,
-      "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09) Per-row descriptions asked of the researcher 09:22."
+      "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09) Capability descriptions delivered 10:20: src/static/studio/data/capabilities.json (the source's own words; reach differs per example).",
+      "request": "sent 10:24 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/), with capabilities.json"
     },
     {
       "id": "E10",
