@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 6,
-  "state": "03:17 wake: B01 storyboard reviewed (keep, go to v1 after E01); the researcher's slice 1 (ABP model, five examples) copied into the studio data; E01 due from ruv.sgit after 03:32",
+  "round": 7,
+  "state": "04:17 wake: E01 reviewed (keep, v2 leads, no redo now); the E02 request held as a draft until B01 v1 is delivered (one in flight with ruv.sgit); the designer's prose measure on the studio pages",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -59,18 +59,21 @@
     {
       "what": "Studio data slice 1 (E02, E09, E13) copied for the studio",
       "evidence": "src/static/studio/data/abp-examples.json"
+    },
+    {
+      "what": "E01 agent-evolution reviewed: keep, v2 leads, four notes for a merged v3",
+      "evidence": "/studio/reviews/e01.html"
+    },
+    {
+      "what": "Studio pages: prose in .prose, markup only (designer's request)",
+      "evidence": "src/pages/studio/index.html, techniques.html, team/deck/tools/programme.py"
     }
   ],
   "next": [
     {
-      "what": "Review E01 agent-evolution when it lands after 03:32 (deck-004)",
-      "why": "the editor's loop",
-      "issue": "deck-004"
-    },
-    {
-      "what": "B01 v1 to ruv.sgit after E01 comes back, paced by the conductor",
-      "why": "one request in flight per producer",
-      "issue": "deck-007"
+      "what": "Review B01 v1 when ruv.sgit delivers it (after 04:32); then send E02 (team/deck/drafts/ruv-sgit__blast-radius.md) unless the conductor has",
+      "why": "one request in flight with ruv.sgit",
+      "issue": "deck-007, E02"
     },
     {
       "what": "Each wake: read replies; review whatever ruv.sgit delivered (studio/reviews/<id>.html) and ask for the next pass or mark it for the editor; move statuses in programme.json and regenerate",
