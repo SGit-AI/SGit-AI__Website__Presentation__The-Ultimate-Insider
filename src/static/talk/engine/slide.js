@@ -98,6 +98,7 @@
     END = +(cv.dataset.end || 10)
     S.END = END
     if (window.SLIDE_INIT) try { window.SLIDE_INIT(S) } catch (e) { console.error(e) }   // may add elements, so before collect
+    END = +(cv.dataset.end || END); S.END = END   // SLIDE_INIT may set the length (a showcase's "end"; studio@ 039)
     collect(); fit(); addEventListener('resize', fit)
     var rm = false; try { rm = matchMedia('(prefers-reduced-motion: reduce)').matches } catch (e) {}
     if (Q.has('t')) freeze = clamp(+Q.get('t') || 0, 0, END)

@@ -267,7 +267,7 @@ function fail(msg) { $('err').textContent = msg; $('err').style.display = 'block
 async function load() {
   const src = qs.get('talk') || 'talk.json'
   try {
-    talk = adapt(window.TALK || await (await fetch(src, { cache: 'no-cache' })).json())
+    talk = adapt(await withLocks(window.TALK || await (await fetch(src, { cache: 'no-cache' })).json()))
     ORIG = talk.beats.map(b => ({ ...b }))
     try { PIECES = (await (await fetch('pieces.json', { cache: 'no-cache' })).json()).pieces || [] } catch { PIECES = [] }
     if (RUN.use && !qs.has('talk')) applyOrder()
@@ -296,6 +296,23 @@ async function load() {
 
 // this site's talk.json: beats in order, each with dur; at is the sum of the beats before it; a slide is a live page (layout
 // iframe); act names the section a beat belongs to
+// locked parts (conductor 034): a part locked before it goes on stage plays from its frozen copy (engine/locked/, written by
+// admin/build/lock.py), exactly as locked, whatever talk.json says of it now; the rest is the latest. ?nolocks plays talk.json as it is.
+let LOCKS = {}
+async function withLocks(T) {
+  if (qs.has('talk') || qs.has('nolocks')) return T
+  try {
+    const r = await fetch('engine/locked/locks.json', { cache: 'no-cache' }); if (!r.ok) return T
+    LOCKS = (await r.json()).parts || {}
+    for (const n of Object.keys(LOCKS).sort((a, b) => a - b)) {
+      const lb = (await (await fetch(LOCKS[n].beats, { cache: 'no-cache' })).json()).beats || [], beats = T.beats || []
+      let at = beats.findIndex(b => b.part == n); if (at < 0) at = beats.findIndex(b => +b.part > +n); if (at < 0) at = beats.length
+      const rest = beats.filter(b => b.part != n), before = beats.slice(0, at).filter(b => b.part != n).length
+      T.beats = [...rest.slice(0, before), ...lb, ...rest.slice(before)]
+    }
+  } catch (e) { console.error('locks', e) }
+  return T
+}
 function adapt(T) {
   let at = 0
   T.beats = (T.beats || []).map(b => { const x = { ...b, slide: { layout: 'iframe', ...(b.slide || {}) } }; if (x.at == null) x.at = at; at = x.at + (+x.dur || 0); return x })

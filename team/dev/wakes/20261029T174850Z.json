@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled wake, 17:47",
+ "started": "2026-10-29T17:48:50Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Record 042 in team/dev/policy.json (status agreed, agreed_by: the editor, the conductor's session, 17:40, his words). 2) 039: slide.js re-reads #cv data-end after SLIDE_INIT. 3) admin/build/lock.py copies part 1's built files into src/static/talk/engine/locked/part1/ with beats rewritten and locks.json; player.html substitutes locked beats; validate.py treats locked/ as standalone; lock at 18:30, test open and play, no edits to locked/ after; then what-changed mode. 4) 037 in player.html only if 3 is tested before 18:30, else after, never touching locked content. 5) Replies to 034-042, board for 036/038; no send_later (policy not_wanted create.schedule), tell the editor.",
+   "at": "2026-10-29T17:50:37Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside dev's scope (team/dev, admin/build, talk/engine/** incl. locked/, player.html); no holds, no send_later. Conditions: 042 recorded only with the editor's own words and a verifiable source; validate.py treats locked/ as standalone without loosening other checks, full gate; other members' built files copied as-is, their sources untouched; vault_check on every reply, no keys in locks.json; no edits to locked/ after 18:30.",
+   "at": "2026-10-29T17:51:05Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
