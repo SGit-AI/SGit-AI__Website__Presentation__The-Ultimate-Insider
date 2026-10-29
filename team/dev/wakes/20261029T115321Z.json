@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "dev 014 built: tokens.css (--t-0 to 88px, --t-lead), site.css (hero columns, Venn 600px), index.html (label x=300); measured at 2560/1920/1600/1280/390; issue closed, designer reply (010, renumbered from 009), 017 filed; debrief, status, REALITY.",
    "at": "2026-10-29T11:56:45Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff touches REALITY.md, index.html (one hero label x=335 to 300, a dev hold, no other owner named), site.css, tokens.css (stated in the debrief), dev debrief, status, wake. 0 outside scope; build and gate clean; vault_check passes on both vaults; no keys, tokens, personal details or directing text.",
+   "at": "2026-10-29T11:57:19Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done (98fc10c): tokens.css --t-0 and --t-lead, site.css hero columns and Venn, index.html label x=300; measured at five widths, two screenshots. Item 2 done: issue 014 closed, designer reply (renumbered 010), 017 filed, debrief, status, REALITY. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T11:57:38Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T11:57:38Z",
+ "outcome": "ok"
 }
