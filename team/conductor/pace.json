@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T16:59:13Z",
+ "updated": "2026-10-29T17:03:19Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -549,6 +549,14 @@
    "status": "asked",
    "by": "the editor, 16:2x",
    "owners": "researcher catalogue; storyteller order; deck beats; studio showcase slides; dev template and the Linux demo; ruv.sgit SHarness series"
+  },
+  {
+   "id": "prelude",
+   "kind": "section",
+   "title": "the prelude: how this was made",
+   "status": "asked",
+   "by": "the editor, 17:00",
+   "owners": "motion@ the piece by 18:15; deck places it; storyteller the callback; conductor the numbers and the floor (the mini deck)"
   }
  ],
  "edges": [
@@ -918,6 +926,11 @@
    "at": "2026-10-29T16:59:13Z",
    "by": "conductor",
    "what": "three parts with locks at 18:30, 19:30 and 20:00 routed; tonight's rule in WAKE.md: one-off follow-ups into each member's own session until 20:00; the conductor's next at 17:20"
+  },
+  {
+   "at": "2026-10-29T17:03:19Z",
+   "by": "conductor",
+   "what": "the prelude briefed (motion@, deck, storyteller); the team's numbers in team-in-numbers.json; the mini deck refreshed as the floor"
   }
  ],
  "queue": {
@@ -1142,6 +1155,11 @@
   {
    "who": "makers",
    "what": "anything for part 1",
+   "by": "18:15"
+  },
+  {
+   "who": "motion",
+   "what": "the prelude piece, or say by 17:45 it cannot",
    "by": "18:15"
   }
  ]

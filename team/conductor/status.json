@@ -1,9 +1,9 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T16:59:13Z",
+ "as_of": "2026-10-29T17:03:19Z",
  "round": 9,
- "state": "17:00: three parts and locks briefed; tonight's follow-up rule in WAKE.md; next follow-up 17:20 (trig_014jHKt3VZxyCCuxoq2fN2Xf)",
+ "state": "17:0x: the prelude briefed; the numbers file and the mini deck ready as its floor.",
  "done": [
   {
    "what": "Moments: the runs and batches as a strip, each opening on what you need to know, what changed and where it stood (admin/tools/moments.py)",
