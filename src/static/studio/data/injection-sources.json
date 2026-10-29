@@ -1,0 +1,712 @@
+{
+ "about": "E03, where injected words come from: one public case per source an agent consumes. Payloads are never quoted; every capture of a payload page is a defanged text extract, the raw page not kept (its hash as fetched is recorded). Built by researcher@the-ultimate-insider, 29 October 2026, from captures made at 04:12 to 04:15 UTC.",
+ "cautions": [
+  "None of the cases has an independent second primary source: grades rest on one researcher or vendor each, plus press",
+  "No public case of a code comment steering an agent was found; rules files and READMEs are the nearest",
+  "Label each piece: four real-world incidents, four vendor-confirmed vulnerabilities, eight research demonstrations"
+ ],
+ "sources_an_agent_consumes": [
+  {
+   "source": "email",
+   "how_words_get_in": "Mail arrives from anyone; an assistant that reads the mailbox reads the sender's words as context",
+   "case": {
+    "id": "echoleak",
+    "title": "EchoLeak, CVE-2025-32711",
+    "date": "2025-06-11",
+    "target_agent": "Microsoft 365 Copilot",
+    "label": "vendor-confirmed vulnerability",
+    "what_happened": "A crafted email, later retrieved as context for an ordinary question, led Copilot to include internal data in a response that sent it out; fixed server-side by Microsoft, never exploited by Microsoft's account",
+    "impact": "exfiltration path for internal data, no click on a link needed",
+    "fixed": "yes, June 2025",
+    "grade": "A4",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "msrc-cve-2025-32711-api"
+   },
+   "source_ids": [
+    "msrc-cve-2025-32711-api",
+    "hackthebox-echoleak"
+   ]
+  },
+  {
+   "source": "web pages",
+   "how_words_get_in": "A browser agent reads every page it visits, including text the user cannot see",
+   "case": {
+    "id": "comet-brave",
+    "title": "Brave on Perplexity Comet",
+    "date": "2025-08-20",
+    "target_agent": "Perplexity Comet (browser agent)",
+    "label": "vendor-confirmed vulnerability",
+    "what_happened": "Hidden text on a web page, read when the user asked Comet to summarise it, led the agent to act in the user's logged-in accounts against the user",
+    "impact": "account takeover path through the user's own sessions",
+    "fixed": "partly: Perplexity shipped fixes; Brave reported the issue was not fully fixed at first",
+    "grade": "A4",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-brave-comet"
+   },
+   "source_ids": [
+    "inj-brave-comet",
+    "inj-decrypt-comet"
+   ]
+  },
+  {
+   "source": "web forms",
+   "how_words_get_in": "A form submitted by the public lands in a record an agent later processes",
+   "case": {
+    "id": "forcedleak",
+    "title": "ForcedLeak, Salesforce Agentforce",
+    "date": "2025-09-25",
+    "target_agent": "Salesforce Agentforce",
+    "label": "vendor-confirmed vulnerability",
+    "what_happened": "Text submitted through a public web-to-lead form was later processed by the agent, which followed it and sent CRM data out",
+    "impact": "CRM data exfiltration",
+    "fixed": "yes, Salesforce enforced trusted URLs, September 2025",
+    "grade": "A3",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "forcedleak-agentforce"
+   },
+   "source_ids": [
+    "forcedleak-agentforce"
+   ]
+  },
+  {
+   "source": "shared documents",
+   "how_words_get_in": "A document shared into a user's drive is read by an assistant with connectors",
+   "case": {
+    "id": "agentflayer",
+    "title": "AgentFlayer, ChatGPT Connectors (Zenity, Black Hat 2025)",
+    "date": "2025-08-06",
+    "target_agent": "ChatGPT with the Google Drive connector",
+    "label": "research demonstration",
+    "what_happened": "A shared document with hidden text, read when the user asked about it, led the assistant to search the connected drive and leak what it found",
+    "impact": "data from a connected drive, with no click by the user",
+    "fixed": "partly: OpenAI mitigated the specific technique",
+    "grade": "A3",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-zenity-agentflayer"
+   },
+   "source_ids": [
+    "inj-zenity-agentflayer",
+    "inj-hackread-agentflayer"
+   ]
+  },
+  {
+   "source": "calendar invites",
+   "how_words_get_in": "Anyone can send an invitation; an assistant asked about the day reads its title and description",
+   "case": {
+    "id": "invitation-is-all-you-need",
+    "title": "Invitation Is All You Need (SafeBreach)",
+    "date": "2025-08-06",
+    "target_agent": "Google Gemini (Workspace, Android)",
+    "label": "vendor-confirmed vulnerability",
+    "what_happened": "Text in a calendar invitation, read when the user asked about their schedule, led the assistant to take actions in other apps and on connected devices",
+    "impact": "actions across apps and smart-home devices",
+    "fixed": "yes, Google deployed mitigations before disclosure",
+    "grade": "A3",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-safebreach-invitation"
+   },
+   "source_ids": [
+    "inj-safebreach-invitation",
+    "inj-bitdefender-calendar"
+   ]
+  },
+  {
+   "source": "images",
+   "how_words_get_in": "A model sees an image at a different resolution than the person does",
+   "case": {
+    "id": "image-scaling",
+    "title": "Image scaling attacks (Trail of Bits)",
+    "date": "2025-08-21",
+    "target_agent": "Gemini CLI and other production multimodal systems",
+    "label": "research demonstration",
+    "what_happened": "Text invisible in a full-size image became legible after the system downscaled it, and the model followed it",
+    "impact": "data exfiltration in the demonstration",
+    "fixed": "no single fix; Trail of Bits released a tool and recommended showing users the downscaled image",
+    "grade": "A2",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-tob-image-scaling"
+   },
+   "source_ids": [
+    "inj-tob-image-scaling"
+   ]
+  },
+  {
+   "source": "MCP tool descriptions",
+   "how_words_get_in": "An agent reads every connected tool's description as trusted context, before any tool is used",
+   "case": {
+    "id": "tool-poisoning",
+    "title": "Tool poisoning (Invariant Labs)",
+    "date": "2025-04-01",
+    "target_agent": "MCP clients (Cursor and others in the demonstration)",
+    "label": "research demonstration",
+    "what_happened": "Instructions hidden in a tool's description, not shown to the user, led the agent to read local secrets and pass them to the tool",
+    "impact": "secrets from the user's machine",
+    "fixed": "no: a design property of how clients load descriptions",
+    "grade": "A2",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-invariant-tool-poisoning"
+   },
+   "source_ids": [
+    "inj-invariant-tool-poisoning"
+   ]
+  },
+  {
+   "source": "READMEs and docs",
+   "how_words_get_in": "A coding assistant reads a repository's documentation as part of its context",
+   "case": {
+    "id": "copypasta",
+    "title": "CopyPasta license attack (HiddenLayer)",
+    "date": "2025-09-04",
+    "target_agent": "Cursor and other coding assistants",
+    "label": "research demonstration",
+    "what_happened": "Hidden text in a README or licence file led the assistant to copy the same hidden text into other files it edited, spreading it across repositories",
+    "impact": "a self-spreading injection; the demonstration's payload was harmless",
+    "fixed": "no",
+    "grade": "A2",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-hiddenlayer-copypasta"
+   },
+   "source_ids": [
+    "inj-hiddenlayer-copypasta"
+   ]
+  },
+  {
+   "source": "rules and configuration files",
+   "how_words_get_in": "A coding assistant treats its rules file as the project's own instructions",
+   "case": {
+    "id": "rules-file-backdoor",
+    "title": "Rules File Backdoor (Pillar Security)",
+    "date": "2025-03-18",
+    "target_agent": "GitHub Copilot and Cursor",
+    "label": "research demonstration",
+    "what_happened": "Hidden Unicode in a shared rules file led the assistant to add code the developer did not ask for; GitHub responded with a warning for hidden Unicode",
+    "impact": "backdoored generated code",
+    "fixed": "partly: GitHub warns about hidden Unicode (1 May 2025)",
+    "grade": "A3",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-pillar-rules-backdoor"
+   },
+   "source_ids": [
+    "inj-pillar-rules-backdoor",
+    "inj-github-hidden-unicode"
+   ]
+  },
+  {
+   "source": "pull requests and code",
+   "how_words_get_in": "Code merged into a tool becomes the tool's own instructions",
+   "case": {
+    "id": "amazon-q-wiper",
+    "title": "Amazon Q Developer extension",
+    "date": "2025-07-17",
+    "target_agent": "Amazon Q Developer for VS Code",
+    "label": "real-world incident",
+    "what_happened": "A pull request added a prompt to the extension instructing the assistant to wipe local files and cloud resources; it shipped in a release, and did not run because of a formatting flaw",
+    "impact": "none recorded; a near miss",
+    "fixed": "yes, version 1.85.0 (24 July 2025)",
+    "grade": "A5",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "aws-bulletin-2025-015"
+   },
+   "source_ids": [
+    "aws-bulletin-2025-015",
+    "404media-amazon-q",
+    "nvd-cve-2025-8217"
+   ]
+  },
+  {
+   "source": "issues and tickets (public)",
+   "how_words_get_in": "An agent that triages issues reads text anyone can write",
+   "case": {
+    "id": "clinejection",
+    "title": "Clinejection",
+    "date": "2026-02-17",
+    "target_agent": "Cline's issue-triage automation",
+    "label": "real-world incident",
+    "what_happened": "Words in a GitHub issue title steered the triage agent, which exposed publishing credentials; a tampered release followed",
+    "impact": "a supply-chain compromise: the tampered release was live about 8 hours, roughly 4,000 downloads by secondary reporting",
+    "fixed": "yes",
+    "grade": "A4",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "clinejection"
+   },
+   "source_ids": [
+    "clinejection"
+   ]
+  },
+  {
+   "source": "support tickets (internal)",
+   "how_words_get_in": "A support agent reads tickets filed by outsiders with an engineer's access",
+   "case": {
+    "id": "living-off-ai-jira",
+    "title": "Living off AI: Atlassian MCP and Jira Service Management (Cato CTRL)",
+    "date": "2025-06-19",
+    "target_agent": "an assistant connected through Atlassian's MCP server",
+    "label": "research demonstration",
+    "what_happened": "A ticket filed by an outsider, later processed by an internal user's assistant, ran with that user's access",
+    "impact": "internal data and actions, through the support engineer's rights",
+    "fixed": "no: a design property",
+    "grade": "A3",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-cato-jira-living-off-ai"
+   },
+   "source_ids": [
+    "inj-cato-jira-living-off-ai",
+    "inj-infosec-cato-jira"
+   ]
+  },
+  {
+   "source": "other agents",
+   "how_words_get_in": "Agents that can discover and call each other pass words between them",
+   "case": {
+    "id": "servicenow-second-order",
+    "title": "Second-order injection, ServiceNow Now Assist (AppOmni)",
+    "date": "2025-11-19",
+    "target_agent": "ServiceNow Now Assist agents",
+    "label": "research demonstration",
+    "what_happened": "Text in a record read by a low-privilege agent led it to recruit a more privileged agent on the same platform to act; the default settings allowed it",
+    "impact": "privileged actions and data access through another agent",
+    "fixed": "ServiceNow said it works as designed; configuration guidance updated",
+    "grade": "A3",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-appomni-servicenow"
+   },
+   "source_ids": [
+    "inj-appomni-servicenow",
+    "inj-thn-servicenow"
+   ]
+  },
+  {
+   "source": "skills and plugins",
+   "how_words_get_in": "An agent installs a skill and runs its instructions",
+   "case": {
+    "id": "clawhavoc",
+    "title": "ClawHavoc, OpenClaw's ClawHub",
+    "date": "2026-02-02",
+    "target_agent": "OpenClaw",
+    "label": "real-world incident",
+    "what_happened": "341 malicious skills in the public registry carried instructions that led users to install infostealers",
+    "impact": "infostealers on users' machines",
+    "fixed": "skills removed",
+    "grade": "A3",
+    "note": "holds in part: the words steered the users, not shown to steer the agent",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "clawhub-clawhavoc"
+   },
+   "source_ids": [
+    "clawhub-clawhavoc"
+   ]
+  },
+  {
+   "source": "install scripts",
+   "how_words_get_in": "A compromised package runs on install and drives the agents already on the machine",
+   "case": {
+    "id": "nx-s1ngularity",
+    "title": "Nx s1ngularity",
+    "date": "2025-08-26",
+    "target_agent": "Claude Code, Gemini CLI and Amazon Q on victims' machines",
+    "label": "real-world incident",
+    "what_happened": "A compromised npm release ran on install and called the coding agents already installed, with permission checks off, to search the machine for secrets",
+    "impact": "thousands of secrets and tokens leaked publicly for about 8 hours",
+    "fixed": "yes, packages removed",
+    "grade": "A4",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "nx-s1ngularity-ai-cli"
+   },
+   "source_ids": [
+    "nx-s1ngularity-ai-cli"
+   ]
+  },
+  {
+   "source": "audio",
+   "how_words_get_in": "A voice model hears sound a person may not",
+   "case": {
+    "id": "audiohijack",
+    "title": "AudioHijack (arXiv, 2026)",
+    "date": "2026-04",
+    "target_agent": "voice-enabled models in the paper's tests",
+    "label": "research demonstration",
+    "what_happened": "Sound engineered to be unnoticed by listeners led voice models to follow it",
+    "impact": "demonstrated in the paper only",
+    "fixed": "no",
+    "grade": "A3",
+    "note": "",
+    "payload_summary": "[defanged: the captures describe the words that steered the agent; this file never quotes them]",
+    "primary_source": "inj-arxiv-audiohijack"
+   },
+   "source_ids": [
+    "inj-arxiv-audiohijack",
+    "inj-decrypt-audiohijack"
+   ]
+  }
+ ],
+ "claims": [
+  {
+   "id": "e03-echoleak",
+   "text": "Words in email steered Microsoft 365 Copilot: EchoLeak, CVE-2025-32711",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "msrc-cve-2025-32711-api",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "hackthebox-echoleak",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. "
+  },
+  {
+   "id": "e03-comet-brave",
+   "text": "Words in web pages steered Perplexity Comet (browser agent): Brave on Perplexity Comet",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-brave-comet",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-decrypt-comet",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. "
+  },
+  {
+   "id": "e03-forcedleak",
+   "text": "Words in web forms steered Salesforce Agentforce: ForcedLeak, Salesforce Agentforce",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "forcedleak-agentforce",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. "
+  },
+  {
+   "id": "e03-agentflayer",
+   "text": "Words in shared documents steered ChatGPT with the Google Drive connector: AgentFlayer, ChatGPT Connectors (Zenity, Black Hat 2025)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-zenity-agentflayer",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-hackread-agentflayer",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. "
+  },
+  {
+   "id": "e03-invitation-is-all-you-need",
+   "text": "Words in calendar invites steered Google Gemini (Workspace, Android): Invitation Is All You Need (SafeBreach)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-safebreach-invitation",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-bitdefender-calendar",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. "
+  },
+  {
+   "id": "e03-image-scaling",
+   "text": "Words in images steered Gemini CLI and other production multimodal systems: Image scaling attacks (Trail of Bits)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-tob-image-scaling",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. "
+  },
+  {
+   "id": "e03-tool-poisoning",
+   "text": "Words in MCP tool descriptions steered MCP clients (Cursor and others in the demonstration): Tool poisoning (Invariant Labs)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-invariant-tool-poisoning",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. "
+  },
+  {
+   "id": "e03-copypasta",
+   "text": "Words in READMEs and docs steered Cursor and other coding assistants: CopyPasta license attack (HiddenLayer)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-hiddenlayer-copypasta",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. "
+  },
+  {
+   "id": "e03-rules-file-backdoor",
+   "text": "Words in rules and configuration files steered GitHub Copilot and Cursor: Rules File Backdoor (Pillar Security)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-pillar-rules-backdoor",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-github-hidden-unicode",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. "
+  },
+  {
+   "id": "e03-amazon-q-wiper",
+   "text": "Words in pull requests and code steered Amazon Q Developer for VS Code: Amazon Q Developer extension",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "aws-bulletin-2025-015",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "404media-amazon-q",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "nvd-cve-2025-8217",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "real-world incident. "
+  },
+  {
+   "id": "e03-clinejection",
+   "text": "Words in issues and tickets (public) steered Cline's issue-triage automation: Clinejection",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "clinejection",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "real-world incident. "
+  },
+  {
+   "id": "e03-living-off-ai-jira",
+   "text": "Words in support tickets (internal) steered an assistant connected through Atlassian's MCP server: Living off AI: Atlassian MCP and Jira Service Management (Cato CTRL)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-cato-jira-living-off-ai",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-infosec-cato-jira",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. "
+  },
+  {
+   "id": "e03-servicenow-second-order",
+   "text": "Words in other agents steered ServiceNow Now Assist agents: Second-order injection, ServiceNow Now Assist (AppOmni)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-appomni-servicenow",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-thn-servicenow",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. "
+  },
+  {
+   "id": "e03-clawhavoc",
+   "text": "Words in skills and plugins steered OpenClaw: ClawHavoc, OpenClaw's ClawHub",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "clawhub-clawhavoc",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "real-world incident. holds in part: the words steered the users, not shown to steer the agent"
+  },
+  {
+   "id": "e03-nx-s1ngularity",
+   "text": "Words in install scripts steered Claude Code, Gemini CLI and Amazon Q on victims' machines: Nx s1ngularity",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "nx-s1ngularity-ai-cli",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "real-world incident. "
+  },
+  {
+   "id": "e03-audiohijack",
+   "text": "Words in audio steered voice-enabled models in the paper's tests: AudioHijack (arXiv, 2026)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-arxiv-audiohijack",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-decrypt-audiohijack",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. "
+  }
+ ]
+}
