@@ -7,31 +7,51 @@
   "source": "Every number on screen is from the article The ultimate insider (newsroom.sgit.ai, 30 September 2026), each linked to its source on the script page",
   "beats": [
     {
+      "id": "prelude",
+      "act": "Prelude: how this was made",
+      "dur": 90,
+      "title": "How this was made",
+      "part": 1,
+      "slide": {
+        "src": "../articles/how-this-talk-was-built.html"
+      },
+      "say": "Before I start: how this talk was made. Since a quarter past midnight, a team of agents has built this site and this deck: each with a role, a mandate, its own key, an hourly wake, and a review before and after every wake. By five this afternoon, that was 510 commits and 164 releases, 182 of the commits overnight, and not one hold. Hold that picture. I will come back to it.",
+      "sources": [
+        [
+          "Team in numbers, from this repository's public records, 17:02 UTC",
+          "https://the-ultimate-insider.presentation.sgit.ai/articles/how-this-talk-was-built.html"
+        ]
+      ],
+      "cue": "The safe floor is the conductor's article. motion@'s 'meet the team' replaces this slide if it lands by 18:15. Numbers as of 17:02 UTC; say 'by five this afternoon'."
+    },
+    {
       "id": "title",
       "act": "Opening",
-      "dur": 60,
+      "dur": 45,
       "title": "The ultimate insider",
       "slide": {
         "src": "slides/title/index.html"
       },
       "say": "Good evening. I am Dinis. Tonight is about a perfect storm we are brewing, out of three problems you already know: agents, the infrastructure that is supposed to hold them, and the risk management that is supposed to decide what to do about both.",
-      "cue": "Livestream starts around 7 pm. Wait for the room. The site is on the slide: everything tonight, slides and sources, is there."
+      "cue": "Livestream starts around 7 pm. Wait for the room. The site is on the slide: everything tonight, slides and sources, is there.",
+      "part": 1
     },
     {
       "id": "three",
       "act": "Opening",
-      "dur": 90,
+      "dur": 120,
       "title": "The perfect storm we are brewing",
       "slide": {
         "src": "slides/three/index.html"
       },
       "say": "We are brewing a perfect storm, and its ingredients are three things each of you already knows, now arriving at the same time. One: AI agents are the insider threat that never scaled before. Two: the infrastructure that has to contain them was built for static code, and it struggles to stay up on its own. Three: the risk management that has to decide what to do about both still runs on spreadsheets, at the speed of quarters. Each one is a known problem on its own. Together they make the storm, and where they overlap is the scenario this talk is about.",
-      "cue": "Let the circles move together before the last sentence."
+      "cue": "Let the circles move together before the last sentence.",
+      "part": 1
     },
     {
       "id": "definition",
       "act": "Part one: the insider with no limits",
-      "dur": 90,
+      "dur": 75,
       "title": "A threat is anything that causes business impact",
       "slide": {
         "src": "slides/definition/index.html"
@@ -43,18 +63,20 @@
           "Ponemon and DTEX, 2025 Cost of Insider Risks",
           "https://www.dtex.ai/blog/2025-cost-insider-risks-takeaways/"
         ]
-      ]
+      ],
+      "part": 1
     },
     {
       "id": "s-e01",
-      "dur": 75,
+      "dur": 60,
       "title": "E01: what an agent is, and how it grew",
       "slide": {
         "src": "../studio/lab/e01/v2/index.html"
       },
       "say": "Watch what an agent is: a model, then tools, then a loop, then everything it is wired into. Each step adds reach, and the reach is the point.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part one: the insider with no limits"
+      "act": "Part one: the insider with no limits",
+      "part": 1
     },
     {
       "id": "loop",
@@ -74,34 +96,37 @@
           "Simon Willison, The lethal trifecta",
           "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"
         ]
-      ]
+      ],
+      "part": 1
     },
     {
       "id": "s-e03",
-      "dur": 60,
+      "dur": 45,
       "title": "E03: every source is a way in",
       "slide": {
         "src": "../studio/lab/e03/v1/index.html"
       },
       "say": "And everything it reads is a way in: email, calendar, documents, tickets, web pages, repositories. In the real incidents, the words came in through things it builds with.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part one: the insider with no limits"
+      "act": "Part one: the insider with no limits",
+      "part": 1
     },
     {
       "id": "s-e08",
-      "dur": 60,
+      "dur": 45,
       "title": "E08: the lethal trifecta",
       "slide": {
         "src": "../studio/lab/e08/v1/index.html"
       },
       "say": "Put three things together, private data, untrusted content and a way to send data out, and one injected sentence is enough.",
       "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
-      "act": "Part one: the insider with no limits"
+      "act": "Part one: the insider with no limits",
+      "part": 1
     },
     {
       "id": "limits",
       "act": "Part one: the insider with no limits",
-      "dur": 120,
+      "dur": 150,
       "title": "The attacker's limits were accidental controls",
       "slide": {
         "src": "../studio/lab/e04/v2/index.html"
@@ -116,12 +141,13 @@
           "ABC News, the gym-booking agent, 10 August 2026",
           "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986"
         ]
-      ]
+      ],
+      "part": 1
     },
     {
       "id": "no-worm-era",
       "act": "Part one: the insider with no limits",
-      "dur": 120,
+      "dur": 180,
       "title": "No worm era since, and attackers are businesses",
       "slide": {
         "src": "slides/outages/index.html"
@@ -141,12 +167,13 @@
           "https://www.anthropic.com/news/disrupting-AI-espionage"
         ]
       ],
-      "cue": "Say 'in recent years', not 'the last twelve months'. The slide is the outages slide until the worm-era animation lands."
+      "cue": "Say 'in recent years', not 'the last twelve months'. The slide is the outages slide until the worm-era animation lands.",
+      "part": 1
     },
     {
       "id": "building",
       "act": "Part one: the insider with no limits",
-      "dur": 90,
+      "dur": 120,
       "title": "They turned left. Agents turn right.",
       "slide": {
         "src": "../motion/lab/the-building/v1/index.html"
@@ -162,23 +189,25 @@
           "https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/"
         ]
       ],
-      "cue": "motion@'s M01 v1: four stops; the numbers are in the voice, not on the slide. The plain slide with the numbers stays at talk/slides/building/."
+      "cue": "motion@'s M01 v1: four stops; the numbers are in the voice, not on the slide. The plain slide with the numbers stays at talk/slides/building/.",
+      "part": 1
     },
     {
       "id": "s-e05",
-      "dur": 60,
+      "dur": 45,
       "title": "E05: pivoting, one system to the next",
       "slide": {
         "src": "../studio/lab/e05/v1/index.html"
       },
       "say": "And it does not stop at one system. What it finds in one place takes it to the next.",
       "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
-      "act": "Part one: the insider with no limits"
+      "act": "Part one: the insider with no limits",
+      "part": 1
     },
     {
       "id": "incidents",
       "act": "Part one: the insider with no limits",
-      "dur": 150,
+      "dur": 210,
       "title": "Five public incidents, three of them not attacks",
       "slide": {
         "src": "slides/incidents/index.html"
@@ -210,29 +239,32 @@
           "Microsoft, Midnight Blizzard",
           "https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard"
         ]
-      ]
+      ],
+      "part": 1
     },
     {
       "id": "inside",
       "act": "Part one: the insider with no limits",
-      "dur": 60,
+      "dur": 75,
       "title": "The outside is mature, the inside is not",
       "slide": {
         "src": "slides/maps/inside/index.html"
       },
       "say": "So the outside is in balance. Exploitation at the edge is rising, but it is a trend, not a flood: everything facing the internet has been attacked for decades, and it is watched and patched. The inside is where nobody looked. Legacy applications few can maintain. Internal systems that have never met an adversary. Permissions that are coarse and over-granted. And security that is hard to use, even for experts.",
-      "cue": "Map 1 is a position, not a measurement: say so if asked."
+      "cue": "Map 1 is a position, not a measurement: say so if asked.",
+      "part": 1
     },
     {
       "id": "s-e06",
-      "dur": 60,
+      "dur": 45,
       "title": "E06: hard outside, soft inside",
       "slide": {
         "src": "../studio/lab/e06/v1/index.html"
       },
       "say": "Hard on the outside, soft on the inside: once something is in, very little stands in its way.",
       "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
-      "act": "Part one: the insider with no limits"
+      "act": "Part one: the insider with no limits",
+      "part": 1
     },
     {
       "id": "identities",
@@ -248,7 +280,8 @@
           "CyberArk, 2025 Identity Security Landscape",
           "https://www.cyberark.com/press/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security/"
         ]
-      ]
+      ],
+      "part": 1
     },
     {
       "id": "permissions",
@@ -264,18 +297,20 @@
           "Microsoft, 2023 State of Cloud Permissions Risks",
           "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/2023-state-of-cloud-permissions-risks-report-now-published/1061397"
         ]
-      ]
+      ],
+      "part": 1
     },
     {
       "id": "s-e02",
-      "dur": 75,
+      "dur": 60,
       "title": "E02: the blast radius",
       "slide": {
         "src": "../studio/lab/e02/v3/index.html"
       },
       "say": "This is the blast radius of one internal agent: everything its grant reaches, grouped by what it touches, against the small core it is actually for.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part one: the insider with no limits"
+      "act": "Part one: the insider with no limits",
+      "part": 1
     },
     {
       "id": "infrastructure",
@@ -295,23 +330,25 @@
           "pki.sgit.ai",
           "https://pki.sgit.ai/"
         ]
-      ]
+      ],
+      "part": 1
     },
     {
       "id": "s-e07",
-      "dur": 60,
+      "dur": 45,
       "title": "E07: a typical deployment, mapped",
       "slide": {
         "src": "../studio/lab/e07/v1/index.html"
       },
       "say": "Open one box on a typical architecture diagram, and this is everything it reaches.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part one: the insider with no limits"
+      "act": "Part one: the insider with no limits",
+      "part": 1
     },
     {
       "id": "integrity",
       "act": "Part one: the insider with no limits",
-      "dur": 90,
+      "dur": 180,
       "title": "Integrity: the original, changed",
       "slide": {
         "src": "slides/integrity/index.html"
@@ -326,7 +363,8 @@
           "Ayinde v Haringey; Al-Haroun v Qatar National Bank [2025] EWHC 1383 (Admin)",
           "https://www.judiciary.uk/wp-content/uploads/2025/06/Ayinde-v-London-Borough-of-Haringey-and-Al-Haroun-v-Qatar-National-Bank.pdf"
         ]
-      ]
+      ],
+      "part": 2
     },
     {
       "id": "team",
@@ -337,12 +375,13 @@
         "src": "slides/team/index.html"
       },
       "say": "Now, the turn. This site, and the talk you are watching, are made by a team of agents. Each one has a role, a mandate, a scope it may write, its own key, an hourly wake, and a review before and after every wake. They work in sync, all night. This is what agentic work will look like: order and structure. And without its policies, a team like this goes off-piste just as fast. Remember the attackers who need a business case? Our agents come with one: ours. We give them the brief. The capability is the orchestration, not the model.",
-      "cue": "Benign only: nothing attack-shaped about the team. The site's agents page is the evidence."
+      "cue": "Benign only: nothing attack-shaped about the team. The site's agents page is the evidence.",
+      "part": 2
     },
     {
       "id": "spreadsheets",
       "act": "Part two: explorer coding",
-      "dur": 120,
+      "dur": 290,
       "title": "Every spreadsheet becomes an application",
       "slide": {
         "src": "slides/maps/explorer/index.html"
@@ -370,23 +409,25 @@
           "Trending Topics, Replit, 2026",
           "https://www.trendingtopics.eu/replit-raises-400m-tripling-its-valuation-to-9-billion-in-six-months/"
         ]
-      ]
+      ],
+      "part": 2
     },
     {
       "id": "way-out",
       "act": "Part three: brakes, and the opportunity",
-      "dur": 60,
+      "dur": 75,
       "title": "The way out",
       "slide": {
         "src": "../studio/lab/b01/v2/way-out/index.html"
       },
       "say": "So, the way out. Four moves. Measure what the agent can actually reach. Write down what stands in the way. Give it a licence to operate that can be suspended. And let it earn its autonomy.",
-      "cue": "Change of tone here: from the problem to the work."
+      "cue": "Change of tone here: from the problem to the work.",
+      "part": 2
     },
     {
       "id": "abp",
       "act": "Part three: brakes, and the opportunity",
-      "dur": 120,
+      "dur": 180,
       "title": "Reach, mandate, the gap, and what stands in it",
       "slide": {
         "src": "slides/abp/index.html"
@@ -401,18 +442,20 @@
           "The Kit Bag plan",
           "https://sgit.ai/demos/vaults/kit-bag/index.html"
         ]
-      ]
+      ],
+      "part": 2
     },
     {
       "id": "s-e09",
-      "dur": 75,
+      "dur": 60,
       "title": "E09: mandate against grant",
       "slide": {
         "src": "../studio/lab/e09/v1/index.html"
       },
       "say": "An Agent Behaviour Policy in one picture: the mandate, the grant, the gap between them, and what stands in the way of each row.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 2
     },
     {
       "id": "s-port-abp",
@@ -423,7 +466,8 @@
       },
       "say": "The same idea, worked through: a coder's mandate compiled into rules, then real actions through it.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 2
     },
     {
       "id": "s-port-gate",
@@ -434,34 +478,37 @@
       },
       "say": "The same actions through the default, and then through the policy.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 2
     },
     {
       "id": "s-e10",
-      "dur": 60,
+      "dur": 45,
       "title": "E10: only a boundary is a control",
       "slide": {
         "src": "../studio/lab/e10/v1/index.html"
       },
       "say": "Four kinds of barrier. Only one of them is a control the agent cannot talk its way past.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 2
     },
     {
       "id": "s-e13",
-      "dur": 60,
+      "dur": 45,
       "title": "E13: five published examples",
       "slide": {
         "src": "../studio/lab/e13/v1/index.html"
       },
       "say": "And five published examples, each on the same chart, so you can compare the shapes.",
       "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 2
     },
     {
       "id": "licence",
       "act": "Part three: brakes, and the opportunity",
-      "dur": 60,
+      "dur": 120,
       "title": "A licence to operate, that can be suspended",
       "slide": {
         "src": "slides/licence/index.html"
@@ -473,72 +520,20 @@
           "RiskMandate, licence to operate",
           "https://riskmandate.ai/licence-to-operate.html"
         ]
-      ]
+      ],
+      "part": 2
     },
     {
       "id": "s-e14",
-      "dur": 60,
+      "dur": 45,
       "title": "E14: earning autonomy",
       "slide": {
         "src": "../studio/lab/e14/v1/index.html"
       },
       "say": "Autonomy is earned a level at a time, on evidence from the level below.",
       "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
-    },
-    {
-      "id": "evolution",
       "act": "Part three: brakes, and the opportunity",
-      "dur": 90,
-      "title": "Evolution, and who builds it",
-      "slide": {
-        "src": "slides/maps/evolution/index.html"
-      },
-      "say": "Now the opportunity. Everything in security evolves: from genesis, to custom built, to product, to commodity. Scanning, patching and identity are commodities. Measured reach, behaviour policies and containment for agents are in genesis today, and they will move right. Pioneers will invent them, settlers will turn them into products, town planners will make them utilities. Every one of those steps is a company.",
-      "cue": "Map 4 is the storyteller's: positions, not measurements."
-    },
-    {
-      "id": "next-companies",
-      "act": "Part three: brakes, and the opportunity",
-      "dur": 60,
-      "title": "The next security companies",
-      "slide": {
-        "src": "slides/maps/next-companies/index.html"
-      },
-      "say": "And the next generation of security companies will look like this team: agents with mandates, evidence vaults, a harness, behaviour policies. Not replacing people: augmenting them. Imagine this team with a human expert in each role."
-    },
-    {
-      "id": "s-e11",
-      "dur": 60,
-      "title": "E11: the kernel was told first",
-      "slide": {
-        "src": "../studio/lab/e11/v1/index.html"
-      },
-      "say": "Containment that the agent cannot widen: the boundary is set before the agent starts.",
-      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
-    },
-    {
-      "id": "s-sharness",
-      "dur": 50,
-      "title": "SHarness: without and with",
-      "slide": {
-        "src": "../studio/lab/sharness/without-with/v2/index.html"
-      },
-      "say": "The same agent, without a harness and with one.",
-      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
-    },
-    {
-      "id": "s-e12",
-      "dur": 60,
-      "title": "E12: the blast radius, contained",
-      "slide": {
-        "src": "../studio/lab/e12/v1/index.html"
-      },
-      "say": "And the blast radius again, contained: what it looks like when the design holds.",
-      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
-      "act": "Part three: brakes, and the opportunity"
+      "part": 2
     },
     {
       "id": "demos",
@@ -549,7 +544,20 @@
         "src": "slides/demos/index.html"
       },
       "say": "Let me show you, live. Everything you are about to see is open source, and running in this slide.",
-      "cue": "Demo list to be confirmed by Dinis before the talk. Have each one open in its own tab, and a recorded fallback for each."
+      "cue": "Demo list to be confirmed by Dinis before the talk. Have each one open in its own tab, and a recorded fallback for each.",
+      "part": 3
+    },
+    {
+      "id": "s-sharness-watch",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 45,
+      "title": "SHarness: what to watch for",
+      "part": 3,
+      "slide": {
+        "src": "../studio/lab/sharness/live-demo/v1/index.html"
+      },
+      "say": "Here is what to watch for in the live demo, stage by stage.",
+      "cue": "Studio piece (ruv.sgit's SHarness series), not yet reviewed by deck: skip it in the build mode if the live demo speaks for itself."
     },
     {
       "id": "live-sharness-linux",
@@ -560,51 +568,104 @@
       },
       "say": "This is not a video. This slide is running a real Linux kernel, in this browser tab, with SHarness inside it. The policy is applied by the kernel before the agent starts, and nothing is installed on this machine.",
       "cue": "LIVE: the real page, loaded in the slide. It takes about a minute or two to boot: open this slide early, or start talking over the boot log. Fallback: the link at the foot, or a recording.",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
+    },
+    {
+      "id": "s-sharness-recorded",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 45,
+      "title": "SHarness: the kernel in a tab, recorded",
+      "part": 3,
+      "slide": {
+        "src": "../studio/lab/sharness/kernel-in-a-tab/v1/index.html"
+      },
+      "say": "If the network has let us down, this is the same boot, recorded. If it has not, this is the recap.",
+      "cue": "The offline fallback for the live Linux slide (the editor's answer, 17:15): show it if the live slide fails, else as the recap."
     },
     {
       "id": "live-sharness-playground",
-      "dur": 60,
+      "dur": 90,
       "title": "The SHarness playground",
       "slide": {
         "src": "slides/live/sharness-playground/index.html"
       },
       "say": "And here you can type the commands yourself. Try to get out of the harness, and tell me what you find.",
       "cue": "LIVE: the real page, loaded in the slide. The invitation to escape: the project's own pages say what is in scope and where to report.",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
+    },
+    {
+      "id": "s-e11",
+      "dur": 45,
+      "title": "E11: the kernel was told first",
+      "slide": {
+        "src": "../studio/lab/e11/v1/index.html"
+      },
+      "say": "Containment that the agent cannot widen: the boundary is set before the agent starts.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
+    },
+    {
+      "id": "s-sharness",
+      "dur": 45,
+      "title": "SHarness: without and with",
+      "slide": {
+        "src": "../studio/lab/sharness/without-with/v2/index.html"
+      },
+      "say": "The same agent, without a harness and with one.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
+    },
+    {
+      "id": "s-e12",
+      "dur": 45,
+      "title": "E12: the blast radius, contained",
+      "slide": {
+        "src": "../studio/lab/e12/v1/index.html"
+      },
+      "say": "And the blast radius again, contained: what it looks like when the design holds.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
     },
     {
       "id": "live-vault-risk-mandate",
-      "dur": 60,
+      "dur": 90,
       "title": "A vault, opened live",
       "slide": {
         "src": "slides/live/vault-risk-mandate/index.html"
       },
       "say": "This bit in the middle is a vault, encrypted, being opened right now in the page with a read key its owner published. The server that holds it cannot read it.",
       "cue": "LIVE: the real page, loaded in the slide. Only read keys their owners already published.",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
     },
     {
       "id": "live-abp",
-      "dur": 45,
+      "dur": 60,
       "title": "Agent Behaviour Policies, live",
       "slide": {
         "src": "slides/live/abp/index.html"
       },
       "say": "These are the published behaviour policy examples, live on abp.sgit.ai: the reach, the mandate, the gap and the barriers, for real agents.",
       "cue": "LIVE: the real page, loaded in the slide. ",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
     },
     {
       "id": "live-what-can-it-do",
-      "dur": 45,
+      "dur": 60,
       "title": "What can it do",
       "slide": {
         "src": "slides/live/what-can-it-do/index.html"
       },
       "say": "And this is the reach, measured: what an agent can actually do, capability by capability.",
       "cue": "LIVE: the real page, loaded in the slide. ",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
     },
     {
       "id": "live-sgit-demos",
@@ -615,12 +676,36 @@
       },
       "say": "Everything you have just seen is open source, and runs in the browser. It is all on sgit.ai.",
       "cue": "LIVE: the real page, loaded in the slide. ",
-      "act": "Part three: brakes, and the opportunity"
+      "act": "Part three: brakes, and the opportunity",
+      "part": 3
+    },
+    {
+      "id": "evolution",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 180,
+      "title": "Evolution, and who builds it",
+      "slide": {
+        "src": "slides/maps/evolution/index.html"
+      },
+      "say": "Now the opportunity. Everything in security evolves: from genesis, to custom built, to product, to commodity. Scanning, patching and identity are commodities. Measured reach, behaviour policies and containment for agents are in genesis today, and they will move right. Pioneers will invent them, settlers will turn them into products, town planners will make them utilities. Every one of those steps is a company.",
+      "cue": "Map 4 is the storyteller's: positions, not measurements.",
+      "part": 3
+    },
+    {
+      "id": "next-companies",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 90,
+      "title": "The next security companies",
+      "slide": {
+        "src": "slides/maps/next-companies/index.html"
+      },
+      "say": "And the next generation of security companies will look like this team: agents with mandates, evidence vaults, a harness, behaviour policies. Not replacing people: augmenting them. Imagine this team with a human expert in each role.",
+      "part": 3
     },
     {
       "id": "brakes",
       "act": "Close",
-      "dur": 60,
+      "dur": 120,
       "title": "Brakes, and go build",
       "slide": {
         "src": "slides/brakes/index.html"
@@ -636,7 +721,8 @@
           "The PHP Foundation, 21 October 2026",
           "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"
         ]
-      ]
+      ],
+      "part": 3
     }
   ]
 }
