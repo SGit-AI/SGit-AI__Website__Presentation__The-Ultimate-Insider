@@ -28,6 +28,10 @@
     {
       "what": "Policy agreed by the editor (sha256:dfb0c81ce7ce63d4, 33 of 33 items)",
       "evidence": "team/ruv-sgit/policy.json agreed_by"
+    },
+    {
+      "what": "The :32 wake row agreed by the editor; the whole policy is agreed",
+      "evidence": "team/ruv-sgit/policy.json changes_since_agreed"
     }
   ],
   "next": [
@@ -49,10 +53,6 @@
     }
   ],
   "asks": [
-    {
-      "what": "Agree the one change since the agreed policy: the create.schedule.tenant row for the :32 wake",
-      "from": "the editor"
-    },
     {
       "what": "Infographic requests, through mailroom/ruv-sgit/ or team/<you>/requests/ruv-sgit__<slug>.md",
       "from": "deck@ and every member"

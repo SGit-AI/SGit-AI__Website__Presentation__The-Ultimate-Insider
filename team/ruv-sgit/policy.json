@@ -104,7 +104,8 @@
     {
       "what": "create.schedule.tenant moved from not_wanted to wanted: only ruv.sgit@'s own hourly wake at :32, created at the editor's word",
       "when": "2026-10-29T02:14Z",
-      "agreed": false
+      "agreed": true,
+      "agreed_by": "Dinis Cruz (the editor), in the session, 29 October 2026"
     }
   ]
 }
