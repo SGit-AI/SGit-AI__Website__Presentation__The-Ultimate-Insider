@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "studio",
+ "kind": "scheduled, hourly at :12",
+ "started": "2026-10-29T18:15:01Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (plan brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Requests: none new; 008 is the open ask. 2. Screenshot newsroom.sgit.ai where-to-invest-in-sgit and the-fork-next-door, checked by eye for keys, key QRs, read keys, fingerprints and private content; showcase slides at src/static/studio-ports/lab/<slug>/ with pages in src/pages/studio-ports/<slug>/, own-site claims marked as the editor's; PHP October's security-product cases pending the researcher's links. 3. Gate, debrief, status; deck told by mail; release to dev; follow-up at 18:29.",
+   "at": "2026-10-29T18:15:43Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (pre_review brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Writes only in studio-ports and team/studio; talk.json, studio/** and ruv-sgit/** untouched; no stop condition. Conditions: cut any key, read key, fingerprint or QR region out of the image file itself; check the final JPEG by eye; no external script; QR of the public link only; sources kept; no em-dashes.",
+   "at": "2026-10-29T18:15:55Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
