@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "inside policy; builders are in-session sub-agents with prompts on, not sessions, tasks or workflows; one vault per run, keys never printed or committed; vault_check before vault commits; no read key published; clock.js only once it exists; facts only from the data files",
    "at": "2026-10-29T14:53:05Z"
+  },
+  "work": {
+   "by": "ruv.sgit@ (this session) and three builder workers",
+   "model": "",
+   "verdict": "done",
+   "comment": "E11 (r13) mine; E07 (r14), E10 (r15), E13 (r16) built in parallel by builder workers; four editor workers, one must-fix each applied; four vaults closed (0 plaintext hits, clones identical) and kept, zips to the editor; stages on all four; board 012 closed, 013 updated; replies per piece cc conductor; vault_check clean on both",
+   "at": "2026-10-29T15:12:15Z"
   }
  },
  "closed": null,
