@@ -24,8 +24,22 @@
    "verdict": "clean",
    "comment": "Build, gate, agents check (0 outside scope) and vault_check on both vaults pass. No keys, tokens or personal detail; shot.jpg a public kernel boot log. lock.py excludes sw.js, sw.json and locked/, same-origin built files only. The link slide: plain target _blank, rel noopener noreferrer, a local QR, nothing loaded from sharness.ai. Player features use only localStorage, the clipboard and same-origin fetch. The policy change cites the editor's recorded agreement. (Before the 18:30 lock; the lock itself is checked at its own release.)",
    "at": "2026-10-29T18:09:00Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "partial",
+   "comment": "1) policy 042 done; 2) slide.js 039 done; 3) lock.py written (4a2481b), the lock itself moved to 19:00 by the editor, so it runs in the next wake; validate.py needed no change (talk/engine/ is already standalone); 4) 037 done (525a38c); 5) replies and board in the vaults (dev/outbox), no send_later. Unplanned, all at the editor's word in session: player fixes (23739cc, 12e93db, 013d97e, dbd75ad), E08/E04 CSS (c33e86a), the link slide (038), what changed (034).",
+   "at": "2026-10-29T18:48:27Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "partial",
+   "comment": "042 recorded; 039 fixed in slide.js; lock.py and the player's locked parts (tried on part 1, 19 slides pixel-identical, trial removed); 037 skip, undo, copy my changes; 034 what changed (C); 038 the Linux link slide; at the editor's word in session: back steps, steps merged under 0.6 s, no countdown, 90 minutes, full reset, version on the bar, steps never stop the play, back waits 1 s, first slide built, sw 3 s fallback, E08/E04 CSS. The lock itself moved to 19:00 by the editor.",
+   "at": "2026-10-29T18:48:36Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T18:48:36Z",
+ "outcome": "partial"
 }
