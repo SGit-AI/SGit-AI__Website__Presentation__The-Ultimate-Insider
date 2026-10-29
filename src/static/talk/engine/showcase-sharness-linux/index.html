@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linux in a browser tab: SHarness E09</title>
+<link rel="stylesheet" href="../slide.css">
+<link rel="stylesheet" href="../showcase.css">
+<script src="../slide.js"></script>
+<script src="../qrcode.js"></script>
+<script src="../showcase.js"></script>
+<!-- The link slide for Linux in the browser tonight (conductor 038): a screenshot captured from the page at 18:0x UTC on
+     29 October 2026, a plain link that opens it in a new tab, and a QR of the same address. Nothing is loaded from
+     sharness.ai by this slide. The offline fallback is ruv.sgit's kernel-in-a-tab v1 (deck's s-sharness-recorded). -->
+<script type="application/json" id="showcase">
+{
+ "kicker": "SHarness · live",
+ "title": "A real Linux kernel, booting in this browser tab",
+ "text": "Alpine with Landlock on, in WebAssembly: nothing installed on this machine. A minute or two to boot.",
+ "image": "shot.jpg", "size": [1440, 900],
+ "link": "https://sharness.ai/code/browser/demo/index.html",
+ "source": "SHarness E09: a Landlock kernel in a tab",
+ "open": "Boot it now, in a new tab",
+ "stages": [
+  { "at": 0, "crop": [0, 0, 1440, 900], "label": "the page" },
+  { "at": 2, "crop": [0, 0, 1170, 200], "label": "what runs",
+    "callouts": [ { "box": [8, 92, 1154, 26], "text": "Alpine, Linux 6.18 with Landlock, in WebAssembly" },
+                  { "box": [8, 120, 1154, 58], "text": "The guest's network is the page: fetch() on port 80 only" } ] },
+  { "at": 6, "crop": [0, 180, 820, 420], "label": "the kernel boots", "dim": true,
+    "callouts": [ { "box": [8, 218, 812, 46], "text": "The kernel's own boot log, in the tab" } ] }
+ ],
+ "end": 10
+}
+</script>
+</head>
+<body>
+<div id="cv"></div>
+</body>
+</html>
