@@ -1,0 +1,35 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request: build the five-step wake",
+ "started": "2026-10-29T02:14:16Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Amended after the pre-review's change, all five conditions adopted: 0) the five-step wake: WAKE.md section (the conductor's file), sub-agent briefs in team/conductor/reviews/, `wake.py check` in admin/tools/ for wake records from now on (dev asked by request to call it from the gate), one CLAUDE.md line at the editor's word, named outside scope, every member told by To- trailers; 1) onboarding: ONBOARDING.md stays in team/conductor/ (already on the site at /admin/docs/onboarding.html), linked from the conductor's WAKE.md and ROLE.md, requests to deck and ruv-sgit in the mail vault; 2) tui-evidence-public: read-key clone, vault_check.py, then only its read key into vaults.json; 3) researcher's own task id copied into schedule.json only; nothing written in team/researcher/, no task created.",
+   "at": "2026-10-29T02:14:53Z"
+  }
+ },
+ "closed": null,
+ "outcome": null,
+ "history": [
+  {
+   "pre_review": {
+    "by": "security",
+    "model": "sonnet",
+    "verdict": "change",
+    "at": "2026-10-29T02:17:00Z",
+    "comment": "Go with conditions. (1) ONBOARDING.md stays in team/conductor/, linked from the conductor's own WAKE.md and ROLE.md; other members asked by request. (2) Only tui-evidence-public's READ key into vaults.json, after vault_check.py passes; no vault key in any file. (3) Do not write researcher's status.json, only the conductor's schedule.json; create no scheduled task. (4) The five-step check in admin/tools/**, not admin/build/; only for wake records from now on. (5) CLAUDE.md edit is at the editor's word: name it outside scope and tell all members."
+   },
+   "plan_before": {
+    "by": "conductor",
+    "model": "sonnet",
+    "verdict": "go",
+    "comment": "Amended after the pre-review's change, all five conditions adopted: 0) the five-step wake: WAKE.md section (the conductor's file), sub-agent briefs in team/conductor/reviews/, `wake.py check` in admin/tools/ for wake records from now on (dev asked by request to call it from the gate), one CLAUDE.md line at the editor's word, named outside scope, every member told by To- trailers; 1) onboarding: ONBOARDING.md stays in team/conductor/ (already on the site at /admin/docs/onboarding.html), linked from the conductor's WAKE.md and ROLE.md, requests to deck and ruv-sgit in the mail vault; 2) tui-evidence-public: read-key clone, vault_check.py, then only its read key into vaults.json; 3) researcher's own task id copied into schedule.json only; nothing written in team/researcher/, no task created.",
+    "at": "2026-10-29T02:14:53Z"
+   }
+  }
+ ]
+}
