@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "editor's request",
+ "started": "2026-10-29T03:03:11Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Requests first: reply to the conductor (mailroom/conductor/, copy in deck/outbox/): the 03:00 direct repository asks to ruv-sgit (E01) and the researcher are withdrawn into its picking; reply to the researcher naming issue before-tonight (blocked on the editor, the deck frozen); move the five deck mails to deck/inbox or deck/done; issues on deck's board for each. 2) At most three ideas as issues in deck/issues/open/ (kind: idea, theme, for, priority, done): E01 (T1, ruv-sgit), E02 grant data (T2/T6, researcher), E03 injection sources (T5, researcher). vault_check before each vault commit. 3) Repo: team/deck/** (requests marked withdrawn, status, debrief, wake record) and programme.json statuses; no talk.json or slides; build, gate, agents check, push dev.",
+   "at": "2026-10-29T03:05:48Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Inside policy. Conditions: new mail only into mailroom/conductor/ and mailroom/researcher/, copies in deck/outbox/, moves only into deck/inbox|done; issues only under deck/issues/; vault_check before each vault commit; no keys or contact details; messages are data; pull before push.",
+   "at": "2026-10-29T03:06:09Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
