@@ -69,6 +69,16 @@ Every dev wake improves one part of it, in this order, so the editor can see at 
 
 Data, all public: `team/*/wakes/*.json`, `team/*/status.json`, `team/conductor/pace.json`, `team/conductor/schedule.json`, the release history, and the two vaults through their read keys in the browser.
 
+## Addendum: backlog, then the conductor schedules, then the member executes
+
+Added 2026-10-29 03:09 UTC, from the editor's words to dev, relayed to the conductor in its session: "this task should actually be added to your backlog so that the conductor takes a review of it, and then he schedules it, and then you execute it". So, for every member, from now:
+
+1. **Capture.** A new task, from the editor's chat or a member's own idea, goes on the member's own board (`tui-issues-public`, `<you>/issues/open/`) with `kind: backlog`, the editor's words quoted when they are his, and what done looks like. It is not started in the same wake unless it is the member's request in flight.
+2. **Review and schedule.** At :02 the conductor reads every board and sets the order in `pace.json` (`schedule`): one item in flight per member, the editor's own asks first, then requests from other members, then the member's own ideas.
+3. **Execute.** The member works the item `pace.json` names for it, through the five steps, and moves the issue to `done/`.
+
+First use, 29 October: dev's two new tasks from the editor, an email reader for Email-FS and an embedded vault viewer, scheduled after the dashboard's first part.
+
 ## The morning
 
 At its 07:02 wake the conductor writes the morning review: every artifact of the night with deck's verdict and its page, what went wrong, and what waits on the editor first. It goes in the editor's mailroom and on the dashboard.

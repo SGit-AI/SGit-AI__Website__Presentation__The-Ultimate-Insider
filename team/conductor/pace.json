@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T03:08:00Z",
+ "updated": "2026-10-29T03:09:42Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -260,6 +260,26 @@
    "status": "in review by deck",
    "at": "2026-10-29T02:59:00Z",
    "path": "src/static/studio/lab/b01/storyboard/index.html"
+  },
+  {
+   "id": "dev-email-reader",
+   "kind": "backlog",
+   "owner": "dev",
+   "from": "editor",
+   "title": "An email reader for Email-FS on the site: every agent, every message and thread, each outbox and its status",
+   "status": "scheduled 04:47",
+   "at": "2026-10-29T03:09:42Z",
+   "conditions": "reads the mail vault with its published read key only; shows mail as material"
+  },
+  {
+   "id": "dev-vault-embed",
+   "kind": "backlog",
+   "owner": "dev",
+   "from": "editor",
+   "title": "An embedded vault viewer on the site (sgit.ai has examples)",
+   "status": "scheduled 05:47",
+   "at": "2026-10-29T03:09:42Z",
+   "conditions": "published read keys only, never a vault key"
   }
  ],
  "edges": [
@@ -422,6 +442,16 @@
    "from": "ruv-b01-storyboard",
    "to": "deck",
    "kind": "delivers"
+  },
+  {
+   "from": "editor-brief",
+   "to": "dev-email-reader",
+   "kind": "asks"
+  },
+  {
+   "from": "editor-brief",
+   "to": "dev-vault-embed",
+   "kind": "asks"
   }
  ],
  "log": [
@@ -439,6 +469,11 @@
    "at": "2026-10-29T03:08:00Z",
    "by": "conductor",
    "line": "Programme: deck's 14 experiments are the queue. In flight: E01 with ruv.sgit, the data for 7 experiments with researcher, the dashboard with dev; B01 storyboard in review by deck. Next for ruv.sgit: E02, after E01 and its data. Three repository requests routed into the mail vault."
+  },
+  {
+   "at": "2026-10-29T03:09:42Z",
+   "by": "conductor",
+   "line": "The editor's two new asks to dev scheduled: the email reader at 04:47, the embedded vault at 05:47, after the dashboard's first part at 03:47. Backlog, then schedule, then execute is now the rule for every member."
   }
  ],
  "queue": {
@@ -449,7 +484,7 @@
  "next": {
   "ruv-sgit": "E02 once E01 is back and its data has landed",
   "researcher": "nothing new until the data request is answered",
-  "dev": "the dashboard (in flight)"
+  "dev": "03:47 the dashboard part 1; 04:47 the email reader; 05:47 the embedded vault"
  },
  "routed": [
   "team/deck/requests/conductor__pace-the-studio.md",
@@ -457,5 +492,30 @@
   "team/deck/requests/ruv-sgit__agent-evolution.md",
   "team/researcher/requests/conductor__researcher-in-the-schedule.md",
   "team/ruv-sgit/requests/deck__b01-storyboard.md"
- ]
+ ],
+ "schedule": {
+  "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
+  "dev": [
+   {
+    "at": "03:47",
+    "item": "conductor-dashboard, part 1: now and the pace grid"
+   },
+   {
+    "at": "04:47",
+    "item": "dev-email-reader"
+   },
+   {
+    "at": "05:47",
+    "item": "dev-vault-embed"
+   },
+   {
+    "at": "06:47",
+    "item": "conductor-dashboard, part 3: the flow graph"
+   },
+   {
+    "at": "later",
+    "item": "the dashboard's other parts, then dev's own 003 and 004"
+   }
+  ]
+ }
 }
