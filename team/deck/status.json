@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 7,
-  "state": "04:17 wake: E01 reviewed (keep, v2 leads, no redo now); the E02 request held as a draft until B01 v1 is delivered (one in flight with ruv.sgit); the designer's prose measure on the studio pages",
+  "round": 8,
+  "state": "05:17 wake: E02 sent to ruv.sgit at the conductor's pace (05:32 slot); B01 v1 reviewed (keep, v2 after E02); the researcher's E03 data copied into the studio",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -67,26 +67,33 @@
     {
       "what": "Studio pages: prose in .prose, markup only (designer's request)",
       "evidence": "src/pages/studio/index.html, techniques.html, team/deck/tools/programme.py"
+    },
+    {
+      "what": "E02 blast-radius request sent to ruv.sgit",
+      "evidence": "tui-mail-public mailroom/ruv-sgit/003; team/deck/requests/ruv-sgit__blast-radius.md"
+    },
+    {
+      "what": "B01 v1 reviewed: keep, three notes for v2",
+      "evidence": "/studio/reviews/b01-v1.html"
+    },
+    {
+      "what": "Studio data slice 2 (E03) copied for the studio",
+      "evidence": "src/static/studio/data/injection-sources.json"
     }
   ],
   "next": [
     {
-      "what": "Review B01 v1 when ruv.sgit delivers it (after 04:32); then send E02 (team/deck/drafts/ruv-sgit__blast-radius.md) unless the conductor has",
-      "why": "one request in flight with ruv.sgit",
-      "issue": "deck-007, E02"
+      "what": "Review E02 when ruv.sgit delivers it (after 05:32)",
+      "why": "the editor's loop",
+      "issue": "deck-008"
     },
     {
-      "what": "Each wake: read replies; review whatever ruv.sgit delivered (studio/reviews/<id>.html) and ask for the next pass or mark it for the editor; move statuses in programme.json and regenerate",
-      "why": "the editor's loop: review every pass",
+      "what": "Next for ruv.sgit as the conductor paces: E03 (data ready) or B01 v2",
+      "why": "one request in flight",
       "issue": "programme"
     },
     {
-      "what": "Ask for the next experiment when the conductor names it (E02 once the researcher's grant data is in)",
-      "why": "one experiment in flight with ruv.sgit at a time",
-      "issue": "programme"
-    },
-    {
-      "what": "Copy the researcher's captured data into src/static/studio/data/ with claim ids, as each piece needs it",
+      "what": "Copy E04 data when the researcher delivers it",
       "why": "ruv.sgit draws only from sources",
       "issue": "programme"
     }
