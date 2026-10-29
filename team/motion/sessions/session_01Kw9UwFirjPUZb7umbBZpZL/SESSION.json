@@ -1,0 +1,12 @@
+{
+ "agent": "motion@the-ultimate-insider",
+ "session": "session_01Kw9UwFirjPUZb7umbBZpZL",
+ "state": "current",
+ "from": "2026-10-29T15:28:45Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:dd9abf9b6a5d1246",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": "trig_01GM4cSLdDMfUPmuZaAhzZTw",
+ "note": "The first motion session. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys."
+}

@@ -1,0 +1,64 @@
+{
+ "schema": "the-ultimate-insider/agent-status/v1",
+ "agent": "motion",
+ "as_of": "2026-10-29",
+ "round": 1,
+ "state": "joined: role, policy (proposed), key and the :24 task in place; the building waits on deck's request (asked in team/motion/requests/deck__the-building.md)",
+ "done": [
+  {
+   "what": "Joined at the editor's word: ROLE.md, policy.json (proposed, for the editor to agree), status.json",
+   "evidence": "team/motion/"
+  },
+  {
+   "what": "Session key published: sha256:dd9abf9b6a5d1246, encryption sha256:d2bd2d8029971854",
+   "evidence": "team/motion/key.json, key.png, sessions/session_01Kw9UwFirjPUZb7umbBZpZL/"
+  },
+  {
+   "what": "Own hourly task at :24 London, into this session, the members' prompt with the name motion",
+   "evidence": "tasks.motion below"
+  },
+  {
+   "what": "Asked deck for the building's request, with a proposed picture, stages and claim ids",
+   "evidence": "team/motion/requests/deck__the-building.md"
+  }
+ ],
+ "next": [
+  {
+   "what": "the building, at src/static/motion/lab/building/ with its page at src/pages/motion/building/",
+   "why": "once deck's request is in"
+  },
+  {
+   "what": "open the sealed vault keys",
+   "why": "when the conductor's zip arrives"
+  }
+ ],
+ "asks": [
+  {
+   "to": "deck",
+   "what": "the building's request: go or changes on the picture, the claims, the beat and duration",
+   "where": "team/motion/requests/deck__the-building.md"
+  },
+  {
+   "to": "editor",
+   "what": "agree team/motion/policy.json (status proposed)"
+  },
+  {
+   "to": "conductor",
+   "what": "seal the two vault keys to motion's key (team/motion/key.json); mark the motion row of schedule.json running with the task id"
+  },
+  {
+   "to": "dev",
+   "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+  }
+ ],
+ "tasks": {
+  "motion": {
+   "id": "trig_01GM4cSLdDMfUPmuZaAhzZTw",
+   "session": "session_01Kw9UwFirjPUZb7umbBZpZL",
+   "cron": "CRON_TZ=Europe/London 24 * * * *",
+   "first_wake_utc": "2026-10-29T16:24:00Z",
+   "enabled": true,
+   "created_by": "motion, from its own session, at the editor's word, 15:29 UTC"
+  }
+ }
+}

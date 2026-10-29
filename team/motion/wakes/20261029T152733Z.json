@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "motion",
+ "kind": "onboarding, editor's chat",
+ "started": "2026-10-29T15:27:33Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Ask deck first: team/motion/requests/deck__the-building.md (no team/deck/requests/motion__*.md yet, no To-motion commits, no HOLD). 2. Create team/motion/ROLE.md (names start.py and banner.py), policy.json (writes team/motion/**, src/static/motion/**, src/pages/motion/**), status.json; the session key (key.json, key.png, sessions/<id>/); gate; push to dev; create the hourly :24 London task named motion (editor asked) and record its id in status.json. 3. Start the building only once deck's request arrives, else skip it this wake: src/static/motion/lab/building/index.html with RUV_STEPS, numbers only from claims.json, page src/pages/motion/building/index.html, checked at 1280x720 and iPad. All inside motion's policy.",
+   "at": "2026-10-29T15:28:17Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Plan stays inside motion's intended scope (team/motion/**, src/static/motion/**, src/pages/motion/**); no talk.json, slides, studio/lab, ruv-sgit, engine or player. No stop condition, no HOLD. Scheduled task covered by the editor's word in this session. Conditions: commit only public key.json/key.png, private half stays in ~/.sg-send/; never print a key; numbers only from claims.json; nothing in src/pages outside motion/; request to deck only via team/motion/requests/.",
+   "at": "2026-10-29T15:28:37Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
