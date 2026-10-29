@@ -393,7 +393,7 @@ class Site_Build:
         return (f'<h2 id="flow">The flow</h2><p class="note">The conductor\'s <a href="docs/pace.html">pace.json</a> drawn, read when the site was built: '
                 f'{len(nodes)} nodes and {len(edges)} edges, from briefs and themes to ideas, requests, artifacts, reviews and the editor\'s decisions. '
                 f'Green came back or is done, amber waits (in flight, scheduled, in review), grey is an idea or open. Lines: asks and delivers solid, reviewed dotted, redo red, sets faint. '
-                f'Hover a box or a line for its whole entry.</p>'
+                f'Hover a box for its id, full title, kind, owner and status, or a line for what it joins.</p>'
                 f'<div class="flowlists"><div><p class="kk">Waits on review · {len(waits)}</p><ul>{li(waits) or "<li>nothing</li>"}</ul></div>'
                 f'<div><p class="kk">Came back · {len(back)}</p><ul>{li(back)}</ul></div>'
                 + (f'<div><p class="kk">Edges to no node · {len(dangling)}</p><ul>{miss}</ul></div>' if dangling else '') + '</div>'
