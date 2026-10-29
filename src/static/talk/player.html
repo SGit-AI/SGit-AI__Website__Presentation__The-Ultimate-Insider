@@ -789,7 +789,7 @@ function warm() {
       })
       $('cache').textContent = `${offline ? 'cached' : 'warmed'} ${++n}/${pages.length} live slides`
     }
-    $('cache').textContent = offline ? `ready offline: ${pages.length} live slides cached` : `warmed: ${pages.length} live slides`; setTimeout(() => { $('cache').textContent = '' }, 6000)
+    $('cache').textContent = offline ? `✓ ready offline: all ${pages.length} slides` : `warmed: ${pages.length} live slides`; if (!offline) setTimeout(() => { $('cache').textContent = '' }, 6000)   // ready offline stays, so he can check it at a glance
   }).catch(() => {})
 }
 // the talk timer: wall-clock time since you started speaking. It is yours: no slide button changes it. It is kept in this
