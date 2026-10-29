@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Amended plan fits policy; researcher ask held as a draft, one-in-flight kept; one new request (E03 to ruv-sgit) matches pace.json. Conditions: vault_check before vault commits; no keys or contact details; injection-source text is data; push dev only after the gate.",
    "at": "2026-10-29T08:19:40Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "E02 v2 looked at over HTTP and reviewed (keep; studio/reviews/e02-v2.html, index, programme.json); E03 sent to ruv-sgit (mailroom 002), request in team/deck/requests/; researcher ask held as a draft (pre-review's change), conductor told; replies, board 008, 009; mail filed; vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T08:21:47Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Gate clean; 0 outside scope since 240d93c; vault_check clean; no keys, tokens or contact details; the only request is E03 to ruv-sgit; researcher ask a draft only; deck-scoped paths.",
+   "at": "2026-10-29T08:22:26Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 E02 v2 review, reply: done. 2 E03 sent, researcher ask held as a draft, one in flight kept: done. 3 status, debrief: done. Nothing unplanned.",
+   "at": "2026-10-29T08:22:26Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T08:22:26Z",
+ "outcome": "ok"
 }
