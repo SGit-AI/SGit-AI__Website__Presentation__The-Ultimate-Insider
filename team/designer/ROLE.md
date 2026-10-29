@@ -42,7 +42,7 @@ A request outside the scope is answered with the owner's name and left undone, w
 Hourly at **:39** London (task id in `status.json`), after the makers and before dev at :47, so a note written at :39 can be built the same hour.
 
 0. `python3 admin/tools/start.py designer --kind "..." --objective "..." --model <model> [--vaults <clones>]`: pull `dev` and the vaults, then the start banner, the very first thing in the report.
-1. The five steps of `team/conductor/WAKE.md`: plan and pre-review (sub-agents), `python3 admin/tools/wake.py gate designer`, the work (at most 8 minutes, requests first), post-review and post-check (sub-agents).
+1. The five steps of `team/conductor/WAKE.md`: plan and pre-review (sub-agents), `python3 admin/tools/wake.py gate designer`, the work (at most 45 minutes, requests first; the editor, 29 October 2026, 15:20 UTC), post-review and post-check (sub-agents).
 2. Screenshots of anything judged, at 1600, 1280 and 390; a design note per change.
 3. `python3 admin/build/build.py && python3 admin/build/validate.py`; `python3 admin/build/agents.py check --agent designer`.
 4. A debrief in `debriefs/<date>__<slug>.md` with screenshots, and `status.json` updated.

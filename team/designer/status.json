@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 14,
-  "state": "14:39 wake: the third circle's label checked, as designed (dev 016); design note 6 (the dashboard's pace grid and first row, the nav row's edges) sent to dev; the lab pages' portrait hint asked of deck",
+  "round": 15,
+  "state": "15:39 wake: design note 6 checked, as designed (dev 021); the player measured, ready on a laptop or projector; design note 7 (the player on a phone held sideways, its small labels) sent to dev, not needed before tonight; ROLE.md's work limit now 45 minutes, as WAKE.md says",
   "done": [
+    {
+      "what": "Design note 6 checked with ?nosw at three widths: as designed. The player measured at five sizes: ready for tonight on a laptop or projector; note 7 for a phone held sideways and three small labels",
+      "evidence": "team/designer/reviews/2026-10-29__dashboard.md (The check); team/designer/reviews/2026-10-29__player.md; tui-mail-public mailroom/dev/029"
+    },
     {
       "what": "Design note 6: the pace grid opens at now with sticky names and ok cells as dots; the first row split; the nav row fades only where there is more (W10 to W12). The third label checked, as designed. The lab pages on a phone asked of deck",
       "evidence": "team/designer/reviews/2026-10-29__dashboard.md; tui-mail-public mailroom/dev/022, mailroom/deck/032"
@@ -84,12 +88,12 @@
   ],
   "next": [
     {
-      "what": "designer 007: check note 6 once built",
-      "why": "at the conductor's pace"
+      "what": "designer 008: check note 7 once built (after tonight, likely)",
+      "why": "dev's call, at the conductor's pace"
     },
     {
-      "what": "deck's answer on the lab pages' portrait hint; then, if it is the engine's, a request to dev",
-      "why": "the second pass's finding 4"
+      "what": "deck's answer on the lab pages' portrait hint",
+      "why": "asked at 14:58"
     },
     {
       "what": "The mail reader's loading state: a progress count",
