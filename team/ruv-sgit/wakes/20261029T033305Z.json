@@ -31,8 +31,15 @@
    "verdict": "as-planned",
    "comment": "1) E01 run r3 done: lab v1 v2, page and explainer, issue 003 done, replies, mail filed; 2) B01 issue 002 open with deck's notes; 3) status, debrief, REALITY; conditions kept. The ledger's new row is part of the run.",
    "at": "2026-10-29T03:43:14Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "15 files in ruv-sgit's commits and the newest vault commits: no key, token or tracked zip; gate clean, 0 outside scope, vault_check clean; new pages load only the local engine; no directing text",
+   "at": "2026-10-29T03:43:33Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T03:43:33Z",
+ "outcome": "ok"
 }
