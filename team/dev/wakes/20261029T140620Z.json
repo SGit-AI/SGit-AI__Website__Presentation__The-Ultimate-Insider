@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T14:06:20Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. dev 016 (designer request, dev/inbox/019): in src/pages/index.html (a dev scope.holds path) \"the decision\" y 330 to 310 and \"risk on spreadsheets\" y 350 to 330; build, gate, check at 1920 and 390; close the issue, reply to designer, file 019 and 020. 2. Close: debrief, status, REALITY. The dashboard part 4 stays in its own slot at 14:47 (one item in flight).",
+   "at": "2026-10-29T14:07:00Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Edits only src/pages/index.html (in scope.holds, inside policy as CLAUDE.md and the corrected brief say), then build, gate, own issue, reply, debrief, status, REALITY. No secrets, no stop condition, no cross-member write. Conditions: no vault key in any reply; vault_check before any vault commit; dev only.",
+   "at": "2026-10-29T14:07:20Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "done",
+   "comment": "dev 016: index.html two y attributes; checked at 1920 and 390; issue closed, designer reply, 019 and 020 filed; debrief, status.",
+   "at": "2026-10-29T14:08:27Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff: two y attributes in src/pages/index.html (a dev hold), debrief, png, status, wake record. No key, token, personal detail or directive text; no cross-member writes; build and gate clean; 0 outside scope; vault_check clean on both vaults.",
+   "at": "2026-10-29T14:08:58Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done: index.html two lines, screenshot, issue closed, designer reply, 019 and 020 filed. Item 2 done: debrief, status; REALITY.md not changed because nothing it records changed (a label position). Conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T14:09:21Z"
+  }
+ },
+ "closed": "2026-10-29T14:09:21Z",
+ "outcome": "ok"
+}

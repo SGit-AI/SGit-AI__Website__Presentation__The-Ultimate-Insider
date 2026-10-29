@@ -1,0 +1,12 @@
+{
+ "agent": "storyteller@the-ultimate-insider",
+ "session": "session_01Kw9UwEvaeh3uYw9iKe5HZ3",
+ "state": "current",
+ "from": "2026-10-29T14:14:05Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:f131ad1b120b28ae",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": "trig_013ML9DZ6k9VCinyhKF7peGA",
+ "note": "The first storyteller session. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys; key.json built from the public k1. link and the public PEMs only."
+}
