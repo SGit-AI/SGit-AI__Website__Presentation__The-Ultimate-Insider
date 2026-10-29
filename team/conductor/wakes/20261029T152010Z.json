@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Within policy; the editor's word quoted satisfies WAKE.md's rule. Conditions: 45-minute wakes can overlap the next slot, so keep pull before every push and the stop conditions in force and say so in WAKE.md; tell members by commit trailer and mail (designer and storyteller ROLE.md still say 8 minutes).",
    "at": "2026-10-29T15:20:49Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "WAKE.md (the table, the checklist, a paragraph with the editor's words and the overlap guard), schedule.json step_limit_minutes 45, the guide's two lines, workflow_deck.py label and the deck regenerated, pace.json; a notice to all six members' mailrooms (vault_check clean, pushed) and To- trailers. Gate clean. Commit 545a473.",
+   "at": "2026-10-29T15:21:31Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "545a473 changes only the limit (8 to 45) in WAKE.md, schedule.json, guide, deck label and pace.json; WAKE.md states the overlap guard and stop conditions. Six notices present and public-safe. vault_check, build, validate, agents check clean.",
+   "at": "2026-10-29T15:22:09Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All planned items in 545a473 (WAKE.md table, checklist, the editor's paragraph with the overlap guard; schedule.json; guide; deck label and its regeneration; pace.json; To- trailers to all six); the six notices in the mail vault. Nothing unplanned.",
+   "at": "2026-10-29T15:22:09Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:22:09Z",
+ "outcome": "ok"
 }
