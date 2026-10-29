@@ -297,7 +297,8 @@ async function load() {
   talk.beats.forEach(b => { if (b.act && b.act !== lastAct) { lastAct = b.act; const a = document.createElement('span'); a.className = 'act'; a.style.left = pos(b.at) + '%'; a.title = 'section: ' + b.act; $('prog').appendChild(a) } })
   check()
   if (qs.has('t')) t = +qs.get('t')
-  else if (location.hash.length > 1) { const i = B.findIndex(b => b.id === decodeURIComponent(location.hash.slice(1))); if (i >= 0) t = B[i].at }   // a link to a slide opens on it
+  else if (location.hash.length <= 1 && B[0] && B[0].slide.layout === 'iframe') t = START()   // the first slide opens built, not on its blank first frame (the editor, 18:25)
+  else if (location.hash.length > 1) { const i = B.findIndex(b => b.id === decodeURIComponent(location.hash.slice(1))); if (i >= 0) t = i === 0 ? START() : B[i].at }   // a link to a slide opens on it
   if (VIEW === 'audience' || qs.has('t')) $('intro').style.display = 'none'
   if (qs.has('presenter')) document.body.classList.add('presenter')
   requestAnimationFrame(tick)
@@ -711,6 +712,7 @@ function update(b, local) {
 
 function tick(now) {
   const dt = (now - last) / 1000; last = now
+  if (resumeAt && performance.now() >= resumeAt) { resumeAt = 0; playing = true }
   post(now)
   if (playing && !held) {
     const ix0 = beatAt(t), b0 = B[ix0], end = b0.at + b0.dur
@@ -783,7 +785,8 @@ function stops(b) {
 }
 // → plays the next step from its start, so its animation shows, and holds on its built frame; pressed again it goes
 // straight to the next one, so no gap is waited out. Playing, it stays playing (the editor, 18:10)
-let stopAt = null
+let stopAt = null, resumeAt = 0
+function START() { return B[0] ? Math.min(Math.max(0, B[0].dur - 0.4), 3) : 0 }   // a few seconds into the first slide: its reveals done
 function step(dir) {
   const ix = beatAt(t), b = B[ix], local = t - b.at, sp = stops(b)
   if (review) { goBeat(ix + dir); return }
@@ -793,6 +796,7 @@ function step(dir) {
     const was = playing && stopAt == null; goBeat(ix + 1); if (!was) { playing = true; stopAt = 'first' } return
   }
   stopAt = null
+  if (dir < 0 && (playing || resumeAt)) { playing = false; resumeAt = performance.now() + 1000 }   // back while playing: wait a second before playing on, so a second ← can go back again (the editor, 18:25)
   let to = null
   if (dir > 0) to = sp.find(x => x.t > local + 0.05)
   else to = [...sp].reverse().find(x => x.t < local - 0.15)
@@ -804,6 +808,7 @@ function onKey(e) {
   if (!talk) return
   const k = e.key; let handled = true
   $('intro').style.display = 'none'; leader = true
+  if (k !== 'ArrowLeft') resumeAt = 0   // any other key decides for itself
   if (k === ' ' || k === 'k' || k === 'K') { if (held) { held = false; step(1); playing = true } else if (!playing && !B[beatAt(t)].extra && t >= MAIN - 0.1) { /* the end of the deck: Space does not run on into the extras */ } else playing = !playing }
   else if (k === 'ArrowRight' || k === 'tap') step(1)
   else if (k === 'ArrowLeft') step(-1)
@@ -827,7 +832,7 @@ function onKey(e) {
   else if (k === 's' || k === 'S') rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length] || 1
   else if (k === 'h' || k === 'H') { hold = !hold; if (!hold && held) { held = false; step(1) } }
   else if (k === 'z' || k === 'Z') toggleTimer()
-  else if (k === 'reset-timer') { if (!confirm('Reset the talk clock: the timer to 0:00 and the talk to its first slide?')) return; timer = null; saveTimer(); t = 0; beatIx = -1; playing = false; held = false }
+  else if (k === 'reset-timer') { if (!confirm('Reset the talk clock: the timer to 0:00 and the talk to its first slide?')) return; timer = null; saveTimer(); t = START(); beatIx = -1; playing = false; held = false }
   else if (k === 'g' || k === 'G') { document.body.classList.toggle('pick'); if (document.body.classList.contains('pick')) drawPick() }
   else if (k === '0' || k === 'Home') { t = 0; beatIx = -1; playing = false; held = false }
   else if (k === 'p' || k === 'P') document.body.classList.toggle('presenter')
