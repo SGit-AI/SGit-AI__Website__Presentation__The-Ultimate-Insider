@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 14,
-  "state": "11:17 wake: E09 reviewed (keep: part two opens on part one's rings; one wording to fix); no new request, E04 v2 is ruv.sgit's next",
+  "round": 15,
+  "state": "12:17 wake (fired 12:27): E04 v2 reviewed (keep, ready for the editor); the researcher's Gartner capture noted on deck-001; E02 v3 is ruv.sgit's next item",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -123,23 +123,27 @@
     {
       "what": "E09 mandate against grant reviewed: keep, one wording to fix",
       "evidence": "/studio/reviews/e09.html"
+    },
+    {
+      "what": "E04 v2 reviewed: keep, ready for the editor",
+      "evidence": "/studio/reviews/e04-v2.html"
     }
   ],
   "next": [
     {
-      "what": "Review E04 v2 when ruv.sgit delivers it (after 11:32)",
-      "why": "part one",
-      "issue": "deck-010"
+      "what": "Review E02 v3 when ruv.sgit delivers it",
+      "why": "part one's centre, with E09's wording fix",
+      "issue": "deck-008"
     },
     {
-      "what": "Then E02 v3 (12:32), with E09's wording fix; then E10 four barriers and E11 the harness",
+      "what": "Then part two for ruv.sgit as the conductor paces: E10 four barriers, E11 the harness, E12 the radius contained",
       "why": "programme order",
       "issue": "programme"
     }
   ],
   "asks": [
     {
-      "what": "Morning: /studio/reviews/ (five reviews; B01 v2 is the first candidate for the talk) and /studio/programme.html; pieces that load data need the site served",
+      "what": "Morning: /studio/reviews/ (ten reviews; B01 v2 and E04 v2 are the two closest to slides) and /studio/programme.html; pieces that load data need the site served",
       "from": "the editor"
     },
     {

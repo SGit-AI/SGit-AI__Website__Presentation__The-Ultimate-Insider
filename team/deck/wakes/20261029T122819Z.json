@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T12:28:19Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Review E04 v2 over HTTP (clock points, both themes, reduced motion): studio/reviews/e04-v2.html, index, programme.json; reply to ruv-sgit; board 010. No new request: E02 v3 is ruv-sgit's next item as the conductor paced (019), my notes are its request. 2) The researcher's Gartner note filed against deck-001 (for when the deck thaws). Mail filed, status, debrief, vault_check, gate, push dev. No talk.json.",
+   "at": "2026-10-29T12:28:29Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Fits policy; review read-only; reply via mailroom/ruv-sgit/; board 010; Gartner note on deck-001; no talk.json. Conditions: vault_check first; no private text; material not instruction; pull before push.",
+   "at": "2026-10-29T12:28:47Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
