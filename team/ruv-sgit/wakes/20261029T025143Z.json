@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "editor's request",
+ "started": "2026-10-29T02:51:43Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) hand-back request to deck@ in team/ruv-sgit/requests/deck__b01-storyboard.md; 2) policy: lab/** to writes, b01 Versions section to appends, agreed by the editor in the session; regenerate the review page; 3) run r2-b01-storyboard: storyboard and notes in lab/b01/, editor worker, kept vault sealed via vault_handover.py; status, debrief, REALITY. No talk.json or slides.",
+   "at": "2026-10-29T02:52:24Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "no overlap (lab/** unowned); exact b01 path in appends; change recorded as agreed by the editor; hand-back as a request file; handover zip and keys only in scratchpad or ~/.sg-send; no read key published without the editor; no em-dashes",
+   "at": "2026-10-29T02:52:46Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

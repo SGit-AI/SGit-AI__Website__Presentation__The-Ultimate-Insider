@@ -69,17 +69,20 @@
       "team/ruv-sgit/**",
       "src/static/ruv-sgit/**",
       "src/pages/ruv-sgit/**",
+      "src/static/studio/lab/**",
       "content/articles/how-ruv-sgit-works.md"
     ],
     "holds": [],
     "appends": [
       "REALITY.md: its own section",
-      "BRIEF-CORRECTIONS.md: a correction about its own work, at the top"
+      "BRIEF-CORRECTIONS.md: a correction about its own work, at the top",
+      "src/pages/studio/briefs/b01-one-story.html: its Versions section only, one line per version (the studio protocol, how-it-works)"
     ],
     "pages": [
       "ruv-sgit/**",
       "articles/how-ruv-sgit-works.html",
-      "team/ruv-sgit/**"
+      "team/ruv-sgit/**",
+      "studio/lab/**"
     ]
   },
   "never": [
@@ -106,6 +109,12 @@
       "when": "2026-10-29T02:14Z",
       "agreed": true,
       "agreed_by": "Dinis Cruz (the editor), in the session, 29 October 2026"
+    },
+    {
+      "what": "src/static/studio/lab/** added to writes (owned by no member before), and the Versions section of the B01 brief page to appends",
+      "when": "2026-10-29T02:55Z",
+      "agreed": true,
+      "agreed_by": "Dinis Cruz (the editor), in the session: 'Go for it.'"
     }
   ]
 }

@@ -47,11 +47,12 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 ## ruv.sgit (kept by ruv.sgit@the-ultimate-insider)
 - `team/ruv-sgit/`: ruv.sgit@the-ultimate-insider, joined 29 October 2026 on the editor's request; policy agreed by the editor (sha256:dfb0c81ce7ce63d4, and the later :32 wake row in the session). Animations and infographics, each made in a run.
 - `team/ruv-sgit/tools/ruvsgit.py`: the runner (open, deliver, close, seal, delete), adapted from SGit-AI__Website__Ruv; vaults on `dev.send.sgraph.ai`; the token and vault keys only in `~/.ruv-sgit-insider/` (0600), never in the repository. Ruflo 3.56.10 and sgit-ai 0.27.0, installed outside the repository by `ruvsgit.py setup`.
-- Runs: `team/ruv-sgit/runs/<run>.spec.json` and `.evidence.json`; the ledger at `/ruv-sgit/vaults.json`. One run so far, r1-article (closed, its vault deleted on the editor's go, delete checked). No vault of ruv.sgit@ exists now.
+- Runs: `team/ruv-sgit/runs/<run>.spec.json` and `.evidence.json`; the ledger at `/ruv-sgit/vaults.json`. Runs: r1-article (vault deleted, checked) and r2-b01-storyboard (vault kept, its key sealed to the DC Vault Registry).
 - Article: `/articles/how-ruv-sgit-works.html`, including how members ask for an infographic.
 - Hourly wake at :32 London into ruv.sgit@'s own session: task `trig_01WgnTaJ8v2DSo2p23ZqBihu`, created 29 October 2026 02:13 UTC at the editor's word.
 - `/ruv-sgit/policy-review.html`: the editor's review page for the draft policy, generated from `policy.json` by `team/ruv-sgit/tools/review_page.py`.
-- No infographic made yet; none is wired into the talk.
+- Studio lab: `src/static/studio/lab/**` is ruv.sgit@'s (the editor's go, 29 October 2026). B01's storyboard at `/studio/lab/b01/storyboard/`, eight SVG stills (motif: the overlap fills in), with `notes.md`; made in run r2-b01-storyboard, whose vault is kept for v1 and v2. Waiting for deck's go.
+- Nothing from ruv.sgit@ is wired into the talk yet.
 
 ## Does not exist yet
 - `team/deck/policy.json` (talk.json, the slides and the studio are unowned until it exists); keys for dev, deck, security and researcher; dev's own issues on the board (no write key); any scheduled task; a Stop hook.
