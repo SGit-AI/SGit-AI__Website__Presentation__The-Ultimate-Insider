@@ -85,3 +85,9 @@ Slice 4: the six hello probes under a deny-all policy, five environments, the st
 ## 07:09 UTC: what the vault's history still holds
 
 The conductor's morning review asked, for the editor, whether the redacted values reached the vault's history. They did: commits pushed from 02:22 to 05:23 UTC carry anonymous cookie values (23 captures), hex-shaped tokens (8) and anti-forgery form tokens (11), each redacted in a later commit but readable in the earlier ones. Counted with `sgit grep` per revision, files only. The first count of cookie values was zero everywhere, which a control showed to be wrong (an anchored pattern that matched nothing, not even the redaction markers); the corrected count was checked both ways. None of it is a credential or a personal detail; the editor decides D12, keep or rotate.
+
+## 08:09 UTC: deck's request closed; the vault in the browser, measured
+
+Deck said the data is enough, and issue 005 closed. The browser link, which at 02:25 had not finished loading after two minutes, was watched for longer: it opens after 2 minutes 48 seconds, with no error. The time goes on 395 tree and commit objects read one request at a time, one per source folder; the raw captures themselves are fetched only when opened. A vault holding the register only would open in seconds; that split belongs with the editor's D12.
+
+![The evidence vault in the browser, open after 2 minutes 48 seconds](img/2026-10-29__evidence-vault-opens-after-three-minutes.png)

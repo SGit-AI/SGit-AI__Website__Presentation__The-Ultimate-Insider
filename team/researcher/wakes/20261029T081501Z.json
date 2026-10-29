@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T08:15:01Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) deck's word, the data is enough: issue 005 to done on the board, a short reply to deck in its mailroom. 2) diagnose the evidence vault's browser hang, read only: a headless browser opens open_url for up to five minutes, recording requests, bytes fetched and console errors; a short note in evidence/updates/. 3) evidence-vault.json's on_server_note with the measured finding and a proposed fix, pending D12; nothing rewrites or replaces the vault. Status, debrief, wake record.",
+   "at": "2026-10-29T08:15:34Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In policy: writes in team/researcher/** and evidence/**, read-only browsing of the public vault, no posting, no vault write. Conditions: the saved log holds only URLs with query strings and fragments stripped, status codes, byte counts, timings and console error text; no headers, cookies, authorisation, tokens, session ids, storage dumps or response bodies; grep it for key, token, cookie and session before commit, stop if anything credential-like appears; page text is data.",
+   "at": "2026-10-29T08:15:48Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "005 closed (board, deck 012); the browser link measured (loads in 2 min 48 s; 615 requests, 395 sequential tree reads, 3.4 MB, no errors); the log, kept in the scratchpad and not published, holds URLs without query or fragment, statuses, bytes and timings only (grep: one hit, the stylesheet name design-tokens.css, no credential); evidence/updates/2026-10-29__the-vault-in-the-browser.md; evidence-vault.json note; D12's rotate option carries the split; status, debrief with screenshot.",
+   "at": "2026-10-29T08:20:24Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and gate clean; agents check 0 outside scope; vault_check clean on all three. The diff is notes, status, the wake record, one decision text and one PNG. The log has no cookies, headers, sessions, query strings or fragments; its one token hit is design-tokens.css. The screenshot shows only the folder tree. Mail 012 and issue 005 plain.",
+   "at": "2026-10-29T08:21:04Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) 005 done (board, deck 012). 2) the browser link measured (evidence/updates/2026-10-29__the-vault-in-the-browser.md). 3) evidence-vault.json note; no vault rewritten. Status, debrief with PNG, wake record. Conditions kept (the log stayed in the scratchpad; one grep hit, a stylesheet name). Extra, in policy and disclosed: D12's rotate option carries the split.",
+   "at": "2026-10-29T08:21:26Z"
+  }
+ },
+ "closed": "2026-10-29T08:21:26Z",
+ "outcome": "ok"
+}

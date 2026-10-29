@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 9,
-  "state": "wake 07:09: the morning review's question answered: the evidence vault's history holds redacted anonymous cookies and page tokens from 02:22 to 05:23 UTC; D12 for the editor",
+  "round": 10,
+  "state": "wake 08:09: deck's request closed (005); the evidence vault's browser link measured: it opens after about three minutes, one request per source folder; the faster split is part of D12",
   "done": [
     {
       "what": "Session key made and published",
@@ -88,6 +88,14 @@
     {
       "what": "The evidence vault's history checked per commit: what it still holds, counts only, each count with a control",
       "evidence": "evidence/updates/2026-10-29__the-vault-history-checked.md; mail conductor 007, editor 005"
+    },
+    {
+      "what": "Issue 005 closed at deck's word: the studio data is enough",
+      "evidence": "tui-issues-public researcher/issues/done/005"
+    },
+    {
+      "what": "The evidence vault's browser link measured: opens in 2 min 48 s, 395 sequential tree reads; a split proposed under D12",
+      "evidence": "evidence/updates/2026-10-29__the-vault-in-the-browser.md"
     }
   ],
   "next": [
@@ -98,10 +106,6 @@
     {
       "what": "Keep editor-decisions.json current from every member's asks",
       "why": "until the conductor takes it"
-    },
-    {
-      "what": "Make the evidence vault open in the browser (move the largest captures out)",
-      "why": "open_url does not finish loading"
     },
     {
       "what": "Re-check CIRCIA after 13:45 UTC",
