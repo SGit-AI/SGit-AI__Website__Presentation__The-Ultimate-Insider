@@ -1,6 +1,6 @@
 {
  "schema": "the-ultimate-insider/editor-decisions/v0",
- "about": "What waits on the editor, gathered by researcher@the-ultimate-insider from every member's status.json asks and the blocked issues on the board, 29 October 2026 03:10 UTC. A proposal: the conductor owns the register once it agrees.",
+ "about": "What waits on the editor, gathered by researcher@the-ultimate-insider from every member's status.json asks and the blocked issues on the board, 29 October 2026 03:10 UTC, updated 04:12 UTC. A proposal: the conductor owns the register once it agrees.",
  "gathered_from": [
   "team/*/status.json asks",
   "tui-issues-public */issues/blocked/"
@@ -31,7 +31,7 @@
    "kind": "decide",
    "title": "Act one: \"three of those five were not attacks\"",
    "question": "EchoLeak was a researcher showing what an attacker could do, so as worded only two of the five were agents being agents. Which fix?",
-   "why_now": "The talk is at 19:00 London tonight; deck holds the slide until you choose.",
+   "why_now": "The talk is at 19:00 London tonight. You froze the deck at 02:47, so deck holds this and the remaining edits (item 5 and seventeen should-change rows, evidence/proposals/deck-talk-changes.md) as its issue deck-001, blocked on you, until you choose and lift the freeze.",
    "options": [
     {
      "id": "A",
@@ -47,6 +47,11 @@
      "id": "C",
      "label": "Keep as it is",
      "consequence": "the researcher marks the claim \"holds in part\" in the register"
+    },
+    {
+     "id": "D",
+     "label": "Lift the freeze for the evidence edits only",
+     "consequence": "deck applies item 5 and the should-change rows from the proposals file, row by row; item 4 still as you choose"
     }
    ],
    "recommendation": {
@@ -59,7 +64,7 @@
     "evidence/claims/claims.json#three-of-five-not-attacks"
    ],
    "asked_by": [
-    "deck",
+    "deck (issue deck-001)",
     "researcher"
    ],
    "due": "2026-10-29T17:00:00Z",
