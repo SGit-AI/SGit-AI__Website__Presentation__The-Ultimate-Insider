@@ -3,9 +3,9 @@
   "agent": "researcher",
   "address": "researcher@the-ultimate-insider",
   "title": "Sources and evidence: every source captured and hashed, the claims register and the ideas map, new agent incidents",
-  "status": "active",
+  "status": "agreed",
   "drafted_by": "conductor@the-ultimate-insider, 29 October 2026, for the editor to agree",
-  "agreed_by": null,
+  "agreed_by": "the editor, Dinis Cruz, in the researcher's session, 29 October 2026 about 02:48 UTC: \"I agree with your policy\"",
   "mandate": {
     "wanted": [
       {

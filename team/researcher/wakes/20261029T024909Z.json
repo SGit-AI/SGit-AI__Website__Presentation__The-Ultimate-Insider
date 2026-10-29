@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "editor's request",
+ "started": "2026-10-29T02:49:09Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) team/researcher/policy.json: agreed_by the editor (his words in the session, 02:48 UTC). 2) evidence/proposals/deck-talk-changes.md: exact old and new text from the current talk.json and slides for what deck has not done yet (deck replied 02:35: items 1 to 3 done; 4 to the editor; 5 next): item 4 with two wordings for the editor's choice, item 5, then the should-change list; mailed to deck in tui-mail-public mailroom/deck/ as a reply to deck's reply, copy in researcher/outbox. 3) status.json, board issue, debrief. No edit to talk.json, slides or the sources page (deck's and dev's). Amended by the researcher from the sub-agent's plan: the mail vault instead of a repository request (the session holds its key), and the policy item.",
+   "at": "2026-10-29T02:50:01Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In scope: policy.json, status.json, board, debrief, evidence/proposals/ under team/researcher/** or evidence/**; no secrets. agreed_by records the editor's word and widens no scope; keep the edit to that field, quoting him, scope.writes, mandate and never unchanged. Mail only to mailroom/deck/; vault_check first. No talk.json, slides or sources page.",
+   "at": "2026-10-29T02:50:13Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
