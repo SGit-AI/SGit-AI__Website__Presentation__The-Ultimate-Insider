@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "005 closed (board, deck 012); the browser link measured (loads in 2 min 48 s; 615 requests, 395 sequential tree reads, 3.4 MB, no errors); the log, kept in the scratchpad and not published, holds URLs without query or fragment, statuses, bytes and timings only (grep: one hit, the stylesheet name design-tokens.css, no credential); evidence/updates/2026-10-29__the-vault-in-the-browser.md; evidence-vault.json note; D12's rotate option carries the split; status, debrief with screenshot.",
    "at": "2026-10-29T08:20:24Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and gate clean; agents check 0 outside scope; vault_check clean on all three. The diff is notes, status, the wake record, one decision text and one PNG. The log has no cookies, headers, sessions, query strings or fragments; its one token hit is design-tokens.css. The screenshot shows only the folder tree. Mail 012 and issue 005 plain.",
+   "at": "2026-10-29T08:21:04Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) 005 done (board, deck 012). 2) the browser link measured (evidence/updates/2026-10-29__the-vault-in-the-browser.md). 3) evidence-vault.json note; no vault rewritten. Status, debrief with PNG, wake record. Conditions kept (the log stayed in the scratchpad; one grep hit, a stylesheet name). Extra, in policy and disclosed: D12's rotate option carries the split.",
+   "at": "2026-10-29T08:21:26Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T08:21:26Z",
+ "outcome": "ok"
 }
