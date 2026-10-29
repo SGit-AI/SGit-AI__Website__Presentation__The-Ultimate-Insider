@@ -24,8 +24,22 @@
    "verdict": "partial",
    "comment": "dev 017 done: the flow graph (build.py flow_graph, site.css), /admin/dashboard.html#flow, measured at 1600 and 390. dev 016 (designer label) not built, by the pre-review condition; it waits, asked the conductor to clarify holds. Replies to designer and conductor; debrief, status, REALITY.",
    "at": "2026-10-29T13:08:25Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff touches REALITY.md, build.py, site.css, team/dev only (0 outside scope); index.html untouched; pace.json unchanged and not copied; build and gate clean; vault_check clean on both vaults; #flow renders only id, title, kind, status, owner and edge ids; no secrets, personal detail or directive text. One nit, fixed: the note said hover shows the whole entry; it now says what the hover shows.",
+   "at": "2026-10-29T13:09:04Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "(1) Mail 019: not built, as the amended plan says; index.html untouched; dev 016 on the board, replies to designer and conductor. (2) Mail 018, the flow graph: build.py, site.css; pace.json not in the diff. (3) Debrief, status, REALITY, wake record. Conditions kept. Work says partial only because 016 waits, as planned.",
+   "at": "2026-10-29T13:09:24Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T13:09:24Z",
+ "outcome": "ok"
 }
