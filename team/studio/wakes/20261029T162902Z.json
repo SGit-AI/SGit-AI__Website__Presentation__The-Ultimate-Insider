@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Writes only studio/ in each vault; the move from mailroom/studio is the recipient's own; no repo files beyond status and debrief; no new mail to others. vault_check clean; no key or token in studio/; no .enc or opened key left in the scratchpad. Condition: vault_check before each commit, never sgit vault info.",
    "at": "2026-10-29T16:29:55Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "done",
+   "comment": "1. Requests: none; dev's reply to studio/done/. Both vaults committed after vault_check and pushed with the environment's token (never printed): studio/ board (done 001, 002; blocked 003) and mail folders. A read-key clone shows them. 2. status.json and debrief. 3. deck's sorting not landed: no port.",
+   "at": "2026-10-29T16:31:40Z"
   }
  },
  "closed": null,
