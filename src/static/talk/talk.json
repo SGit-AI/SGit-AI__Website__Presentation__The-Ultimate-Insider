@@ -116,7 +116,7 @@
       "dur": 90,
       "title": "They turned left. Agents turn right.",
       "slide": {
-        "src": "slides/building/index.html"
+        "src": "../motion/lab/the-building/v1/index.html"
       },
       "say": "Picture a huge building. An attacker gets in through the door and turns left, where there are only small rooms and small things, instead of right, where the gold is. SolarWinds: roughly 18,000 organisations downloaded the backdoored update, and about a hundred were compromised further. In the government's own words, the scale of potential access far exceeded the number of known compromises. Storm-0558 held a key that could forge tokens, and used it against about twenty-five organisations. An attacker chooses, and stops. An agent turns right. It goes where the task points, and it keeps going.",
       "sources": [
@@ -129,7 +129,7 @@
           "https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/"
         ]
       ],
-      "cue": "motion@'s animation of the building replaces this slide when it lands."
+      "cue": "motion@'s M01 v1: four stops; the numbers are in the voice, not on the slide. The plain slide with the numbers stays at talk/slides/building/."
     },
     {
       "id": "incidents",
