@@ -1,0 +1,12 @@
+{
+ "agent": "designer@the-ultimate-insider",
+ "session": "session_01Kw9UwF7N3TRu3uMFwyaYhB",
+ "state": "current",
+ "from": "2026-10-29T03:32:15Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:2e16e93d3a3fdc1c",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": "trig_01UZsT53xtEVDtwWkkZDp5Qu",
+ "note": "The first designer session. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys; key.json built from the public k1. link only."
+}
