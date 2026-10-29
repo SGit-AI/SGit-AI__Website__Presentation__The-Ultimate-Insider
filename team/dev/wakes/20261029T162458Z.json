@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "the editor's wake, in session",
+ "started": "2026-10-29T16:24:58Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Amended by dev with the editor's two further asks (16:28). 1. slide.js: one step per reveal (data-in, on, count, grow, draw) when a slide declares none, labelled by its text. 2. player.html: stops that work for close steps; up and down whole slides, left and right steps; an overview (W): every beat by section, a columns choice, tiles that play on a tap, show or skip into his running order, go to; Esc closes any panel and returns to the slide; the feedback pane docked on the right inside the player, the stage making room, each note naming the slide (pane rules moved from site.css into assets/pane.css, loaded by the site, the player and the viewer). 3. A letter to the conductor in the mail vault (dev holds its key; team/dev/requests is for sessions without one): the talk is 90 minutes, screenshots of the team's websites, brief the others. 4. The four-words file re-sent to the editor as a file, never typed. 5. Close-out.",
+   "at": "2026-10-29T16:25:46Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside policy (engine, player, assets, team/dev). Conditions: slide.js is shared: full build and gate, open at least one slide and one studio piece, the old slides still work; the pane keeps the lane token and the OpenRouter key in his browser only, each note naming only the slide; the letter to the conductor holds nothing private, vault_check first; the four-words file as a file, never typed; dev only after the gate; deck's talk files and the holds untouched.",
+   "at": "2026-10-29T16:26:12Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
