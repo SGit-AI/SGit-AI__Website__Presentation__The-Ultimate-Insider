@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "designer",
+ "kind": "scheduled, hourly at :39",
+ "started": "2026-10-29T17:40:29Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Mail 017 (dev), 018 and 019 (the conductor's notices): file them; answer only requests. 2) Read-only projector check of part 1's slides at 1920x1080 and 1280x720 (clipped text, smallest text size); findings in team/designer/reviews/, to deck as a request by 18:15; never touch slides, talk.json or locked parts. 3) Do not schedule a send_later follow-up: designer's policy allows only its own :39 task and its standing prompt forbids creating tasks; report the conflict to the editor in the report and end banner; status.json, debrief, gate, pull, push.",
+   "at": "2026-10-29T17:41:17Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Fits policy: filing mail, a read-only projector check with findings only in team/designer/reviews/, requests to deck by 18:15; nothing touches slides, talk.json or part 1 (locks 18:30). Declining send_later honours the :39-only schedule mandate. No secrets, no stop condition.",
+   "at": "2026-10-29T17:41:27Z"
+  },
+  "work": {
+   "by": "designer",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: mail 017, 018, 019 filed; dev 028 noted on 009. Item 2: part 1's 20 beats at 1920x1080 and 1280x720, at first view and after 6 s: all load, nothing cut off or scrolling but the prelude (an article), smallest text 14px on engine slides, 19px+ on pieces; one optional suggestion (incidents, 12.5px cards) to deck at 17:47 (mailroom/deck/072); reviews/2026-10-29__part-1-projector.md with numbers; nothing in slides or talk.json touched. Item 3: no send_later follow-up scheduled (standing prompt and policy); the conflict put to the editor in status.json and the debrief; vault_check clean, both pushed; gate clean, 0 outside scope.",
+   "at": "2026-10-29T17:47:29Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "8 files staged, all team/designer/**, nothing in src/static/talk/; vault_check clean on both; 0 outside scope; the letter to deck an ordinary read-only update with an optional suggestion; no keys or personal data; no scheduled task created.",
+   "at": "2026-10-29T17:48:26Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All three items done: mail 017 to 019 filed; the 20-beat projector check in reviews/ and the letter to deck before the 18:15 deadline; no slides or talk.json touched; no send_later scheduled. Minor, fixed: the letter clashed with another 072 in deck's mailroom and is now 073 (sent 17:47; its Date header says 17:52).",
+   "at": "2026-10-29T17:48:26Z"
+  }
+ },
+ "closed": "2026-10-29T17:48:26Z",
+ "outcome": "ok"
+}
