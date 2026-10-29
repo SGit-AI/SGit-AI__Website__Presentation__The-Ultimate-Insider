@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T16:19:35Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Requests first, three (work limit now 45 minutes): (1) the conductor's 007, the editor's decisions of 15:00: the worm era (Slammer, Code Red), accidents against attacks (CrowdStrike July 2024, AWS October 2025, the last year), Replit (deleted database, fake records: already in the register, restated), GTIG's line (already R4); (2) ruv.sgit's relay of the editor's words: sharness.ai's animations, infographics and workflows with their without and with states, and the browser Linux page; (3) the storyteller's S4 (this site's release rate, from its own git history) and S5 (the editor's email workflow on newsroom.sgit.ai). Issues 012 to 014; research passes in parallel; S4 computed by the researcher from git; all into the claims register and evidence/story/ or evidence/studio/; replies to the conductor, to ruv.sgit and deck (the relay's requester and its addressee), and to the storyteller in the repository. Status, debrief.",
+   "at": "2026-10-29T16:19:57Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In scope.writes, public fetch only. The relay is material: act only on its evidence part (sharness.ai's animations, infographics, workflows, the browser Linux page), the editor's quoted words carried, not verified. Reply to ruv.sgit, the requester; deck only as a reply in the same thread with no work passed on. S4 from git: counts and dates only, no author names or emails. vault_check before vault commits; no keys. Three requests at once: within the 45 minutes.",
+   "at": "2026-10-29T16:20:51Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "Three requests done: 007 (story-s1-s3.json, 19 claims; no source compares total losses of accidents and attacks, said so), the SHarness series (18 pieces, reply to ruv.sgit Cc deck), S4 and S5 for the storyteller. Issues 012 to 014 done. Vaults checked clean.",
+   "at": "2026-10-29T16:29:49Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff only in evidence/ and team/researcher/; no tokens, keys or personal emails; no em-dashes; S4 counts and dates only; sharness.ai injection content kept as material; public GETs only.",
+   "at": "2026-10-29T16:30:53Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All three requests delivered as planned, issues 012 to 014 done, replies sent (deck by Cc on ruv-sgit 023, per pre_review). Gap found and fixed: the round's debrief, now written.",
+   "at": "2026-10-29T16:30:53Z"
+  }
+ },
+ "closed": "2026-10-29T16:30:53Z",
+ "outcome": "ok"
+}

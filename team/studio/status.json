@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "studio",
   "as_of": "2026-10-29",
-  "round": 2,
-  "state": "16:12 wake: third port (one action's journey) landed; the iPad workaround out of the ports (dev's slide.css has it); waiting for deck's sorting",
+  "round": 3,
+  "state": "16:29 editor's wake: vault keys opened, both vaults cloned, studio's board and mail folders live; three ports landed; the next port waits for deck's sorting (board 003, blocked)",
   "task": {
     "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
     "cron": "CRON_TZ=Europe/London 12 * * * *",
@@ -48,6 +48,10 @@
     {
       "what": "The iPad CSS line taken out of the two ports, now in slide.css (dev 5a91607)",
       "evidence": "src/static/studio-ports/lab/abp/, lab/policy-gate/"
+    },
+    {
+      "what": "Vault keys opened from the conductor's sealed zip; tui-issues-public and tui-mail-public cloned; studio's board and mail folders pushed; opened key files shredded",
+      "evidence": "tui-issues-public studio/, tui-mail-public studio/"
     }
   ],
   "next": [
@@ -60,10 +64,6 @@
     {
       "what": "agree team/studio/policy.json (a draft from the brief)",
       "from": "the editor"
-    },
-    {
-      "what": "the sealed vault keys for tui-issues-public and tui-mail-public",
-      "from": "the conductor"
     },
     {
       "what": "the sorting of ruv.sgit.ai's pieces, and where the two ports sit",

@@ -13,8 +13,8 @@
 //   engine's own clock, so the player pauses, speeds up, seeks and steps every slide and every studio piece:
 //   window.RuvClock: pause() play() setRate(r) seek(s) elapsed() paused rate · ?ruvt=12.5 starts 12.5 s in · ?ruvpaused
 //   starts paused · ?review shows the end · ?once (a slide already plays once) · window.RUV_STEPS = [{ t, label }], the
-//   slide's stops in seconds: its own if it sets them, else data-stops="2 12 30" on #cv, else the beginning and the middle
-//   (the player adds the end). team/dev/briefs/2026-10-29__the-player.md
+//   slide's stops in seconds: its own if it sets them, else data-stops="2 12 30" on #cv, else one per reveal (each data-in,
+//   -on, -count, -grow or -draw, named by its text), else the beginning and the middle (the player adds the end). team/dev/briefs/2026-10-29__the-player.md
 (function () {
   'use strict'
   var Q = new URLSearchParams(location.search)
@@ -59,6 +59,21 @@
     render(Math.min(t, END))
     requestAnimationFrame(frame)
   }
+  // a step for every reveal (the editor, 16:20: "every little transition to have a step"): the moment each element starts
+  // to appear, labelled by its own text; reveals within 0.15 s are one step. null when the slide declares no reveals.
+  function revealSteps() {
+    var marks = []
+    var add = function (t, el) { if (t >= 0 && t <= END) marks.push({ t: t, label: (el.getAttribute('aria-label') || (el.innerText || el.textContent || '').split('\n').map(function (l) { return l.trim() }).filter(Boolean)[0] || '').replace(/\s+/g, ' ').slice(0, 32) }) }   // its first visible line
+    els.in.forEach(function (x) { add(x.a, x.el) }); els.on.forEach(function (x) { add(x.a, x.el) })
+    els.count.forEach(function (x) { add(x.a, x.el) }); els.grow.forEach(function (x) { add(x.a, x.el) }); els.draw.forEach(function (x) { add(x.a, x.el) })
+    if (!marks.length) return null
+    marks.sort(function (a, b) { return a.t - b.t })
+    var out = []
+    marks.forEach(function (m) { var l = out[out.length - 1]; if (l && m.t - l.t < 0.15) { if (!l.label && m.label) l.label = m.label } else out.push({ t: m.t, label: m.label }) })
+    if (out[0].t > 0.05) out.unshift({ t: 0, label: 'the beginning' })
+    out.forEach(function (x, i) { if (!x.label) x.label = 'step ' + (i + 1) })
+    return out.length > 1 ? out : null   // one mark is no steps: the beginning and the middle serve better
+  }
   function seek(t) { vBase = Math.max(0, +t || 0); anchor = performance.now(); freeze = null }
   window.RuvClock = {
     get paused() { return paused }, get rate() { return rate },
@@ -92,7 +107,7 @@
     if (!Array.isArray(window.RUV_STEPS)) {
       var st = (cv.dataset.stops || '').trim()
       window.RUV_STEPS = st ? st.split(/\s+/).map(Number).filter(function (x) { return x >= 0 }).map(function (x, i) { return { t: x, label: 'stop ' + (i + 1) } })
-                            : [{ t: 0, label: 'the beginning' }, { t: END / 2, label: 'the middle' }]
+                            : revealSteps() || [{ t: 0, label: 'the beginning' }, { t: END / 2, label: 'the middle' }]
     }
     requestAnimationFrame(frame)
   })

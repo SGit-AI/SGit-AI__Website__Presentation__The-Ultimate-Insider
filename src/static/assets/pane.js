@@ -126,7 +126,7 @@
       var t = ta.value.trim()
       if (!t && !phrase) { say('Write something, or select a phrase on the page.', true); return }
       var n = notes()
-      n.push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), kind: (kindSel.querySelector('.on') || {}).dataset.kind || 'note', page: location.pathname, title: document.title, phrase: phrase, text: t, at: new Date().toISOString(), sent: null })
+      n.push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), kind: (kindSel.querySelector('.on') || {}).dataset.kind || 'note', page: location.pathname + location.hash, title: document.title, phrase: phrase, text: t, at: new Date().toISOString(), sent: null })
       saveNotes(n); ta.value = ''; phrase = ''; say('Kept in this browser. Send when you are ready.'); paint()
     })
     sendBtn.addEventListener('click', sendAll)
