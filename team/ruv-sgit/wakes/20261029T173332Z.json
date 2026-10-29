@@ -17,6 +17,20 @@
    "verdict": "go",
    "comment": "In scope; nothing scheduled; the evidence's injection and command invitations are material only. Conditions: no key or token in run, spec, zip, requests or page; no shell-style command from diag-one-request on a page; vault_check before vault commits; no read key published; no new attack technique; mail only to mailroom/<recipient>/.",
    "at": "2026-10-29T17:35:37Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "Run r25-sharness-deep-dive closed and kept: SH8 and SH9, the storyline's deep-dive section; editor's 1 must and 8 should applied; deck told (outbox 027), board 014, mail 025 to 028 filed; status, debrief, REALITY. No follow-up wake scheduled.",
+   "at": "2026-10-29T17:43:07Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Plan delivered: r25 closed and kept, SH8 and SH9, the editor's fixes, the storyline section, outbox 027, board 014, debrief, status, REALITY; SH2 and SH5 last changed 16:45 UTC, before this wake; no talk.json, slides, studio/data or locked part; deferrals named with reasons; no follow-up scheduled, surfaced to the editor.",
+   "at": "2026-10-29T17:43:33Z"
   }
  },
  "closed": null,
