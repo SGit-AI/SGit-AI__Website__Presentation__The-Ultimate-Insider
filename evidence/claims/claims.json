@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T14:26Z",
- "count": 135,
+ "built": "2026-10-29T14:31Z",
+ "count": 156,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T14:26Z"
+   "adjudicated": "researcher, 2026-10-29T14:31Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1726,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T14:26Z"
+   "adjudicated": "researcher, 2026-10-29T14:31Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -3660,6 +3660,483 @@
    "note": "True of the launcher above the agent and its manifest. Since 28 Oct 2026 a first slice (sharness-ai shell) runs on the CLI's dev and is in v0.2.0 on PyPI per the status page, and the one-process form (sharness-ai run) is runnable. A security review on 29 Oct found and fixed a background process outliving the shell (SR-30).",
    "suggested_wording": "the launcher above the agent is designed, not built (a first slice for one shell runs since 28 October 2026)",
    "register": "studio-e11"
+  },
+  {
+   "id": "story-r1-solarwinds",
+   "text": "SolarWinds SUNBURST: 18,000 received the backdoor, about 109 compromised further",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-whitehouse-neuberger-2021-02-17",
+     "quote": "As of today, 9 federal agencies and about 100 private sector companies were compromised.  As you know, roughly 18,000 entities downloaded the malicious update.  So the scale of potential access far exceeded the number of known compromises.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The government statement makes the editor's point in its own words. SolarWinds' 8-K (fewer than 18,000 customers) and CISA AA20-352A refused with 403, not captured.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r1-midnight-blizzard",
+   "text": "Midnight Blizzard at Microsoft: test-tenant foothold, a very small percentage of mailboxes read",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-msrc-midnight-blizzard-2024",
+     "quote": "used the account's permissions to access a very small percentage of Microsoft corporate email accounts, including members of our senior leadership team and employees in our cybersecurity, legal, and other functions, and exfiltrated some emails and attached documents.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Microsoft does not quantify how much the permissions could reach; 'more access than used' is the inference from 'the account's permissions' plus 'a very small percentage'. The March 2024 update adds source code repositories and internal systems, so use was wider than first stated. Quote uses a straight apostrophe for the page's curly one.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r1-storm-0558",
+   "text": "Storm-0558: a signing key that could forge tokens, used against about 25 organisations",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-ms-storm-0558-analysis-2023",
+     "quote": "Storm-0558 used forged authentication tokens to access user email from approximately 25 organizations, including government agencies and related consumer accounts in the public cloud.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Second quote, same page: 'the actor was forging Azure AD tokens using an acquired Microsoft account (MSA) consumer signing key. This was made possible by a validation error in Microsoft code.' The CSRB report (cisa.gov) was not attempted because the host refused 403 for AA20-352A.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r1-snowflake",
+   "text": "Snowflake customer instances (UNC5537): credentials for many, about 165 organisations notified",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-mandiant-unc5537-snowflake",
+     "quote": "To date, Mandiant and Snowflake have notified approximately 165 potentially exposed organizations.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Weak fit for 'more access than used': here the attacker took a lot from the instances it entered. Use it, if at all, for 'valid credentials were the whole attack': 'every incident Mandiant responded to associated with this campaign was traced back to compromised customer credentials.'",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-ayinde-haringey",
+   "text": "Fictitious case law in UK filings (Ayinde v Haringey; Al-Haroun v Qatar National Bank)",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-ayinde-haringey-2025",
+     "quote": "There are serious implications for the administration of justice and public confidence in the justice system if artificial intelligence is misused.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Second quote: 'The cases cited did not exist.' Al-Haroun witness: 'the citations were generated using publicly available artificial intelligence tools'. Mata v Avianca (US 2023) not captured: bot check.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-deloitte-australia",
+   "text": "Deloitte Australia's $440,000 government report with AI-generated errors",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-guardian-deloitte-ai-2025",
+     "quote": "Partial refund to be issued after several errors were found in a report into a department's compliance framework",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Second quote: 'multiple errors had been found, including nonexistent references and citations.' AP copy refused 403. The department's or Deloitte's own statement not captured.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-replit-fake-users",
+   "text": "Replit agent invents data for about 4,000 users",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "aiid-1152-replit",
+     "quote": "The system also reportedly produced fabricated test results and fake data, and incorrectly claimed rollback was impossible, delaying recovery.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "All reporting traces to Jason Lemkin's own posts; the 4,000 figure is his. The deletion dominates the story, so it is a mixed case.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-horizon",
+   "text": "Post Office Horizon: bugs that produced false branch shortfalls",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-bates-horizon-judgment-6",
+     "quote": "its robustness was questionable, and did not justify the confidence placed in it by the Post Office in terms of its accuracy.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Also: 'it suffered failures of internal mechanisms which were intended to ensure integrity of data'. The prosecution count is not carried by this capture; the Inquiry report was not captured (404).",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-phe-excel",
+   "text": "Public Health England drops 15,841 Covid cases in an XLS template",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-bbc-phe-excel-2020",
+     "quote": "each template was limited to about 1,400 cases. When that total was reached, further cases were simply left off.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Strictly a silent omission (undercount), so it is integrity of a total, not deletion of records. PHE's own statement not captured.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-ariane5",
+   "text": "Ariane 501 data conversion",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "OCR not run in the time box.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-knight",
+   "text": "Knight Capital 2012",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "gap",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-london-whale",
+   "text": "JPMorgan London Whale VaR spreadsheet",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "gap",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r3-reinhart-rogoff",
+   "text": "Reinhart-Rogoff spreadsheet error",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "gap",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r2-dbir-2026-cia",
+   "text": "Share of incidents by CIA attribute, DBIR 2026",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "fig-dbir-2026-pdf",
+     "quote": "82% of incidents showed confirmed data disclosure... Integrity took a hit in 64% of incidents, ranging from phishing campaigns that manipulate users into clicking malicious links to the unauthorized installation of software on victim assets. Availability was impacted in 53% of incidents",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The 2026 DBIR does give a three-way figure, but it is not a split: the shares overlap (82+64+53 > 100) and 'integrity' is coded broadly, including users manipulated by phishing and malware installed on assets, so it does not mean 'data values corrupted'. Every DBIR 'breach' by definition includes confidentiality loss. Availability includes deletion and encryption. ENISA Threat Landscape, IBM X-Force and CISA were not checked in the time box; none is known to publish a clean C/I/A split. For the talk: 'integrity' in the DBIR is mostly a step on the way to theft or ransom, not the goal; no dataset found counts silent data corruption as an outcome.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r2-dbir-2025-cia",
+   "text": "Share of incidents by CIA attribute, DBIR 2025",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "verizon-dbir-2025",
+     "quote": "any incident with even a couple of steps will most likely affect all of the different Attributes, as the overlap of those in the top-most level of our taxonomy is shown in Figure 36.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Values sit in an image; not read.",
+   "register": "story-r1-r3"
+  },
+  {
+   "id": "story-r4-ai-mass-exploitation-not-yet",
+   "text": "AI-driven mass exploitation has not been observed yet",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "story-gtig-prompting-autonomy",
+     "quote": "While recent model security incident disclosures demonstrate that frontier models can autonomously identify zero-days and execute network intrusions, GTIG has not yet observed threat actors deploying fully autonomous pipelines against targets in the wild.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-ncsc-ai-2027",
+     "quote": "The development of fully automated, end-to-end advanced cyber attacks is unlikely to 2027.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-gtig-ai-vuln-exploitation",
+     "quote": "The criminal threat actor planned to use it in a mass exploitation event but our proactive counter discovery may have prevented its use.",
+     "supports": "against"
+    },
+    {
+     "source_id": "anthropic-espionage-news",
+     "quote": "Overall, the threat actor was able to use AI to perform 80-90% of the campaign, with human intervention required only sporadically",
+     "supports": "against"
+    },
+    {
+     "source_id": "story-gtig-prompting-autonomy",
+     "quote": "Adversaries are deploying multi-agent frameworks that autonomously manage scanning pipelines, resolve operational errors, and execute credential harvesting at scale.",
+     "supports": "against"
+    }
+   ],
+   "primary_source": null,
+   "note": "Disputed in detail, so capped at A2: GTIG says no fully autonomous pipelines seen in the wild, but it also caught an AI-built zero-day planned for mass exploitation (May 2026) and reports agentic credential harvesting at scale.",
+   "suggested_wording": "Threat intelligence has not yet seen fully autonomous AI attacks in the wild; the first AI-built zero-day meant for mass exploitation was caught in May 2026.",
+   "register": "story-r4-r9"
+  },
+  {
+   "id": "story-r5-surface-smaller-more-mature",
+   "text": "the internet-facing surface is smaller and more mature than it was",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "position",
+   "grade": "A0",
+   "holds": "does not hold",
+   "evidence": [
+    {
+     "source_id": "fig-dbir-2026-pdf",
+     "quote": "The exploitation of vulnerabilities is the most prominent initial access vector in our dataset this year, reaching the height of 31%, up from 20% last year, which represents a 55% increase in this vector.",
+     "supports": "against"
+    },
+    {
+     "source_id": "verizon-dbir-2025",
+     "quote": "The percentage of edge devices and VPNs as a target on our exploitation of vulnerabilities action was 22%, and it grew almost eight-fold12 from the 3% found in last year's report.",
+     "supports": "against"
+    },
+    {
+     "source_id": "story-mtrends-2026",
+     "quote": "Exploits remained the most common initial infection vector for the sixth consecutive year, accounting for 32% of intrusions.",
+     "supports": "against"
+    }
+   ],
+   "primary_source": null,
+   "note": "No exposure-trend source found for 'smaller'. Breach data shows exploitation of internet-facing systems, especially edge devices, rising as the way in.",
+   "suggested_wording": "Exploiting internet-facing systems is now the top way in (31% of breaches in DBIR 2026, up from 20%), so the old surface is not shrinking in the data, while the new insider surface grows beside it.",
+   "register": "story-r4-r9"
+  },
+  {
+   "id": "story-r6-legacy-code-unmaintained",
+   "text": "legacy code doing mission-critical work that nobody maintains",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "story-gao-25-107795",
+     "quote": "According to the agencies, these 11 systems ranged from about 23 to 60 years old and collectively cost approximately $754 million annually to operate and maintain.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-gao-25-107795",
+     "quote": "both of the Department of the Treasury's selected systems run on Common Business Oriented Language (COBOL) and Assembly Language Code, programming languages that have a dwindling number of people available with the skills needed to support them.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-dbta-cobol-2022",
+     "quote": "According to the global survey, the amount of COBOL code in daily use increased significantly to 775-850 billion lines.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://www.gao.gov/products/gao-25-107795",
+   "note": "GAO is the primary record for the federal systems (A6); they are maintained at high cost by a dwindling pool, not unmaintained. The 800 billion lines of COBOL is a 2022 vendor survey (A1).",
+   "suggested_wording": "Decades-old code that few people can still maintain: GAO's 11 most critical US federal legacy systems are 23 to 60 years old and cost $754 million a year to run.",
+   "register": "story-r4-r9"
+  },
+  {
+   "id": "story-r7-security-usability-frontier-tools",
+   "text": "bad security usability in frontier tools (ux.sgit.ai examples)",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "story-ux-059",
+     "quote": "The person is asked to make a security decision and given only code to make it with, partly hidden, on a phone. In practice the choice is to stop the work or to trust blindly, and every prompt like this teaches the habit of pressing Allow without reading",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-ux-061",
+     "quote": "a wrong tap either destroys the recording (UX-060) or sends a message full of transcription errors to an agent that will act on it.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-ux-060",
+     "quote": "The X discards the recording and its transcript at once: no \"discard this recording?\", no undo, no copy kept.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Author's own findings, one product (Claude app iOS), last checked 2026-10-25.",
+   "suggested_wording": null,
+   "register": "story-r4-r9"
+  },
+  {
+   "id": "story-r8-non-developer-app-volume",
+   "text": "volume of new applications built by non-developers with AI tools",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "story-technode-lovable-2026",
+     "quote": "The company said users have created more than 60 million projects since its launch in November 2024, while Lovable-built applications receive more than 900 million visits each month.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-trendingtopics-replit-2026",
+     "quote": "The total number of registered users is over 50 million.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vendor-reported via press; counts projects and users, not non-developer apps in production.",
+   "suggested_wording": "Lovable alone reports more than 60 million projects since November 2024 (vendor figure).",
+   "register": "story-r4-r9"
+  },
+  {
+   "id": "story-r9-process-and-decision-behaviour-policies",
+   "text": "process behaviour policies and decision behaviour policies",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "story-newsroom-process-bp",
+     "quote": "A policy is derived from one traced run: every file the process reads, every system call it makes, every host it talks to. Then the kernel enforces it with seven walls",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-newsroom-three-policies",
+     "quote": "An Agent Decision Policy says, at a branch point, who chooses, on what evidence, within what limits, and who to call when it is out of bounds.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "His published term is 'decision policy' (Agent Decision Policy), part of the behaviour policy family; 'decision behaviour policy' not found verbatim.",
+   "suggested_wording": "process behaviour policies and decision policies",
+   "register": "story-r4-r9"
   }
  ]
 }

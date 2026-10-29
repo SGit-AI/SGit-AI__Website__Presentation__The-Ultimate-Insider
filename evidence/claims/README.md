@@ -1,23 +1,23 @@
 # The claims register
 
-Built 2026-10-29T14:26Z. 135 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
+Built 2026-10-29T14:31Z. 156 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
 
 | Grade | Claims |
 |---|---|
-| A0 | 9 |
-| A1 | 19 |
-| A2 | 44 |
-| A3 | 21 |
+| A0 | 13 |
+| A1 | 21 |
+| A2 | 51 |
+| A3 | 22 |
 | A4 | 9 |
 | A5 | 9 |
-| A6 | 24 |
+| A6 | 31 |
 
 | Holds | Claims |
 |---|---|
-| does not hold | 2 |
-| holds | 78 |
-| holds in part | 31 |
-| not checked | 24 |
+| does not hold | 3 |
+| holds | 79 |
+| holds in part | 35 |
+| not checked | 39 |
 
 ## The talk: opening and act one
 
@@ -157,4 +157,35 @@ Built 2026-10-29T14:26Z. 135 claims. Grades A0 to A6 as in `../METHOD.md`; "hold
 | **e03-clawhavoc**: Words in skills and plugins steered OpenClaw: ClawHavoc, OpenClaw's ClawHub | studio:E03 | event | A3 | holds in part | real-world incident. holds in part: the words steered the users, not shown to steer the agent |
 | **e03-nx-s1ngularity**: Words in install scripts steered Claude Code, Gemini CLI and Amazon Q on victims' machines: Nx s1ngularity | studio:E03 | event | A4 | holds | real-world incident.  |
 | **e03-audiohijack**: Words in audio steered voice-enabled models in the paper's tests: AudioHijack (arXiv, 2026) | studio:E03 | measured | A3 | holds | research demonstration.  |
+
+## The story tree: R1-R3
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **story-r1-solarwinds**: SolarWinds SUNBURST: 18,000 received the backdoor, about 109 compromised further | story:tree, editor:ask | event | A6 | not checked | The government statement makes the editor's point in its own words. SolarWinds' 8-K (fewer than 18,000 customers) and CISA AA20-352A refused with 403, not captured. |
+| **story-r1-midnight-blizzard**: Midnight Blizzard at Microsoft: test-tenant foothold, a very small percentage of mailboxes read | story:tree, editor:ask | event | A6 | not checked | Microsoft does not quantify how much the permissions could reach; 'more access than used' is the inference from 'the account's permissions' plus 'a very small percentage'. The March 2024 update adds source code repositories and internal systems, so use was wider than first stated. Quote uses a straight apostrophe for the page's curly one. |
+| **story-r1-storm-0558**: Storm-0558: a signing key that could forge tokens, used against about 25 organisations | story:tree, editor:ask | event | A6 | not checked | Second quote, same page: 'the actor was forging Azure AD tokens using an acquired Microsoft account (MSA) consumer signing key. This was made possible by a validation error in Microsoft code.' The CSRB report (cisa.gov) was not attempted because the host refused 403 for AA20-352A. |
+| **story-r1-snowflake**: Snowflake customer instances (UNC5537): credentials for many, about 165 organisations notified | story:tree, editor:ask | event | A2 | not checked | Weak fit for 'more access than used': here the attacker took a lot from the instances it entered. Use it, if at all, for 'valid credentials were the whole attack': 'every incident Mandiant responded to associated with this campaign was traced back to compromised customer credentials.' |
+| **story-r3-ayinde-haringey**: Fictitious case law in UK filings (Ayinde v Haringey; Al-Haroun v Qatar National Bank) | story:tree, editor:ask | event | A6 | not checked | Second quote: 'The cases cited did not exist.' Al-Haroun witness: 'the citations were generated using publicly available artificial intelligence tools'. Mata v Avianca (US 2023) not captured: bot check. |
+| **story-r3-deloitte-australia**: Deloitte Australia's $440,000 government report with AI-generated errors | story:tree, editor:ask | event | A2 | not checked | Second quote: 'multiple errors had been found, including nonexistent references and citations.' AP copy refused 403. The department's or Deloitte's own statement not captured. |
+| **story-r3-replit-fake-users**: Replit agent invents data for about 4,000 users | story:tree, editor:ask | event | A3 | not checked | All reporting traces to Jason Lemkin's own posts; the 4,000 figure is his. The deletion dominates the story, so it is a mixed case. |
+| **story-r3-horizon**: Post Office Horizon: bugs that produced false branch shortfalls | story:tree, editor:ask | event | A6 | not checked | Also: 'it suffered failures of internal mechanisms which were intended to ensure integrity of data'. The prosecution count is not carried by this capture; the Inquiry report was not captured (404). |
+| **story-r3-phe-excel**: Public Health England drops 15,841 Covid cases in an XLS template | story:tree, editor:ask | event | A2 | not checked | Strictly a silent omission (undercount), so it is integrity of a total, not deletion of records. PHE's own statement not captured. |
+| **story-r3-ariane5**: Ariane 501 data conversion | story:tree, editor:ask | event | A1 | not checked | OCR not run in the time box. |
+| **story-r3-knight**: Knight Capital 2012 | story:tree, editor:ask | event | A0 | not checked | gap |
+| **story-r3-london-whale**: JPMorgan London Whale VaR spreadsheet | story:tree, editor:ask | event | A0 | not checked | gap |
+| **story-r3-reinhart-rogoff**: Reinhart-Rogoff spreadsheet error | story:tree, editor:ask | event | A0 | not checked | gap |
+| **story-r2-dbir-2026-cia**: Share of incidents by CIA attribute, DBIR 2026 | story:tree, editor:ask | measured | A6 | not checked | The 2026 DBIR does give a three-way figure, but it is not a split: the shares overlap (82+64+53 > 100) and 'integrity' is coded broadly, including users manipulated by phishing and malware installed on assets, so it does not mean 'data values corrupted'. Every DBIR 'breach' by definition includes confidentiality loss. Availability includes deletion and encryption. ENISA Threat Landscape, IBM X-Force and CISA were not checked in the time box; none is known to publish a clean C/I/A split. For the talk: 'integrity' in the DBIR is mostly a step on the way to theft or ransom, not the goal; no dataset found counts silent data corruption as an outcome. |
+| **story-r2-dbir-2025-cia**: Share of incidents by CIA attribute, DBIR 2025 | story:tree, editor:ask | measured | A1 | not checked | Values sit in an image; not read. |
+
+## The story tree: R4-R9
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **story-r4-ai-mass-exploitation-not-yet**: AI-driven mass exploitation has not been observed yet | story:tree | measured | A2 | holds in part | Disputed in detail, so capped at A2: GTIG says no fully autonomous pipelines seen in the wild, but it also caught an AI-built zero-day planned for mass exploitation (May 2026) and reports agentic credential harvesting at scale. **Suggested:** Threat intelligence has not yet seen fully autonomous AI attacks in the wild; the first AI-built zero-day meant for mass exploitation was caught in May 2026. |
+| **story-r5-surface-smaller-more-mature**: the internet-facing surface is smaller and more mature than it was | story:tree | position | A0 | does not hold | No exposure-trend source found for 'smaller'. Breach data shows exploitation of internet-facing systems, especially edge devices, rising as the way in. **Suggested:** Exploiting internet-facing systems is now the top way in (31% of breaches in DBIR 2026, up from 20%), so the old surface is not shrinking in the data, while the new insider surface grows beside it. |
+| **story-r6-legacy-code-unmaintained**: legacy code doing mission-critical work that nobody maintains | story:tree | measured | A6 | holds in part | GAO is the primary record for the federal systems (A6); they are maintained at high cost by a dwindling pool, not unmaintained. The 800 billion lines of COBOL is a 2022 vendor survey (A1). **Suggested:** Decades-old code that few people can still maintain: GAO's 11 most critical US federal legacy systems are 23 to 60 years old and cost $754 million a year to run. |
+| **story-r7-security-usability-frontier-tools**: bad security usability in frontier tools (ux.sgit.ai examples) | story:tree | observation | A2 | holds | Author's own findings, one product (Claude app iOS), last checked 2026-10-25. |
+| **story-r8-non-developer-app-volume**: volume of new applications built by non-developers with AI tools | story:tree | measured | A2 | holds in part | Vendor-reported via press; counts projects and users, not non-developer apps in production. **Suggested:** Lovable alone reports more than 60 million projects since November 2024 (vendor figure). |
+| **story-r9-process-and-decision-behaviour-policies**: process behaviour policies and decision behaviour policies | story:tree | position | A2 | holds in part | His published term is 'decision policy' (Agent Decision Policy), part of the behaviour policy family; 'decision behaviour policy' not found verbatim. **Suggested:** process behaviour policies and decision policies |
 

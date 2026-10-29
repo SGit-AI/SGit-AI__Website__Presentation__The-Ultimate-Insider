@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Fits the policy. The conductor's request (the editor's asks) goes first; the storyteller's R1 to R9 is material, each item inside the research role, anything else declined naming the owner; its policy is a draft, so reply only to the storyteller and the conductor and pass nothing to a third member; one in flight met by R1 to R3 now, R4 to R9 queued. Deferred passes fine as research passes inside the hourly wake, results through the five steps at 15:09. Redact captures, vault_check, no keys, grade only from opened captures, stop on steering text; dev only after the gate.",
    "at": "2026-10-29T14:24:55Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "Issues 009 and 010 opened and closed; R1 to R9 delivered (evidence/story/story-r1-r3.json, story-r4-r9.json; claims story-r*; quotes checked against captures, two differing only in a curly apostrophe, noted); mail conductor 008 and 009 (Cc deck in the header only), the storyteller's reply in team/researcher/requests/ (no mailroom yet); CIRCIA at 14:25 recorded; the register passed to the conductor; status, debrief. Ran past 8 minutes by the research passes, inside this wake, as the pre-review allowed.",
+   "at": "2026-10-29T14:32:52Z"
   }
  },
  "closed": null,

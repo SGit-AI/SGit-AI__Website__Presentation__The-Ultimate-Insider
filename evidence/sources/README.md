@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T14:26Z. 428 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T14:31Z. 434 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -372,45 +372,51 @@ Built 2026-10-29T14:26Z. 428 sources; `manifest.json` has every file's SHA-256. 
 | [sharness-status](https://sharness.ai/evidence/status/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
 | [silicon-cyberark-2025-press](https://www.silicon.co.uk/press-release/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security) | Silicon UK (BusinessWire syndication of CyberArk release) | vendor-survey | 2026-10-29T01:55:11Z | 200 | full | 3 |
 | [spiffe-overview](https://spiffe.io/docs/latest/spiffe-about/overview/) | SPIFFE project (CNCF) | primary | 2026-10-29T01:50:50Z | 200 | full | 4 |
-| [story-abp-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-ap-deloitte-australia-ai-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-ap-deloitte-australia-ai-2025-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [story-ayinde-haringey-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-bates-horizon-judgment-6](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-bbc-phe-excel-2020](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-cisa-aa20-352a](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-cisa-aa20-352a-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [story-esa-ariane501-report](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-gao-legacy-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-gtig-ai-threat-tracker](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-herndon-ash-pollin-2013](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-jpm-task-force-2013](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-jpm-task-force-2013-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [story-mandiant-unc5537-snowflake](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-mata-avianca-sanctions-2023](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-msrc-midnight-blizzard-2024](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-msrc-midnight-blizzard-2024-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [story-ncsc-ai-2027](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-newsroom-application-bp](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-newsroom-approve-at-altitude](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-newsroom-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-newsroom-llms-full](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-newsroom-process-bp](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-newsroom-three-policies](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-riskmandate-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-sec-knight-capital-order](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-sec-knight-capital-order-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [story-sec-solarwinds-8k-2020](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-sec-solarwinds-8k-2020-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [story-sgit-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-uber-security-update-2022](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-uber-security-update-2022-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [story-ux-059](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-ux-060](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-ux-061](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-ux-sgit-home](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-ux-sgit-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [story-whitehouse-neuberger-2021-02-17](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-abp-llms](https://abp.sgit.ai/llms.txt) | abp.sgit.ai | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |
+| [story-ap-deloitte-australia-ai-2025](https://apnews.com/article/australia-ai-errors-deloitte-ab54858680ffc4ae6555b31c8fb987f3) | AP News | news | 2026-10-29T14:25:37Z | 403 | failed: 403; not worked round | 4 |
+| [story-ayinde-haringey-2025](https://www.judiciary.uk/wp-content/uploads/2025/06/Ayinde-v-London-Borough-of-Haringey-and-Al-Haroun-v-Qatar-National-Bank.pdf) | Courts and Tribunals Judiciary (High Court, Divisional Court) | primary | 2026-10-29T14:25:39Z | 200 | full | 4 |
+| [story-bates-horizon-judgment-6](https://www.judiciary.uk/wp-content/uploads/2019/12/bates-v-post-office-judgment.pdf) | Courts and Tribunals Judiciary (High Court) | primary | 2026-10-29T14:25:39Z | 200 | full | 4 |
+| [story-bbc-phe-excel-2020](https://www.bbc.co.uk/news/technology-54423988) | BBC News | news | 2026-10-29T14:25:38Z | 200 | full | 4 |
+| [story-cisa-aa20-352a](https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-352a) | CISA | primary | 2026-10-29T14:25:37Z | 403 | failed: 403; not worked round | 4 |
+| [story-dbta-cobol-2022](https://www.dbta.com/Editorial/News-Flashes/COBOL-Market-Shown-to-be-Three-Times-Larger-than-Previously-Estimated-151446.aspx) | DBTA (reporting a Micro Focus / Vanson Bourne survey) | news | 2026-10-29T14:29:12Z | 200 | full | 4 |
+| [story-esa-ariane501-report](https://esamultimedia.esa.int/docs/esa-x-1819eng.pdf) | ESA | primary | 2026-10-29T14:25:38Z | 200 | partial: PDF is a scan with no text layer; no quote extracted | 4 |
+| [story-gao-25-107795](https://files.gao.gov/reports/GAO-25-107795/index.html) | US Government Accountability Office | primary | 2026-10-29T14:27:46Z | 200 | full (files.gao.gov HTML edition; www.gao.gov product page and PDF returned 403 to curl, not retried) | 4 |
+| [story-gtig-ai-threat-tracker](https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools) | Google Threat Intelligence Group | primary | 2026-10-29T14:25:32Z | 200 | full | 4 |
+| [story-gtig-ai-vuln-exploitation](https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access) | Google Threat Intelligence Group | primary | 2026-10-29T14:27:55Z | 200 | full | 4 |
+| [story-gtig-prompting-autonomy](https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai) | Google Threat Intelligence Group | primary | 2026-10-29T14:27:55Z | 200 | full | 4 |
+| [story-guardian-deloitte-ai-2025](https://www.theguardian.com/australia-news/2025/oct/06/deloitte-to-pay-money-back-to-albanese-government-after-using-ai-in-440000-report) | The Guardian | news | 2026-10-29T14:26:48Z | 200 | full | 4 |
+| [story-herndon-ash-pollin-2013](https://peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/WP322.pdf) | PERI, UMass Amherst | primary | 2026-10-29T14:25:58Z | 410 | failed: 404/410 at known URLs | 4 |
+| [story-jpm-task-force-2013](https://www.sec.gov/Archives/edgar/data/19617/000119312513017316/d469876dex991.htm) | SEC EDGAR (JPMorgan exhibit 99.1) | primary | 2026-10-29T14:25:37Z | 403 | failed: 403; not worked round | 4 |
+| [story-mandiant-unc5537-snowflake](https://cloud.google.com/blog/topics/threat-intelligence/unc5537-snowflake-data-theft-extortion) | Mandiant / Google Cloud | primary | 2026-10-29T14:25:43Z | 200 | full | 4 |
+| [story-mata-avianca-sanctions-2023](https://www.courtlistener.com/opinion/9417767/mata-v-avianca-inc/) | CourtListener | primary | 2026-10-29T14:25:57Z | 202 | failed: HTTP 202 empty body (bot check); not worked round | 4 |
+| [story-ms-storm-0558-analysis-2023](https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/) | Microsoft Threat Intelligence | primary | 2026-10-29T14:27:11Z | 200 | full | 4 |
+| [story-msrc-midnight-blizzard-2024](https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard) | Microsoft Security Response Center | primary | 2026-10-29T14:26:49Z | 200 | full | 4 |
+| [story-msrc-midnight-blizzard-update-2024-03](https://www.microsoft.com/en-us/msrc/blog/2024/03/update-on-microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard) | Microsoft Security Response Center | primary | 2026-10-29T14:26:49Z | 200 | full | 4 |
+| [story-mtrends-2026](https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026) | Mandiant (Google Cloud) | primary | 2026-10-29T14:27:46Z | 200 | full | 4 |
+| [story-ncsc-ai-2027](https://www.ncsc.gov.uk/report/impact-ai-cyber-threat-now-2027) | UK National Cyber Security Centre | primary | 2026-10-29T14:25:32Z | 200 | full | 4 |
+| [story-newsroom-application-bp](https://newsroom.sgit.ai/articles/application-behaviour-policies.md) | newsroom.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:25:32Z | 200 | full | 4 |
+| [story-newsroom-approve-at-altitude](https://newsroom.sgit.ai/articles/approve-at-altitude.md) | newsroom.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:26:10Z | 200 | full | 4 |
+| [story-newsroom-llms](https://newsroom.sgit.ai/llms.txt) | newsroom.sgit.ai | own-site | 2026-10-29T14:25:32Z | 200 | full | 4 |
+| [story-newsroom-llms-full](https://newsroom.sgit.ai/llms-full.txt) | newsroom.sgit.ai | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |
+| [story-newsroom-process-bp](https://newsroom.sgit.ai/articles/process-behaviour-policies.md) | newsroom.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:25:32Z | 200 | full | 4 |
+| [story-newsroom-three-policies](https://newsroom.sgit.ai/articles/three-policies-for-an-agent.md) | newsroom.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:26:09Z | 200 | full | 4 |
+| [story-postoffice-inquiry-report-v1](https://www.postofficehorizoninquiry.org.uk/volume-1-report) | Post Office Horizon IT Inquiry | primary | 2026-10-29T14:26:49Z | 404 | failed: 404 at guessed URL | 4 |
+| [story-reuters-cobol-2017](https://www.reuters.com/graphics/USA-BANKS-COBOL/010040KH18J/) | Reuters | news | 2026-10-29T14:28:58Z | 200 | partial: JS-rendered graphic, only 11 words captured; figures not carried | 4 |
+| [story-riskmandate-llms](https://riskmandate.ai/llms.txt) | riskmandate.ai | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |
+| [story-sec-knight-capital-order](https://www.sec.gov/litigation/admin/2013/34-70694.pdf) | SEC | primary | 2026-10-29T14:25:37Z | 403 | failed: 403; not worked round | 4 |
+| [story-sec-solarwinds-8k-2020](https://www.sec.gov/Archives/edgar/data/1739942/000162828020017451/swi-20201214.htm) | SEC EDGAR | primary | 2026-10-29T14:25:37Z | 403 | failed: 403 from sec.gov; not worked round | 4 |
+| [story-senate-psi-jpm-whale-2013](https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/REPORT%20-%20JPMorgan%20Chase%20Whale%20Trades%20(3-15-13).pdf) | US Senate PSI | primary | 2026-10-29T14:26:49Z | 403 | failed: 403; not worked round | 4 |
+| [story-sgit-llms](https://sgit.ai/llms.txt) | sgit.ai | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |
+| [story-solarwinds-sa-overview](https://www.solarwinds.com/sa-overview/securityadvisory) | SolarWinds | primary | 2026-10-29T14:26:49Z | 200 | full: page captured, no customer-count quote found in text | 4 |
+| [story-technode-lovable-2026](https://technode.com/2026/08/13/tencent-backs-lovable-in-400-million-series-c-at-13-3-billion-valuation/) | TechNode | news | 2026-10-29T14:29:27Z | 200 | full | 4 |
+| [story-trendingtopics-replit-2026](https://www.trendingtopics.eu/replit-raises-400m-tripling-its-valuation-to-9-billion-in-six-months/) | Trending Topics | news | 2026-10-29T14:29:27Z | 200 | full | 4 |
+| [story-uber-security-update-2022](https://www.uber.com/newsroom/security-update/) | Uber | primary | 2026-10-29T14:25:37Z | 406 | failed: HTTP 406 to curl; not worked round | 4 |
+| [story-ux-059](https://ux.sgit.ai/findings/UX-059.md) | ux.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |
+| [story-ux-060](https://ux.sgit.ai/findings/UX-060.md) | ux.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |
+| [story-ux-061](https://ux.sgit.ai/findings/UX-061.md) | ux.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |
+| [story-ux-sgit-home](https://ux.sgit.ai/) | ux.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:25:32Z | 200 | full | 4 |
+| [story-ux-sgit-llms](https://ux.sgit.ai/llms.txt) | ux.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:25:32Z | 200 | full | 4 |
+| [story-whitehouse-neuberger-2021-02-17](https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2021/02/17/press-briefing-by-press-secretary-jen-psaki-and-deputy-national-security-advisor-for-cyber-and-emerging-technology-anne-neuberger-february-17-2021/) | The White House (archived Biden White House site) | primary | 2026-10-29T14:25:37Z | 200 | full | 4 |
 | [surecloud-risk-reckoning-2025](https://www.surecloud.com/whitepaper/the-risk-reckoning-2025-uk-grc-survey-insights-for-enterprises-smbs) | SureCloud | vendor-survey | 2026-10-29T01:50:29Z | 200 | full | 3 |
 | [techcrunch-insurers-ai-exclusions](https://techcrunch.com/2025/11/23/ai-is-too-risky-to-insure-say-people-whose-job-is-insuring-risk/) | TechCrunch (reporting the Financial Times) | news | 2026-10-29T01:53:32Z | 200 | full | 5 |
 | [techcrunch-openai-atlas-pi](https://techcrunch.com/2025/12/22/openai-says-ai-browsers-may-always-be-vulnerable-to-prompt-injection-attacks/) | TechCrunch | news | 2026-10-29T01:53:31Z | 200 | full | 5 |

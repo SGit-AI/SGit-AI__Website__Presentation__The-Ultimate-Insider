@@ -3,7 +3,7 @@
   "agent": "researcher",
   "as_of": "2026-10-29",
   "round": 16,
-  "state": "wake 14:09: the editor's three asks and the storyteller's R1 to R9 under research for tonight; CIRCIA checked after the day's Register (no final rule); the editor-decisions register passed to the conductor",
+  "state": "wake 14:09: the editor's three asks and the storyteller's R1 to R9 delivered (evidence/story/); R5 does not hold, R2 has no clean split, no agent case of wrong values in a system of record found; CIRCIA still unpublished",
   "done": [
     {
       "what": "Session key made and published",
@@ -116,13 +116,13 @@
     {
       "what": "The editor-decisions register passed to the conductor, as proposed",
       "evidence": "mail conductor 008"
+    },
+    {
+      "what": "Facts for the story: the editor's three asks and R1 to R9, into the claims register",
+      "evidence": "evidence/story/story-r1-r3.json, story-r4-r9.json; mail conductor 009; team/researcher/requests/storyteller__facts-delivered.md"
     }
   ],
   "next": [
-    {
-      "what": "The editor's three asks and R1 to R9 into the claims register, replies by 15:30",
-      "why": "the talk is at 19:00 London"
-    },
     {
       "what": "Re-capture SC Media and ThousandEyes when the Internet Archive answers again",
       "why": "both publishers refuse the fetcher (403); not to be got around"

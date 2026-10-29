@@ -111,3 +111,7 @@ No request. D11 now quotes deck's morning item as it reads (ten reviews, B01 v2 
 ## 13:09 UTC: one line in the register
 
 No request. D08 copies ruv.sgit's zip list again (r5 now also covers r12). Next: CIRCIA at 14:09, after the day's Federal Register.
+
+## 14:09 UTC: facts for the story
+
+The editor's three asks, through the conductor, and the storyteller's nine (R1 to R3 the same three), researched in two passes and delivered at 14:55 into the claims register. Strong: attackers with far more access than they used (the White House on SolarWinds, Microsoft on Midnight Blizzard and Storm-0558, all primary). Weak or contrary, and said so: no source splits attacks cleanly by confidentiality, integrity and availability (the DBIR's shares overlap and its integrity includes phishing); no primary record of an AI agent writing wrong values into a system of record (the nearest is the High Court on AI-made citations); and R5, "the outside is more mature", is contradicted by the breach data (exploitation as initial access rising). CIRCIA, checked after the day's Federal Register: still no final rule. The editor-decisions register passed to the conductor; the storyteller, with no mailroom yet, was answered in the repository.
