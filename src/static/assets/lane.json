@@ -1,0 +1,27 @@
+{
+ "schema": "the-ultimate-insider/editor-lane/v1",
+ "about": "The editor's feedback lane: the append token, wrapped under the editor's four words. It can only add notes; it cannot list or read anything. Each note is encrypted to the conductor's key before it is sent.",
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "ruqxerup",
+ "kdf": {
+  "name": "PBKDF2",
+  "hash": "SHA-256",
+  "iterations": 600000,
+  "salt": "0O/hEtRRdvpSsBR9OrG4Ug==",
+  "normalise": "lower case; words split on spaces or hyphens; joined by one space"
+ },
+ "wrap": {
+  "name": "AES-GCM",
+  "iv": "bmpJ2CXamcLYOJiI",
+  "aad": "tui-editor-lane/v1",
+  "ciphertext": "A4MsiT+x7VWuvqhW+aR03+RZQaXZT66+RbgHYAU5mO2WtNxN5azsQ++5Rrwfl6/2XGaWv8DH5q01Be7OtrZAbvdNNIlgvw5oIvg1s01XHz8="
+ },
+ "recipient": {
+  "agent": "conductor@the-ultimate-insider",
+  "encryption_fingerprint": "sha256:9568700877d11832",
+  "encrypt_pem": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvp0T+G/YSNTy7SxLWfSW\n1+qrOsG3tCC1Ty9rGQKtgCx1e6uDZUdldjZRHNW5uzpaYIbUPAquWV7BfAPQGgdq\nQeH4/AExbVUpnM1Nc4yUhEKqIzi5iggKKY0e8vuJ5jAg6CdKeAjl28q3MaNkh3Tv\nWYp1J2Bz6A3jhnsFPM5/SI7HdfDAxMp3KRCIJEHPw48D+oItvYzkTTXh1f25jrU/\nenL7vQZuooy0h7JJcwnMoyr1UBjO5TuPRMiPGy4tkM0djxCdBbDtmtc4wAfPyvjG\nRB5jg7nF/nint1NDXYcZn/geAUtWAWyFkXXodJ2ElkSW7GXlrftu/nV1seUMI9BH\n8gpP5q6l0KOqzovSaf0MFSn7H7ymojacLEfbSWu1HHjcCoKY5G5lDnDYVT0A2ewC\nQCR1yKavNH0GGsWLDxQUB6hJ9cIkrt7VrBJmfrbYLhbn2cZ45gpObRLBmta2abPQ\nH25VlPvwxHtT6C+67fvCfATvz8XRG24G8sUxWo4UC3xg7zSM5juTQEzMTmoe1pY7\nvKHdw/l/oPF1e1BQeGGaGHV9hy7nHrjJedmWCJVWl0qcv9/eHE6bbZmrC7Captw+\n4x7I1vrDwP9OwL3gzfR1y4XK9wgcq4xlO5AKQDJDGY8QJINvMv90dZHg+xMBXvdn\nLBX+6+ckIi6gi3k05wuf0TUCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+  "envelope": "sgit pki v2: base64(JSON {v:2, w: RSA-OAEP-SHA256(aes key), i: iv, c: AES-256-GCM(note)}), sent base64 again as the payload"
+ },
+ "created": "2026-10-29T14:21:44Z",
+ "created_by": "dev@the-ultimate-insider"
+}

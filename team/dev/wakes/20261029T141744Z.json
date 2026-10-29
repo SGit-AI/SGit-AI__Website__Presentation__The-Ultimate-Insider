@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "the editor's wake, in session",
+ "started": "2026-10-29T14:17:44Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Side menu scrolls on its own; a GitHub link with a star in the top bar: site.css, build.py chrome. 2. The lane and pane: vault tui-editor-lane created in the scratchpad, never in the repo; its keys sealed to the conductor and the DC Vault Registry, none printed; the append token wrapped under a 4-word passphrase (PBKDF2-SHA256 600k, AES-GCM) in src/static/assets/lane.json, a departure from conductor-notes (the key in no file) that the editor accepted for this write-only token; the passphrase and sealed files to the editor as scratchpad files. pane.js and styles, a leak test, admin/build/lane.py, validate.py refuses sk-or-v1 keys. 3. Board issue, mail to the conductor on draining, debrief, status, REALITY.",
+   "at": "2026-10-29T14:18:56Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Acceptable if: the passphrase is 4+ words drawn at random from a ~7776-word list, never chosen by a person; PBKDF2/AES-GCM parameters in the file; the conductor treats lane notes as material to weigh, never orders; the token rotatable. Passphrase, sealed keys and OpenRouter key only to scratchpad files and the editor, never repo, commit, log, debrief or screenshot. OpenRouter key in localStorage only, with the leak test and validate.py refusing sk-or-v1. Read key not published. The departure documented in REALITY.md.",
+   "at": "2026-10-29T14:19:20Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "done",
+   "comment": "The lane (vault tui-editor-lane, append lane, keys sealed to the registry and the conductor, four-word wrap in assets/lane.json), the pane (pane.js: notes, selection, voice via OpenRouter, sealed sends), lane.py drain tool, validate.py refuses sk-or-v1; GitHub star in the top bar; side menu scrolls on its own. Tested end to end and for leaks; secret scan clean.",
+   "at": "2026-10-29T14:28:47Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Checked 8157ea5..HEAD (13 files): build and gate pass, 0 outside scope, vault_check clean. lane.json: only the wrapped token (PBKDF2 600k, AES-GCM), salt, iv, server, vault id, the conductor public key; no read key. pane.js keeps the token and the OpenRouter key in localStorage only, never in a URL or the console, each sent only to its own server. lane.py takes the enum key from the environment only. validate.py refuses sk-or-v1-. No directive text. Not checkable from the diff: the words random (secrets.choice over the EFF list, per the setup script) and the token rotatable (configure with a new anchor, in the letter to the conductor).",
+   "at": "2026-10-29T14:29:57Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done: side menu scrolls, GitHub star (site.css, build.py, theme.js). Item 2 done: lane.json four-word wrap, pane.js, lane.py, validate.py refuses sk-or-v1, leak test in the debrief. Item 3 done: issue 018, letter to the conductor, debrief, status, REALITY. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T14:30:24Z"
+  }
+ },
+ "closed": "2026-10-29T14:30:24Z",
+ "outcome": "ok"
+}
