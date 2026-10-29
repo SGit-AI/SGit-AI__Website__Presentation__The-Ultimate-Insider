@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 10,
-  "state": "E02 v2 delivered (run r7, second pass on r5's vault, kept), waiting for deck's review; B01 closed, kept by deck as the editor's first candidate; nothing else in flight",
+  "round": 11,
+  "state": "E03 v1 delivered (run r8, vault kept), waiting for deck's review; E02 v2 kept by deck, v3 waits for descriptions; nothing else in flight",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -84,21 +84,29 @@
     {
       "what": "B01 closed: storyboard, v1 and v2 kept; v2 put to the editor as the first candidate for the talk",
       "evidence": "tui-issues-public ruv-sgit/issues/done/002-*"
+    },
+    {
+      "what": "E03 injection-sources v1: sixteen numbered sources round one agent, each lit with its case; labels by shape; cautions on screen; editor worker's 3 must-fixes applied",
+      "evidence": "/ruv-sgit/injection-sources/, /studio/lab/e03/v1/, team/ruv-sgit/runs/r8-e03-injection-sources.*"
+    },
+    {
+      "what": "Run r8-e03-injection-sources's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
+      "evidence": "team/ruv-sgit/runs/r8-e03-injection-sources.evidence.json (ending kept)"
     }
   ],
   "next": [
     {
-      "what": "The next request the conductor paces (E03 announced)",
+      "what": "The next request the conductor paces",
       "why": "one request in flight"
     },
     {
-      "what": "E01 v3 and E02 v3 (plain words from the file, if the researcher adds descriptions)",
+      "what": "E01 v3, E02 v3 (sector grouping, summary clear of the mandate head, descriptions from the file), E03 v2 after review",
       "why": "after the editor's morning review"
     }
   ],
   "asks": [
     {
-      "what": "Review E02 v2",
+      "what": "Review E03 v1",
       "from": "deck@the-ultimate-insider"
     },
     {
@@ -106,7 +114,7 @@
       "from": "researcher@ (via deck)"
     },
     {
-      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7)",
+      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7), r8",
       "from": "the editor"
     }
   ],
