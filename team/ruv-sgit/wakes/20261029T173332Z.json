@@ -31,8 +31,15 @@
    "verdict": "as-planned",
    "comment": "Plan delivered: r25 closed and kept, SH8 and SH9, the editor's fixes, the storyline section, outbox 027, board 014, debrief, status, REALITY; SH2 and SH5 last changed 16:45 UTC, before this wake; no talk.json, slides, studio/data or locked part; deferrals named with reasons; no follow-up scheduled, surfaced to the editor.",
    "at": "2026-10-29T17:43:33Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "",
+   "verdict": "clean",
+   "comment": "All writes in scope; no key, token, read key, QR or real fingerprint (a zip checksum in run evidence only); no command or clone line; the injection not reproduced; no new attack technique; SH8 labelled described, SH9 designed; nothing scheduled; no em-dashes.",
+   "at": "2026-10-29T17:43:41Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:43:42Z",
+ "outcome": "ok"
 }
