@@ -13,7 +13,7 @@
       { "capability": "execute.process.host",           "within": "the session's container: the runner, Ruflo's hive, sgit, the build, the gate, Playwright for screenshots" },
       { "capability": "send.endpoint.allowed",          "within": "the SG/Send vault server dev.send.sgraph.ai (vaults), npm and PyPI (pinned installs), sgit.ai and ruv.sgit.ai (guidance)" },
       { "capability": "create.record.tenant",           "within": "one private sgit vault per run, on dev.send.sgraph.ai, with the access token the editor gave" },
-      { "capability": "authenticate-as.credential.tenant", "within": "that token and the vault keys, only from files in the runner's home folder (0600), passed on stdin; never printed, logged or committed" },
+      { "capability": "authenticate-as.credential.tenant", "within": "that token and the vault keys, only from files in the runner's home folder (0600); vault keys passed on stdin, the token as sgit's --token argument; never printed, logged or committed" },
       { "capability": "write.repository.tenant",        "within": "its own branch, and dev once the gate passes; never main, never a force-push" },
       { "capability": "create.record.world",            "within": "approval: a run's read key is published (the vault sealed) only on the editor's explicit go" }
     ],
