@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Fits conductor scope: team/conductor/** and the night-log article, plus mail only in mailroom/deck/. No secret, key or vault key, no stop condition. Conditions: vault_check before committing; the ruv-sgit note only under team/conductor/ or a trailer, never in team/ruv-sgit/; no shared-rule change; the mail asks deck for review and pace only.",
    "at": "2026-10-29T10:04:55Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) mailroom/deck/017: E04 back for review at 10:17, E09 named for 10:32 (or E11, E13 by deck's order); vault_check clean, pushed. 2) pace.json: E03 kept, E04 delivered, E09 next, dev 012 done; night log edition 8 (E04 v1, its explainer and page, deck's E03 review). 3) ruv.sgit's three unmarked commits: a second To- note; status.json. Gate clean. Commit 09317d9.",
+   "at": "2026-10-29T10:05:48Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Checked fa143d6..HEAD (9 files, all under team/conductor/** or the night-log article; agents.py 0 outside scope). Mail 017 to deck is a plain pace request; vault_check clean. The 4 screenshots show no key or QR. No secret, key, personal detail or directing text. Build and validate clean (146 html).",
+   "at": "2026-10-29T10:06:27Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) mailroom/deck/017 (E04 back, E09 named): done. 2) pace.json and night log edition 8: done (09317d9). 3) To-ruv-sgit note and status.json: done. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T10:06:44Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T10:06:44Z",
+ "outcome": "ok"
 }
