@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T16:27Z. 542 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T17:23Z. 659 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -543,6 +543,123 @@ Built 2026-10-29T16:27Z. 542 sources; `manifest.json` has every file's SHA-256. 
 | [willison-lethal-trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) | Simon Willison | blog | 2026-10-29T01:50:21Z | 200 | full | 6 |
 | [winbuzzer-gemini](https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/) | WinBuzzer (Markus Kasanmascheff) | news | 2026-10-29T01:51:45Z | 200 | full | 3 |
 | [wiz-php2shell](https://www.wiz.io/blog/php2shell-php-rce) | Wiz Research | vendor-survey | 2026-10-29T01:51:33Z | 200 | full | 4 |
+| [wnews-nr-a-agent-loops](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-a-call-for-help](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-a-capture-first](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-nr-a-desk-open](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-a-identity](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-nr-a-inbox-team](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-nr-a-journalist-handbook](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-nr-a-sharness](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-nr-a-what-an-agent-is](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-agents](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-articles](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-board](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-corrections](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-graphs](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-nr-home](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-nr-log](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-newsroom](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-php-flaws](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-policies](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-publish](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-reviews](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-nr-reviews-criteria](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-shipped](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-sitemap](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-team](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-wire-json](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-a-push](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-a-where-stands](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-analysis](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-php-claims](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-claims-review](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-collaborators](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-factcheck](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
+| [wnews-php-home](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
+| [wnews-php-join](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-php-join-invite](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-layers](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [wnews-php-method](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-numbers](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-php-ops](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-php-share](None) |  | None | None | None | unlisted: a capture folder no record names | 7 |
+| [wnews-php-pipeline](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-review](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-php-signals](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
+| [wnews-php-sitemap](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-subscribe](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-synthetic](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-team-channels](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-php-team-control](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-php-team-schedule](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-php-timeline](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wnews-php-updates](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-php-verifier](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wpki-about-pki-agent](https://pki.sgit.ai/about/pki-agent.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:25Z | 200 |  | 4 |
+| [wpki-agents](https://pki.sgit.ai/agents/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:24Z | 200 |  | 6 |
+| [wpki-art-access-keys](https://pki.sgit.ai/articles/handing-out-access-keys.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:26Z | 200 |  | 4 |
+| [wpki-art-in-person-qr](https://pki.sgit.ai/articles/in-person-by-qr-code.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:26Z | 200 |  | 4 |
+| [wpki-art-index](https://pki.sgit.ai/articles/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:25Z | 200 |  | 4 |
+| [wpki-art-keys-for-agents](https://pki.sgit.ai/articles/keys-for-agents.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:25Z | 200 |  | 4 |
+| [wpki-art-keys-for-people](https://pki.sgit.ai/articles/keys-for-people.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:25Z | 200 |  | 4 |
+| [wpki-art-passkey-login](https://pki.sgit.ai/articles/a-login-made-of-a-passkey.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:26Z | 200 |  | 4 |
+| [wpki-art-vault-keys-root](https://pki.sgit.ai/articles/agents-vault-keys-and-the-root.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:25Z | 200 |  | 4 |
+| [wpki-directory-index](https://pki.sgit.ai/directory/index.json) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:19:36Z | 200 |  | 4 |
+| [wpki-doc-append-lane](https://pki.sgit.ai/documents/append-lane.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:28Z | 200 |  | 4 |
+| [wpki-doc-relay](https://pki.sgit.ai/documents/relay-pattern.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:28Z | 200 |  | 4 |
+| [wpki-front](https://pki.sgit.ai/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:23Z | 200 |  | 7 |
+| [wpki-front-md](https://pki.sgit.ai/index.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:23Z | 200 |  | 4 |
+| [wpki-handover](https://pki.sgit.ai/handover/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:15:32Z | 200 |  | 4 |
+| [wpki-handover-md](https://pki.sgit.ai/handover.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:28Z | 200 |  | 4 |
+| [wpki-llms](https://pki.sgit.ai/llms.txt) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:24Z | 200 |  | 4 |
+| [wpki-people](https://pki.sgit.ai/people/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:28Z | 200 |  | 4 |
+| [wpki-people-how](https://pki.sgit.ai/people/how.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:24Z | 200 |  | 5 |
+| [wpki-sb-agent-gets-key](https://pki.sgit.ai/storyboards/an-agent-gets-a-key.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:27Z | 200 |  | 7 |
+| [wpki-sb-agent-key-json](https://pki.sgit.ai/storyboards/an-agent-gets-a-key.json) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:15:32Z | 200 |  | 4 |
+| [wpki-sb-two-ways](https://pki.sgit.ai/storyboards/two-ways.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:27Z | 200 |  | 4 |
+| [wpki-sb-vault-key-handed](https://pki.sgit.ai/storyboards/a-vault-key-handed-over.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:27Z | 200 |  | 7 |
+| [wpki-sb-vault-key-json](https://pki.sgit.ai/storyboards/a-vault-key-handed-over.json) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:15:32Z | 200 |  | 4 |
+| [wpki-send](https://pki.sgit.ai/send/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:28Z | 200 |  | 4 |
+| [wpki-sg-agent-contact](https://sgit.ai/docs/agent-contact.md) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:14:29Z | 200 |  | 4 |
+| [wpki-sg-agent-contact-html](https://sgit.ai/docs/agent-contact.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:33Z | 200 |  | 7 |
+| [wpki-sg-agents-sharing-one-vault](https://sgit.ai/docs/agents-sharing-one-vault.md) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:14:30Z | 200 |  | 4 |
+| [wpki-sg-append-lane-html](https://sgit.ai/docs/append-lane-messaging.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:33Z | 200 |  | 6 |
+| [wpki-sg-append-lane-messaging](https://sgit.ai/docs/append-lane-messaging.md) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:14:29Z | 200 |  | 4 |
+| [wpki-sg-pki](https://sgit.ai/docs/pki.md) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:14:29Z | 200 |  | 4 |
+| [wpki-sg-send-a-vault-key](https://sgit.ai/docs/send-a-vault-key.md) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:14:30Z | 200 |  | 4 |
+| [wpki-sg-vault-messaging](https://sgit.ai/docs/vault-messaging.md) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:14:29Z | 200 |  | 4 |
+| [wpki-sg-vault-messaging-html](https://sgit.ai/docs/vault-messaging.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:33Z | 200 |  | 6 |
+| [wpki-sso](https://pki.sgit.ai/sso/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:26Z | 200 |  | 7 |
+| [wpki-storyboards](https://pki.sgit.ai/storyboards/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:27Z | 200 |  | 5 |
+| [wsgit-credentials](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
+| [wsgit-for-git-users](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
+| [wsgit-home](None) |  | None | None | None | unlisted: a capture folder no record names | 7 |
+| [wsgit-limitations](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wsgit-newsroom-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wsgit-newsroom-reviews-vaults](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-partial-clones](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-ruv-home](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-security](None) |  | None | None | None | unlisted: a capture folder no record names | 7 |
+| [wsgit-sgit-maps](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-sharness-decision](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-sharness-landscape](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-sharness-levels](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-sharness-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wsgit-sharness-pbp](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-sharness-policies](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-try](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-two-branch](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
+| [wsgit-vault-agent-desk](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-vault-hope](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-vault-kit-bag](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-vault-licence](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-vault-messaging](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-vaults-index](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
+| [wsgit-vaults-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wsgit-what-is-sgit](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
 | [x-lemkin-thread](https://x.com/jasonlk/status/1946069562723897802) | Jason Lemkin on X | primary | 2026-10-29T01:50:22Z | 200 | partial: thread text captured from server-rendered HTML; screenshots in the posts (with the agent's own messages) not captured as text | 3 |
 | [x-masad-response](https://x.com/amasad/status/1947060568621273123) | Amjad Masad (Replit CEO) on X | primary | 2026-10-29T01:51:44Z | 200 | partial: post text truncated by X after the first lines | 3 |
 | [yahoo-sharepoint-54](https://www.yahoo.com/news/articles/microsoft-warns-cyberattacks-exploiting-sharepoint-150031901.html) | Yahoo News | news | 2026-10-29T01:53:05Z | 200 | full | 3 |

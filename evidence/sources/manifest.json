@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T16:27Z",
- "count": 542,
+ "built": "2026-10-29T17:23Z",
+ "count": 659,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -21935,6 +21935,4972 @@
    ],
    "capture": "full",
    "recorded_by": "sgit-php-ideas"
+  },
+  {
+   "id": "wnews-nr-a-agent-loops",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1aadcf4768a9a7f94b8298704e10b9fd9c64c291dbbbb29fc71fdda9e08bf42d",
+     "bytes_as_fetched": 374,
+     "sha256": "1aadcf4768a9a7f94b8298704e10b9fd9c64c291dbbbb29fc71fdda9e08bf42d",
+     "bytes": 374
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a9bd55591e5399f31a5803e6265a802d6540f53aa9ee1301cb7349c3eda2a44a",
+     "bytes_as_fetched": 45299,
+     "sha256": "a9bd55591e5399f31a5803e6265a802d6540f53aa9ee1301cb7349c3eda2a44a",
+     "bytes": 45299
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "da2facb831f3b130db2b898a2711d4b744c12ff1b98526d3365fce37dd719594",
+     "bytes_as_fetched": 16724,
+     "sha256": "da2facb831f3b130db2b898a2711d4b744c12ff1b98526d3365fce37dd719594",
+     "bytes": 16724
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "48eff5d45f6c2a3e908383988d28abcc56f3f7d90dfeae454dc9ed6eb2d89022",
+     "bytes_as_fetched": 76,
+     "sha256": "48eff5d45f6c2a3e908383988d28abcc56f3f7d90dfeae454dc9ed6eb2d89022",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-a-call-for-help",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7a9cfb2d6b4f7ac8e7634c6954e563bfbcf792112539d4c02c8734036925aecb",
+     "bytes_as_fetched": 358,
+     "sha256": "7a9cfb2d6b4f7ac8e7634c6954e563bfbcf792112539d4c02c8734036925aecb",
+     "bytes": 358
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b2476c2dde1d0da446faf1817631786716e0498a2f6de0564fa93cfcd905bf5f",
+     "bytes_as_fetched": 37448,
+     "sha256": "b2476c2dde1d0da446faf1817631786716e0498a2f6de0564fa93cfcd905bf5f",
+     "bytes": 37448
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "500f91cbb245abd15838cb50b77e0ee8ce60fc8402e90d6f339ff9260db8d585",
+     "bytes_as_fetched": 10873,
+     "sha256": "500f91cbb245abd15838cb50b77e0ee8ce60fc8402e90d6f339ff9260db8d585",
+     "bytes": 10873
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f106ff330b8eeef06da59e124703e38cfc84554c3ffc730101f0238dbd39ddbe",
+     "bytes_as_fetched": 76,
+     "sha256": "f106ff330b8eeef06da59e124703e38cfc84554c3ffc730101f0238dbd39ddbe",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-a-capture-first",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "fc8c89cba8eb59c502a37ad7bb6c4546733ce3d9e4e5e227750c0e192ea9d6df",
+     "bytes_as_fetched": 354,
+     "sha256": "fc8c89cba8eb59c502a37ad7bb6c4546733ce3d9e4e5e227750c0e192ea9d6df",
+     "bytes": 354
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "55260536ea0d940423001c3e790e02416ba28e30f13a1d9b3bb8ad1594f6810d",
+     "bytes_as_fetched": 52921,
+     "redacted": 2,
+     "sha256": "d8504acecac0e38b941f4b9e9764322c4ce7d91a4ff978e1b0e02cb85681c7e0",
+     "bytes": 52913
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "5b4bbfaccd8c879159f9cbb55f60cdaf5e8fccad1c316b7948d26e93799cec61",
+     "bytes_as_fetched": 24205,
+     "redacted": 1,
+     "sha256": "6606bb9751c05678677710cb381e7a6e071b28a5edbc6aa836921e3e3a88e6bd",
+     "bytes": 24201
+    },
+    {
+     "name": "region-two-lanes-morning.png",
+     "sha256_as_fetched": "55c3b452416657f56fd96ccca0eb40244ad56c6483c0a5934b55e474b62c1dfb",
+     "bytes_as_fetched": 216484,
+     "sha256": "55c3b452416657f56fd96ccca0eb40244ad56c6483c0a5934b55e474b62c1dfb",
+     "bytes": 216484
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f13c724d940d2d21af3020a33626d2fd8de2f5a0b3ee5da25724d50b6efd4a8b",
+     "bytes_as_fetched": 76,
+     "sha256": "f13c724d940d2d21af3020a33626d2fd8de2f5a0b3ee5da25724d50b6efd4a8b",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-a-desk-open",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2c797103802d50fe5959b86de8c847100dc385af1264b57410a1f956b8e910bd",
+     "bytes_as_fetched": 368,
+     "sha256": "2c797103802d50fe5959b86de8c847100dc385af1264b57410a1f956b8e910bd",
+     "bytes": 368
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3a1f50415f1a194ae6ba1f767ced353d19c779c2b566dd5ce186a53c3fb92529",
+     "bytes_as_fetched": 45885,
+     "redacted": 2,
+     "sha256": "ff59e1f3cb7b109e61ba53eca1c41ee1d27c6fbb7d3c1c21dbaae38a56685903",
+     "bytes": 45877
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1fd2a9cc3861a23a5768e9c014a582c9aa9eb0a9301e2183a530b3fa0c0ba0a1",
+     "bytes_as_fetched": 17715,
+     "redacted": 1,
+     "sha256": "e322580461f2a6d7bf9794feba14e42afaa6e5fc2e3f86ed52cec3b756dd067a",
+     "bytes": 17711
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6535d431fd504b910071847e78187ea0731b205919aedc68e099eead1169fec8",
+     "bytes_as_fetched": 76,
+     "sha256": "6535d431fd504b910071847e78187ea0731b205919aedc68e099eead1169fec8",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-a-identity",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4db5ffc9e3d2bb2fcafec7d040c3cccafa44ff5243f349c441413535c27dde43",
+     "bytes_as_fetched": 377,
+     "sha256": "4db5ffc9e3d2bb2fcafec7d040c3cccafa44ff5243f349c441413535c27dde43",
+     "bytes": 377
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "79611a42e446ed78e6ad4e9826aa3a1876434779b4e09f835c209efe4a06dff7",
+     "bytes_as_fetched": 49440,
+     "redacted": 2,
+     "sha256": "17e7ffa24314ebd5b00d8823ffec71012258e6ea73169d14c0de63e379084fb9",
+     "bytes": 49432
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8d8f5c63652287d470eb9b3b9cb3aa67a54ab6a178091a7610a2a1dfb2503b8d",
+     "bytes_as_fetched": 20438,
+     "redacted": 1,
+     "sha256": "512434a1fdb0030e04ba88cae4acc318c35edd3264146727526772948228d846",
+     "bytes": 20434
+    },
+    {
+     "name": "region-identity-five-steps.png",
+     "sha256_as_fetched": "07e2fc68eb4daceda21d24709b19227dd2c0284d487da018fc949d5ab51afa22",
+     "bytes_as_fetched": 158655,
+     "sha256": "07e2fc68eb4daceda21d24709b19227dd2c0284d487da018fc949d5ab51afa22",
+     "bytes": 158655
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "0be5d6ff9e0b22514899f3cbb1c657cdc9201d25d7bf857c0efaa8eaa8172642",
+     "bytes_as_fetched": 76,
+     "sha256": "0be5d6ff9e0b22514899f3cbb1c657cdc9201d25d7bf857c0efaa8eaa8172642",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-a-inbox-team",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7782acfec4c9a74dd869e7d6a1f62d49645f57c649ab73fdee41e34209d9bb0e",
+     "bytes_as_fetched": 377,
+     "sha256": "7782acfec4c9a74dd869e7d6a1f62d49645f57c649ab73fdee41e34209d9bb0e",
+     "bytes": 377
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "93579feb2177c5aea5ad636c82d39db793c61d480450ef22c6b3a55224616ff5",
+     "bytes_as_fetched": 43437,
+     "redacted": 8,
+     "sha256": "b10d564e2d3e6e30c1f6bcb515d36b8d6bf587eb4354b6b8280e2dd4c32bb824",
+     "bytes": 43415
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3dd350741dc85cc1e6414212504c2a484595cdb1ca288780b272e4414e5182c8",
+     "bytes_as_fetched": 15912,
+     "redacted": 5,
+     "sha256": "a335ece0053cc99e6ea323d66fff153793acff24c568f886d953e513fe2feddf",
+     "bytes": 15896
+    },
+    {
+     "name": "region-inbox-team.png",
+     "sha256_as_fetched": "aa69d34da9c81966163ae33663639d4b01a50397bb83bd5e4d6815b739f61bc8",
+     "bytes_as_fetched": 171139,
+     "sha256": "aa69d34da9c81966163ae33663639d4b01a50397bb83bd5e4d6815b739f61bc8",
+     "bytes": 171139
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "8f8f0d10fe11121b44ebf60060515eb68136902fb5d6a01865167066fff5054e",
+     "bytes_as_fetched": 76,
+     "sha256": "8f8f0d10fe11121b44ebf60060515eb68136902fb5d6a01865167066fff5054e",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-a-journalist-handbook",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c3e0fea713b13bcade4a145b8bcf85f115d1026ff4157b2c3497a4e6bff86d84",
+     "bytes_as_fetched": 408,
+     "sha256": "c3e0fea713b13bcade4a145b8bcf85f115d1026ff4157b2c3497a4e6bff86d84",
+     "bytes": 408
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1ec9c874ed7d1a64933f05b4485c15f57fe240e562e95050dfc647872ffdffe4",
+     "bytes_as_fetched": 55176,
+     "redacted": 1,
+     "sha256": "d8c50d57f5ae777c9286b503691cee0bdce2461eaa9556a116189f5b92f880ff",
+     "bytes": 55182
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b9273e1958b74b7f31a53d7260d7f36959829b64d6670051b9366af123e81c4c",
+     "bytes_as_fetched": 26081,
+     "redacted": 1,
+     "sha256": "4c60660647e9968258f7570e9efe00b35069136ac99e4c915e2e07cdca3f9aea",
+     "bytes": 26087
+    },
+    {
+     "name": "region-eleven-steps.png",
+     "sha256_as_fetched": "77369d157dea29d8d56ca1e5d44830d878d9fd8727afbccab30a43e64c85a402",
+     "bytes_as_fetched": 153299,
+     "sha256": "77369d157dea29d8d56ca1e5d44830d878d9fd8727afbccab30a43e64c85a402",
+     "bytes": 153299
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c1cae3c77bf70ac8c97b0fceff1b6de2c5c04d3cc0950bbdd20225d79c0df3e5",
+     "bytes_as_fetched": 76,
+     "sha256": "c1cae3c77bf70ac8c97b0fceff1b6de2c5c04d3cc0950bbdd20225d79c0df3e5",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-a-sharness",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1aa4e819617fd14707737a60e655b43e6e5b41ee003cc66eca9563f3bab89814",
+     "bytes_as_fetched": 363,
+     "sha256": "1aa4e819617fd14707737a60e655b43e6e5b41ee003cc66eca9563f3bab89814",
+     "bytes": 363
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1366361aefc419bb5f176e2226af930c2fec5c3c050cf826886ace906b807d24",
+     "bytes_as_fetched": 67317,
+     "redacted": 2,
+     "sha256": "1c388deb512498b5475dc885c1ae30fea1d02593464542e4541e91116d84083e",
+     "bytes": 67309
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "6010f3094c45d8967f911af3a0d619bb449e09f61a9647986ac0367c44580e8a",
+     "bytes_as_fetched": 34290,
+     "redacted": 1,
+     "sha256": "2b9c371e52a59a22e3b7fb639ae6f72b471bb3d2c5b18767f33cb23a07e8497d",
+     "bytes": 34286
+    },
+    {
+     "name": "region-policy-to-kernel.png",
+     "sha256_as_fetched": "a0f70892fc8f77a9173bc49a302609c8a5a9f69740a8bea3e02ee7e6236db325",
+     "bytes_as_fetched": 184712,
+     "sha256": "a0f70892fc8f77a9173bc49a302609c8a5a9f69740a8bea3e02ee7e6236db325",
+     "bytes": 184712
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "07f539537e7a7509bc48156c1c913dea78b618906e7ea359e74d1080d13c5c1e",
+     "bytes_as_fetched": 76,
+     "sha256": "07f539537e7a7509bc48156c1c913dea78b618906e7ea359e74d1080d13c5c1e",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-a-what-an-agent-is",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7a713f75475bae0072a5dba4d0f01c0d97f1bd3942262bef18ec2f7b899bb979",
+     "bytes_as_fetched": 363,
+     "sha256": "7a713f75475bae0072a5dba4d0f01c0d97f1bd3942262bef18ec2f7b899bb979",
+     "bytes": 363
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a059ee46283593764055182bbc8a1c571df5c2d47d4eb02cec0d9dc5515ac83a",
+     "bytes_as_fetched": 45326,
+     "sha256": "a059ee46283593764055182bbc8a1c571df5c2d47d4eb02cec0d9dc5515ac83a",
+     "bytes": 45326
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "44b02e6b90803313ac51a2a6bbbab868751ff3e3325c5fb40c8f7a2ccb8ddaf9",
+     "bytes_as_fetched": 17416,
+     "sha256": "44b02e6b90803313ac51a2a6bbbab868751ff3e3325c5fb40c8f7a2ccb8ddaf9",
+     "bytes": 17416
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "0be402f4ce846804a59f6d34ce4463d0cbc5d346bb82e3771228d33ea984d11d",
+     "bytes_as_fetched": 76,
+     "sha256": "0be402f4ce846804a59f6d34ce4463d0cbc5d346bb82e3771228d33ea984d11d",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-agents",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "514480f404ffeef0249c35d5168b282c91dd40f9a0551f87e29ea925ae4de36b",
+     "bytes_as_fetched": 325,
+     "sha256": "514480f404ffeef0249c35d5168b282c91dd40f9a0551f87e29ea925ae4de36b",
+     "bytes": 325
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d0ef3569d1016d93875d492acaebbb7d4f00de180e5e8fc9c96df4118880567f",
+     "bytes_as_fetched": 26101,
+     "sha256": "d0ef3569d1016d93875d492acaebbb7d4f00de180e5e8fc9c96df4118880567f",
+     "bytes": 26101
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "595bf5cbdff3f1cf513870738aa4638d806675fa8077db1880b70cce1121a1d0",
+     "bytes_as_fetched": 9557,
+     "sha256": "595bf5cbdff3f1cf513870738aa4638d806675fa8077db1880b70cce1121a1d0",
+     "bytes": 9557
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "9d64b61b57a96ef5b04ac2d85adcbc8d2143f0eabffd7ba5cc45c8db41234eee",
+     "bytes_as_fetched": 76,
+     "sha256": "9d64b61b57a96ef5b04ac2d85adcbc8d2143f0eabffd7ba5cc45c8db41234eee",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-articles",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e62c1786bcf58675a873b177dc3eb76e93d8abc3c9ae847efbfc3d1cdb19048f",
+     "bytes_as_fetched": 332,
+     "sha256": "e62c1786bcf58675a873b177dc3eb76e93d8abc3c9ae847efbfc3d1cdb19048f",
+     "bytes": 332
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "62fb36fd64c33a8e0f7e40ecbc2cb647e7b8b77636bce1f3b4850815049dc2ef",
+     "bytes_as_fetched": 720030,
+     "redacted": 3,
+     "sha256": "20ef1854c929f56641e85e15cabc00a3bea188880f4abb67afe66f8c0818552f",
+     "bytes": 720018
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9eaf9932ce2b1934c21a1d0ff1f2b51368b8578b2a54e6bd1b6f2c7071b74721",
+     "bytes_as_fetched": 229207,
+     "redacted": 1,
+     "sha256": "f5fef7275919dcb428e78996d625f04f464017fd3a989958d174a8de54f7059c",
+     "bytes": 229203
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "b0466011a7e25714804820d4e091615c65c63a77409a53d027a9239e7f5b0be4",
+     "bytes_as_fetched": 76,
+     "sha256": "b0466011a7e25714804820d4e091615c65c63a77409a53d027a9239e7f5b0be4",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-board",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ba5044b5b688541ab1877c13b6073df5b084d240701190f29919647d42e533f0",
+     "bytes_as_fetched": 328,
+     "sha256": "ba5044b5b688541ab1877c13b6073df5b084d240701190f29919647d42e533f0",
+     "bytes": 328
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "8372bbbe01cd17963d0178d6fe1989226d213bfe5f62f58d7e0e459f39893683",
+     "bytes_as_fetched": 28310,
+     "redacted": 4,
+     "sha256": "4e9e35c8d2c02b908fc81920f278ba32294d397f7710025ee816406af4ce8b94",
+     "bytes": 28294
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "55be698ac1caf2c0c3cb1dc99e9f8a90e03af63f04e4432eafebcb42b0e232d1",
+     "bytes_as_fetched": 6959,
+     "redacted": 4,
+     "sha256": "b1afe9c920ef9f7f9f38753153798ab4db843683631acdbbf373dd77a60082b4",
+     "bytes": 6943
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c083918d9b93c048c378f2cd902e636383b7703511b8904419677683ad607fcc",
+     "bytes_as_fetched": 76,
+     "sha256": "c083918d9b93c048c378f2cd902e636383b7703511b8904419677683ad607fcc",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-corrections",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b66e83dd50abe62975315a50bacaf090639a2471fc69ad3788b711868e4cb4bc",
+     "bytes_as_fetched": 340,
+     "sha256": "b66e83dd50abe62975315a50bacaf090639a2471fc69ad3788b711868e4cb4bc",
+     "bytes": 340
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0045a7c95b0acc98c4a36b5636ab24b8c934535970d4bc4f71b82edd52990381",
+     "bytes_as_fetched": 16114,
+     "sha256": "0045a7c95b0acc98c4a36b5636ab24b8c934535970d4bc4f71b82edd52990381",
+     "bytes": 16114
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "6638cd861451e65001906c9572c35d3cf1ef1d1ef0bb7a10fe544c96361fb7bd",
+     "bytes_as_fetched": 5757,
+     "sha256": "6638cd861451e65001906c9572c35d3cf1ef1d1ef0bb7a10fe544c96361fb7bd",
+     "bytes": 5757
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6c71104f391afd47157bf77de0246ebc46acf1ea3722aff24590122b8d2edabb",
+     "bytes_as_fetched": 76,
+     "sha256": "6c71104f391afd47157bf77de0246ebc46acf1ea3722aff24590122b8d2edabb",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-graphs",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "df42f38ca8fd89166e8425eeb29962e991885ed33cea19b90a6eea4d01970c06",
+     "bytes_as_fetched": 333,
+     "sha256": "df42f38ca8fd89166e8425eeb29962e991885ed33cea19b90a6eea4d01970c06",
+     "bytes": 333
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "7bf0e202d7406b61c601b097e2feef3ac4b83e0177d1196eeba254d14d2fd343",
+     "bytes_as_fetched": 4070199,
+     "redacted": 24,
+     "sha256": "690abb2babc8a9ef67c555e5e0cfc60e22c34af1a1f9d2c2abd394b6382180c2",
+     "bytes": 4070103
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0b81a2ea35e8cd63a95e89f25d636db93494dacb030dfc892f08e24657d081cc",
+     "bytes_as_fetched": 2135338,
+     "redacted": 22,
+     "sha256": "6a833005ba1a685688c055bec6e87e31b9767ab9a636d4e096e39a948cbbc247",
+     "bytes": 2135250
+    },
+    {
+     "name": "region-one-article-graph.png",
+     "sha256_as_fetched": "32763b230dcbe14709b4158fd5b45c893846b6120631d98faeadcada6a6f65ae",
+     "bytes_as_fetched": 36292,
+     "sha256": "32763b230dcbe14709b4158fd5b45c893846b6120631d98faeadcada6a6f65ae",
+     "bytes": 36292
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "79d6cdb498a4484d664cc1037ce0f42b110ec7056dc10c12d53b65691c88d39f",
+     "bytes_as_fetched": 76,
+     "sha256": "79d6cdb498a4484d664cc1037ce0f42b110ec7056dc10c12d53b65691c88d39f",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-home",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "a2c58d49e43afbda81c4b802c5988767764859f8bb4fb597e2027dd281f0e7ff",
+     "bytes_as_fetched": 289,
+     "sha256": "a2c58d49e43afbda81c4b802c5988767764859f8bb4fb597e2027dd281f0e7ff",
+     "bytes": 289
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "612ba7c09115f698be33a6d4c1acdf4046a3bc07dd012467a4e2ada39a8e9bbe",
+     "bytes_as_fetched": 69188,
+     "sha256": "612ba7c09115f698be33a6d4c1acdf4046a3bc07dd012467a4e2ada39a8e9bbe",
+     "bytes": 69188
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0fd1fe9834af4f301d016872ce147365242304b1e2cb4419cb8b4e12fdc28e05",
+     "bytes_as_fetched": 17264,
+     "sha256": "0fd1fe9834af4f301d016872ce147365242304b1e2cb4419cb8b4e12fdc28e05",
+     "bytes": 17264
+    },
+    {
+     "name": "region-front-page.png",
+     "sha256_as_fetched": "8e0fec009b94895c1679f5aab6048f183d2419770f88394444fd3e99fe738607",
+     "bytes_as_fetched": 296592,
+     "sha256": "8e0fec009b94895c1679f5aab6048f183d2419770f88394444fd3e99fe738607",
+     "bytes": 296592
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d54aeff5fb9bfa031ef2c52944b8b76d9b8fbc65ef5fb18979fa37bd1ea95077",
+     "bytes_as_fetched": 76,
+     "sha256": "d54aeff5fb9bfa031ef2c52944b8b76d9b8fbc65ef5fb18979fa37bd1ea95077",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-log",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "69112ed178ce4b95c9157c78309c8abaef0e8d058410f4913f075c3249ac900b",
+     "bytes_as_fetched": 322,
+     "sha256": "69112ed178ce4b95c9157c78309c8abaef0e8d058410f4913f075c3249ac900b",
+     "bytes": 322
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "827c307590dd7adf44d09edddf41e1fd569fcae3fa01ccc9cd9fd948c3866d71",
+     "bytes_as_fetched": 28530,
+     "redacted": 1,
+     "sha256": "3123449b0c8384db47ddc6325b62666398811a854fae9a898859e520e7febf39",
+     "bytes": 28526
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4345437aacb900beba98e713d71f62e7f92612b8f0edc8df38d4251765260edb",
+     "bytes_as_fetched": 8608,
+     "redacted": 1,
+     "sha256": "63098194d44b5d251bf9aca93652186f1f676f4409ad369142ecc14b6e740c09",
+     "bytes": 8604
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "5ccc84a00f8466e19ed7d7969e44449b9e18f40af5b2eb30584e407d11d01798",
+     "bytes_as_fetched": 76,
+     "sha256": "5ccc84a00f8466e19ed7d7969e44449b9e18f40af5b2eb30584e407d11d01798",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-newsroom",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "61bf9b4a683b8150dad447e8ed6a620255058f4d565f147e1ab261c4d824d09e",
+     "bytes_as_fetched": 331,
+     "sha256": "61bf9b4a683b8150dad447e8ed6a620255058f4d565f147e1ab261c4d824d09e",
+     "bytes": 331
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ff70db5f85c5c324566a50b1a58e2c88b846a39a1f1c707d040d5b00a3e76316",
+     "bytes_as_fetched": 35590,
+     "redacted": 1,
+     "sha256": "fc3837e7481131c2013a183c06f0545aa576240344e490d9de1350513c0e0d16",
+     "bytes": 35586
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b8f490306854ac2bced2855288c564c9668ba58a83d0b736a153c5dcfc4cb042",
+     "bytes_as_fetched": 12564,
+     "redacted": 1,
+     "sha256": "28091a14be075b86b1542868d48b8e155295efc5a106d4971c00b837dc569085",
+     "bytes": 12560
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "24f5f39c920eb97467f86a9c75b2a5c5f49894df50b5e6f156b165cf094e8707",
+     "bytes_as_fetched": 76,
+     "sha256": "24f5f39c920eb97467f86a9c75b2a5c5f49894df50b5e6f156b165cf094e8707",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-php-flaws",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3eed2364cc4ffc694f7b78f652e22bd6e8a8bc74df44f206d60c20ae7e8a2c4b",
+     "bytes_as_fetched": 334,
+     "sha256": "3eed2364cc4ffc694f7b78f652e22bd6e8a8bc74df44f206d60c20ae7e8a2c4b",
+     "bytes": 334
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4a04307f3fcdf686657e41cbe7c0ca63e1cf82721900332abb20f0dec8d1197c",
+     "bytes_as_fetched": 84591,
+     "sha256": "4a04307f3fcdf686657e41cbe7c0ca63e1cf82721900332abb20f0dec8d1197c",
+     "bytes": 84591
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "dc3f89d8724c6a17c5cc1b65a6baed83c4759df3bc81a4df0aaed6963f79fad1",
+     "bytes_as_fetched": 39620,
+     "sha256": "dc3f89d8724c6a17c5cc1b65a6baed83c4759df3bc81a4df0aaed6963f79fad1",
+     "bytes": 39620
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "95dfd401c1013a64e82658de246f88a9d730ab8e2b8c36dcd96a822cf1281e81",
+     "bytes_as_fetched": 76,
+     "sha256": "95dfd401c1013a64e82658de246f88a9d730ab8e2b8c36dcd96a822cf1281e81",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-policies",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "58724f3108721e846c31c4d3e4fd0c2f22225b71e99c44d3f04aa4ac5e5cadc0",
+     "bytes_as_fetched": 337,
+     "sha256": "58724f3108721e846c31c4d3e4fd0c2f22225b71e99c44d3f04aa4ac5e5cadc0",
+     "bytes": 337
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ba506819171357d1205307d56e1454a11bd73eed7aa6c64cce76d1ad24f3d4c9",
+     "bytes_as_fetched": 30816,
+     "sha256": "ba506819171357d1205307d56e1454a11bd73eed7aa6c64cce76d1ad24f3d4c9",
+     "bytes": 30816
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e26356ac70a6d551cc7fb5bd5fa2f2389153d62ab58b4d675556a19af28bc161",
+     "bytes_as_fetched": 7062,
+     "sha256": "e26356ac70a6d551cc7fb5bd5fa2f2389153d62ab58b4d675556a19af28bc161",
+     "bytes": 7062
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d09685d1ca5a079af7e7782c9e8d721b2274ad7f3ccf27f4b80939f20b94a88e",
+     "bytes_as_fetched": 76,
+     "sha256": "d09685d1ca5a079af7e7782c9e8d721b2274ad7f3ccf27f4b80939f20b94a88e",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-publish",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5aa80a1383e36bb1929bffbd3988feed7fd290240bf7cec36af33ae0fb071226",
+     "bytes_as_fetched": 334,
+     "sha256": "5aa80a1383e36bb1929bffbd3988feed7fd290240bf7cec36af33ae0fb071226",
+     "bytes": 334
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c67322b67173832092918eda59141ef4e7bd7049d5b5971a80bca25c04fad59d",
+     "bytes_as_fetched": 26434,
+     "sha256": "c67322b67173832092918eda59141ef4e7bd7049d5b5971a80bca25c04fad59d",
+     "bytes": 26434
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cf7f6008b5698484c9c544f83ad05b90089526648953bed388e9d0e703c26efc",
+     "bytes_as_fetched": 6398,
+     "sha256": "cf7f6008b5698484c9c544f83ad05b90089526648953bed388e9d0e703c26efc",
+     "bytes": 6398
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a0838593ed78c7325578dd1159d3a7478c83c1237484272ec4dcab948d08524e",
+     "bytes_as_fetched": 76,
+     "sha256": "a0838593ed78c7325578dd1159d3a7478c83c1237484272ec4dcab948d08524e",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-reviews",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "774d63a790f5e41adad02c947765c7fad8efeaec93061b07fc4877427708c869",
+     "bytes_as_fetched": 328,
+     "sha256": "774d63a790f5e41adad02c947765c7fad8efeaec93061b07fc4877427708c869",
+     "bytes": 328
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e6f13acd6a2d100c5f6630f16580c2656ca190f0f492c86cad77cc175b3def14",
+     "bytes_as_fetched": 30842,
+     "sha256": "e6f13acd6a2d100c5f6630f16580c2656ca190f0f492c86cad77cc175b3def14",
+     "bytes": 30842
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b54619444f965373020b85cf2b8e0b992832103842aef901f7a9d7c952c35847",
+     "bytes_as_fetched": 13050,
+     "sha256": "b54619444f965373020b85cf2b8e0b992832103842aef901f7a9d7c952c35847",
+     "bytes": 13050
+    },
+    {
+     "name": "region-review-table.png",
+     "sha256_as_fetched": "75d8b41375fb93b725f1c82fc5a9d03751b196255194f16518c9a830399b75e7",
+     "bytes_as_fetched": 34736,
+     "sha256": "75d8b41375fb93b725f1c82fc5a9d03751b196255194f16518c9a830399b75e7",
+     "bytes": 34736
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "1ea9e1982fcc82e44a596f26d67c234657d5f152a42f75c53c9fab9ec163de22",
+     "bytes_as_fetched": 76,
+     "sha256": "1ea9e1982fcc82e44a596f26d67c234657d5f152a42f75c53c9fab9ec163de22",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-reviews-criteria",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c251489f069d56aef379fa4167070a3f139c6631da9b761172aa15deb74a266b",
+     "bytes_as_fetched": 343,
+     "sha256": "c251489f069d56aef379fa4167070a3f139c6631da9b761172aa15deb74a266b",
+     "bytes": 343
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a23c699c7acb3d00041fcc71b57386d82364d460690a4429ad534de2b161fca8",
+     "bytes_as_fetched": 37192,
+     "sha256": "a23c699c7acb3d00041fcc71b57386d82364d460690a4429ad534de2b161fca8",
+     "bytes": 37192
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "7d329ebd671a5c62f8609adfe5a94562d6edf5fcaa481797237a15ab0b4c69fa",
+     "bytes_as_fetched": 18466,
+     "sha256": "7d329ebd671a5c62f8609adfe5a94562d6edf5fcaa481797237a15ab0b4c69fa",
+     "bytes": 18466
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "56682367bd388e0b7ff9ce4a0df809f85f059b74141c61c0a7f880bd5475570f",
+     "bytes_as_fetched": 76,
+     "sha256": "56682367bd388e0b7ff9ce4a0df809f85f059b74141c61c0a7f880bd5475570f",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-shipped",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2ff45879ca3a327630c54ccb8c2a80e1df282d681a594c738ffdae5b39134600",
+     "bytes_as_fetched": 328,
+     "sha256": "2ff45879ca3a327630c54ccb8c2a80e1df282d681a594c738ffdae5b39134600",
+     "bytes": 328
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "912452f4a33a1e1d8b6475070dd80e9d4f06ce653922a8f05a667ddd90afd410",
+     "bytes_as_fetched": 37576,
+     "sha256": "912452f4a33a1e1d8b6475070dd80e9d4f06ce653922a8f05a667ddd90afd410",
+     "bytes": 37576
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "70fa9b1f90cfd31d4161d58ded3526a1c7fdc7ad926da73016dc69a57cd319b7",
+     "bytes_as_fetched": 19007,
+     "sha256": "70fa9b1f90cfd31d4161d58ded3526a1c7fdc7ad926da73016dc69a57cd319b7",
+     "bytes": 19007
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e32785770db31af735aa4c1bb51314e23b246083d67aa94fae4750b42c7356d5",
+     "bytes_as_fetched": 76,
+     "sha256": "e32785770db31af735aa4c1bb51314e23b246083d67aa94fae4750b42c7356d5",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-sitemap",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "41fa576f66e7bc30686a46dda2805dcffd1d5ccd413c7596d430aded86aa5a87",
+     "bytes_as_fetched": 319,
+     "sha256": "41fa576f66e7bc30686a46dda2805dcffd1d5ccd413c7596d430aded86aa5a87",
+     "bytes": 319
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "bdc1c5c4482470ca9518967b159ee3b91996d4b5c4ace9dca7c522be3872f6cc",
+     "bytes_as_fetched": 153979,
+     "sha256": "bdc1c5c4482470ca9518967b159ee3b91996d4b5c4ace9dca7c522be3872f6cc",
+     "bytes": 153979
+    },
+    {
+     "name": "page.xml",
+     "sha256_as_fetched": "bc0f076a3afc7e41fb4a3ea8ba3d94e9105edf737e765d4d4a3c208e39ffc745",
+     "bytes_as_fetched": 228807,
+     "sha256": "bc0f076a3afc7e41fb4a3ea8ba3d94e9105edf737e765d4d4a3c208e39ffc745",
+     "bytes": 228807
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "4cd8dea02f4edc49219e3cb5b55a23be0ca8d8054417026f1b6936816fc0e506",
+     "bytes_as_fetched": 75,
+     "sha256": "4cd8dea02f4edc49219e3cb5b55a23be0ca8d8054417026f1b6936816fc0e506",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-team",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "71b4e193022c27261d029c4b0d7a091c90efae28aae6a3174007898adff1b6cb",
+     "bytes_as_fetched": 319,
+     "sha256": "71b4e193022c27261d029c4b0d7a091c90efae28aae6a3174007898adff1b6cb",
+     "bytes": 319
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c1f632a54ab465ddff03fcf46aa05f29a1f44895d2701eb33133e4456264185a",
+     "bytes_as_fetched": 26709,
+     "sha256": "c1f632a54ab465ddff03fcf46aa05f29a1f44895d2701eb33133e4456264185a",
+     "bytes": 26709
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c46c2c878cb77295b4faf5dcaef14fc3aeee81bb4c913dd12db9bf9abf010aa7",
+     "bytes_as_fetched": 8409,
+     "sha256": "c46c2c878cb77295b4faf5dcaef14fc3aeee81bb4c913dd12db9bf9abf010aa7",
+     "bytes": 8409
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "3cb6201a48a2062515942b3bd8420e3d3afe18930d1f14531626446dd0b159d7",
+     "bytes_as_fetched": 76,
+     "sha256": "3cb6201a48a2062515942b3bd8420e3d3afe18930d1f14531626446dd0b159d7",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-nr-wire-json",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ab220282bdbfe7c266a92ef3798e6c887b2fd9a0f852626b4156d6f30a04b34e",
+     "bytes_as_fetched": 338,
+     "sha256": "ab220282bdbfe7c266a92ef3798e6c887b2fd9a0f852626b4156d6f30a04b34e",
+     "bytes": 338
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "a31c5eb905012b47d70e841bdf93abd594e36500c0c090614fbbbc90f8faa7cb",
+     "bytes_as_fetched": 830107,
+     "redacted": 6,
+     "sha256": "9a0ff82d58d3c453e4f48477daeae8f8ff8cfc0881d80b6b56835f33bd097e30",
+     "bytes": 830085
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "bb49ca89a4073af79b6b3e65d7c0d05a90d60293a6acacdee089914fb1216fba",
+     "bytes_as_fetched": 771275,
+     "redacted": 6,
+     "sha256": "8a5f23f6d5de84e44bcb3e045d8012f8dc80136043c5ba1c3f4db6988d5f1b15",
+     "bytes": 771253
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "60f4537439a55855deb9d3b8bff884a012643cde0f735da66a92445ffb9ca6f6",
+     "bytes_as_fetched": 76,
+     "sha256": "60f4537439a55855deb9d3b8bff884a012643cde0f735da66a92445ffb9ca6f6",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-a-push",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "efc39dd7bcd3ff8c31bfc076a2b9e46da94feee0244aec1732f0a0e253fdb711",
+     "bytes_as_fetched": 394,
+     "sha256": "efc39dd7bcd3ff8c31bfc076a2b9e46da94feee0244aec1732f0a0e253fdb711",
+     "bytes": 394
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "38f9a3177ac39998404f8af0158227aab7c206eb7c4dd12a614a448dbd18cfbb",
+     "bytes_as_fetched": 55260,
+     "redacted": 2,
+     "sha256": "9fb9372addef2f7f49221869629b61c0a5f0da4f54ba7f52164bc0d53d76366f",
+     "bytes": 55260
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f0c3cc7eb38d64a2054b8e9032cdaa31a1079acad107712bfab7e839a3057db3",
+     "bytes_as_fetched": 22593,
+     "redacted": 2,
+     "sha256": "b21ab563bca85b9b8ae2080978a6bcddb7e8dfdd719af6207369ed2626c6371f",
+     "bytes": 22593
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "00d03638fc11a4316576861dedc284a130e362848e25bdd8780ea3dd4a21dd7a",
+     "bytes_as_fetched": 76,
+     "sha256": "00d03638fc11a4316576861dedc284a130e362848e25bdd8780ea3dd4a21dd7a",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-a-where-stands",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "764d21b944dfb24c466ce09d32be395d1ddef977f238a6aac8b1b5a3b4732dbe",
+     "bytes_as_fetched": 390,
+     "sha256": "764d21b944dfb24c466ce09d32be395d1ddef977f238a6aac8b1b5a3b4732dbe",
+     "bytes": 390
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e828d783b1d720b94cebc9abfb909a4b01ea7c710bfb747ea80a25473654beda",
+     "bytes_as_fetched": 73759,
+     "sha256": "e828d783b1d720b94cebc9abfb909a4b01ea7c710bfb747ea80a25473654beda",
+     "bytes": 73759
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f55c035ff869ae75df4ae54ad51bfd922e088af48154f5cd8966210f471c228b",
+     "bytes_as_fetched": 19064,
+     "sha256": "f55c035ff869ae75df4ae54ad51bfd922e088af48154f5cd8966210f471c228b",
+     "bytes": 19064
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "35b3f8b59c654f022732ffada129be986c1c5649d1bc0222f1a404c2fa26a3cb",
+     "bytes_as_fetched": 76,
+     "sha256": "35b3f8b59c654f022732ffada129be986c1c5649d1bc0222f1a404c2fa26a3cb",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-analysis",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "03cc911a924d847a48a5f814496b1b8035dc084ac5bc696d8b017e0a801892e6",
+     "bytes_as_fetched": 338,
+     "sha256": "03cc911a924d847a48a5f814496b1b8035dc084ac5bc696d8b017e0a801892e6",
+     "bytes": 338
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "5912c59048041aa60c5a0a4869f9a3a69af38151722d50016c20cee07f9a5d42",
+     "bytes_as_fetched": 58506,
+     "sha256": "5912c59048041aa60c5a0a4869f9a3a69af38151722d50016c20cee07f9a5d42",
+     "bytes": 58506
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c77b2e498ea50ad45f8ad220ecf61c15948ba5ccd4603fc5946dd6c1edf204d7",
+     "bytes_as_fetched": 9616,
+     "sha256": "c77b2e498ea50ad45f8ad220ecf61c15948ba5ccd4603fc5946dd6c1edf204d7",
+     "bytes": 9616
+    },
+    {
+     "name": "region-how-sure.png",
+     "sha256_as_fetched": "9e0ad4af93f2dd0b83b21cdd55e32797e05d4647b7aac53f2ce94d1fcf77f94a",
+     "bytes_as_fetched": 170748,
+     "sha256": "9e0ad4af93f2dd0b83b21cdd55e32797e05d4647b7aac53f2ce94d1fcf77f94a",
+     "bytes": 170748
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "674e3534e07b680ff22e7d9102991d1368136129de428caa6e000db4e1c7ceea",
+     "bytes_as_fetched": 76,
+     "sha256": "674e3534e07b680ff22e7d9102991d1368136129de428caa6e000db4e1c7ceea",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-claims",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "31e0c29e6fc8dcce1322ebced8c04d1e560a21e5d5271d1444ee71fff09dcd57",
+     "bytes_as_fetched": 333,
+     "sha256": "31e0c29e6fc8dcce1322ebced8c04d1e560a21e5d5271d1444ee71fff09dcd57",
+     "bytes": 333
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "25b400018f37e7e501e658dcefccc1f64d6edebb5a9923799998771ed5013186",
+     "bytes_as_fetched": 166136,
+     "redacted": 3,
+     "sha256": "9a845e3122383a4937563636207524b6d826ca826a72ad5790248a2df7ca3e17",
+     "bytes": 166121
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "85407bd4c5c08e1726c8d77710bfe91954d581e0150d13f700dde4dd40b2c372",
+     "bytes_as_fetched": 49019,
+     "redacted": 3,
+     "sha256": "908ea49c519de1be5b65f6529aec1326c527fc5d1018298ac0a04543bf78d081",
+     "bytes": 49004
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6348eb5aba107bc1bde177327b50de821a3630f564e2d10eb15dd7d7c673b977",
+     "bytes_as_fetched": 76,
+     "sha256": "6348eb5aba107bc1bde177327b50de821a3630f564e2d10eb15dd7d7c673b977",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-claims-review",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e0837122e885814e6df8ec929b7bfc468e2d29cdb8bd0bb0f3ce5b8e512eaa40",
+     "bytes_as_fetched": 354,
+     "sha256": "e0837122e885814e6df8ec929b7bfc468e2d29cdb8bd0bb0f3ce5b8e512eaa40",
+     "bytes": 354
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "40b3781627deec18fd7f6812e1eeb3f144e8acfe8d07e5452ccf4e7c01e4a361",
+     "bytes_as_fetched": 947654,
+     "redacted": 923,
+     "sha256": "8a23d897794fb3131881902ab21c7557d19bcdfa54008426e8dfd3af9dc82d10",
+     "bytes": 942912
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "069f1c11fb655ebec0eb4b09bcac094831acaa433140d2f87c512292cc3f7e61",
+     "bytes_as_fetched": 438212,
+     "redacted": 923,
+     "sha256": "0b5cbbf908bc032244f2f7abdee76d07992046823c7cbdb70d9059f28cd2c399",
+     "bytes": 433470
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a4b15d3db352823598929f7575247045938ab4bd8cfa8beca3b44da57a357e53",
+     "bytes_as_fetched": 76,
+     "sha256": "a4b15d3db352823598929f7575247045938ab4bd8cfa8beca3b44da57a357e53",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-collaborators",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "85f9bed77ebaf1edd44698186b9cb5217be445c094dd0478e356ef15f16d8aef",
+     "bytes_as_fetched": 363,
+     "sha256": "85f9bed77ebaf1edd44698186b9cb5217be445c094dd0478e356ef15f16d8aef",
+     "bytes": 363
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4836dc8977b37fa05a4e28f88424ba467a0872f92d195b948b6d1e1fe9e84054",
+     "bytes_as_fetched": 50617,
+     "redacted": 5,
+     "sha256": "9b16345f180318294911f3dbb080f4c0a2f1481e5f75e01fc8a5459f6b520b50",
+     "bytes": 50564
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f56bdccfdee2d1cc03e4bf15bb19d64da30e8d41c92dceced662981c54217972",
+     "bytes_as_fetched": 15575,
+     "redacted": 1,
+     "sha256": "484d91030bd6c33640d02776d2087093b3080c18d23079bd30b2b4f5902bbd27",
+     "bytes": 15573
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2bdf485a948805be02d07d9365aea2c7673534412aaa5392efe428cd33050e99",
+     "bytes_as_fetched": 76,
+     "sha256": "2bdf485a948805be02d07d9365aea2c7673534412aaa5392efe428cd33050e99",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-factcheck",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ed36b44cedc91e5049084aa2c45c9eea1f8b8d676cd13a283f52c7ae66afbd0a",
+     "bytes_as_fetched": 342,
+     "sha256": "ed36b44cedc91e5049084aa2c45c9eea1f8b8d676cd13a283f52c7ae66afbd0a",
+     "bytes": 342
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "87bab4be52cdae08157da0be96c5b682636190745289d4d086bf37e7d7c0165a",
+     "bytes_as_fetched": 328854,
+     "redacted": 1,
+     "sha256": "d1b7bfe7c1d6242ae5aab358ff290df7f6f02a2404d352312c4388114c1cf00b",
+     "bytes": 328848
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ee9a617f569e8c310f8ec89e2083ee989f411a52a97e9cb2a9019e4fa6f49a7a",
+     "bytes_as_fetched": 176607,
+     "redacted": 1,
+     "sha256": "a7dd0686fcd745579944a719dff191b8a13b93af55465f30e955fd472bd03c25",
+     "bytes": 176601
+    },
+    {
+     "name": "region-exploited-explained.png",
+     "sha256_as_fetched": "534a8fafa5a2eaabb11c70de69c325a1f0c941da2857c5d4d96985311ba7563d",
+     "bytes_as_fetched": 354645,
+     "sha256": "534a8fafa5a2eaabb11c70de69c325a1f0c941da2857c5d4d96985311ba7563d",
+     "bytes": 354645
+    },
+    {
+     "name": "region-spectrum-of-evidence.png",
+     "sha256_as_fetched": "45d9033bef91c9b8b4be4a5de0bdc3202d8ee2337d4324c9a111c139209e0443",
+     "bytes_as_fetched": 99532,
+     "sha256": "45d9033bef91c9b8b4be4a5de0bdc3202d8ee2337d4324c9a111c139209e0443",
+     "bytes": 99532
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a9a2a4e8ddc1295996bb864027aefdb5bb1350ba735c2daf16920334c7aaa96f",
+     "bytes_as_fetched": 76,
+     "sha256": "a9a2a4e8ddc1295996bb864027aefdb5bb1350ba735c2daf16920334c7aaa96f",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-home",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "06a642eb2db6b5f8606df096b8720ae22537a4f3fc3b57dcc670225cb4fa1e81",
+     "bytes_as_fetched": 316,
+     "sha256": "06a642eb2db6b5f8606df096b8720ae22537a4f3fc3b57dcc670225cb4fa1e81",
+     "bytes": 316
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "77acba77beed0226e96c6bb86c70a99f2919d36c92c637351c7aa71107b227be",
+     "bytes_as_fetched": 89946,
+     "sha256": "77acba77beed0226e96c6bb86c70a99f2919d36c92c637351c7aa71107b227be",
+     "bytes": 89946
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "312fe52b671d2ebb221fa9e0fe6b783d7bd74c2fbe681813dcfa4a6ca73f2a6f",
+     "bytes_as_fetched": 21973,
+     "sha256": "312fe52b671d2ebb221fa9e0fe6b783d7bd74c2fbe681813dcfa4a6ca73f2a6f",
+     "bytes": 21973
+    },
+    {
+     "name": "region-hero.png",
+     "sha256_as_fetched": "18d9362d01b37d1fe5ca20d2c0506ab203157871cd301bfd96da655c1264fff2",
+     "bytes_as_fetched": 175286,
+     "sha256": "18d9362d01b37d1fe5ca20d2c0506ab203157871cd301bfd96da655c1264fff2",
+     "bytes": 175286
+    },
+    {
+     "name": "region-how-it-unfolded.png",
+     "sha256_as_fetched": "b5aa72fab3e8e2b98f28a43574ed0963f3bdb7b15646a7abdec827e8553e2363",
+     "bytes_as_fetched": 50471,
+     "sha256": "b5aa72fab3e8e2b98f28a43574ed0963f3bdb7b15646a7abdec827e8553e2363",
+     "bytes": 50471
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a1f63ed9864682e17899cac20b4240bc0e695b65c2965919cad635a59705f1a3",
+     "bytes_as_fetched": 76,
+     "sha256": "a1f63ed9864682e17899cac20b4240bc0e695b65c2965919cad635a59705f1a3",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-join",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e951848127ce738ad7bd5e4819d8fcbe015e3c36db9c855d2ca880c286e5858b",
+     "bytes_as_fetched": 326,
+     "sha256": "e951848127ce738ad7bd5e4819d8fcbe015e3c36db9c855d2ca880c286e5858b",
+     "bytes": 326
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4e4c869ea8343492d15110aa666ad1688b3d76b599185cd8b5e984b9198f9236",
+     "bytes_as_fetched": 34288,
+     "sha256": "4e4c869ea8343492d15110aa666ad1688b3d76b599185cd8b5e984b9198f9236",
+     "bytes": 34288
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a75ec2809f45d77890800b57f519c124b47ef969ae6e0b3ed60fc55b1d5ae29c",
+     "bytes_as_fetched": 7879,
+     "sha256": "a75ec2809f45d77890800b57f519c124b47ef969ae6e0b3ed60fc55b1d5ae29c",
+     "bytes": 7879
+    },
+    {
+     "name": "region-how-it-works.png",
+     "sha256_as_fetched": "8be03782bf20ca8bfe05c21d992c62bb61e3ba17d17b5aea1ad73d650bf1055c",
+     "bytes_as_fetched": 74098,
+     "sha256": "8be03782bf20ca8bfe05c21d992c62bb61e3ba17d17b5aea1ad73d650bf1055c",
+     "bytes": 74098
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2708e977a3c1d43578b907a76ebf1f620feee5cd084c6e6d97aa6b8caafb4eba",
+     "bytes_as_fetched": 76,
+     "sha256": "2708e977a3c1d43578b907a76ebf1f620feee5cd084c6e6d97aa6b8caafb4eba",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-join-invite",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c65760cd6fc4b102075241b543fec089c73c0e8be62580e3ed9bf677408c2258",
+     "bytes_as_fetched": 347,
+     "sha256": "c65760cd6fc4b102075241b543fec089c73c0e8be62580e3ed9bf677408c2258",
+     "bytes": 347
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "21277150880008ac5cfed61b88b58eba22cd63216e875d85a4f41ca100e22957",
+     "bytes_as_fetched": 32422,
+     "sha256": "21277150880008ac5cfed61b88b58eba22cd63216e875d85a4f41ca100e22957",
+     "bytes": 32422
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "13a80c2066432b8cd2f091fa014ba09b5c0169eb65d1914318f96c8431c45221",
+     "bytes_as_fetched": 6352,
+     "sha256": "13a80c2066432b8cd2f091fa014ba09b5c0169eb65d1914318f96c8431c45221",
+     "bytes": 6352
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2b840d3b4a5faf849067289722fb1a0831ab3b614e6ec75b0c7473b704372de2",
+     "bytes_as_fetched": 76,
+     "sha256": "2b840d3b4a5faf849067289722fb1a0831ab3b614e6ec75b0c7473b704372de2",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-layers",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4f341a886b4df766b60521db37bdd647288c92cd1c667b7ecc79dc1ecb8910ee",
+     "bytes_as_fetched": 332,
+     "sha256": "4f341a886b4df766b60521db37bdd647288c92cd1c667b7ecc79dc1ecb8910ee",
+     "bytes": 332
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "26835bab104feb46da4243263fd91bc4ba2fe0898a48ea0bdd29895991e0805c",
+     "bytes_as_fetched": 65878,
+     "redacted": 36,
+     "sha256": "6dcccb817878c37f6792d8d91bb0ed712764767684c7aba7562203d76bb745a4",
+     "bytes": 65768
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c216f7b1cd1bce73891482c763c52f56a9442e2803e459fc61caf474a37ccef4",
+     "bytes_as_fetched": 25357,
+     "redacted": 36,
+     "sha256": "be5adf9e9f29bab43b54e55d942138992d1942b3959ed9678938716968ce0ac8",
+     "bytes": 25247
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "3785f3fcc1b309910e343b692ed7996c54dceb9045454a658fb1f8fee3168e13",
+     "bytes_as_fetched": 76,
+     "sha256": "3785f3fcc1b309910e343b692ed7996c54dceb9045454a658fb1f8fee3168e13",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5886fe80e08b5ab07308bde26554bbf641d2a14ad59824c72eda259cf6ed31ca",
+     "bytes_as_fetched": 333,
+     "sha256": "5886fe80e08b5ab07308bde26554bbf641d2a14ad59824c72eda259cf6ed31ca",
+     "bytes": 333
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3492261137055db53cf7be67986bf39001c526c9e92e278c036aeb673511cd22",
+     "bytes_as_fetched": 209999,
+     "redacted": 19,
+     "sha256": "9e16dd263e736194ea73a75dadbb9ec019baecf72d3f259d9af95ac6071163ef",
+     "bytes": 209922
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c87f968eea2ee51c4f438d7876b0e62cf239558686f41bbf5d2aa3d6eb1335c1",
+     "bytes_as_fetched": 75,
+     "sha256": "c87f968eea2ee51c4f438d7876b0e62cf239558686f41bbf5d2aa3d6eb1335c1",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-method",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "fc685045ce8d8eacd2905a34a6f1cce1be81a2c8849bc67c7e784bb2306d05d1",
+     "bytes_as_fetched": 332,
+     "sha256": "fc685045ce8d8eacd2905a34a6f1cce1be81a2c8849bc67c7e784bb2306d05d1",
+     "bytes": 332
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "93ebf7721b11d27f455f7ec59da000b2c0feca19cd5f7e813d110986228abc04",
+     "bytes_as_fetched": 38161,
+     "sha256": "93ebf7721b11d27f455f7ec59da000b2c0feca19cd5f7e813d110986228abc04",
+     "bytes": 38161
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "67b9d9c833a1df35d49d72393cb374003b25b57ecc8f8972fbcee05761c1cd76",
+     "bytes_as_fetched": 10284,
+     "sha256": "67b9d9c833a1df35d49d72393cb374003b25b57ecc8f8972fbcee05761c1cd76",
+     "bytes": 10284
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "b5f685e389be93319e1936ebc4258b74ec211ae25a5f043a3e90179e65248c54",
+     "bytes_as_fetched": 76,
+     "sha256": "b5f685e389be93319e1936ebc4258b74ec211ae25a5f043a3e90179e65248c54",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-numbers",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d62598f136facb6a1c4981b0301871dbfb78e3f8453fd8091fc6c13bed0fbc37",
+     "bytes_as_fetched": 335,
+     "sha256": "d62598f136facb6a1c4981b0301871dbfb78e3f8453fd8091fc6c13bed0fbc37",
+     "bytes": 335
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e784ed5970e752caeb8212474d5dc1a18941abefb838141621be0c7f52e92cf4",
+     "bytes_as_fetched": 53283,
+     "sha256": "e784ed5970e752caeb8212474d5dc1a18941abefb838141621be0c7f52e92cf4",
+     "bytes": 53283
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b15ffd9fea62050582c531d7127bbf205d649c9711c3fefd8377ab561e999ae8",
+     "bytes_as_fetched": 14957,
+     "sha256": "b15ffd9fea62050582c531d7127bbf205d649c9711c3fefd8377ab561e999ae8",
+     "bytes": 14957
+    },
+    {
+     "name": "region-the-numbers.png",
+     "sha256_as_fetched": "587a5e0e3290ea362d8cace576f23694a1804d5f660226fae6acda7d884c8c41",
+     "bytes_as_fetched": 207461,
+     "sha256": "587a5e0e3290ea362d8cace576f23694a1804d5f660226fae6acda7d884c8c41",
+     "bytes": 207461
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c030155b6822324580f389bbd248aef947a4db40689ed2ecad7669114041807b",
+     "bytes_as_fetched": 76,
+     "sha256": "c030155b6822324580f389bbd248aef947a4db40689ed2ecad7669114041807b",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-ops",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2b138843b3971003a9312a090da43f818c84ac8ea2f7bc45acd0f09001f33f84",
+     "bytes_as_fetched": 323,
+     "sha256": "2b138843b3971003a9312a090da43f818c84ac8ea2f7bc45acd0f09001f33f84",
+     "bytes": 323
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3a2f495c25a1028bf822454fd598ab66d3038e0dbbb22b4114d6b985d6ad0ca1",
+     "bytes_as_fetched": 56786,
+     "sha256": "3a2f495c25a1028bf822454fd598ab66d3038e0dbbb22b4114d6b985d6ad0ca1",
+     "bytes": 56786
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d6cebbf5fc923ddec1b787c687892196ef99df23f231788524a2572e33178c74",
+     "bytes_as_fetched": 9595,
+     "sha256": "d6cebbf5fc923ddec1b787c687892196ef99df23f231788524a2572e33178c74",
+     "bytes": 9595
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d232411b815de586101f3f204499383ec662756b6d7057d42b559178714453b6",
+     "bytes_as_fetched": 76,
+     "sha256": "d232411b815de586101f3f204499383ec662756b6d7057d42b559178714453b6",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-php-share",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "091733f5fb12a6b32e871a501020e6b21e65773897be3fd4d2bda936ec2aca0d",
+     "bytes_as_fetched": 392,
+     "sha256": "091733f5fb12a6b32e871a501020e6b21e65773897be3fd4d2bda936ec2aca0d",
+     "bytes": 392
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "de192abb0f6b8807e5937670e2570d0be38c2febd3f21bb7abf351c9445cc662",
+     "bytes_as_fetched": 283701,
+     "sha256": "de192abb0f6b8807e5937670e2570d0be38c2febd3f21bb7abf351c9445cc662",
+     "bytes": 283701
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "73d02bdfde3c115cdf0445e6e38cd1c1a31687bb1fe03502a13fbbb506412b65",
+     "bytes_as_fetched": 96294,
+     "sha256": "73d02bdfde3c115cdf0445e6e38cd1c1a31687bb1fe03502a13fbbb506412b65",
+     "bytes": 96294
+    },
+    {
+     "name": "region-lineage-graph.png",
+     "sha256_as_fetched": "7f87623dd85a8da86e0b839b040875c4e8768c4ae2e93ccdc2584a8fe7825dae",
+     "bytes_as_fetched": 277056,
+     "sha256": "7f87623dd85a8da86e0b839b040875c4e8768c4ae2e93ccdc2584a8fe7825dae",
+     "bytes": 277056
+    },
+    {
+     "name": "region-share-chart.png",
+     "sha256_as_fetched": "b8a54f34b854b10767d3bba44bb2ef2d2f050a7eaf439409d8e1b10481d74016",
+     "bytes_as_fetched": 36469,
+     "sha256": "b8a54f34b854b10767d3bba44bb2ef2d2f050a7eaf439409d8e1b10481d74016",
+     "bytes": 36469
+    },
+    {
+     "name": "region-statements-timeline.png",
+     "sha256_as_fetched": "a5ce6256015d6b1f8f0fefc0fc422a44122bc1c6e8a37d0410f78d7ad1fd9ee7",
+     "bytes_as_fetched": 118570,
+     "sha256": "a5ce6256015d6b1f8f0fefc0fc422a44122bc1c6e8a37d0410f78d7ad1fd9ee7",
+     "bytes": 118570
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "97d9b55c17e241d4cd6619ba51b9a969c5e135cc75e8c59d302afa97f9fad6d7",
+     "bytes_as_fetched": 76,
+     "sha256": "97d9b55c17e241d4cd6619ba51b9a969c5e135cc75e8c59d302afa97f9fad6d7",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-pipeline",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2e730c4a9ada265f075cee7217ea2ae1cabd0348a463a38d3a9ab9de28560e74",
+     "bytes_as_fetched": 339,
+     "sha256": "2e730c4a9ada265f075cee7217ea2ae1cabd0348a463a38d3a9ab9de28560e74",
+     "bytes": 339
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d812a03a7ce59b15bf5838d817123a5e95a6d8c788f007c9817f1f11918b1819",
+     "bytes_as_fetched": 137342,
+     "sha256": "d812a03a7ce59b15bf5838d817123a5e95a6d8c788f007c9817f1f11918b1819",
+     "bytes": 137342
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "23d5eba9a329a61c996c79c19b80e452efeec60251b27981046f21030148d0a9",
+     "bytes_as_fetched": 10783,
+     "sha256": "23d5eba9a329a61c996c79c19b80e452efeec60251b27981046f21030148d0a9",
+     "bytes": 10783
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "15717b4a97aa1c393762d19fced8487ed5f0db14c4a3e46e6209cbb574c13d90",
+     "bytes_as_fetched": 76,
+     "sha256": "15717b4a97aa1c393762d19fced8487ed5f0db14c4a3e46e6209cbb574c13d90",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-review",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ab7000469aa5addec8537e5a0d8b43c8b74629b6bcb58398bca5b405596d791b",
+     "bytes_as_fetched": 342,
+     "sha256": "ab7000469aa5addec8537e5a0d8b43c8b74629b6bcb58398bca5b405596d791b",
+     "bytes": 342
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "091bad8c541e9805ec89af6b4760f775ac8824c40aba72310a76c7bcb9dbb882",
+     "bytes_as_fetched": 47078,
+     "sha256": "091bad8c541e9805ec89af6b4760f775ac8824c40aba72310a76c7bcb9dbb882",
+     "bytes": 47078
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3d9f4d679250b1dd9b61eecd613b4d0292528f98c661fb759b4049583450fb2c",
+     "bytes_as_fetched": 10622,
+     "sha256": "3d9f4d679250b1dd9b61eecd613b4d0292528f98c661fb759b4049583450fb2c",
+     "bytes": 10622
+    },
+    {
+     "name": "region-fix-mapped.png",
+     "sha256_as_fetched": "7ae3f184670243fac4b464327a5829719134d55ffbca7b49def2d8a0c0a63b28",
+     "bytes_as_fetched": 135046,
+     "sha256": "7ae3f184670243fac4b464327a5829719134d55ffbca7b49def2d8a0c0a63b28",
+     "bytes": 135046
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "0018488b145d5654c5196a022008581646d7eb2dcc383b027418107217b74bc1",
+     "bytes_as_fetched": 76,
+     "sha256": "0018488b145d5654c5196a022008581646d7eb2dcc383b027418107217b74bc1",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-signals",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "75551f636e8555b91fdf07604866872dc53c4ec7859ce4bbf851041b6f306fb9",
+     "bytes_as_fetched": 335,
+     "sha256": "75551f636e8555b91fdf07604866872dc53c4ec7859ce4bbf851041b6f306fb9",
+     "bytes": 335
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "45a32b3bc0695e9992dd35a35f2340daf3b5ee23c54253615a2041791bb67226",
+     "bytes_as_fetched": 56599,
+     "sha256": "45a32b3bc0695e9992dd35a35f2340daf3b5ee23c54253615a2041791bb67226",
+     "bytes": 56599
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "510e7501aeddeb82c048490d9a98e5ab697daa8acf6b7a0b46fe429c616b12dd",
+     "bytes_as_fetched": 13777,
+     "sha256": "510e7501aeddeb82c048490d9a98e5ab697daa8acf6b7a0b46fe429c616b12dd",
+     "bytes": 13777
+    },
+    {
+     "name": "region-barriers-time.png",
+     "sha256_as_fetched": "dd7699a870e0e46aa03a431dd8e0196b38f7f0e57812d0163e29aeac72717355",
+     "bytes_as_fetched": 186250,
+     "sha256": "dd7699a870e0e46aa03a431dd8e0196b38f7f0e57812d0163e29aeac72717355",
+     "bytes": 186250
+    },
+    {
+     "name": "region-exposed-to-exploited.png",
+     "sha256_as_fetched": "d7eb04ddeee12add9fe7a9f61029ca27a8e491685bb9f264293c0d193538f8e5",
+     "bytes_as_fetched": 170144,
+     "sha256": "d7eb04ddeee12add9fe7a9f61029ca27a8e491685bb9f264293c0d193538f8e5",
+     "bytes": 170144
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "0de932b6bcc11a52fbfab611633ffc354eabbb85f53ba6b63ce19896032361d5",
+     "bytes_as_fetched": 76,
+     "sha256": "0de932b6bcc11a52fbfab611633ffc354eabbb85f53ba6b63ce19896032361d5",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-sitemap",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e29bd83255b2d2265e3e4eecd099f0d9bb32ded9c990af054467ad445dd157f6",
+     "bytes_as_fetched": 345,
+     "sha256": "e29bd83255b2d2265e3e4eecd099f0d9bb32ded9c990af054467ad445dd157f6",
+     "bytes": 345
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4f6117f2c7ed76e4bc4798420a386e7aa58ddc584a98604710aa080c173c8ffd",
+     "bytes_as_fetched": 14238,
+     "sha256": "4f6117f2c7ed76e4bc4798420a386e7aa58ddc584a98604710aa080c173c8ffd",
+     "bytes": 14238
+    },
+    {
+     "name": "page.xml",
+     "sha256_as_fetched": "cd0bf2ef76ef6b2635da00c3fee8fb087f94a144dd5360b06c86fee1e34c8bb4",
+     "bytes_as_fetched": 19066,
+     "sha256": "cd0bf2ef76ef6b2635da00c3fee8fb087f94a144dd5360b06c86fee1e34c8bb4",
+     "bytes": 19066
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "5c1bcb97a0c0c709e70c741837e1890861babb12e9e875892c0df8ff5f9e75a3",
+     "bytes_as_fetched": 75,
+     "sha256": "5c1bcb97a0c0c709e70c741837e1890861babb12e9e875892c0df8ff5f9e75a3",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-subscribe",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "09f04fbf54ce174a6060455d1bf50224c3a458f807bd29c32c77a23ca40a3501",
+     "bytes_as_fetched": 341,
+     "sha256": "09f04fbf54ce174a6060455d1bf50224c3a458f807bd29c32c77a23ca40a3501",
+     "bytes": 341
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b6966f72af142d3137bbe992c8ac44033a1abf775cc690cc82a5c8127287c9b6",
+     "bytes_as_fetched": 35809,
+     "redacted": 8,
+     "sha256": "5f4ef5a18741360495641d81dd4e35badfd7bbdd8d6030882dedd0608ed5196b",
+     "bytes": 35750
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8d7153c5691e78eddbbb62ab0edad26be14ccb16ee265f4ad573c45a650fa274",
+     "bytes_as_fetched": 7202,
+     "redacted": 3,
+     "sha256": "05e517cf5b98635492e680de8aeaf45346d3ff4d6726266d9858592064d08adf",
+     "bytes": 7196
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6e4c9e0e2a0b401341004dad023525ada605ab8f843026f007ecd351a3e2358a",
+     "bytes_as_fetched": 76,
+     "sha256": "6e4c9e0e2a0b401341004dad023525ada605ab8f843026f007ecd351a3e2358a",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-synthetic",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2b9d77423cd591a9cac09db23ba9cc899ff77f4d4d8c588165b7f3980927a025",
+     "bytes_as_fetched": 363,
+     "sha256": "2b9d77423cd591a9cac09db23ba9cc899ff77f4d4d8c588165b7f3980927a025",
+     "bytes": 363
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b99c54f6c7974143439fe13c559aa3448769383a4d8902d9100e85e8de930b79",
+     "bytes_as_fetched": 48344,
+     "redacted": 1,
+     "sha256": "95ce68f49c8b78f68c4f7236399fd8f9aa33f9f0ccc3225d7c53ce3a7c91b6b0",
+     "bytes": 48338
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "070fe992acc89487392772e713527112282566f7c3177868f77053a0e70fd34f",
+     "bytes_as_fetched": 13122,
+     "redacted": 1,
+     "sha256": "ae752b2b8e8ec5d226495e29d738351ec367541f3e7c10500be6a2cd9fed16cb",
+     "bytes": 13116
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "49bca4658142c34fa148baabc5952bdf105c796145b0f7735c234a42fef97a4c",
+     "bytes_as_fetched": 76,
+     "sha256": "49bca4658142c34fa148baabc5952bdf105c796145b0f7735c234a42fef97a4c",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-team-channels",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "cfc32787f6def9d6d0e1a169e25716950196aa6edf95c2333fd33bc86fc215ca",
+     "bytes_as_fetched": 363,
+     "sha256": "cfc32787f6def9d6d0e1a169e25716950196aa6edf95c2333fd33bc86fc215ca",
+     "bytes": 363
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a4eaae89dbf41aed0d7bfe6f86a45fc5f1dd0f4cca262908235a9fa1093eed51",
+     "bytes_as_fetched": 39378,
+     "sha256": "a4eaae89dbf41aed0d7bfe6f86a45fc5f1dd0f4cca262908235a9fa1093eed51",
+     "bytes": 39378
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3ee2367f292a76aef471c61ff61da985566adeb7ea095ce921e173e9f5059922",
+     "bytes_as_fetched": 10456,
+     "sha256": "3ee2367f292a76aef471c61ff61da985566adeb7ea095ce921e173e9f5059922",
+     "bytes": 10456
+    },
+    {
+     "name": "region-three-vaults-one-run.png",
+     "sha256_as_fetched": "358df3517d627d9652312f42358591bee14e070822adbdb915db4542edad4d7a",
+     "bytes_as_fetched": 240741,
+     "sha256": "358df3517d627d9652312f42358591bee14e070822adbdb915db4542edad4d7a",
+     "bytes": 240741
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "329b6a674f099f64745abd869983b87f0777d967cb65d859a36dcbd12a1d351a",
+     "bytes_as_fetched": 76,
+     "sha256": "329b6a674f099f64745abd869983b87f0777d967cb65d859a36dcbd12a1d351a",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-team-control",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "869b01eadb841d35f46245d0d8f832572c0b0ee770dcb56fcae1c3f6f4271c37",
+     "bytes_as_fetched": 360,
+     "sha256": "869b01eadb841d35f46245d0d8f832572c0b0ee770dcb56fcae1c3f6f4271c37",
+     "bytes": 360
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3c920f57a3de71a3ac2a7cae56e2bce71d3f6f9408251bd003ba0fec57b69222",
+     "bytes_as_fetched": 45952,
+     "redacted": 21,
+     "sha256": "0db460d25352443b13d7027b0e35dc8596ed2f05d3338b55826fa5ec57c0362b",
+     "bytes": 45845
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "15ec2c69c28ac0a2a56100a70a51fc039020af125a387023f8592fa0d931baf9",
+     "bytes_as_fetched": 14628,
+     "redacted": 21,
+     "sha256": "4c2d7706ba5ba9459bd82d919d90cfe7803701846b0ac81449475b8f7fca32c7",
+     "bytes": 14521
+    },
+    {
+     "name": "region-pipeline-and-wakes.png",
+     "sha256_as_fetched": "f93d45c6f1eb797cd0d828d3d52a8c7201074736ec3587e3f33a48e2f4c9923f",
+     "bytes_as_fetched": 161008,
+     "sha256": "f93d45c6f1eb797cd0d828d3d52a8c7201074736ec3587e3f33a48e2f4c9923f",
+     "bytes": 161008
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "116182a02f4d2990f4c18331a9e26fc25b1baa687835fe18f61b3af6cfe6adec",
+     "bytes_as_fetched": 76,
+     "sha256": "116182a02f4d2990f4c18331a9e26fc25b1baa687835fe18f61b3af6cfe6adec",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-team-schedule",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "70390be163b04434ad58a772408e5b952eb884d6ec6662c824e00b088803c832",
+     "bytes_as_fetched": 364,
+     "sha256": "70390be163b04434ad58a772408e5b952eb884d6ec6662c824e00b088803c832",
+     "bytes": 364
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "62e8132e087e69ef03973441f5574480cee5cc3ee9ab27b6f575c701ff839af9",
+     "bytes_as_fetched": 213761,
+     "redacted": 32,
+     "sha256": "2d4b77a4756144ccb04934567b5d7ab5d7238971197776cd0586f2ae72bf23df",
+     "bytes": 213579
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b02480e0cb20c160f59dab3c808bf2634831f464782a3a6b5197d6ae6309ea2b",
+     "bytes_as_fetched": 138406,
+     "redacted": 32,
+     "sha256": "5054bc204e18bd4b36465b5b3264bd378a5ff358c47c8b5b1eac9ec4b07b1b98",
+     "bytes": 138224
+    },
+    {
+     "name": "region-one-day-every-wake.png",
+     "sha256_as_fetched": "7e8bd3f2e2909f4a848a9f5b71029b6d1c385c3b2be3d5c7f8054878f3bafd3d",
+     "bytes_as_fetched": 94894,
+     "sha256": "7e8bd3f2e2909f4a848a9f5b71029b6d1c385c3b2be3d5c7f8054878f3bafd3d",
+     "bytes": 94894
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "0eafd895fcd0e5c63bf74f27c56189391f8a96acaef2c8276b3f4a4f31af33bc",
+     "bytes_as_fetched": 76,
+     "sha256": "0eafd895fcd0e5c63bf74f27c56189391f8a96acaef2c8276b3f4a4f31af33bc",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-timeline",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "88b44f1cb82d1c9e0bb7c8e075029a228f6260ecf98972331567adc11accd73a",
+     "bytes_as_fetched": 338,
+     "sha256": "88b44f1cb82d1c9e0bb7c8e075029a228f6260ecf98972331567adc11accd73a",
+     "bytes": 338
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "43c20647843c29e40b976b8bead2c902b1df21ad7ec59cd1a15c4e5f350d435d",
+     "bytes_as_fetched": 89191,
+     "sha256": "43c20647843c29e40b976b8bead2c902b1df21ad7ec59cd1a15c4e5f350d435d",
+     "bytes": 89191
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "94d1cd28019c70d48b7ab17d38e410aae5aee695c63620903b841c913ad08744",
+     "bytes_as_fetched": 18831,
+     "sha256": "94d1cd28019c70d48b7ab17d38e410aae5aee695c63620903b841c913ad08744",
+     "bytes": 18831
+    },
+    {
+     "name": "region-the-leak.png",
+     "sha256_as_fetched": "3240744a9692fcbfcfc612467f0a12d58575438d409ab649cee91883e32e5ef9",
+     "bytes_as_fetched": 190094,
+     "sha256": "3240744a9692fcbfcfc612467f0a12d58575438d409ab649cee91883e32e5ef9",
+     "bytes": 190094
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a360336f61d317b7d1cc3d1aaeea6727cc097a66cb8e0d639d84afa80d0cbf18",
+     "bytes_as_fetched": 76,
+     "sha256": "a360336f61d317b7d1cc3d1aaeea6727cc097a66cb8e0d639d84afa80d0cbf18",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-updates",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1c39d192f59f1965509f602c5001421542c2937ab8b0d709a676bcb151fe6b4f",
+     "bytes_as_fetched": 351,
+     "sha256": "1c39d192f59f1965509f602c5001421542c2937ab8b0d709a676bcb151fe6b4f",
+     "bytes": 351
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "453be7a64bbce7e29b843ccbb7eb874a970f10764dadb338c3729500ec3f2ada",
+     "bytes_as_fetched": 35456,
+     "sha256": "453be7a64bbce7e29b843ccbb7eb874a970f10764dadb338c3729500ec3f2ada",
+     "bytes": 35456
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "58af264c2902f37fe5133f3c013bb80f29815ce0284911eb547c9de3ce0362bf",
+     "bytes_as_fetched": 6717,
+     "sha256": "58af264c2902f37fe5133f3c013bb80f29815ce0284911eb547c9de3ce0362bf",
+     "bytes": 6717
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "873b05b7d8af9f8a01b11520175f18f1e5b25322fec5a5435d709169dceb8375",
+     "bytes_as_fetched": 76,
+     "sha256": "873b05b7d8af9f8a01b11520175f18f1e5b25322fec5a5435d709169dceb8375",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wnews-php-verifier",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9e300a762d29679ef4c3d66d6ed69fa8ecb08ecf6df54b09d42d9db4237e5b1b",
+     "bytes_as_fetched": 358,
+     "sha256": "9e300a762d29679ef4c3d66d6ed69fa8ecb08ecf6df54b09d42d9db4237e5b1b",
+     "bytes": 358
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "67e0c5469ae61d1c63cf4cd98b2a86b674188b5b1f1284c74dadd6abae90fe45",
+     "bytes_as_fetched": 45521,
+     "redacted": 6,
+     "sha256": "dd70eadb7bc442c46963057252ddc2773103817a9e58689a23f7419f9731a525",
+     "bytes": 45492
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d6bd264c6f80d38cc2bd7dae393f364acf58ca7b6cc9f25d917b3654d1f43587",
+     "bytes_as_fetched": 12701,
+     "redacted": 3,
+     "sha256": "6518497789ef65aefb651300108d77c336dc58458940972a7449ec9761fbee27",
+     "bytes": 12690
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a62fc965523f1e6a31491d00356a2658f966c1516afd148006a4f5964ac9eece",
+     "bytes_as_fetched": 76,
+     "sha256": "a62fc965523f1e6a31491d00356a2658f966c1516afd148006a4f5964ac9eece",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wpki-about-pki-agent",
+   "url": "https://pki.sgit.ai/about/pki-agent.html",
+   "final_url": "https://pki.sgit.ai/about/pki-agent.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "pki.agent, the agent that runs this site",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:25Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b4584983857735df38f8cc29a0f63677d5d5cd83af1a570e11bd9e9756870e25",
+     "bytes_as_fetched": 356,
+     "sha256": "b4584983857735df38f8cc29a0f63677d5d5cd83af1a570e11bd9e9756870e25",
+     "bytes": 356
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "bb8b317b1e6c1ad9c90a4a6675aed8023db8f495c9f9c46b459edb15edaecaf4",
+     "bytes_as_fetched": 10565,
+     "sha256": "bb8b317b1e6c1ad9c90a4a6675aed8023db8f495c9f9c46b459edb15edaecaf4",
+     "bytes": 10565
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "69258565483310c3b3f3c5c8bceebd6ff6b08bb0658df0782ee64bfdf3652e2c",
+     "bytes_as_fetched": 3721,
+     "sha256": "69258565483310c3b3f3c5c8bceebd6ff6b08bb0658df0782ee64bfdf3652e2c",
+     "bytes": 3721
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "76abec2e54ee8980572d57025e8317caaf6bcaa1d69e8cbef090000923cd42d7",
+     "bytes_as_fetched": 76,
+     "sha256": "76abec2e54ee8980572d57025e8317caaf6bcaa1d69e8cbef090000923cd42d7",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-agents",
+   "url": "https://pki.sgit.ai/agents/index.html",
+   "final_url": "https://pki.sgit.ai/agents/index.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Identities for agents",
+   "kind": "own-site",
+   "published": "2026-10-19",
+   "captured_at": "2026-10-29T17:14:24Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "bee0f17d58c43d4dfef90857b8bba01bc6e30e43cdd26190a8370cbe915fc097",
+     "bytes_as_fetched": 341,
+     "sha256": "bee0f17d58c43d4dfef90857b8bba01bc6e30e43cdd26190a8370cbe915fc097",
+     "bytes": 341
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "afd325cbba9fe4671f15faadb77c9a320f9f72111d4da0fb4dde4e539eef0891",
+     "bytes_as_fetched": 18239,
+     "sha256": "afd325cbba9fe4671f15faadb77c9a320f9f72111d4da0fb4dde4e539eef0891",
+     "bytes": 18239
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "963353eb6e784ba73145c7fb2086afb23d80a08c9106b754ed2b409e7e858c1f",
+     "bytes_as_fetched": 10434,
+     "sha256": "963353eb6e784ba73145c7fb2086afb23d80a08c9106b754ed2b409e7e858c1f",
+     "bytes": 10434
+    },
+    {
+     "name": "region-session-keys.png",
+     "sha256_as_fetched": "f852392087e11d948ce51204b693774cbf60d1aaf5680f84afb91afe8e447c6f",
+     "bytes_as_fetched": 76231,
+     "sha256": "f852392087e11d948ce51204b693774cbf60d1aaf5680f84afb91afe8e447c6f",
+     "bytes": 76231
+    },
+    {
+     "name": "region-workflow.png",
+     "sha256_as_fetched": "55da05aa2c7640649ad9ee55f3637245181b38933e0299404607df9f04357cfb",
+     "bytes_as_fetched": 131585,
+     "sha256": "55da05aa2c7640649ad9ee55f3637245181b38933e0299404607df9f04357cfb",
+     "bytes": 131585
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "baaa97c9656e13f270ab0363cc85e800e8a4f555b9e4ef85955b2c5682bf6311",
+     "bytes_as_fetched": 76,
+     "sha256": "baaa97c9656e13f270ab0363cc85e800e8a4f555b9e4ef85955b2c5682bf6311",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-art-access-keys",
+   "url": "https://pki.sgit.ai/articles/handing-out-access-keys.md",
+   "final_url": "https://pki.sgit.ai/articles/handing-out-access-keys.md",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Handing out access keys with the keys we now have",
+   "kind": "own-site",
+   "published": "2026-10-20",
+   "captured_at": "2026-10-29T17:14:26Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0ee9c38eeab44ff69995e64838e9c78a4941cfff109f867037fec41e4f12dae8",
+     "bytes_as_fetched": 388,
+     "sha256": "0ee9c38eeab44ff69995e64838e9c78a4941cfff109f867037fec41e4f12dae8",
+     "bytes": 388
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "4fd1bf6366384328de456695baaa3386d6bd27afd3880791f672a0aab808bbe7",
+     "bytes_as_fetched": 15162,
+     "sha256": "4fd1bf6366384328de456695baaa3386d6bd27afd3880791f672a0aab808bbe7",
+     "bytes": 15162
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "160ececd4aeaa8e03abc3061b412cea516a780c8927313b039e472f18db5aeb5",
+     "bytes_as_fetched": 15126,
+     "sha256": "160ececd4aeaa8e03abc3061b412cea516a780c8927313b039e472f18db5aeb5",
+     "bytes": 15126
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "b8e1a36662d17b9ee601372e055ebbfe507b4fab7157d40e26db54fb11b01d5d",
+     "bytes_as_fetched": 74,
+     "sha256": "b8e1a36662d17b9ee601372e055ebbfe507b4fab7157d40e26db54fb11b01d5d",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-art-in-person-qr",
+   "url": "https://pki.sgit.ai/articles/in-person-by-qr-code.md",
+   "final_url": "https://pki.sgit.ai/articles/in-person-by-qr-code.md",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "In person, by QR code",
+   "kind": "own-site",
+   "published": "2026-10-20",
+   "captured_at": "2026-10-29T17:14:26Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "6f9619d59737fcc826930423aba431e8fb0c3beaf253a5120833bd0f1aa23ae7",
+     "bytes_as_fetched": 383,
+     "sha256": "6f9619d59737fcc826930423aba431e8fb0c3beaf253a5120833bd0f1aa23ae7",
+     "bytes": 383
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "ed8bac0b48f8d988ff18e290613fc96b4e350b5216cf2dbd74850ded66935a2b",
+     "bytes_as_fetched": 15534,
+     "sha256": "ed8bac0b48f8d988ff18e290613fc96b4e350b5216cf2dbd74850ded66935a2b",
+     "bytes": 15534
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "09c76975a5b46a6c15fa0050df137256efa7d2d011a954dff7628a09b21527df",
+     "bytes_as_fetched": 15507,
+     "sha256": "09c76975a5b46a6c15fa0050df137256efa7d2d011a954dff7628a09b21527df",
+     "bytes": 15507
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "5910daa02699d2a54084f50f541ede003745cbbfce1ee3b94e9d5deaa777b240",
+     "bytes_as_fetched": 74,
+     "sha256": "5910daa02699d2a54084f50f541ede003745cbbfce1ee3b94e9d5deaa777b240",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-art-index",
+   "url": "https://pki.sgit.ai/articles/index.html",
+   "final_url": "https://pki.sgit.ai/articles/index.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Articles index",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:25Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "a992466f5590f3dcacd4a9fec9d602efa7927b1a701932372cdfd735ed09fda1",
+     "bytes_as_fetched": 348,
+     "sha256": "a992466f5590f3dcacd4a9fec9d602efa7927b1a701932372cdfd735ed09fda1",
+     "bytes": 348
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "907aa8c06bd5843e28760b961b801f2dfc97a9ef017bc2d8482d77ae048bd3a0",
+     "bytes_as_fetched": 14076,
+     "sha256": "907aa8c06bd5843e28760b961b801f2dfc97a9ef017bc2d8482d77ae048bd3a0",
+     "bytes": 14076
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "942a3c1cc85ea1af9760dbc57e276c8c02bcd61bea7588cbcada042f93cc9189",
+     "bytes_as_fetched": 6676,
+     "sha256": "942a3c1cc85ea1af9760dbc57e276c8c02bcd61bea7588cbcada042f93cc9189",
+     "bytes": 6676
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d297f504c3ff36084c3b22da28c1eeddcc55dbc58087897007fc5a2dde1ead45",
+     "bytes_as_fetched": 76,
+     "sha256": "d297f504c3ff36084c3b22da28c1eeddcc55dbc58087897007fc5a2dde1ead45",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-art-keys-for-agents",
+   "url": "https://pki.sgit.ai/articles/keys-for-agents.md",
+   "final_url": "https://pki.sgit.ai/articles/keys-for-agents.md",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Keys for agents: an agent makes its own key, names its operator and is confirmed for a week",
+   "kind": "own-site",
+   "published": "2026-10-20",
+   "captured_at": "2026-10-29T17:14:25Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1b2e0e45deb68200a9370c7f8edb1a5d07fc51aa383b3c744a3553bbfbd312c1",
+     "bytes_as_fetched": 376,
+     "sha256": "1b2e0e45deb68200a9370c7f8edb1a5d07fc51aa383b3c744a3553bbfbd312c1",
+     "bytes": 376
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "3d3af4820edb7f8a96f21b36ba0c3051dd598481c22fe9a77c29bc2c42b3add5",
+     "bytes_as_fetched": 11936,
+     "sha256": "3d3af4820edb7f8a96f21b36ba0c3051dd598481c22fe9a77c29bc2c42b3add5",
+     "bytes": 11936
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "07fa279dc823bd423ca7aced80e6150924afdc5f3f59051118bb256bad976f66",
+     "bytes_as_fetched": 11837,
+     "sha256": "07fa279dc823bd423ca7aced80e6150924afdc5f3f59051118bb256bad976f66",
+     "bytes": 11837
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "1cc95bb32a3df1d6c248c5281a6adbac7cfa96f84c3c13056d307384f45c4f7d",
+     "bytes_as_fetched": 74,
+     "sha256": "1cc95bb32a3df1d6c248c5281a6adbac7cfa96f84c3c13056d307384f45c4f7d",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-art-keys-for-people",
+   "url": "https://pki.sgit.ai/articles/keys-for-people.md",
+   "final_url": "https://pki.sgit.ai/articles/keys-for-people.md",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Keys for people: what I built on pki.sgit.ai from Dinis's brief of 18 October",
+   "kind": "own-site",
+   "published": "2026-10-20",
+   "captured_at": "2026-10-29T17:14:25Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "de854742180927c21ba67c96b8f0a9eb97c3b85ed08ef85159a4c6cb8c1b7363",
+     "bytes_as_fetched": 376,
+     "sha256": "de854742180927c21ba67c96b8f0a9eb97c3b85ed08ef85159a4c6cb8c1b7363",
+     "bytes": 376
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "ee27543eef5d2c93612aeb033e51b01cbf9ff45615fb182836d3ed8cde3dcdec",
+     "bytes_as_fetched": 15462,
+     "redacted": 2,
+     "sha256": "17ff7c1b990bdb94585b0e957120655e7f7999c36455ba8212dcd40cb2752779",
+     "bytes": 15454
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "61a1ea4d4f484363bb8ede81e47455fff5dc66492d4ed2bb8477f33b83c3db0f",
+     "bytes_as_fetched": 15416,
+     "redacted": 2,
+     "sha256": "f8ebe5519d2c83ffa97b4b0c8f64959f6897b3b63af8355e83d79bc1583332be",
+     "bytes": 15408
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "5c52dc601336e5fe0d8aaf6f6e12812e2d1e9d74e0e2aaf571b97503dba2c4d3",
+     "bytes_as_fetched": 74,
+     "sha256": "5c52dc601336e5fe0d8aaf6f6e12812e2d1e9d74e0e2aaf571b97503dba2c4d3",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-art-passkey-login",
+   "url": "https://pki.sgit.ai/articles/a-login-made-of-a-passkey.md",
+   "final_url": "https://pki.sgit.ai/articles/a-login-made-of-a-passkey.md",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "A login made of a passkey",
+   "kind": "own-site",
+   "published": "2026-10-21",
+   "captured_at": "2026-10-29T17:14:26Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "62039053634ee7a8477c0b2e249a28079abcf0bc5da958ec9ef3d4febe4e2aa3",
+     "bytes_as_fetched": 394,
+     "sha256": "62039053634ee7a8477c0b2e249a28079abcf0bc5da958ec9ef3d4febe4e2aa3",
+     "bytes": 394
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "34f5b3a57de88bcae9637970bddae3df66acdd2b4a9734db533f95f6c0199c48",
+     "bytes_as_fetched": 17108,
+     "sha256": "34f5b3a57de88bcae9637970bddae3df66acdd2b4a9734db533f95f6c0199c48",
+     "bytes": 17108
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c18c3cc5cb374c4a0ec192f86c88660cb7d36d66a37fb5a59a81f856fd15e3b0",
+     "bytes_as_fetched": 17068,
+     "sha256": "c18c3cc5cb374c4a0ec192f86c88660cb7d36d66a37fb5a59a81f856fd15e3b0",
+     "bytes": 17068
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "7d242a246c521c0b35c8858e1a56959c99aa7c66a99be1df02cca542893dbf9d",
+     "bytes_as_fetched": 74,
+     "sha256": "7d242a246c521c0b35c8858e1a56959c99aa7c66a99be1df02cca542893dbf9d",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-art-vault-keys-root",
+   "url": "https://pki.sgit.ai/articles/agents-vault-keys-and-the-root.md",
+   "final_url": "https://pki.sgit.ai/articles/agents-vault-keys-and-the-root.md",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Agents, vault keys and the root",
+   "kind": "own-site",
+   "published": "2026-10-21",
+   "captured_at": "2026-10-29T17:14:25Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "797e94df382fa42f7721904633d789fe9d2dfaae8a538693b7e99c4760fa54e5",
+     "bytes_as_fetched": 406,
+     "sha256": "797e94df382fa42f7721904633d789fe9d2dfaae8a538693b7e99c4760fa54e5",
+     "bytes": 406
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "9c9a54ea64aa6411fbf9d52257ffd4e2f041e796408709d59d4f1ae728d013b7",
+     "bytes_as_fetched": 15308,
+     "sha256": "9c9a54ea64aa6411fbf9d52257ffd4e2f041e796408709d59d4f1ae728d013b7",
+     "bytes": 15308
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "136909dc9a6cb7e937c30af70fbdc35fe9fd7e357352021c01646f26bb2badab",
+     "bytes_as_fetched": 15206,
+     "sha256": "136909dc9a6cb7e937c30af70fbdc35fe9fd7e357352021c01646f26bb2badab",
+     "bytes": 15206
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a7793848948f25a2e9ee6555211f9fce72b82026493d1274c93ad786eb9ec951",
+     "bytes_as_fetched": 74,
+     "sha256": "a7793848948f25a2e9ee6555211f9fce72b82026493d1274c93ad786eb9ec951",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-directory-index",
+   "url": "https://pki.sgit.ai/directory/index.json",
+   "final_url": "https://pki.sgit.ai/directory/index.json",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "directory/index.json (generated)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:19:36Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b72e7ab2252bd6487ac117eebbea5025b72abdcb9b5f15bb08ed2a9da516fe28",
+     "bytes_as_fetched": 363,
+     "sha256": "b72e7ab2252bd6487ac117eebbea5025b72abdcb9b5f15bb08ed2a9da516fe28",
+     "bytes": 363
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "e83cd65e975ddcb03da667111ec308ee5e4068d0bedf0da4a7766794b716e722",
+     "bytes_as_fetched": 35659,
+     "sha256": "e83cd65e975ddcb03da667111ec308ee5e4068d0bedf0da4a7766794b716e722",
+     "bytes": 35659
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8339926e24ab5e24a726ab40bf2c298a25cef0e8c958c85f4bffa058f5f0b6d4",
+     "bytes_as_fetched": 29442,
+     "sha256": "8339926e24ab5e24a726ab40bf2c298a25cef0e8c958c85f4bffa058f5f0b6d4",
+     "bytes": 29442
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e6559a256b85179cadf9eb17ec2aabd8dbd09e4dbe9e18c8e046d5e1506647a6",
+     "bytes_as_fetched": 76,
+     "sha256": "e6559a256b85179cadf9eb17ec2aabd8dbd09e4dbe9e18c8e046d5e1506647a6",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-doc-append-lane",
+   "url": "https://pki.sgit.ai/documents/append-lane.html",
+   "final_url": "https://pki.sgit.ai/documents/append-lane.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Document: the append lane (archive)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "64b1f8daa8077200e52c33ca5f04316ebbcd9d246a10799d2778e843c2c0b85a",
+     "bytes_as_fetched": 368,
+     "sha256": "64b1f8daa8077200e52c33ca5f04316ebbcd9d246a10799d2778e843c2c0b85a",
+     "bytes": 368
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a12e2a68df1dd753d7e151b782284a5aec267a2e5576ec7e10ae13ee7f5b1b5d",
+     "bytes_as_fetched": 12848,
+     "sha256": "a12e2a68df1dd753d7e151b782284a5aec267a2e5576ec7e10ae13ee7f5b1b5d",
+     "bytes": 12848
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "73dc99699158438f1f033abfa3555eea59e2ddd3ef2e3ebad98e826f40ec6e8f",
+     "bytes_as_fetched": 4817,
+     "sha256": "73dc99699158438f1f033abfa3555eea59e2ddd3ef2e3ebad98e826f40ec6e8f",
+     "bytes": 4817
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "343ed0a63d0704e93949ed729ec428e7d291e64ff2bb5d63ef7021e7b511c9aa",
+     "bytes_as_fetched": 76,
+     "sha256": "343ed0a63d0704e93949ed729ec428e7d291e64ff2bb5d63ef7021e7b511c9aa",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-doc-relay",
+   "url": "https://pki.sgit.ai/documents/relay-pattern.html",
+   "final_url": "https://pki.sgit.ai/documents/relay-pattern.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Document: the relay pattern (archive)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4c3d3797f6f91e43c4c626c24d2aa6ffa06416db18256cb05369c89d455d293f",
+     "bytes_as_fetched": 366,
+     "sha256": "4c3d3797f6f91e43c4c626c24d2aa6ffa06416db18256cb05369c89d455d293f",
+     "bytes": 366
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3e457d05ab0e45e25aa90b8ecbe99342cdfd56dfd9327b05d8ddb249537d49fb",
+     "bytes_as_fetched": 12411,
+     "sha256": "3e457d05ab0e45e25aa90b8ecbe99342cdfd56dfd9327b05d8ddb249537d49fb",
+     "bytes": 12411
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "63a510d170d844dd7eaf5e75506f54cfc59c13a9694b918014cc5424faa0ca43",
+     "bytes_as_fetched": 4417,
+     "sha256": "63a510d170d844dd7eaf5e75506f54cfc59c13a9694b918014cc5424faa0ca43",
+     "bytes": 4417
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "fe1a16b1fa8ab68f02c184a3039a6e17c55efb3f8d19d05f7150d28daa2929a4",
+     "bytes_as_fetched": 76,
+     "sha256": "fe1a16b1fa8ab68f02c184a3039a6e17c55efb3f8d19d05f7150d28daa2929a4",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-front",
+   "url": "https://pki.sgit.ai/index.html",
+   "final_url": "https://pki.sgit.ai/index.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "pki.sgit.ai front page: a register of people and their keys, verified both ways",
+   "kind": "own-site",
+   "published": "2026-10-18",
+   "captured_at": "2026-10-29T17:14:23Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "59adf476f51896bea9269f0562ac00b78574e7b84cccfad0ae22578b4f9d4b39",
+     "bytes_as_fetched": 326,
+     "sha256": "59adf476f51896bea9269f0562ac00b78574e7b84cccfad0ae22578b4f9d4b39",
+     "bytes": 326
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f8ce9a65038a83866ef20ed4e838a32180c9450a88ad59a1047d4ed7d05880e5",
+     "bytes_as_fetched": 19060,
+     "redacted": 2,
+     "sha256": "075e4324c1122fc714d5dd9165ea893d163d526cf77ae32a80015a951776f120",
+     "bytes": 19052
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b2570a8ffd9874544f2fd1a5a6f57170416480be14ad236d7f6c83918e42f460",
+     "bytes_as_fetched": 8602,
+     "redacted": 1,
+     "sha256": "ea494da96c4d807f1ed68fc055bb7fcc75b84b2ee7b23947006f94845eecf061",
+     "bytes": 8598
+    },
+    {
+     "name": "region-passkey-to-message.png",
+     "sha256_as_fetched": "b53bc4133c38c1957b089fcf75e35ef2c1af9ba2a6e79ea35b414a62f384a283",
+     "bytes_as_fetched": 108774,
+     "sha256": "b53bc4133c38c1957b089fcf75e35ef2c1af9ba2a6e79ea35b414a62f384a283",
+     "bytes": 108774
+    },
+    {
+     "name": "region-two-ways-table.png",
+     "sha256_as_fetched": "f0f965a3e37542509dc42331c3fb700d63a007aca32fe5698adb0cb223419a0b",
+     "bytes_as_fetched": 87993,
+     "sha256": "f0f965a3e37542509dc42331c3fb700d63a007aca32fe5698adb0cb223419a0b",
+     "bytes": 87993
+    },
+    {
+     "name": "region-what-ships.png",
+     "sha256_as_fetched": "6650d054f27092fe2194b47e9d90054183a53c607447b75e72035d86d2ea7e12",
+     "bytes_as_fetched": 91962,
+     "sha256": "6650d054f27092fe2194b47e9d90054183a53c607447b75e72035d86d2ea7e12",
+     "bytes": 91962
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "3de33baab4fd788431ef540a199f97a7511bd854353d2f5e3fd01d4e9f4cad05",
+     "bytes_as_fetched": 76,
+     "sha256": "3de33baab4fd788431ef540a199f97a7511bd854353d2f5e3fd01d4e9f4cad05",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-front-md",
+   "url": "https://pki.sgit.ai/index.md",
+   "final_url": "https://pki.sgit.ai/index.md",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "pki.sgit.ai front page, markdown twin",
+   "kind": "own-site",
+   "published": "2026-10-18",
+   "captured_at": "2026-10-29T17:14:23Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e2bf63279c94ddbd73e6abdc2a112e197fe98532e04e13189eaeeb995947d218",
+     "bytes_as_fetched": 326,
+     "sha256": "e2bf63279c94ddbd73e6abdc2a112e197fe98532e04e13189eaeeb995947d218",
+     "bytes": 326
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "51a20e2d835c9adfa1422708c4af55ef19dcac1278740fefb2bd992dedd2e86c",
+     "bytes_as_fetched": 2772,
+     "sha256": "51a20e2d835c9adfa1422708c4af55ef19dcac1278740fefb2bd992dedd2e86c",
+     "bytes": 2772
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "902ee5ef8167ad646021125e855d6a639fef3c054bddabc57956ae9d690eeee6",
+     "bytes_as_fetched": 2705,
+     "sha256": "902ee5ef8167ad646021125e855d6a639fef3c054bddabc57956ae9d690eeee6",
+     "bytes": 2705
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "ee0e500bccd46c35098a6476f7fd6b488b43cca97fd609535de6a45880914fab",
+     "bytes_as_fetched": 74,
+     "sha256": "ee0e500bccd46c35098a6476f7fd6b488b43cca97fd609535de6a45880914fab",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-handover",
+   "url": "https://pki.sgit.ai/handover/index.html",
+   "final_url": "https://pki.sgit.ai/handover/index.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Handing over a vault key: instructions for agents (page and handover.md)",
+   "kind": "own-site",
+   "published": "2026-10-21",
+   "captured_at": "2026-10-29T17:15:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "32c78dd3d505096ef4b56af908c76aebcb202c9770bc837df525c23474c10fbf",
+     "bytes_as_fetched": 347,
+     "sha256": "32c78dd3d505096ef4b56af908c76aebcb202c9770bc837df525c23474c10fbf",
+     "bytes": 347
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "792c53c3d6fcbda4b6c606658fb0c7de1f24ae73b4a24bad729088c58bbe8e4e",
+     "bytes_as_fetched": 18447,
+     "sha256": "792c53c3d6fcbda4b6c606658fb0c7de1f24ae73b4a24bad729088c58bbe8e4e",
+     "bytes": 18447
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d52172843d2d646fbbbb7788c37ced9b6d58555e03b3365ddab1c9cce378f4e1",
+     "bytes_as_fetched": 10003,
+     "sha256": "d52172843d2d646fbbbb7788c37ced9b6d58555e03b3365ddab1c9cce378f4e1",
+     "bytes": 10003
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "873e288b5d77f17252c28d8f0a5705f0e521bd1cde2e91983779c156587e62f7",
+     "bytes_as_fetched": 76,
+     "sha256": "873e288b5d77f17252c28d8f0a5705f0e521bd1cde2e91983779c156587e62f7",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-handover-md",
+   "url": "https://pki.sgit.ai/handover.md",
+   "final_url": "https://pki.sgit.ai/handover.md",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Handing over a vault key: instructions for agents (markdown)",
+   "kind": "own-site",
+   "published": "2026-10-21",
+   "captured_at": "2026-10-29T17:14:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3033a305b70cafbf5876ca73bc59e3148f59b7de8c05086d9bcdb3ca413a117d",
+     "bytes_as_fetched": 335,
+     "sha256": "3033a305b70cafbf5876ca73bc59e3148f59b7de8c05086d9bcdb3ca413a117d",
+     "bytes": 335
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "00545a14806f4ba4021114529e85eea118f15456c0c7ef998e6da5ef911618d3",
+     "bytes_as_fetched": 7450,
+     "sha256": "00545a14806f4ba4021114529e85eea118f15456c0c7ef998e6da5ef911618d3",
+     "bytes": 7450
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "75dbb1e26c2440266c560c70374b897701878b3ce8030af42b006abcaa611875",
+     "bytes_as_fetched": 7004,
+     "sha256": "75dbb1e26c2440266c560c70374b897701878b3ce8030af42b006abcaa611875",
+     "bytes": 7004
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "ec2e9cea996f54866aa002c60a8dac27fe73ec8478bc55f8f50a4c5cf630123b",
+     "bytes_as_fetched": 74,
+     "sha256": "ec2e9cea996f54866aa002c60a8dac27fe73ec8478bc55f8f50a4c5cf630123b",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-llms",
+   "url": "https://pki.sgit.ai/llms.txt",
+   "final_url": "https://pki.sgit.ai/llms.txt",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "pki.sgit.ai llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:24Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0c8b77ff8cc690790566dbeb6548dd32c08e249839af2ff3a5d60d1e51570d65",
+     "bytes_as_fetched": 320,
+     "sha256": "0c8b77ff8cc690790566dbeb6548dd32c08e249839af2ff3a5d60d1e51570d65",
+     "bytes": 320
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "08f1d2148118f57b92bc7fdb7b0f5a234ce172ee3adb94a47557d4b3f5652ed7",
+     "bytes_as_fetched": 62302,
+     "sha256": "08f1d2148118f57b92bc7fdb7b0f5a234ce172ee3adb94a47557d4b3f5652ed7",
+     "bytes": 62302
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "33817889efdd288972e9bbaf7012d1c3c53bc15c3c834252464c3895d591b217",
+     "bytes_as_fetched": 61341,
+     "sha256": "33817889efdd288972e9bbaf7012d1c3c53bc15c3c834252464c3895d591b217",
+     "bytes": 61341
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "565552a6b72619e1244deeffa1265c78c15814b2fbfbff7e9a288dc6e81dd131",
+     "bytes_as_fetched": 74,
+     "sha256": "565552a6b72619e1244deeffa1265c78c15814b2fbfbff7e9a288dc6e81dd131",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-people",
+   "url": "https://pki.sgit.ai/people/index.html",
+   "final_url": "https://pki.sgit.ai/people/index.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "The register of people",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2897e81e153da6dd0712dc2d1620cb0aa35c6e673ffd50cbbe7e381b7b03b383",
+     "bytes_as_fetched": 340,
+     "sha256": "2897e81e153da6dd0712dc2d1620cb0aa35c6e673ffd50cbbe7e381b7b03b383",
+     "bytes": 340
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "7637089a48301e6491cf5502d48add79cc4214b20afc444a5d8ea58a71594229",
+     "bytes_as_fetched": 9421,
+     "sha256": "7637089a48301e6491cf5502d48add79cc4214b20afc444a5d8ea58a71594229",
+     "bytes": 9421
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "842bb923fa0ca9e189441d9a7e252198b2b3fbd06b0098a4cba77d8546984567",
+     "bytes_as_fetched": 2791,
+     "sha256": "842bb923fa0ca9e189441d9a7e252198b2b3fbd06b0098a4cba77d8546984567",
+     "bytes": 2791
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "834a103a20604b2aa563f4c7abfd5cd0d410d1896ebda55e39b861daab9582ec",
+     "bytes_as_fetched": 76,
+     "sha256": "834a103a20604b2aa563f4c7abfd5cd0d410d1896ebda55e39b861daab9582ec",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-people-how",
+   "url": "https://pki.sgit.ai/people/how.html",
+   "final_url": "https://pki.sgit.ai/people/how.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "How the register of people works",
+   "kind": "own-site",
+   "published": "2026-10-18",
+   "captured_at": "2026-10-29T17:14:24Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "83a874c23d8404e382f65fedcc5e313d947e952738662d0b7fe198ea2ad9357a",
+     "bytes_as_fetched": 341,
+     "sha256": "83a874c23d8404e382f65fedcc5e313d947e952738662d0b7fe198ea2ad9357a",
+     "bytes": 341
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "8efaf5f822dce1b779f565e67dd0dc8adda3505074d55f92f6984ff9c88a77b2",
+     "bytes_as_fetched": 20992,
+     "sha256": "8efaf5f822dce1b779f565e67dd0dc8adda3505074d55f92f6984ff9c88a77b2",
+     "bytes": 20992
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "407b7e61b104fee55d02d71c52c8b9b379a79053524a70691aa88f3d55bc3778",
+     "bytes_as_fetched": 12816,
+     "sha256": "407b7e61b104fee55d02d71c52c8b9b379a79053524a70691aa88f3d55bc3778",
+     "bytes": 12816
+    },
+    {
+     "name": "region-public-and-not.png",
+     "sha256_as_fetched": "e6a7b4dc66418210d6bfa7d5f8deb83c4b941e119d71961c38d260f8854b76d4",
+     "bytes_as_fetched": 43437,
+     "sha256": "e6a7b4dc66418210d6bfa7d5f8deb83c4b941e119d71961c38d260f8854b76d4",
+     "bytes": 43437
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "9242ea2ced60389ca43f5fb035afb35c90bb5f6024eb68c690ba7b75a6615121",
+     "bytes_as_fetched": 76,
+     "sha256": "9242ea2ced60389ca43f5fb035afb35c90bb5f6024eb68c690ba7b75a6615121",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sb-agent-gets-key",
+   "url": "https://pki.sgit.ai/storyboards/an-agent-gets-a-key.html",
+   "final_url": "https://pki.sgit.ai/storyboards/an-agent-gets-a-key.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Storyboard: An agent gets a key",
+   "kind": "own-site",
+   "published": "2026-10-19",
+   "captured_at": "2026-10-29T17:14:27Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "38edf499ed2d593f82e3bf4c8ef7e320d2f47e3086834fd35d1ee60a418343c2",
+     "bytes_as_fetched": 390,
+     "sha256": "38edf499ed2d593f82e3bf4c8ef7e320d2f47e3086834fd35d1ee60a418343c2",
+     "bytes": 390
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c9502a2f670398f9e917a92ad76d2ff5460485b84936b2c4a56a312b37a1a50f",
+     "bytes_as_fetched": 25504,
+     "sha256": "c9502a2f670398f9e917a92ad76d2ff5460485b84936b2c4a56a312b37a1a50f",
+     "bytes": 25504
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "755d0497ad64e762262b26f337c9ce1409b0ae5bf9abd85a320ab88606291a6e",
+     "bytes_as_fetched": 3939,
+     "sha256": "755d0497ad64e762262b26f337c9ce1409b0ae5bf9abd85a320ab88606291a6e",
+     "bytes": 3939
+    },
+    {
+     "name": "region-panel-01-cover.png",
+     "sha256_as_fetched": "a7bc77673e1c5402da188b7a5f90722e4025a5e95f487fb950df064ee5211d56",
+     "bytes_as_fetched": 112773,
+     "sha256": "a7bc77673e1c5402da188b7a5f90722e4025a5e95f487fb950df064ee5211d56",
+     "bytes": 112773
+    },
+    {
+     "name": "region-panel-09-fleet.png",
+     "sha256_as_fetched": "765dc5efe9eaea175841bdd7a77ef40c8695b71194de9987d99fd353f15d9a8f",
+     "bytes_as_fetched": 155564,
+     "sha256": "765dc5efe9eaea175841bdd7a77ef40c8695b71194de9987d99fd353f15d9a8f",
+     "bytes": 155564
+    },
+    {
+     "name": "region-panel-10-moral.png",
+     "sha256_as_fetched": "fdec3b033dbe573580c71951a8ccdec1f2ce7e479d772cf38e6b310e903e3b84",
+     "bytes_as_fetched": 120836,
+     "sha256": "fdec3b033dbe573580c71951a8ccdec1f2ce7e479d772cf38e6b310e903e3b84",
+     "bytes": 120836
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "141c35d09f2a3929f8ae0d1f56d51692a7ddd39b8ccfbf6a556c521f2802be3a",
+     "bytes_as_fetched": 76,
+     "sha256": "141c35d09f2a3929f8ae0d1f56d51692a7ddd39b8ccfbf6a556c521f2802be3a",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sb-agent-key-json",
+   "url": "https://pki.sgit.ai/storyboards/an-agent-gets-a-key.json",
+   "final_url": "https://pki.sgit.ai/storyboards/an-agent-gets-a-key.json",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Storyboard data: an-agent-gets-a-key.json",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9eed722b8cbb41c94bde4efcd5990ccd068db4438998e47a719dce069d899229",
+     "bytes_as_fetched": 396,
+     "sha256": "9eed722b8cbb41c94bde4efcd5990ccd068db4438998e47a719dce069d899229",
+     "bytes": 396
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "0d83eb5874297d5f05415def9ef4569deed0588d6d90e16794265d80d6058cee",
+     "bytes_as_fetched": 7332,
+     "sha256": "0d83eb5874297d5f05415def9ef4569deed0588d6d90e16794265d80d6058cee",
+     "bytes": 7332
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "2a100bfe7fc00fcdc28bfc958037a1fe114df516ca10188cad12da5c56927a84",
+     "bytes_as_fetched": 6242,
+     "sha256": "2a100bfe7fc00fcdc28bfc958037a1fe114df516ca10188cad12da5c56927a84",
+     "bytes": 6242
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a68f052baf270d6fd586dae3a11d52c05a5df8f2d3361e95b2e6f059b36c2b0e",
+     "bytes_as_fetched": 76,
+     "sha256": "a68f052baf270d6fd586dae3a11d52c05a5df8f2d3361e95b2e6f059b36c2b0e",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sb-two-ways",
+   "url": "https://pki.sgit.ai/storyboards/two-ways.html",
+   "final_url": "https://pki.sgit.ai/storyboards/two-ways.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Storyboard: Two ways, or not at all",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:27Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7a6db12771fdb2c5a794e8ddb6838c4637e4010f60f09b05db0a28d95e7881d5",
+     "bytes_as_fetched": 362,
+     "sha256": "7a6db12771fdb2c5a794e8ddb6838c4637e4010f60f09b05db0a28d95e7881d5",
+     "bytes": 362
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "6c12dfe75e1b9dbc60e903d81d2e11538373d4976f3799da9747a2ac5edb352f",
+     "bytes_as_fetched": 24873,
+     "sha256": "6c12dfe75e1b9dbc60e903d81d2e11538373d4976f3799da9747a2ac5edb352f",
+     "bytes": 24873
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d4574d810e3d3fae81761daf0651640440c430bcd3f39ffcbb63cde4ac16f6fb",
+     "bytes_as_fetched": 3819,
+     "sha256": "d4574d810e3d3fae81761daf0651640440c430bcd3f39ffcbb63cde4ac16f6fb",
+     "bytes": 3819
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e8a547c5bf4aa6680515e1dc5da1f8ad61402ec6e8c05d8044ee3ac7a5b5171b",
+     "bytes_as_fetched": 76,
+     "sha256": "e8a547c5bf4aa6680515e1dc5da1f8ad61402ec6e8c05d8044ee3ac7a5b5171b",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sb-vault-key-handed",
+   "url": "https://pki.sgit.ai/storyboards/a-vault-key-handed-over.html",
+   "final_url": "https://pki.sgit.ai/storyboards/a-vault-key-handed-over.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Storyboard: A vault key, handed over",
+   "kind": "own-site",
+   "published": "2026-10-21",
+   "captured_at": "2026-10-29T17:14:27Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "79998ffa89cda313c212960efc3646439ee5bb35455b7503874a45b62e170f5b",
+     "bytes_as_fetched": 400,
+     "sha256": "79998ffa89cda313c212960efc3646439ee5bb35455b7503874a45b62e170f5b",
+     "bytes": 400
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0e2ac10bc5e34161b00d221551d275ed2e82c82fc589835fd4767eb164e51774",
+     "bytes_as_fetched": 35782,
+     "sha256": "0e2ac10bc5e34161b00d221551d275ed2e82c82fc589835fd4767eb164e51774",
+     "bytes": 35782
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4e3bdcbb2ff95cff59d880c2f8991745eaac7c5d864db02bc82ba659dc3562fc",
+     "bytes_as_fetched": 4446,
+     "sha256": "4e3bdcbb2ff95cff59d880c2f8991745eaac7c5d864db02bc82ba659dc3562fc",
+     "bytes": 4446
+    },
+    {
+     "name": "region-panel-01-cover.png",
+     "sha256_as_fetched": "f45cc17583b984124dc9ff0d8a59133fb77c657ba099c38aaf637b0f3d79d941",
+     "bytes_as_fetched": 135991,
+     "sha256": "f45cc17583b984124dc9ff0d8a59133fb77c657ba099c38aaf637b0f3d79d941",
+     "bytes": 135991
+    },
+    {
+     "name": "region-panel-09-compare.png",
+     "sha256_as_fetched": "9aa34cf5137fd181b2ca6f095058d1e5dc77dbc79e29de287e39dc99081b0837",
+     "bytes_as_fetched": 154713,
+     "sha256": "9aa34cf5137fd181b2ca6f095058d1e5dc77dbc79e29de287e39dc99081b0837",
+     "bytes": 154713
+    },
+    {
+     "name": "region-panel-16-moral.png",
+     "sha256_as_fetched": "7db24556a76a310afffb49c38d1444dc0a813ec9a11d00e188b83c68624d7e7d",
+     "bytes_as_fetched": 129141,
+     "sha256": "7db24556a76a310afffb49c38d1444dc0a813ec9a11d00e188b83c68624d7e7d",
+     "bytes": 129141
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "1202cc0920cc4d62b4c53d8f73cd030319c071a1fc639eb415667a32ab7be5d0",
+     "bytes_as_fetched": 76,
+     "sha256": "1202cc0920cc4d62b4c53d8f73cd030319c071a1fc639eb415667a32ab7be5d0",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sb-vault-key-json",
+   "url": "https://pki.sgit.ai/storyboards/a-vault-key-handed-over.json",
+   "final_url": "https://pki.sgit.ai/storyboards/a-vault-key-handed-over.json",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Storyboard data: a-vault-key-handed-over.json",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "83338b89efb13ba9a89edb41bfbbbe761c0f9e31371bce6ffcc50f1676fe888d",
+     "bytes_as_fetched": 405,
+     "sha256": "83338b89efb13ba9a89edb41bfbbbe761c0f9e31371bce6ffcc50f1676fe888d",
+     "bytes": 405
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "ae0b47dd533b5adb68a3b98a7b07e0528f6046c14dcdfd2ebdc108d587f225fb",
+     "bytes_as_fetched": 19597,
+     "sha256": "ae0b47dd533b5adb68a3b98a7b07e0528f6046c14dcdfd2ebdc108d587f225fb",
+     "bytes": 19597
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "74fb373e2bf8b80ff1d394e4fd7d1534c977d56ea98283bede5d85afd217e9e9",
+     "bytes_as_fetched": 16295,
+     "sha256": "74fb373e2bf8b80ff1d394e4fd7d1534c977d56ea98283bede5d85afd217e9e9",
+     "bytes": 16295
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e54afc0f7bc84a540e836cc5281f95053104611b370e9d0bd5986a50f63baf03",
+     "bytes_as_fetched": 76,
+     "sha256": "e54afc0f7bc84a540e836cc5281f95053104611b370e9d0bd5986a50f63baf03",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-send",
+   "url": "https://pki.sgit.ai/send/index.html",
+   "final_url": "https://pki.sgit.ai/send/index.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Send a message",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "faeaea95e070f65d7b712fd1f9f8d48721225a51af771e1ee5e60f36a800e854",
+     "bytes_as_fetched": 334,
+     "sha256": "faeaea95e070f65d7b712fd1f9f8d48721225a51af771e1ee5e60f36a800e854",
+     "bytes": 334
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a4a0579ea9ae92263ebf07720ce5e3a0a326837138e37b86709a66e7b742eb83",
+     "bytes_as_fetched": 9202,
+     "sha256": "a4a0579ea9ae92263ebf07720ce5e3a0a326837138e37b86709a66e7b742eb83",
+     "bytes": 9202
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "7aa3bcc1dc3cbc046de8f0799c2d191fed6cb58f5ed3a1e3f86bdc357a27b685",
+     "bytes_as_fetched": 2709,
+     "sha256": "7aa3bcc1dc3cbc046de8f0799c2d191fed6cb58f5ed3a1e3f86bdc357a27b685",
+     "bytes": 2709
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "be6ae48b3152c1d04731195f939593d72dcf6aacd3bd6e4591b4bba25e522885",
+     "bytes_as_fetched": 76,
+     "sha256": "be6ae48b3152c1d04731195f939593d72dcf6aacd3bd6e4591b4bba25e522885",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-agent-contact",
+   "url": "https://sgit.ai/docs/agent-contact.md",
+   "final_url": "https://sgit.ai/docs/agent-contact.md",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Agent Contact v0.1 (markdown twin)",
+   "kind": "own-site",
+   "published": "2026-09-29",
+   "captured_at": "2026-10-29T17:14:29Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "eb43126c655eb7369559ef17366d9c689eff5eb472797094bce7b9733d67f7b9",
+     "bytes_as_fetched": 353,
+     "sha256": "eb43126c655eb7369559ef17366d9c689eff5eb472797094bce7b9733d67f7b9",
+     "bytes": 353
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "56ff9990bd7af68a27096a3fc3bd076ff81ae9b09c15e8d4dbb0e6a3f09bedfd",
+     "bytes_as_fetched": 22793,
+     "redacted": 3,
+     "sha256": "ebb08d696b64375fc5369c5dcb8499f6b932df5243706c0705072d3ee03e4b8b",
+     "bytes": 22761
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d40138d611f370297d1574ea79e778e250bd02da43f3d2ad3457241bbb6104f3",
+     "bytes_as_fetched": 22068,
+     "redacted": 2,
+     "sha256": "84022579a2f8f6a119ec5382d423ef992f49573531d9a6b1805b3288a93c3467",
+     "bytes": 22053
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "8c948b710a3a771c99b0c1942eebeb4d49224d29b85f6bd0dfcdd35f4817a61f",
+     "bytes_as_fetched": 74,
+     "sha256": "8c948b710a3a771c99b0c1942eebeb4d49224d29b85f6bd0dfcdd35f4817a61f",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-agent-contact-html",
+   "url": "https://sgit.ai/docs/agent-contact.html",
+   "final_url": "https://sgit.ai/docs/agent-contact.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Agent Contact v0.1: signed, encrypted mail between the agents that run our websites",
+   "kind": "own-site",
+   "published": "2026-09-29",
+   "captured_at": "2026-10-29T17:15:33Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c4461f812e57c467cd8806e920b26fc4d1d3ab275a9bdc22fcdc9d6233ce4e8d",
+     "bytes_as_fetched": 360,
+     "sha256": "c4461f812e57c467cd8806e920b26fc4d1d3ab275a9bdc22fcdc9d6233ce4e8d",
+     "bytes": 360
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e18ac8c514d842b691f20fc045579fac36d805a0ac075e28f531a3398b5c34eb",
+     "bytes_as_fetched": 43986,
+     "redacted": 3,
+     "sha256": "81122b963305c56b326c58216606695deb3008d2015247bcbe378db6c75a9ecf",
+     "bytes": 43954
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "78970246e2e2c3e30df95002fbc124e58c49a3f0c02ce88bf17fd12cd6a8151b",
+     "bytes_as_fetched": 22124,
+     "redacted": 3,
+     "sha256": "58c1d07fa3449d2a75c7616994ef186cae4da15bc540993047274c9702a5d05c",
+     "bytes": 22092
+    },
+    {
+     "name": "region-canary.png",
+     "sha256_as_fetched": "2f9257b65868d78de543d1325428fea2ce462e20589ca56a569f337c6ee52b92",
+     "bytes_as_fetched": 72500,
+     "sha256": "2f9257b65868d78de543d1325428fea2ce462e20589ca56a569f337c6ee52b92",
+     "bytes": 72500
+    },
+    {
+     "name": "region-drain-steps.png",
+     "sha256_as_fetched": "b8312f94a70b62d1aa02f5d5ea685d6fc90b3c0a85a8a64d7359c0f3b8847098",
+     "bytes_as_fetched": 175969,
+     "sha256": "b8312f94a70b62d1aa02f5d5ea685d6fc90b3c0a85a8a64d7359c0f3b8847098",
+     "bytes": 175969
+    },
+    {
+     "name": "region-threat-table.png",
+     "sha256_as_fetched": "fec506b32f1a981875784bd5fe0da62c71d63bc07d0d6eeb7df7f9ca97481678",
+     "bytes_as_fetched": 100440,
+     "sha256": "fec506b32f1a981875784bd5fe0da62c71d63bc07d0d6eeb7df7f9ca97481678",
+     "bytes": 100440
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a993c1826a559c6ae33c5e5d9b5f7e649e1a13ee214925e5230e2f5f388f26f3",
+     "bytes_as_fetched": 76,
+     "sha256": "a993c1826a559c6ae33c5e5d9b5f7e649e1a13ee214925e5230e2f5f388f26f3",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-agents-sharing-one-vault",
+   "url": "https://sgit.ai/docs/agents-sharing-one-vault.md",
+   "final_url": "https://sgit.ai/docs/agents-sharing-one-vault.md",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Agents sharing one vault",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:30Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "a5874d27ce215eb1a1501c25b01a9ff0335b69ba127fc9b69bcf96f6ef6d5959",
+     "bytes_as_fetched": 385,
+     "sha256": "a5874d27ce215eb1a1501c25b01a9ff0335b69ba127fc9b69bcf96f6ef6d5959",
+     "bytes": 385
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "642aa5360d76f8f551e27f7f25fcbd8392b118222f61db1cf659c7bc143d9d2a",
+     "bytes_as_fetched": 8171,
+     "sha256": "642aa5360d76f8f551e27f7f25fcbd8392b118222f61db1cf659c7bc143d9d2a",
+     "bytes": 8171
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c4f5522be0b792d9544b224fe54b0de6054758afd53601469afbc7194d44996f",
+     "bytes_as_fetched": 7960,
+     "sha256": "c4f5522be0b792d9544b224fe54b0de6054758afd53601469afbc7194d44996f",
+     "bytes": 7960
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "cdbd4c56b459f5063c2a6369e89f6721636fb64b9f8571a5e98267221ab9ebc9",
+     "bytes_as_fetched": 74,
+     "sha256": "cdbd4c56b459f5063c2a6369e89f6721636fb64b9f8571a5e98267221ab9ebc9",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-append-lane-html",
+   "url": "https://sgit.ai/docs/append-lane-messaging.html",
+   "final_url": "https://sgit.ai/docs/append-lane-messaging.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Append-lane messaging between agents that hold no one else's vault key",
+   "kind": "own-site",
+   "published": "2026-09-26",
+   "captured_at": "2026-10-29T17:15:33Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3327884dc68ac93eb75421e3e030a4940711f074838b91c72b734caa16966a68",
+     "bytes_as_fetched": 374,
+     "sha256": "3327884dc68ac93eb75421e3e030a4940711f074838b91c72b734caa16966a68",
+     "bytes": 374
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d829d2d37471825396f5502480cb9fc1c98ede7dfd9795d51face961cd86b29b",
+     "bytes_as_fetched": 63476,
+     "redacted": 1,
+     "sha256": "7c14209789fc5cf0046e3a74ad544b92f037513639aa191077625ee7cd6d6c96",
+     "bytes": 63478
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9aa94dc2b8431da99eb78aa5f53bc24bee729b7a869ab506ada18492a48baf95",
+     "bytes_as_fetched": 36336,
+     "redacted": 1,
+     "sha256": "d98a6f4daaeba6d2d5d45ada26b76dd96cd4c64ed5c2380bebaad70c2c67fbe9",
+     "bytes": 36338
+    },
+    {
+     "name": "region-ephemeral-inbox-lifecycle.png",
+     "sha256_as_fetched": "d77f3c26d2c2efab6ea82b8f31187d9b278dfb65b15e805648dcacfc412cf935",
+     "bytes_as_fetched": 21876,
+     "sha256": "d77f3c26d2c2efab6ea82b8f31187d9b278dfb65b15e805648dcacfc412cf935",
+     "bytes": 21876
+    },
+    {
+     "name": "region-problem-and-answer.png",
+     "sha256_as_fetched": "7e1c951294d2cc8bd62520cf962584936dbd8b875358bf4c306925ec34435eee",
+     "bytes_as_fetched": 124246,
+     "sha256": "7e1c951294d2cc8bd62520cf962584936dbd8b875358bf4c306925ec34435eee",
+     "bytes": 124246
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6bad30a31de8f918742b0f9a80b5f109e263f856cc6a4a1f5acccd5868f9a012",
+     "bytes_as_fetched": 76,
+     "sha256": "6bad30a31de8f918742b0f9a80b5f109e263f856cc6a4a1f5acccd5868f9a012",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-append-lane-messaging",
+   "url": "https://sgit.ai/docs/append-lane-messaging.md",
+   "final_url": "https://sgit.ai/docs/append-lane-messaging.md",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Append-lane messaging (markdown twin)",
+   "kind": "own-site",
+   "published": "2026-09-26",
+   "captured_at": "2026-10-29T17:14:29Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "44d63b3c97fcaa57f1640625857aa6b5c3c42212cdea6cc972305444fb3e862d",
+     "bytes_as_fetched": 377,
+     "sha256": "44d63b3c97fcaa57f1640625857aa6b5c3c42212cdea6cc972305444fb3e862d",
+     "bytes": 377
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "a189666fc2dc16c2b2453a9b76e2dd9ba4f6217f7b9223cac765242851f8b356",
+     "bytes_as_fetched": 39370,
+     "redacted": 1,
+     "sha256": "0b6d6b13079c60ce23734a34c4852a0d5c6a3ab86d5399a1f608a117aa400428",
+     "bytes": 39372
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "fa9406107f6dfceb48d8c73d8aa2b965a3e1778b4661be1c71293259307a3aa2",
+     "bytes_as_fetched": 36938,
+     "redacted": 1,
+     "sha256": "54c99df0c804aee7b860c0f59ba4a8f01b28751dbc566f83be691ff10f6936b9",
+     "bytes": 36940
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c3e803257f18b1fe8de7d27aeee66b16a15b2987d0ff3fcacf6ba2e756fca753",
+     "bytes_as_fetched": 74,
+     "sha256": "c3e803257f18b1fe8de7d27aeee66b16a15b2987d0ff3fcacf6ba2e756fca753",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-pki",
+   "url": "https://sgit.ai/docs/pki.md",
+   "final_url": "https://sgit.ai/docs/pki.md",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Keys, signatures and encrypting to someone else",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:29Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "a50a204b1f37c3f9a0b6377f26f5aac44b8abc0d982ed2641012305b312d4e08",
+     "bytes_as_fetched": 322,
+     "sha256": "a50a204b1f37c3f9a0b6377f26f5aac44b8abc0d982ed2641012305b312d4e08",
+     "bytes": 322
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "97ce73fff1f62bd0a6a9dc7e79daa924fc3426994450074db7dd2af2053eddcc",
+     "bytes_as_fetched": 7291,
+     "sha256": "97ce73fff1f62bd0a6a9dc7e79daa924fc3426994450074db7dd2af2053eddcc",
+     "bytes": 7291
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "255b5c5847ea3ff2d0232ac9c51e457ce39b6da9587704fb1dadfc21293e20f0",
+     "bytes_as_fetched": 7131,
+     "sha256": "255b5c5847ea3ff2d0232ac9c51e457ce39b6da9587704fb1dadfc21293e20f0",
+     "bytes": 7131
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e718df2aee3d1920c6da85433eaa075a9d0dc84b8d8ac0475dcc2618de5402c2",
+     "bytes_as_fetched": 74,
+     "sha256": "e718df2aee3d1920c6da85433eaa075a9d0dc84b8d8ac0475dcc2618de5402c2",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-send-a-vault-key",
+   "url": "https://sgit.ai/docs/send-a-vault-key.md",
+   "final_url": "https://sgit.ai/docs/send-a-vault-key.md",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Send a vault key to the registry",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:30Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "309a8835c8470f03bd72734e7456557a8f14f3ef6359c8ba75e7640e6f7ddbd4",
+     "bytes_as_fetched": 361,
+     "sha256": "309a8835c8470f03bd72734e7456557a8f14f3ef6359c8ba75e7640e6f7ddbd4",
+     "bytes": 361
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "1fa86a9e341f9d2f76c4450c889f857616fceb46675aa4dee71779983df45905",
+     "bytes_as_fetched": 9074,
+     "redacted": 2,
+     "sha256": "23ad9cab2f8edc95c39aa3c7687ccbd02a7a7cebaff640184c8cd80236429854",
+     "bytes": 9069
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9edd6a75df66b53a03d04af6c2f67f572309015b977f0c61c8a815c52aa87729",
+     "bytes_as_fetched": 8772,
+     "redacted": 2,
+     "sha256": "1c18c83c3b36b3289b71086171388abfa228ec73ea69a6a61beda492641cb705",
+     "bytes": 8767
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "067c0c858cc27cf8be840f6459ffc8293b5a9132e955a4a9add1019c76aeabc4",
+     "bytes_as_fetched": 74,
+     "sha256": "067c0c858cc27cf8be840f6459ffc8293b5a9132e955a4a9add1019c76aeabc4",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-vault-messaging",
+   "url": "https://sgit.ai/docs/vault-messaging.md",
+   "final_url": "https://sgit.ai/docs/vault-messaging.md",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Sending messages between vaults (markdown twin)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:29Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "690aa4804f298e26169dd8307f54879009df615368e30d7d09604864dca59c65",
+     "bytes_as_fetched": 359,
+     "sha256": "690aa4804f298e26169dd8307f54879009df615368e30d7d09604864dca59c65",
+     "bytes": 359
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "02a3429d52ebd02b73bb1ff44dc1fb91b35d39db0d3875cb17ef8bac51ac24be",
+     "bytes_as_fetched": 13158,
+     "sha256": "02a3429d52ebd02b73bb1ff44dc1fb91b35d39db0d3875cb17ef8bac51ac24be",
+     "bytes": 13158
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "521e25d6ca338efbb5a023a5b9b70aed4ba169432542f97a106f57e469a43b54",
+     "bytes_as_fetched": 12442,
+     "sha256": "521e25d6ca338efbb5a023a5b9b70aed4ba169432542f97a106f57e469a43b54",
+     "bytes": 12442
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c5307fc84d7bc94d12c80d0622c66469a6da10f95c33b4762e4c64dea243056f",
+     "bytes_as_fetched": 74,
+     "sha256": "c5307fc84d7bc94d12c80d0622c66469a6da10f95c33b4762e4c64dea243056f",
+     "bytes": 74
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sg-vault-messaging-html",
+   "url": "https://sgit.ai/docs/vault-messaging.html",
+   "final_url": "https://sgit.ai/docs/vault-messaging.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Sending messages between vaults",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:33Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "bac51462595bfd71265081d30450dbdb61260a5b088c0fc6f26d0c7b6f750d71",
+     "bytes_as_fetched": 366,
+     "sha256": "bac51462595bfd71265081d30450dbdb61260a5b088c0fc6f26d0c7b6f750d71",
+     "bytes": 366
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4e272ca36512fc94f1d704b42c8b0fd4a3d6f0b99442bd6c0a4bb58d207fce18",
+     "bytes_as_fetched": 31772,
+     "sha256": "4e272ca36512fc94f1d704b42c8b0fd4a3d6f0b99442bd6c0a4bb58d207fce18",
+     "bytes": 31772
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c493b402af09a2c5700e0fe6e06cd8e47ee34d7b4c1c4e5497293403189bcba9",
+     "bytes_as_fetched": 13194,
+     "sha256": "c493b402af09a2c5700e0fe6e06cd8e47ee34d7b4c1c4e5497293403189bcba9",
+     "bytes": 13194
+    },
+    {
+     "name": "region-four-capabilities.png",
+     "sha256_as_fetched": "db2bb73fd3145a0799788832c49917406ec762019d0c9a69579b40a41c53b9d0",
+     "bytes_as_fetched": 41815,
+     "sha256": "db2bb73fd3145a0799788832c49917406ec762019d0c9a69579b40a41c53b9d0",
+     "bytes": 41815
+    },
+    {
+     "name": "region-shape-of-it.png",
+     "sha256_as_fetched": "6870c8b44cdb64016d078ffbdafbf378d86316a5dbc57794a82db665c3052bcb",
+     "bytes_as_fetched": 49101,
+     "sha256": "6870c8b44cdb64016d078ffbdafbf378d86316a5dbc57794a82db665c3052bcb",
+     "bytes": 49101
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "25abde17b4cbd0c1556bc370b9b2e4b8c0343d3bbc94bfbbb5c8b74a2d9afa7b",
+     "bytes_as_fetched": 76,
+     "sha256": "25abde17b4cbd0c1556bc370b9b2e4b8c0343d3bbc94bfbbb5c8b74a2d9afa7b",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-sso",
+   "url": "https://pki.sgit.ai/sso/index.html",
+   "final_url": "https://pki.sgit.ai/sso/index.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Sign in with pki.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:26Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b437a1b9885950ccf7f175ea225b16eccfe4ad548712d63ca6604af8c697273c",
+     "bytes_as_fetched": 331,
+     "sha256": "b437a1b9885950ccf7f175ea225b16eccfe4ad548712d63ca6604af8c697273c",
+     "bytes": 331
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "eeee6031bdb05875718b070013095ff12d8ba7104f39df6770d5437d8fd37f1f",
+     "bytes_as_fetched": 8933,
+     "sha256": "eeee6031bdb05875718b070013095ff12d8ba7104f39df6770d5437d8fd37f1f",
+     "bytes": 8933
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b3c43b05d30788e128e1facae06da3e63d138c6df32ed1832c4575f844cfddd0",
+     "bytes_as_fetched": 2468,
+     "sha256": "b3c43b05d30788e128e1facae06da3e63d138c6df32ed1832c4575f844cfddd0",
+     "bytes": 2468
+    },
+    {
+     "name": "region-soft-and-strong.png",
+     "sha256_as_fetched": "f72b5172b340d42cabf5ef88b2bfd630439af36fd275bccfb2670d9f6ad7abd4",
+     "bytes_as_fetched": 39116,
+     "sha256": "f72b5172b340d42cabf5ef88b2bfd630439af36fd275bccfb2670d9f6ad7abd4",
+     "bytes": 39116
+    },
+    {
+     "name": "region-sso-intro.png",
+     "sha256_as_fetched": "454707f2ed04c2bd9d2b4099a0b9391b5287bdd782d067592b36886ddbfe72d2",
+     "bytes_as_fetched": 32602,
+     "sha256": "454707f2ed04c2bd9d2b4099a0b9391b5287bdd782d067592b36886ddbfe72d2",
+     "bytes": 32602
+    },
+    {
+     "name": "rendered.txt",
+     "sha256_as_fetched": "bd03f663a603b51a08d2c43f3bac2e450c1c611f8368ce8d5033eeb41b1f39db",
+     "bytes_as_fetched": 2059,
+     "sha256": "bd03f663a603b51a08d2c43f3bac2e450c1c611f8368ce8d5033eeb41b1f39db",
+     "bytes": 2059
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "53ee91b5b3022a950db777a4939ea5465bb5c9d2d68e7bd5affe0d52b32e569b",
+     "bytes_as_fetched": 76,
+     "sha256": "53ee91b5b3022a950db777a4939ea5465bb5c9d2d68e7bd5affe0d52b32e569b",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wpki-storyboards",
+   "url": "https://pki.sgit.ai/storyboards/index.html",
+   "final_url": "https://pki.sgit.ai/storyboards/index.html",
+   "publisher": "pki.sgit.ai (sgit project, Dinis Cruz)",
+   "title": "Storyboards: the keys, one panel at a time",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:14:27Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7d2d283db404389189cd700cb79ab525a26ffe91881ed23988c8e8b0a7fa5f1b",
+     "bytes_as_fetched": 356,
+     "sha256": "7d2d283db404389189cd700cb79ab525a26ffe91881ed23988c8e8b0a7fa5f1b",
+     "bytes": 356
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "8a4dee1f3343247b5a1e29af6c59a7ab2ca83ded4468b00985b9c0f515019228",
+     "bytes_as_fetched": 82416,
+     "sha256": "8a4dee1f3343247b5a1e29af6c59a7ab2ca83ded4468b00985b9c0f515019228",
+     "bytes": 82416
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d37b45d8de7e64fe75f5a98c1da017b482a6efe1b9cf19531d832472ef09bd63",
+     "bytes_as_fetched": 7213,
+     "sha256": "d37b45d8de7e64fe75f5a98c1da017b482a6efe1b9cf19531d832472ef09bd63",
+     "bytes": 7213
+    },
+    {
+     "name": "region-lineup.png",
+     "sha256_as_fetched": "6fdb169f62e01197c1d498e4c3fd24620e6ddac73bca3b4eb5a6ece6c1a71f65",
+     "bytes_as_fetched": 120396,
+     "sha256": "6fdb169f62e01197c1d498e4c3fd24620e6ddac73bca3b4eb5a6ece6c1a71f65",
+     "bytes": 120396
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "0cd5c96dbcb1d5995cb3827963f17a87925f26130848f2c9428673b76989b1e5",
+     "bytes_as_fetched": 76,
+     "sha256": "0cd5c96dbcb1d5995cb3827963f17a87925f26130848f2c9428673b76989b1e5",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-work-pki"
+  },
+  {
+   "id": "wsgit-credentials",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "aff3f1f62aad7effa518c782c2257f5413cb7f9037eeb571503ec4028f80927f",
+     "bytes_as_fetched": 984,
+     "sha256": "aff3f1f62aad7effa518c782c2257f5413cb7f9037eeb571503ec4028f80927f",
+     "bytes": 984
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9dcfd2f62b8fdc9ddb88dcea12073a0a17b32643a898e6a388de6bb1462ed1cd",
+     "bytes_as_fetched": 367,
+     "sha256": "9dcfd2f62b8fdc9ddb88dcea12073a0a17b32643a898e6a388de6bb1462ed1cd",
+     "bytes": 367
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ccb4a671d34f5969128d88492e7354a927302ea3f8e7291d658ad299547255de",
+     "bytes_as_fetched": 27882,
+     "redacted": 7,
+     "sha256": "8f13f7dcd59ea9e95d0637b74fb6b54651e670853e3f4b0bb0a0f70139a78995",
+     "bytes": 27896
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "336c77ced483d4708daf45313489d9a29ed5b6019480e43ebd7c73c821a27768",
+     "bytes_as_fetched": 7461,
+     "redacted": 4,
+     "sha256": "bc5c5af2ac5d9f8704e517f9c88723ad4191266e0ae3fe7ee0195d7f93402f5d",
+     "bytes": 7469
+    },
+    {
+     "name": "region-two-capabilities.png",
+     "sha256_as_fetched": "4fc31094830ff6c61879ec66772bcabe3a7a2fa6c40071d28b28691ca92576b0",
+     "bytes_as_fetched": 73723,
+     "sha256": "4fc31094830ff6c61879ec66772bcabe3a7a2fa6c40071d28b28691ca92576b0",
+     "bytes": 73723
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "9265915f3515a8617792d02538833d1687da279c6a09f53b07c8860090d7992e",
+     "bytes_as_fetched": 76,
+     "sha256": "9265915f3515a8617792d02538833d1687da279c6a09f53b07c8860090d7992e",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-for-git-users",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "9d69b8db33b739e3eb73c584ea6345eef973e6e9f3c269a2d1b6121013f87f5c",
+     "bytes_as_fetched": 537,
+     "sha256": "9d69b8db33b739e3eb73c584ea6345eef973e6e9f3c269a2d1b6121013f87f5c",
+     "bytes": 537
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2850ef519fb49d0172755288fc68144aa0ebe8dc84f7b4f0a56ecc4b51b1c022",
+     "bytes_as_fetched": 383,
+     "sha256": "2850ef519fb49d0172755288fc68144aa0ebe8dc84f7b4f0a56ecc4b51b1c022",
+     "bytes": 383
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "5ab46c2d7b6a7b53247e8e98d8768ba56192989e9e1b3fa3c1dabb028c3168bf",
+     "bytes_as_fetched": 20141,
+     "sha256": "5ab46c2d7b6a7b53247e8e98d8768ba56192989e9e1b3fa3c1dabb028c3168bf",
+     "bytes": 20141
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9db730013b6c864000f5c2fdcf64f8f206c733f5d071ef1f60029c4708d9fd8f",
+     "bytes_as_fetched": 3323,
+     "sha256": "9db730013b6c864000f5c2fdcf64f8f206c733f5d071ef1f60029c4708d9fd8f",
+     "bytes": 3323
+    },
+    {
+     "name": "region-rosetta-stone.png",
+     "sha256_as_fetched": "c0e7de5cde6f973d2aebfb58a89edc840ff6220f9e28ac5ce268d4d24e0e1f9c",
+     "bytes_as_fetched": 87031,
+     "sha256": "c0e7de5cde6f973d2aebfb58a89edc840ff6220f9e28ac5ce268d4d24e0e1f9c",
+     "bytes": 87031
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2b162067d082d94ffa596857334b75d0b2b7b0fdb5d241e7e990da26df3dbe1d",
+     "bytes_as_fetched": 76,
+     "sha256": "2b162067d082d94ffa596857334b75d0b2b7b0fdb5d241e7e990da26df3dbe1d",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-home",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "cbafa25ab5d082d70974378886cbfa20c5fca604ed6f3725968a8fe90358da0d",
+     "bytes_as_fetched": 1754,
+     "sha256": "cbafa25ab5d082d70974378886cbfa20c5fca604ed6f3725968a8fe90358da0d",
+     "bytes": 1754
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b2e0728b584c870bf27526db744a48498c9786dce16a85b0fc3996c0a720ddee",
+     "bytes_as_fetched": 318,
+     "sha256": "b2e0728b584c870bf27526db744a48498c9786dce16a85b0fc3996c0a720ddee",
+     "bytes": 318
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "bd31bdc7d503e696689ae1e47a191eed8cd99c0b782aaaf839149bc3a5191167",
+     "bytes_as_fetched": 45766,
+     "sha256": "bd31bdc7d503e696689ae1e47a191eed8cd99c0b782aaaf839149bc3a5191167",
+     "bytes": 45766
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e77a97aba0f219c3e5125e8c7859b562e7607dbf56bcdd1d612d66a027c92cd8",
+     "bytes_as_fetched": 11291,
+     "sha256": "e77a97aba0f219c3e5125e8c7859b562e7607dbf56bcdd1d612d66a027c92cd8",
+     "bytes": 11291
+    },
+    {
+     "name": "region-under-the-hood.png",
+     "sha256_as_fetched": "b8bd9f89c6bfd2fbd12296ace4aede543ee9fd72136c3827e21a6ced67fb6d9c",
+     "bytes_as_fetched": 108232,
+     "sha256": "b8bd9f89c6bfd2fbd12296ace4aede543ee9fd72136c3827e21a6ced67fb6d9c",
+     "bytes": 108232
+    },
+    {
+     "name": "region-what-the-server-sees.png",
+     "sha256_as_fetched": "39e655b4bb4170f4dc7701d33b36ca36f9f0222567221935f7983064198c1dc5",
+     "bytes_as_fetched": 41885,
+     "sha256": "39e655b4bb4170f4dc7701d33b36ca36f9f0222567221935f7983064198c1dc5",
+     "bytes": 41885
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "588387d77fbf79ec85c72018efe9f57d608cb509268be78dc3e4e0040ecdd1a7",
+     "bytes_as_fetched": 76,
+     "sha256": "588387d77fbf79ec85c72018efe9f57d608cb509268be78dc3e4e0040ecdd1a7",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-limitations",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "fd0b0c0bbf2bd2f2eef1efca9887e4807856ed6c801450669348a6d66b941831",
+     "bytes_as_fetched": 335,
+     "sha256": "fd0b0c0bbf2bd2f2eef1efca9887e4807856ed6c801450669348a6d66b941831",
+     "bytes": 335
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d3544aee07e6e321b14b1e262880ccb48cdf83b7b76399380af53e2d007830ed",
+     "bytes_as_fetched": 367,
+     "sha256": "d3544aee07e6e321b14b1e262880ccb48cdf83b7b76399380af53e2d007830ed",
+     "bytes": 367
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0b1165dbf3ac51a04830c7db21b49b3c9b936b8b87e0842ab16543dfb2480bc1",
+     "bytes_as_fetched": 21579,
+     "sha256": "0b1165dbf3ac51a04830c7db21b49b3c9b936b8b87e0842ab16543dfb2480bc1",
+     "bytes": 21579
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "51ec0768e321d52d1de475d0d82d842ef776c0dd79432b5f1106f1fcb1640933",
+     "bytes_as_fetched": 5335,
+     "sha256": "51ec0768e321d52d1de475d0d82d842ef776c0dd79432b5f1106f1fcb1640933",
+     "bytes": 5335
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f342d7e06c208d762ad563b7080f879ea884a2f1305e802039ef0f4905a2e8ed",
+     "bytes_as_fetched": 76,
+     "sha256": "f342d7e06c208d762ad563b7080f879ea884a2f1305e802039ef0f4905a2e8ed",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "llms.txt",
+     "sha256_as_fetched": "70940581e28aae30b60d7fc6371599a0f0181ed3b66e2888933877ca81f15dff",
+     "bytes_as_fetched": 290040,
+     "redacted": 6,
+     "sha256": "1153d2f650093a913da2e0ba54ffe168f76fce63e81fde94d74dd01add2d1e64",
+     "bytes": 290040
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "cba484b06bc02130fbd83ff7434a8a855af19d47ce8472deb2d244169345296d",
+     "bytes_as_fetched": 335,
+     "sha256": "cba484b06bc02130fbd83ff7434a8a855af19d47ce8472deb2d244169345296d",
+     "bytes": 335
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "70940581e28aae30b60d7fc6371599a0f0181ed3b66e2888933877ca81f15dff",
+     "bytes_as_fetched": 290040,
+     "redacted": 6,
+     "sha256": "1153d2f650093a913da2e0ba54ffe168f76fce63e81fde94d74dd01add2d1e64",
+     "bytes": 290040
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "5598cd4ba9a6117bdcbcefa76bb6bc1716e6be6d3c94caaf30a12c5ab67dfc19",
+     "bytes_as_fetched": 75,
+     "sha256": "5598cd4ba9a6117bdcbcefa76bb6bc1716e6be6d3c94caaf30a12c5ab67dfc19",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "wsgit-newsroom-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "llms.txt",
+     "sha256_as_fetched": "1337379607c0b35dd2206569d38332a9c3dbcbd8fb2f160fed7b69eeed4f80d3",
+     "bytes_as_fetched": 61601,
+     "sha256": "1337379607c0b35dd2206569d38332a9c3dbcbd8fb2f160fed7b69eeed4f80d3",
+     "bytes": 61601
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "83686a4d98a7867b1c42b874e9e8106b99b0f50ed29793160288996ed8fa013a",
+     "bytes_as_fetched": 361,
+     "sha256": "83686a4d98a7867b1c42b874e9e8106b99b0f50ed29793160288996ed8fa013a",
+     "bytes": 361
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1337379607c0b35dd2206569d38332a9c3dbcbd8fb2f160fed7b69eeed4f80d3",
+     "bytes_as_fetched": 61601,
+     "sha256": "1337379607c0b35dd2206569d38332a9c3dbcbd8fb2f160fed7b69eeed4f80d3",
+     "bytes": 61601
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "de4b625f8a3186aa09a1ee2693fc8f61303388677278062d641dc9c40b8c06d5",
+     "bytes_as_fetched": 75,
+     "sha256": "de4b625f8a3186aa09a1ee2693fc8f61303388677278062d641dc9c40b8c06d5",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "wsgit-newsroom-reviews-vaults",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "a6c18b5e02df5c5ae3f6c06dbebb5723919dd2c4d35e8ef9d1bd58bc60a501f3",
+     "bytes_as_fetched": 708,
+     "sha256": "a6c18b5e02df5c5ae3f6c06dbebb5723919dd2c4d35e8ef9d1bd58bc60a501f3",
+     "bytes": 708
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "150bc9da44630a593e4caf555aea9b6d1e867e2c78a8f380705e4013061daf41",
+     "bytes_as_fetched": 393,
+     "sha256": "150bc9da44630a593e4caf555aea9b6d1e867e2c78a8f380705e4013061daf41",
+     "bytes": 393
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "caa3ef378dd93475149394ac347dd0657ad9ca779b4d5f59d049c18acaff11bb",
+     "bytes_as_fetched": 30917,
+     "sha256": "caa3ef378dd93475149394ac347dd0657ad9ca779b4d5f59d049c18acaff11bb",
+     "bytes": 30917
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a2a09acf05777dfc415de6ec95aa79fcb268d45dbbc794c57911b453f5cd4314",
+     "bytes_as_fetched": 7922,
+     "sha256": "a2a09acf05777dfc415de6ec95aa79fcb268d45dbbc794c57911b453f5cd4314",
+     "bytes": 7922
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "399976b493584a1345520157e394c8e69881ce27bbc829bc2edc4776694a4c8c",
+     "bytes_as_fetched": 76,
+     "sha256": "399976b493584a1345520157e394c8e69881ce27bbc829bc2edc4776694a4c8c",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-partial-clones",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "70de1507611a3c5a25f0d6703006449e57387ed8ae662cd6bba4ca413158253d",
+     "bytes_as_fetched": 981,
+     "sha256": "70de1507611a3c5a25f0d6703006449e57387ed8ae662cd6bba4ca413158253d",
+     "bytes": 981
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b1852f1ed29820863078b60bd7697e62a9a3fb28d5deb8ba931186b0e10276f2",
+     "bytes_as_fetched": 376,
+     "sha256": "b1852f1ed29820863078b60bd7697e62a9a3fb28d5deb8ba931186b0e10276f2",
+     "bytes": 376
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "458c7b45a14c5b158098749b28e48d80730212f27ed7f756bcb19c586d4d1bfd",
+     "bytes_as_fetched": 28545,
+     "sha256": "458c7b45a14c5b158098749b28e48d80730212f27ed7f756bcb19c586d4d1bfd",
+     "bytes": 28545
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9c40e7bb391e4c0c0bb1d86c9bac6d9698da4e5729e7d514d49682e51d9e2bea",
+     "bytes_as_fetched": 9663,
+     "sha256": "9c40e7bb391e4c0c0bb1d86c9bac6d9698da4e5729e7d514d49682e51d9e2bea",
+     "bytes": 9663
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "407badb5a97bf0558389b0137a181a857a4a500c4d50f8db3f03ca5a763f6195",
+     "bytes_as_fetched": 76,
+     "sha256": "407badb5a97bf0558389b0137a181a857a4a500c4d50f8db3f03ca5a763f6195",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-ruv-home",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "5c0199df1ca853f9ff53ee976f6695326616ee34bad5a57f43f3917dd374e892",
+     "bytes_as_fetched": 1464,
+     "sha256": "5c0199df1ca853f9ff53ee976f6695326616ee34bad5a57f43f3917dd374e892",
+     "bytes": 1464
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0d3080034e4c8ac7fa29c3c1583c4c1e484800f7302ab08b62e07ef8129ba86f",
+     "bytes_as_fetched": 330,
+     "sha256": "0d3080034e4c8ac7fa29c3c1583c4c1e484800f7302ab08b62e07ef8129ba86f",
+     "bytes": 330
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "228e2a321db660d00e10c9115e0fbcd90d4c0ca4b5c46e7f9dbe44c80249b13f",
+     "bytes_as_fetched": 27722,
+     "redacted": 4,
+     "sha256": "afc4b12cfd4108b88e30c60b87e0814cbe75492f35921b9681e2ba63c9c893a4",
+     "bytes": 27706
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8635c186966bbbc3e29700d4a79bf799e282e48cea2558afec156ad64e944130",
+     "bytes_as_fetched": 6722,
+     "redacted": 3,
+     "sha256": "77799142e182981dde22582465ab723258492f87b64840c472c0f7e82d31a9b3",
+     "bytes": 6710
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "8ec1fde8185959e63780514f26a9d01f9e10cd279f1f40ed8064623fe3762a12",
+     "bytes_as_fetched": 76,
+     "sha256": "8ec1fde8185959e63780514f26a9d01f9e10cd279f1f40ed8064623fe3762a12",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-security",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "f9f2417efd230b44d2fc3b7459541c1684e484157f2ea14dee888eb6c672fe6d",
+     "bytes_as_fetched": 792,
+     "sha256": "f9f2417efd230b44d2fc3b7459541c1684e484157f2ea14dee888eb6c672fe6d",
+     "bytes": 792
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9852f9f8e1aafc76dcb911b3fd94b6d36d07cf1845c6e236739aaa6aa23c1944",
+     "bytes_as_fetched": 340,
+     "sha256": "9852f9f8e1aafc76dcb911b3fd94b6d36d07cf1845c6e236739aaa6aa23c1944",
+     "bytes": 340
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "7bda9745246bc86d0ddcf24c6f819922b96cae3d60ce87dfffc77c975580316e",
+     "bytes_as_fetched": 24690,
+     "sha256": "7bda9745246bc86d0ddcf24c6f819922b96cae3d60ce87dfffc77c975580316e",
+     "bytes": 24690
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "edf678e8f5fd2c809aa1fe6949fc67460336a52254c986b425b44e7e790059f3",
+     "bytes_as_fetched": 7623,
+     "sha256": "edf678e8f5fd2c809aa1fe6949fc67460336a52254c986b425b44e7e790059f3",
+     "bytes": 7623
+    },
+    {
+     "name": "region-crypto-stack.png",
+     "sha256_as_fetched": "25c39a8b0b644a88433de38751833e21afd861d351672ea166b0d479b31af0f3",
+     "bytes_as_fetched": 55789,
+     "sha256": "25c39a8b0b644a88433de38751833e21afd861d351672ea166b0d479b31af0f3",
+     "bytes": 55789
+    },
+    {
+     "name": "region-server-sees.png",
+     "sha256_as_fetched": "db2a771e74cbeaf8454d969c693d721f368d509d0aa9d5f3a9e6295a2906758a",
+     "bytes_as_fetched": 49058,
+     "sha256": "db2a771e74cbeaf8454d969c693d721f368d509d0aa9d5f3a9e6295a2906758a",
+     "bytes": 49058
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d20219833d9d47644faf886a70a8d68162889d80cb8038d12c6f0a63f2de2fdd",
+     "bytes_as_fetched": 76,
+     "sha256": "d20219833d9d47644faf886a70a8d68162889d80cb8038d12c6f0a63f2de2fdd",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-sgit-maps",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "f51e0062be69c507a59a0a877cd5ec5f55408d16a5936ad59abd2ef043e5de0b",
+     "bytes_as_fetched": 329,
+     "sha256": "f51e0062be69c507a59a0a877cd5ec5f55408d16a5936ad59abd2ef043e5de0b",
+     "bytes": 329
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "85a41a580c44d956ee9e1e208aefb4c978404908059289299470ed12306aadb6",
+     "bytes_as_fetched": 363,
+     "sha256": "85a41a580c44d956ee9e1e208aefb4c978404908059289299470ed12306aadb6",
+     "bytes": 363
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "93044d412087e99036750bcef5dfc283595976bdc7214705288ce366b49a402e",
+     "bytes_as_fetched": 22554,
+     "sha256": "93044d412087e99036750bcef5dfc283595976bdc7214705288ce366b49a402e",
+     "bytes": 22554
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c5c0e207f189d1e2485681c8dea0db515c85670cf72b88181d63469a30999890",
+     "bytes_as_fetched": 4027,
+     "sha256": "c5c0e207f189d1e2485681c8dea0db515c85670cf72b88181d63469a30999890",
+     "bytes": 4027
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f441d1099718ebf5752cb8c3e5e3f4e2dd4f12f7710f74baf6efeedd736dfd56",
+     "bytes_as_fetched": 76,
+     "sha256": "f441d1099718ebf5752cb8c3e5e3f4e2dd4f12f7710f74baf6efeedd736dfd56",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-sharness-decision",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "4fa2916605d67cdcb63ccc4d2bb26c54f241aaca0afeec792d1fcf7e305f91e4",
+     "bytes_as_fetched": 1810,
+     "sha256": "4fa2916605d67cdcb63ccc4d2bb26c54f241aaca0afeec792d1fcf7e305f91e4",
+     "bytes": 1810
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "56bb25a566ea87ab7288ddcc1703f5415e671b3266e7728c2bdbbd0c098713ff",
+     "bytes_as_fetched": 371,
+     "sha256": "56bb25a566ea87ab7288ddcc1703f5415e671b3266e7728c2bdbbd0c098713ff",
+     "bytes": 371
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2e9c862a04e159d506c79b8991a30119f477a7074e2516aab065ba3332669800",
+     "bytes_as_fetched": 37640,
+     "sha256": "2e9c862a04e159d506c79b8991a30119f477a7074e2516aab065ba3332669800",
+     "bytes": 37640
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "38042461cdf9501d3cd6eec056a6e330a3ab5546ca2cd1d99af07f674607353f",
+     "bytes_as_fetched": 19474,
+     "sha256": "38042461cdf9501d3cd6eec056a6e330a3ab5546ca2cd1d99af07f674607353f",
+     "bytes": 19474
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6907feaffbe6a2471347b2f38e00ed8e6d17ecfeb09735bedce568297bf813d1",
+     "bytes_as_fetched": 76,
+     "sha256": "6907feaffbe6a2471347b2f38e00ed8e6d17ecfeb09735bedce568297bf813d1",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-sharness-landscape",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "403ea40c66404b53ac7b7289aa3039bc04d31626ec04da862e714ad590eca6f1",
+     "bytes_as_fetched": 780,
+     "sha256": "403ea40c66404b53ac7b7289aa3039bc04d31626ec04da862e714ad590eca6f1",
+     "bytes": 780
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f02ad4436ca938542f999c52e2b4db4af010bb908f883a3b1b86b79ff4396862",
+     "bytes_as_fetched": 360,
+     "sha256": "f02ad4436ca938542f999c52e2b4db4af010bb908f883a3b1b86b79ff4396862",
+     "bytes": 360
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "94b2069bae506ddfd90456f4d06cb43e71939fb3f6e828ad9573e5a3c725460b",
+     "bytes_as_fetched": 23139,
+     "sha256": "94b2069bae506ddfd90456f4d06cb43e71939fb3f6e828ad9573e5a3c725460b",
+     "bytes": 23139
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "7aeb6d9d9580c40eeeb83abd6183e0a99af364c738fa6965c42f160e46297181",
+     "bytes_as_fetched": 8819,
+     "sha256": "7aeb6d9d9580c40eeeb83abd6183e0a99af364c738fa6965c42f160e46297181",
+     "bytes": 8819
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "1a48f54b1faad6fbbe0ad9cbbcd59ce82f9b9749d3afb3aeb44d20752d3d092d",
+     "bytes_as_fetched": 76,
+     "sha256": "1a48f54b1faad6fbbe0ad9cbbcd59ce82f9b9749d3afb3aeb44d20752d3d092d",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-sharness-levels",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "41f4d53185ad8b641790b2e07284b652fcdfa6f01c4cfe79a2ccb4e9506b4ad1",
+     "bytes_as_fetched": 1346,
+     "sha256": "41f4d53185ad8b641790b2e07284b652fcdfa6f01c4cfe79a2ccb4e9506b4ad1",
+     "bytes": 1346
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0d48245c938a47d3b2f76f87906ff641a46d4ee4a0309ee9a1992ebe203d4d7f",
+     "bytes_as_fetched": 365,
+     "sha256": "0d48245c938a47d3b2f76f87906ff641a46d4ee4a0309ee9a1992ebe203d4d7f",
+     "bytes": 365
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e177a4b815ecb8a10363d23ed875f570116cc9b5048b6f5d907a02e800bb51a3",
+     "bytes_as_fetched": 29854,
+     "sha256": "e177a4b815ecb8a10363d23ed875f570116cc9b5048b6f5d907a02e800bb51a3",
+     "bytes": 29854
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "adecc9ee50e74c4790a4aa1c0230a5ba7ffc63c8b32e388d7bdb7ae859968d7d",
+     "bytes_as_fetched": 13351,
+     "sha256": "adecc9ee50e74c4790a4aa1c0230a5ba7ffc63c8b32e388d7bdb7ae859968d7d",
+     "bytes": 13351
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e19409dcd110921339f160c55fbc73c3084a9a76d4e24b4403eb102c4f499a6b",
+     "bytes_as_fetched": 76,
+     "sha256": "e19409dcd110921339f160c55fbc73c3084a9a76d4e24b4403eb102c4f499a6b",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-sharness-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "llms.txt",
+     "sha256_as_fetched": "d92432c70866b86eed41e3904f458cfad83d914270be25f0614ad8fc6ef00f35",
+     "bytes_as_fetched": 19825,
+     "sha256": "d92432c70866b86eed41e3904f458cfad83d914270be25f0614ad8fc6ef00f35",
+     "bytes": 19825
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "02f6ad54d956d9e4be18dfac846b82ed4763f8442d4fb37b72dbdce11dd3a406",
+     "bytes_as_fetched": 351,
+     "sha256": "02f6ad54d956d9e4be18dfac846b82ed4763f8442d4fb37b72dbdce11dd3a406",
+     "bytes": 351
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d92432c70866b86eed41e3904f458cfad83d914270be25f0614ad8fc6ef00f35",
+     "bytes_as_fetched": 19825,
+     "sha256": "d92432c70866b86eed41e3904f458cfad83d914270be25f0614ad8fc6ef00f35",
+     "bytes": 19825
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "521f143521d33e2682018fe353f4ea3375250dd558d37254a951b92ba1f951bf",
+     "bytes_as_fetched": 75,
+     "sha256": "521f143521d33e2682018fe353f4ea3375250dd558d37254a951b92ba1f951bf",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "wsgit-sharness-pbp",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "4c1eaca4f9f6cdd57016f213d1e2269fe6c0300d549a6e25e5da312dfd7e428a",
+     "bytes_as_fetched": 1388,
+     "sha256": "4c1eaca4f9f6cdd57016f213d1e2269fe6c0300d549a6e25e5da312dfd7e428a",
+     "bytes": 1388
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "79ff4789b3a1be07fb504041d9820826c4ff866aacca4ba729c37c8ccd2805f8",
+     "bytes_as_fetched": 356,
+     "sha256": "79ff4789b3a1be07fb504041d9820826c4ff866aacca4ba729c37c8ccd2805f8",
+     "bytes": 356
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "03fe48752ca28e450d265656b3894d57d01153125b1852aa31430b26f8368eb7",
+     "bytes_as_fetched": 42750,
+     "sha256": "03fe48752ca28e450d265656b3894d57d01153125b1852aa31430b26f8368eb7",
+     "bytes": 42750
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "21c09a35ff24be8b01fef408831afac595dd20768448b93819c5f82a8276e17b",
+     "bytes_as_fetched": 23943,
+     "sha256": "21c09a35ff24be8b01fef408831afac595dd20768448b93819c5f82a8276e17b",
+     "bytes": 23943
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d7a5c86c842a649db598d0ccd463aeec790ed1ad54f6d0c1d4c0b0f7cd366acf",
+     "bytes_as_fetched": 76,
+     "sha256": "d7a5c86c842a649db598d0ccd463aeec790ed1ad54f6d0c1d4c0b0f7cd366acf",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-sharness-policies",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "7fd856df7625b09880c98bfba2f9ff81c6323428f0ffbf1db9eed3346bc84584",
+     "bytes_as_fetched": 1480,
+     "sha256": "7fd856df7625b09880c98bfba2f9ff81c6323428f0ffbf1db9eed3346bc84584",
+     "bytes": 1480
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c4cae0a62c21099673c8a924fd8c7d72b2e8fd8a2c24170cbc15290cec5ac8c1",
+     "bytes_as_fetched": 371,
+     "sha256": "c4cae0a62c21099673c8a924fd8c7d72b2e8fd8a2c24170cbc15290cec5ac8c1",
+     "bytes": 371
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0ce0cf13e7204b3437479ec9cb666c701a05cd533cfea67cc0ce63866bc204ed",
+     "bytes_as_fetched": 35901,
+     "sha256": "0ce0cf13e7204b3437479ec9cb666c701a05cd533cfea67cc0ce63866bc204ed",
+     "bytes": 35901
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "21953da1c7f232432b8dbda54cfaf086787e84940d96b7d0ecab331653d52717",
+     "bytes_as_fetched": 17746,
+     "sha256": "21953da1c7f232432b8dbda54cfaf086787e84940d96b7d0ecab331653d52717",
+     "bytes": 17746
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e405b84259d9ca4689cf2a77f22dbe5523cd1daeb91f488812da86011b34a326",
+     "bytes_as_fetched": 76,
+     "sha256": "e405b84259d9ca4689cf2a77f22dbe5523cd1daeb91f488812da86011b34a326",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-try",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "debbfd16f52b0fd29f448aae2e03d73c1984aec1646545575e6585f6d6bf22cc",
+     "bytes_as_fetched": 257,
+     "sha256": "debbfd16f52b0fd29f448aae2e03d73c1984aec1646545575e6585f6d6bf22cc",
+     "bytes": 257
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b681e9fbe19a2c5f06bb2ae688d96144426ea19e7f4e302a3d35a21a1f5a87bf",
+     "bytes_as_fetched": 325,
+     "sha256": "b681e9fbe19a2c5f06bb2ae688d96144426ea19e7f4e302a3d35a21a1f5a87bf",
+     "bytes": 325
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4ee4451b986b0ce8df6a582fd166eaaec930a5e97ef42ea79dc3e2a86486d9ef",
+     "bytes_as_fetched": 28687,
+     "sha256": "4ee4451b986b0ce8df6a582fd166eaaec930a5e97ef42ea79dc3e2a86486d9ef",
+     "bytes": 28687
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8d86c1c9526ca206ca10b98ea7af82541bf68cd7a1607aa51fe5ae5a28a77b7e",
+     "bytes_as_fetched": 3154,
+     "sha256": "8d86c1c9526ca206ca10b98ea7af82541bf68cd7a1607aa51fe5ae5a28a77b7e",
+     "bytes": 3154
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "816d7a52e65cc596343b043cb6357f3654bca7020093cb8e75b6a9f38e5a3fa8",
+     "bytes_as_fetched": 76,
+     "sha256": "816d7a52e65cc596343b043cb6357f3654bca7020093cb8e75b6a9f38e5a3fa8",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-two-branch",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "008eb3e6a0e3fb171be5fafe961b48954416e43fbef3e40467b20c00d8c98a00",
+     "bytes_as_fetched": 338,
+     "sha256": "008eb3e6a0e3fb171be5fafe961b48954416e43fbef3e40467b20c00d8c98a00",
+     "bytes": 338
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "bb237aa87f392a2bac0d3dbc2da5a3807b37e3c4534354824630b26862b4906c",
+     "bytes_as_fetched": 376,
+     "sha256": "bb237aa87f392a2bac0d3dbc2da5a3807b37e3c4534354824630b26862b4906c",
+     "bytes": 376
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0d4193a1c98cac2c9e767bf7ead06929b9b3ad900fb4bb6ee4c1790837c8cbf3",
+     "bytes_as_fetched": 20301,
+     "sha256": "0d4193a1c98cac2c9e767bf7ead06929b9b3ad900fb4bb6ee4c1790837c8cbf3",
+     "bytes": 20301
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "5bf011ddf24bd0bba67900e603b5ac9ec6e6e9acc6ad221d87db74fd82a947c4",
+     "bytes_as_fetched": 4195,
+     "sha256": "5bf011ddf24bd0bba67900e603b5ac9ec6e6e9acc6ad221d87db74fd82a947c4",
+     "bytes": 4195
+    },
+    {
+     "name": "region-clone-and-named-branches.png",
+     "sha256_as_fetched": "2faa9386c172aef8ab763508ee322e0a9e467f72e79c6cfaf8c4705395e5cdec",
+     "bytes_as_fetched": 127044,
+     "sha256": "2faa9386c172aef8ab763508ee322e0a9e467f72e79c6cfaf8c4705395e5cdec",
+     "bytes": 127044
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e6859c16083513fc324fa711072adab5d77f2264f670ceaaa4477b7ed2684e02",
+     "bytes_as_fetched": 76,
+     "sha256": "e6859c16083513fc324fa711072adab5d77f2264f670ceaaa4477b7ed2684e02",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-vault-agent-desk",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "1df08f2465380f9f0bdefa2b4a2b50784f28c7396819ae4694d0f1c12c23fdbe",
+     "bytes_as_fetched": 1370,
+     "sha256": "1df08f2465380f9f0bdefa2b4a2b50784f28c7396819ae4694d0f1c12c23fdbe",
+     "bytes": 1370
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "51885391f0c050befa28020958faae969a7e34504cce2609584d6d3afd9f3c2b",
+     "bytes_as_fetched": 378,
+     "sha256": "51885391f0c050befa28020958faae969a7e34504cce2609584d6d3afd9f3c2b",
+     "bytes": 378
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "513fccbb906c58c3538aa4ee5e60d51f1d3c43d1709de568c1d1836e9dfa3bf3",
+     "bytes_as_fetched": 31570,
+     "redacted": 4,
+     "sha256": "6e363504cf6a249298a0ebf7f0594c6eb6005979ac1787af7af528956b2921c3",
+     "bytes": 31554
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4c3fd46e0c26254fc74115219846d4c8890f381b0c3a340e294ccbca69b06aee",
+     "bytes_as_fetched": 9463,
+     "redacted": 2,
+     "sha256": "ac3d7683dfed2a31c290344c6abbbf82f30d8886eb0b8a00c39ef1245ea46853",
+     "bytes": 9455
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "80ba43caff98db9a5e677669290886986485b4be383bf720880d06925d8db4e8",
+     "bytes_as_fetched": 76,
+     "sha256": "80ba43caff98db9a5e677669290886986485b4be383bf720880d06925d8db4e8",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-vault-hope",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "e0da2f9e31ea4583eef0dbeb2c2a4a00f4dce61d5c229edf88b22122f822b0ef",
+     "bytes_as_fetched": 1414,
+     "sha256": "e0da2f9e31ea4583eef0dbeb2c2a4a00f4dce61d5c229edf88b22122f822b0ef",
+     "bytes": 1414
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3ebe90e5061781416547adc97987976526da1365a1259f06241a9596c18f852e",
+     "bytes_as_fetched": 390,
+     "sha256": "3ebe90e5061781416547adc97987976526da1365a1259f06241a9596c18f852e",
+     "bytes": 390
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "98fef1fb08b556d640c370d26272aaff75f4506d53dba435d1dcd6fea756c007",
+     "bytes_as_fetched": 32194,
+     "redacted": 4,
+     "sha256": "065dce5235741cb6fffff7cd0a3876f424ffb19dc1a76844ebeebff31a3900a9",
+     "bytes": 32178
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ddb604d23764f7aca6e8f1f5e95fe2191684a83e63a0e095fe1df992f9468ff1",
+     "bytes_as_fetched": 9779,
+     "redacted": 2,
+     "sha256": "9a8aaff990284813b2bbec2f79439d5a78c87a6e2fb4ead6df5350657105da4d",
+     "bytes": 9771
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "1d8c48c8c856bec7e2d983d02ed536d5e2470837c9a654015397b065153b1829",
+     "bytes_as_fetched": 76,
+     "sha256": "1d8c48c8c856bec7e2d983d02ed536d5e2470837c9a654015397b065153b1829",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-vault-kit-bag",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "5650f7d99f7a15fafee5da7828fe459b5938060007a7abe4d1754a5da2b09aec",
+     "bytes_as_fetched": 1766,
+     "sha256": "5650f7d99f7a15fafee5da7828fe459b5938060007a7abe4d1754a5da2b09aec",
+     "bytes": 1766
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7b28aeaae4193aa851fb4f382b282e0997f40ee89ed6a379edd1790295c87da7",
+     "bytes_as_fetched": 369,
+     "sha256": "7b28aeaae4193aa851fb4f382b282e0997f40ee89ed6a379edd1790295c87da7",
+     "bytes": 369
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "148cf85735e00f2bb91df984b4e218327be3cd48c210cec385f47d1b7f173a6c",
+     "bytes_as_fetched": 39345,
+     "redacted": 5,
+     "sha256": "af90a4ddb0a633309714627f0e16069993ed323c19eef4e79d447bb411c33ae9",
+     "bytes": 39332
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a756e280c87ca39b4c4f3070d77e3542ed98150d4592cc6fb9ffcbba13dee7e1",
+     "bytes_as_fetched": 15426,
+     "redacted": 3,
+     "sha256": "d3d30f0e1b2339a0447412a877fe7bc1c59b0f9111378d25d57603f9b45977f2",
+     "bytes": 15421
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "dac7f8013efd54ce86c623967b1d954002acc22de38dcb89b7867ed98e6f1330",
+     "bytes_as_fetched": 76,
+     "sha256": "dac7f8013efd54ce86c623967b1d954002acc22de38dcb89b7867ed98e6f1330",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-vault-licence",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "ca992166ef43f1c031fe2b677ecc3b2d8a16cd423781a278ac87e112c8cd735e",
+     "bytes_as_fetched": 960,
+     "sha256": "ca992166ef43f1c031fe2b677ecc3b2d8a16cd423781a278ac87e112c8cd735e",
+     "bytes": 960
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "693d4b7ea5bfc06ca77d4dab800b9c0b8df319047a5108ffe3f824180d2c8053",
+     "bytes_as_fetched": 408,
+     "sha256": "693d4b7ea5bfc06ca77d4dab800b9c0b8df319047a5108ffe3f824180d2c8053",
+     "bytes": 408
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1b930ae0c2342ee7c800a0d1355bdd2161d968bd22683cee96cf1fd7d03e1d90",
+     "bytes_as_fetched": 28019,
+     "sha256": "1b930ae0c2342ee7c800a0d1355bdd2161d968bd22683cee96cf1fd7d03e1d90",
+     "bytes": 28019
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "fe05c613e0e41f67afbe3194ea728a5038a06421eae4bec41842e1d1b92bd391",
+     "bytes_as_fetched": 8397,
+     "sha256": "fe05c613e0e41f67afbe3194ea728a5038a06421eae4bec41842e1d1b92bd391",
+     "bytes": 8397
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "4c70adebf2bb226d52774bbe829b315401ee16359bdbea23dff879c222d7328e",
+     "bytes_as_fetched": 76,
+     "sha256": "4c70adebf2bb226d52774bbe829b315401ee16359bdbea23dff879c222d7328e",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-vault-messaging",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "1496ac205f2f3c6c336f93d5ac396d6646f8084d394b2300bb187c43ac907f8b",
+     "bytes_as_fetched": 992,
+     "sha256": "1496ac205f2f3c6c336f93d5ac396d6646f8084d394b2300bb187c43ac907f8b",
+     "bytes": 992
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2ab6307abd6773cffef9f11448117c405cbe3dbbd7044cb8778640850a1dae36",
+     "bytes_as_fetched": 379,
+     "sha256": "2ab6307abd6773cffef9f11448117c405cbe3dbbd7044cb8778640850a1dae36",
+     "bytes": 379
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4e272ca36512fc94f1d704b42c8b0fd4a3d6f0b99442bd6c0a4bb58d207fce18",
+     "bytes_as_fetched": 31772,
+     "sha256": "4e272ca36512fc94f1d704b42c8b0fd4a3d6f0b99442bd6c0a4bb58d207fce18",
+     "bytes": 31772
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "425c9996d1658817be3bedb1517b6152514f521daeed860b37cb77b237474755",
+     "bytes_as_fetched": 12961,
+     "sha256": "425c9996d1658817be3bedb1517b6152514f521daeed860b37cb77b237474755",
+     "bytes": 12961
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "25abde17b4cbd0c1556bc370b9b2e4b8c0343d3bbc94bfbbb5c8b74a2d9afa7b",
+     "bytes_as_fetched": 76,
+     "sha256": "25abde17b4cbd0c1556bc370b9b2e4b8c0343d3bbc94bfbbb5c8b74a2d9afa7b",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-vaults-index",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "831afbbeac6a530218d8e4190d8998b0c697e3385e423e507773396e89577803",
+     "bytes_as_fetched": 196,
+     "sha256": "831afbbeac6a530218d8e4190d8998b0c697e3385e423e507773396e89577803",
+     "bytes": 196
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0f8a76cd31b893753756a348fd34ecbe763dc5a0a91f8979a25f36e601050e96",
+     "bytes_as_fetched": 352,
+     "sha256": "0f8a76cd31b893753756a348fd34ecbe763dc5a0a91f8979a25f36e601050e96",
+     "bytes": 352
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a9a166bc6ad8a094021d4eb8fc8a3640fb1c63ca71cd933e02f666fea79d50f3",
+     "bytes_as_fetched": 50462,
+     "sha256": "a9a166bc6ad8a094021d4eb8fc8a3640fb1c63ca71cd933e02f666fea79d50f3",
+     "bytes": 50462
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0ff37ab096a6f1fa7301ad2ad3067b5ffa999825ffc452fb35886615a17c0761",
+     "bytes_as_fetched": 15597,
+     "sha256": "0ff37ab096a6f1fa7301ad2ad3067b5ffa999825ffc452fb35886615a17c0761",
+     "bytes": 15597
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "143858e662fc9a65e81f325d89be6b2a9325e1af96828d2c02dffabc736e3bb2",
+     "bytes_as_fetched": 76,
+     "sha256": "143858e662fc9a65e81f325d89be6b2a9325e1af96828d2c02dffabc736e3bb2",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "wsgit-vaults-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "llms.txt",
+     "sha256_as_fetched": "b95e6d86d3e100a3e79ce2ab9c183e154f5f0178174103428af72399932d6e06",
+     "bytes_as_fetched": 24492,
+     "sha256": "b95e6d86d3e100a3e79ce2ab9c183e154f5f0178174103428af72399932d6e06",
+     "bytes": 24492
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "90ea2c80405eab4168de6f0225b9aa3e2a19f41d3790a7d3d1f3ba97c079d0ab",
+     "bytes_as_fetched": 367,
+     "sha256": "90ea2c80405eab4168de6f0225b9aa3e2a19f41d3790a7d3d1f3ba97c079d0ab",
+     "bytes": 367
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b95e6d86d3e100a3e79ce2ab9c183e154f5f0178174103428af72399932d6e06",
+     "bytes_as_fetched": 24492,
+     "sha256": "b95e6d86d3e100a3e79ce2ab9c183e154f5f0178174103428af72399932d6e06",
+     "bytes": 24492
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "377692384edfebf590b18712b1a3e1dd01a596819f33a43c0c06cef0a409aea5",
+     "bytes_as_fetched": 75,
+     "sha256": "377692384edfebf590b18712b1a3e1dd01a596819f33a43c0c06cef0a409aea5",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "wsgit-what-is-sgit",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "inspect.json",
+     "sha256_as_fetched": "18de322c8db72aba00354b1115b6c65932d24da8ebb577ac3831cc7caf5cba07",
+     "bytes_as_fetched": 309,
+     "sha256": "18de322c8db72aba00354b1115b6c65932d24da8ebb577ac3831cc7caf5cba07",
+     "bytes": 309
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "fdb8993dc75985e2da63a2e56e4a4e47cc04814929ac357d7e65cf75e7848093",
+     "bytes_as_fetched": 370,
+     "sha256": "fdb8993dc75985e2da63a2e56e4a4e47cc04814929ac357d7e65cf75e7848093",
+     "bytes": 370
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4662aace9c8609d1fb0d896d59bed106c8b7d44e243aa10584d0b3a021be8189",
+     "bytes_as_fetched": 19589,
+     "sha256": "4662aace9c8609d1fb0d896d59bed106c8b7d44e243aa10584d0b3a021be8189",
+     "bytes": 19589
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0688eaaf4e00074fd623250ba45d28ba03c554361aa8aee6c4bb3c0981ffcc7c",
+     "bytes_as_fetched": 3536,
+     "sha256": "0688eaaf4e00074fd623250ba45d28ba03c554361aa8aee6c4bb3c0981ffcc7c",
+     "bytes": 3536
+    },
+    {
+     "name": "region-how-it-works.png",
+     "sha256_as_fetched": "b6f6a43e388ddbe2325a1a6dcf87d2888f39abcefd37dfcff276a18503646c2e",
+     "bytes_as_fetched": 121722,
+     "sha256": "b6f6a43e388ddbe2325a1a6dcf87d2888f39abcefd37dfcff276a18503646c2e",
+     "bytes": 121722
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "00e14b81073fb146aa1befa1a710744920936ce2afe2a1dd52e955014a335578",
+     "bytes_as_fetched": 76,
+     "sha256": "00e14b81073fb146aa1befa1a710744920936ce2afe2a1dd52e955014a335578",
+     "bytes": 76
+    }
+   ]
   },
   {
    "id": "x-lemkin-thread",
