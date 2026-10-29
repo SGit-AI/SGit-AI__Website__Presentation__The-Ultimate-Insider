@@ -5,7 +5,7 @@
 //   <script type="application/json" id="showcase"> {
 //     "kicker": "The PKI", "title": "Agents that write to each other", "text": "One line on what the page shows.",
 //     "image": "shot.jpg", "size": [1440, 2400],                  the screenshot and its size in pixels
-//     "link": "https://pki.sgit.ai/...", "source": "The article's title",
+//     "link": "https://pki.sgit.ai/...", "source": "The article's title", "open": "Open it",   open: an optional big link to it
 //     "stages": [ { "at": 0, "crop": [0, 0, 1440, 900], "label": "the page" },
 //                 { "at": 3, "crop": [80, 600, 700, 470], "label": "the mail flow", "dim": true,
 //                   "callouts": [ { "box": [120, 640, 300, 120], "text": "Each letter is sealed to its reader" } ] } ],
@@ -66,7 +66,9 @@
       src.setAttribute('data-in', '.8')
       if (code) { var q = el('div', 'sc-qr'); q.appendChild(code); src.appendChild(q) }
       if (spec.source) ref.appendChild(el('b', null, spec.source))
-      a.href = spec.link; a.target = '_blank'; a.rel = 'noopener'; ref.appendChild(a); src.appendChild(ref); side.appendChild(src)
+      a.href = spec.link; a.target = '_blank'; a.rel = 'noopener noreferrer'; ref.appendChild(a); src.appendChild(ref)
+      if (spec.open) { const go = el('a', 'sc-open', spec.open); go.href = spec.link; go.target = '_blank'; go.rel = 'noopener noreferrer'; go.setAttribute('data-in', '1'); side.appendChild(go) }   // a big link: opens the page in a new tab, nothing loaded from it here
+      side.appendChild(src)
     }
     cv.appendChild(side)
     if (!cv.querySelector('.bar')) { var bar = el('div', 'bar'); bar.appendChild(el('i')); cv.appendChild(bar) }
