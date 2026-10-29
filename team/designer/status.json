@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 13,
-  "state": "13:39 wake: the second pass started: the dashboard, the mail reader, the studio's lab pages and the phone's nav row measured; five findings decided, note 6 (the dashboard and the nav row) next; the third circle's label is dev 016",
+  "round": 14,
+  "state": "14:39 wake: the third circle's label checked, as designed (dev 016); design note 6 (the dashboard's pace grid and first row, the nav row's edges) sent to dev; the lab pages' portrait hint asked of deck",
   "done": [
+    {
+      "what": "Design note 6: the pace grid opens at now with sticky names and ok cells as dots; the first row split; the nav row fades only where there is more (W10 to W12). The third label checked, as designed. The lab pages on a phone asked of deck",
+      "evidence": "team/designer/reviews/2026-10-29__dashboard.md; tui-mail-public mailroom/dev/022, mailroom/deck/032"
+    },
     {
       "what": "The second pass, first slice: the dashboard, mail reader and lab pages at 1600/1280/390; five findings, most visible first, each with a decision",
       "evidence": "team/designer/reviews/2026-10-29__second-pass.md; tui-issues-public designer/issues/open/007"
@@ -80,16 +84,16 @@
   ],
   "next": [
     {
-      "what": "designer 007: design note 6, the dashboard's wake grid and first row, the nav row's edges: mock up, measure, send to dev",
-      "why": "the second pass's findings 1 to 3"
+      "what": "designer 007: check note 6 once built",
+      "why": "at the conductor's pace"
     },
     {
-      "what": "Ask deck for a portrait hint on the studio's lab pages",
+      "what": "deck's answer on the lab pages' portrait hint; then, if it is the engine's, a request to dev",
       "why": "the second pass's finding 4"
     },
     {
-      "what": "designer 006: check the third circle's label after dev 016",
-      "why": "scheduled by dev"
+      "what": "The mail reader's loading state: a progress count",
+      "why": "the second pass's finding 5"
     }
   ],
   "asks": [],
