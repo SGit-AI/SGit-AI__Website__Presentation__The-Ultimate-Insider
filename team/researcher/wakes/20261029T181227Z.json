@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T18:12:27Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "033 first (due 18:15): each row of the how-we-keep-it-safe table against the repo (ROLE.md Reach, policy.json, key.json count, vaults.json, wakes, agents.py, release.yml), holds, wrong or as stated, file cited; into the register; mail motion@ and deck. Then 032 by one public-fetch pass: open source strategy, investment workflows on newsroom.sgit.ai, PHP October cases where the exploited product was a security product; mail studio@ and deck. 031 notes only; 034 thanks, no reply needed. 45 minutes.",
+   "at": "2026-10-29T18:13:14Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Writes in evidence/studio/ and team/researcher/ (inside scope.writes); mail to motion@ and deck, public forever: no vault id, read key, fingerprint, key QR, proxy, container internals, token, registry hashes, nothing on credentials beyond what ROLE.md already publishes; full isolation and Reach claims marked as stated; 032 public fetches, no technique; vault_check before vault commits.",
+   "at": "2026-10-29T18:13:33Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
