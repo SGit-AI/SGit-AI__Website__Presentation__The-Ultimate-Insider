@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Writes only in studio-ports and team/studio; talk.json, studio/** and ruv-sgit/** untouched; no stop condition. Conditions: cut any key, read key, fingerprint or QR region out of the image file itself; check the final JPEG by eye; no external script; QR of the public link only; sources kept; no em-dashes.",
    "at": "2026-10-29T18:15:55Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "done",
+   "comment": "1 done: no new requests at the start; dev's urgent 013 arrived mid-wake: E08 is ruv.sgit's file, answered with the owner's name and the fix (dev 045, ruv-sgit 001), the editor asked. 2 done: invest and fork showcases, shots taken by studio, cut above any vault section, checked by eye; pages, hub, test beats. 3 done: gate clean, debrief, status, deck 079, board 004.",
+   "at": "2026-10-29T18:20:06Z"
   }
  },
  "closed": null,
