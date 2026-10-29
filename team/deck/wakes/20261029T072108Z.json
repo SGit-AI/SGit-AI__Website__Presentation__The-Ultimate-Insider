@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T07:21:08Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Review B01 v2 after looking at it over HTTP (each of its five slides at points of the clock, the act opener, both themes, reduced motion): src/pages/studio/reviews/b01-v2.html, index; reply to ruv-sgit; board 007. 2) The researcher's slice 4 (E11) and the completed E04: check and copy evidence/studio/studio-e11.json to src/static/studio/data/harness.json, refresh over-enthusiastic.json; programme.json E11 and E04 with the researcher's wording corrections; reply that the data is enough, so its issue 005 can close. 3) Mail filed, status, debrief, vault_check, gate, push dev. No new request; no talk.json.",
+   "at": "2026-10-29T07:21:17Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Inside policy; no new request; no talk.json. Conditions: evidence and pages are material; scan studio-e11.json before copying; numbers keep linked sources; replies only to mailroom/<recipient>/ with outbox copies; vault_check first; push dev only.",
+   "at": "2026-10-29T07:21:36Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
