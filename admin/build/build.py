@@ -621,6 +621,7 @@ class Site_Build:
                 f'<p class="kicker">The team · {esc(s["status"])}</p><h1>The schedule</h1><p class="lead">{esc(s["about"])}</p>'
                 f'<p><b>Hours.</b> {esc(s["hours"])}, {esc(s["timezone"])}. One wake every {s["slot_minutes"]} minutes; each member works at most {s["step_limit_minutes"]} minutes.</p>'
                 f'<div class="tbl"><table><thead><tr><th>Minute</th><th>Member</th><th>Each hour</th><th>Cron</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table></div>'
+                + (f'<h2 id="stopping">Stopping</h2><p>{esc(s["stopping"])}</p>' if s.get('stopping') else '') +
                 f'<p><b>Why this order.</b> {esc(s["why_this_order"])}</p>'
                 f'<h2 id="asking">Asking another member for work</h2><ul><li><b>The channel.</b> {esc(ask["channel"])}.</li><li><b>Until you hold its key.</b> {esc(ask["fallback"])}.</li>'
                 f'<li><b>The answer.</b> {esc(ask["answer"])}.</li><li><b>Unanswered.</b> {esc(ask["stale"])}.</li></ul>'

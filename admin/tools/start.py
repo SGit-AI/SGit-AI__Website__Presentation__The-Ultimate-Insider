@@ -10,6 +10,9 @@
 # 3. The start banner (admin/tools/banner.py), with the commit the session now stands on, so the editor can see the
 #    session started in sync. The banner is only printed when the pull succeeded.
 #
+# 4. A hold stops the wake: if team/HOLD.md or any team/<id>/HOLD.md exists after the pull, it prints the hold banner and
+#    exits 3, and the session does no work (team/conductor/WAKE.md, "Stopping"). Only the editor lifts a hold.
+#
 # Many agents push to this repository every hour; a session that works from a stale copy undoes their work. Apache-2.0.
 
 import argparse
@@ -53,6 +56,15 @@ def sync_vaults(folder):
     return pulled
 
 
+def holds():                                                        # team/HOLD.md (the editor's) and team/<id>/HOLD.md (a member's)
+    found = []
+    for path in sorted([ROOT / 'team' / 'HOLD.md', *(ROOT / 'team').glob('*/HOLD.md')]):
+        if path.exists():
+            lines = [l.strip('# ').strip() for l in path.read_text().splitlines() if l.strip()]
+            found.append(f'{path.relative_to(ROOT)}: {lines[0] if lines else "no reason given"}')
+    return found
+
+
 def main():
     p = argparse.ArgumentParser(description='sync, then print the start banner')
     p.add_argument('agent')
@@ -66,6 +78,15 @@ def main():
     branch, behind = sync_repo()
     pulled         = sync_vaults(a.vaults) if a.vaults else []
     head           = git('rev-parse', '--short=12', 'HEAD').stdout.strip()
+    held           = holds()
+    if held:
+        rows = [sys.executable, str(ROOT / 'admin' / 'tools' / 'banner.py'), 'start', a.agent, '--kind', 'HOLD: no work this wake',
+                '--objective', 'Stopped by a hold. ' + ' | '.join(held) + f' (repo {head}). Do no work: print the end banner with --outcome hold and stop.']
+        for flag, value in (('--model', a.model), ('--scheduled', a.scheduled)):
+            if value:
+                rows += [flag, value]
+        subprocess.run(rows)
+        sys.exit(3)
     synced         = f'in sync: {branch} at {head}, {behind} commit(s) from dev merged' + (f'; vaults pulled: {", ".join(pulled)}' if pulled else '; no vaults pulled')
     banner         = [sys.executable, str(ROOT / 'admin' / 'tools' / 'banner.py'), 'start', a.agent, '--kind', a.kind,
                       '--objective', (a.objective or 'not stated') + f' ({synced})']
