@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "As planned: every beat carries part 1, 2 or 3; part 1 = prelude (the conductor's article) and title through infrastructure with studio pieces, 20 beats, 29:30, every slide 200, the player plays the prelude; part 2 20:55 and part 3 18:15 with room for W1 to W5; the SHarness row (watch, live, recorded) in part 3; dev told (mail 040).",
    "at": "2026-10-29T17:26:43Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Two @deck commits in scope; prelude numbers match team-in-numbers.json with a source; no keys, contact details, em-dashes or attack-shaped content; nothing locked yet; mail 040 matches the diff.",
+   "at": "2026-10-29T17:27:21Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Every beat has a part; part 1 20 beats, 1770 s, prelude first; part 2 20:55, part 3 18:15; SHarness row in order in part 3; debrief and status agree; gate clean (271).",
+   "at": "2026-10-29T17:27:21Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:27:22Z",
+ "outcome": "ok"
 }
