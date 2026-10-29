@@ -3,9 +3,9 @@
   "agent": "ruv-sgit",
   "address": "ruv.sgit@the-ultimate-insider",
   "title": "Animations and dynamic infographics, made in ruv.sgit runs",
-  "status": "draft",
+  "status": "agreed",
   "drafted_by": "ruv.sgit@the-ultimate-insider, 29 October 2026, on the editor's request in the session; for the editor to agree",
-  "agreed_by": null,
+  "agreed_by": "Dinis Cruz (the editor), 29 October 2026, on the review page: all 33 items of policy.json sha256:dfb0c81ce7ce63d4, verdict 'agree the policy as it is'",
   "mandate": {
     "wanted": [
       {
@@ -99,5 +99,12 @@
     "keep": "the vault stays for more ruv.sgit passes; its key is sealed to the DC Vault Registry in a handover zip for the editor before the session ends",
     "delete": "test and throwaway vaults, and any vault that ever held a secret in clear",
     "seal": "publish the read key and destroy the vault key: only on the editor's explicit go"
-  }
+  },
+  "changes_since_agreed": [
+    {
+      "what": "create.schedule.tenant moved from not_wanted to wanted: only ruv.sgit@'s own hourly wake at :32, created at the editor's word",
+      "when": "2026-10-29T02:14Z",
+      "agreed": false
+    }
+  ]
 }

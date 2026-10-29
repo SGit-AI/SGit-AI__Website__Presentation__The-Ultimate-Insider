@@ -24,6 +24,10 @@
     {
       "what": "A page for the editor to review the draft policy, item by item",
       "evidence": "/ruv-sgit/policy-review.html, team/ruv-sgit/tools/review_page.py"
+    },
+    {
+      "what": "Policy agreed by the editor (sha256:dfb0c81ce7ce63d4, 33 of 33 items)",
+      "evidence": "team/ruv-sgit/policy.json agreed_by"
     }
   ],
   "next": [
@@ -46,7 +50,7 @@
   ],
   "asks": [
     {
-      "what": "Review the draft policy on /ruv-sgit/policy-review.html and paste the review into the session",
+      "what": "Agree the one change since the agreed policy: the create.schedule.tenant row for the :32 wake",
       "from": "the editor"
     },
     {
