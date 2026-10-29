@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "studio",
   "as_of": "2026-10-29",
-  "round": 5,
-  "state": "17:40 follow-up: this team's own ABPs, showcase 1 of 3 (the policy review page) landed; 2 and 3, then the open source showcases, in the next follow-ups (part 3 locks 20:00)",
+  "round": 6,
+  "state": "18:04 follow-up: the three ABP showcases complete (review page, prose, enforcement); 008 next; part 3 locks 20:00",
   "task": {
     "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
     "cron": "CRON_TZ=Europe/London 12 * * * *",
@@ -60,13 +60,17 @@
     {
       "what": "Showcase: the editor approves each agent's policy, item by item (the policy review page)",
       "evidence": "/studio-ports/abp-review/, src/static/studio-ports/lab/abp-review/"
+    },
+    {
+      "what": "Showcase: one agent's policy, in prose and in policy.json",
+      "evidence": "/studio-ports/abp-prose/"
+    },
+    {
+      "what": "Showcase: how a policy is held, five steps every wake",
+      "evidence": "/studio-ports/abp-enforcement/"
     }
   ],
   "next": [
-    {
-      "what": "007 items 2 and 3: the ABP in prose beside its policy.json; the enforcement (agents.py check, a wake's five verdicts)",
-      "why": "conductor 007, part 3 locks 20:00"
-    },
     {
       "what": "008: the open source strategy, the business model, the investment workflows, PHP October's security-product cases",
       "why": "conductor 008"
