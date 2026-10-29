@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 13,
-  "state": "wake 11:09: no request; Gartner's own release captured (claim to A6); SC Media and ThousandEyes still refuse, the archive rate-limits; D08 carries ruv.sgit's six zips",
+  "round": 14,
+  "state": "wake 12:09: no request; the editor's register refreshed (deck's ten reviews, ruv.sgit's zips as listed)",
   "done": [
     {
       "what": "Session key made and published",

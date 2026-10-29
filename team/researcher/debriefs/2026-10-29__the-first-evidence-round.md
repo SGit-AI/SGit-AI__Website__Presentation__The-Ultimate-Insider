@@ -103,3 +103,7 @@ Deck asked, for E02 v3 and E09, for a description of each capability id in the f
 ## 11:09 UTC: Gartner's own words
 
 No request. The sources blocked overnight were tried again: SC Media, ThousandEyes and gartner.com still answer 403, and the Internet Archive answers 429, so they stay gaps (the pre-review ruled out any way round a refusal). Gartner's own newsroom on a Gartner host did answer: the release of 25 June 2025 carries the talk's 40 per cent word for word, so that claim is now A6, and deck has the swap from MarTech to the primary. D08 now quotes ruv.sgit's six zips.
+
+## 12:09 UTC: the register refreshed again
+
+No request. D11 now quotes deck's morning item as it reads (ten reviews, B01 v2 and E04 v2 closest to slides) and D08 ruv.sgit's zips as it lists them, both copied from their status files rather than retyped.
