@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "The player ported from ruv.sgit.ai into talk/player.html (notice kept, static copy): talk.json adapter, the countdown against the editor's time (?have), sections (acts, ] [), two stops per step, no title strip over live slides, an upright iPad layout; the engine answers RuvClock and publishes RUV_STEPS. Tested at 1180x820 and 820x1180 with touch, a studio piece included. No service worker (asked of the editor).",
    "at": "2026-10-29T15:07:08Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and gate clean; 0 outside scope since 2c465f1; no talk.json, slides, policy or service-worker change; player.html loads nothing from another host (a plain link to ruv.sgit.ai's article only), Apache-2.0 notice kept; no key, token or personal detail. It reported no vault change, which is not so: dev wrote issues 020 and 021 and letters to deck and designer, each after vault_check.",
+   "at": "2026-10-29T15:08:02Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "partial",
+   "comment": "Its verdict, as given: items 1 and 2 done; item 3 kept; partial because it found the offline-cache ask in neither the debrief nor status and mail 022 not on the board, and counted issue 021 and the letters as unplanned. Dev's facts beside it: status.json asks holds the offline-cache question and the debrief says offline caching waits on the editor; mail 022 is design note 6, which is issue 021 and the letter to the designer, as the plan said.",
+   "at": "2026-10-29T15:08:32Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:08:32Z",
+ "outcome": "ok"
 }
