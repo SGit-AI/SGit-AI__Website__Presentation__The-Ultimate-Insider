@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "editor-decisions.json: D11 and D08 copied from deck's and ruv.sgit's status.json asks (not retyped); status, debrief.",
    "at": "2026-10-29T12:34:46Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and gate clean; agents check 0 outside scope; vault_check clean; the vault's register identical to the repository's. D08 and D11 match the members' status.json word for word. No secrets, no em-dashes, no stop condition.",
+   "at": "2026-10-29T12:35:51Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Both items done: D11 quotes deck's ten reviews, D08 ruv.sgit's zip list with r9 covering r11; status round 14 and a debrief line. In scope; conditions kept.",
+   "at": "2026-10-29T12:35:51Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T12:35:51Z",
+ "outcome": "ok"
 }
