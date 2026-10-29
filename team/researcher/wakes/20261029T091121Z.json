@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "editor-decisions.json refreshed against every member's asks: D08 quotes ruv.sgit's four zips, D11 quotes deck's and the conductor's morning items, D03 notes which policies are agreed, D09 done (deck 983782b, ruv.sgit b5213de, designer f04c531 opened their keys); checked_members lists all seven; status, debrief.",
    "at": "2026-10-29T09:13:26Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build, validate, agents check (0 outside scope) and vault_check pass. D03, D08 and D11 quote the members' asks verbatim; D09 done matches 983782b, b5213de and f04c531. Nothing decided for the editor; no keys or zip contents. Minor: the conductor's zip is no longer in its asks but D08 named it; removed after this review.",
+   "at": "2026-10-29T09:14:17Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) the register refreshed against every member's asks (66d0fa5, 6af2051, 25af36c). 2) status and debrief done. Conditions kept. Beyond the plan only the post-review's correction (D08).",
+   "at": "2026-10-29T09:14:39Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T09:14:39Z",
+ "outcome": "ok"
 }
