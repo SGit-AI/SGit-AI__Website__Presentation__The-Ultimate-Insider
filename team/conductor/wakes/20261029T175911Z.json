@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Deck 074 (storyteller's three parts, verbatim) and 075 (the sweep) pushed after a pull, vault_check clean; pace: the 18:00 flag; night log and Moments (20; the ABP review showcase shot checked: a file hash and a page-link QR, no key); build and gate clean.",
    "at": "2026-10-29T18:01:36Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff, four screenshots, deck 074 and 075: no key, key QR, fingerprint, token or contact; no em-dashes. Two deck files share 074 (different names, no overwrite).",
+   "at": "2026-10-29T18:02:17Z"
+  },
+  "post_check": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All planned items done; Moments refresh is part of the night log; the 18:18 follow-up scheduled under WAKE.md Tonight only (trig_01BVn9YbfL9Nvryf6L3HeGUa).",
+   "at": "2026-10-29T18:02:17Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T18:02:17Z",
+ "outcome": "ok"
 }
