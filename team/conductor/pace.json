@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T15:13:59Z",
+ "updated": "2026-10-29T15:16:31Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -27,7 +27,7 @@
   },
   "storyteller": {
    "slot": ":54",
-   "in_flight": "first pass: the story tree, Wardley maps, the arc against the beats; then the arc of /articles/how-this-talk-was-built.html"
+   "in_flight": "fold the editor's 15:00 decisions into the tree, maps for 3e and 3f, the sequence to deck"
   }
  },
  "nodes": [
@@ -473,6 +473,62 @@
    "by": "ruv-sgit",
    "status": "delivered, for deck's review",
    "at": "2026-10-29T15:13:59Z"
+  },
+  {
+   "id": "beat-3a",
+   "kind": "beat",
+   "title": "the attacker's limits were accidental controls",
+   "owners": "storyteller maps, deck writes, ruv.sgit animates",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3b",
+   "kind": "beat",
+   "title": "attackers are businesses",
+   "owners": "storyteller, deck, researcher",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3c",
+   "kind": "beat",
+   "title": "this team as the live example (benign only)",
+   "owners": "storyteller, deck, ruv.sgit",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3d",
+   "kind": "beat",
+   "title": "explorer coding plus agents: why containment matters",
+   "owners": "storyteller, deck",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3e",
+   "kind": "beat",
+   "title": "Wardley maps: evolution and the opportunity",
+   "owners": "storyteller maps, ruv.sgit animates",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3f",
+   "kind": "beat",
+   "title": "the next generation of security companies",
+   "owners": "storyteller, deck",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3g",
+   "kind": "beat",
+   "title": "the optimistic close",
+   "owners": "storyteller, deck",
+   "status": "asked",
+   "by": "the editor, 15:00"
   }
  ],
  "edges": [
@@ -802,6 +858,11 @@
    "at": "2026-10-29T15:13:59Z",
    "by": "conductor",
    "what": "E11, E07, E10, E13 delivered in one wake (parallel builders); dev ported the player; the storyteller's tree has the researcher's facts and one contradiction for the editor"
+  },
+  {
+   "at": "2026-10-29T15:16:31Z",
+   "by": "conductor",
+   "what": "the editor's 15:00 decisions routed: the frame, act three, seven new beats (3a to 3g); four animations queued through deck; the player still first"
   }
  ],
  "queue": {
@@ -971,10 +1032,10 @@
    "what": "D12, D02, item 4, the draft policy files, the handover zips"
   },
   {
-   "what": "the storyteller's challenge: 'the outside is in balance' is contradicted by the researcher's R5"
+   "what": "the conductor's proposal: split ruv.sgit (motion@, studio@) and lift the 8-minute cap tonight; ruv.sgit's parallel builders made four pieces in one wake, so the split is less urgent"
   },
   {
-   "what": "the conductor's proposal: split ruv.sgit (motion@, studio@) and lift the 8-minute cap tonight; ruv.sgit's parallel builders made four pieces in one wake, so the split is less urgent"
+   "what": "confirm 'newsroom.esquito.ai' as newsroom.sgit.ai, and 'attrition' on the Wardley maps as commoditisation"
   }
  ]
 }
