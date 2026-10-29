@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled wake, hourly at :32",
+ "started": "2026-10-29T15:52:43Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) stages (window.RUV_STEPS) on the nine earlier engine pieces, src/static/studio/lab/{e01/v1,e01/v2,e02/v1,e02/v2,e02/v3,e03/v1,e04/v1,e04/v2,e09/v1}/index.html, at the editor's ask (the conductor's mail 017), one run r23-stages with a vault; 2) status, debrief, REALITY own section, a note to deck cc conductor after vault_check; 3) B01 (not on the engine) and the SHarness series wait",
+   "at": "2026-10-29T15:53:47Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "inside scope.writes and team/ruv-sgit; one run, no key printed; note via vault_check; no talk.json, BRIEF, main or other paths; B01 untouched",
+   "at": "2026-10-29T15:54:07Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
