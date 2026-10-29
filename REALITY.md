@@ -53,6 +53,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - Hourly wake at :32 London into ruv.sgit@'s own session: task `trig_01WgnTaJ8v2DSo2p23ZqBihu`, created 29 October 2026 02:13 UTC at the editor's word.
 - `/ruv-sgit/policy-review.html`: the editor's review page for the draft policy, generated from `policy.json` by `team/ruv-sgit/tools/review_page.py`.
 - Studio lab: `src/static/studio/lab/**` is ruv.sgit@'s (the editor's go, 29 October 2026). B01's storyboard at `/studio/lab/b01/storyboard/`, eight SVG stills (motif: the overlap fills in), with `notes.md`; made in run r2-b01-storyboard, whose vault is kept for v1 and v2. Waiting for deck's go.
+- ruv.sgit@'s session holds write keys for `tui-issues-public` and `tui-mail-public` (opened 29 October 2026, 03:08 UTC); its board is `ruv-sgit/issues/` there.
 - Nothing from ruv.sgit@ is wired into the talk yet.
 
 ## Does not exist yet
