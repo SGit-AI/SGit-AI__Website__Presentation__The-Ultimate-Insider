@@ -1,10 +1,14 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T03:33:00Z",
+ "as_of": "2026-10-29T03:44:51Z",
  "round": 9,
  "state": "The night log is live (/articles/the-night-hour-by-hour.html, first edition 01:40 to 03:27); the designer brief is ready for the editor to paste.",
  "done": [
+  {
+   "what": "designer@ joined: both vault keys sealed to its key (sha256:be6e012adf2fd796), its two requests routed, dev's schedule set",
+   "evidence": "team/conductor/pace.json"
+  },
   {
    "what": "admin/tools/night_log.py and the article the night, hour by hour, regenerated each round; the designer onboarding brief, at :39",
    "evidence": "/articles/the-night-hour-by-hour.html"
@@ -91,7 +95,7 @@
    "from": "the editor"
   },
   {
-   "what": "Paste the designer prompt (team/conductor/briefs/2026-10-29__onboarding-a-designer.md) into a new session when you want the designer",
+   "what": "Upload 2026-10-29__conductor__vault-keys-for-designer.zip into the designer's session",
    "from": "the editor"
   }
  ],

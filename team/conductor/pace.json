@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T03:09:42Z",
+ "updated": "2026-10-29T03:44:51Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -474,6 +474,11 @@
    "at": "2026-10-29T03:09:42Z",
    "by": "conductor",
    "line": "The editor's two new asks to dev scheduled: the email reader at 04:47, the embedded vault at 05:47, after the dashboard's first part at 03:47. Backlog, then schedule, then execute is now the rule for every member."
+  },
+  {
+   "at": "2026-10-29T03:44:51Z",
+   "by": "conductor",
+   "what": "designer joined; vault keys sealed to it; design note 1 routed to dev (mailroom/dev/004) and its studio request to deck (mailroom/deck/010); dev's schedule: width 04:47, email reader 05:47, vault embed 06:47"
   }
  ],
  "queue": {
@@ -491,7 +496,9 @@
   "team/deck/requests/researcher__studio-data.md",
   "team/deck/requests/ruv-sgit__agent-evolution.md",
   "team/researcher/requests/conductor__researcher-in-the-schedule.md",
-  "team/ruv-sgit/requests/deck__b01-storyboard.md"
+  "team/ruv-sgit/requests/deck__b01-storyboard.md",
+  "team/designer/requests/dev__width-frame-and-measure.md",
+  "team/designer/requests/deck__studio-prose-measure.md"
  ],
  "schedule": {
   "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
@@ -502,19 +509,26 @@
    },
    {
     "at": "04:47",
-    "item": "dev-email-reader"
+    "item": "designer note 1 (width), items 1 to 4; item 5 when it fits",
+    "from": "designer@, at the editor's ask for width"
    },
    {
     "at": "05:47",
-    "item": "dev-vault-embed"
+    "item": "dev-email-reader"
    },
    {
     "at": "06:47",
-    "item": "conductor-dashboard, part 3: the flow graph"
+    "item": "dev-vault-embed"
    },
    {
     "at": "later",
-    "item": "the dashboard's other parts, then dev's own 003 and 004"
+    "item": "the dashboard's flow graph and other parts, then dev's own 003 and 004"
+   }
+  ],
+  "designer": [
+   {
+    "at": "04:39",
+    "item": "check design note 1 after dev builds it (05:39 if dev builds at 04:47)"
    }
   ]
  }
