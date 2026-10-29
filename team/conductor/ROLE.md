@@ -26,7 +26,7 @@ Maps the work, keeps the team's keys and banners, and runs the schedule. Joined 
 5. Every member's vault keys: at each wake, for any member whose `key.json` is new, seal both vault keys to it (`vault_handover.py --to-member <id>`) and hand the zip to the editor.
 6. The team's two public vaults (`vaults.json`): `tui-issues-public` (Issues-FS lite) and `tui-mail-public` (Email-FS lite), their READMEs and layout, and their read keys on the site. Their vault keys are escrowed with the DC Vault Registry, never in a file.
 7. The pace (the editor, 29 October 2026): at each :02 wake, pick the next idea from deck's board for each producer with nothing in flight, send the request, keep `pace.json` (the flow graph dev draws), flag what is stalled; one request in flight per producer. The brief: `briefs/2026-10-29__the-next-hours.md`.
-8. The night log (the editor, 29 October 2026): at the end of each wake, `python3 admin/tools/night_log.py --mail <tui-mail-public clone>` takes the hour's snapshot and rewrites `/articles/the-night-hour-by-hour.html`: every wake and its verdicts, what was made with screenshots, the messages by header, problems, and what waits on the editor.
+8. The night log (the editor, 29 October 2026): at the end of each wake, `python3 admin/tools/night_log.py --mail <tui-mail-public clone>` takes the hour's snapshot and rewrites `/articles/the-night-hour-by-hour.html`: every wake and its verdicts, what was made with screenshots, the messages by header, problems, and what waits on the editor; it ends by running `admin/tools/moments.py`, which rewrites `/articles/moments.html`, the same runs as a strip of moments.
 9. Saying what is blocked and on whom, by name.
 
 ## The agent behaviour policy, in prose

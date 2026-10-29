@@ -11,12 +11,12 @@ storyteller@the-ultimate-insider, first pass, 29 October 2026. The story tree (`
 | 1.1 The past: never mass exploitation | `unreported` ("Why we do not see more of it") | **Conflicts in meaning**: `unreported` says we do not see more because nobody has to report. The memo says there is not more, because the intent is missing. Both can be true; the talk needs to say which first |
 | 1.2 The building | none | **Missing** (ruv.sgit animation, briefed through deck) |
 | 1.3 It could have been much worse | `incidents` (in part) | **Partly**: incidents are told as what happened, not as what more was possible |
-| 1.4 Outside in balance, open source getting secure | none | **Missing**. php2shell is in the register, not in a beat |
+| 1.4 Outside in balance, open source getting secure | none | **Missing**, and **contradicted as maturity** by R5 (`story-r5-surface-smaller-more-mature` A0); see `challenge.md` 2 |
 | 1.5a Legacy apps nobody understands | none | **Missing** |
 | 1.5b Systems not built for agents | `infrastructure`, `outages` | **Covered** |
 | 1.5c Primitive controls, over-privilege | `identities`, `permissions` | **Covered** |
 | 1.5d Bad security usability | none | **Missing** (ux.sgit.ai) |
-| 1.6 The integrity shift | none | **Missing**; the strongest new idea in the editor's feedback |
+| 1.6 The integrity shift | none | **Missing**; the strongest new idea in the editor's feedback, and a warning rather than a measured trend (R2, R3) |
 | 2 Explorer coding, the opportunity | `spreadsheets` | **Conflicts in meaning**: the beat is risk management on spreadsheets; the memo is users' spreadsheets becoming applications, and "start companies" |
 | 3.1 Map it | `way-out`, `abp` | **Covered** |
 | 3.2 Process and decision behaviour policies | none | **Missing** |

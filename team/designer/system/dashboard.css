@@ -1,0 +1,16 @@
+/* designer@the-ultimate-insider, 29 October 2026: design note 6, the dashboard's pace grid and first row and the phone's nav row edges (team/designer/reviews/2026-10-29__dashboard.md), as mocked up. A spec for dev, not a file the site loads. */
+table.pace td{min-width:0}
+table.pace th:not(:first-child){min-width:64px}
+table.pace .pc.o-ok > span{display:none}
+.now{grid-template-columns:repeat(2,minmax(0,360px))}
+.now .nowc.ed{grid-column:1 / -1}
+@media(max-width:700px){
+  nav.main{-webkit-mask-image:none;mask-image:none}
+  nav.main.more-r{-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  nav.main.more-l{-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%);mask-image:linear-gradient(90deg,transparent,#000 12%)}
+  nav.main.more-l.more-r{-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+}
+table.pace tr > th:first-child{position:sticky;left:0;z-index:1;background:var(--bg)}
+/* script, in the dashboard's own script and theme.js: */
+/* for (const t of document.querySelectorAll('.tbl:has(table.pace)')) t.scrollLeft = t.scrollWidth; */
+/* const n = document.querySelector('nav.main'); const f = () => { n.classList.toggle('more-l', n.scrollLeft > 2); n.classList.toggle('more-r', n.scrollLeft + n.clientWidth < n.scrollWidth - 2) }; n.addEventListener('scroll', f, {passive: true}); f(); (after the current link is scrolled into view) */

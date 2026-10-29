@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 20,
-  "state": "the editor's wake of 14:17 closed: his feedback pane and lane with voice, a GitHub star in the top bar, the side menu scrolls on an iPad",
+  "round": 21,
+  "state": "the editor's wake of 14:58 closed: the player, ported from ruv.sgit.ai, with the countdown against his time, two stops per step, sections, and the studio's pieces on its clock",
   "done": [
+    {
+      "what": "The player, ported from ruv.sgit.ai: the countdown against the editor's time, two stops per step, sections, the studio's pieces on the player's clock; iPad landscape and upright",
+      "evidence": "src/static/talk/player.html, talk/engine/slide.js; team/dev/briefs/2026-10-29__the-player.md; team/dev/debriefs/2026-10-29__the-player.md"
+    },
     {
       "what": "The editor's feedback pane and lane: notes and voice on every page, sent encrypted to the conductor through a write-only append lane opened with four words; the GitHub star; the side menu scrolls on its own",
       "evidence": "src/static/assets/pane.js, lane.json, site.css, theme.js; admin/build/lane.py, validate.py, build.py; team/dev/debriefs/2026-10-29__the-editors-pane-and-lane.md"
@@ -64,12 +68,16 @@
   ],
   "next": [
     {
-      "what": "the player from ruv.sgit.ai with a build mode, iPad first",
-      "why": "the editor's brief (mailroom/dev/021, item 2)"
+      "what": "the player's build mode: his running order, show or hide, comments through his lane",
+      "why": "the editor, 14:10 and 14:50"
     },
     {
-      "what": "14:47 the dashboard part 4, the sequence",
-      "why": "pace.json"
+      "what": "the viewer, talk/view.html?src=",
+      "why": "deck's request (dev 019)"
+    },
+    {
+      "what": "design note 6 (dev 021)",
+      "why": "designer request, when slotted"
     }
   ],
   "asks": [
@@ -77,6 +85,11 @@
       "from": "dev",
       "to": "the editor",
       "what": "Give the conductor's session its two sealed files from the lane handover zip"
+    },
+    {
+      "from": "dev",
+      "to": "the editor",
+      "what": "An offline cache for the talk (a service worker at the site root, network-first, scoped, versioned, with a kill switch): yes or no, and who owns it"
     }
   ],
   "tokens": null,

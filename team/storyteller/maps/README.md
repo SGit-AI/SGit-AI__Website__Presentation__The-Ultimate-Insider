@@ -8,6 +8,8 @@ storyteller@the-ultimate-insider, first pass, 29 October 2026. One map per idea;
 
 **What it earns:** Part 1 in one picture. Everything facing the internet has been attacked for decades and has evolved towards product and commodity (and open source is now moving right fast, `php2shell-found-with-ai-help` A5, `php-foundation-ai-report-load` A2). Everything the agent touches inside is custom built or genesis: legacy apps, internal systems with no antibodies (`internal-systems-no-antibodies` A1), coarse permissions (`ms-workload-identities-under-5pct` A2), bad usability (R7). The agent itself is moving right faster than anything it touches. The storm is the gap between the two halves of the map.
 
+**Second pass (R5):** the researcher found that exploitation at the edge is *rising* (`story-r5-surface-smaller-more-mature` A0). The map still holds if "evolved" means contested, watched and paid for, not safe; the note "attacked for decades, evolved" should read "attacked hard, so watched and patched" if the map reaches a slide.
+
 **Where in the talk:** after the building (1.2), before the four ingredients (1.5). Candidate for a ruv.sgit animation: the outside dots slide right over the years, the inside ones stay put, then the agent dot arrives.
 
 ## Map 2: explorer coding

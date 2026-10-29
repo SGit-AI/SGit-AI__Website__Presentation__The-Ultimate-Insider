@@ -6,6 +6,10 @@
  "state": "14:02 wake (fired 14:15): the storyteller joined; its vault keys sealed, the zip with the editor.",
  "done": [
   {
+   "what": "Moments: the runs and batches as a strip, each opening on what you need to know, what changed and where it stood (admin/tools/moments.py)",
+   "evidence": "/articles/moments.html"
+  },
+  {
    "what": "How this talk was built: a mini deck of the team in motion, six scenes animated from the team's public records (admin/tools/workflow_deck.py)",
    "evidence": "/articles/how-this-talk-was-built.html"
   },

@@ -46,7 +46,8 @@
       "admin/notes/**",
       "content/articles/running-this-agent-team.md",
       "content/articles/the-night-hour-by-hour.md",
-      "content/articles/how-this-talk-was-built.md"
+      "content/articles/how-this-talk-was-built.md",
+      "content/articles/moments.md"
     ],
     "holds": [],
     "appends": [
