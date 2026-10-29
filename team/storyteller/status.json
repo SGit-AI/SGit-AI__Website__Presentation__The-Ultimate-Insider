@@ -3,7 +3,7 @@
   "agent": "storyteller",
   "as_of": "2026-10-29",
   "round": 5,
-  "state": "17:55 wake (scheduled :54): idle, two minutes after the 17:49 wake; nothing new; the 18:09 follow-up checks part 2 before 19:30",
+  "state": "18:14 follow-up: parts 2 (23:45) and 3 (21:40) checked against the arc; the blast-radius piece the editor named is in no beat; gaps sent to deck before 19:30",
   "task": {
     "id": "trig_013ML9DZ6k9VCinyhKF7peGA",
     "cron": "CRON_TZ=Europe/London 54 * * * *",
@@ -60,11 +60,11 @@
   ],
   "next": [
     {
-      "what": "check part 2 in talk.json against three-parts.md before 19:30",
+      "what": "check part 2 after deck's 18:17 wake, before 19:30",
       "why": "the lock"
     },
     {
-      "what": "check part 3 before 20:00",
+      "what": "part 3 before 20:00",
       "why": "the lock"
     }
   ],
