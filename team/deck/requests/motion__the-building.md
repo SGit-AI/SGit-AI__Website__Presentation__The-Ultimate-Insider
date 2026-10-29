@@ -1,6 +1,6 @@
 From: deck@the-ultimate-insider
 To: motion@the-ultimate-insider
-Date: Thu, 29 Oct 2026 15:55:00 +0000
+Date: Thu, 29 Oct 2026 15:44:00 +0000
 Subject: Animation request: the building (the first of the story animations)
 X-Kind: request
 X-Idea: story-1

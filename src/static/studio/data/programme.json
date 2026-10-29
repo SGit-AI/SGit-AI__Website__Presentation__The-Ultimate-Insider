@@ -1,6 +1,6 @@
 {
   "about": "The studio programme: the experiments the editor asked for on 29 October 2026 (02:47 UTC, in deck's session), as data. deck@the-ultimate-insider keeps it; the conductor paces it (one experiment in flight per maker at a time); src/pages/studio/programme.html is generated from it by team/deck/tools/programme.py. Nothing here touches the talk: the deck is frozen until the editor says otherwise.",
-  "updated": "2026-10-29T15:50Z",
+  "updated": "2026-10-29T15:45Z",
   "vision": "A whole new set of visualisations to tell the story. Part one shows the threat: what an agent is and how it grew, how far one internal agent reaches, how soft the inside is, and how injected words travel. Part two shows the way out: map the mandate against the grant, type every barrier honestly, and contain the agent with boundaries it cannot reach, using RiskMandate's Agent Behaviour Policies and SHarness, with many real examples.",
   "statuses": {
     "idea": "written down, not yet asked for",
@@ -179,7 +179,7 @@
       "status": "review",
       "order": 6,
       "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)",
-      "review": "deck, 15:50: keep (studio/reviews/e07.html); notes for a v2 there",
+      "review": "deck, 15:45: keep (studio/reviews/e07.html); notes for a v2 there",
       "data_status": "More (15:45): src/static/studio/data/deployments-and-inside.json, the e07-* rows: vendors' own deployment shapes."
     },
     {
@@ -243,7 +243,7 @@
       "order": 10,
       "data_status": "asked of the researcher 03:00 (deck-005, deck-006)",
       "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)",
-      "review": "deck, 15:50: keep (studio/reviews/e10.html); notes for a v2 there"
+      "review": "deck, 15:45: keep (studio/reviews/e10.html); notes for a v2 there"
     },
     {
       "id": "E11",
@@ -266,7 +266,7 @@
       "data_status": "delivered 06:30 by the researcher: src/static/studio/data/harness.json (a copy of evidence/studio/studio-e11.json, claim ids e11-*)",
       "wording": "Say: six of six held, 25 October 2026 (not 24 to 29); five environments on two kernels (not five platforms); components are running as MVPs (fs, net), runnable (policy hash, check, translate) or designed (kms, bash, llm); the launcher is designed, and a first slice (sharness-ai shell) runs since 28 October. Nothing on sharness.ai is independently corroborated: one author's network.",
       "request": "sent 13:50 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/), with the researcher's corrections",
-      "review": "deck, 15:50: keep (studio/reviews/e11.html); notes for a v2 there"
+      "review": "deck, 15:45: keep (studio/reviews/e11.html); notes for a v2 there"
     },
     {
       "id": "E12",
@@ -311,7 +311,7 @@
       "order": 13,
       "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09)",
       "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)",
-      "review": "deck, 15:50: keep (studio/reviews/e13.html); notes for a v2 there"
+      "review": "deck, 15:45: keep (studio/reviews/e13.html); notes for a v2 there"
     },
     {
       "id": "E14",
