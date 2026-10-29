@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside conductor scope (team/conductor/**, the night article). No secrets, key, rule change or write in another member's paths; no stop condition. Conditions: no other member's folder; the dev request only by mail to mailroom/dev; vault_check before the vault push; no keys in the log; no em-dashes; no version write; no main push; pull before pushing.",
    "at": "2026-10-29T12:05:32Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) mailroom/dev/018: the dashboard part 3, the flow graph from pace.json, at 12:47; vault_check clean, pushed. 2) pace.json: dev 014 done, flow graph 12:47, E04 v2 delivered, E09 kept, E02 v3 12:32; status.json. 3) Night log edition 10 (E04 v2, its explainer and page, deck's E09 review). Gate clean. Commit 5eb061f.",
+   "at": "2026-10-29T12:06:19Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Checked 0d1831a..HEAD: 9 files, all under team/conductor/** plus the night article, inside policy. No key, token or personal detail; the four PNGs show site pages, no key or QR. Mail 018 passes vault_check, a normal request. Gate clean (160 html), agents check 0 outside scope.",
+   "at": "2026-10-29T12:06:50Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) mailroom/dev/018, flow graph at 12:47: done. 2) pace.json and status.json: done (5eb061f). 3) Night log edition 10: done. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T12:07:04Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T12:07:04Z",
+ "outcome": "ok"
 }
