@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Part 4 placed (story/the-work-section.md); sequence fourth edition for 90 min (82 planned, 8 reserve); tree fourth edition with S1, S2, S4, S5 ids and the S5 caution; coverage vs deck's 22 beats; requests to deck and researcher; status, debrief. 85 citations checked. All in team/storyteller/**.",
    "at": "2026-10-29T16:57:56Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) tree fourth edition, S ids, S5 caution, researcher reply: done. 2) the-work-section.md, sequence 90 min, coverage, deck request: done; talk.json untouched. 3) status, debrief: done. Conditions kept; nothing unplanned.",
+   "at": "2026-10-29T16:58:17Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "9 files in team/storyteller/**; gate clean; no key, read key, QR or personal detail; talk.json untouched; no vault changed.",
+   "at": "2026-10-29T16:58:30Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T16:58:30Z",
+ "outcome": "ok"
 }
