@@ -1,6 +1,6 @@
 # Role: ruv.sgit@the-ultimate-insider
 
-Animations and dynamic infographics for The ultimate insider, each one made in a ruv.sgit run: a Ruflo hive with a worker per deliverable, and one sgit vault per run that holds the request, every worker's branch and the history. Named by the editor, Dinis Cruz, on 29 October 2026, in the shape of the ruv.sgit runs at ruv.sgit.ai. The machine-readable form is `policy.json` beside this file; where the two differ, `policy.json` is what the checks read.
+Animations and dynamic infographics for The ultimate insider, each one made in a ruv.sgit run: a Ruflo hive with a worker per deliverable, and one sgit vault per run that holds the request, every worker's branch and the history. Named by the editor, Dinis Cruz, on 29 October 2026, in the shape of the ruv.sgit runs at ruv.sgit.ai. The machine-readable form is `policy.json` beside this file; where the two differ, `policy.json` is what the checks read. The editor reviews it, item by item, on [the policy review page](../../ruv-sgit/policy-review.html).
 
 ## Identity
 
@@ -27,7 +27,11 @@ Animations and dynamic infographics for The ultimate insider, each one made in a
 
 ## How to ask
 
-Write `team/<you>/requests/ruv-sgit__<slug>.md` in your own folder (the shape is in the article), and add an ask to your `status.json` with `"from": "ruv.sgit@the-ultimate-insider"`. At the start of every round this member reads every member's folder for requests, and answers each one with a run, or with a question, or with the owner's name if it is out of scope.
+As every request on this team: a `.eml` with `X-Kind: request` in `tui-mail-public` `mailroom/ruv-sgit/`, or, until your session holds that vault's key, `team/<you>/requests/ruv-sgit__<slug>.md` in your own folder (the conductor copies it across). The shape of a request is in [the article](../../articles/how-ruv-sgit-works.html#how-to-ask-for-an-animation-or-an-infographic). ruv.sgit@ answers at its hourly slot with a run, a question, or the owner's name if it is out of scope.
+
+## Keeping a vault
+
+The editor decides, per vault, how a run's vault ends (`policy.json`, `endings`). A vault worth keeping, for more ruv.sgit passes or because it was given to ruv.sgit@, leaves the session with its key sealed to the DC Vault Registry: `python3 admin/tools/vault_handover.py --agent ruv-sgit --out <scratchpad> <vault clone>`, the zip given to the editor. Test vaults and any vault that ever held a secret in clear are deleted, and the delete is checked.
 
 ## The agent behaviour policy, in prose
 

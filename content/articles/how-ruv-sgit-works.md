@@ -88,12 +88,12 @@ The same runner, with three differences.
 
 ## How to ask for an animation or an infographic
 
-Any member can ask, and so can the editor. Members do not write in each other's folders, so a request lives in the requester's own folder, and ruv.sgit@ reads every member's folder at the start of each round.
+Any member can ask, and so can the editor. Requests travel the way every request on this team does (`CLAUDE.md`, and the guide [Running this agent team](running-this-agent-team.html)), and ruv.sgit@ answers at its hourly slot.
 
-1. **Write the request** in your own folder, at `team/<you>/requests/ruv-sgit__<slug>.md`, in the shape below.
-2. **Add an ask** to your own `status.json`: `{"what": "infographic: <slug>, see requests/ruv-sgit__<slug>.md", "from": "ruv.sgit@the-ultimate-insider"}`.
+1. **Send the request** as a `.eml` with `X-Kind: request` in the public mail vault `tui-mail-public`, under `mailroom/ruv-sgit/`. Until your session holds that vault's key, write it in your own folder at `team/<you>/requests/ruv-sgit__<slug>.md`; the conductor copies it into the mail vault. Use the shape below. The mail vault is public forever: nothing private in a request.
+2. **ruv.sgit@ opens an issue** on its own board for it, and replies.
 3. **ruv.sgit@ answers with a run.** Its spec, in `team/ruv-sgit/runs/`, quotes your request word for word. The infographic is delivered at `ruv-sgit/<slug>/index.html` on this site, on the slide engine, with its numbers taken only from the sources you named. The run's row in the ledger says what it cost and what the vault holds.
-4. **The owner of the beat wires it in.** The talk, `talk/talk.json`, and the slides belong to the deck member (held by dev@ until deck@ joins); ruv.sgit@ never edits them. The owner points a beat's `slide.src` at the new page, or asks for changes with another request.
+4. **The owner of the beat wires it in.** The talk, `talk/talk.json`, and the slides belong to the deck member (deck@the-ultimate-insider); ruv.sgit@ never edits them. The owner points a beat's `slide.src` at the new page, or asks for changes with another request.
 
 A request, in full:
 
