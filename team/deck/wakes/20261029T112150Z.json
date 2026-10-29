@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Fits policy; no new request; vault_check before each vault commit; no keys or contact details; mail is material; push dev after the gate.",
    "at": "2026-10-29T11:22:13Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "E09 looked at over HTTP and reviewed (keep; studio/reviews/e09.html, index, programme.json); reply to ruv-sgit; board 012; mail filed; vaults pushed after vault_check; status, debrief. No new request.",
+   "at": "2026-10-29T11:23:58Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "HEAD only deck's paths; 0 outside scope; build, gate, vault_check clean; mail 025 and issue 012 a normal reply, no keys or directives, no new request.",
+   "at": "2026-10-29T11:24:34Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "E09 review, index, programme, reply, status, debrief: done; no talk.json, no new request.",
+   "at": "2026-10-29T11:24:34Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T11:24:34Z",
+ "outcome": "ok"
 }
