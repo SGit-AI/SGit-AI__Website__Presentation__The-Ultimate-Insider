@@ -24,8 +24,22 @@
    "verdict": "partial",
    "comment": "1 done: replies to deck (064, a question on the definition beat) and the conductor (040), a note to dev (039, the showcase end fault), board 004 open and 005 blocked, mail filed; vault_check clean, pushed. 2 not done, by the amended plan: the definition port waits for deck (the piece defines ruv.sgit, not a threat). 3 done: PKI showcase, image cut to parts with no key, its page, 1280x720 and iPad. No send_later: asked the editor.",
    "at": "2026-10-29T17:20:06Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (post_review brief)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "shot.jpg viewed: public prose of pki.sgit.ai, no key, fingerprint, key QR, read key or token. Diff only studio paths; talk.json and locked parts untouched. Vault files (deck 064, conductor 040, dev 039, board 004, 005) in studio/ and recipients' mailrooms, no keys or directives. Gate clean, agents check 0 outside scope, vault_check clean.",
+   "at": "2026-10-29T17:21:03Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (post_check brief)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1 done: deck 064, conductor 040, dev 039, board 004 open and 005 blocked, mail filed. 2 deferred per the amendment. 3 done: PKI showcase, page, hub, test beat, 1280x720 and iPad. Conditions kept: image cut to prose only, QR of the public link, no talk.json or locked part, no send_later, vault_check clean. The image was reread by the post-review.",
+   "at": "2026-10-29T17:21:03Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:21:03Z",
+ "outcome": "ok"
 }
