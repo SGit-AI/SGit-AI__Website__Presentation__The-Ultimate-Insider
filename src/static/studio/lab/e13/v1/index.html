@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E13 v1: five published examples, one chart each</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<script>window.RUV_STEPS = [{ t: 0, label: 'five examples' }, { t: 4, label: 'the grant' }, { t: 12, label: 'the mandate' }, { t: 20, label: 'the excess' }, { t: 28, label: 'what bounds it' }, { t: 36, label: 'measured or derived' }]</script>
+<script src="../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:52px;font-size:40px;right:230px}
+#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--head);letter-spacing:.02em}
+#q{position:absolute;left:40px;right:40px;top:110px;height:28px;font:20px/1.3 system-ui;color:var(--text);white-space:nowrap}
+#q b{color:var(--head)}
+.pn{position:absolute;top:146px;width:236px;height:522px;border:2px solid var(--line);border-radius:14px;padding:8px 8px 0;background:var(--panel)}
+.pn .nm{height:74px;font:700 20px/24px system-ui;color:var(--head)}
+.pn svg{display:block;width:216px;height:194px;margin:0 auto}
+.pn .ln{font:20px/24px system-ui;color:var(--text);white-space:nowrap}
+.pn .ln b{font-weight:800}
+.pn .g b{color:var(--head)}
+.pn .m b,.pn .m{color:var(--accent)}
+.pn .x b,.pn .x{color:var(--risk)}
+.pn .ms{margin-top:5px;color:var(--dim)}
+.pn .ms b{color:var(--head)}
+.pn .hs{font:20px/23px system-ui;color:var(--dim);margin-top:2px}
+.pn .hs b{color:var(--text);font-weight:700}
+#key{position:absolute;left:24px;right:24px;bottom:16px;display:flex;gap:26px;justify-content:center;font:20px/26px system-ui;color:var(--dim);white-space:nowrap}
+#key span{display:flex;align-items:center;gap:7px}
+#key svg{width:24px;height:24px;flex:none}
+</style>
+</head>
+<body>
+<div id="cv" data-end="48">
+  <p class="kk">Studio experiment E13 · v1, driven</p>
+  <div id="id">E13</div>
+  <div class="hl" data-in="0">Five published examples, <em>the same chart each.</em></div>
+  <div id="q"></div>
+  <div id="pans"></div>
+  <div id="key"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  var NS = 'http://www.w3.org/2000/svg', A = null, C = null, B = null
+  var P0 = 0, P1 = 4, P2 = 12, P3 = 20, P4 = 28, P5 = 36, P6 = 43   // examples, grant, mandate, excess, barrier, measured, close
+  var W = 216, H = 194, CX = 108, CY = 97, RX = 86, RC = 40, RS = 21, RG = 52, DR = 9
+  var ORDER = ['none', 'expectation', 'setting', 'boundary']
+  // the abp-examples ids against the example names capabilities.json uses for each example's own reach
+  var CAP = { 'claude-code-cli-confirmations-enabled': 'anthropic/claude-code/local-default', 'claude-code-cli-confirmations-disabled': 'anthropic/claude-code/local-confirmations-off',
+    'chatgpt-web-no-connectors': 'openai/chatgpt-web/default', 'browser-extension-broad-host-permissions': 'generic/browser-extension/broad-host-permissions', 'github-actions-hosted-runner': 'github/actions-runner/ci' }
+  Promise.all([fetch('../../../data/abp-examples.json').then(function (r) { return r.json() }), fetch('../../../data/capabilities.json').then(function (r) { return r.json() })])
+    .then(function (j) { A = j[0]; C = j[1] }).catch(function (e) { console.error('E13: a data file did not load', e) })
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  // the barrier kinds as abp.sgit.ai draws them: filled (none), double circle (expectation), half filled (setting), empty (boundary)
+  function glyph(p, kind, x, y, r, col) {
+    var g = el('g', {}, p)
+    if (kind === 'expectation') { el('circle', { cx: x, cy: y, r: r - 1.2, fill: 'var(--panel)', stroke: col, 'stroke-width': 2.5 }, g); el('circle', { cx: x, cy: y, r: r * .42, fill: 'none', stroke: col, 'stroke-width': 2.2 }, g) }
+    else if (kind === 'setting') { el('circle', { cx: x, cy: y, r: r - 1.2, fill: 'var(--panel)', stroke: col, 'stroke-width': 2.5 }, g); el('path', { d: 'M' + x + ' ' + (y - r + 1.2) + 'A' + (r - 1.2) + ' ' + (r - 1.2) + ' 0 0 0 ' + x + ' ' + (y + r - 1.2) + 'Z', fill: col }, g) }
+    else if (kind === 'boundary') el('circle', { cx: x, cy: y, r: r - 1.2, fill: 'var(--panel)', stroke: col, 'stroke-width': 3 }, g)
+    else el('circle', { cx: x, cy: y, r: r, fill: col }, g)
+    return g
+  }
+  function mini(kind, col) { var s = document.createElementNS(NS, 'svg'); s.setAttribute('viewBox', '0 0 24 24'); glyph(s, kind, 12, 12, 10, col); return s.outerHTML }
+  function label(id) { var c = C.capabilities.filter(function (x) { return x.id === id })[0]; return c ? c.label.replace(/\s*\([^)]*\)\s*$/, '') : id }
+  function hostHere(ex) {                                            // what "host" means in this example, in capabilities.json's words
+    var name = CAP[ex.id], out = null
+    ex.rows.forEach(function (r) {
+      if (out) return
+      var c = C.capabilities.filter(function (x) { return x.id === r.capability })[0]
+      if (!c || c.reach !== 'host') return
+      var i = c && c.in_examples.filter(function (y) { return y.example === name && y.reach_in_this_example })[0]
+      if (i) out = i.reach_in_this_example
+    })
+    return out
+  }
+  function ring(n, r, a0, a1) {                                       // n points on a circle between two angles
+    var out = []
+    for (var i = 0; i < n; i++) { var a = n === 1 ? (a0 + a1) / 2 : a0 + (a1 - a0) * (i + .5) / n; out.push([CX + r * Math.cos(a), CY + r * Math.sin(a)]) }
+    return out
+  }
+
+  function build(S) {
+    var host = S.$('pans'), P = []
+    A.examples.forEach(function (ex, i) {
+      var pn = document.createElement('div'); pn.className = 'pn'; pn.style.left = (24 + i * 248) + 'px'; host.appendChild(pn)
+      var nm = document.createElement('div'); nm.className = 'nm'; nm.textContent = ex.name; pn.appendChild(nm)
+      var svg = document.createElementNS(NS, 'svg'); svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H); svg.setAttribute('aria-label', ex.name + ': grant ' + ex.grant + ', mandate ' + ex.mandate + ', excess ' + ex.excess); pn.appendChild(svg)
+      var exRing = el('circle', { cx: CX, cy: CY, r: RX, fill: 'none', stroke: 'var(--risk)', 'stroke-width': 2, 'stroke-dasharray': '5 6' }, svg)
+      var core = el('circle', { cx: CX, cy: CY, r: RC, fill: 'var(--accent-t)', stroke: 'var(--accent)', 'stroke-width': 3 }, svg)
+      var txt = function (s, x, y, col) { var t = el('text', { x: x, y: y, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 800, fill: col, 'paint-order': 'stroke', stroke: 'var(--panel)', 'stroke-width': 6 }, svg); t.textContent = s; return t }
+      var exLab = txt('excess', CX, CY - RX + 7, 'var(--risk)'), coreLab = txt('mandate', CX, CY - RC - 8, 'var(--accent)')
+      var inM = ex.rows.filter(function (r) { return r.in_mandate }), out = ex.rows.filter(function (r) { return !r.in_mandate })
+      out.sort(function (a, b) { return ORDER.indexOf(a.barrier_kind) - ORDER.indexOf(b.barrier_kind) })
+      var slots = inM.length + ex.shortfall, ms = slots === 1 ? [[CX, CY]] : ring(slots, RS, -Math.PI / 2 - Math.PI / slots, 3 * Math.PI / 2 - Math.PI / slots)
+      var gap = .75, xs = ring(out.length, RX, -Math.PI / 2 + gap, 3 * Math.PI / 2 - gap)
+      if (out.length && out[out.length - 1].barrier_kind === 'boundary') {     // a boundary sits at the foot of the ring, its name inside above it
+        var m = out.length - 1, rt = Math.ceil(m / 2), bb = .8
+        xs = ring(rt, RX, -Math.PI / 2 + gap, Math.PI / 2 - bb).concat(ring(m - rt, RX, Math.PI / 2 + bb, 3 * Math.PI / 2 - gap), [[CX, CY + RX]])
+      }
+      var all = inM.concat(out), gs = all.length === 1 ? [[CX, CY]] : ring(all.length, RG, -Math.PI / 2 - Math.PI / all.length, 3 * Math.PI / 2 - Math.PI / all.length)
+      var dots = all.map(function (r, j) {
+        var g = el('g', {}, svg), m = r.in_mandate, col = m ? 'var(--accent)' : 'var(--risk)'
+        if (r.barrier_kind === 'boundary') col = 'var(--infra)'
+        var to = m ? ms[j] : xs[j - inM.length]
+        var d = { r: r, m: m, g: g, from: gs[j], to: to, j: j }
+        d.n = glyph(g, 'none', 0, 0, DR, 'var(--dim)'); d.c = glyph(g, 'none', 0, 0, DR, m ? 'var(--accent)' : 'var(--risk)'); d.k = glyph(g, r.barrier_kind, 0, 0, DR, col)
+        return d
+      })
+      var sf = []
+      for (var s = 0; s < ex.shortfall; s++) { var p = ms[inM.length + s]; sf.push(el('circle', { cx: p[0], cy: p[1], r: DR - 1, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 2.5, 'stroke-dasharray': '3 3' }, svg)) }
+      var bnd = dots.filter(function (d) { return d.r.barrier_kind === 'boundary' })[0], bl = null
+      if (bnd) { bl = el('text', { x: bnd.to[0], y: bnd.to[1] - 18, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 800, fill: 'var(--infra)', 'paint-order': 'stroke', stroke: 'var(--panel)', 'stroke-width': 6 }, svg); bl.textContent = 'boundary' }
+      var line = function (cls, h) { var d = document.createElement('div'); d.className = 'ln ' + cls; d.innerHTML = h; pn.appendChild(d); return d }
+      var L = {
+        g: line('g', '<b>grant ' + ex.grant + '</b>'),
+        m: line('m', '<b>mandate ' + ex.mandate + '</b>, ' + ex.aligned + ' granted'),
+        x: line('x', '<b>excess ' + ex.excess + '</b>'),
+        u: line('x', ex.excess ? ex.unbounded_excess + ' of ' + ex.excess + ' unbounded' : '&nbsp;'),
+        ms: line('ms', (ex.rows_measured.measured ? '<b>measured</b>' : '<b>derived</b>') + '<br>' + ex.rows_measured.measured + ' of ' + ex.rows_measured.total + (ex.rows_measured.total === 1 ? ' row' : ' rows') + ' measured')
+      }
+      var hh = hostHere(ex), hs = document.createElement('div'); hs.className = 'hs'
+      hs.innerHTML = hh ? '<b>host:</b> ' + hh : '<b>host:</b> not in its grant'
+      pn.appendChild(hs); L.hs = hs
+      P.push({ ex: ex, pn: pn, nm: nm, exRing: exRing, exLab: exLab, core: core, coreLab: coreLab, dots: dots, sf: sf, bl: bl, L: L, i: i })
+    })
+    var bk = {}; A.barrier_kinds.forEach(function (b) { bk[b.kind] = b.definition.split(',')[0] })
+    S.$('key').innerHTML = ORDER.map(function (k) { return '<span>' + mini(k, k === 'boundary' ? 'var(--infra)' : 'var(--text)') + bk[k] + '</span>' }).join('')
+    var bRows = []; A.examples.forEach(function (ex) { ex.rows.forEach(function (r) { if (!r.in_mandate && r.barrier_kind === 'boundary') bRows.push({ ex: ex, r: r }) }) })
+    var meas = A.examples.filter(function (e) { return e.rows_measured.measured > 0 })
+    B = { P: P, bRows: bRows, meas: meas }
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!A || !C) return
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .7))) }
+    B.P.forEach(function (p) {
+      var st = p.i * .25
+      p.pn.style.opacity = k(P0 + .3 + st); p.pn.style.translate = '0 ' + ((1 - k(P0 + .3 + st)) * 14).toFixed(1) + 'px'
+      p.dots.forEach(function (d) {
+        var on = k(P1 + st + d.j * .06, .4), mv = k(P2 + st, 1.2), cc = d.m ? mv : k(P3 + st)   // all move at the mandate; the excess takes its colour at the excess
+        var x = S.lerp(d.from[0], d.to[0], mv), y = S.lerp(d.from[1], d.to[1], mv)
+        d.g.setAttribute('transform', 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ')'); d.g.style.opacity = on
+        var kd = k(P4 + st + d.j * .05, .5), cl = cc * (1 - kd)
+        d.n.style.opacity = 1 - cc; d.c.style.opacity = cl; d.k.style.opacity = kd
+      })
+      p.core.style.opacity = k(P2 + st); p.coreLab.style.opacity = k(P2 + st)
+      p.sf.forEach(function (s) { s.style.opacity = k(P2 + 1 + st) })
+      p.exRing.style.opacity = (p.ex.excess ? 1 : .45) * k(P3 + st); p.exLab.style.opacity = k(P3 + st)
+      if (p.bl) p.bl.style.opacity = k(P4 + 1.5)
+      p.L.g.style.opacity = k(P1 + st); p.L.m.style.opacity = k(P2 + st); p.L.x.style.opacity = k(P3 + st)
+      p.L.u.style.opacity = k(P4 + 1 + st); p.L.ms.style.opacity = k(P5 + st); p.L.hs.style.opacity = k(P5 + 2 + st)
+      var mm = t >= P5 + st
+    })
+    S.$('key').style.opacity = k(P4 + .5)
+    var q = ''
+    if (t < P1) q = 'Five examples published on abp.sgit.ai, drawn the same way, in the site\'s own order.'
+    else if (t < P2) q = '<b>The grant:</b> one dot for each thing the agent can do.'
+    else if (t < P3) q = '<b>The mandate:</b> what it is authorised to do. A dashed dot: asked for, not granted.'
+    else if (t < P4) q = '<b>The excess:</b> in the grant, not in the mandate.'
+    else if (t < P5) q = '<b>What bounds it:</b> only a boundary, the empty circle, is a control. ' + (B.bRows.length === 1 ? 'One' : B.bRows.length) + ' in all five: "' + label(B.bRows[0].r.capability).toLowerCase() + '".'
+    else if (t < P6) q = '<b>Measured or derived:</b> ' + B.meas.length + ' example measured inside the runner; the other ' + (A.examples.length - B.meas.length) + ' derived, not measured (the coding agents count 22 tool-level rows).'
+    else q = '<b>No rating, no ranking:</b> published drafts from one author\'s network, side by side.'
+    if (S.$('q').innerHTML !== q) S.$('q').innerHTML = q
+  }
+})()
+</script>
+</body>
+</html>

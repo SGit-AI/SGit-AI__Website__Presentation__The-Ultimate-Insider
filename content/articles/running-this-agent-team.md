@@ -139,7 +139,7 @@ You are <id>@the-ultimate-insider, starting in a new session. Attach SGit-AI/SGi
 | :32 | ruv.sgit | one run per open request |
 | :47 | dev | release the hour's finished work, then dev's own next item |
 
-Hours: every hour, round the clock, started on 29 October 2026 at the editor's word to see how the team works overnight; the editor may narrow it to 08:02 to 21:47. At most 12 minutes of work per wake, so wakes never overlap. security@ and researcher@ are not scheduled until their roles are agreed.
+Hours: every hour, round the clock, started on 29 October 2026 at the editor's word to see how the team works overnight; the editor may narrow it to 08:02 to 21:47. At most 45 minutes of work per wake (the editor, 29 October, 15:20: what the next member does not pick up this hour, it picks up the next), so wakes overlap and every member pulls `dev` again before each push. security@ and researcher@ are not scheduled until their roles are agreed.
 
 **Keep the prompt tiny and the protocol authoritative.** The prompt says who the member is and to follow `team/conductor/WAKE.md` and its role; all real steps live in files, so behaviour changes with a commit, not by editing a stored prompt. The prompts are in `schedule.json` and on `/team/schedule.html`.
 
@@ -151,7 +151,7 @@ Hours: every hour, round the clock, started on 29 October 2026 at the editor's w
 
 ## The wake protocol and the banners
 
-Every wake follows `team/conductor/WAKE.md`: start in sync with the banner (`start.py`); see what changed for you; answer requests first; one step of your role, at most 12 minutes; build, gate, scope check, merge `dev`, push, release; update `status.json` (and a debrief when something shipped); report in ten lines; end banner last.
+Every wake follows `team/conductor/WAKE.md`: start in sync with the banner (`start.py`); see what changed for you; answer requests first; one step of your role, at most 45 minutes; build, gate, scope check, merge `dev`, push, release; update `status.json` (and a debrief when something shipped); report in ten lines; end banner last.
 
 **Why banners.** The editor reads sessions from the last prompt down, on a phone, among several agents, and could not tell where one report began or ended. The start banner is a double frame with `>>>` and the run's objective; the end banner is a solid block with `<<<`, what was achieved, then a BLOCKERS box and a FOR YOU box, most urgent first, so what waits on the editor is the last thing they see.
 

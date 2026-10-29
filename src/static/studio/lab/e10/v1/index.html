@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E10 v1: four barriers</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<script>
+window.RUV_STEPS = [
+  { t: 0, label: 'Four kinds of barrier' },
+  { t: 9, label: 'The path meets each wall' },
+  { t: 24, label: 'Claude Code, confirmations on' },
+  { t: 33, label: 'Confirmations off' },
+  { t: 41, label: 'No number moves' }
+]
+</script>
+<script src="../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px;margin:0}
+.hl{top:52px;font-size:40px;right:240px}
+#id{position:absolute;right:40px;top:10px;font:800 70px/1 system-ui;letter-spacing:-.02em;color:var(--dim)}
+#q{position:absolute;left:60px;right:40px;top:108px;height:28px;font:20px/28px system-ui;color:var(--text);white-space:nowrap}
+#q b{color:var(--head)}
+#pic{position:absolute;left:0;top:0;width:1280px;height:720px}
+.lk{position:absolute;left:84px;width:322px}
+.lk b{display:block;font:800 24px/28px system-ui;color:var(--head)}
+.lk span{display:block;font:20px/23px system-ui;color:var(--dim)}
+.lk.ctl b{color:var(--accent)}
+#cch{position:absolute;left:860px;top:142px;font:800 20px/26px system-ui;color:var(--head);white-space:nowrap}
+#cch i{font-style:normal;color:var(--infra)}
+#tbl{position:absolute;left:40px;top:572px;width:870px;font:20px/30px system-ui;color:var(--text)}
+#tbl .r{display:flex;align-items:center;height:32px}
+#tbl .r>*{flex:none;width:128px;text-align:center;white-space:nowrap}
+#tbl .r>:nth-child(5){width:176px}
+#tbl .r>:nth-child(6){width:150px}
+#tbl .r>:first-child{width:210px;text-align:left}
+#tbl .h{color:var(--dim)}
+#tbl .n{font:800 26px/30px system-ui;color:var(--head)}
+#tbl .lab{color:var(--head);font-weight:600}
+#tbl .lab i{font-style:normal;color:var(--infra)}
+#vd{position:absolute;left:966px;top:582px;width:290px;font:800 26px/32px Georgia,serif;color:var(--head)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="52">
+  <p class="kk a">Studio experiment E10 · v1, driven</p>
+  <div id="id">E10</div>
+  <div class="hl" data-in="0">Only a boundary <em>is a control.</em></div>
+  <div id="q"></div>
+  <svg id="pic" viewBox="0 0 1280 720" aria-label="The agent's path meets four walls, one per barrier kind: it passes nothing, jumps a rule in prose, breaks a switch its own account can flip, and stops at a boundary. Then Claude Code's sixteen rows sit at their barriers, and with confirmations off one row moves from setting to none."></svg>
+  <div id="lks"></div>
+  <div id="cch"></div>
+  <div id="tbl"></div>
+  <div id="vd"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  var ON = 'claude-code-cli-confirmations-enabled', OFF = 'claude-code-cli-confirmations-disabled'
+  var NS = 'http://www.w3.org/2000/svg', A = null, C = null, B = null
+  var LY = [200, 300, 400, 500], AX = 418, AY = 350, WX = 690, X1 = 830, DX = 912, DS = 24
+  var P0 = 0, P1 = 9, P2 = 24, P3 = 33, P4 = 41                       // the kinds, the paths, confirmations on, off, the numbers
+  var NUMS = [['grant', 'grant'], ['mandate', 'mandate'], ['excess', 'excess'], ['unbounded_excess', 'unbounded excess'], ['irreversible', 'irreversible']]
+  Promise.all([fetch('../../../data/abp-examples.json').then(function (r) { return r.json() }), fetch('../../../data/capabilities.json').then(function (r) { return r.json() })])
+    .then(function (j) { A = j[0]; C = j[1] }).catch(function (e) { console.error('E10: a data file did not load', e) })
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;') }
+  function plain(id) {
+    var c = C.capabilities.filter(function (x) { return x.id === id })[0]
+    return c ? c.label.replace(/\s*\([^)]*\)\s*$/, '') : id
+  }
+  // abp.sgit.ai's barrier glyphs, as E09 draws them: filled (none), double circle (expectation), half filled (setting), empty circle (boundary)
+  function glyph(p, kind, x, y, r, col) {
+    var g = el('g', {}, p)
+    if (kind === 'expectation') { el('circle', { cx: x, cy: y, r: r - 1.5, fill: 'none', stroke: col, 'stroke-width': 3 }, g); el('circle', { cx: x, cy: y, r: r * .45, fill: 'none', stroke: col, 'stroke-width': 2.5 }, g) }
+    else if (kind === 'setting') { el('circle', { cx: x, cy: y, r: r - 1.5, fill: 'none', stroke: col, 'stroke-width': 3 }, g); el('path', { d: 'M' + x + ' ' + (y - r + 1.5) + 'A' + (r - 1.5) + ' ' + (r - 1.5) + ' 0 0 0 ' + x + ' ' + (y + r - 1.5) + 'Z', fill: col }, g) }
+    else if (kind === 'boundary') el('circle', { cx: x, cy: y, r: r - 1.5, fill: 'none', stroke: col, 'stroke-width': 3 }, g)
+    else el('circle', { cx: x, cy: y, r: r, fill: col }, g)
+    return g
+  }
+  function txt(p, s, a) { var t = el('text', Object.assign({ 'font-size': 20, fill: 'var(--dim)' }, a), p); t.textContent = s; return t }
+
+  function build(S) {
+    var on = A.examples.filter(function (e) { return e.id === ON })[0], off = A.examples.filter(function (e) { return e.id === OFF })[0]
+    var kinds = A.barrier_kinds, svg = S.$('pic'), lks = ''
+    var ofOff = {}; off.rows.forEach(function (r) { ofOff[r.capability] = r })
+    var movers = on.rows.filter(function (r) { return ofOff[r.capability] && ofOff[r.capability].barrier_kind !== r.barrier_kind })   // the diff of the two examples' rows
+    var moved = NUMS.filter(function (n) { return on[n[0]] !== off[n[0]] })
+    var lanes = kinds.map(function (b, i) {
+      var y = LY[i], ctl = b.is_control, g = el('g', {}, svg), L = { kind: b.kind, ctl: ctl, y: y, g: g }
+      glyph(g, b.kind, 56, y, 16, ctl ? 'var(--accent)' : 'var(--text)')
+      lks += '<div class="lk' + (ctl ? ' ctl' : '') + '" id="lk' + i + '" style="top:' + (y - 38) + 'px"><b>' + esc(b.kind) + '</b><span>' + esc(b.definition) + '</span></div>'
+      // the path: from the agent to the wall, then past it (none, expectation, setting) or stopped at it (boundary)
+      var stop = b.kind === 'boundary' ? WX - 16 : b.kind === 'expectation' ? WX - 40 : WX
+      L.p1 = el('path', { d: 'M' + (AX + 104) + ' ' + AY + 'C' + (AX + 150) + ' ' + AY + ' ' + (AX + 130) + ' ' + y + ' ' + (AX + 180) + ' ' + y + 'H' + stop, fill: 'none', stroke: 'var(--head)', 'stroke-width': 4, 'stroke-linecap': 'round' }, g)
+      if (!ctl) {
+        var d2 = b.kind === 'expectation' ? 'M' + (WX - 40) + ' ' + y + 'C' + (WX - 24) + ' ' + (y - 66) + ' ' + (WX + 24) + ' ' + (y - 66) + ' ' + (WX + 40) + ' ' + y + 'H' + X1 : 'M' + WX + ' ' + y + 'H' + X1
+        L.p2 = el('path', { d: d2, fill: 'none', stroke: 'var(--agent)', 'stroke-width': 4, 'stroke-linecap': 'round' }, g)
+        L.head = el('circle', { cx: X1, cy: y, r: 8, fill: 'var(--agent)' }, g)
+      }
+      L.w = el('g', {}, g)
+      if (b.kind === 'none') el('rect', { x: WX - 8, y: y - 30, width: 16, height: 60, rx: 4, fill: 'none', stroke: 'var(--dim)', 'stroke-width': 2, 'stroke-dasharray': '5 5' }, L.w)
+      else if (b.kind === 'setting') { L.top = el('rect', { x: WX - 8, y: y - 30, width: 16, height: 30, rx: 4, fill: 'var(--dim)' }, L.w); L.bot = el('rect', { x: WX - 8, y: y, width: 16, height: 30, rx: 4, fill: 'var(--dim)' }, L.w) }
+      else el('rect', { x: WX - 8, y: y - 30, width: 16, height: 60, rx: 4, fill: ctl ? 'var(--accent)' : 'var(--dim)' }, L.w)
+      L.verdict = txt(g, ctl ? 'a control: holds' : 'not a control', { x: WX + 34, y: y + 32, fill: ctl ? 'var(--accent)' : 'var(--dim)', 'font-weight': ctl ? 800 : 400 })
+      L.l1 = L.p1.getTotalLength(); L.p1.setAttribute('stroke-dasharray', L.l1 + ' ' + L.l1)
+      if (L.p2) { L.l2 = L.p2.getTotalLength(); L.p2.setAttribute('stroke-dasharray', L.l2 + ' ' + L.l2) }
+      // Claude Code's rows at this barrier, confirmations on; a mover goes last so it can leave and land at the end of a row
+      var mine = on.rows.filter(function (r) { return r.barrier_kind === b.kind })
+      mine.sort(function (a, c) { return (movers.indexOf(a) >= 0) - (movers.indexOf(c) >= 0) })
+      L.rows = mine; L.dots = el('g', {}, svg)
+      L.cnt = txt(L.dots, '', { x: 884, y: y + 8, 'text-anchor': 'end', 'font-size': 26, 'font-weight': 800, fill: 'var(--head)' })
+      L.zero = mine.length ? null : txt(L.dots, 'none here', { x: DX - 10, y: y + 7 })
+      return L
+    })
+    S.$('lks').innerHTML = lks
+    // the agent itself, the only thing in red
+    var ag = el('g', {}, svg)
+    el('rect', { x: AX, y: AY - 22, width: 104, height: 44, rx: 22, fill: 'var(--agent)' }, ag)
+    txt(ag, 'the agent', { x: AX + 52, y: AY + 7, 'text-anchor': 'middle', 'font-weight': 800, fill: 'var(--bg)' })
+    // dots: each row of the on example, then the movers fly to their new barrier
+    var dots = []
+    lanes.forEach(function (L) {
+      L.rows.forEach(function (r, j) {
+        var d = { r: r, x: DX + j * DS, y: L.y, from: L, g: el('g', {}, L.dots) }
+        var mv = movers.indexOf(r) >= 0
+        if (mv) {
+          var to = lanes.filter(function (M) { return M.kind === ofOff[r.capability].barrier_kind })[0]
+          d.to = to; d.tx = DX + (to.rows.length) * DS; d.ty = to.y
+          d.ghost = el('circle', { cx: d.x, cy: d.y, r: 10, fill: 'none', stroke: 'var(--infra)', 'stroke-width': 2.5, 'stroke-dasharray': '4 3' }, L.dots)
+          d.arc = el('path', { d: 'M' + d.x + ' ' + (d.y - 14) + 'C' + d.x + ' ' + ((d.y + d.ty) / 2) + ' ' + d.tx + ' ' + ((d.y + d.ty) / 2 + 30) + ' ' + d.tx + ' ' + (d.ty + 14), fill: 'none', stroke: 'var(--infra)', 'stroke-width': 2.5, 'stroke-dasharray': '6 5' }, L.dots)
+          d.lab = el('g', {}, L.dots)
+          txt(d.lab, plain(r.capability), { x: d.x + 24, y: d.y + 7, fill: 'var(--infra)', 'font-weight': 800 })
+          txt(d.lab, (r.in_mandate ? 'in the mandate; ' : '') + r.barrier_kind + ' to ' + ofOff[r.capability].barrier_kind, { x: d.x + 24, y: d.y + 33, fill: 'var(--infra)' })
+          d.gA = glyph(d.g, r.barrier_kind, 0, 0, 10, 'var(--text)'); d.gB = glyph(d.g, ofOff[r.capability].barrier_kind, 0, 0, 10, 'var(--infra)')
+        } else glyph(d.g, r.barrier_kind, 0, 0, 10, 'var(--text)')
+        dots.push(d)
+      })
+    })
+    S.$('tbl').innerHTML = '<div class="r h"><span></span>' + NUMS.map(function (n) { return '<span>' + n[1] + '</span>' }).join('') + '</div>' +
+      [[on, 'confirmations on', 'ron'], [off, 'confirmations <i>off</i>', 'roff']].map(function (x) { return '<div class="r" id="' + x[2] + '"><span class="lab">' + x[1] + '</span>' + NUMS.map(function (n) { return '<span class="n">' + x[0][n[0]] + '</span>' }).join('') + '</div>' }).join('')
+    var claim = A.claims.filter(function (c) { return c.id === 'abp-cc-one-barrier-moved' })[0]
+    S.$('vd').textContent = claim ? claim.text : movers.length + ' barrier moved, ' + moved.length + ' numbers'
+    B = { on: on, off: off, lanes: lanes, dots: dots, movers: movers, moved: moved }
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!A || !C) return
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .6))) }
+    B.lanes.forEach(function (L, i) {
+      var a = P0 + 1 + i * 1.6, m = P1 + i * 3.4
+      L.g.style.opacity = k(a, .5); S.$('lk' + i).style.opacity = k(a, .5)
+      var f1 = S.seg(t, m, m + 1.4), f2 = S.seg(t, m + 1.9, m + 3), br = S.ease(S.seg(t, m + 1.3, m + 1.9))
+      L.p1.setAttribute('stroke-dashoffset', L.l1 * (1 - f1)); L.p1.style.opacity = t >= m ? 1 : 0
+      if (L.p2) { L.p2.setAttribute('stroke-dashoffset', L.l2 * (1 - f2)); L.p2.style.opacity = t >= m + 1.9 ? 1 : 0; L.head.style.opacity = f2 >= 1 ? 1 : 0 }
+      if (L.top) {                                                   // a switch its own account can flip: the wall breaks
+        L.top.setAttribute('transform', 'translate(' + (-10 * br) + ' 0) rotate(' + (-35 * br) + ' ' + WX + ' ' + (L.y - 15) + ')')
+        L.bot.setAttribute('transform', 'translate(' + (10 * br) + ' 0) rotate(' + (35 * br) + ' ' + WX + ' ' + (L.y + 15) + ')')
+        L.w.style.opacity = 1 - .5 * br
+      }
+      if (L.ctl) L.w.setAttribute('transform', 'translate(' + (3 * Math.sin(Math.PI * S.seg(t, m + 1.3, m + 1.8))) + ' 0)')
+      L.verdict.style.opacity = k(m + (L.ctl ? 1.4 : 2.6), .5)
+      L.dots.style.opacity = k(P2 + .4 + i * .5, .5)
+    })
+    var mv = S.ease(S.seg(t, P3 + 1, P3 + 3))
+    B.dots.forEach(function (d, j) {
+      var x = d.x, y = d.y
+      if (d.to) {
+        x = S.lerp(d.x, d.tx, mv); y = S.lerp(d.y, d.ty, mv) - 50 * Math.sin(Math.PI * mv)
+        d.gA.style.display = mv < .5 ? '' : 'none'; d.gB.style.display = mv < .5 ? 'none' : ''
+        d.ghost.style.opacity = mv > 0 ? 1 : 0; d.arc.style.opacity = k(P3 + 3, .5); d.lab.style.opacity = k(P3 + .2, .5)
+      }
+      d.g.setAttribute('transform', 'translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ')')
+      d.g.style.opacity = k(P2 + .6 + j * .12, .3)
+    })
+    var landed = mv >= 1
+    B.lanes.forEach(function (L) {
+      var n = L.rows.length
+      B.movers.forEach(function (r) { var d = B.dots.filter(function (x) { return x.r === r })[0]; if (landed) { if (d.from === L) n--; if (d.to === L) n++ } })
+      var s = String(n); if (L.cnt.textContent !== s) L.cnt.textContent = s
+    })
+    var hd = t < P3 ? 'Claude Code, confirmations on' : 'Claude Code, confirmations <i>off</i>'
+    if (S.$('cch').innerHTML !== hd) S.$('cch').innerHTML = hd
+    S.$('cch').style.opacity = k(P2, .5)
+    S.$('tbl').style.opacity = k(P4, .5); S.$('ron').style.opacity = k(P4 + .5, .5); S.$('roff').style.opacity = k(P4 + 1.5, .5)
+    S.$('vd').style.opacity = k(P4 + 3, .6)
+    var M = A.model, q = ''
+    if (t < P1) q = '<b>The barrier:</b> ' + esc(M.barrier.definition.toLowerCase()) + '.'
+    else if (t < P2) q = '<b>The test,</b> in abp.sgit.ai\'s reading: "' + esc(M.enforcer_test.quote) + '"'
+    else if (t < P3) q = '<b>' + esc(B.on.name) + ':</b> ' + B.on.rows.length + ' rows, ' + (B.on.rows.filter(function (r) { return r.barrier_kind === 'boundary' }).length || 'none') + ' at a boundary. Derived: ' + B.on.rows_measured.measured + ' of ' + B.on.rows_measured.total + ' rows measured.'
+    else if (t < P4) q = '<b>' + esc(B.off.name) + ':</b> ' + B.movers.length + ' row moves. Derived, like the first.'
+    else q = '<b>Published drafts</b> from one author\'s network, derived: ' + B.on.rows_measured.measured + ' of ' + B.on.rows_measured.total + ' rows measured. No score.'
+    if (S.$('q').innerHTML !== q) S.$('q').innerHTML = q
+  }
+})()
+</script>
+</body>
+</html>

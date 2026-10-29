@@ -4,7 +4,7 @@
  "timezone": "Europe/London",
  "hours": "every hour, round the clock, from 29 October 2026 at the editor's word, to see how it works overnight; the editor may narrow it to 08:02 to 21:47",
  "slot_minutes": 15,
- "step_limit_minutes": 12,
+ "step_limit_minutes": 45,
  "why_this_order": "The conductor routes requests first, so each member finds its mail at its own slot. deck decides what the talk needs, ruv.sgit makes it, dev releases the hour's work last. A request written in one hour is answered by the next slot of its recipient, so within the hour. researcher at :09 (its own request, accepted 29 October): after the conductor routes the mail, so a checked number reaches deck at :17 in the same hour. designer at :39 (the editor, 29 October): after the makers and before dev, so a design note can be built in the same hour.",
  "asking_for_work": {
   "channel": "tui-mail-public: a .eml with X-Kind: request in mailroom/<recipient>/ (From, To, Date, Subject, X-Kind, References; X-Due optional)",

@@ -480,6 +480,18 @@ class Site_Build:
              for r in recs)
         self.page('admin/wakes.html', 'Wakes', 'Every wake of every member, with the five steps: plan, pre-review, work, post-review and post-check.', body, body_md=md or 'No wakes yet.')
 
+    def build_pieces(self):                                          # the studio's pieces, for the player's build mode: talk/pieces.json
+        lab, out = SRC / 'static' / 'studio' / 'lab', []
+        for p in sorted(lab.rglob('index.html')) if lab.exists() else []:
+            text = p.read_text()
+            if '<header class="top"' in text or 'storyboard' in p.parts:
+                continue                                            # documents and storyboards are not pieces to present
+            t, e = re.search(r'<title>(.*?)</title>', text, re.S), re.search(r'id="cv"[^>]*data-end="([0-9.]+)"', text)
+            rel = p.relative_to(lab).parent
+            out.append({'id': str(rel), 'title': html.unescape(t.group(1).strip()) if t else str(rel), 'src': f'../studio/lab/{rel}/index.html',
+                        'end': float(e.group(1)) if e else None, 'engine': 'engine/slide.js' in text})
+        self.write('talk/pieces.json', json.dumps({'about': "The studio's lab pieces, listed when the site is built, for the player's build mode.", 'pieces': out}, indent=1) + '\n')
+
     def build_lab_documents(self):                                  # the studio's documents get the top bar, the footer and a way back (dev 009)
         briefs = {p.stem.split('-')[0]: p for p in (SRC / 'pages' / 'studio' / 'briefs').glob('*.html')} if (SRC / 'pages' / 'studio' / 'briefs').exists() else {}
         for path in sorted((SRC / 'static').rglob('*.html')):
@@ -1092,6 +1104,7 @@ class Site_Build:
         self.copy_static()
         self.build_pages()
         self.build_lab_documents()
+        self.build_pieces()
         self.build_articles()
         self.build_script()
         self.build_brief()

@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 21,
-  "state": "the editor's wake of 14:58 closed: the player, ported from ruv.sgit.ai, with the countdown against his time, two stops per step, sections, and the studio's pieces on its clock",
+  "round": 22,
+  "state": "scheduled wake of :47 (fired 15:05) closed: the player's build mode, the editor's running order presented at once",
   "done": [
+    {
+      "what": "The player's build mode: every slide and studio piece in one list, drag or ↑ ↓, show or hide, a length and a comment each, presented at once; comments and the order sent through the editor's lane",
+      "evidence": "src/static/talk/player.html, assets/pane.js (TuiLane), admin/build/build.py (talk/pieces.json); team/dev/debriefs/2026-10-29__the-build-mode.md"
+    },
     {
       "what": "The player, ported from ruv.sgit.ai: the countdown against the editor's time, two stops per step, sections, the studio's pieces on the player's clock; iPad landscape and upright",
       "evidence": "src/static/talk/player.html, talk/engine/slide.js; team/dev/briefs/2026-10-29__the-player.md; team/dev/debriefs/2026-10-29__the-player.md"
@@ -67,10 +71,6 @@
     }
   ],
   "next": [
-    {
-      "what": "the player's build mode: his running order, show or hide, comments through his lane",
-      "why": "the editor, 14:10 and 14:50"
-    },
     {
       "what": "the viewer, talk/view.html?src=",
       "why": "deck's request (dev 019)"
