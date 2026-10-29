@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 12,
-  "state": "wake 10:09: deck's request (a plain description per capability) answered: all seventeen ids in the source's own words",
+  "round": 13,
+  "state": "wake 11:09: no request; Gartner's own release captured (claim to A6); SC Media and ThousandEyes still refuse, the archive rate-limits; D08 carries ruv.sgit's six zips",
   "done": [
     {
       "what": "Session key made and published",
@@ -104,12 +104,20 @@
     {
       "what": "A plain description for each of the 17 capability ids, from the primitives' own labels, with each example's reach wording",
       "evidence": "evidence/studio/studio-e02-e09-capabilities.json; mail deck 013"
+    },
+    {
+      "what": "Gartner's 25 June 2025 release captured from a Gartner host; the 40 per cent claim graded A6",
+      "evidence": "evidence/claims/claims.json gartner-40pct-agentic-cancelled-2027; mail deck 014"
     }
   ],
   "next": [
     {
       "what": "Keep editor-decisions.json current; answer deck's next request",
       "why": "the night's pacing: one request in flight"
+    },
+    {
+      "what": "Re-capture SC Media and ThousandEyes when the Internet Archive answers again",
+      "why": "both publishers refuse the fetcher (403); not to be got around"
     },
     {
       "what": "Keep editor-decisions.json current from every member's asks",

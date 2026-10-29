@@ -1,6 +1,6 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T10:13Z",
+ "built": "2026-10-29T11:24Z",
  "count": 135,
  "claims": [
   {
@@ -1221,7 +1221,7 @@
     "slide:spreadsheets"
    ],
    "kind": "guess",
-   "grade": "A3",
+   "grade": "A6",
    "holds": "holds",
    "evidence": [
     {
@@ -1233,11 +1233,18 @@
      "source_id": "martech-gartner-agentic-40",
      "quote": "More than 40% of agentic AI projects will be canceled by the end of 2027.",
      "supports": "for"
+    },
+    {
+     "source_id": "gartner-2025-06-25-mirror",
+     "quote": "Over 40% of agentic AI projects will be canceled by the end of 2027, due to escalating costs, unclear business value or inadequate risk controls, according to Gartner, Inc.",
+     "supports": "for",
+     "added": "researcher wake 2026-10-29T11:27Z: Gartner's own release, captured from a Gartner host"
     }
    ],
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
-   "note": "A prediction, correctly framed as one. Gartner's press release (Sydney, 25 June 2025) blocks automated fetches (403), so its wording is checked only through SD Times and search snippets; all coverage traces to that one release. The cited MarTech page is sponsored content by Optimove dated 29 April 2026 (read via WebFetch, curl blocked), a weak citation for a Gartner claim: cite the Gartner release directly.",
-   "register": "act2"
+   "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
+   "register": "act2",
+   "adjudicated": "researcher, 2026-10-29T11:24Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1713,7 +1720,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T10:13Z"
+   "adjudicated": "researcher, 2026-10-29T11:24Z"
   },
   {
    "id": "autonomy-earned-ladder",

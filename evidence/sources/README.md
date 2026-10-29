@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T10:13Z. 387 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T11:24Z. 388 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Built 2026-10-29T10:13Z. 387 sources; `manifest.json` has every file's SHA-256. 
 | [fig-idira-2026-landscape](https://www.paloaltonetworks.com/idira/idira-identity-security-landscape) | Palo Alto Networks (Idira, formerly CyberArk) | vendor-survey | 2026-10-29T01:52:00Z | 200 | full (captured by a sibling research agent; hashes re-computed here) | 4 |
 | [fig-idira-2026-pdf](https://origin-www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/reports/2026-identity-security-landscape-report.pdf) |  | vendor-survey | 2026-10-29T01:52:01Z | 200 | full | 4 |
 | [fig-ponemon-2026-blog](https://www.ponemon.org/news-updates/blog/security/lessons-learned-from-the-2026-global-cost-of-insider-risks.html) |  | vendor-survey | 2026-10-29T01:52:01Z | 200 | full | 4 |
+| [gartner-2025-06-25-mirror](https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) | Gartner (its own newsroom, on a Gartner host; gartner.com itself refused the fetcher) | primary | 2026-10-29T11:27:00Z | 200 | full | 3 |
 | [gartner-agentic-40pct-primary](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) | Gartner | primary | None | 403 | failed: 403 to curl and WebFetch; web.archive.org connection reset; secondary gartner-agentic-40pct-wmedia captured instead | 0 |
 | [gartner-agentic-40pct-wmedia](https://w.media/over-40-percent-of-agentic-ai-projects-could-face-the-axe-by-end-of-2027-gartner/) | W.Media (reporting Gartner) | news | 2026-10-29T01:55:52Z | 200 | full | 5 |
 | [gartner-pr-agentic-40-2025-06-25](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) | Gartner | primary | 2026-10-29T01:50:29Z | 403 | failed: 403 bot challenge to curl and WebFetch; archive unreachable; wording known only from search snippets and SD Times | 3 |

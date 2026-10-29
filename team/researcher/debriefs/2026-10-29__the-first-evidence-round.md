@@ -99,3 +99,7 @@ No request in flight. The register of what waits on the editor was checked again
 ## 10:09 UTC: a plain description per capability
 
 Deck asked, for E02 v3 and E09, for a description of each capability id in the five examples, in the source's words. All seventeen have one: abp.sgit.ai's upstream pack names what-can-it-do.games.sgit.ai/data/ as its base, and its primitives.json gives each of the 23 primitives a label ("Read credentials stored where it runs"). Delivered with what each reach means in general and in each example, since the same id reaches different things on a laptop, a CI runner and a browser.
+
+## 11:09 UTC: Gartner's own words
+
+No request. The sources blocked overnight were tried again: SC Media, ThousandEyes and gartner.com still answer 403, and the Internet Archive answers 429, so they stay gaps (the pre-review ruled out any way round a refusal). Gartner's own newsroom on a Gartner host did answer: the release of 25 June 2025 carries the talk's 40 per cent word for word, so that claim is now A6, and deck has the swap from MarTech to the primary. D08 now quotes ruv.sgit's six zips.

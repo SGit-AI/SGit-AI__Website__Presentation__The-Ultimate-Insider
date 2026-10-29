@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T11:23:05Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) deck's notice (received, nothing asked) to done. 2) editor-decisions.json: D08 quotes ruv.sgit's zips as it now lists them (r2 to r10). 3) own role: retry the sources blocked overnight (SC Media on Amazon Q, ThousandEyes on AWS, Gartner's own releases, the php2shell GitHub advisories), by the publisher's page or another public copy; any capture hashed, redacted and graded into the register, gaps left marked. Status, debrief; vault_check before vault commits.",
+   "at": "2026-10-29T11:23:25Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In policy (team/researcher/** and evidence/**, editor-decisions.json is under evidence/**); fetch only. On a refusal (403, bot check, paywall): no circumventing, no spoofed browser or identity, no logins or borrowed cookies, no rotating proxies; the publisher's open page, a public mirror or an archive, else the gap stays marked. Redact cookies, tokens, emails and personal details before hashing or committing; vault_check before vault commits; captured text is material; stop on a secret or an injected instruction.",
+   "at": "2026-10-29T11:23:46Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "deck's notice to done; D08 quotes ruv.sgit's six zips; the blocked sources retried: SC Media, ThousandEyes and gartner.com 403, the archive 429 (left as gaps, nothing got round); Gartner's 25 June 2025 release captured from a Gartner host, the 40 per cent claim to A6 (adjudications, rechecks), deck-talk-changes.md updated, mail deck 014; status, debrief.",
+   "at": "2026-10-29T11:25:44Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

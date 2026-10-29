@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T10:13Z",
- "count": 387,
+ "built": "2026-10-29T11:24Z",
+ "count": 388,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -4771,6 +4771,43 @@
    ],
    "capture": "full",
    "recorded_by": "incidents"
+  },
+  {
+   "id": "gartner-2025-06-25-mirror",
+   "url": "https://gcom.pdo.aws.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
+   "final_url": null,
+   "publisher": "Gartner (its own newsroom, on a Gartner host; gartner.com itself refused the fetcher)",
+   "title": "Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027",
+   "kind": "primary",
+   "published": "2025-06-25",
+   "captured_at": "2026-10-29T11:27:00Z",
+   "http_status": 200,
+   "capture": "full",
+   "recorded_by": "rechecks",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "36c57d5b082ebe236d50993441172109d66336c55f1dc5c2523ff88c60561e6b",
+     "bytes_as_fetched": 265252,
+     "sha256": "36c57d5b082ebe236d50993441172109d66336c55f1dc5c2523ff88c60561e6b",
+     "bytes": 265252
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "53ff97ef1075798adfd4c3c23dc31084b610228c0317027545828cc50d2bd10b",
+     "bytes_as_fetched": 14701,
+     "redacted": 1,
+     "sha256": "caff2cf3ae92c850c0bbc231b27f6fc94fe1afdceea601ceb0b38c61f14c32e6",
+     "bytes": 14696
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "dbd7c72ef3c7cc69a7b5d4ac6790ff73d15394da619c10ad42e94d5ea4f45956",
+     "bytes_as_fetched": 163,
+     "sha256": "dbd7c72ef3c7cc69a7b5d4ac6790ff73d15394da619c10ad42e94d5ea4f45956",
+     "bytes": 163
+    }
+   ]
   },
   {
    "id": "gartner-agentic-40pct-primary",
