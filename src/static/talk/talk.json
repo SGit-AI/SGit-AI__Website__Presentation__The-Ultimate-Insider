@@ -7,15 +7,27 @@
   "source": "Every number on screen is from the article The ultimate insider (newsroom.sgit.ai, 30 September 2026), each linked to its source on the script page",
   "beats": [
     {
+      "id": "m03",
+      "act": "Prelude: how this was made",
+      "dur": 60,
+      "title": "Meet the team",
+      "part": 1,
+      "slide": {
+        "src": "../motion/lab/meet-the-team/v1/index.html"
+      },
+      "say": "Before I start: how this talk was made. Since a quarter past midnight, a team of agents has built this site and this deck: each with a role, a mandate, its own key, an hourly wake, and a review before and after every wake. By five this afternoon, that was 510 commits and 164 releases, 182 of the commits overnight, and not one hold. Hold that picture. I will come back to it.",
+      "cue": "motion@'s M03 v1, made for the prelude. The conductor's article follows as the safe floor; skip it if M03 says enough."
+    },
+    {
       "id": "prelude",
       "act": "Prelude: how this was made",
-      "dur": 90,
-      "title": "How this was made",
+      "dur": 45,
+      "title": "How this was made: the record",
       "part": 1,
       "slide": {
         "src": "../articles/how-this-talk-was-built.html"
       },
-      "say": "Before I start: how this talk was made. Since a quarter past midnight, a team of agents has built this site and this deck: each with a role, a mandate, its own key, an hourly wake, and a review before and after every wake. By five this afternoon, that was 510 commits and 164 releases, 182 of the commits overnight, and not one hold. Hold that picture. I will come back to it.",
+      "say": "This is the team's own record of the night, replayed from its public files.",
       "sources": [
         [
           "Team in numbers, from this repository's public records, 17:02 UTC",
@@ -39,7 +51,7 @@
     {
       "id": "three",
       "act": "Opening",
-      "dur": 120,
+      "dur": 105,
       "title": "The perfect storm we are brewing",
       "slide": {
         "src": "slides/three/index.html"
@@ -147,7 +159,7 @@
     {
       "id": "no-worm-era",
       "act": "Part one: the insider with no limits",
-      "dur": 180,
+      "dur": 165,
       "title": "No worm era since, and attackers are businesses",
       "slide": {
         "src": "slides/outages/index.html"
@@ -207,7 +219,7 @@
     {
       "id": "incidents",
       "act": "Part one: the insider with no limits",
-      "dur": 210,
+      "dur": 180,
       "title": "Five public incidents, three of them not attacks",
       "slide": {
         "src": "slides/incidents/index.html"
@@ -241,6 +253,18 @@
         ]
       ],
       "part": 1
+    },
+    {
+      "id": "m02",
+      "act": "Part one: the insider with no limits",
+      "dur": 45,
+      "title": "It could have been much worse",
+      "part": 1,
+      "slide": {
+        "src": "../motion/lab/could-have-been-worse/v1/index.html"
+      },
+      "say": "So here is my question for you. In every incident you have seen, could the attacker have done much more? What was possible, against what happened.",
+      "cue": "motion@'s M02 v1; it carries the question to the room."
     },
     {
       "id": "inside",
@@ -367,6 +391,18 @@
       "part": 2
     },
     {
+      "id": "s-b01-collision",
+      "act": "Part one: the insider with no limits",
+      "dur": 40,
+      "title": "The overlap fills",
+      "part": 2,
+      "slide": {
+        "src": "../studio/lab/b01/v2/collision/index.html"
+      },
+      "say": "Put the three together: this is where they overlap.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place."
+    },
+    {
       "id": "team",
       "act": "From part one to part two",
       "dur": 120,
@@ -482,6 +518,30 @@
       "part": 2
     },
     {
+      "id": "s-port-journey",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 40,
+      "title": "One action's journey",
+      "part": 2,
+      "slide": {
+        "src": "../studio-ports/lab/journey/index.html"
+      },
+      "say": "Follow one action from the agent, through the policy, to the receipt.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place."
+    },
+    {
+      "id": "s-port-abp-review",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 45,
+      "title": "This team's own behaviour policies",
+      "part": 2,
+      "slide": {
+        "src": "../studio-ports/lab/abp-review/index.html"
+      },
+      "say": "And these are this team's own behaviour policies, reviewed.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place."
+    },
+    {
       "id": "s-e10",
       "dur": 45,
       "title": "E10: only a boundary is a control",
@@ -536,6 +596,18 @@
       "part": 2
     },
     {
+      "id": "s-port-pki",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 45,
+      "title": "The PKI: how the register of people works",
+      "part": 2,
+      "slide": {
+        "src": "../studio-ports/lab/pki/index.html"
+      },
+      "say": "Identity for agents, built: a key per session, published, and a register anyone can read.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place. No key, key QR or read key on screen."
+    },
+    {
       "id": "demos",
       "act": "Part three: brakes, and the opportunity",
       "dur": 30,
@@ -546,6 +618,42 @@
       "say": "Let me show you, live. Everything you are about to see is open source, and running in this slide.",
       "cue": "Demo list to be confirmed by Dinis before the talk. Have each one open in its own tab, and a recorded fallback for each.",
       "part": 3
+    },
+    {
+      "id": "s-sharness-one-idea",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 40,
+      "title": "SHarness: the one idea",
+      "part": 3,
+      "slide": {
+        "src": "../studio/lab/sharness/one-idea/v1/index.html"
+      },
+      "say": "The one idea behind SHarness.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place."
+    },
+    {
+      "id": "s-sharness-os",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 40,
+      "title": "SHarness: the OS of one process",
+      "part": 3,
+      "slide": {
+        "src": "../studio/lab/sharness/os-of-one-process/v1/index.html"
+      },
+      "say": "An operating system for one process: it gets nothing it does not need.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place."
+    },
+    {
+      "id": "s-sharness-components",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 50,
+      "title": "SHarness: what exists and what is coming",
+      "part": 3,
+      "slide": {
+        "src": "../studio/lab/sharness/components/v1/index.html"
+      },
+      "say": "What exists today, and what is still coming.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place."
     },
     {
       "id": "s-sharness-watch",
@@ -582,6 +690,18 @@
       },
       "say": "If the network has let us down, this is the same boot, recorded. If it has not, this is the recap.",
       "cue": "The offline fallback for the live Linux slide (the editor's answer, 17:15): show it if the live slide fails, else as the recap."
+    },
+    {
+      "id": "s-sharness-last-metre",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 40,
+      "title": "SHarness: the last metre",
+      "part": 3,
+      "slide": {
+        "src": "../studio/lab/sharness/last-metre/v1/index.html"
+      },
+      "say": "The last metre: where the policy meets the call.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place."
     },
     {
       "id": "live-sharness-playground",
@@ -701,6 +821,18 @@
       },
       "say": "And the next generation of security companies will look like this team: agents with mandates, evidence vaults, a harness, behaviour policies. Not replacing people: augmenting them. Imagine this team with a human expert in each role.",
       "part": 3
+    },
+    {
+      "id": "s-b01-brakes",
+      "act": "Close",
+      "dur": 35,
+      "title": "The overlap, governed",
+      "part": 3,
+      "slide": {
+        "src": "../studio/lab/b01/v2/brakes/index.html"
+      },
+      "say": "The overlap does not disappear. It gets brakes.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it with one tap if it does not earn its place."
     },
     {
       "id": "brakes",
