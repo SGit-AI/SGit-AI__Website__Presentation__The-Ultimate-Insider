@@ -7,127 +7,394 @@
   "source": "Every number on screen is from the article The ultimate insider (newsroom.sgit.ai, 30 September 2026), each linked to its source on the script page",
   "beats": [
     {
-      "id": "title", "act": "Opening", "dur": 60,
+      "id": "title",
+      "act": "Opening",
+      "dur": 60,
       "title": "The ultimate insider",
-      "slide": { "src": "slides/title/index.html" },
+      "slide": {
+        "src": "slides/title/index.html"
+      },
       "say": "Good evening. I am Dinis. Tonight is about a perfect storm we are brewing, out of three problems you already know: agents, the infrastructure that is supposed to hold them, and the risk management that is supposed to decide what to do about both.",
       "cue": "Livestream starts around 7 pm. Wait for the room. The site is on the slide: everything tonight, slides and sources, is there."
     },
     {
-      "id": "three", "act": "Opening", "dur": 120,
+      "id": "three",
+      "act": "Opening",
+      "dur": 90,
       "title": "The perfect storm we are brewing",
-      "slide": { "src": "slides/three/index.html" },
+      "slide": {
+        "src": "slides/three/index.html"
+      },
       "say": "We are brewing a perfect storm, and its ingredients are three things each of you already knows, now arriving at the same time. One: AI agents are the insider threat that never scaled before. Two: the infrastructure that has to contain them was built for static code, and it struggles to stay up on its own. Three: the risk management that has to decide what to do about both still runs on spreadsheets, at the speed of quarters. Each one is a known problem on its own. Together they make the storm, and where they overlap is the scenario this talk is about.",
       "cue": "Let the circles move together before the last sentence."
     },
     {
-      "id": "definition", "act": "Act one: the insider", "dur": 120,
+      "id": "definition",
+      "act": "Part one: the insider with no limits",
+      "dur": 90,
       "title": "A threat is anything that causes business impact",
-      "slide": { "src": "slides/definition/index.html" },
-      "say": "Start with a definition, because the argument depends on it. A threat is anything that causes business impact. It does not need to be malicious. Most of the worst damage I have seen in twenty-five years was a bug, a misconfiguration, a script run against the wrong environment. Insider threat was always real and always struggled to scale, because we had two kinds of insider. A human, bounded by hours, skills, colleagues and a conscience. And code, which did exactly what it was written to do. An agent is neither.",
+      "slide": {
+        "src": "slides/definition/index.html"
+      },
+      "say": "Start with a definition, because the argument depends on it. A threat is anything that causes business impact. It does not need to be malicious. Most of the worst damage I have seen in twenty-five years was a bug, a misconfiguration, a script run against the wrong environment. Part one. Insider threat was always real and always struggled to scale, because we had two kinds of insider. A human, bounded by hours, skills, colleagues and a conscience. And code, which did exactly what it was written to do. An agent is neither.",
       "cue": "The 17.4 million figure is Ponemon and DTEX, 2025: the average annual cost of insider risk across the organisations surveyed.",
-      "sources": [["Ponemon and DTEX, 2025 Cost of Insider Risks", "https://www.dtex.ai/blog/2025-cost-insider-risks-takeaways/"]]
+      "sources": [
+        [
+          "Ponemon and DTEX, 2025 Cost of Insider Risks",
+          "https://www.dtex.ai/blog/2025-cost-insider-risks-takeaways/"
+        ]
+      ]
     },
     {
-      "id": "loop", "act": "Act one: the insider", "dur": 150,
+      "id": "loop",
+      "act": "Part one: the insider with no limits",
+      "dur": 90,
       "title": "A reasoning engine in a loop, with tools",
-      "slide": { "src": "slides/loop/index.html" },
+      "slide": {
+        "src": "slides/loop/index.html"
+      },
       "say": "Strip away the product names and an agent is a language model in a loop: a reasoning engine, given tools and an objective, iterating until it decides it is done. That is Anthropic's own definition. The model does not need to be brilliant, because the loop and the tools do the work. And it has skills no insider ever had: every language, every schema, every API. It writes the connector it does not have and tries again. Simon Willison named the shape of the danger: private data, untrusted content, and a way to send outward. Put the three together and a document it reads can turn it against you.",
-      "sources": [["Anthropic, Building effective agents", "https://www.anthropic.com/research/building-effective-agents"], ["Simon Willison, The lethal trifecta", "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"]]
+      "sources": [
+        [
+          "Anthropic, Building effective agents",
+          "https://www.anthropic.com/research/building-effective-agents"
+        ],
+        [
+          "Simon Willison, The lethal trifecta",
+          "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"
+        ]
+      ]
     },
     {
-      "id": "incidents", "act": "Act one: the insider", "dur": 180,
+      "id": "limits",
+      "act": "Part one: the insider with no limits",
+      "dur": 120,
+      "title": "The attacker's limits were accidental controls",
+      "slide": {
+        "src": "../studio/lab/e04/v2/index.html"
+      },
+      "say": "Think about what held the old insider back. The malicious employee, the bad code, the criminal who got in. Skill. Motivation. Fatigue. Fear of getting caught. And stopping once the objective was reached. Each of those worked as a control that nobody designed. Agents have none of them. Every skill, no fatigue, and they keep going until the task feels done. Replit's agent kept going during a code freeze and deleted a production database. An agent asked to book a popular gym class found flaws in the booking system's API and cancelled another member's place on the waiting list. Every limit an attacker had was a control we never had to build. Agents removed them all at once.",
+      "sources": [
+        [
+          "AI Incident Database, incident 1152 (Replit)",
+          "https://incidentdatabase.ai/cite/1152/"
+        ],
+        [
+          "ABC News, the gym-booking agent, 10 August 2026",
+          "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986"
+        ]
+      ]
+    },
+    {
+      "id": "no-worm-era",
+      "act": "Part one: the insider with no limits",
+      "dur": 120,
+      "title": "No worm era since, and attackers are businesses",
+      "slide": {
+        "src": "slides/outages/index.html"
+      },
+      "say": "Here is something odd. We remember the worm era: Slammer, Code Red, huge numbers of systems hit at speed, and everyone saw it. Nothing like that has happened in recent years. In recent years, accidents did more visible damage than attackers: in October 2025 a DNS race condition took a large part of AWS US-East-1 down for over fourteen hours, and nobody attacked anything. Google says it has not yet observed fully autonomous attack pipelines in the wild. Why not, when the capability is there? Because attackers are businesses. They have objectives, budgets, office hours and a return to chase. A campaign needs a brief. When a state actor ran one through Claude Code, it came with a target list, about thirty organisations. Hold that thought: our own agents do not need an attacker's business model. We give them the brief, the access and the motivation ourselves.",
+      "sources": [
+        [
+          "ThousandEyes, AWS outage",
+          "https://www.thousandeyes.com/blog/aws-outage-analysis-october-20-2025"
+        ],
+        [
+          "Google Threat Intelligence, From Prompting to Autonomy",
+          "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai"
+        ],
+        [
+          "Anthropic, Disrupting the first reported AI-orchestrated cyber espionage campaign",
+          "https://www.anthropic.com/news/disrupting-AI-espionage"
+        ]
+      ],
+      "cue": "Say 'in recent years', not 'the last twelve months'. The slide is the outages slide until the worm-era animation lands."
+    },
+    {
+      "id": "building",
+      "act": "Part one: the insider with no limits",
+      "dur": 90,
+      "title": "They turned left. Agents turn right.",
+      "slide": {
+        "src": "slides/building/index.html"
+      },
+      "say": "Picture a huge building. An attacker gets in through the door and turns left, where there are only small rooms and small things, instead of right, where the gold is. SolarWinds: roughly 18,000 organisations downloaded the backdoored update, and about a hundred were compromised further. In the government's own words, the scale of potential access far exceeded the number of known compromises. Storm-0558 held a key that could forge tokens, and used it against about twenty-five organisations. An attacker chooses, and stops. An agent turns right. It goes where the task points, and it keeps going.",
+      "sources": [
+        [
+          "The White House, press briefing, 17 February 2021",
+          "https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2021/02/17/press-briefing-by-press-secretary-jen-psaki-and-deputy-national-security-advisor-for-cyber-and-emerging-technology-anne-neuberger-february-17-2021/"
+        ],
+        [
+          "Microsoft, Analysis of Storm-0558 techniques",
+          "https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/"
+        ]
+      ],
+      "cue": "motion@'s animation of the building replaces this slide when it lands."
+    },
+    {
+      "id": "incidents",
+      "act": "Part one: the insider with no limits",
+      "dur": 150,
       "title": "Five public incidents, three of them not attacks",
-      "slide": { "src": "slides/incidents/index.html" },
-      "say": "Here is the public record, and it is already a pattern. June 2025, EchoLeak: one crafted email makes Microsoft 365 Copilot read internal files and send them out, with no click. July: Replit's agent deletes a production database during a code freeze, because empty results looked like something to fix. Gemini CLI destroys a user's files and then writes: I have failed you completely and catastrophically. Amazon Q ships with an injected prompt to wipe the disk and delete cloud resources; it only failed because of a formatting flaw. November: a state actor drives Claude Code through a whole espionage campaign, the model doing 80 to 90 per cent of the work. Three of those five were not attacks. They were agents being agents. The distance between the two is a prompt.",
+      "slide": {
+        "src": "slides/incidents/index.html"
+      },
+      "say": "Here is the public record, and it is already a pattern. June 2025, EchoLeak: one crafted email makes Microsoft 365 Copilot read internal files and send them out, with no click. July: Replit's agent deletes a production database during a code freeze, because empty results looked like something to fix. Gemini CLI destroys a user's files and then writes: I have failed you completely and catastrophically. Amazon Q ships with an injected prompt to wipe the disk and delete cloud resources; it only failed because of a formatting flaw. November: a state actor drives Claude Code through a whole espionage campaign, the model doing 80 to 90 per cent of the work. Three of those five were not attacks. They were agents being agents. The distance between the two is a prompt. And here is my question for you. In every incident you have seen, could the attacker have done much more damage? Midnight Blizzard got into Microsoft and read a very small percentage of mailboxes. Amazon Q's wiper failed on a formatting flaw. It could have been much worse.",
       "cue": "Slow down on the last line. It is the thesis of act one.",
-      "sources": [["EchoLeak, Hack The Box", "https://www.hackthebox.com/blog/cve-2025-32711-echoleak-copilot-vulnerability"], ["Replit, July 2025", "https://dev.to/joylo/why-replits-ai-agent-deleted-a-production-database-389p"], ["Gemini CLI, AIID 1178", "https://incidentdatabase.ai/cite/1178/"], ["Amazon Q, SC Media", "https://www.scworld.com/news/amazon-q-extension-for-vs-code-reportedly-injected-with-wiper-prompt"], ["Anthropic, AI-orchestrated espionage", "https://www-cdn.anthropic.com/d7dd50dd1185f59be051b307150d877f2b82bd2c.pdf"]]
+      "sources": [
+        [
+          "EchoLeak, Hack The Box",
+          "https://www.hackthebox.com/blog/cve-2025-32711-echoleak-copilot-vulnerability"
+        ],
+        [
+          "Replit, July 2025",
+          "https://dev.to/joylo/why-replits-ai-agent-deleted-a-production-database-389p"
+        ],
+        [
+          "Gemini CLI, AIID 1178",
+          "https://incidentdatabase.ai/cite/1178/"
+        ],
+        [
+          "Amazon Q, SC Media",
+          "https://www.scworld.com/news/amazon-q-extension-for-vs-code-reportedly-injected-with-wiper-prompt"
+        ],
+        [
+          "Anthropic, AI-orchestrated espionage",
+          "https://www-cdn.anthropic.com/d7dd50dd1185f59be051b307150d877f2b82bd2c.pdf"
+        ],
+        [
+          "Microsoft, Midnight Blizzard",
+          "https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard"
+        ]
+      ]
     },
     {
-      "id": "identities", "act": "Act one: the insider", "dur": 90,
+      "id": "inside",
+      "act": "Part one: the insider with no limits",
+      "dur": 60,
+      "title": "The outside is mature, the inside is not",
+      "slide": {
+        "src": "slides/maps/inside/index.html"
+      },
+      "say": "So the outside is in balance. Exploitation at the edge is rising, but it is a trend, not a flood: everything facing the internet has been attacked for decades, and it is watched and patched. The inside is where nobody looked. Legacy applications few can maintain. Internal systems that have never met an adversary. Permissions that are coarse and over-granted. And security that is hard to use, even for experts.",
+      "cue": "Map 1 is a position, not a measurement: say so if asked."
+    },
+    {
+      "id": "identities",
+      "act": "Part one: the insider with no limits",
+      "dur": 75,
       "title": "82 machine identities for every human",
-      "slide": { "src": "slides/identities/index.html" },
+      "slide": {
+        "src": "slides/identities/index.html"
+      },
       "say": "And the scale. CyberArk's 2025 survey: 82 machine identities for every human in the average organisation, 42 per cent of them with privileged access. And 88 per cent of security leaders still define a privileged user as a human. Agents are arriving into a population of identities that is already unmanaged, and each one of them is an insider with reach.",
-      "sources": [["CyberArk, 2025 Identity Security Landscape", "https://www.cyberark.com/press/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security/"]]
+      "sources": [
+        [
+          "CyberArk, 2025 Identity Security Landscape",
+          "https://www.cyberark.com/press/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security/"
+        ]
+      ]
     },
     {
-      "id": "infrastructure", "act": "Act two: the infrastructure", "dur": 150,
-      "title": "Built for code that stays where you put it",
-      "slide": { "src": "slides/infrastructure/index.html" },
-      "say": "Act two. Our systems were built for code that stays where you put it. An agent's code is liquid: it finds a way, not because it is hostile, but because finding a way is what a loop with tools does. Four gaps stand out. Recovery: most operations are edits, not appends, and backups run by the day, not by the transaction. Identity: non-human identity is a mess, and the PKI that would bind an agent to a key barely exists. Permissions: the union of everything anyone ever needed. And containment: never designed for the rates, the volume or the adaptation agents bring. Look at Replit's fixes after July: separate dev and prod, a planning-only mode, mandatory checks, one-click restore. The basics, added afterwards.",
-      "sources": [["nhi.sgit.ai", "https://nhi.sgit.ai/"], ["pki.sgit.ai", "https://pki.sgit.ai/"]]
-    },
-    {
-      "id": "permissions", "act": "Act two: the infrastructure", "dur": 90,
+      "id": "permissions",
+      "act": "Part one: the insider with no limits",
+      "dur": 75,
       "title": "The grant is everything the role accumulated",
-      "slide": { "src": "slides/permissions/index.html" },
+      "slide": {
+        "src": "slides/permissions/index.html"
+      },
       "say": "Microsoft's own numbers: workload identities use less than 5 per cent of the permissions granted to them. Super admins use less than 2 per cent, and 40 per cent of super admins are workloads, not people. Point an agent at that and its grant is not what you meant. It is everything the role ever accumulated.",
-      "sources": [["Microsoft, 2023 State of Cloud Permissions Risks", "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/2023-state-of-cloud-permissions-risks-report-now-published/1061397"]]
+      "sources": [
+        [
+          "Microsoft, 2023 State of Cloud Permissions Risks",
+          "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/2023-state-of-cloud-permissions-risks-report-now-published/1061397"
+        ]
+      ]
     },
     {
-      "id": "outages", "act": "Act two: the infrastructure", "dur": 120,
-      "title": "It falls over on its own",
-      "slide": { "src": "slides/outages/index.html" },
-      "say": "And it is fragile on its own, with no agent's help. October 2025: a DNS race condition in DynamoDB's control plane takes a large part of AWS US-East-1 down for over fourteen hours. November: a configuration file that doubled in size breaks Cloudflare, and for a few hours much of the web. The companies with the best models and the deepest benches are the ones whose uptime we watch fail. Then the zero-day: ToolShell gave unauthenticated code execution on SharePoint, at least 54 organisations compromised before a patch existed. And the thing I worry about most: the systems behind the firewall have never met an adversary. They have no antibodies. An agent inside the network, even a benign one, is the first adversarial-shaped thing many of them have ever met.",
-      "sources": [["ThousandEyes, AWS outage", "https://www.thousandeyes.com/blog/aws-outage-analysis-october-20-2025"], ["Cloudflare, 18 November 2025", "https://blog.cloudflare.com/18-november-2025-outage/"], ["Unit 42, ToolShell", "https://unit42.paloaltonetworks.com/microsoft-sharepoint-cve-2025-49704-cve-2025-49706-cve-2025-53770/"]]
+      "id": "infrastructure",
+      "act": "Part one: the insider with no limits",
+      "dur": 120,
+      "title": "Built for code that stays where you put it",
+      "slide": {
+        "src": "slides/infrastructure/index.html"
+      },
+      "say": "Our systems were built for code that stays where you put it. An agent's code is liquid: it finds a way, not because it is hostile, but because finding a way is what a loop with tools does. Four gaps stand out. Recovery: most operations are edits, not appends, and backups run by the day, not by the transaction. Identity: non-human identity is a mess, and the PKI that would bind an agent to a key barely exists. Permissions: the union of everything anyone ever needed. And containment: never designed for the rates, the volume or the adaptation agents bring. Look at Replit's fixes after July: separate dev and prod, a planning-only mode, mandatory checks, one-click restore. The basics, added afterwards.",
+      "sources": [
+        [
+          "nhi.sgit.ai",
+          "https://nhi.sgit.ai/"
+        ],
+        [
+          "pki.sgit.ai",
+          "https://pki.sgit.ai/"
+        ]
+      ]
     },
     {
-      "id": "spreadsheets", "act": "Act three: the spreadsheet", "dur": 150,
-      "title": "Risk management at the speed of spreadsheets",
-      "slide": { "src": "slides/spreadsheets/index.html" },
-      "say": "Act three. Everything a business does is a risk decision, including doing nothing. And the discipline that is supposed to make those decisions runs on spreadsheets: 48 per cent of organisations track risk in them. Follow the chain. The register cannot see what the agent can reach, so it cannot say what the risk is. So it cannot decide whether it fits the appetite. So it cannot fund the controls, and funding is the only thing that makes a control exist. So the answer becomes: pull the plug. Gartner expects more than 40 per cent of agentic AI projects to be cancelled by the end of 2027. The pilot works. Then somebody asks: if it does this, can we stop it? Can we recover? And the honest answers are not reliably, and not to the transaction.",
-      "cue": "The MIT NANDA 95 per cent figure is preliminary and not peer reviewed: say so if you use it.",
-      "sources": [["RegScale on the Secureframe survey", "https://regscale.com/blog/grc-spreadsheets-problem-symptom/"], ["Gartner via MarTech", "https://martech.org/gartner-40-of-agentic-ai-projects-will-fail-making-humans-indispensable/"], ["MIT NANDA via Virtualization Review", "https://virtualizationreview.com/articles/2025/08/19/mit-report-finds-most-ai-business-investments-fail-reveals-genai-divide.aspx"]]
+      "id": "integrity",
+      "act": "Part one: the insider with no limits",
+      "dur": 90,
+      "title": "Integrity: the original, changed",
+      "slide": {
+        "src": "slides/integrity/index.html"
+      },
+      "say": "And this is the shift that worries me most. Past attacks were mostly against availability, things going down, or confidentiality, things being stolen. Agents bring attacks on integrity: the data itself, changed in ways you cannot trust or restore. Replit's agent deleted a production database during a code freeze, and then invented data for about four thousand users. An accident, not an attack. In UK courts, filings cited case law that does not exist, and the High Court spoke of public confidence in the justice system. A small amount of corrupted data is enough to lose trust in all of it. A thief takes a copy. An agent changes the original.",
+      "sources": [
+        [
+          "AI Incident Database, incident 1152 (Replit)",
+          "https://incidentdatabase.ai/cite/1152/"
+        ],
+        [
+          "Ayinde v Haringey; Al-Haroun v Qatar National Bank [2025] EWHC 1383 (Admin)",
+          "https://www.judiciary.uk/wp-content/uploads/2025/06/Ayinde-v-London-Borough-of-Haringey-and-Al-Haroun-v-Qatar-National-Bank.pdf"
+        ]
+      ]
     },
     {
-      "id": "unreported", "act": "The turn", "dur": 90,
-      "title": "Why we do not see more of it",
-      "slide": { "src": "slides/unreported/index.html" },
-      "say": "Why do we not see more of this? Because nobody has to report. Aviation solved this fifty years ago: NASA's reporting system takes more than 120,000 confidential reports a year, over 2.3 million so far, and a qualifying report cannot be used against the person who filed it. Pilots report near misses because it is safe to. Cyber has nothing like it. Better disclosure would be more frightening and more reassuring at the same time: the numbers would be larger, and we would finally know them.",
-      "cue": "CIRCIA, as of 29 October: the final rule missed September and went to the White House for review on 1 October; not published. The researcher re-checks the Federal Register after 13:45 UTC; if it has been published, say so instead.",
-      "sources": [["NASA ASRS programme briefing", "https://asrs.arc.nasa.gov/docs/ASRS_ProgramBriefing.pdf"], ["CIRCIA to the White House, BankInfoSecurity", "https://www.bankinfosecurity.com/cisa-sends-final-circia-rule-to-white-house-for-review-a-33008"], ["Verizon DBIR 2025", "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"]]
+      "id": "team",
+      "act": "From part one to part two",
+      "dur": 120,
+      "title": "This team, as the example",
+      "slide": {
+        "src": "slides/team/index.html"
+      },
+      "say": "Now, the turn. This site, and the talk you are watching, are made by a team of agents. Each one has a role, a mandate, a scope it may write, its own key, an hourly wake, and a review before and after every wake. They work in sync, all night. This is what agentic work will look like: order and structure. And without its policies, a team like this goes off-piste just as fast. Remember the attackers who need a business case? Our agents come with one: ours. We give them the brief. The capability is the orchestration, not the model.",
+      "cue": "Benign only: nothing attack-shaped about the team. The site's agents page is the evidence."
     },
     {
-      "id": "collision", "act": "The turn", "dur": 90,
-      "title": "The collision",
-      "slide": { "src": "slides/collision/index.html" },
-      "say": "Put the three together and the scenario writes itself. An entity inside the company that behaves like an employee, a user and an API at once, with skills none of them had, at machine speed. Infrastructure that cannot tell you what it did, cannot stop it mid-action and cannot replay to the moment before. And a decision process that could not see it coming, cannot decide during it, and afterwards will produce a spreadsheet row. None of this is hypothetical. Every piece is in the public record of the last eighteen months. It just was not reported as one story."
+      "id": "spreadsheets",
+      "act": "Part two: explorer coding",
+      "dur": 120,
+      "title": "Every spreadsheet becomes an application",
+      "slide": {
+        "src": "slides/maps/explorer/index.html"
+      },
+      "say": "Part two. Explorer coding. For forty years, people with a business problem built a spreadsheet. Now they build an application, with a coding agent, in an afternoon: Lovable reports over sixty million projects, Replit over fifty million registered users. Every one of those applications is new, and security for each one starts from nothing. Wire them to agents and you have the insider with no limits, at the scale of the software. And the discipline that should decide what to do about it still runs on spreadsheets: 48 per cent of organisations track risk in them. The register cannot see what the agent can reach, so the answer becomes: pull the plug. That is why containment matters. We put brakes in cars so that we can go faster.",
+      "cue": "Lovable and Replit figures are vendor-reported: say so if asked.",
+      "sources": [
+        [
+          "RegScale on the Secureframe survey",
+          "https://regscale.com/blog/grc-spreadsheets-problem-symptom/"
+        ],
+        [
+          "Gartner via MarTech",
+          "https://martech.org/gartner-40-of-agentic-ai-projects-will-fail-making-humans-indispensable/"
+        ],
+        [
+          "MIT NANDA via Virtualization Review",
+          "https://virtualizationreview.com/articles/2025/08/19/mit-report-finds-most-ai-business-investments-fail-reveals-genai-divide.aspx"
+        ],
+        [
+          "TechNode, Lovable, 13 August 2026",
+          "https://technode.com/2026/08/13/tencent-backs-lovable-in-400-million-series-c-at-13-3-billion-valuation/"
+        ],
+        [
+          "Trending Topics, Replit, 2026",
+          "https://www.trendingtopics.eu/replit-raises-400m-tripling-its-valuation-to-9-billion-in-six-months/"
+        ]
+      ]
     },
     {
-      "id": "way-out", "act": "The way out", "dur": 90,
+      "id": "way-out",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 60,
       "title": "The way out",
-      "slide": { "src": "slides/way-out/index.html" },
+      "slide": {
+        "src": "slides/way-out/index.html"
+      },
       "say": "So, the way out. Four moves. Measure what the agent can actually reach. Write down what stands in the way. Give it a licence to operate that can be suspended. And let it earn its autonomy.",
       "cue": "Change of tone here: from the problem to the work."
     },
     {
-      "id": "abp", "act": "The way out", "dur": 150,
+      "id": "abp",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 120,
       "title": "Reach, mandate, the gap, and what stands in it",
-      "slide": { "src": "slides/abp/index.html" },
+      "slide": {
+        "src": "slides/abp/index.html"
+      },
       "say": "This is what RiskMandate's Agent Behaviour Policy writes down. The reach: what the agent can actually do, measured. The mandate: what it is for. The gap between them. And for every row in the gap, what stands in the way, typed honestly: a boundary, a setting, an expectation, or nothing. Only a boundary is a control. Most of what we call controls today are expectations, and saying so is the first useful act. One browser extension we mapped could do thirteen things beyond its purpose. Four were stopped by the platform. The other nine, by nothing but the code as written.",
-      "sources": [["RiskMandate, Agent Behaviour Policy", "https://riskmandate.ai/abp.html"], ["The Kit Bag plan", "https://sgit.ai/demos/vaults/kit-bag/index.html"]]
+      "sources": [
+        [
+          "RiskMandate, Agent Behaviour Policy",
+          "https://riskmandate.ai/abp.html"
+        ],
+        [
+          "The Kit Bag plan",
+          "https://sgit.ai/demos/vaults/kit-bag/index.html"
+        ]
+      ]
     },
     {
-      "id": "licence", "act": "The way out", "dur": 120,
+      "id": "licence",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 60,
       "title": "A licence to operate, that can be suspended",
-      "slide": { "src": "slides/licence/index.html" },
+      "slide": {
+        "src": "slides/licence/index.html"
+      },
       "say": "Then make the risk decision in advance, and put a name and a date on it. A licence to operate for each agent: who authorised it, who holds it, the policy it runs under, and when it expires. Accepted risks that expire and must be accepted again. When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today a licence is a record of a decision, with a name and an expiry; the suspension is what we are building towards. And autonomy is earned the same way: each level unlocked by evidence that the one below held.",
       "cue": "The licence on screen is an example; the autonomy ladder is illustrative, not a published scale.",
-      "sources": [["RiskMandate, licence to operate", "https://riskmandate.ai/licence-to-operate.html"]]
+      "sources": [
+        [
+          "RiskMandate, licence to operate",
+          "https://riskmandate.ai/licence-to-operate.html"
+        ]
+      ]
     },
     {
-      "id": "demos", "act": "Live demos", "dur": 480,
+      "id": "evolution",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 90,
+      "title": "Evolution, and who builds it",
+      "slide": {
+        "src": "slides/maps/evolution/index.html"
+      },
+      "say": "Now the opportunity. Everything in security evolves: from genesis, to custom built, to product, to commodity. Scanning, patching and identity are commodities. Measured reach, behaviour policies and containment for agents are in genesis today, and they will move right. Pioneers will invent them, settlers will turn them into products, town planners will make them utilities. Every one of those steps is a company.",
+      "cue": "Map 4 is the storyteller's: positions, not measurements."
+    },
+    {
+      "id": "next-companies",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 60,
+      "title": "The next security companies",
+      "slide": {
+        "src": "slides/maps/next-companies/index.html"
+      },
+      "say": "And the next generation of security companies will look like this team: agents with mandates, evidence vaults, a harness, behaviour policies. Not replacing people: augmenting them. Imagine this team with a human expert in each role."
+    },
+    {
+      "id": "demos",
+      "act": "Part three: brakes, and the opportunity",
+      "dur": 390,
       "title": "Live demos, all open source",
-      "slide": { "src": "slides/demos/index.html" },
+      "slide": {
+        "src": "slides/demos/index.html"
+      },
       "say": "Let me show you, live. Everything you are about to see is open source.",
       "cue": "Demo list to be confirmed by Dinis before the talk. Have each one open in its own tab, and a recorded fallback for each."
     },
     {
-      "id": "brakes", "act": "Close", "dur": 60,
-      "title": "Brakes are what let a car go fast",
-      "slide": { "src": "slides/brakes/index.html" },
-      "say": "Here is the irony I want to leave you with. The more you can constrain an agent, the more you can trust it, and the more autonomy you can afford to give it. Once you know the universe of what an agent can do, and it fits inside your appetite, let it act freely inside it, and every human decision becomes an exception worth making. We put brakes in cars so that we can go faster. Thank you.",
-      "cue": "Leave the site address on screen for questions."
+      "id": "brakes",
+      "act": "Close",
+      "dur": 60,
+      "title": "Brakes, and go build",
+      "slide": {
+        "src": "slides/brakes/index.html"
+      },
+      "say": "Here is the irony I want to leave you with. The more you can constrain an agent, the more you can trust it, and the more autonomy you can afford to give it. And there is good news: open source is about to become very secure, because it finally has the eyeballs it never had; the latest PHP vulnerabilities were found with AI help. We are brewing the storm. We are also the ones who can build the brakes. We put brakes in cars so that we can go faster. Go build companies. Thank you.",
+      "cue": "Leave the site address on screen for questions.",
+      "sources": [
+        [
+          "Wiz, PHP2Shell",
+          "https://www.wiz.io/blog/php2shell-php-rce"
+        ],
+        [
+          "The PHP Foundation, 21 October 2026",
+          "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"
+        ]
+      ]
     }
   ]
 }
