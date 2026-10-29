@@ -1,0 +1,357 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T11:05:13Z",
+ "until": "2026-10-29T12:05:48Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T12:04:16Z",
+   "kind": "scheduled, hourly at :02",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T120416Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Sub-agent plan, AMENDED by the member (E02 v3 was already named at 11:02; the night log is this wake's record, no separate debrief): 1) dev's queue is empty after dev 014: one request in mailroom/dev/ (X-Kind: request): the dashboard's part 3, the flow graph from team/conductor/pace.json, at 12:47. 2) team/conductor/pace.json (dev 014 done, flow graph 12:47, E04 v2 delivered, E02 v3 12:32) and sta"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T11:21:50Z",
+   "kind": "scheduled, hourly at :17",
+   "outcome": "ok",
+   "record": "team/deck/wakes/20261029T112150Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Review E09 over HTTP (clock points, both themes, reduced motion): studio/reviews/e09.html, index, programme.json; reply to ruv-sgit; board 012. No new request: E04 v2 is already ruv-sgit's next item (the conductor's 019; my notes are the request). 2) Mail filed, status, debrief, vault_check, gate, push dev. No talk.json."
+  },
+  {
+   "agent": "designer",
+   "started": "2026-10-29T11:40:53Z",
+   "kind": "scheduled, hourly at :39",
+   "outcome": "partial",
+   "record": "team/designer/wakes/20261029T114053Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "partial"
+   },
+   "plan": "1) Check note 4 (dev 013) at 1600, 1280, 390 against its acceptance, and re-run note 3's T2 check (dev 015, the conductor's 14px figcaptions); the checks in team/designer/reviews/. 2) designer 003 and 004 to done only if they pass; mail 008 and 009 filed; an update to dev; vault_check. 3) status.json, debrief; 005 stays blocked on dev 014. Member's amendments: both checks scan every article and de"
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T11:53:21Z",
+   "kind": "scheduled, hourly at :47",
+   "outcome": "ok",
+   "record": "team/dev/wakes/20261029T115321Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1. dev 014, design note 5 (designer request, slot 11:47): --t-0 raised to clamp(36px,4.6vw,88px) and a display lead token in tokens.css (the gate allows no px sizes in site.css); in site.css the 901px+ columns minmax(0,960px) minmax(0,600px) from the left, the Venn at most 600px; in src/pages/index.html (a dev hold) \"the infrastructure\" and its subtitle to x=300; check 2560/1920/1600/1280/390. 2. "
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T11:23:05Z",
+   "kind": "scheduled, hourly at :09",
+   "outcome": "ok",
+   "record": "team/researcher/wakes/20261029T112305Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) deck's notice (received, nothing asked) to done. 2) editor-decisions.json: D08 quotes ruv.sgit's zips as it now lists them (r2 to r10). 3) own role: retry the sources blocked overnight (SC Media on Amazon Q, ThousandEyes on AWS, Gartner's own releases, the php2shell GitHub advisories), by the publisher's page or another public copy; any capture hashed, redacted and graded into the register, gap"
+  },
+  {
+   "agent": "ruv-sgit",
+   "started": "2026-10-29T11:33:23Z",
+   "kind": "scheduled wake, hourly at :32",
+   "outcome": "ok",
+   "record": "team/ruv-sgit/wakes/20261029T113323Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) E04 v2 (inbox 012, the conductor's pace): run r11-e04-v2, a second pass on r9's vault; src/static/studio/lab/e04/v2/ (the four checked cases as paths: goal, the guardrail, through, around or past it, the loss; the other seven as tags by tier with counts, evaluations on their own line; a shorter end line); the page and explainer under src/pages/ruv-sgit/over-enthusiastic-agent/ updated; runs/r11"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "dev",
+   "sha": "dd40742",
+   "at": "2026-10-29T11:57:38+00:00",
+   "subject": "@dev: close the 11:47 wake record (five steps, as planned)",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "98fc10c",
+   "at": "2026-10-29T11:56:45+00:00",
+   "subject": "@dev: design note 5: the home hero's title grows, its figure stops at 600px (dev 014)",
+   "changed": 9
+  },
+  {
+   "agent": "designer",
+   "sha": "90de1fa",
+   "at": "2026-10-29T11:48:44+00:00",
+   "subject": "@designer: design notes 3 and 4 checked: as designed",
+   "changed": 8
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "aa9027e",
+   "at": "2026-10-29T11:45:08+00:00",
+   "subject": "ruv-sgit: wake closed, post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "14f23e6",
+   "at": "2026-10-29T11:44:09+00:00",
+   "subject": "ruv-sgit: E04 v2, four paths, run r11 on r9's vault",
+   "changed": 13
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "3f33841",
+   "at": "2026-10-29T11:39:00+00:00",
+   "subject": "ruv-sgit: E04 v2 in work, run r11 open on r9's vault",
+   "changed": 5
+  },
+  {
+   "agent": "researcher",
+   "sha": "3ea837d",
+   "at": "2026-10-29T11:28:09+00:00",
+   "subject": "@researcher: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "5c3d0b0",
+   "at": "2026-10-29T11:25:56+00:00",
+   "subject": "@researcher: Gartner's own release captured, the 40 per cent claim to A6; D08 carries ruv.sgit's six zips",
+   "changed": 14
+  },
+  {
+   "agent": "deck",
+   "sha": "98e711f",
+   "at": "2026-10-29T11:24:34+00:00",
+   "subject": "@deck: wake record closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "93b7969",
+   "at": "2026-10-29T11:23:58+00:00",
+   "subject": "@deck: E09 reviewed (keep: part two opens on part one's rings; one wording to fix)",
+   "changed": 8
+  },
+  {
+   "agent": "conductor",
+   "sha": "436d607",
+   "at": "2026-10-29T11:06:36+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 2
+  },
+  {
+   "agent": "conductor",
+   "sha": "bd3cc42",
+   "at": "2026-10-29T11:05:45+00:00",
+   "subject": "@conductor: 11:02 pace: E09 back for deck, E04 v2 then E02 v3 for ruv.sgit; the night log's captions at 14px, on the type scale",
+   "changed": 10
+  }
+ ],
+ "made": [
+  {
+   "page": "index.html",
+   "by": "dev"
+  },
+  {
+   "page": "ruv-sgit/over-enthusiastic-agent/explainer.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/over-enthusiastic-agent/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e04/v2/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/programme.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/e09.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/index.html",
+   "by": "deck"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio/lab/e04/v2/index.html",
+   "img": "night-20261029T1205-1.png"
+  },
+  {
+   "page": "ruv-sgit/over-enthusiastic-agent/explainer.html",
+   "img": "night-20261029T1205-2.png"
+  },
+  {
+   "page": "ruv-sgit/over-enthusiastic-agent/index.html",
+   "img": "night-20261029T1205-3.png"
+  },
+  {
+   "page": "studio/reviews/e09.html",
+   "img": "night-20261029T1205-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T11:30:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "update",
+   "subject": "Gartner's own release captured: the spreadsheets beat's source can be Gartner, not MarTech"
+  },
+  {
+   "at": "2026-10-29T11:32:00Z",
+   "sender": "deck",
+   "to": "ruv.sgit",
+   "kind": "reply",
+   "subject": "Re: E09 mandate-and-grant: reviewed, keep; one wording to fix"
+  },
+  {
+   "at": "2026-10-29T11:43:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E04 over-enthusiastic-agent: v2 delivered; E09's wording noted for E02 v3"
+  },
+  {
+   "at": "2026-10-29T11:55:45Z",
+   "sender": "dev",
+   "to": "designer",
+   "kind": "reply",
+   "subject": "Re: Design note 5 is built: the home hero on wide screens"
+  },
+  {
+   "at": "2026-10-29T11:58:00Z",
+   "sender": "designer",
+   "to": "dev",
+   "kind": "update",
+   "subject": "Design notes 3 and 4 checked: as designed"
+  },
+  {
+   "at": "2026-10-29T12:05:32Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "The dashboard, part 3: the flow graph from pace.json, at 12:47"
+  }
+ ],
+ "problems": [
+  {
+   "agent": "designer",
+   "started": "2026-10-29T11:40:53Z",
+   "outcome": "partial",
+   "verdicts": {
+    "post_check": "partial"
+   },
+   "record": "team/designer/wakes/20261029T114053Z.json"
+  }
+ ],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "D12 (evidence/proposals/editor-decisions.json): the evidence vault's history holds the researcher's redacted capture values (anonymous cookies, sites' anti-forgery tokens; no team credential); keep the history, or move the vault to a new read key",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Morning: /studio/reviews/ (five reviews; B01 v2 is the first candidate for the talk) and /studio/programme.html; pieces that load data need the site served",
+    "from": "the editor"
+   },
+   {
+    "what": "before-tonight: decide the slide items while the deck is frozen, item 4 (three of five not attacks) first",
+    "from": "the editor",
+    "issue": "before-tonight, blocked"
+   },
+   {
+    "what": "Agree or change the draft policy.json",
+    "from": "the editor"
+   }
+  ],
+  "designer": [],
+  "dev": [
+   {
+    "what": "Is carrying members' branches into dev a standing duty of dev? Agree dev's policy.json",
+    "from": "the editor"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Take the editor-decisions register, pace the page with dev, the lane and his pinned key; a token pattern in vault_check.py",
+    "from": "conductor@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E04 v2",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7), r8, r9 (covers r11), r10",
+    "from": "the editor"
+   }
+  ]
+ }
+}

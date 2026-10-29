@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T11:05:13Z",
+ "updated": "2026-10-29T12:05:48Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -15,11 +15,11 @@
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": "E04 v2 (11:32, deck's notes)"
+   "in_flight": "E02 v3 (12:32)"
   },
   "dev": {
    "slot": ":47",
-   "in_flight": "dev 014 the home hero (11:47)"
+   "in_flight": "the dashboard part 3, the flow graph (12:47)"
   },
   "designer": {
    "slot": ":39",
@@ -394,6 +394,19 @@
    "kind": "review",
    "by": "deck",
    "verdict": "keep the content, redo the picture"
+  },
+  {
+   "id": "art-e04-v2",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T11:33:00Z"
+  },
+  {
+   "id": "review-e09",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, one wording to fix"
   }
  ],
  "edges": [
@@ -611,6 +624,16 @@
    "from": "art-e04",
    "to": "review-e04",
    "kind": "reviewed"
+  },
+  {
+   "from": "art-e09",
+   "to": "review-e09",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-e04",
+   "to": "art-e04-v2",
+   "kind": "redo"
   }
  ],
  "log": [
@@ -678,6 +701,11 @@
    "at": "2026-10-29T11:05:13Z",
    "by": "conductor",
    "what": "E04 to be redrawn; E09 delivered; E04 v2 11:32, E02 v3 12:32; dev 013 built; the night log's captions at 14px for the designer"
+  },
+  {
+   "at": "2026-10-29T12:05:48Z",
+   "by": "conductor",
+   "what": "E09 kept; E04 v2 delivered (review 12:17); E02 v3 12:32; dev 014 built; dev: the flow graph at 12:47"
   }
  ],
  "queue": {
@@ -686,9 +714,9 @@
   "rule": "one experiment in flight with ruv.sgit, one data request with researcher; the conductor names the next by id at :02, deck asks at :17"
  },
  "next": {
-  "ruv-sgit": "11:32 E04 v2; 12:32 E02 v3",
+  "ruv-sgit": "12:32 E02 v3",
   "researcher": "nothing new until the data request is answered",
-  "dev": "11:47 dev 014; then the dashboard's other parts"
+  "dev": "12:47 the flow graph; then part 4, the sequence"
  },
  "routed": [
   "team/deck/requests/conductor__pace-the-studio.md",
@@ -750,11 +778,17 @@
    {
     "at": "11:47",
     "item": "dev 014: design note 5, the home hero on wide screens",
-    "from": "designer@ (a member request)"
+    "from": "designer@ (a member request)",
+    "status": "done"
+   },
+   {
+    "at": "12:47",
+    "item": "the dashboard part 3: the flow graph from pace.json",
+    "from": "the conductor's brief"
    },
    {
     "at": "later",
-    "item": "the dashboard's other parts, then dev's own ideas"
+    "item": "part 4 the sequence, part 5 the artifacts, then dev's own 003 and 004"
    }
   ],
   "designer": [
@@ -791,7 +825,8 @@
    },
    {
     "at": "11:32",
-    "item": "E04 v2"
+    "item": "E04 v2",
+    "status": "done"
    },
    {
     "at": "12:32",
