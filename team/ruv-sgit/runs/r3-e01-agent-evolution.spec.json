@@ -1,0 +1,16 @@
+{
+ "run": "r3-e01-agent-evolution",
+ "purpose": "r3-e01-agent-evolution: studio experiment E01, what an agent is: a chat model, one tool, many tools, the loop, integrated, agents calling agents; each step adds reach",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/004-infographic-request-agent-evolution-e01.eml)",
+  "date": "2026-10-29",
+  "text": "One sentence the audience must understand: an agent is a chat model that was given tools, then more tools, then a loop, then our accounts, and each step added reach. The steps, in order: (1) a chat model answering in a box; (2) one tool; (3) many tools; (4) the loop: it acts, looks at the result and acts again until it decides it is done; (5) integrated: accounts, tokens, other systems; (6) today's agentic flows, agents calling agents. Keep the earlier steps visible as the picture grows. No numbers needed; the loop is Anthropic's own definition in Building effective agents. No dates unless each has a public source; otherwise label the timeline a sketch. A build, each step a few seconds; 40 to 60 seconds; reads as a still at the end. No product logos; no claim that any one product is unsafe; nothing that reads as a forecast. An explainer beside it. Two versions welcome."
+ },
+ "ending": "keep or delete: the editor's call after review",
+ "workers": [
+  {"id": "v1", "role": "developer", "task": "v1, built: SVG on the slide engine, the six steps as nested rings of reach", "out": "src/static/studio/lab/e01/v1/"},
+  {"id": "v2", "role": "developer", "task": "v2, driven: canvas, the agent at the centre and its reach drawn as live connections", "out": "src/static/studio/lab/e01/v2/"},
+  {"id": "explainer", "role": "writer", "task": "the page and the explainer under /ruv-sgit/agent-evolution/", "out": "src/pages/ruv-sgit/agent-evolution/"},
+  {"id": "editor", "role": "editor", "task": "check both versions and the explainer against the request and the studio checklist", "out": "team/ruv-sgit/runs/r3-e01-agent-evolution.editor.md"}
+ ]
+}

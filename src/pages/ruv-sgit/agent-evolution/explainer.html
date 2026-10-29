@@ -1,0 +1,47 @@
+<!--meta {"title": "E01 explained: what an agent is, frame by frame", "description": "How studio experiment E01 shows an agent's reach growing in six steps: each frame with its time, the source behind what is stated, the techniques, and what was tried and left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E01</a></nav>
+<p class="kicker">Studio experiment E01 · the explainer</p>
+<h1>What an agent is, frame by frame</h1>
+<p class="lead">The one sentence the piece must carry: an agent is a chat model that was given tools, then more tools, then a loop, then our accounts, and each step added reach. Both versions keep every earlier step on screen, so the eye follows the growth, not a sequence of separate pictures.</p>
+
+<h2>The frames</h2>
+<p>Times are seconds from the start; v1 ends at 48 s, v2 at 52 s. After the end both hold still, and a reader who sees only the last frame gets the whole sequence.</p>
+<div class="tbl"><table>
+<thead><tr><th>Step</th><th>v1 (rings)</th><th>v2 (motion)</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>1. A chat model</td><td>1 s</td><td>1 s</td><td>The model in a box: text in, text out. No reach.</td></tr>
+<tr><td>2. One tool</td><td>8 s</td><td>8 s</td><td>The first ring (v1); one tool node joined to the model (v2). Its first reach outside the box.</td></tr>
+<tr><td>3. Many tools</td><td>14 s</td><td>14 s</td><td>Files, a shell, a browser, mail. The tools are named only as kinds, never as products.</td></tr>
+<tr><td>4. The loop</td><td>20 s</td><td>20 s</td><td>A ring drawn once and then travelled by a dot (v1); calls that go out to a tool and come back, one after another, without end (v2). The definition appears at 22 s.</td></tr>
+<tr><td>5. Integrated</td><td>28 s</td><td>29 s</td><td>Accounts, tokens, other systems: its reach is now ours.</td></tr>
+<tr><td>6. Agents calling agents</td><td>35 s</td><td>37 s</td><td>Other agents, each with small tools of its own; calls go to them too.</td></tr>
+</tbody></table></div>
+
+<h2>What is stated, and the source behind it</h2>
+<ul>
+<li><b>The loop.</b> "LLMs using tools based on environmental feedback in a loop": Anthropic, <a href="https://www.anthropic.com/research/building-effective-agents">Building effective agents</a>, the talk's own source for the definition. Quoted on screen in both versions.</li>
+<li><b>The order of the steps</b> is the request's, and it is a sketch: no dates are shown, because a date on each step would need its own public source. Both versions say so on screen.</li>
+<li><b>No numbers.</b> The size of each ring and of the shaded reach is illustrative, and v2 says so on screen. Nothing on screen counts anything.</li>
+<li><b>Nothing names a product</b>, and nothing says any product is unsafe. Nothing forecasts.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li><b>v1, built.</b> SVG and the slide engine's declarative reveals: <code>data-in</code> for each ring and label, <code>data-on</code> for the step list, <code>data-draw</code> for the loop ring, and one small <code>SLIDE_RENDER</code> for the dot that runs round the loop. Labels carry a halo in the background colour so they read over the rings.</li>
+<li><b>v2, driven.</b> One canvas, redrawn every frame by <code>SLIDE_RENDER</code> from the slide's clock, so the player can seek, pause and replay it and <code>?t=</code> freezes any moment. Colours are read from the site's tokens, so both themes work.</li>
+<li>Both are standalone lab pages on the engine (1280 by 720), with no script from another host. With reduced motion the engine shows the end state, which makes the point on its own.</li>
+</ul>
+
+<h2>What was tried and left out</h2>
+<ul>
+<li><b>Dates on the steps.</b> Left out: each would need a public source, and the request allowed a sketch instead.</li>
+<li><b>A count of what the agent can touch</b>, growing at each step. Left out: any count would be invented, and a number on screen invites a question the piece cannot answer.</li>
+<li><b>Joining "our systems" through the tools</b> in v2. Tried first; the crossing lines made the end state unreadable, so the systems join the model directly.</li>
+<li><b>A larger reach in v2</b> ran into the headline and pushed the other agents off the canvas; the geometry was tightened.</li>
+<li><b>Three colours of meaning.</b> Both versions use only the agent red (this is the agent's story) and the heading colour; the teal in the headline is the slide engine's own emphasis.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>In ruv.sgit run r3-e01-agent-evolution: a Ruflo hive with four workers (v1, v2, this explainer, and an editor who checked all three against the request), and one sgit vault holding the request, each worker's branch and the history. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>; how runs work is in <a href="{{root}}articles/how-ruv-sgit-works.html">How ruv.sgit works</a>.</p>
+</article>
