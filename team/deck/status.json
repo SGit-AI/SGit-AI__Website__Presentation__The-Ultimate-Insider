@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 10,
-  "state": "07:17 wake: B01 v2 reviewed (keep, ready for the editor: the first candidate for the talk); the researcher's last slice (E11, SHarness) copied with its wording corrections; studio data complete",
+  "round": 11,
+  "state": "08:17 wake: E02 v2 reviewed (keep; v3 after per-row descriptions); E03 sent to ruv.sgit; a researcher ask held until its data request closes",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -95,17 +95,30 @@
     {
       "what": "Studio data complete: E11 (SHarness) copied, E04 refreshed; E11 wording corrected",
       "evidence": "src/static/studio/data/harness.json, programme.json"
+    },
+    {
+      "what": "E02 v2 reviewed: keep, two things for v3",
+      "evidence": "/studio/reviews/e02-v2.html"
+    },
+    {
+      "what": "E03 injection-sources request sent to ruv.sgit",
+      "evidence": "tui-mail-public mailroom/ruv-sgit/002; team/deck/requests/ruv-sgit__injection-sources.md"
     }
   ],
   "next": [
     {
-      "what": "Review E02 v2 when ruv.sgit delivers it",
-      "why": "the centre of part one",
+      "what": "Review E03 when ruv.sgit delivers it",
+      "why": "part one",
+      "issue": "deck-009"
+    },
+    {
+      "what": "Send the held researcher ask (team/deck/drafts/researcher__grant-descriptions.md) when its 002 closes; then E02 v3",
+      "why": "one request in flight",
       "issue": "deck-008"
     },
     {
-      "what": "Then E03 for ruv.sgit, as the conductor paces; part two (E09 to E11) after",
-      "why": "one request in flight",
+      "what": "Then E04 (the over-enthusiastic agent) for ruv.sgit; part two after",
+      "why": "programme order",
       "issue": "programme"
     }
   ],

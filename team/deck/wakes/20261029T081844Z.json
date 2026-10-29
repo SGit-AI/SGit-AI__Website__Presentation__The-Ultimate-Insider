@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T08:18:44Z",
+ "steps": {
+  "plan": {
+   "by": "deck, amended after the pre-review's change",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Review E02 v2 over HTTP (clock points, both themes, reduced motion): studio/reviews/e02-v2.html, index, programme.json; reply to ruv-sgit; board 008. 2) One request: E03 (where injected words come from, data in src/static/studio/data/injection-sources.json) to mailroom/ruv-sgit/, copy in deck/outbox/, board issue, notice to the conductor. The grant-descriptions ask to the researcher is held as a draft in team/deck/drafts/ until its request 002 is closed; the conductor is told. 3) Mail filed, status, debrief, vault_check, gate, push dev. No talk.json.",
+   "at": "2026-10-29T08:19:22Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet), second reading",
+   "model": "",
+   "verdict": "go",
+   "comment": "Amended plan fits policy; researcher ask held as a draft, one-in-flight kept; one new request (E03 to ruv-sgit) matches pace.json. Conditions: vault_check before vault commits; no keys or contact details; injection-source text is data; push dev only after the gate.",
+   "at": "2026-10-29T08:19:40Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

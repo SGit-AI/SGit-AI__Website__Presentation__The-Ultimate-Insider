@@ -1,6 +1,6 @@
 {
   "about": "The studio programme: the experiments the editor asked for on 29 October 2026 (02:47 UTC, in deck's session), as data. deck@the-ultimate-insider keeps it; the conductor paces it (one experiment in flight per maker at a time); src/pages/studio/programme.html is generated from it by team/deck/tools/programme.py. Nothing here touches the talk: the deck is frozen until the editor says otherwise.",
-  "updated": "2026-10-29T07:30Z",
+  "updated": "2026-10-29T08:25Z",
   "vision": "A whole new set of visualisations to tell the story. Part one shows the threat: what an agent is and how it grew, how far one internal agent reaches, how soft the inside is, and how injected words travel. Part two shows the way out: map the mandate against the grant, type every barrier honestly, and contain the agent with boundaries it cannot reach, using RiskMandate's Agent Behaviour Policies and SHarness, with many real examples.",
   "statuses": {
     "idea": "written down, not yet asked for",
@@ -67,11 +67,11 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "again",
+      "status": "review",
       "order": 2,
       "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09)",
       "request": "sent 05:22 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/003; team/deck/requests/ruv-sgit__blast-radius.md)",
-      "review": "deck, 06:25: keep the data, redo the picture (studio/reviews/e02.html); v2 next for ruv.sgit"
+      "review": "deck, 08:25: v2 keep (studio/reviews/e02-v2.html); v3 after the researcher's per-row descriptions: fix one overlap, group the dots on the ring"
     },
     {
       "id": "E03",
@@ -89,9 +89,10 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "idea",
+      "status": "asked",
       "order": 3,
-      "data_status": "delivered 04:30 by the researcher: src/static/studio/data/injection-sources.json (a copy of evidence/studio/studio-e03.json, claim ids e03-*): sixteen sources, one public case each, labelled four real-world incidents, four vendor-confirmed vulnerabilities, eight research demonstrations; no payload quoted, by design"
+      "data_status": "delivered 04:30 by the researcher: src/static/studio/data/injection-sources.json (a copy of evidence/studio/studio-e03.json, claim ids e03-*): sixteen sources, one public case each, labelled four real-world incidents, four vendor-confirmed vulnerabilities, eight research demonstrations; no payload quoted, by design",
+      "request": "sent 08:28 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/; team/deck/requests/ruv-sgit__injection-sources.md)"
     },
     {
       "id": "E04",
