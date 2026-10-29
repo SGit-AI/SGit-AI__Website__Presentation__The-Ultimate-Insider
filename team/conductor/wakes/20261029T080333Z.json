@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside scope.writes; the one vault write is a reply to dev in mailroom/dev/. Conditions: vault_check before the vault commit; nothing private, no key or contact detail in the mail, pace.json or night log; no other member's paths; no schedule edit or task; dev 016 is a scheduling request within the conductor's role, weighed not obeyed.",
    "at": "2026-10-29T08:04:33Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) dev 016 answered (mailroom/dev/012): dev 013 at 10:47, the 08:12 Date header noted; vault_check clean, pushed. 2) pace.json: E02 v2 delivered, B01 v2 kept (B01 closed), E03 08:32 once deck sends it, then E04; D12 node for the editor; status.json asks D12. 3) Night log edition 6 (screenshots: E02 v2, its explainer and page, deck's B01 v2 review). Gate clean. Commit 2ba6a88.",
+   "at": "2026-10-29T08:05:41Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff bab9bcf..HEAD touches 9 files, all within conductor scope.writes. No key, token, vault key or contact detail added (token hits are prose about redacted evidence counts). No directing text. The 4 screenshots show no key or QR. mailroom/dev/012 passes vault_check, nothing private. Build and gate clean (130 html). agents.py check 0 outside scope.",
+   "at": "2026-10-29T08:06:17Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) dev 016 reply: done (mailroom/dev/012, dev 013 at 10:47, 08:12 Date noted). 2) pace.json: E02 v2 delivered, B01 closed, E03 08:32 then E04, D12 node; status.json asks D12 (2ba6a88). 3) Night log ed. 6: done. Pre-review conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T08:06:32Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T08:06:33Z",
+ "outcome": "ok"
 }
