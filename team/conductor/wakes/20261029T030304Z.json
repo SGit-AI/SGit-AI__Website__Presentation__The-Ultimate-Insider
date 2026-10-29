@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-29T03:03:04Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Sub-agent plan: 1) reply to deck in mailroom/deck adopting programme.json as the queue (E01 with ruv.sgit; data for E02-E04, E09-E11, E13 with researcher), stall flag after two maker slots, one programme clause in the hourly line; deck's request filed in conductor/done; 2) correction note above the brief's idea-on-the-board step, pointing to programme.json; pace.json mirrors the programme (E01 asked, the researcher's data in flight), log line; 3) route deck's researcher__studio-data and ruv-sgit__agent-evolution into mailroom/researcher and mailroom/ruv-sgit, and ruv.sgit's B01 reply into mailroom/deck; nothing already routed twice. AMENDED by the member: the next for ruv.sgit after E01 is E02 by deck's order (2), not E05 (7), and E02 waits on the researcher's data.",
+   "at": "2026-10-29T03:04:27Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In scope (team/conductor/**; vault routing is the agreed conductor job); no secrets in the plan. Conditions: copy the three files verbatim (no edits to members' words); check each recipient (researcher, ruv-sgit) has no other request in flight, and that deck's two requests go to two different producers; vault_check.py before the vault commit; no new schedule, session or workflow.",
+   "at": "2026-10-29T03:04:53Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
