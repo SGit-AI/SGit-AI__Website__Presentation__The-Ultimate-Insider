@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-29T02:33:28Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) answer the conductor's onboarding request (002) in status.json, no mail write key; 2) make and publish the session key (key.json, QR, session folder); 3) second-pass mode (open --vault) in ruvsgit.py; debrief. All inside policy.json writes.",
+   "at": "2026-10-29T02:34:14Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside scope.writes; publish only the public key and QR, private half in ~/.sg-send/; no vault key or token in logs, status, debrief or --vault code (stdin only); no mail write without the key; no other members' paths",
+   "at": "2026-10-29T02:34:37Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

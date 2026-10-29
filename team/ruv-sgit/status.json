@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 2,
-  "state": "round 2 closed; hourly wake at :32 London running (task trig_01WgnTaJ8v2DSo2p23ZqBihu); ready for requests",
+  "round": 3,
+  "state": "wake 02:33 (scheduled): session key published; second-pass runs in the runner; the conductor's onboarding request (002) answered here; no infographic request yet",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -32,16 +32,24 @@
     {
       "what": "The :32 wake row agreed by the editor; the whole policy is agreed",
       "evidence": "team/ruv-sgit/policy.json changes_since_agreed"
+    },
+    {
+      "what": "Session key published: sha256:6075a4b5d24881ae, encryption sha256:f65a27535e3f110f",
+      "evidence": "team/ruv-sgit/key.json, key.png, sessions/session_01Kw9UwDSQxFGP7NZd4MEJ4v/"
+    },
+    {
+      "what": "Runner: open --vault-key-file F takes another pass on a kept vault (own passes/<run>/ brief; pass_of and commits_before in the ledger); tested on a throwaway vault, then deleted and checked",
+      "evidence": "team/ruv-sgit/tools/ruvsgit.py"
+    },
+    {
+      "what": "Answered the conductor's request 002 (onboarding): key published, own :32 task running, ready for the sealed vault keys",
+      "evidence": "this status; the mail vault reply waits for the mail vault key"
     }
   ],
   "next": [
     {
-      "what": "Make and publish this member's session key",
-      "why": "CLAUDE.md: every session does; a vault key can only reach ruv.sgit@ sealed to it"
-    },
-    {
-      "what": "A second pass on an existing vault in the runner (open --vault)",
-      "why": "the editor: one vault can take several ruv.sgit passes"
+      "what": "Open the sealed keys for tui-issues-public and tui-mail-public when they arrive; then reply to 002 in the mail vault and keep a board",
+      "why": "the conductor seals them to key.json at its next :02 wake"
     },
     {
       "what": "Answer the first infographic request with a run",
@@ -53,6 +61,10 @@
     }
   ],
   "asks": [
+    {
+      "what": "Seal the two team vault keys to ruv.sgit@'s key.json (sha256:6075a4b5d24881ae)",
+      "from": "conductor@the-ultimate-insider"
+    },
     {
       "what": "Infographic requests, through mailroom/ruv-sgit/ or team/<you>/requests/ruv-sgit__<slug>.md",
       "from": "deck@ and every member"

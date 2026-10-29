@@ -3,7 +3,8 @@
 # on the SG/Send vault server. Adapted from poc/ruv-sgit/ruvsgit.py in SGit-AI/SGit-AI__Website__Ruv (Apache-2.0).
 #
 #   setup                          install the pinned tools outside the repository (ruflo into RUVSGIT_HOME/node, sgit-ai with pip)
-#   open    RUN SPEC               hive: init, one specialist per worker, one task per worker, the brief broadcast;
+#   open    RUN SPEC [--vault-key-file F]   F: a pass on a kept vault (its key opened from the sealed handover); else
+#                                  a new vault. hive: init, one specialist per worker, one task per worker, the brief broadcast;
 #                                  vault: created on the server, the spec and the request committed and pushed
 #   deliver RUN WORKER ROLE SRC    a worker's output onto its own vault branch w-<worker>, pushed, merged into `current`, pushed
 #   close   RUN WORKERS.json       measure the vault (history, files, bytes, the encrypted store probed for plaintext, a fresh
@@ -95,6 +96,11 @@ class Run:
         return r
 
 
+def commits(R):                                                     # the vault's history, newest first
+    H = json.loads(R.sgit('history', ['history', 'log', '--json', '-n', '200']).stdout or '[]')
+    return H.get('commits', H) if isinstance(H, dict) else H
+
+
 def setup():
     (HOME / 'node').mkdir(parents=True, exist_ok=True)
     HOME.chmod(0o700)
@@ -106,7 +112,7 @@ def setup():
         print(f'no server token yet: put the SG/Send access token in {HOME}/server.token (mode 0600) or RUVSGIT_TOKEN')
 
 
-def open_run(run, spec_path):
+def open_run(run, spec_path, key_file=None):                       # key_file: a second (or later) pass on a kept vault
     R, spec = Run(run), json.loads(pathlib.Path(spec_path).read_text())
     if R.state.get('created_at'):
         raise SystemExit(f'{run}: already open')
@@ -121,18 +127,27 @@ def open_run(run, spec_path):
         R.ruflo('conductor', ['hive-mind', 'task', '-d', f"{w['id']}: {w['task']}", '-p', 'high'])
     R.ruflo('conductor', ['hive-mind', 'broadcast', '-m', f"run {run}: {spec['purpose']}", '-f', 'conductor'])
     R.dir.mkdir(parents=True, exist_ok=True)
-    r = R.sgit('create', ['create', '--base-url', SERVER, run], cwd=R.dir)
-    key, vid = re.search(r'Vault key:\s*(\S+)', r.stdout), re.search(r'Vault ID:\s*(\S+)', r.stdout)
-    if not key:
-        raise SystemExit('sgit create printed no vault key; its output changed (not shown: it may hold the key)')
-    secret(f'runs/{run}/vault.key', key.group(1))
-    (R.dir / run).rename(R.vault)
-    R.state['vault_id'] = vid.group(1) if vid else None
-    (R.vault / 'brief').mkdir()
-    shutil.copy(spec_path, R.vault / 'brief' / 'spec.json')
+    if key_file:                                                     # the key opened from its sealed handover, read from a file, sent on stdin
+        key = pathlib.Path(key_file).read_text().strip()
+        secret(f'runs/{run}/vault.key', key)
+        R.sgit('clone', ['clone', '--base-url', SERVER, '-', str(R.vault)], cwd=R.dir, stdin=key)
+        R.state.update(vault_id=key.rsplit(':', 1)[-1], pass_of=key.rsplit(':', 1)[-1],
+                       commits_before=len(commits(R)))
+        brief = R.vault / 'passes' / run                             # each pass keeps its own brief; earlier passes stay as they were
+    else:
+        r = R.sgit('create', ['create', '--base-url', SERVER, run], cwd=R.dir)
+        key, vid = re.search(r'Vault key:\s*(\S+)', r.stdout), re.search(r'Vault ID:\s*(\S+)', r.stdout)
+        if not key:
+            raise SystemExit('sgit create printed no vault key; its output changed (not shown: it may hold the key)')
+        secret(f'runs/{run}/vault.key', key.group(1))
+        (R.dir / run).rename(R.vault)
+        R.state['vault_id'] = vid.group(1) if vid else None
+        brief = R.vault / 'brief'
+    brief.mkdir(parents=True)
+    shutil.copy(spec_path, brief / 'spec.json')
     req = spec.get('request', {})
-    (R.vault / 'brief' / 'request.md').write_text(f"# The request that started run {run}\n\nFrom: {req.get('from', '?')}, {req.get('date', '?')}\n\n{req.get('text', '')}\n")
-    R.sgit('commit', ['commit', '-m', f'brief: run {run}'])
+    (brief / 'request.md').write_text(f"# The request that started run {run}\n\nFrom: {req.get('from', '?')}, {req.get('date', '?')}\n\n{req.get('text', '')}\n")
+    R.sgit('commit', ['commit', '-m', f"{'pass' if key_file else 'brief'}: run {run}"])
     R.sgit('push', ['push'])
     R.save()
     print(f"run {run} open: vault {R.state['vault_id']} on {SERVER}, {len(spec['workers'])} workers, hive in {hive.name}")
@@ -164,8 +179,7 @@ def deliver(run, worker, role, src):
 
 def close(run, workers_json):
     R  = Run(run)
-    H  = json.loads(R.sgit('history', ['history', 'log', '--json', '-n', '200']).stdout or '[]')
-    H  = H.get('commits', H) if isinstance(H, dict) else H
+    H  = commits(R)
     history = [{'id': str(c.get('commit_id') or c.get('id') or '').replace('obj-cas-imm-', '')[:12], 'message': c.get('message', ''),
                 'time': c.get('timestamp_iso')} for c in H]
     plain   = hashes(R.vault)
@@ -188,7 +202,7 @@ def close(run, workers_json):
     st['closed_at'] = now()
     spec  = RUNS / f'{run}.spec.json'                                 # the repository's copy, where a secret in a request is redacted;
     req   = json.loads(spec.read_text()).get('request', {}) if spec.exists() else {}   # the run's own state may still hold it
-    entry = {'run': run, 'purpose': st['purpose'], 'request': req, 'server': SERVER, 'vault_id': st['vault_id'],
+    entry = {'run': run, 'purpose': st['purpose'], 'request': req, 'pass_of': st.get('pass_of'), 'commits_before': st.get('commits_before'), 'server': SERVER, 'vault_id': st['vault_id'],
              'created_at': st['created_at'], 'closed_at': st['closed_at'], 'ending': None,
              'hive': {'workers': sum(1 for x in st['ruflo'] if 'hive-mind spawn' in x['cmd'] and x['rc'] == 0),
                       'tasks': sum(1 for x in st['ruflo'] if 'hive-mind task' in x['cmd'] and x['rc'] == 0),
@@ -271,8 +285,8 @@ def delete(run):
 
 if __name__ == '__main__':
     a = sys.argv[1:]
-    commands = {'setup': lambda: setup(), 'open': lambda: open_run(a[1], a[2]), 'deliver': lambda: deliver(a[1], a[2], a[3], a[4]),
+    commands = {'setup': lambda: setup(), 'open': lambda: open_run(a[1], a[2], a[a.index('--vault-key-file') + 1] if '--vault-key-file' in a else None), 'deliver': lambda: deliver(a[1], a[2], a[3], a[4]),
                 'close': lambda: close(a[1], a[2]), 'seal': lambda: seal(a[1]), 'delete': lambda: delete(a[1])}
     if not a or a[0] not in commands:
-        sys.exit('usage: ruvsgit.py setup | open RUN SPEC | deliver RUN WORKER ROLE SRC | close RUN WORKERS.json | seal RUN | delete RUN')
+        sys.exit('usage: ruvsgit.py setup | open RUN SPEC [--vault-key-file F] | deliver RUN WORKER ROLE SRC | close RUN WORKERS.json | seal RUN | delete RUN')
     commands[a[0]]()

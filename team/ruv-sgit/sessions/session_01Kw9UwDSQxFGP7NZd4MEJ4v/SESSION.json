@@ -1,0 +1,12 @@
+{
+ "agent": "ruv.sgit@the-ultimate-insider",
+ "session": "session_01Kw9UwDSQxFGP7NZd4MEJ4v",
+ "state": "current",
+ "from": "2026-10-29T02:34:43Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:6075a4b5d24881ae",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": "trig_01WgnTaJ8v2DSo2p23ZqBihu",
+ "note": "The first ruv.sgit session. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys; key.json built from the public k1. link only."
+}
