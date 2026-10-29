@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T05:20Z",
- "count": 372,
+ "built": "2026-10-29T06:18Z",
+ "count": 382,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -14631,6 +14631,320 @@
    ],
    "capture": "full",
    "recorded_by": "sgit-php-ideas"
+  },
+  {
+   "id": "sharness-browser",
+   "url": "https://sharness.ai/code/browser/index.md",
+   "final_url": "https://sharness.ai/code/browser/index.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "Linux in the browser (E09)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "ba51195663aa81d6afc83f667243b725021b26c0bdcfdbf04f45f3ea1b19a63a",
+     "bytes_as_fetched": 16245,
+     "sha256": "ba51195663aa81d6afc83f667243b725021b26c0bdcfdbf04f45f3ea1b19a63a",
+     "bytes": 16245
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ba51195663aa81d6afc83f667243b725021b26c0bdcfdbf04f45f3ea1b19a63a",
+     "bytes_as_fetched": 16245,
+     "sha256": "ba51195663aa81d6afc83f667243b725021b26c0bdcfdbf04f45f3ea1b19a63a",
+     "bytes": 16245
+    }
+   ],
+   "capture": "full: captured for context, not quoted",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-browser",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-code",
+   "url": "https://sharness.ai/code/index.md",
+   "final_url": "https://sharness.ai/code/index.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "The code: where everything is",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "dd54f38cafdfd244d2218a2e567f1731484a3ed2f09f2255111c36580e152de1",
+     "bytes_as_fetched": 8086,
+     "sha256": "dd54f38cafdfd244d2218a2e567f1731484a3ed2f09f2255111c36580e152de1",
+     "bytes": 8086
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "dd54f38cafdfd244d2218a2e567f1731484a3ed2f09f2255111c36580e152de1",
+     "bytes_as_fetched": 8086,
+     "sha256": "dd54f38cafdfd244d2218a2e567f1731484a3ed2f09f2255111c36580e152de1",
+     "bytes": 8086
+    }
+   ],
+   "capture": "full: captured for context, not quoted",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-code",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-components",
+   "url": "https://sharness.ai/components/index.md",
+   "final_url": "https://sharness.ai/components/index.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "The components: the operating system a process sees",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "a26ee31f6c72d94c619e4784620533805d3b50baf2cbecdbae06a86eec3bc9a9",
+     "bytes_as_fetched": 8473,
+     "sha256": "a26ee31f6c72d94c619e4784620533805d3b50baf2cbecdbae06a86eec3bc9a9",
+     "bytes": 8473
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a26ee31f6c72d94c619e4784620533805d3b50baf2cbecdbae06a86eec3bc9a9",
+     "bytes_as_fetched": 8473,
+     "sha256": "a26ee31f6c72d94c619e4784620533805d3b50baf2cbecdbae06a86eec3bc9a9",
+     "bytes": 8473
+    }
+   ],
+   "capture": "full",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-components",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-evidence",
+   "url": "https://sharness.ai/evidence/index.md",
+   "final_url": "https://sharness.ai/evidence/index.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "Evidence (section 9: the first experiments run by the CLI)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "649a829a817d452bf2ee9dc459beafec8a2f7e42a217ce1b9081ea8a23a7bf69",
+     "bytes_as_fetched": 17603,
+     "sha256": "649a829a817d452bf2ee9dc459beafec8a2f7e42a217ce1b9081ea8a23a7bf69",
+     "bytes": 17603
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "649a829a817d452bf2ee9dc459beafec8a2f7e42a217ce1b9081ea8a23a7bf69",
+     "bytes_as_fetched": 17603,
+     "sha256": "649a829a817d452bf2ee9dc459beafec8a2f7e42a217ce1b9081ea8a23a7bf69",
+     "bytes": 17603
+    }
+   ],
+   "capture": "full",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-evidence",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-experiments",
+   "url": "https://sharness.ai/code/experiments/index.md",
+   "final_url": "https://sharness.ai/code/experiments/index.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "Mockups and experiments",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "d0b4e25e1e8316064000b2069507b9690d22077db5e9ea50e86094c6a3791e98",
+     "bytes_as_fetched": 15380,
+     "sha256": "d0b4e25e1e8316064000b2069507b9690d22077db5e9ea50e86094c6a3791e98",
+     "bytes": 15380
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d0b4e25e1e8316064000b2069507b9690d22077db5e9ea50e86094c6a3791e98",
+     "bytes_as_fetched": 15380,
+     "sha256": "d0b4e25e1e8316064000b2069507b9690d22077db5e9ea50e86094c6a3791e98",
+     "bytes": 15380
+    }
+   ],
+   "capture": "full: captured for context, not quoted",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-experiments",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-home",
+   "url": "https://sharness.ai/ (also /index.md, /llms.txt)",
+   "final_url": "https://sharness.ai/ (also /index.md, /llms.txt)",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "SHarness: a policy the kernel enforces, for every process an AI agent starts (front page HTML, its markdown twin, llms.txt; site v0.6.35)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "c89a8204ddfb0b27789aab4d82529d1a93f00ddf7927a5c5d9836903845685c9",
+     "bytes_as_fetched": 10218,
+     "sha256": "c89a8204ddfb0b27789aab4d82529d1a93f00ddf7927a5c5d9836903845685c9",
+     "bytes": 10218
+    },
+    {
+     "name": "llms.txt",
+     "sha256_as_fetched": "d92432c70866b86eed41e3904f458cfad83d914270be25f0614ad8fc6ef00f35",
+     "bytes_as_fetched": 19825,
+     "sha256": "d92432c70866b86eed41e3904f458cfad83d914270be25f0614ad8fc6ef00f35",
+     "bytes": 19825
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "cfbe907dc8ddec2137dfae9a699d0d52612bf9dd5d344c0e38598bc65ef592da",
+     "bytes_as_fetched": 31653,
+     "sha256": "cfbe907dc8ddec2137dfae9a699d0d52612bf9dd5d344c0e38598bc65ef592da",
+     "bytes": 31653
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1a23d86731e292fe8887dd0bf2ff9f9000de8868f1f74ccffd6e0c5b25a94d6e",
+     "bytes_as_fetched": 15246,
+     "sha256": "1a23d86731e292fe8887dd0bf2ff9f9000de8868f1f74ccffd6e0c5b25a94d6e",
+     "bytes": 15246
+    }
+   ],
+   "capture": "full: HTML has a 'What this site claims' table and a 'Measured 24 to 29 October 2026' footnote that the markdown twin does not carry",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-home",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-launcher",
+   "url": "https://sharness.ai/components/launcher/index.md",
+   "final_url": "https://sharness.ai/components/launcher/index.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "sharness.launcher: the bootstrap",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "2f4d0eb048d7b872bc68480281dcd3aeae5faeafb4c3967b5922ea7c39d00111",
+     "bytes_as_fetched": 5255,
+     "sha256": "2f4d0eb048d7b872bc68480281dcd3aeae5faeafb4c3967b5922ea7c39d00111",
+     "bytes": 5255
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "2f4d0eb048d7b872bc68480281dcd3aeae5faeafb4c3967b5922ea7c39d00111",
+     "bytes_as_fetched": 5255,
+     "sha256": "2f4d0eb048d7b872bc68480281dcd3aeae5faeafb4c3967b5922ea7c39d00111",
+     "bytes": 5255
+    }
+   ],
+   "capture": "full",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-launcher",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-linux-in-a-tab",
+   "url": "https://sharness.ai/articles/linux-in-a-tab.md",
+   "final_url": "https://sharness.ai/articles/linux-in-a-tab.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "Linux in a tab (cli@sharness, 25 Oct 2026)",
+   "kind": "own-site",
+   "published": "2026-10-25",
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "daf5bccb9037fb0fa9544ccd5860a0bd1969165657cc03541424393b0276bb07",
+     "bytes_as_fetched": 26347,
+     "sha256": "daf5bccb9037fb0fa9544ccd5860a0bd1969165657cc03541424393b0276bb07",
+     "bytes": 26347
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "daf5bccb9037fb0fa9544ccd5860a0bd1969165657cc03541424393b0276bb07",
+     "bytes_as_fetched": 26347,
+     "sha256": "daf5bccb9037fb0fa9544ccd5860a0bd1969165657cc03541424393b0276bb07",
+     "bytes": 26347
+    }
+   ],
+   "capture": "full: captured for context, not quoted",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-linux-in-a-tab",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-machines",
+   "url": "https://sharness.ai/evidence/machines/index.md",
+   "final_url": "https://sharness.ai/evidence/machines/index.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "hello on your machine: every reported run",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "d16ee7465dc705d79e91b881c9f33592a578ef5b862fb66a4d823591d99bccbd",
+     "bytes_as_fetched": 3496,
+     "sha256": "d16ee7465dc705d79e91b881c9f33592a578ef5b862fb66a4d823591d99bccbd",
+     "bytes": 3496
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d16ee7465dc705d79e91b881c9f33592a578ef5b862fb66a4d823591d99bccbd",
+     "bytes_as_fetched": 3496,
+     "sha256": "d16ee7465dc705d79e91b881c9f33592a578ef5b862fb66a4d823591d99bccbd",
+     "bytes": 3496
+    }
+   ],
+   "capture": "full",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-machines",
+   "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness-status",
+   "url": "https://sharness.ai/evidence/status/index.md",
+   "final_url": "https://sharness.ai/evidence/status/index.md",
+   "publisher": "sharness.ai (Dinis Cruz and his agents)",
+   "title": "What exists today, and what does not (as of 29 Oct 2026)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T06:15:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "291eedc9cb2d4034c99aeff0c3066041d3a3f6bbc36196d6bf61e8749d72d4b7",
+     "bytes_as_fetched": 5779,
+     "sha256": "291eedc9cb2d4034c99aeff0c3066041d3a3f6bbc36196d6bf61e8749d72d4b7",
+     "bytes": 5779
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "291eedc9cb2d4034c99aeff0c3066041d3a3f6bbc36196d6bf61e8749d72d4b7",
+     "bytes_as_fetched": 5779,
+     "sha256": "291eedc9cb2d4034c99aeff0c3066041d3a3f6bbc36196d6bf61e8749d72d4b7",
+     "bytes": 5779
+    }
+   ],
+   "capture": "full",
+   "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-status",
+   "recorded_by": "studio-e11"
   },
   {
    "id": "silicon-cyberark-2025-press",

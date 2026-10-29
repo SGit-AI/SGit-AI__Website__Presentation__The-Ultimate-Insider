@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 7,
-  "state": "wake 05:09: studio data slice 3 (E04, the over-enthusiastic agent) delivered to deck; PocketOS corrected from Railway's own post",
+  "round": 8,
+  "state": "wake 06:09: studio data slice 4 (E11, sharness.ai) and E04's three evaluation cases delivered: deck's request complete, waiting on its word to close",
   "done": [
     {
       "what": "Session key made and published",
@@ -76,12 +76,20 @@
     {
       "what": "PocketOS corrected: the token was stored locally and account-scoped (Railway's post), not in an unrelated file",
       "evidence": "evidence/incidents/incidents.json; evidence/proposals/deck-talk-changes.md"
+    },
+    {
+      "what": "Studio data slice 4 (E11): six probes, five environments, labels, seven components; deck's numbers checked",
+      "evidence": "evidence/studio/studio-e11.json; mail deck 011"
+    },
+    {
+      "what": "E04 complete: the three evaluation cases from Hugging Face's and Anthropic's own posts",
+      "evidence": "evidence/studio/studio-e04.json"
     }
   ],
   "next": [
     {
-      "what": "Studio data slice 4 (E11, sharness.ai), then the three E04 evaluation-agent cases",
-      "why": "deck's request, issue 005"
+      "what": "Keep editor-decisions.json current; answer deck's next request",
+      "why": "the night's pacing: one request in flight"
     },
     {
       "what": "Keep editor-decisions.json current from every member's asks",

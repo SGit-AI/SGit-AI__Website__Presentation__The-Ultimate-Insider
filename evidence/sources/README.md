@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T05:20Z. 372 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T06:18Z. 382 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -355,6 +355,16 @@ Built 2026-10-29T05:20Z. 372 sources; `manifest.json` has every file's SHA-256. 
 | [sgit-network-nhi](https://sgit.ai/network/nhi.md) | sgit.ai | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
 | [sgit-network-pki](https://sgit.ai/network/pki.md) | sgit.ai | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
 | [sgit-security](https://sgit.ai/security/index.md) | sgit.ai | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
+| [sharness-browser](https://sharness.ai/code/browser/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full: captured for context, not quoted | 2 |
+| [sharness-code](https://sharness.ai/code/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full: captured for context, not quoted | 2 |
+| [sharness-components](https://sharness.ai/components/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
+| [sharness-evidence](https://sharness.ai/evidence/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
+| [sharness-experiments](https://sharness.ai/code/experiments/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full: captured for context, not quoted | 2 |
+| [sharness-home](https://sharness.ai/ (also /index.md, /llms.txt)) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full: HTML has a 'What this site claims' table and a 'Measured 24 to 29 October 2026' footnote that the markdown twin does not carry | 4 |
+| [sharness-launcher](https://sharness.ai/components/launcher/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
+| [sharness-linux-in-a-tab](https://sharness.ai/articles/linux-in-a-tab.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full: captured for context, not quoted | 2 |
+| [sharness-machines](https://sharness.ai/evidence/machines/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
+| [sharness-status](https://sharness.ai/evidence/status/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
 | [silicon-cyberark-2025-press](https://www.silicon.co.uk/press-release/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security) | Silicon UK (BusinessWire syndication of CyberArk release) | vendor-survey | 2026-10-29T01:55:11Z | 200 | full | 3 |
 | [spiffe-overview](https://spiffe.io/docs/latest/spiffe-about/overview/) | SPIFFE project (CNCF) | primary | 2026-10-29T01:50:50Z | 200 | full | 4 |
 | [surecloud-risk-reckoning-2025](https://www.surecloud.com/whitepaper/the-risk-reckoning-2025-uk-grc-survey-insights-for-enterprises-smbs) | SureCloud | vendor-survey | 2026-10-29T01:50:29Z | 200 | full | 3 |

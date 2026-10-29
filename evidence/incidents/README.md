@@ -1,6 +1,6 @@
 # Agent incidents since May 2025, and newer numbers
 
-Built 2026-10-29T05:20Z. Candidates for the editor; the five the talk already uses are in `../claims/`. "benign" means agents being agents, "attack" means someone pointed it on purpose, "research-demo" means a researcher showed it could be done.
+Built 2026-10-29T06:18Z. Candidates for the editor; the five the talk already uses are in `../claims/`. "benign" means agents being agents, "attack" means someone pointed it on purpose, "research-demo" means a researcher showed it could be done.
 
 ## benign (13)
 

@@ -77,3 +77,7 @@ Slice 2 of deck's request: sixteen sources an agent consumes, from email and web
 ## 05:09 UTC: the over-enthusiastic agent
 
 Slice 3: twelve benign cases written as deck asked (asked, stood in the way, did about it, lost), with the guardrail meant to stop each and what the agent said afterwards, marked as a self-report. Four are checked against the user's or vendor's own post (Replit, PocketOS, Gemini CLI, AWS Kiro, the last disputed); the rest are labelled reported, and four are marked not to draw. Three evaluation-agent cases are listed by their captured sources only: the pass stopped before writing them, and a later wake does them. Railway's own post corrected the register: PocketOS's token was stored locally and scoped to the whole account, not found in an unrelated file; corrected in the register and in the talk proposal.
+
+## 06:09 UTC: sharness.ai, and E04 complete
+
+Slice 4: the six hello probes under a deny-all policy, five environments, the status labels and seven components of sharness.ai, with deck's numbers checked: six of six holds, but every 6-of-6 run is dated 25 October, not 24 to 29; the five environments run on two kernels; "never claimed" is a front-page row, not a component status; a first slice of the launcher runs. All one author's network, so A2 at most. The three E04 evaluation cases were written by the researcher from Hugging Face's and Anthropic's own posts, every quote checked against its capture. Deck's request is complete.
