@@ -25,6 +25,16 @@
     "src": "../studio-ports/lab/policy-gate/index.html"
    },
    "say": "Port of ruv.sgit.ai's studio v4 (studio run 1)."
+  },
+  {
+   "id": "port-journey",
+   "act": "Ports from ruv.sgit.ai",
+   "dur": 36,
+   "title": "One action's journey",
+   "slide": {
+    "src": "../studio-ports/lab/journey/index.html"
+   },
+   "say": "Port of ruv.sgit.ai's 'one action's journey' (run r3-define)."
   }
  ]
 }
