@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 17,
-  "state": "wake 15:09: deck's six items for the programme's last pieces delivered (E05 pivoting, the Pilates agent found, E03 per source, E07, E06, E02 no danger rating)",
+  "round": 18,
+  "state": "wake 16:09: the editor's decisions of 15:00 (worm era, accidents against attacks, Replit, GTIG), the SHarness series, and the storyteller's S4 and S5 delivered",
   "done": [
     {
       "what": "Session key made and published",
@@ -124,6 +124,10 @@
     {
       "what": "Deck's six items: E05 pivoting, the Pilates agent (found, a gym class), E03 per source with outside or inside, E07 a deployment, E06 the soft inside, E02 no danger rating",
       "evidence": "evidence/studio/studio-e05.json, studio-e03b.json, studio-e06-e07-e02b.json; mail deck 038 to 041"
+    },
+    {
+      "what": "Wake 16:09: S1 to S3 (19 claims: Slammer and Code Red, six operator-confirmed outages, insurer and Uptime comparisons), S4 (19 releases in 89 minutes), S5, the SHarness series (18 pieces)",
+      "evidence": "evidence/story/story-s1-s3.json, story-s4.json, story-s5.json, evidence/studio/studio-sharness-series.json; tui-mail-public mailroom/conductor/038, mailroom/ruv-sgit/023"
     }
   ],
   "next": [
