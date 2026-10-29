@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T17:06:00Z",
+ "updated": "2026-10-29T17:08:32Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -557,6 +557,13 @@
    "status": "asked",
    "by": "the editor, 17:00",
    "owners": "motion@ the piece by 18:15; deck places it; storyteller the callback; conductor the numbers and the floor (the mini deck)"
+  },
+  {
+   "id": "parts-2-3-depth",
+   "kind": "section",
+   "title": "parts 2 and 3: documented attacks as blast radius; SGit, the PKI, vaults in depth; SHarness technical with an escape challenge; live vault embeds; new slides every minute",
+   "status": "asked",
+   "by": "the editor, 17:10"
   }
  ],
  "edges": [
@@ -936,6 +943,11 @@
    "at": "2026-10-29T17:06:00Z",
    "by": "conductor",
    "what": "the storyteller's 90-minute arc (Part 4, the editor's work; 82 minutes planned, 8 in reserve) routed to deck; dev's showcase template in; Linux in the player after the talk"
+  },
+  {
+   "at": "2026-10-29T17:08:32Z",
+   "by": "conductor",
+   "what": "parts 2 and 3 briefed to seven members: the attacks, the solution in depth, SHarness, live vaults, the minute check"
   }
  ],
  "queue": {
