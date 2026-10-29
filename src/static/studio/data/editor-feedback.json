@@ -64,12 +64,34 @@
         "show how dangerous each capability is: some are not critical, some are very critical; map that (with a source, not invented)"
       ],
       "priority": "later, except putting v3 and v1 in the talk"
+    },
+    {
+      "id": "E03",
+      "at": "14:50",
+      "verdict": "likes it; needs another version (v2), and probably to break it into several pieces",
+      "v2": [
+        "a sea of red: vary the colours",
+        "small icons for each source (an email, a calendar, documents, ...)",
+        "show prompt injection and second-order (secondary) prompt injection as such",
+        "show the attack surface and where each source comes from: not everything is from the outside world; READMEs, pull requests, issues and skills are more trusted than outside content"
+      ],
+      "new_pieces": [
+        "map each source to the public cases the researcher can find of a payload delivered that way (email, calendar invite, documents, secondary injections): what the words made the agent do, never the payload",
+        "a view of the prompt itself: how data from an email or a calendar invite ends up inside one big prompt beside the system instructions, which is the problem of prompt injection"
+      ],
+      "priority": "later: after the feedback round"
     }
   ],
   "deck": [
     {
       "at": "14:35",
       "note": "Put the studio animations into the talk, with start and stop, so he sees them in action in the flow: they are already better than the current slides. Fifty slides is fine."
+    }
+  ],
+  "process": [
+    {
+      "at": "14:50",
+      "note": "Commit and release the feedback in blocks of two or three pieces, so the other members, the conductor included, can see it and pick it up early."
     }
   ]
 }
