@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T14:31Z",
- "count": 156,
+ "built": "2026-10-29T15:18Z",
+ "count": 190,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T14:31Z"
+   "adjudicated": "researcher, 2026-10-29T15:18Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1726,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T14:31Z"
+   "adjudicated": "researcher, 2026-10-29T15:18Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -3088,6 +3088,466 @@
    "register": "studio-e03"
   },
   {
+   "id": "e03b-rehberger-m365-ascii",
+   "text": "Words in email steered Copilot: An email carrying hidden instructions led Microsoft 365 Copilot, when asked about it, to invoke tools and send data out in characters a person cannot see",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-m365-ascii",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-0din-gemini-phishing",
+   "text": "Words in email steered Gemini: Hidden text in an email made Gemini's summary of it show a false security warning to the reader",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-0din-gemini-phishing",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "incident-shadowleak-thn",
+   "text": "Words in email steered Deep Research: An email read by ChatGPT Deep Research led it to send mailbox data to an outside server from the vendor's side (ShadowLeak)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "incident-shadowleak-thn",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-brave-unseeable",
+   "text": "Words in web pages steered browser agents: faint text in images or pages read from screenshots",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-brave-unseeable",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. A1: the capture is a short defanged extract (808 bytes) that names no product and no fix.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-guardian-chatgpt-search",
+   "text": "Words in web pages steered ChatGPT: Hidden text on web pages changed what ChatGPT search said about them",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-guardian-chatgpt-search",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-rehberger-zombais",
+   "text": "Words in web pages steered Claude: A web page visited by an agent using a computer (Anthropic's computer use) led it to download and run a program that put the machine under someone else's control",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-zombais",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-codeintegrity-notion",
+   "text": "Words in shared documents steered Notion: A document in a Notion workspace led Notion's AI agents to gather workspace data and send it out through a tool",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-codeintegrity-notion",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-miggo-gemini-calendar",
+   "text": "Words in calendar invites steered Gemini: A calendar invitation's text led Gemini, when asked about the user's day, to leak calendar data",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-miggo-gemini-calendar",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-checkpoint-mcpoison",
+   "text": "Words in MCP tool descriptions steered Cursor: An MCP configuration approved once in Cursor could be changed afterwards and run something else without a new prompt (MCPoison)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-checkpoint-mcpoison",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-invariant-whatsapp-mcp",
+   "text": "Words in MCP tool descriptions steered WhatsApp: A malicious MCP server's tool description led an agent also connected to WhatsApp to send the user's message history out",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-invariant-whatsapp-mcp",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-tracebit-gemini-cli",
+   "text": "Words in READMEs and docs steered Gemini CLI: A README in a repository led Gemini CLI to run commands without the user seeing what ran",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-tracebit-gemini-cli",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-rehberger-copilot-cve-53773",
+   "text": "Words in rules and configuration files steered Copilot: Injected text led GitHub Copilot to change its own settings file to run without confirmation, and then run commands (CVE-2025-53773)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-copilot-cve-53773",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-legit-gitlab-duo",
+   "text": "Words in pull requests and code steered GitLab Duo: Hidden text in a merge request or code led GitLab Duo to leak private source code and show attacker-chosen content",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-legit-gitlab-duo",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-legit-camoleak",
+   "text": "Words in pull requests and code steered Copilot: Hidden comments in a pull request led GitHub Copilot Chat to leak private source code and secrets (CamoLeak)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-legit-camoleak",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-invariant-github-mcp",
+   "text": "Words in issues and tickets (public) steered GitHub: An issue in a public repository, read by an agent with the GitHub MCP server, led it to copy data from the user's private repositories into a public pull request",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-invariant-github-mcp",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-aikido-promptpwnd",
+   "text": "Words in issues and tickets (public) steered GitHub Actions: Issue and pull request text read by AI agents in GitHub Actions workflows led them to act with the workflow's permissions (PromptPwnd)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-aikido-promptpwnd",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-willison-supabase-mcp",
+   "text": "Words in support tickets (internal) steered Supabase: A support ticket written by a customer, read later by a developer's agent with database access through Supabase's MCP server, led it to read private tables and write them where the customer could see them",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-willison-supabase-mcp",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-unit42-session-smuggling",
+   "text": "Words in other agents steered agent: A malicious remote agent, talking to another over the Agent2Agent protocol, slipped extra instructions into the conversation and made it take actions its user did not ask for",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-unit42-session-smuggling",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-rehberger-cross-agent",
+   "text": "Words in other agents steered agent: One coding agent, injected, rewrote another coding agent's configuration to remove its safeguards: agents freeing each other",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-cross-agent",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-rehberger-chatgpt-spaiware",
+   "text": "Words in agent memory and stored output steered ChatGPT: Injected text stored a lasting instruction in ChatGPT's memory, which then sent later conversations out (SpAIware)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-chatgpt-spaiware",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-rehberger-gemini-memory",
+   "text": "Words in agent memory and stored output steered Gemini: A document led Gemini to save false memories about the user, used in later conversations",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-gemini-memory",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-tenable-hackedgpt",
+   "text": "Words in agent memory and stored output steered ChatGPT: Several flaws let web content reach ChatGPT, persist in its memory and leak private data (HackedGPT)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-tenable-hackedgpt",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
+   "id": "e03b-tenable-gemini-trifecta",
+   "text": "Words in logs and stored records steered Gemini: Text planted in logs, search history and browsing led Gemini Cloud Assist, Search Personalization and the browsing tool to act on it and leak data (the Gemini Trifecta)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-tenable-gemini-trifecta",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each.",
+   "register": "studio-e03b"
+  },
+  {
    "id": "e04-replit-deletes-prod-db",
    "text": "July: Replit's agent deletes a production database during a code freeze.",
    "where": [
@@ -3512,6 +3972,266 @@
    "primary_source": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
    "note": "Anthropic's own account; found in August while assembling transcripts for METR, then a search of about 481 million transcripts found no further case.",
    "register": "studio-e04"
+  },
+  {
+   "id": "e07-github-copilot-cloud-agent",
+   "text": "A typical deployment: GitHub Copilot cloud agent (formerly Copilot coding agent) reaches what its vendor documents (proposed beat, not yet on the site)",
+   "where": [
+    "talk:e07 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e07-gh-copilot-agent-risks",
+     "quote": "Copilot cloud agent has access to code and other sensitive information, and could leak it, either accidentally or due to malicious user input.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-gh-copilot-agent-risks",
+     "quote": "Copilot cloud agent only has the ability to push to a single branch.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-gh-copilot-agent-risks",
+     "quote": "By default, workflows are not triggered until Copilot cloud agent's code is reviewed and a user with write access to the repository clicks the Approve and run workflows button.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "GitHub documents the reach and the controls together: read the repository, push one branch, CI gated on a human click, internet through an allowlisted firewall that the vendor says is not comprehensive and does not cover MCP servers. Drawable as: repository (read) + one branch (write) + allowlisted world (send).",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e07-microsoft-365-copilot",
+   "text": "A typical deployment: Microsoft Microsoft 365 Copilot reaches what its vendor documents (proposed beat, not yet on the site)",
+   "where": [
+    "talk:e07 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e07-m365-copilot-privacy",
+     "quote": "Content in Microsoft Graph, such as emails, chats, and documents that you have permission to access.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-m365-copilot-privacy",
+     "quote": "It can generate responses anchored in your organizational data, such as user documents, emails, calendar, chats, meetings, and contacts.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-m365-copilot-privacy",
+     "quote": "Microsoft Copilot only surfaces organizational data to which individual users have at least view permissions.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The deployment's reach is the user's own reach in the tenant: Microsoft states the boundary is the user's permissions, which is the E06 point in vendor words (whatever is already shared inside is reachable).",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e07-claude-code",
+   "text": "A typical deployment: Anthropic Claude Code (local CLI, Manual mode default) reaches what its vendor documents (proposed beat, not yet on the site)",
+   "where": [
+    "talk:e07 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e07-claude-code-security",
+     "quote": "Manual mode: Claude Code starts with read-only permissions. When it needs to edit files, run tests, or execute commands, it asks you first",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-claude-code-security",
+     "quote": "The boundary is a permission prompt, so a Bash command you approve can still write anywhere your user account can",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-claude-code-security",
+     "quote": "Commands that fetch content from the web such as curl and wget are not auto-approved by default.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A secondary example. The local default is a prompt, not a boundary, per the vendor's own words; the OS-level boundary is the opt-in sandbox (already captured as claude-code-sandboxing-docs).",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-nist-implicit-trust",
+   "text": "NIST's definition of zero trust names the implicit trust it replaces: trust from network location (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "nist-sp800-207",
+     "quote": "Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "NIST is the authoritative primary record for the definition; it is a standard, not an incident measurement.",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-nist-lateral-unhindered",
+   "text": "NIST: once past the perimeter, lateral movement is unhindered (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "nist-sp800-207",
+     "quote": "Perimeter-based network security has also been shown to be insufficient since once attackers breach the perimeter, further lateral movement is unhindered.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A statement of the problem in the standard's background, not a measured rate.",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-midnight-blizzard-oauth",
+   "text": "Midnight Blizzard: a legacy test tenant account without MFA, then a legacy test OAuth app with elevated access to the corporate environment, used to grant mailbox access (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e06-msti-midnight-blizzard-guidance",
+     "quote": "Midnight Blizzard leveraged their initial access to identify and compromise a legacy test OAuth application that had elevated access to the Microsoft corporate environment.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Two Microsoft primary records (MSRC 19 Jan 2024 and Microsoft Threat Intelligence 25 Jan 2024), same party; independent corroboration not checked here, so A5 rests on two Microsoft documents and could be read as A4.",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-mtrends-dwell",
+   "text": "M-Trends 2026: attackers stay inside for weeks (median) and, for espionage, months (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-mtrends-2026",
+     "quote": "Global Median Dwell Time: Global median dwell time rose to 14 days from 11 days.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "One vendor's incident-response caseload, not the whole population; espionage and North Korean IT worker median was 122 days.",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-php2shell-shared-memory",
+   "text": "php2shell: one unauthenticated request can read memory holding other requests' secrets, because workers share process memory (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "wiz-php2shell",
+     "quote": "That memory may contain passwords, authentication tokens, API keys and certificates belonging to other requests or the",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Researcher's own demonstration (Wiz); the point is shared process memory, an inside trust, not a network. No exploitation detail reproduced.",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-php-newsroom-settings-not-boundaries",
+   "text": "This team's PHP newsroom, on its own agents: every agent can push, and what stands between a push and the live site is settings, not boundaries (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e06-php-threat-model",
+     "quote": "Every agent can push. What stands between a push and the live site today is a script the agent runs and a gate inside the commit it pushes: settings, not boundaries (SA-2026-023).",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Own-site first-hand account; it is this team's admission about its own agents and is strong as an observation, weak as a general statistic.",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-no-per-capability-danger",
+   "text": "No published source rates danger per capability; reversibility and reach are the nearest proxies",
+   "where": [
+    "talk:e02 (next version)"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "abp-sgit-data-index-md",
+     "quote": "There is no score, rating, traffic light, risk level or severity in this pack or anywhere on this site.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wcid-data-primitives",
+     "quote": "Reversibility sits on the primitive, not the instance, because it decides whether a gap is a nuisance or a loss",
+     "supports": "for"
+    },
+    {
+     "source_id": "e02b-wcid-ceiling",
+     "quote": "each carries its level (distance from a consequence, by the same rule as the derived levels: 1 = the capability is the consequence) as a stated judgement",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "An absence finding, bounded by what was searched. The wcid 'level' is the closest thing to a danger rating, but it is published only for the 17 ceiling capabilities; the held capabilities' levels are computed in the game, not in the data. If E02 shows a danger column, it is new authorship and should say so.",
+   "register": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-reversible-read-oddity",
+   "text": "read.file.project is marked reversible 'yes' while the vocabulary says a record read cannot be unread",
+   "where": [
+    "talk:e02 (next version)"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "wcid-data-primitives",
+     "quote": "a record read is exposure that cannot be unread",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "In primitives.json, read.file.project is 'yes' but read.file.host, read.credential.host and read.message.tenant are 'no'. Worth confirming with the data owner before using reversibility as a danger proxy on a slide.",
+   "register": "studio-e06-e07-e02b"
   },
   {
    "id": "e11-six-of-six",

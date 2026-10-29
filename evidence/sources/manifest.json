@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T14:31Z",
- "count": 434,
+ "built": "2026-10-29T15:18Z",
+ "count": 492,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -3364,6 +3364,443 @@
    "recorded_by": "act1"
   },
   {
+   "id": "e02b-abp-capabilities",
+   "url": "https://abp.sgit.ai/data/capabilities.json",
+   "final_url": "https://abp.sgit.ai/data/capabilities.json",
+   "publisher": "abp.sgit.ai (SGit-AI)",
+   "title": "ABP capabilities",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T15:16:42Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d9dee8de8961e0130f797d143652fcb879f45a65eacf59cca1715dd3e614d5be",
+     "bytes_as_fetched": 177,
+     "sha256": "d9dee8de8961e0130f797d143652fcb879f45a65eacf59cca1715dd3e614d5be",
+     "bytes": 177
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "4e2bfbf3c79d96326d9338fda5df0ed326d942304f77ab1747a8960ab42e7ea9",
+     "bytes_as_fetched": 9392,
+     "sha256": "4e2bfbf3c79d96326d9338fda5df0ed326d942304f77ab1747a8960ab42e7ea9",
+     "bytes": 9392
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "409e6644cd29ac05781a151ffebbd6bf752ae3821f7df189d35a07ed4437478d",
+     "bytes_as_fetched": 98,
+     "sha256": "409e6644cd29ac05781a151ffebbd6bf752ae3821f7df189d35a07ed4437478d",
+     "bytes": 98
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-abp-data-index-json",
+   "url": "https://abp.sgit.ai/data/index.json",
+   "final_url": "https://abp.sgit.ai/data/index.json",
+   "publisher": "abp.sgit.ai (SGit-AI)",
+   "title": "ABP published vocabulary pack",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T15:15:54Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f271f2436d428472f5f78078243565d41cb1141dc75a59230379fd8d8136f27a",
+     "bytes_as_fetched": 166,
+     "sha256": "f271f2436d428472f5f78078243565d41cb1141dc75a59230379fd8d8136f27a",
+     "bytes": 166
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "e00166afa0cfac43e3c23f514336432e620b24e3a99c2e387249a2c33c3d82ce",
+     "bytes_as_fetched": 4867,
+     "sha256": "e00166afa0cfac43e3c23f514336432e620b24e3a99c2e387249a2c33c3d82ce",
+     "bytes": 4867
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "013b5c58291797a4dce510a89fc6796a3debb059369826043eea17a77f77e2a8",
+     "bytes_as_fetched": 101,
+     "sha256": "013b5c58291797a4dce510a89fc6796a3debb059369826043eea17a77f77e2a8",
+     "bytes": 101
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-abp-undo-classes",
+   "url": "https://abp.sgit.ai/data/undo-classes.json",
+   "final_url": "https://abp.sgit.ai/data/undo-classes.json",
+   "publisher": "abp.sgit.ai (SGit-AI)",
+   "title": "Undo classes (abp/undo-classes/v1)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T15:16:42Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e8dae0d2e0b08252bb2c15807b2a15f2a62f60323c2231eb98304ff10830fab7",
+     "bytes_as_fetched": 177,
+     "sha256": "e8dae0d2e0b08252bb2c15807b2a15f2a62f60323c2231eb98304ff10830fab7",
+     "bytes": 177
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "793ebc462074526f8431d05e9261f1770dd25774c6dfda6189b616a6a43458ac",
+     "bytes_as_fetched": 1391,
+     "sha256": "793ebc462074526f8431d05e9261f1770dd25774c6dfda6189b616a6a43458ac",
+     "bytes": 1391
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "690b2732f7132c07dc575529dce93c45a9f86bea5c270ec2414b31e082beb024",
+     "bytes_as_fetched": 98,
+     "sha256": "690b2732f7132c07dc575529dce93c45a9f86bea5c270ec2414b31e082beb024",
+     "bytes": 98
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-ms-graph-permissions-overview",
+   "url": "https://learn.microsoft.com/en-us/graph/permissions-overview",
+   "final_url": "https://learn.microsoft.com/en-us/graph/permissions-overview",
+   "publisher": "Microsoft",
+   "title": "Overview of Microsoft Graph permissions (Microsoft Learn)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:14:02Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0813151ff9969c0c0ea889d7342f6cf5d0fc4d57a4d1a3c72fde09e69d661a63",
+     "bytes_as_fetched": 226,
+     "sha256": "0813151ff9969c0c0ea889d7342f6cf5d0fc4d57a4d1a3c72fde09e69d661a63",
+     "bytes": 226
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4c5cba65952a9fcaa0f9a1a3b3ad03c176a03d778c2ed6da024345662277588f",
+     "bytes_as_fetched": 77403,
+     "sha256": "4c5cba65952a9fcaa0f9a1a3b3ad03c176a03d778c2ed6da024345662277588f",
+     "bytes": 77403
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "44d7ebb7456de49e468ee09e914b74ea6c7e5508727bd41dfcfbeaa2e42922ab",
+     "bytes_as_fetched": 20751,
+     "sha256": "44d7ebb7456de49e468ee09e914b74ea6c7e5508727bd41dfcfbeaa2e42922ab",
+     "bytes": 20751
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "1d05ba86ff63106bd2fa347533ae2b06954f73c66a6a675e0fcb61cf5a370e4c",
+     "bytes_as_fetched": 111,
+     "sha256": "1d05ba86ff63106bd2fa347533ae2b06954f73c66a6a675e0fcb61cf5a370e4c",
+     "bytes": 111
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-owasp-agentic-top10",
+   "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+   "final_url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+   "publisher": "OWASP Gen AI Security Project",
+   "title": "OWASP Top 10 for Agentic Applications for 2026 (landing page)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:14:01Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c98b9fb138d5ef9c1372f293d607a9c59815ff0290e4f6056c41e16ae4184ff5",
+     "bytes_as_fetched": 256,
+     "sha256": "c98b9fb138d5ef9c1372f293d607a9c59815ff0290e4f6056c41e16ae4184ff5",
+     "bytes": 256
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b812c92f07ac746016e00889f0046b08842cb38e5d37a3befe91f8c1a3dfea4c",
+     "bytes_as_fetched": 369686,
+     "sha256": "b812c92f07ac746016e00889f0046b08842cb38e5d37a3befe91f8c1a3dfea4c",
+     "bytes": 369686
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c7fb1305c5911424a870816f1c0c61e7bb60da20c4165f522497382ff11103a9",
+     "bytes_as_fetched": 2589,
+     "sha256": "c7fb1305c5911424a870816f1c0c61e7bb60da20c4165f522497382ff11103a9",
+     "bytes": 2589
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "04a42dfa1aed4442cf92544a07149d1409e8ff0498ff3027b31ef35ce4548ec8",
+     "bytes_as_fetched": 101,
+     "sha256": "04a42dfa1aed4442cf92544a07149d1409e8ff0498ff3027b31ef35ce4548ec8",
+     "bytes": 101
+    }
+   ],
+   "capture": "partial: landing page only, the document itself (PDF) not read in the time box",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-owasp-llm06-excessive-agency",
+   "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+   "final_url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+   "publisher": "OWASP Gen AI Security Project",
+   "title": "LLM06:2025 Excessive Agency",
+   "kind": "primary",
+   "published": "2024-11-18",
+   "captured_at": "2026-10-29T15:14:01Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "620e8ed7e9940dbd0f28c056f9d574faba95b8edfd6fc85afe30cc9952e2ddd8",
+     "bytes_as_fetched": 223,
+     "sha256": "620e8ed7e9940dbd0f28c056f9d574faba95b8edfd6fc85afe30cc9952e2ddd8",
+     "bytes": 223
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f413bd43fb89e763f26db71268c5b8e0917d3c287edcfcd5c6cabd5183b4273c",
+     "bytes_as_fetched": 369346,
+     "sha256": "f413bd43fb89e763f26db71268c5b8e0917d3c287edcfcd5c6cabd5183b4273c",
+     "bytes": 369346
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cdb0fa34ff843ccd459cb346496b449a7dde928a99cd0e9b1cc0db55bb786d04",
+     "bytes_as_fetched": 12144,
+     "sha256": "cdb0fa34ff843ccd459cb346496b449a7dde928a99cd0e9b1cc0db55bb786d04",
+     "bytes": 12144
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a5f33e76bb22ee2de60a84b0bef6912a62adedfee378ec0ae235a4e3f68a8046",
+     "bytes_as_fetched": 110,
+     "sha256": "a5f33e76bb22ee2de60a84b0bef6912a62adedfee378ec0ae235a4e3f68a8046",
+     "bytes": 110
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-wcid-ceiling",
+   "url": "https://what-can-it-do.games.sgit.ai/data/ceiling.json",
+   "final_url": "https://what-can-it-do.games.sgit.ai/data/ceiling.json",
+   "publisher": "what-can-it-do.games.sgit.ai (SGit-AI)",
+   "title": "Above the ceiling (ceiling-capabilities/v1)",
+   "kind": "own-site",
+   "published": "2026-09-06",
+   "captured_at": "2026-10-29T15:15:54Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b86b39e6efb20e9240b6b0359057c3dda4e13a8201e20532d3b469d6f4641e7b",
+     "bytes_as_fetched": 197,
+     "sha256": "b86b39e6efb20e9240b6b0359057c3dda4e13a8201e20532d3b469d6f4641e7b",
+     "bytes": 197
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "9dd3a90379e6632ec0aa45321d291c8d435406a87567bc597fc3e15a8486ac8d",
+     "bytes_as_fetched": 9856,
+     "sha256": "9dd3a90379e6632ec0aa45321d291c8d435406a87567bc597fc3e15a8486ac8d",
+     "bytes": 9856
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "0ffc7f88ce6fd1959e5c07d69644c3f84802ef3d363c1ca90d9a66a973bb06b6",
+     "bytes_as_fetched": 94,
+     "sha256": "0ffc7f88ce6fd1959e5c07d69644c3f84802ef3d363c1ca90d9a66a973bb06b6",
+     "bytes": 94
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-wcid-data-dir",
+   "url": "https://what-can-it-do.games.sgit.ai/data/",
+   "final_url": "https://what-can-it-do.games.sgit.ai/data/",
+   "publisher": "what-can-it-do.games.sgit.ai (SGit-AI)",
+   "title": "The data pack",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T15:15:53Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4773c1573203a002e61e0d3b0905f31dc666389aba35a5fc3a90263e4368185c",
+     "bytes_as_fetched": 174,
+     "sha256": "4773c1573203a002e61e0d3b0905f31dc666389aba35a5fc3a90263e4368185c",
+     "bytes": 174
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "83cdb73ae6748815c7aaacdee55eb49dc714473157edb64f8fd55927b5694e6a",
+     "bytes_as_fetched": 11841,
+     "sha256": "83cdb73ae6748815c7aaacdee55eb49dc714473157edb64f8fd55927b5694e6a",
+     "bytes": 11841
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "44e3634f00d2cff07e93a0660fbcbdd57d7aea92c4258cf244392d5efed5238c",
+     "bytes_as_fetched": 4989,
+     "sha256": "44e3634f00d2cff07e93a0660fbcbdd57d7aea92c4258cf244392d5efed5238c",
+     "bytes": 4989
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a3e901211b2db005f8ce407cb9a83cbbe922e933f480dec6c331b5efce85ed8b",
+     "bytes_as_fetched": 95,
+     "sha256": "a3e901211b2db005f8ce407cb9a83cbbe922e933f480dec6c331b5efce85ed8b",
+     "bytes": 95
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-wcid-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "fe1d8337fdaa171d0d30cc0b4661d170c8c7898ba1fe0d6a9aebc7b58affaa98",
+     "bytes_as_fetched": 22989,
+     "sha256": "fe1d8337fdaa171d0d30cc0b4661d170c8c7898ba1fe0d6a9aebc7b58affaa98",
+     "bytes": 22989
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "dbccf831ce34bcc03d27055e2adbdbd1c9080ffce685b5be9173200f58ba41fe",
+     "bytes_as_fetched": 90,
+     "sha256": "dbccf831ce34bcc03d27055e2adbdbd1c9080ffce685b5be9173200f58ba41fe",
+     "bytes": 90
+    }
+   ]
+  },
+  {
+   "id": "e02b-wcid-mesh-graph",
+   "url": "https://what-can-it-do.games.sgit.ai/data/mesh/graph.json",
+   "final_url": "https://what-can-it-do.games.sgit.ai/data/mesh/graph.json",
+   "publisher": "what-can-it-do.games.sgit.ai (SGit-AI)",
+   "title": "The mesh (mesh/v1)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T15:16:11Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "6d1f5d389298357c41afbe27327c922dc396d815c6ce0b362effe0197b9b56da",
+     "bytes_as_fetched": 206,
+     "sha256": "6d1f5d389298357c41afbe27327c922dc396d815c6ce0b362effe0197b9b56da",
+     "bytes": 206
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "636d19c5bce6c2508cb555c038f8041bf0add1d17cd486c3faa22184990af426",
+     "bytes_as_fetched": 275445,
+     "sha256": "636d19c5bce6c2508cb555c038f8041bf0add1d17cd486c3faa22184990af426",
+     "bytes": 275445
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "ef9fba02fbd5cc3c809e9bf85d3bb1f7b376f9d8091e9dde924789dc233a798f",
+     "bytes_as_fetched": 97,
+     "sha256": "ef9fba02fbd5cc3c809e9bf85d3bb1f7b376f9d8091e9dde924789dc233a798f",
+     "bytes": 97
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e02b-wcid-mesh-ontology",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "492b83575aaea37d7159e39b16f893e8336f83e8483c6cc7c1ffb5b393317386",
+     "bytes_as_fetched": 215,
+     "sha256": "492b83575aaea37d7159e39b16f893e8336f83e8483c6cc7c1ffb5b393317386",
+     "bytes": 215
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "449f14f52f634710a7bfec4c21111aaa92769b0c38d062b06456fc1170a2477f",
+     "bytes_as_fetched": 4528,
+     "sha256": "449f14f52f634710a7bfec4c21111aaa92769b0c38d062b06456fc1170a2477f",
+     "bytes": 4528
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "fb416b8501b7df7806eed298896180760706e549e5421d838b52ea68fb5b7083",
+     "bytes_as_fetched": 100,
+     "sha256": "fb416b8501b7df7806eed298896180760706e549e5421d838b52ea68fb5b7083",
+     "bytes": 100
+    }
+   ]
+  },
+  {
+   "id": "e02b-wcid-reductions",
+   "url": "https://what-can-it-do.games.sgit.ai/data/reductions.json",
+   "final_url": "https://what-can-it-do.games.sgit.ai/data/reductions.json",
+   "publisher": "what-can-it-do.games.sgit.ai (SGit-AI)",
+   "title": "Reductions (reductions/v1)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T15:15:54Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "13d5c11ae34d2bc0bde8faba57850cda2a08a4939d54bbfbf920cffa56ab0b1c",
+     "bytes_as_fetched": 206,
+     "sha256": "13d5c11ae34d2bc0bde8faba57850cda2a08a4939d54bbfbf920cffa56ab0b1c",
+     "bytes": 206
+    },
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "dc2eb1ff1d4ed10849677a6137ac40ab0deb317c91195cb965aa418aa2c20988",
+     "bytes_as_fetched": 5867,
+     "sha256": "dc2eb1ff1d4ed10849677a6137ac40ab0deb317c91195cb965aa418aa2c20988",
+     "bytes": 5867
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d3b6793eec839755baaf6c5af828681ac39c7debffd8d5a1f523fa5d4913e1a8",
+     "bytes_as_fetched": 97,
+     "sha256": "d3b6793eec839755baaf6c5af828681ac39c7debffd8d5a1f523fa5d4913e1a8",
+     "bytes": 97
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
    "id": "e04-anthropic-alignment-assessment",
    "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
    "final_url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
@@ -3794,6 +4231,893 @@
    ],
    "capture": "full",
    "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e05-abc-gym-hack",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "eb3d9b6e2815047576ff3cff4dbcc19120c791a76134508d73c82d768cefec8c",
+     "bytes_as_fetched": 383789,
+     "redacted": 5,
+     "sha256": "475d30ca6129e3e2d237687c69b9f32249a8e8e10180ae9fe45dd0e66b8f381c",
+     "bytes": 383741
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "be511f4c5cc465fb4135c5964abb3415cfa9f27528c37b90573d26c557bed02a",
+     "bytes_as_fetched": 15247,
+     "redacted": 1,
+     "sha256": "c8b57885f078db786a435bebb4482b476ec8390a23cb23146a3ed3f77a9710a3",
+     "bytes": 15238
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "dcf941f3f906b689bef961d731b2286f166d0ee91ea2ff0c8a0d2b381bbd1cd3",
+     "bytes_as_fetched": 93,
+     "sha256": "dcf941f3f906b689bef961d731b2286f166d0ee91ea2ff0c8a0d2b381bbd1cd3",
+     "bytes": 93
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "75dc4a5f77af7528b2bd8c8d356ad59fbf52962008759d8de1e05671e303f20e",
+     "bytes_as_fetched": 122,
+     "sha256": "75dc4a5f77af7528b2bd8c8d356ad59fbf52962008759d8de1e05671e303f20e",
+     "bytes": 122
+    }
+   ]
+  },
+  {
+   "id": "e05-abc-hf-swarm",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "707dd0f3b268889566c87e6d0a6d51e36c9fde2582bb76414915952ac3da4985",
+     "bytes_as_fetched": 366278,
+     "redacted": 1,
+     "sha256": "2ed08f4859e8c9a17040417fed89f98d614961769c7a707c2606ae640842f273",
+     "bytes": 366266
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f4be4aa3e76a56bb48e0de5ca3a130365fba70a8d9f395f8ffdfcada1ae02518",
+     "bytes_as_fetched": 14498,
+     "sha256": "f4be4aa3e76a56bb48e0de5ca3a130365fba70a8d9f395f8ffdfcada1ae02518",
+     "bytes": 14498
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "7bface713f519cb918dc23941ce0b1c7d2ddda010d818211f4e322e3d2f7e5e7",
+     "bytes_as_fetched": 93,
+     "sha256": "7bface713f519cb918dc23941ce0b1c7d2ddda010d818211f4e322e3d2f7e5e7",
+     "bytes": 93
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "8233166fdeacbe59d38146131a06d3b2b12d6815625519e868c312fc3a506ff7",
+     "bytes_as_fetched": 130,
+     "sha256": "8233166fdeacbe59d38146131a06d3b2b12d6815625519e868c312fc3a506ff7",
+     "bytes": 130
+    }
+   ]
+  },
+  {
+   "id": "e05-abc-medicare-dc",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "cf397c6453545f15bfd0395dfba02c86336c9afd1c609512c1778fa77835f6c3",
+     "bytes_as_fetched": 355867,
+     "redacted": 1,
+     "sha256": "1942c8f53adfaa5c1416b78d23f592e84f9472d10ebdadc58ce7a911c2f7b3c3",
+     "bytes": 355855
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "03d21642f03f8a714a18dff922a1c39052b49f09a6c6b0d97c2e08cac8a15555",
+     "bytes_as_fetched": 11866,
+     "sha256": "03d21642f03f8a714a18dff922a1c39052b49f09a6c6b0d97c2e08cac8a15555",
+     "bytes": 11866
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "646138f095e015a6b64ff342929be898759517deef892f0c35b63258dc5031ef",
+     "bytes_as_fetched": 96,
+     "sha256": "646138f095e015a6b64ff342929be898759517deef892f0c35b63258dc5031ef",
+     "bytes": 96
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "6f06736eacb7e924c5e197dc1ac3415ba694e73549ef2116842b22a9f8e01cb3",
+     "bytes_as_fetched": 129,
+     "sha256": "6f06736eacb7e924c5e197dc1ac3415ba694e73549ef2116842b22a9f8e01cb3",
+     "bytes": 129
+    }
+   ]
+  },
+  {
+   "id": "e05-abc-medicare-live",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e749b8a3830439b158195ea5b6dbe48fbc5505532d461deb72e80335ff5b3457",
+     "bytes_as_fetched": 1298036,
+     "redacted": 1,
+     "sha256": "25d75e5142aaf7ee561bbeaa73885f931647d326632cd4e1410404d000f3bb8b",
+     "bytes": 1298024
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0b03950eadd7ace10148f2dd00987471360e77a06d6e7d8f7f59114d6ce2c8a7",
+     "bytes_as_fetched": 67905,
+     "sha256": "0b03950eadd7ace10148f2dd00987471360e77a06d6e7d8f7f59114d6ce2c8a7",
+     "bytes": 67905
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "1ea809024209eaa682b977402d9078c3ff8302cac9df1ce3ed587eb9db64c12b",
+     "bytes_as_fetched": 98,
+     "sha256": "1ea809024209eaa682b977402d9078c3ff8302cac9df1ce3ed587eb9db64c12b",
+     "bytes": 98
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "5ed3e938a591a1638b584eb6684548702ba2a59be3745364e3d712177cd1fef4",
+     "bytes_as_fetched": 124,
+     "sha256": "5ed3e938a591a1638b584eb6684548702ba2a59be3745364e3d712177cd1fef4",
+     "bytes": 124
+    }
+   ]
+  },
+  {
+   "id": "e05-affinda-gym",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "bf9a62097fc6cd5efb70bae34974f14d8f428fae5da37093f42484415f3c8018",
+     "bytes_as_fetched": 189521,
+     "sha256": "bf9a62097fc6cd5efb70bae34974f14d8f428fae5da37093f42484415f3c8018",
+     "bytes": 189521
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c8a28962693be03d4dadf9945f3e892a990eb6ce5f4529d36308bcf81470bbaf",
+     "bytes_as_fetched": 2010,
+     "sha256": "c8a28962693be03d4dadf9945f3e892a990eb6ce5f4529d36308bcf81470bbaf",
+     "bytes": 2010
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "3d1a0945871e2353b24d0428416accf10274f784c9ecca60d5283b2c1828db56",
+     "bytes_as_fetched": 92,
+     "sha256": "3d1a0945871e2353b24d0428416accf10274f784c9ecca60d5283b2c1828db56",
+     "bytes": 92
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "8df4be43440479f7c992ce263536c87db48574dae1a3aa0885616dce76c78679",
+     "bytes_as_fetched": 131,
+     "sha256": "8df4be43440479f7c992ce263536c87db48574dae1a3aa0885616dce76c78679",
+     "bytes": 131
+    }
+   ]
+  },
+  {
+   "id": "e05-aiid-1642",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "50579bfbd4e8094fd616108b6117670aaabffc73f92d2d78cc3bae059b88d5c0",
+     "bytes_as_fetched": 379153,
+     "sha256": "50579bfbd4e8094fd616108b6117670aaabffc73f92d2d78cc3bae059b88d5c0",
+     "bytes": 379153
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "61fc8f5c1c1bb63d7115cb21e3d6f59a15a27afe59b73ecdad50af4659a48819",
+     "bytes_as_fetched": 4361,
+     "sha256": "61fc8f5c1c1bb63d7115cb21e3d6f59a15a27afe59b73ecdad50af4659a48819",
+     "bytes": 4361
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "cb7960d36af5b4d64593ab45c9466f195a22d57e1ab35ad0973f7511fd8e2aee",
+     "bytes_as_fetched": 90,
+     "sha256": "cb7960d36af5b4d64593ab45c9466f195a22d57e1ab35ad0973f7511fd8e2aee",
+     "bytes": 90
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "2ac6a0748aa391cf919d1acc1d7e4b1c5d6785c8c39d7d6bc2094da9174d3121",
+     "bytes_as_fetched": 64,
+     "sha256": "2ac6a0748aa391cf919d1acc1d7e4b1c5d6785c8c39d7d6bc2094da9174d3121",
+     "bytes": 64
+    }
+   ]
+  },
+  {
+   "id": "e05-aiid-report-7717",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "11a70eebbf3a61ab69a032cd14bb6a6dbcf36783561b63a6eaeb8bc8e4796b13",
+     "bytes_as_fetched": 341394,
+     "sha256": "11a70eebbf3a61ab69a032cd14bb6a6dbcf36783561b63a6eaeb8bc8e4796b13",
+     "bytes": 341394
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1d12c66a995fe39df943afa1738d76e07541b1c958a811990561df8bbeb4edfb",
+     "bytes_as_fetched": 7909,
+     "sha256": "1d12c66a995fe39df943afa1738d76e07541b1c958a811990561df8bbeb4edfb",
+     "bytes": 7909
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6e7fa3ee3997dbc969aac8ecfcd9956b5447a1db79c232f5929f2a04916af324",
+     "bytes_as_fetched": 97,
+     "sha256": "6e7fa3ee3997dbc969aac8ecfcd9956b5447a1db79c232f5929f2a04916af324",
+     "bytes": 97
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "28ad4491da821ca662b9a5265e3ccc7aa90048c01ed7a5024786a0d8ed4aecb4",
+     "bytes_as_fetched": 67,
+     "sha256": "28ad4491da821ca662b9a5265e3ccc7aa90048c01ed7a5024786a0d8ed4aecb4",
+     "bytes": 67
+    }
+   ]
+  },
+  {
+   "id": "e05-engadget-gym",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c4bc04ee4261318b4f192f931c4c2fd2480603592161b84215ad5300a3c94f87",
+     "bytes_as_fetched": 62962,
+     "redacted": 1,
+     "sha256": "8fecfbb0dbe31635a515bd31cc5e64cb5149ec99f5eee38b663a91644bac7e8b",
+     "bytes": 62622
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "47cdc5e4014b86cd523b7c100f08db6f4b4891447ef87eea91c6b55dd2b33abf",
+     "bytes_as_fetched": 5342,
+     "sha256": "47cdc5e4014b86cd523b7c100f08db6f4b4891447ef87eea91c6b55dd2b33abf",
+     "bytes": 5342
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "bb661e596acbaa9778afddf35f4dee81a57eb23d55352dc0fa730b5cbcb038b6",
+     "bytes_as_fetched": 93,
+     "sha256": "bb661e596acbaa9778afddf35f4dee81a57eb23d55352dc0fa730b5cbcb038b6",
+     "bytes": 93
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "f2e3833532816724c0b72ba963b223482409258cdaa8f9fc5c42912feb81422d",
+     "bytes_as_fetched": 154,
+     "sha256": "f2e3833532816724c0b72ba963b223482409258cdaa8f9fc5c42912feb81422d",
+     "bytes": 154
+    }
+   ]
+  },
+  {
+   "id": "e05-openai-hf-misalignment",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2671199c96fbd014c6cd8702dbf9727505a5a66e4e3f9d41ed3914f96c34f19d",
+     "bytes_as_fetched": 9935,
+     "sha256": "2671199c96fbd014c6cd8702dbf9727505a5a66e4e3f9d41ed3914f96c34f19d",
+     "bytes": 9935
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+     "bytes_as_fetched": 1,
+     "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+     "bytes": 1
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f86dc03b5ad36bb5119a2f64ac1cd02917a99255f1d4b9d11e2df59f5d9d3f00",
+     "bytes_as_fetched": 103,
+     "sha256": "f86dc03b5ad36bb5119a2f64ac1cd02917a99255f1d4b9d11e2df59f5d9d3f00",
+     "bytes": 103
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "c4dd58db19cee0199b904a77752dedec5b2fcd2e7ea0190719900788b9c3307d",
+     "bytes_as_fetched": 84,
+     "sha256": "c4dd58db19cee0199b904a77752dedec5b2fcd2e7ea0190719900788b9c3307d",
+     "bytes": 84
+    }
+   ]
+  },
+  {
+   "id": "e05-register-openai-100orgs",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "48231b4d4c0309764c040e153bc21229eeadb8cd26882ce861d3d5cc07041d23",
+     "bytes_as_fetched": 179556,
+     "redacted": 1,
+     "sha256": "ccf7d4769ed596c416d22a227535ac6922e1f522f0642e704582449d744193e5",
+     "bytes": 179543
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1d688f8be75114ad677a986a3558f049b14b6ff0e4d041a41a77a9049ce6436a",
+     "bytes_as_fetched": 11472,
+     "sha256": "1d688f8be75114ad677a986a3558f049b14b6ff0e4d041a41a77a9049ce6436a",
+     "bytes": 11472
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "33d88d5ee0118cdb56abacf2e11b9506d250d71f0266cf3c29bf2dae22b2769f",
+     "bytes_as_fetched": 104,
+     "sha256": "33d88d5ee0118cdb56abacf2e11b9506d250d71f0266cf3c29bf2dae22b2769f",
+     "bytes": 104
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "9cec506a5f603d8dbe42d1b79c76c40e5467ac0f653c619137861bc13df698e0",
+     "bytes_as_fetched": 162,
+     "sha256": "9cec506a5f603d8dbe42d1b79c76c40e5467ac0f653c619137861bc13df698e0",
+     "bytes": 162
+    }
+   ]
+  },
+  {
+   "id": "e05-techcrunch-gym",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1379baeebc86eebe885bf16d9c5726f775ffa3f66d4bd717e8ffa99996192604",
+     "bytes_as_fetched": 240678,
+     "redacted": 1,
+     "sha256": "bd009edd376603e42cb752833e7fa8898a1434a0a4fe5e5793256e655a674e1b",
+     "bytes": 240667
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "7ff2374589afd429fc5e73bd1622c87adf27802bf04ba63749d1d68582ea871a",
+     "bytes_as_fetched": 7551,
+     "sha256": "7ff2374589afd429fc5e73bd1622c87adf27802bf04ba63749d1d68582ea871a",
+     "bytes": 7551
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f8db9d4082d185339aa985c51aa814f88a93fda259c6563f00315d910f266b1b",
+     "bytes_as_fetched": 95,
+     "sha256": "f8db9d4082d185339aa985c51aa814f88a93fda259c6563f00315d910f266b1b",
+     "bytes": 95
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "ac25d8fb1a3cfc7a578aad6d2e8e8baec6d701cd2c55998d5d966055d315ad4c",
+     "bytes_as_fetched": 124,
+     "sha256": "ac25d8fb1a3cfc7a578aad6d2e8e8baec6d701cd2c55998d5d966055d315ad4c",
+     "bytes": 124
+    }
+   ]
+  },
+  {
+   "id": "e05-tnw-gym",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "061483ff1d08b50561c16b04245fcbfdf921cc502b72f1e9e8c41e79496e21c2",
+     "bytes_as_fetched": 187712,
+     "redacted": 1,
+     "sha256": "c7c3e044c527d37fe9dd3f91926c2f33f7a69b341e0a4acca12efce430c35e06",
+     "bytes": 187703
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c31fa3681deb2c9ce151a405f62637e0b25f622413e2b752e1662cad897f76c4",
+     "bytes_as_fetched": 6604,
+     "sha256": "c31fa3681deb2c9ce151a405f62637e0b25f622413e2b752e1662cad897f76c4",
+     "bytes": 6604
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "bd66d6f5a36f9a5749ece6eac14d46f018d134406e2241de1ad1e7eb1346a9ed",
+     "bytes_as_fetched": 88,
+     "sha256": "bd66d6f5a36f9a5749ece6eac14d46f018d134406e2241de1ad1e7eb1346a9ed",
+     "bytes": 88
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "abbd8e425237c43a9063a3a19b8538e7213310f99a6c12bd00c10103f61ac853",
+     "bytes_as_fetched": 166,
+     "sha256": "abbd8e425237c43a9063a3a19b8538e7213310f99a6c12bd00c10103f61ac853",
+     "bytes": 166
+    }
+   ]
+  },
+  {
+   "id": "e05-unite-openai-six-reports",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3661b1f6a3d6aaab28f4ee1d4f8040098724d3b762f1fcaaad5172fa12a36882",
+     "bytes_as_fetched": 597655,
+     "sha256": "3661b1f6a3d6aaab28f4ee1d4f8040098724d3b762f1fcaaad5172fa12a36882",
+     "bytes": 597655
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "6a91349d072d8a04b327f16deac374fa06f60057134ff79eeb483cc8d68785c6",
+     "bytes_as_fetched": 14979,
+     "sha256": "6a91349d072d8a04b327f16deac374fa06f60057134ff79eeb483cc8d68785c6",
+     "bytes": 14979
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "346fd7bbaccd21b47edacc2cc9060914bbfb4f6a7950125f03f6e93a9905507c",
+     "bytes_as_fetched": 105,
+     "sha256": "346fd7bbaccd21b47edacc2cc9060914bbfb4f6a7950125f03f6e93a9905507c",
+     "bytes": 105
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "f54c0362f743ed9f5a8c30c51e01be350b89b3edcaa3ae49c4151ae4fcef3680",
+     "bytes_as_fetched": 122,
+     "sha256": "f54c0362f743ed9f5a8c30c51e01be350b89b3edcaa3ae49c4151ae4fcef3680",
+     "bytes": 122
+    }
+   ]
+  },
+  {
+   "id": "e06-cisa-aa23-059a",
+   "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-059a",
+   "final_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-059a",
+   "publisher": "CISA",
+   "title": "AA23-059A CISA Red Team Shares Key Findings (not read)",
+   "kind": "primary",
+   "published": "2023-02-28",
+   "captured_at": "2026-10-29T15:14:01Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "56e14e04075af7e4c0c8126738ffe3ef42323c2769744a7ab706f3805a0c46d4",
+     "bytes_as_fetched": 224,
+     "sha256": "56e14e04075af7e4c0c8126738ffe3ef42323c2769744a7ab706f3805a0c46d4",
+     "bytes": 224
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f6ce9ff2ad6cc88ea73f3d7ed7f7d6485bb1e0044eb5472200c7e6a309d11d61",
+     "bytes_as_fetched": 432,
+     "sha256": "f6ce9ff2ad6cc88ea73f3d7ed7f7d6485bb1e0044eb5472200c7e6a309d11d61",
+     "bytes": 432
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "6d02524e563261bf65a19911da8269d7022f651526163b592e9f46dac8f8d472",
+     "bytes_as_fetched": 254,
+     "sha256": "6d02524e563261bf65a19911da8269d7022f651526163b592e9f46dac8f8d472",
+     "bytes": 254
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "729181b01db4e48a8c60e320d81092c15e1dbb0e9a9ca51daa09f6555feeff1b",
+     "bytes_as_fetched": 95,
+     "sha256": "729181b01db4e48a8c60e320d81092c15e1dbb0e9a9ca51daa09f6555feeff1b",
+     "bytes": 95
+    }
+   ],
+   "capture": "failed: 403 bot check at cisa.gov, not got round; no quote used",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-msti-midnight-blizzard-guidance",
+   "url": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/",
+   "final_url": "https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/",
+   "publisher": "Microsoft Threat Intelligence",
+   "title": "Midnight Blizzard: Guidance for responders on nation-state attack",
+   "kind": "primary",
+   "published": "2024-01-25",
+   "captured_at": "2026-10-29T15:14:03Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f2c0d87d70960cc584e62136384c92b70664d343b891b0d330000f57954ace93",
+     "bytes_as_fetched": 351,
+     "sha256": "f2c0d87d70960cc584e62136384c92b70664d343b891b0d330000f57954ace93",
+     "bytes": 351
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c4f557059e32dd77c437f9b7f5431f8f3003cee7ede010ced7969a9e5e78048c",
+     "bytes_as_fetched": 303503,
+     "sha256": "c4f557059e32dd77c437f9b7f5431f8f3003cee7ede010ced7969a9e5e78048c",
+     "bytes": 303503
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "5d5c41e44527c698fdb1a339c62ad2305a018f5741cb20fdd74a117f5da0e613",
+     "bytes_as_fetched": 22221,
+     "sha256": "5d5c41e44527c698fdb1a339c62ad2305a018f5741cb20fdd74a117f5da0e613",
+     "bytes": 22221
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2e5be1179d36a75497bedecde027b6fa98d8ce21603155ebd795867d8ac8ab63",
+     "bytes_as_fetched": 112,
+     "sha256": "2e5be1179d36a75497bedecde027b6fa98d8ce21603155ebd795867d8ac8ab63",
+     "bytes": 112
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-php-org-roles",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "aecd82648b9063fb39cce2ce7b292d5f011131cbc4ddbbe23b58b8dc99422202",
+     "bytes_as_fetched": 235,
+     "sha256": "aecd82648b9063fb39cce2ce7b292d5f011131cbc4ddbbe23b58b8dc99422202",
+     "bytes": 235
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "ac9abb3af5597255098034e5d9db91da63cd84db6a53035b81a4ec95af8c696d",
+     "bytes_as_fetched": 15595,
+     "sha256": "ac9abb3af5597255098034e5d9db91da63cd84db6a53035b81a4ec95af8c696d",
+     "bytes": 15595
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ac9abb3af5597255098034e5d9db91da63cd84db6a53035b81a4ec95af8c696d",
+     "bytes_as_fetched": 15595,
+     "sha256": "ac9abb3af5597255098034e5d9db91da63cd84db6a53035b81a4ec95af8c696d",
+     "bytes": 15595
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "583d0f7127bdc6c78cf1f6a57f407168b48f20ddc95031063cee8fdb0f51f348",
+     "bytes_as_fetched": 92,
+     "sha256": "583d0f7127bdc6c78cf1f6a57f407168b48f20ddc95031063cee8fdb0f51f348",
+     "bytes": 92
+    }
+   ]
+  },
+  {
+   "id": "e06-php-r10",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/grc/risks/r10/index.md",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/grc/risks/r10/index.md",
+   "publisher": "PHP October 2026 newsroom (this team)",
+   "title": "R10: This newsroom's own agents are steered, leak or mislead",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T15:14:02Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9e6876b9bed6e0a2344c35ef5c1578a8b01129e146526125d83dd1396a5d9fff",
+     "bytes_as_fetched": 203,
+     "sha256": "9e6876b9bed6e0a2344c35ef5c1578a8b01129e146526125d83dd1396a5d9fff",
+     "bytes": 203
+    },
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "03dd5b014080caef7ab151f4f576d6310946175ad1c9b54483708a6bc9af3dcb",
+     "bytes_as_fetched": 6654,
+     "sha256": "03dd5b014080caef7ab151f4f576d6310946175ad1c9b54483708a6bc9af3dcb",
+     "bytes": 6654
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "03dd5b014080caef7ab151f4f576d6310946175ad1c9b54483708a6bc9af3dcb",
+     "bytes_as_fetched": 6654,
+     "sha256": "03dd5b014080caef7ab151f4f576d6310946175ad1c9b54483708a6bc9af3dcb",
+     "bytes": 6654
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c102e3ef97423d4413a97e86800e05974c0e8ee65bfe8e7c2056369060abc2ab",
+     "bytes_as_fetched": 86,
+     "sha256": "c102e3ef97423d4413a97e86800e05974c0e8ee65bfe8e7c2056369060abc2ab",
+     "bytes": 86
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e06-php-threat-model",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/admin/appsec/threat-model/",
+   "final_url": "https://team.php.oct.2026.newsroom.sgit.ai/admin/appsec/threat-model/",
+   "publisher": "PHP October 2026 newsroom (this team)",
+   "title": "Threat model and data flows",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T15:14:53Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e98dd792d1b1211c5175eb7902c35e82cc80a82d9e9019c38fed414cee3086e6",
+     "bytes_as_fetched": 262,
+     "sha256": "e98dd792d1b1211c5175eb7902c35e82cc80a82d9e9019c38fed414cee3086e6",
+     "bytes": 262
+    },
+    {
+     "name": "moved-stub.html",
+     "sha256_as_fetched": "9ba12c84535d8ad24b55456690a43ac7933365da05f6a596b7b26cac5d100788",
+     "bytes_as_fetched": 657,
+     "sha256": "9ba12c84535d8ad24b55456690a43ac7933365da05f6a596b7b26cac5d100788",
+     "bytes": 657
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2899aa36126babf58fa7f9bd3a2dcba15d587513a9f058de65b4f1061f8cab6f",
+     "bytes_as_fetched": 81805,
+     "sha256": "2899aa36126babf58fa7f9bd3a2dcba15d587513a9f058de65b4f1061f8cab6f",
+     "bytes": 81805
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4c9d4d1f6789cf03fe52959aabafe460bed653e150fd40255509563541df9574",
+     "bytes_as_fetched": 14546,
+     "sha256": "4c9d4d1f6789cf03fe52959aabafe460bed653e150fd40255509563541df9574",
+     "bytes": 14546
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "999e066117f8bf9fb15383d6209d22af169bcdd718cd4084741ef483acb1b3b7",
+     "bytes_as_fetched": 158,
+     "sha256": "999e066117f8bf9fb15383d6209d22af169bcdd718cd4084741ef483acb1b3b7",
+     "bytes": 158
+    }
+   ],
+   "capture": "full (old address serves a moved stub, kept as moved-stub.html; followed to the new address)",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e07-claude-code-iam",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "fa7e4224b8b20ee25f0a3c6ccfe168ce122daf0f212e4bd4590cf4ec86fa109e",
+     "bytes_as_fetched": 173,
+     "sha256": "fa7e4224b8b20ee25f0a3c6ccfe168ce122daf0f212e4bd4590cf4ec86fa109e",
+     "bytes": 173
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c328c020acac53dce20ae14944a27ab7d168741377a0a899fa401292b2d9b674",
+     "bytes_as_fetched": 371178,
+     "sha256": "c328c020acac53dce20ae14944a27ab7d168741377a0a899fa401292b2d9b674",
+     "bytes": 371178
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b1129e21fd9713e927b24ba2c4acc4f2ee1c76d859f6235c48f91b0d2162515e",
+     "bytes_as_fetched": 157953,
+     "sha256": "b1129e21fd9713e927b24ba2c4acc4f2ee1c76d859f6235c48f91b0d2162515e",
+     "bytes": 157953
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "cfa736532e13c18271e181c82f3a8d8abe869cc6c87d5d169b6101d59cb986e5",
+     "bytes_as_fetched": 96,
+     "sha256": "cfa736532e13c18271e181c82f3a8d8abe869cc6c87d5d169b6101d59cb986e5",
+     "bytes": 96
+    }
+   ]
+  },
+  {
+   "id": "e07-claude-code-security",
+   "url": "https://docs.claude.com/en/docs/claude-code/security",
+   "final_url": "https://code.claude.com/docs/en/security",
+   "publisher": "Anthropic",
+   "title": "Claude Code security (Claude Code Docs)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:14:01Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4b8c7dc64bf18da4f775aa49cd19afc974dbcc788c3ca9105ff83a4beafc1f08",
+     "bytes_as_fetched": 188,
+     "sha256": "4b8c7dc64bf18da4f775aa49cd19afc974dbcc788c3ca9105ff83a4beafc1f08",
+     "bytes": 188
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "78a7f762746f9813e3c9f0d4ab458657f8f085a52180a3afb4e1b8c9de979f9f",
+     "bytes_as_fetched": 262861,
+     "sha256": "78a7f762746f9813e3c9f0d4ab458657f8f085a52180a3afb4e1b8c9de979f9f",
+     "bytes": 262861
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "df1b48650c93b6bf0cfe3d98bf97c18fda4b87ccb4022010b8ff6a868ba66b8d",
+     "bytes_as_fetched": 100770,
+     "sha256": "df1b48650c93b6bf0cfe3d98bf97c18fda4b87ccb4022010b8ff6a868ba66b8d",
+     "bytes": 100770
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "056886ca41355ef540eb981ebaa20d2bc03302925c6025ae021af11fab296800",
+     "bytes_as_fetched": 101,
+     "sha256": "056886ca41355ef540eb981ebaa20d2bc03302925c6025ae021af11fab296800",
+     "bytes": 101
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e07-gh-copilot-agent-firewall",
+   "url": "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall",
+   "final_url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall",
+   "publisher": "GitHub",
+   "title": "Customizing or disabling the firewall for GitHub Copilot (GitHub Docs)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:14:02Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4f5732f13456b7a469e6e9d6b13d978ece38bd2a7defc0e6c29187ab3ec0311d",
+     "bytes_as_fetched": 305,
+     "sha256": "4f5732f13456b7a469e6e9d6b13d978ece38bd2a7defc0e6c29187ab3ec0311d",
+     "bytes": 305
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f594b90d178b06b5e656a9dc38eb12ebc9fe6d9d4b736528975088ff9d56c41b",
+     "bytes_as_fetched": 672551,
+     "redacted": 20,
+     "sha256": "f51307f9550dd824ac72926e51cd1e83e24fdd20c04197a6e41763683596a2ce",
+     "bytes": 672431
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "2ab644c714bdcdab661e521508468022ab5e76045fa5b69b2ed7cb74d7793db4",
+     "bytes_as_fetched": 21564,
+     "sha256": "2ab644c714bdcdab661e521508468022ab5e76045fa5b69b2ed7cb74d7793db4",
+     "bytes": 21564
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e967e3ab4efecc92dd42760f879ac31fca66de784106601a038ac28710ac3129",
+     "bytes_as_fetched": 106,
+     "sha256": "e967e3ab4efecc92dd42760f879ac31fca66de784106601a038ac28710ac3129",
+     "bytes": 106
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e07-gh-copilot-agent-risks",
+   "url": "https://docs.github.com/en/copilot/concepts/agents/coding-agent/risks-and-mitigations",
+   "final_url": "https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations",
+   "publisher": "GitHub",
+   "title": "Risks and mitigations for Copilot cloud agent (GitHub Docs)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:14:02Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c97730243e08ab1e13efda1c7dd665a26b47d7da7b22e55b6643e7fb0ca65dd6",
+     "bytes_as_fetched": 289,
+     "sha256": "c97730243e08ab1e13efda1c7dd665a26b47d7da7b22e55b6643e7fb0ca65dd6",
+     "bytes": 289
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a24fba3a34d30d51f4f09d4390c00008f5e9488abc1dacb922427e0276c584b5",
+     "bytes_as_fetched": 604480,
+     "redacted": 20,
+     "sha256": "a0e250341fc190fd717a8cb74ea715fe41e2c5a7b76d4559e17577a020c7c8f3",
+     "bytes": 604360
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "db650324e775e2985ea07fe000c3c108ff975c1afe988144dcbb069f121610c4",
+     "bytes_as_fetched": 20068,
+     "sha256": "db650324e775e2985ea07fe000c3c108ff975c1afe988144dcbb069f121610c4",
+     "bytes": 20068
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2adc1901cf02e1e91665e4564c76a60ebceb1c044b7d0c4c7b5cf51fcdf14d0f",
+     "bytes_as_fetched": 103,
+     "sha256": "2adc1901cf02e1e91665e4564c76a60ebceb1c044b7d0c4c7b5cf51fcdf14d0f",
+     "bytes": 103
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
+  },
+  {
+   "id": "e07-m365-copilot-privacy",
+   "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-privacy",
+   "final_url": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy",
+   "publisher": "Microsoft",
+   "title": "Data, Privacy, and Security for Microsoft 365 Copilot (Microsoft Learn)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:14:01Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c8b297f286cb19e1f6786c6660487ced7bef52a334f14aaceef8b1eabfc592da",
+     "bytes_as_fetched": 266,
+     "sha256": "c8b297f286cb19e1f6786c6660487ced7bef52a334f14aaceef8b1eabfc592da",
+     "bytes": 266
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "aafb73353c554c856ee7437f800b9150776aa97b486256317abd8869e3d701c4",
+     "bytes_as_fetched": 79246,
+     "sha256": "aafb73353c554c856ee7437f800b9150776aa97b486256317abd8869e3d701c4",
+     "bytes": 79246
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "db82bf85ec50ce0489c4d7a1828553a4a57d8c8a183fafd442dd5eef9266bb73",
+     "bytes_as_fetched": 25614,
+     "sha256": "db82bf85ec50ce0489c4d7a1828553a4a57d8c8a183fafd442dd5eef9266bb73",
+     "bytes": 25614
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "7849bcb69804ba6b57bdc86d4de02a01ffb020f2b59a2fe7b86b855c65beafaf",
+     "bytes_as_fetched": 101,
+     "sha256": "7849bcb69804ba6b57bdc86d4de02a01ffb020f2b59a2fe7b86b855c65beafaf",
+     "bytes": 101
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e06-e07-e02b"
   },
   {
    "id": "escudodigital-sharepoint-54",
@@ -8345,6 +9669,858 @@
      "bytes_as_fetched": 3332,
      "sha256": "eb53c18775dbb4152a7f8386a81dc22c128d833ef13fbd8ae17e38c45f774ede",
      "bytes": 3332
+    }
+   ]
+  },
+  {
+   "id": "inj2-0din-gemini-phishing",
+   "url": "https://0din.ai/blog/phishing-for-gemini",
+   "final_url": "https://0din.ai/blog/phishing-for-gemini",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "c944012571453d10c95454f971b1292784a90695d63df19ebf3d9cb44ee129f5",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "f9e22e0efae894c9106597b7528da2c22cd32410f254959c2b00ef0f72960832",
+     "bytes_as_fetched": 1996,
+     "redacted": 1,
+     "sha256": "f4fa40667f6e9e375b4119af859cccea45414c3782c03ea5be3e67bcea6f6940",
+     "bytes": 1555
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "00dafd15edbbad534f6329d9d3805797711a98025945469d54b1d9485feeabb4",
+     "bytes_as_fetched": 538,
+     "sha256": "00dafd15edbbad534f6329d9d3805797711a98025945469d54b1d9485feeabb4",
+     "bytes": 538
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e174a8d1cc2b2a3d4317d4a5ba4e2f372fa8054721492da7905d5e7e0b4d356f",
+     "bytes_as_fetched": 1092,
+     "sha256": "e174a8d1cc2b2a3d4317d4a5ba4e2f372fa8054721492da7905d5e7e0b4d356f",
+     "bytes": 1092
+    }
+   ]
+  },
+  {
+   "id": "inj2-aikido-promptpwnd",
+   "url": "https://www.aikido.dev/blog/promptpwnd-github-actions-ai-agents",
+   "final_url": "https://www.aikido.dev/blog/promptpwnd-github-actions-ai-agents",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "89914397532094c09b532d4219739faec785eefd3dc93142b0f87a5852496314",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "ab847c0f46dc4910bb0c048cd991055acffacb8b9e44e1f25cafa9759e37cfe1",
+     "bytes_as_fetched": 2038,
+     "redacted": 1,
+     "sha256": "090090a9c905bda156bb71610d06b7e5180d9e4245efc1d71e66ad8d7bf18893",
+     "bytes": 1849
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0743d7febe3086ead6cfb13d637662344b6602f2357f8b3d2f1eeb81d41baf47",
+     "bytes_as_fetched": 581,
+     "sha256": "0743d7febe3086ead6cfb13d637662344b6602f2357f8b3d2f1eeb81d41baf47",
+     "bytes": 581
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "39b27c880baee328bab3c0f2c4a872abf530d36e186c38cd76e3ca8af4e2e712",
+     "bytes_as_fetched": 764,
+     "sha256": "39b27c880baee328bab3c0f2c4a872abf530d36e186c38cd76e3ca8af4e2e712",
+     "bytes": 764
+    }
+   ]
+  },
+  {
+   "id": "inj2-aim-curxecute",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "da568f3bc70ad921d92c4094e8bd067312d164f114833a33f4ac7c4744032419",
+     "bytes_as_fetched": 772,
+     "redacted": 2,
+     "sha256": "06dd5c79f4dbd8cbe41d3a975d15b2e30993b7f72097e96a8ca43170fa67e835",
+     "bytes": 293
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "005f12ec491803e55bce953fff1d4d1f58c31fdd415a8484567814dca821f998",
+     "bytes_as_fetched": 473,
+     "sha256": "005f12ec491803e55bce953fff1d4d1f58c31fdd415a8484567814dca821f998",
+     "bytes": 473
+    },
+    {
+     "name": "note.txt",
+     "sha256_as_fetched": "ef0686408cba2d963f1ad93a1c92a1dafe898a4b9e45af12980f05686a706e0b",
+     "bytes_as_fetched": 79,
+     "sha256": "ef0686408cba2d963f1ad93a1c92a1dafe898a4b9e45af12980f05686a706e0b",
+     "bytes": 79
+    }
+   ]
+  },
+  {
+   "id": "inj2-brave-unseeable",
+   "url": "https://brave.com/blog/unseeable-prompt-injections/",
+   "final_url": "https://brave.com/blog/unseeable-prompt-injections/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "61654363ded0a5c84f5671342f27e1573b3efb58bd670611f5ecc0da432713dc",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a3d9fe1104f4f98d42211b25aeef1b1d5e0dc9af9e7d848917e121b99527d77a",
+     "bytes_as_fetched": 1906,
+     "sha256": "a3d9fe1104f4f98d42211b25aeef1b1d5e0dc9af9e7d848917e121b99527d77a",
+     "bytes": 1906
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "192df67f95128abfca20d172cba6de0289b6f35b7f56f1b7c01aeb76bd6f3a57",
+     "bytes_as_fetched": 539,
+     "sha256": "192df67f95128abfca20d172cba6de0289b6f35b7f56f1b7c01aeb76bd6f3a57",
+     "bytes": 539
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "63a9ceef9824d25df22d668c90fac5363285869634be00c9b4b0eb62895089be",
+     "bytes_as_fetched": 808,
+     "sha256": "63a9ceef9824d25df22d668c90fac5363285869634be00c9b4b0eb62895089be",
+     "bytes": 808
+    }
+   ]
+  },
+  {
+   "id": "inj2-checkpoint-mcpoison",
+   "url": "https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/",
+   "final_url": "https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "b7d000665e69216f0ff91ddae5e8083167bc13cbf05ea40ca053d9d8286b1058",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "76b94b50af2fb17f83ef31c695fd26be670fa71e23ad1ac841af8a44401474da",
+     "bytes_as_fetched": 1073,
+     "redacted": 1,
+     "sha256": "af13291a0febf6f31b6c8ef8f76006cce064be12534fb216283906b0baf3e013",
+     "bytes": 748
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c1a06330d1e35e379ca6875bf4f4dec6a449850a08af6e3e7dac9375652420ca",
+     "bytes_as_fetched": 591,
+     "sha256": "c1a06330d1e35e379ca6875bf4f4dec6a449850a08af6e3e7dac9375652420ca",
+     "bytes": 591
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "026b7de3f2ed5c79bf4321899eab39d024a582a76f569f044574f1177cd92c10",
+     "bytes_as_fetched": 877,
+     "sha256": "026b7de3f2ed5c79bf4321899eab39d024a582a76f569f044574f1177cd92c10",
+     "bytes": 877
+    }
+   ]
+  },
+  {
+   "id": "inj2-codeintegrity-notion",
+   "url": "https://www.codeintegrity.ai/blog/notion",
+   "final_url": "https://www.codeintegrity.ai/blog/notion",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "a4d4014ca4686005216c379cb032d229d4604110ac9b05abe7f776cc7618f477",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a397c4f215d93aa7ecd1be5fc8513354dd0b7308b89ec970f073ab5743cc3f11",
+     "bytes_as_fetched": 2283,
+     "sha256": "a397c4f215d93aa7ecd1be5fc8513354dd0b7308b89ec970f073ab5743cc3f11",
+     "bytes": 2283
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "be1e510a834beee0fa9e870c0fbadb4e3f2b58d6452b3d7ae843529071e17ee1",
+     "bytes_as_fetched": 538,
+     "sha256": "be1e510a834beee0fa9e870c0fbadb4e3f2b58d6452b3d7ae843529071e17ee1",
+     "bytes": 538
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "72644c4b8570d25023004319acac81136fb9f96c792bd91136b980109e1f115b",
+     "bytes_as_fetched": 421,
+     "sha256": "72644c4b8570d25023004319acac81136fb9f96c792bd91136b980109e1f115b",
+     "bytes": 421
+    }
+   ]
+  },
+  {
+   "id": "inj2-guardian-chatgpt-search",
+   "url": "https://www.theguardian.com/technology/2024/dec/24/chatgpt-search-tool-vulnerable-to-manipulation-and-deception-tests-show",
+   "final_url": "https://www.theguardian.com/technology/2024/dec/24/chatgpt-search-tool-vulnerable-to-manipulation-and-deception-tests-show",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "65050fe8dbf263afac130c74c1819bdcc4bcea5a77f69d9674eaeb6fb76a77ea",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "6c71d0ba68ffadae980ccd65ec9a8264604022eef0ee98a1cbb87cf90106603b",
+     "bytes_as_fetched": 3561,
+     "redacted": 7,
+     "sha256": "a3a705352a147a20271e4aab07a601a703794e7cb4afa2b142872b3d430f3946",
+     "bytes": 3150
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d2105bcb085c1138c2a38a1aa287353a3f4e0603e48c7cfc19d21889d5dd3313",
+     "bytes_as_fetched": 705,
+     "sha256": "d2105bcb085c1138c2a38a1aa287353a3f4e0603e48c7cfc19d21889d5dd3313",
+     "bytes": 705
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f6ae727874ee61bb1b46264ab725a21ecf88829db22bf27536aa34700273f476",
+     "bytes_as_fetched": 858,
+     "sha256": "f6ae727874ee61bb1b46264ab725a21ecf88829db22bf27536aa34700273f476",
+     "bytes": 858
+    }
+   ]
+  },
+  {
+   "id": "inj2-invariant-github-mcp",
+   "url": "https://invariantlabs.ai/blog/mcp-github-vulnerability",
+   "final_url": "https://invariantlabs.ai/blog/mcp-github-vulnerability",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "a56bb8706ee3b86846bfa8e1750a074319a87f47444f3b1b9f87e250702190cd",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "b4f579c0d3b18338afd89e2c5bf21350b0a72cda3c0080f77ebc09901a4bf3e9",
+     "bytes_as_fetched": 728,
+     "sha256": "b4f579c0d3b18338afd89e2c5bf21350b0a72cda3c0080f77ebc09901a4bf3e9",
+     "bytes": 728
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "336ffeecf00d9fc56dcfccd2175ec97218ed76244222043668bb6eb3ce4cd66a",
+     "bytes_as_fetched": 565,
+     "sha256": "336ffeecf00d9fc56dcfccd2175ec97218ed76244222043668bb6eb3ce4cd66a",
+     "bytes": 565
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "acb7164e0a5522d2c3f4ad85b29a4c93cef82ea2145e518a5b8ea6c7ef261022",
+     "bytes_as_fetched": 643,
+     "sha256": "acb7164e0a5522d2c3f4ad85b29a4c93cef82ea2145e518a5b8ea6c7ef261022",
+     "bytes": 643
+    }
+   ]
+  },
+  {
+   "id": "inj2-invariant-whatsapp-mcp",
+   "url": "https://invariantlabs.ai/blog/whatsapp-mcp-exploited",
+   "final_url": "https://invariantlabs.ai/blog/whatsapp-mcp-exploited",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "c579c780c6820b60d9314a5c308c8cfd4b5c9558a3a9fc8a9c191afa0641ef09",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "db4e44b2a319f5e785b586ba267eb0d529076ef0e72cde56c76a33d9a802bc76",
+     "bytes_as_fetched": 726,
+     "sha256": "db4e44b2a319f5e785b586ba267eb0d529076ef0e72cde56c76a33d9a802bc76",
+     "bytes": 726
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "065b897b49a5df4afa7fe6605d652b4866e53ec03da20c7cd606d2d8fe64c06f",
+     "bytes_as_fetched": 563,
+     "sha256": "065b897b49a5df4afa7fe6605d652b4866e53ec03da20c7cd606d2d8fe64c06f",
+     "bytes": 563
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "550808487c8b127d8bc8840725de257c4634da9e349b0932a6d97f2ad217a48d",
+     "bytes_as_fetched": 995,
+     "sha256": "550808487c8b127d8bc8840725de257c4634da9e349b0932a6d97f2ad217a48d",
+     "bytes": 995
+    }
+   ]
+  },
+  {
+   "id": "inj2-legit-camoleak",
+   "url": "https://www.legitsecurity.com/blog/camoleak-critical-github-copilot-vulnerability-leaks-private-source-code",
+   "final_url": "https://www.legitsecurity.com/blog/camoleak-critical-github-copilot-vulnerability-leaks-private-source-code",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "6b5f0799abb0a99367c9c5f4fefbf43820ecf327dcaff6bd38e23f514d0ceade",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "0ff23812343373f4bbe35ded57cf30656ed4dcffc2cbd337f58af91c27f7a3e6",
+     "bytes_as_fetched": 1559,
+     "redacted": 1,
+     "sha256": "4219e0828ad61a350d3353bbbe844c62b244053d3c22c3dc30c7101885c7c58b",
+     "bytes": 1362
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "33c1e8aa832972f7bba752b303d72f43f92bac8e2a1c38160147e7b723958955",
+     "bytes_as_fetched": 665,
+     "sha256": "33c1e8aa832972f7bba752b303d72f43f92bac8e2a1c38160147e7b723958955",
+     "bytes": 665
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4382636f6caa0c2b3fee5e69290bc481d20cfcd4c86eadf5e51b0985e47b48de",
+     "bytes_as_fetched": 724,
+     "sha256": "4382636f6caa0c2b3fee5e69290bc481d20cfcd4c86eadf5e51b0985e47b48de",
+     "bytes": 724
+    }
+   ]
+  },
+  {
+   "id": "inj2-legit-gitlab-duo",
+   "url": "https://www.legitsecurity.com/blog/remote-prompt-injection-in-gitlab-duo",
+   "final_url": "https://www.legitsecurity.com/blog/remote-prompt-injection-in-gitlab-duo",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:55Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "33add64d93e533413908e94093eb1399befab56ce231f74f0d2f16b7a96bcbc6",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d46f17d15c6634d87eea3377f3b496df8d989f426ee2dd302efb7cc0f1af0ccd",
+     "bytes_as_fetched": 1560,
+     "redacted": 1,
+     "sha256": "569d6d9f7407fd8376a7fe84db2b6b5c8546f693e9637ab69bf1df8f386c5bef",
+     "bytes": 1362
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "cf1cb4d48a5fedaf9b400d590ae7544c2a86ed55fd0db91bb16bf1596050b506",
+     "bytes_as_fetched": 598,
+     "sha256": "cf1cb4d48a5fedaf9b400d590ae7544c2a86ed55fd0db91bb16bf1596050b506",
+     "bytes": 598
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b7a9ac3ff107594e75a7ec274c08307f69fb59910389c0d2ea517d9ce7f35ac0",
+     "bytes_as_fetched": 1024,
+     "sha256": "b7a9ac3ff107594e75a7ec274c08307f69fb59910389c0d2ea517d9ce7f35ac0",
+     "bytes": 1024
+    }
+   ]
+  },
+  {
+   "id": "inj2-miggo-gemini-calendar",
+   "url": "https://www.miggo.io/post/weaponizing-calendar-invites-a-semantic-attack-on-google-gemini",
+   "final_url": "https://www.miggo.io/post/weaponizing-calendar-invites-a-semantic-attack-on-google-gemini",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "5dcbb8b6cef144a701428e3c1a6b4e72257b293c7964e3f462d228b9673ce0d3",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "6ec409881f862239ee9159f6169ecabf7f2f2957047af227cb7ea0296c8adae5",
+     "bytes_as_fetched": 2038,
+     "redacted": 1,
+     "sha256": "cc98d04d8ef0b9031edf774cf0657f6b20cd0bf2c2b158b1b7d581ad00cfe01c",
+     "bytes": 1838
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e817d60e17ec9c1b8133a68aa4172f934745372d8adbc42e579c87c45165b8ce",
+     "bytes_as_fetched": 637,
+     "sha256": "e817d60e17ec9c1b8133a68aa4172f934745372d8adbc42e579c87c45165b8ce",
+     "bytes": 637
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "00d75377d255c5648535289fdc059ef708999817ca35f122c5294cea4d610b86",
+     "bytes_as_fetched": 815,
+     "sha256": "00d75377d255c5648535289fdc059ef708999817ca35f122c5294cea4d610b86",
+     "bytes": 815
+    }
+   ]
+  },
+  {
+   "id": "inj2-rehberger-chatgpt-spaiware",
+   "url": "https://embracethered.com/blog/posts/2024/chatgpt-macos-app-persistent-data-exfiltration/",
+   "final_url": "https://embracethered.com/blog/posts/2024/chatgpt-macos-app-persistent-data-exfiltration/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "d3a1b3841661c4fde7211ecd24c188a568fb17000d0777baf201544a6a38f9ed",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "13afaa0be80bc7652d57aed56486142474a0e915370d8b9d932f4f017e23fb2d",
+     "bytes_as_fetched": 692,
+     "sha256": "13afaa0be80bc7652d57aed56486142474a0e915370d8b9d932f4f017e23fb2d",
+     "bytes": 692
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "da708aae611723e1bf1bffd3a64030f28a457cbc0190620558f854eb1085ad59",
+     "bytes_as_fetched": 641,
+     "sha256": "da708aae611723e1bf1bffd3a64030f28a457cbc0190620558f854eb1085ad59",
+     "bytes": 641
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "5665ad66490240d177fae92f5605a280af69e981ea894b5986e34960407c9576",
+     "bytes_as_fetched": 943,
+     "sha256": "5665ad66490240d177fae92f5605a280af69e981ea894b5986e34960407c9576",
+     "bytes": 943
+    }
+   ]
+  },
+  {
+   "id": "inj2-rehberger-copilot-cve-53773",
+   "url": "https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/",
+   "final_url": "https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "01abf71f615ec2d607311dd5424bd72be05b43a3490ce3cbfdc2c708ae2a80db",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d3cc04027502ebe956ee99e1a121aa8d91a1e41b11f09503bab259af28963fa1",
+     "bytes_as_fetched": 713,
+     "sha256": "d3cc04027502ebe956ee99e1a121aa8d91a1e41b11f09503bab259af28963fa1",
+     "bytes": 713
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "30fddee7d41ad508ee21486f981697aac2ac7ed00b6ebf95dd2d76ba2112ab8d",
+     "bytes_as_fetched": 664,
+     "sha256": "30fddee7d41ad508ee21486f981697aac2ac7ed00b6ebf95dd2d76ba2112ab8d",
+     "bytes": 664
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0fe7f61177f77ac48bca5d56dfb1418bde7aa38197ab8f20e5b8a093c9cf79bd",
+     "bytes_as_fetched": 809,
+     "sha256": "0fe7f61177f77ac48bca5d56dfb1418bde7aa38197ab8f20e5b8a093c9cf79bd",
+     "bytes": 809
+    }
+   ]
+  },
+  {
+   "id": "inj2-rehberger-cross-agent",
+   "url": "https://embracethered.com/blog/posts/2025/cross-agent-privilege-escalation-agents-that-free-each-other/",
+   "final_url": "https://embracethered.com/blog/posts/2025/cross-agent-privilege-escalation-agents-that-free-each-other/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:55Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "8a6221242754e71e53a1ef92ad1d4e80f1d51a352bc73977142acd826824cf3b",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "f2b7c76f4ecced16c8a04f3e74f88c670f33b6639c5c9613036b32cee1f231ec",
+     "bytes_as_fetched": 693,
+     "sha256": "f2b7c76f4ecced16c8a04f3e74f88c670f33b6639c5c9613036b32cee1f231ec",
+     "bytes": 693
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "8168d32d0cf098151038a9eb93c0809084a43caf6f5d5cfac2eef3c6653d1efa",
+     "bytes_as_fetched": 664,
+     "sha256": "8168d32d0cf098151038a9eb93c0809084a43caf6f5d5cfac2eef3c6653d1efa",
+     "bytes": 664
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3cd0303f30c1c695e3c477c97f380fad8e6fc34b7446dee596ecc24006c96616",
+     "bytes_as_fetched": 950,
+     "sha256": "3cd0303f30c1c695e3c477c97f380fad8e6fc34b7446dee596ecc24006c96616",
+     "bytes": 950
+    }
+   ]
+  },
+  {
+   "id": "inj2-rehberger-gemini-memory",
+   "url": "https://embracethered.com/blog/posts/2025/gemini-memory-persistence-prompt-injection/",
+   "final_url": "https://embracethered.com/blog/posts/2025/gemini-memory-persistence-prompt-injection/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "176f4d1b387fbc02d1a42b4cb952441431ffdd1412403ccf3002bb9f2d6468cc",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "3885dcce7b80cf1c53f4cd48118de288340aabe9c7774d6cc3e6c33ddda6b51d",
+     "bytes_as_fetched": 693,
+     "sha256": "3885dcce7b80cf1c53f4cd48118de288340aabe9c7774d6cc3e6c33ddda6b51d",
+     "bytes": 693
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c7207f85c2671d009242b21d04b5082dbe00a98d9166decf4d62a02f0b039ffa",
+     "bytes_as_fetched": 630,
+     "sha256": "c7207f85c2671d009242b21d04b5082dbe00a98d9166decf4d62a02f0b039ffa",
+     "bytes": 630
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "040b3bef4311e0ad7444877dc8a221c7fcf68fde35679047e3e82ef22d8bbc29",
+     "bytes_as_fetched": 754,
+     "sha256": "040b3bef4311e0ad7444877dc8a221c7fcf68fde35679047e3e82ef22d8bbc29",
+     "bytes": 754
+    }
+   ]
+  },
+  {
+   "id": "inj2-rehberger-m365-ascii",
+   "url": "https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/",
+   "final_url": "https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "4f22f8881b2599342ef732f1a81c39665fe69db0a8c9115ccf6faab6f787a1a8",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "51b1d26ab677415b873076f56d11611ba1481bbbef5b1a86e30c5b89c75a8d23",
+     "bytes_as_fetched": 694,
+     "sha256": "51b1d26ab677415b873076f56d11611ba1481bbbef5b1a86e30c5b89c75a8d23",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "8979b0f979ce6ac5a1884cde22b4f3dc386af66db00091005082153322aa2f78",
+     "bytes_as_fetched": 707,
+     "sha256": "8979b0f979ce6ac5a1884cde22b4f3dc386af66db00091005082153322aa2f78",
+     "bytes": 707
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "13d3a7e7f00892d67ae2afb6bc19b8e90e50c6280d212ffe0db4be30d589b014",
+     "bytes_as_fetched": 985,
+     "sha256": "13d3a7e7f00892d67ae2afb6bc19b8e90e50c6280d212ffe0db4be30d589b014",
+     "bytes": 985
+    }
+   ]
+  },
+  {
+   "id": "inj2-rehberger-zombais",
+   "url": "https://embracethered.com/blog/posts/2024/claude-computer-use-c2-the-zombais-are-coming/",
+   "final_url": "https://embracethered.com/blog/posts/2024/claude-computer-use-c2-the-zombais-are-coming/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "d77fb6418928e2e862c5035582a6369d23b66590a76fa2a1b30aba4fa6888d25",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "4ed3575b4a041a3db381dd2f42b740d987c9df4d70bd52c0dd0c45f72c8b0297",
+     "bytes_as_fetched": 715,
+     "sha256": "4ed3575b4a041a3db381dd2f42b740d987c9df4d70bd52c0dd0c45f72c8b0297",
+     "bytes": 715
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "da047cae00d30ebd405a975b03d292c55924886b2fab0e21b0b5dcbc8b1ad85e",
+     "bytes_as_fetched": 630,
+     "sha256": "da047cae00d30ebd405a975b03d292c55924886b2fab0e21b0b5dcbc8b1ad85e",
+     "bytes": 630
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d259525a20b72d617dd7c3fd7ee02001c82086cf58d3cda731fcd5ee7fbdd02b",
+     "bytes_as_fetched": 679,
+     "sha256": "d259525a20b72d617dd7c3fd7ee02001c82086cf58d3cda731fcd5ee7fbdd02b",
+     "bytes": 679
+    }
+   ]
+  },
+  {
+   "id": "inj2-tenable-gemini-trifecta",
+   "url": "https://www.tenable.com/blog/the-trifecta-how-three-new-gemini-vulnerabilities-in-cloud-assist-search-model-and-browsing",
+   "final_url": "https://www.tenable.com/blog/the-trifecta-how-three-new-gemini-vulnerabilities-in-cloud-assist-search-model-and-browsing",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "0104b5681548b7768f0c9586029d7eb1ee7536c3af7b36b014a736602481d0bf",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "8603bd0291d155aeb7edb92f8d98c251162d6ce83f7156fe514da5431722d915",
+     "bytes_as_fetched": 1168,
+     "redacted": 1,
+     "sha256": "1aaa0aa95ef821941e0e8156d4a52ae98e1ab571fa0819817bf751b8a8bb67e2",
+     "bytes": 854
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "113b4a285d03b2d2f875181d84b231e7d6a90eb535057bfbe95a3b1fecdbc603",
+     "bytes_as_fetched": 702,
+     "sha256": "113b4a285d03b2d2f875181d84b231e7d6a90eb535057bfbe95a3b1fecdbc603",
+     "bytes": 702
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "96f3b6a4d5a952e252510af2ceb04d5de252eb18cf71a1b651724ec7f3a2d007",
+     "bytes_as_fetched": 1209,
+     "sha256": "96f3b6a4d5a952e252510af2ceb04d5de252eb18cf71a1b651724ec7f3a2d007",
+     "bytes": 1209
+    }
+   ]
+  },
+  {
+   "id": "inj2-tenable-hackedgpt",
+   "url": "https://www.tenable.com/blog/hackedgpt-novel-ai-vulnerabilities-open-the-door-for-private-data-leakage",
+   "final_url": "https://www.tenable.com/blog/hackedgpt-novel-ai-vulnerabilities-open-the-door-for-private-data-leakage",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "7e41f74afdba5495190a6d0bf9ef6a66a3a7de56bda3a486cd1fec9699250706",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "63e70ee1c9072f01cfe0ba0a8c141a9563cdaf783e5b539daa80b758a29c510f",
+     "bytes_as_fetched": 1164,
+     "redacted": 1,
+     "sha256": "ea846bba091b03f65630b76166b5e32e940a648e8f7dc545662c0dfff4e544c9",
+     "bytes": 850
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "02b911bc71dd81c6ac11627aea91e173316be0f50013395fbb13153b23f70b33",
+     "bytes_as_fetched": 659,
+     "sha256": "02b911bc71dd81c6ac11627aea91e173316be0f50013395fbb13153b23f70b33",
+     "bytes": 659
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "2aca12e878109d8bf18cd3d7c8140b9a69aabbb0ad6ae6cbb259c01e7253fd26",
+     "bytes_as_fetched": 664,
+     "sha256": "2aca12e878109d8bf18cd3d7c8140b9a69aabbb0ad6ae6cbb259c01e7253fd26",
+     "bytes": 664
+    }
+   ]
+  },
+  {
+   "id": "inj2-tracebit-gemini-cli",
+   "url": "https://tracebit.com/blog/code-exec-deception-gemini-ai-cli-hijack",
+   "final_url": "https://tracebit.com/blog/code-exec-deception-gemini-ai-cli-hijack",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "801c23da87628904bf176501474aa784fa87ca5efa24eae4e14ceae39bec391f",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a87705e4d3f9ddc0344a236b9c31196562db0a9f188a84b0f3dcd264c98ce8cf",
+     "bytes_as_fetched": 2679,
+     "sha256": "a87705e4d3f9ddc0344a236b9c31196562db0a9f188a84b0f3dcd264c98ce8cf",
+     "bytes": 2679
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9c1f1a7194dd3dcb3912ef4af32f6b550f679576fcdf1d46b265122951953e8a",
+     "bytes_as_fetched": 573,
+     "sha256": "9c1f1a7194dd3dcb3912ef4af32f6b550f679576fcdf1d46b265122951953e8a",
+     "bytes": 573
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "b1eb36bad790627a35157f84a8950c9c04418943cd98ba0a92de6dd362ab5286",
+     "bytes_as_fetched": 932,
+     "sha256": "b1eb36bad790627a35157f84a8950c9c04418943cd98ba0a92de6dd362ab5286",
+     "bytes": 932
+    }
+   ]
+  },
+  {
+   "id": "inj2-unit42-session-smuggling",
+   "url": "https://unit42.paloaltonetworks.com/agent-session-smuggling-in-agent2agent-systems/",
+   "final_url": "https://unit42.paloaltonetworks.com/agent-session-smuggling-in-agent2agent-systems/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:58Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "7403e3dae58b538e6028abda5a7e88c849ac1b30f58be06562496f1170a319ae",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "90b79d5201324c0b3140a43c5e5870fd41df5d809078a8288e4258eac415f2c6",
+     "bytes_as_fetched": 565,
+     "sha256": "90b79d5201324c0b3140a43c5e5870fd41df5d809078a8288e4258eac415f2c6",
+     "bytes": 565
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f16ce874082e6caac5a6c9c9d84d3992a6be2d3d6556dbe4903424476474db66",
+     "bytes_as_fetched": 628,
+     "sha256": "f16ce874082e6caac5a6c9c9d84d3992a6be2d3d6556dbe4903424476474db66",
+     "bytes": 628
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0fc836c164e6cf3eeeec2bb2c14a64422d95a4a970ea05e61cbce8ed1c828331",
+     "bytes_as_fetched": 760,
+     "sha256": "0fc836c164e6cf3eeeec2bb2c14a64422d95a4a970ea05e61cbce8ed1c828331",
+     "bytes": 760
+    }
+   ]
+  },
+  {
+   "id": "inj2-willison-supabase-mcp",
+   "url": "https://simonwillison.net/2025/Jul/6/supabase-mcp-lethal-trifecta/",
+   "final_url": "https://simonwillison.net/2025/Jul/6/supabase-mcp-lethal-trifecta/",
+   "publisher": null,
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T15:13:56Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "afab8078c2c870c53a41e69337f4b3e5ec2c8bb53cd9c9b7c1dd0b2cae4328c7",
+   "recorded_by": "studio-e03b",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "b1a31ddf0e0969e312112d260d2ee0f4e55be7f7bf0eaaf235d0ceae35e90f62",
+     "bytes_as_fetched": 1014,
+     "sha256": "b1a31ddf0e0969e312112d260d2ee0f4e55be7f7bf0eaaf235d0ceae35e90f62",
+     "bytes": 1014
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f963c74add17bf089bfd3edf97f7969c3762d3b57a338c04281ccc83001324f3",
+     "bytes_as_fetched": 590,
+     "sha256": "f963c74add17bf089bfd3edf97f7969c3762d3b57a338c04281ccc83001324f3",
+     "bytes": 590
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0fbaa9b3a31a31f0755db6023b67381cfe6ba2a2a73d7026c5d98c3de8455185",
+     "bytes_as_fetched": 757,
+     "sha256": "0fbaa9b3a31a31f0755db6023b67381cfe6ba2a2a73d7026c5d98c3de8455185",
+     "bytes": 757
     }
    ]
   },
@@ -16011,8 +18187,8 @@
      "bytes": 4964
     }
    ],
-   "capture": "full",
-   "recorded_by": "story-r1-r3"
+   "capture": "full (reused capture)",
+   "recorded_by": "studio-e06-e07-e02b"
   },
   {
    "id": "story-msrc-midnight-blizzard-update-2024-03",
@@ -16062,10 +18238,10 @@
    "id": "story-mtrends-2026",
    "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
    "final_url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
-   "publisher": "Mandiant (Google Cloud)",
-   "title": "M-Trends 2026: Data, Insights, and Strategies From the Frontlines",
+   "publisher": "Google Cloud / Mandiant",
+   "title": "M-Trends 2026 (blog summary)",
    "kind": "primary",
-   "published": "2026-03-23",
+   "published": null,
    "captured_at": "2026-10-29T14:27:46Z",
    "http_status": 200,
    "files": [
@@ -16099,8 +18275,8 @@
      "bytes": 14884
     }
    ],
-   "capture": "full",
-   "recorded_by": "story-r4-r9"
+   "capture": "full (reused capture)",
+   "recorded_by": "studio-e06-e07-e02b"
   },
   {
    "id": "story-ncsc-ai-2027",

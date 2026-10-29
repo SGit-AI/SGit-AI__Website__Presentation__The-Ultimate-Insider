@@ -1,0 +1,834 @@
+{
+ "about": "E03, next pieces: per source an agent consumes, more public cases, whether the source comes from outside or from the more trusted inside, and second-order cases (one party's stored words steering a later agent). Payloads are never quoted; captures of payload pages are defanged text, raw pages not kept. Built by researcher@the-ultimate-insider, 29 October 2026, 15:35 UTC, from captures made at 15:15 to 15:25 UTC; the research pass stopped before writing this file, so each case is the researcher's description of its capture.",
+ "cautions": [
+  "Grades: A2 for a researcher's demonstration, A3 where the vendor confirmed and fixed it; each rests on one write-up. Labels say which.",
+  "\"Second-order\" here means words stored by one party (a ticket, a memory, a log, another agent's message) that steer an agent later or elsewhere.",
+  "Outside or inside is about who can write the words, not where the agent runs: inside sources are the ones the organisation already trusts.",
+  "No second case was found for web forms, skills, install scripts or audio; Aim Security's CurXecute refused the fetcher (403) and is not included."
+ ],
+ "sources_an_agent_consumes": [
+  {
+   "source": "email",
+   "outside_or_inside": "outside",
+   "first_case": "echoleak",
+   "more_cases": [
+    {
+     "id": "e03b-rehberger-m365-ascii",
+     "source_id": "inj2-rehberger-m365-ascii",
+     "target_agent": "Copilot",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "An email carrying hidden instructions led Microsoft 365 Copilot, when asked about it, to invoke tools and send data out in characters a person cannot see",
+     "years_in_capture": [
+      "2024"
+     ]
+    },
+    {
+     "id": "e03b-0din-gemini-phishing",
+     "source_id": "inj2-0din-gemini-phishing",
+     "target_agent": "Gemini",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Hidden text in an email made Gemini's summary of it show a false security warning to the reader",
+     "years_in_capture": [
+      "2024"
+     ]
+    },
+    {
+     "id": "incident-shadowleak-thn",
+     "source_id": "incident-shadowleak-thn",
+     "target_agent": "Deep Research",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "An email read by ChatGPT Deep Research led it to send mailbox data to an outside server from the vendor's side (ShadowLeak)",
+     "years_in_capture": [
+      "2025",
+      "2026"
+     ]
+    }
+   ],
+   "why": "anyone outside the organisation can put words there"
+  },
+  {
+   "source": "web pages",
+   "outside_or_inside": "outside",
+   "first_case": "comet-brave",
+   "more_cases": [
+    {
+     "id": "e03b-brave-unseeable",
+     "source_id": "inj2-brave-unseeable",
+     "target_agent": "browser agents (not named in the capture)",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Faint text in images or pages, read by browser agents from screenshots, was followed as instructions (Brave's write-up; the capture is a short extract that names no product)",
+     "years_in_capture": []
+    },
+    {
+     "id": "e03b-guardian-chatgpt-search",
+     "source_id": "inj2-guardian-chatgpt-search",
+     "target_agent": "ChatGPT",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Hidden text on web pages changed what ChatGPT search said about them",
+     "years_in_capture": [
+      "2024"
+     ]
+    },
+    {
+     "id": "e03b-rehberger-zombais",
+     "source_id": "inj2-rehberger-zombais",
+     "target_agent": "Claude",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "A web page visited by an agent using a computer (Anthropic's computer use) led it to download and run a program that put the machine under someone else's control",
+     "years_in_capture": []
+    }
+   ],
+   "why": "anyone outside the organisation can put words there"
+  },
+  {
+   "source": "web forms",
+   "outside_or_inside": "outside",
+   "first_case": "forcedleak",
+   "more_cases": [],
+   "why": "anyone outside the organisation can put words there"
+  },
+  {
+   "source": "shared documents",
+   "outside_or_inside": "both",
+   "first_case": "agentflayer",
+   "more_cases": [
+    {
+     "id": "e03b-codeintegrity-notion",
+     "source_id": "inj2-codeintegrity-notion",
+     "target_agent": "Notion",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "A document in a Notion workspace led Notion's AI agents to gather workspace data and send it out through a tool",
+     "years_in_capture": []
+    }
+   ],
+   "why": "written by outsiders or by colleagues, and read with insiders' trust"
+  },
+  {
+   "source": "calendar invites",
+   "outside_or_inside": "outside",
+   "first_case": "invitation-is-all-you-need",
+   "more_cases": [
+    {
+     "id": "e03b-miggo-gemini-calendar",
+     "source_id": "inj2-miggo-gemini-calendar",
+     "target_agent": "Gemini",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "A calendar invitation's text led Gemini, when asked about the user's day, to leak calendar data",
+     "years_in_capture": []
+    }
+   ],
+   "why": "anyone outside the organisation can put words there"
+  },
+  {
+   "source": "images",
+   "outside_or_inside": "outside",
+   "first_case": "image-scaling",
+   "more_cases": [],
+   "why": "anyone outside the organisation can put words there"
+  },
+  {
+   "source": "MCP tool descriptions",
+   "outside_or_inside": "inside",
+   "first_case": "tool-poisoning",
+   "more_cases": [
+    {
+     "id": "e03b-checkpoint-mcpoison",
+     "source_id": "inj2-checkpoint-mcpoison",
+     "target_agent": "Cursor",
+     "label": "vendor-confirmed vulnerability",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "An MCP configuration approved once in Cursor could be changed afterwards and run something else without a new prompt (MCPoison)",
+     "years_in_capture": []
+    },
+    {
+     "id": "e03b-invariant-whatsapp-mcp",
+     "source_id": "inj2-invariant-whatsapp-mcp",
+     "target_agent": "WhatsApp",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "A malicious MCP server's tool description led an agent also connected to WhatsApp to send the user's message history out",
+     "years_in_capture": []
+    }
+   ],
+   "why": "already installed, stored or configured inside, so trusted more"
+  },
+  {
+   "source": "READMEs and docs",
+   "outside_or_inside": "both",
+   "first_case": "copypasta",
+   "more_cases": [
+    {
+     "id": "e03b-tracebit-gemini-cli",
+     "source_id": "inj2-tracebit-gemini-cli",
+     "target_agent": "Gemini CLI",
+     "label": "vendor-confirmed vulnerability",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "A README in a repository led Gemini CLI to run commands without the user seeing what ran",
+     "years_in_capture": []
+    }
+   ],
+   "why": "written by outsiders or by colleagues, and read with insiders' trust"
+  },
+  {
+   "source": "rules and configuration files",
+   "outside_or_inside": "inside",
+   "first_case": "rules-file-backdoor",
+   "more_cases": [
+    {
+     "id": "e03b-rehberger-copilot-cve-53773",
+     "source_id": "inj2-rehberger-copilot-cve-53773",
+     "target_agent": "Copilot",
+     "label": "vendor-confirmed vulnerability",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Injected text led GitHub Copilot to change its own settings file to run without confirmation, and then run commands (CVE-2025-53773)",
+     "years_in_capture": [
+      "2025"
+     ]
+    }
+   ],
+   "why": "already installed, stored or configured inside, so trusted more"
+  },
+  {
+   "source": "pull requests and code",
+   "outside_or_inside": "both",
+   "first_case": "amazon-q-wiper",
+   "more_cases": [
+    {
+     "id": "e03b-legit-gitlab-duo",
+     "source_id": "inj2-legit-gitlab-duo",
+     "target_agent": "GitLab Duo",
+     "label": "vendor-confirmed vulnerability",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Hidden text in a merge request or code led GitLab Duo to leak private source code and show attacker-chosen content",
+     "years_in_capture": [
+      "2025"
+     ]
+    },
+    {
+     "id": "e03b-legit-camoleak",
+     "source_id": "inj2-legit-camoleak",
+     "target_agent": "Copilot",
+     "label": "vendor-confirmed vulnerability",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Hidden comments in a pull request led GitHub Copilot Chat to leak private source code and secrets (CamoLeak)",
+     "years_in_capture": [
+      "2025"
+     ]
+    }
+   ],
+   "why": "written by outsiders or by colleagues, and read with insiders' trust"
+  },
+  {
+   "source": "issues and tickets (public)",
+   "outside_or_inside": "outside",
+   "first_case": "clinejection",
+   "more_cases": [
+    {
+     "id": "e03b-invariant-github-mcp",
+     "source_id": "inj2-invariant-github-mcp",
+     "target_agent": "GitHub",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "An issue in a public repository, read by an agent with the GitHub MCP server, led it to copy data from the user's private repositories into a public pull request",
+     "years_in_capture": []
+    },
+    {
+     "id": "e03b-aikido-promptpwnd",
+     "source_id": "inj2-aikido-promptpwnd",
+     "target_agent": "GitHub Actions",
+     "label": "research demonstration",
+     "second_order": false,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Issue and pull request text read by AI agents in GitHub Actions workflows led them to act with the workflow's permissions (PromptPwnd)",
+     "years_in_capture": []
+    }
+   ],
+   "why": "anyone outside the organisation can put words there"
+  },
+  {
+   "source": "support tickets (internal)",
+   "outside_or_inside": "both",
+   "first_case": "living-off-ai-jira",
+   "more_cases": [
+    {
+     "id": "e03b-willison-supabase-mcp",
+     "source_id": "inj2-willison-supabase-mcp",
+     "target_agent": "Supabase",
+     "label": "research demonstration",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "A support ticket written by a customer, read later by a developer's agent with database access through Supabase's MCP server, led it to read private tables and write them where the customer could see them",
+     "years_in_capture": []
+    }
+   ],
+   "why": "written by outsiders or by colleagues, and read with insiders' trust"
+  },
+  {
+   "source": "other agents",
+   "outside_or_inside": "both",
+   "first_case": "servicenow-second-order",
+   "more_cases": [
+    {
+     "id": "e03b-unit42-session-smuggling",
+     "source_id": "inj2-unit42-session-smuggling",
+     "target_agent": "agent",
+     "label": "research demonstration",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "A malicious remote agent, talking to another over the Agent2Agent protocol, slipped extra instructions into the conversation and made it take actions its user did not ask for",
+     "years_in_capture": []
+    },
+    {
+     "id": "e03b-rehberger-cross-agent",
+     "source_id": "inj2-rehberger-cross-agent",
+     "target_agent": "agent",
+     "label": "research demonstration",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "One coding agent, injected, rewrote another coding agent's configuration to remove its safeguards: agents freeing each other",
+     "years_in_capture": []
+    }
+   ],
+   "why": "written by outsiders or by colleagues, and read with insiders' trust"
+  },
+  {
+   "source": "skills and plugins",
+   "outside_or_inside": "inside",
+   "first_case": "clawhavoc",
+   "more_cases": [],
+   "why": "already installed, stored or configured inside, so trusted more"
+  },
+  {
+   "source": "install scripts",
+   "outside_or_inside": "outside",
+   "first_case": "nx-s1ngularity",
+   "more_cases": [],
+   "why": "anyone outside the organisation can put words there"
+  },
+  {
+   "source": "audio",
+   "outside_or_inside": "outside",
+   "first_case": "audiohijack",
+   "more_cases": [],
+   "why": "anyone outside the organisation can put words there"
+  },
+  {
+   "source": "agent memory and stored output",
+   "outside_or_inside": "inside",
+   "first_case": null,
+   "more_cases": [
+    {
+     "id": "e03b-rehberger-chatgpt-spaiware",
+     "source_id": "inj2-rehberger-chatgpt-spaiware",
+     "target_agent": "ChatGPT",
+     "label": "vendor-confirmed vulnerability",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Injected text stored a lasting instruction in ChatGPT's memory, which then sent later conversations out (SpAIware)",
+     "years_in_capture": []
+    },
+    {
+     "id": "e03b-rehberger-gemini-memory",
+     "source_id": "inj2-rehberger-gemini-memory",
+     "target_agent": "Gemini",
+     "label": "research demonstration",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "A document led Gemini to save false memories about the user, used in later conversations",
+     "years_in_capture": []
+    },
+    {
+     "id": "e03b-tenable-hackedgpt",
+     "source_id": "inj2-tenable-hackedgpt",
+     "target_agent": "ChatGPT",
+     "label": "vendor-confirmed vulnerability",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Several flaws let web content reach ChatGPT, persist in its memory and leak private data (HackedGPT)",
+     "years_in_capture": []
+    }
+   ],
+   "why": "already installed, stored or configured inside, so trusted more"
+  },
+  {
+   "source": "logs and stored records",
+   "outside_or_inside": "both",
+   "first_case": null,
+   "more_cases": [
+    {
+     "id": "e03b-tenable-gemini-trifecta",
+     "source_id": "inj2-tenable-gemini-trifecta",
+     "target_agent": "Gemini",
+     "label": "vendor-confirmed vulnerability",
+     "second_order": true,
+     "payload_summary": "[defanged: described in what_happened; never quoted]",
+     "what_happened": "Text planted in logs, search history and browsing led Gemini Cloud Assist, Search Personalization and the browsing tool to act on it and leak data (the Gemini Trifecta)",
+     "years_in_capture": []
+    }
+   ],
+   "why": "written by outsiders or by colleagues, and read with insiders' trust"
+  }
+ ],
+ "claims": [
+  {
+   "id": "e03b-rehberger-m365-ascii",
+   "text": "Words in email steered Copilot: An email carrying hidden instructions led Microsoft 365 Copilot, when asked about it, to invoke tools and send data out in characters a person cannot see",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-m365-ascii",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-0din-gemini-phishing",
+   "text": "Words in email steered Gemini: Hidden text in an email made Gemini's summary of it show a false security warning to the reader",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-0din-gemini-phishing",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "incident-shadowleak-thn",
+   "text": "Words in email steered Deep Research: An email read by ChatGPT Deep Research led it to send mailbox data to an outside server from the vendor's side (ShadowLeak)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "incident-shadowleak-thn",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-brave-unseeable",
+   "text": "Words in web pages steered browser agents: faint text in images or pages read from screenshots",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-brave-unseeable",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. A1: the capture is a short defanged extract (808 bytes) that names no product and no fix."
+  },
+  {
+   "id": "e03b-guardian-chatgpt-search",
+   "text": "Words in web pages steered ChatGPT: Hidden text on web pages changed what ChatGPT search said about them",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-guardian-chatgpt-search",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-rehberger-zombais",
+   "text": "Words in web pages steered Claude: A web page visited by an agent using a computer (Anthropic's computer use) led it to download and run a program that put the machine under someone else's control",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-zombais",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-codeintegrity-notion",
+   "text": "Words in shared documents steered Notion: A document in a Notion workspace led Notion's AI agents to gather workspace data and send it out through a tool",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-codeintegrity-notion",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-miggo-gemini-calendar",
+   "text": "Words in calendar invites steered Gemini: A calendar invitation's text led Gemini, when asked about the user's day, to leak calendar data",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-miggo-gemini-calendar",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-checkpoint-mcpoison",
+   "text": "Words in MCP tool descriptions steered Cursor: An MCP configuration approved once in Cursor could be changed afterwards and run something else without a new prompt (MCPoison)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-checkpoint-mcpoison",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-invariant-whatsapp-mcp",
+   "text": "Words in MCP tool descriptions steered WhatsApp: A malicious MCP server's tool description led an agent also connected to WhatsApp to send the user's message history out",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-invariant-whatsapp-mcp",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-tracebit-gemini-cli",
+   "text": "Words in READMEs and docs steered Gemini CLI: A README in a repository led Gemini CLI to run commands without the user seeing what ran",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-tracebit-gemini-cli",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-rehberger-copilot-cve-53773",
+   "text": "Words in rules and configuration files steered Copilot: Injected text led GitHub Copilot to change its own settings file to run without confirmation, and then run commands (CVE-2025-53773)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-copilot-cve-53773",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-legit-gitlab-duo",
+   "text": "Words in pull requests and code steered GitLab Duo: Hidden text in a merge request or code led GitLab Duo to leak private source code and show attacker-chosen content",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-legit-gitlab-duo",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-legit-camoleak",
+   "text": "Words in pull requests and code steered Copilot: Hidden comments in a pull request led GitHub Copilot Chat to leak private source code and secrets (CamoLeak)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-legit-camoleak",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-invariant-github-mcp",
+   "text": "Words in issues and tickets (public) steered GitHub: An issue in a public repository, read by an agent with the GitHub MCP server, led it to copy data from the user's private repositories into a public pull request",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-invariant-github-mcp",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-aikido-promptpwnd",
+   "text": "Words in issues and tickets (public) steered GitHub Actions: Issue and pull request text read by AI agents in GitHub Actions workflows led them to act with the workflow's permissions (PromptPwnd)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-aikido-promptpwnd",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-willison-supabase-mcp",
+   "text": "Words in support tickets (internal) steered Supabase: A support ticket written by a customer, read later by a developer's agent with database access through Supabase's MCP server, led it to read private tables and write them where the customer could see them",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-willison-supabase-mcp",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration; second-order. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-unit42-session-smuggling",
+   "text": "Words in other agents steered agent: A malicious remote agent, talking to another over the Agent2Agent protocol, slipped extra instructions into the conversation and made it take actions its user did not ask for",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-unit42-session-smuggling",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration; second-order. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-rehberger-cross-agent",
+   "text": "Words in other agents steered agent: One coding agent, injected, rewrote another coding agent's configuration to remove its safeguards: agents freeing each other",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-cross-agent",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration; second-order. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-rehberger-chatgpt-spaiware",
+   "text": "Words in agent memory and stored output steered ChatGPT: Injected text stored a lasting instruction in ChatGPT's memory, which then sent later conversations out (SpAIware)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-chatgpt-spaiware",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-rehberger-gemini-memory",
+   "text": "Words in agent memory and stored output steered Gemini: A document led Gemini to save false memories about the user, used in later conversations",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-rehberger-gemini-memory",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration; second-order. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-tenable-hackedgpt",
+   "text": "Words in agent memory and stored output steered ChatGPT: Several flaws let web content reach ChatGPT, persist in its memory and leak private data (HackedGPT)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-tenable-hackedgpt",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each."
+  },
+  {
+   "id": "e03b-tenable-gemini-trifecta",
+   "text": "Words in logs and stored records steered Gemini: Text planted in logs, search history and browsing led Gemini Cloud Assist, Search Personalization and the browsing tool to act on it and leak data (the Gemini Trifecta)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj2-tenable-gemini-trifecta",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability; second-order. Described by the researcher from the defanged capture; one write-up each."
+  }
+ ]
+}

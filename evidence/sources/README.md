@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T14:31Z. 434 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T15:18Z. 492 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -77,6 +77,18 @@ Built 2026-10-29T14:31Z. 434 sources; `manifest.json` has every file's SHA-256. 
 | [dtex-cost-insider-2025](https://www.dtex.ai/blog/2025-cost-insider-risks-takeaways/) | DTEX Systems | vendor-survey | 2026-10-29T01:50:21Z | 200 | full | 3 |
 | [dtex-ponemon-2025-itbrief](https://itbrief.com.au/story/insider-risk-costs-soar-as-ai-reshapes-workplace-data) | IT Brief (reporting DTEX/Ponemon) | news | 2026-10-29T01:55:42Z | 200 | full | 5 |
 | [dtex-press-2025-ponemon](https://www.dtex.ai/newsroom/press-releases/2025-ponemon-insider-threat-report-release/) | DTEX Systems | vendor-survey | 2026-10-29T01:55:34Z | 200 | full | 3 |
+| [e02b-abp-capabilities](https://abp.sgit.ai/data/capabilities.json) | abp.sgit.ai (SGit-AI) | own-site | 2026-10-29T15:16:42Z | 200 | full | 3 |
+| [e02b-abp-data-index-json](https://abp.sgit.ai/data/index.json) | abp.sgit.ai (SGit-AI) | own-site | 2026-10-29T15:15:54Z | 200 | full | 3 |
+| [e02b-abp-undo-classes](https://abp.sgit.ai/data/undo-classes.json) | abp.sgit.ai (SGit-AI) | own-site | 2026-10-29T15:16:42Z | 200 | full | 3 |
+| [e02b-ms-graph-permissions-overview](https://learn.microsoft.com/en-us/graph/permissions-overview) | Microsoft | primary | 2026-10-29T15:14:02Z | 200 | full | 4 |
+| [e02b-owasp-agentic-top10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | OWASP Gen AI Security Project | primary | 2026-10-29T15:14:01Z | 200 | partial: landing page only, the document itself (PDF) not read in the time box | 4 |
+| [e02b-owasp-llm06-excessive-agency](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) | OWASP Gen AI Security Project | primary | 2026-10-29T15:14:01Z | 200 | full | 4 |
+| [e02b-wcid-ceiling](https://what-can-it-do.games.sgit.ai/data/ceiling.json) | what-can-it-do.games.sgit.ai (SGit-AI) | own-site | 2026-10-29T15:15:54Z | 200 | full | 3 |
+| [e02b-wcid-data-dir](https://what-can-it-do.games.sgit.ai/data/) | what-can-it-do.games.sgit.ai (SGit-AI) | own-site | 2026-10-29T15:15:53Z | 200 | full | 4 |
+| [e02b-wcid-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [e02b-wcid-mesh-graph](https://what-can-it-do.games.sgit.ai/data/mesh/graph.json) | what-can-it-do.games.sgit.ai (SGit-AI) | own-site | 2026-10-29T15:16:11Z | 200 | full | 3 |
+| [e02b-wcid-mesh-ontology](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [e02b-wcid-reductions](https://what-can-it-do.games.sgit.ai/data/reductions.json) | what-can-it-do.games.sgit.ai (SGit-AI) | own-site | 2026-10-29T15:15:54Z | 200 | full | 3 |
 | [e04-anthropic-alignment-assessment](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents) | Anthropic | primary | 2026-10-29T05:15:05Z | 200 | full | 4 |
 | [e04-anthropic-evals-incidents](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) | Anthropic | primary | 2026-10-29T05:15:05Z | 200 | full | 4 |
 | [e04-cltr-scheming-in-the-wild](https://www.longtermresilience.org/reports/scheming-in-the-wild/) | Centre for Long-Term Resilience | primary | 2026-10-29T05:15:06Z | 403 | failed: HTTP 403 to curl and WebFetch | 4 |
@@ -88,6 +100,29 @@ Built 2026-10-29T14:31Z. 434 sources; `manifest.json` has every file's SHA-256. 
 | [e04-openai-hf-incident](https://openai.com/index/hugging-face-model-evaluation-security-incident/) | OpenAI | primary | 2026-10-29T05:15:03Z | 403 | failed: HTTP 403 to curl and WebFetch | 4 |
 | [e04-openai-hf-incident-wayback](https://web.archive.org/web/20261023091653/https://openai.com/index/hugging-face-model-evaluation-security-incident/) | Internet Archive | primary | None | None | failed: web.archive.org connection reset through the proxy; WebFetch refuses the host | 2 |
 | [e04-railway-nuke-database](https://blog.railway.com/p/your-ai-wants-to-nuke-your-database) | Railway | primary | 2026-10-29T05:15:05Z | 200 | full | 4 |
+| [e05-abc-gym-hack](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-abc-hf-swarm](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-abc-medicare-dc](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-abc-medicare-live](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-affinda-gym](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-aiid-1642](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-aiid-report-7717](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-engadget-gym](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-openai-hf-misalignment](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-register-openai-100orgs](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-techcrunch-gym](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-tnw-gym](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-unite-openai-six-reports](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e06-cisa-aa23-059a](https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-059a) | CISA | primary | 2026-10-29T15:14:01Z | 403 | failed: 403 bot check at cisa.gov, not got round; no quote used | 4 |
+| [e06-msti-midnight-blizzard-guidance](https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/) | Microsoft Threat Intelligence | primary | 2026-10-29T15:14:03Z | 200 | full | 4 |
+| [e06-php-org-roles](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e06-php-r10](https://php.oct.2026.newsroom.sgit.ai/grc/risks/r10/index.md) | PHP October 2026 newsroom (this team) | own-site | 2026-10-29T15:14:02Z | 200 | full | 4 |
+| [e06-php-threat-model](https://team.php.oct.2026.newsroom.sgit.ai/admin/appsec/threat-model/) | PHP October 2026 newsroom (this team) | own-site | 2026-10-29T15:14:53Z | 200 | full (old address serves a moved stub, kept as moved-stub.html; followed to the new address) | 5 |
+| [e07-claude-code-iam](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e07-claude-code-security](https://code.claude.com/docs/en/security) | Anthropic | primary | 2026-10-29T15:14:01Z | 200 | full | 4 |
+| [e07-gh-copilot-agent-firewall](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall) | GitHub | primary | 2026-10-29T15:14:02Z | 200 | full | 4 |
+| [e07-gh-copilot-agent-risks](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations) | GitHub | primary | 2026-10-29T15:14:02Z | 200 | full | 4 |
+| [e07-m365-copilot-privacy](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy) | Microsoft | primary | 2026-10-29T15:14:01Z | 200 | full | 4 |
 | [escudodigital-sharepoint-54](https://www.escudodigital.com/ciberseguridad/mas-de-50-gobiernos-y-empresas-comprometidos-por-la-vulnerabilidad-critica-en-sharepoint.html) | Escudo Digital | news | 2026-10-29T01:53:05Z | 200 | full | 3 |
 | [eth-e2ee-cloud-2024](https://eprint.iacr.org/2024/1616) | Albrecht, Backendal, Coppola, Paterson (IACR ePrint 2024/1616) | primary | 2026-10-29T01:55:01Z | 200 | full | 4 |
 | [eu-ai-act-art26](https://artificialintelligenceact.eu/article/26/) | artificialintelligenceact.eu (Future of Life Institute) | secondary | 2026-10-29T01:55:01Z | 200 | full | 4 |
@@ -201,6 +236,29 @@ Built 2026-10-29T14:31Z. 434 sources; `manifest.json` has every file's SHA-256. 
 | [inj-thn-servicenow](https://thehackernews.com/2025/11/servicenow-ai-agents-can-be-tricked.html) |  | secondary | 2026-10-29T04:15:01Z | 200 | text, defanged; raw not kept | 3 |
 | [inj-tob-image-scaling](https://blog.trailofbits.com/2025/08/21/weaponizing-image-scaling-against-production-ai-systems/) |  | primary | 2026-10-29T04:13:00Z | 200 | text, defanged; raw not kept | 3 |
 | [inj-zenity-agentflayer](https://labs.zenity.io/post/agentflayer-chatgpt-connectors-0click-attack-5b41) |  | primary | 2026-10-29T04:13:31Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-0din-gemini-phishing](https://0din.ai/blog/phishing-for-gemini) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-aikido-promptpwnd](https://www.aikido.dev/blog/promptpwnd-github-actions-ai-agents) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-aim-curxecute](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [inj2-brave-unseeable](https://brave.com/blog/unseeable-prompt-injections/) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-checkpoint-mcpoison](https://research.checkpoint.com/2025/cursor-vulnerability-mcpoison/) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-codeintegrity-notion](https://www.codeintegrity.ai/blog/notion) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-guardian-chatgpt-search](https://www.theguardian.com/technology/2024/dec/24/chatgpt-search-tool-vulnerable-to-manipulation-and-deception-tests-show) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-invariant-github-mcp](https://invariantlabs.ai/blog/mcp-github-vulnerability) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-invariant-whatsapp-mcp](https://invariantlabs.ai/blog/whatsapp-mcp-exploited) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-legit-camoleak](https://www.legitsecurity.com/blog/camoleak-critical-github-copilot-vulnerability-leaks-private-source-code) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-legit-gitlab-duo](https://www.legitsecurity.com/blog/remote-prompt-injection-in-gitlab-duo) |  | primary | 2026-10-29T15:13:55Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-miggo-gemini-calendar](https://www.miggo.io/post/weaponizing-calendar-invites-a-semantic-attack-on-google-gemini) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-rehberger-chatgpt-spaiware](https://embracethered.com/blog/posts/2024/chatgpt-macos-app-persistent-data-exfiltration/) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-rehberger-copilot-cve-53773](https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-rehberger-cross-agent](https://embracethered.com/blog/posts/2025/cross-agent-privilege-escalation-agents-that-free-each-other/) |  | primary | 2026-10-29T15:13:55Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-rehberger-gemini-memory](https://embracethered.com/blog/posts/2025/gemini-memory-persistence-prompt-injection/) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-rehberger-m365-ascii](https://embracethered.com/blog/posts/2024/m365-copilot-prompt-injection-tool-invocation-and-data-exfil-using-ascii-smuggling/) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-rehberger-zombais](https://embracethered.com/blog/posts/2024/claude-computer-use-c2-the-zombais-are-coming/) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-tenable-gemini-trifecta](https://www.tenable.com/blog/the-trifecta-how-three-new-gemini-vulnerabilities-in-cloud-assist-search-model-and-browsing) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-tenable-hackedgpt](https://www.tenable.com/blog/hackedgpt-novel-ai-vulnerabilities-open-the-door-for-private-data-leakage) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-tracebit-gemini-cli](https://tracebit.com/blog/code-exec-deception-gemini-ai-cli-hijack) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-unit42-session-smuggling](https://unit42.paloaltonetworks.com/agent-session-smuggling-in-agent2agent-systems/) |  | primary | 2026-10-29T15:13:58Z | 200 | text, defanged; raw not kept | 3 |
+| [inj2-willison-supabase-mcp](https://simonwillison.net/2025/Jul/6/supabase-mcp-lethal-trifecta/) |  | primary | 2026-10-29T15:13:56Z | 200 | text, defanged; raw not kept | 3 |
 | [insideprivacy-circia-omb](https://www.insideprivacy.com/critical-infrastructure/cisa-submits-final-circia-rule-for-omb-review/) | Covington, Inside Privacy | secondary | 2026-10-29T01:51:15Z | 200 | full | 3 |
 | [keys-openpgp-about](https://keys.openpgp.org/about/) | keys.openpgp.org | primary | 2026-10-29T01:50:51Z | 200 | full | 4 |
 | [krebs-toolshell-2025-07](https://krebsonsecurity.com/2025/07/microsoft-fix-targets-attacks-on-sharepoint-zero-day/) | Krebs on Security | news | 2026-10-29T01:51:16Z | 200 | full | 3 |
@@ -390,9 +448,9 @@ Built 2026-10-29T14:31Z. 434 sources; `manifest.json` has every file's SHA-256. 
 | [story-mandiant-unc5537-snowflake](https://cloud.google.com/blog/topics/threat-intelligence/unc5537-snowflake-data-theft-extortion) | Mandiant / Google Cloud | primary | 2026-10-29T14:25:43Z | 200 | full | 4 |
 | [story-mata-avianca-sanctions-2023](https://www.courtlistener.com/opinion/9417767/mata-v-avianca-inc/) | CourtListener | primary | 2026-10-29T14:25:57Z | 202 | failed: HTTP 202 empty body (bot check); not worked round | 4 |
 | [story-ms-storm-0558-analysis-2023](https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/) | Microsoft Threat Intelligence | primary | 2026-10-29T14:27:11Z | 200 | full | 4 |
-| [story-msrc-midnight-blizzard-2024](https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard) | Microsoft Security Response Center | primary | 2026-10-29T14:26:49Z | 200 | full | 4 |
+| [story-msrc-midnight-blizzard-2024](https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard) | Microsoft Security Response Center | primary | 2026-10-29T14:26:49Z | 200 | full (reused capture) | 4 |
 | [story-msrc-midnight-blizzard-update-2024-03](https://www.microsoft.com/en-us/msrc/blog/2024/03/update-on-microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard) | Microsoft Security Response Center | primary | 2026-10-29T14:26:49Z | 200 | full | 4 |
-| [story-mtrends-2026](https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026) | Mandiant (Google Cloud) | primary | 2026-10-29T14:27:46Z | 200 | full | 4 |
+| [story-mtrends-2026](https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026) | Google Cloud / Mandiant | primary | 2026-10-29T14:27:46Z | 200 | full (reused capture) | 4 |
 | [story-ncsc-ai-2027](https://www.ncsc.gov.uk/report/impact-ai-cyber-threat-now-2027) | UK National Cyber Security Centre | primary | 2026-10-29T14:25:32Z | 200 | full | 4 |
 | [story-newsroom-application-bp](https://newsroom.sgit.ai/articles/application-behaviour-policies.md) | newsroom.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:25:32Z | 200 | full | 4 |
 | [story-newsroom-approve-at-altitude](https://newsroom.sgit.ai/articles/approve-at-altitude.md) | newsroom.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T14:26:10Z | 200 | full | 4 |
