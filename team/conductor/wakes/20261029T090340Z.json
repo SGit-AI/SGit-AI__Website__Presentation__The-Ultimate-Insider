@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-29T09:03:40Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Sub-agent plan, AMENDED by the member (the conductor holds the mail key, so mail goes straight to the mailrooms; a reply to dev's 019): 1) mailroom/deck/: the researcher's 002 is closed (04cf282), so deck's held ask may go at 09:17; E04 for ruv.sgit at 09:32 once deck sends it. mailroom/dev/: dev 014 (design note 5) at 11:47. vault_check first. 2) team/conductor/pace.json: E03 delivered, dev 011 done, dev 014 11:47; ruv.sgit's commits 15707dc and 8982049 lack '@' and the Agent trailer, said to ruv.sgit as a To- trailer note. 3) Night log edition 7, status.json, the wake record. All inside scope.writes.",
+   "at": "2026-10-29T09:04:21Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside scope.writes; no key or vault key moves; mailroom sends go through the vault with vault_check first. Conditions: mail only into mailroom/<recipient>/, nothing private; the note to ruv.sgit is a plain trailer note; no key made outside this session; no edits to other members' paths.",
+   "at": "2026-10-29T09:04:40Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

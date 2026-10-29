@@ -64,8 +64,9 @@ def commits(since, until):
     for chunk in raw.split('\x1e')[1:]:
         head, _, files = chunk.partition('\n')
         sha, when, subject, trailer = (head.split('\x1f') + [''] * 4)[:4]
-        m = re.match(r'@([\w.-]+):', subject)
-        who = m.group(1).replace('.', '-') if m else (trailer.split('@')[0].strip().replace('.', '-') if trailer.strip() else None)
+        m = re.match(r'@?([\w.-]+):', subject)                     # '@id:' as WAKE.md asks; a bare 'id:' only when it names a member
+        who = m.group(1).replace('.', '-') if m and (subject.startswith('@') or m.group(1).replace('.', '-') in members()) else None
+        who = who or (trailer.split('@')[0].strip().replace('.', '-') if trailer.strip() else None)
         if not who or subject.startswith('site v'):
             continue
         out.append(dict(agent=who, sha=sha[:7], at=when, subject=subject, files=[f for f in files.split('\n') if f.strip()]))
