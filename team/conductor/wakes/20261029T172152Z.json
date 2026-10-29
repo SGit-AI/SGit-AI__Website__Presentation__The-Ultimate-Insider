@@ -24,10 +24,24 @@
    "verdict": "done",
    "comment": "Five deck request files deduped (four already in the vault, one stale reply): none re-sent, all marked routed; night log and Moments refreshed (18 moments; four shots, the PKI showcase among them, checked by eye: the only QR is the public link pki.sgit.ai/people/how.html, no key); grep of the articles clean; build and gate clean.",
    "at": "2026-10-29T17:23:13Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "No key, token or contact in the diff; four screenshots viewed: only public-URL QR codes, no key or private page; no em-dashes.",
+   "at": "2026-10-29T17:23:51Z"
+  },
+  "post_check": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Dedupe, routed marks, night log and Moments, pace line as planned; the 17:40 follow-up scheduled (trig_01L6cSgzjQxur9czj5gmynZ8).",
+   "at": "2026-10-29T17:23:51Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-29T17:23:51Z",
+ "outcome": "ok",
  "history": [
   {
    "at": "17:22Z",
