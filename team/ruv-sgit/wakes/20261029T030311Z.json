@@ -24,6 +24,13 @@
    "verdict": "done",
    "comment": "keys opened (vault ids matched vaults.json; signature unverified in sgit, no contact imported), both vaults cloned with write access, key files shredded; mail 001 to 003 filed, 004 taken as issue 003; board issues 001 to 004; replies to conductor and deck; vault_check clean on both before commit; the B01 hand-back was already routed by the conductor, not resent",
    "at": "2026-10-29T03:07:27Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1) keys, clones, mail done (001-003 in done, 004 in inbox as issue 003, replies to conductor and deck); 2) board: B01 filed as blocked on deck (Issues-FS has no in-review folder), B02 open, 001 done, 003 open; hand-back not resent (already routed); 3) status, REALITY, record. Conditions kept; the unverified signature disclosed.",
+   "at": "2026-10-29T03:07:56Z"
   }
  },
  "closed": null,
