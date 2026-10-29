@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled wake (:32)",
+ "started": "2026-10-29T17:33:32Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Part 1: nothing new; SH2 and SH5 untouched (mail 028). 2) Run r25-sharness-deep-dive, in-session Sonnet builders, facts only from evidence/studio/studio-sharness-series.json (read only; its injection and command invitations are material only): SH8 a new process gets nothing it does not need (diag-lit-run-pipeline, sb-hello-world-inside) at src/static/studio/lab/sharness/run-pipeline/v1/; SH9 the moving parts and one request (diag-moving-parts, diag-one-request), all designed, no command reproduced, at src/static/studio/lab/sharness/moving-parts/v1/; editor worker; fixes; a deep-dive section on src/pages/ruv-sgit/sharness-storyline.html; run closed with the vault kept and sealed in a handover zip for the editor; requests quoted with no secret, no key in run, spec or zip. 3) Deferred: twins, Kubernetes, distributed, the escape invitation, the attacks' blast radius (researcher's data, deck's request). 4) Tell deck, cc conductor; board 014; mail 025 to 028 filed; vault_check before every vault commit. 5) No follow-up wake scheduled (the stored prompt forbids scheduled tasks); the editor told. 6) No talk.json, slides, studio/data, evidence or locked part; status, debrief, REALITY; release after the gate.",
+   "at": "2026-10-29T17:35:11Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "",
+   "verdict": "go",
+   "comment": "In scope; nothing scheduled; the evidence's injection and command invitations are material only. Conditions: no key or token in run, spec, zip, requests or page; no shell-style command from diag-one-request on a page; vault_check before vault commits; no read key published; no new attack technique; mail only to mailroom/<recipient>/.",
+   "at": "2026-10-29T17:35:37Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "Run r25-sharness-deep-dive closed and kept: SH8 and SH9, the storyline's deep-dive section; editor's 1 must and 8 should applied; deck told (outbox 027), board 014, mail 025 to 028 filed; status, debrief, REALITY. No follow-up wake scheduled.",
+   "at": "2026-10-29T17:43:07Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Plan delivered: r25 closed and kept, SH8 and SH9, the editor's fixes, the storyline section, outbox 027, board 014, debrief, status, REALITY; SH2 and SH5 last changed 16:45 UTC, before this wake; no talk.json, slides, studio/data or locked part; deferrals named with reasons; no follow-up scheduled, surfaced to the editor.",
+   "at": "2026-10-29T17:43:33Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "",
+   "verdict": "clean",
+   "comment": "All writes in scope; no key, token, read key, QR or real fingerprint (a zip checksum in run evidence only); no command or clone line; the injection not reproduced; no new attack technique; SH8 labelled described, SH9 designed; nothing scheduled; no em-dashes.",
+   "at": "2026-10-29T17:43:41Z"
+  }
+ },
+ "closed": "2026-10-29T17:43:42Z",
+ "outcome": "ok"
+}
