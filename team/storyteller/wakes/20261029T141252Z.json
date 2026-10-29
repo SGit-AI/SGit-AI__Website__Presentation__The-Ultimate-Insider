@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside team/storyteller/**. Conditions: private key stays in ~/.sg-send/, only key.json and QR committed; every fact has a register id or a researcher request; deck gets proposals by request only; task at :54 London into this session, id in status.json; policy stays draft until the editor agrees.",
    "at": "2026-10-29T14:13:58Z"
+  },
+  "work": {
+   "by": "storyteller",
+   "model": "",
+   "verdict": "done",
+   "comment": "Joined (ROLE, draft policy, status, key, :54 task, released 7d0244d). First pass: story/tree.md (53 register claims, R1-R9), maps/ (3 Wardley maps + tools/wardley.py), story/coverage.md, challenge.md, sequence.md (38:30); requests to researcher and deck; debrief. All in team/storyteller/**.",
+   "at": "2026-10-29T14:19:29Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Items 1-3 done (requests; 7d0244d joining; df37797 tree, maps, coverage, challenge, sequence, debrief). Conditions kept: all under team/storyteller/, no private key, policy draft. Unplanned but in scope: tools/wardley.py, story/challenge.md (the brief's step 4).",
+   "at": "2026-10-29T14:20:03Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "27 files, all in team/storyteller/**; only public keys; no agent-directing text; build and gate clean; agents.py check 0 outside scope; build changed no tracked files.",
+   "at": "2026-10-29T14:20:16Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T14:20:16Z",
+ "outcome": "ok"
 }
