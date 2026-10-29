@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "studio",
   "as_of": "2026-10-29",
-  "round": 6,
-  "state": "18:04 follow-up: the three ABP showcases complete (review page, prose, enforcement); 008 next; part 3 locks 20:00",
+  "round": 7,
+  "state": "18:12 wake: two way-out showcases landed (invest, fork); E08's title answered with its owner's name (ruv.sgit); 008's last two wait for the researcher's links",
   "task": {
     "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
     "cron": "CRON_TZ=Europe/London 12 * * * *",
@@ -68,12 +68,20 @@
     {
       "what": "Showcase: how a policy is held, five steps every wake",
       "evidence": "/studio-ports/abp-enforcement/"
+    },
+    {
+      "what": "Showcase: where to invest in sgit",
+      "evidence": "/studio-ports/invest/"
+    },
+    {
+      "what": "Showcase: the fork next door",
+      "evidence": "/studio-ports/fork/"
     }
   ],
   "next": [
     {
-      "what": "008: the open source strategy, the business model, the investment workflows, PHP October's security-product cases",
-      "why": "conductor 008"
+      "what": "008's last two: the open source strategy as a whole, PHP October's security-product cases",
+      "why": "conductor 008, when the researcher's links land"
     },
     {
       "what": "the definition beat, once deck answers",
