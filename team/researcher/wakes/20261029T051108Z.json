@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "E04 delivered: evidence/studio/studio-e04.json (12 cases, 4 checked against a primary; 3 listed, not written up), claims e04-*, 11 new captures; mail deck 010; board 005; PocketOS corrected in incidents.json and deck-talk-changes.md from Railway's post; status, debrief.",
    "at": "2026-10-29T05:21:11Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build, validate, agents check pass (0 outside scope; only evidence/** and team/researcher/**); vault_check clean on all three. No token-shaped values; every cookie line in the vault's sources redacted, none in the 11 new e04 captures; no emails or contact details; named people only via their own public posts; no agent-directed instructions.",
+   "at": "2026-10-29T05:22:19Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "partial",
+   "comment": "1) E04 partial: studio-e04.json has 15 cases, 12 written up, 3 listed only; Replit and Gemini CLI checked; claims e04-*; deck mail 010 names case ids. 2) board 005, status, debrief done (005 open, slices left). 3) gate clean; release follows the close. Conditions kept. Unplanned, in scope and disclosed: the PocketOS correction and 11 new captures.",
+   "at": "2026-10-29T05:22:44Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T05:22:44Z",
+ "outcome": "partial"
 }
