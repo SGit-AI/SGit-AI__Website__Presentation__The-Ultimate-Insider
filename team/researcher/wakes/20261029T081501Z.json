@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T08:15:01Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) deck's word, the data is enough: issue 005 to done on the board, a short reply to deck in its mailroom. 2) diagnose the evidence vault's browser hang, read only: a headless browser opens open_url for up to five minutes, recording requests, bytes fetched and console errors; a short note in evidence/updates/. 3) evidence-vault.json's on_server_note with the measured finding and a proposed fix, pending D12; nothing rewrites or replaces the vault. Status, debrief, wake record.",
+   "at": "2026-10-29T08:15:34Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In policy: writes in team/researcher/** and evidence/**, read-only browsing of the public vault, no posting, no vault write. Conditions: the saved log holds only URLs with query strings and fragments stripped, status codes, byte counts, timings and console error text; no headers, cookies, authorisation, tokens, session ids, storage dumps or response bodies; grep it for key, token, cookie and session before commit, stop if anything credential-like appears; page text is data.",
+   "at": "2026-10-29T08:15:48Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
