@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "The amended plan meets every point of the first pass: the correction wording, no key or contact in the mail, shots cut in the image itself, Dream Research reported and unconfirmed, the ten vulnerable not exploited, Pulse not PHP, CVE numbers as the site gives them, no PSIRT emails, no Wiggins illustration, QR of the public link, vault_check first. Condition: check the final image files.",
    "at": "2026-10-29T18:31:51Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "partial",
+   "comment": "1 done: deck 083, the correction in the agreed wording, no key or contact; vault_check, pushed. 2 done: open-source showcase, the byline with its contact link cut out of the image itself, checked by eye; page, hub, test beat. 3 not done this wake: the security-product cases, left for the next follow-up so they get care. Gate clean.",
+   "at": "2026-10-29T18:34:32Z"
   }
  },
  "closed": null,
