@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Brief 7 written; deck 066 sent (vault_check clean) with the gap list; pace log; build and gate clean.",
    "at": "2026-10-29T17:29:41Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Brief, pace entry, wake record and mail 066: no key, contact or private content, role addresses only, no em-dashes, nothing touching a locked part.",
+   "at": "2026-10-29T17:30:06Z"
+  },
+  "post_check": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Brief 7, mail 066 with nine gap items, pace log, as planned.",
+   "at": "2026-10-29T17:30:06Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:30:06Z",
+ "outcome": "ok"
 }
