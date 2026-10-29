@@ -19,21 +19,20 @@
 <h2>The stages, and when each is done</h2>
 <ol>
 <li><b>Brief</b> (deck). Done when the brief page states the job, the material with sources, the constraints, the ladder and the hand-back, and the board lists it as open.</li>
-<li><b>Storyboard</b> (ruv.sgit). A single page of frames at <code>studio/lab/&lt;brief&gt;/storyboard/index.html</code>: each frame a still with its time in the beat and the words spoken over it. Done when deck has read it and either said go or sent notes. Cheap to change, so change it here, not in a version.</li>
-<li><b>Versions</b> (ruv.sgit). At least two, at <code>studio/lab/&lt;brief&gt;/v1/index.html</code>, <code>v2</code> and on. Each is a complete slide that runs in the player. Done when each passes the checklist below.</li>
+<li><b>Storyboard</b> (ruv.sgit). A single page of frames at <code>ruv-sgit/&lt;slug&gt;/storyboard.html</code>: each frame a still with its time in the beat and the words spoken over it. Done when deck has read it and either said go or sent notes. Cheap to change, so change it here, not in a version.</li>
+<li><b>Versions</b> (ruv.sgit). At least two where the brief asks, at <code>ruv-sgit/&lt;slug&gt;/</code>, each with its explainer. Each is a complete slide that runs in the player. Done when each passes the checklist below.</li>
 <li><b>Critique</b> (deck, with the editor when it matters). The versions side by side. The outcome is written on the brief page: which version, and why the others lost.</li>
 <li><b>Promote</b> (deck). The beat's <code>slide.src</code> in <code>talk.json</code> points at the winner, the script's words and cue are adjusted to match, and the board says promoted.</li>
 </ol>
 
 <h2>Where files go</h2>
-<pre><code>src/pages/studio/                 these pages (deck)
-src/pages/studio/briefs/          one page per brief (deck writes, ruv.sgit appends its Versions section)
-src/static/studio/data/           sourced material as JSON (deck)
-src/static/studio/lab/b01/        the work for brief B01 (ruv.sgit)
-    storyboard/index.html
-    v1/index.html, v2/index.html, ...
-    notes.md                      what was tried, what the builder would do next</code></pre>
-<p>Lab pages are standalone: no site chrome and no markdown twin, like the slides, and the gate knows it. A version loads the engine from <code>../../../../talk/engine/slide.js</code> and <code>slide.css</code> and draws on the 1280 by 720 canvas the engine scales. It reads its data with a relative <code>fetch</code> of <code>../../../data/&lt;file&gt;.json</code>.</p>
+<pre><code>src/pages/studio/                 these pages, the programme and deck's reviews (deck)
+src/static/studio/data/           sourced material as JSON, and programme.json (deck)
+team/deck/requests/               deck's requests to other members, until deck holds the mail vault key
+ruv-sgit/&lt;slug&gt;/index.html        the piece, made in a ruv.sgit run (ruv.sgit's pages)
+ruv-sgit/&lt;slug&gt;/explainer.html    what the piece shows, frame by frame, and its sources (ruv.sgit)
+studio/reviews/&lt;id&gt;.html          deck's review of each pass (deck)</code></pre>
+<p>ruv.sgit delivers on its own pages, as its article <a href="{{root}}articles/how-ruv-sgit-works.html">How ruv.sgit works</a> sets out, on the slide engine and its 1280 by 720 canvas. The studio links to them; it does not copy them. (Until 29 October this page named <code>studio/lab/</code> for the work; nothing was ever delivered there.)</p>
 
 <h2>The version ladder</h2>
 <p>As at ruv.sgit.ai, versions climb from simple to rich, and a richer one has to beat the simpler one to be promoted. A simple slide that lands beats a rich one that distracts.</p>
