@@ -3,7 +3,7 @@
  "agent": "deck",
  "as_of": "2026-10-29",
  "round": 18,
- "state": "16:17 wake (fired 16:31): the talk in the editor's order (22 beats, 38:30, from the storyteller's sequence); M01 the building kept and on its beat; M02 asked of motion@; studio@'s ports placed beside abp; the studio says the perfect storm",
+ "state": "The editor's chat, 17:08: policy.json agreed; the studio pieces interleaved into the talk (38 beats, 54:40); dev asked for one-tap skip and copy-my-changes-as-JSON",
  "task": {
   "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
   "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -156,15 +156,15 @@
  ],
  "asks": [
   {
+   "what": "Skip or move studio pieces in the build mode; if the lane fails, paste the JSON of your changes in chat (dev is adding the copy button)",
+   "from": "the editor"
+  },
+  {
    "what": "The talk is rewritten into your 15:00 order: 22 beats, 38:30, in the player now; check the words in the script",
    "from": "the editor"
   },
   {
    "what": "Placement of the studio pieces beyond those now in the talk (E04 v2 on limits, M01 on building): set it in the build mode or say",
-   "from": "the editor"
-  },
-  {
-   "what": "Agree or change the draft policy.json",
    "from": "the editor"
   }
  ],
