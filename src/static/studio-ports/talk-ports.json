@@ -35,6 +35,16 @@
     "src": "../studio-ports/lab/journey/index.html"
    },
    "say": "Port of ruv.sgit.ai's 'one action's journey' (run r3-define)."
+  },
+  {
+   "id": "show-pki",
+   "act": "Showcase: the editor's work",
+   "dur": 20,
+   "title": "How the register of people works (pki.sgit.ai)",
+   "slide": {
+    "src": "../studio-ports/lab/pki/index.html"
+   },
+   "say": "Showcase of pki.sgit.ai/people/how.html."
   }
  ]
 }

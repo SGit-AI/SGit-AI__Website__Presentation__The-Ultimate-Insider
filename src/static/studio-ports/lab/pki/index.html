@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Showcase: how the register of people works (pki.sgit.ai)</title>
+<link rel="stylesheet" href="../../../talk/engine/slide.css">
+<link rel="stylesheet" href="../../../talk/engine/showcase.css">
+<script src="../../../talk/engine/slide.js"></script>
+<script src="../../../talk/engine/qrcode.js"></script>
+<script src="../../../talk/engine/showcase.js"></script>
+<!-- studio@the-ultimate-insider, 29 October 2026: the first showcase slide for the section on the editor's work, on dev's
+     template (talk/engine/showcase.md). shot.jpg is pki.sgit.ai/people/how.html at 1440 wide, taken 17:2x UTC, cut in the image
+     itself to the top 1420 px (the intro, "From a passkey to a message", "Two ways, or not at all"): no key, fingerprint, key QR
+     or read key on it. The words in the callouts are the page's own, shortened. -->
+<script type="application/json" id="showcase">
+{
+ "kicker": "The editor's work · pki.sgit.ai",
+ "title": "A register of people and their public keys, verified both ways",
+ "text": "A passkey opens a vault that keeps your keys, and a link between two people counts only when both of them wrote it.",
+ "image": "shot.jpg", "size": [1440, 1420],
+ "link": "https://pki.sgit.ai/people/how.html",
+ "source": "How the register of people works (pki.sgit.ai)",
+ "stages": [
+  { "at": 0, "crop": [0, 0, 1440, 1420], "label": "the page" },
+  { "at": 3, "crop": [240, 410, 960, 600], "label": "from a passkey to a message", "dim": true,
+    "callouts": [ { "box": [278, 466, 910, 112], "text": "A passkey opens a vault; your keys follow you" },
+                  { "box": [278, 924, 910, 62], "text": "Then anyone can send you something only you can read" } ] },
+  { "at": 9, "crop": [240, 800, 960, 610], "label": "two ways, or not at all", "dim": true,
+    "callouts": [ { "box": [258, 1060, 916, 110], "text": "A link exists only when both people wrote it: the answer to the 2019 keyserver flood" } ] }
+ ],
+ "end": 15
+}
+</script>
+</head>
+<body>
+<div id="cv" data-end="15"></div><!-- data-end here as well as "end" in the JSON: the engine reads it before showcase.js runs (told dev) -->
+</body>
+</html>
