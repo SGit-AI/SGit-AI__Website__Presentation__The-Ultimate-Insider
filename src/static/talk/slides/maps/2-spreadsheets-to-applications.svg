@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" font-family="system-ui, sans-serif" font-size="13">
+<rect width="960" height="620" fill="#fff"/>
+<text x="70" y="30" font-size="18" font-weight="600">Map 2: explorer coding swaps a commodity spreadsheet for a genesis app, many times over</text>
+<text x="78.0" y="570" fill="#555">Genesis</text>
+<line x1="285.0" y1="60" x2="285.0" y2="550" stroke="#bbb" stroke-dasharray="4 4"/>
+<text x="293.0" y="570" fill="#555">Custom built</text>
+<line x1="500.0" y1="60" x2="500.0" y2="550" stroke="#bbb" stroke-dasharray="4 4"/>
+<text x="508.0" y="570" fill="#555">Product (+rental)</text>
+<line x1="715.0" y1="60" x2="715.0" y2="550" stroke="#bbb" stroke-dasharray="4 4"/>
+<text x="723.0" y="570" fill="#555">Commodity (+utility)</text>
+<line x1="70" y1="550" x2="930" y2="550" stroke="#333"/><line x1="70" y1="60" x2="70" y2="550" stroke="#333"/>
+<text x="480.0" y="600" text-anchor="middle" fill="#333">Evolution</text>
+<text transform="translate(22 310.0) rotate(-90)" text-anchor="middle" fill="#333">Value chain (visible to invisible)</text>
+<line x1="500.0" y1="74.70000000000002" x2="758.0" y2="167.79999999999998" stroke="#888"/>
+<line x1="500.0" y1="74.70000000000002" x2="173.2" y2="167.79999999999998" stroke="#888"/>
+<line x1="173.2" y1="167.79999999999998" x2="457.0" y2="265.8" stroke="#888"/>
+<line x1="173.2" y1="167.79999999999998" x2="543.0" y2="354.0" stroke="#888"/>
+<line x1="758.0" y1="167.79999999999998" x2="543.0" y2="354.0" stroke="#888"/>
+<line x1="173.2" y1="167.79999999999998" x2="156.0" y2="442.2" stroke="#888"/>
+<line x1="457.0" y1="265.8" x2="861.2" y2="510.8" stroke="#888"/>
+<line x1="543.0" y1="354.0" x2="861.2" y2="510.8" stroke="#888"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#c0392b"/></marker></defs>
+<circle cx="500.0" cy="74.70000000000002" r="6" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="510.0" y="66.70000000000002">A person with a business problem</text>
+<circle cx="758.0" cy="167.79999999999998" r="6" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="748.0" y="159.79999999999998" text-anchor="end">Spreadsheet as infrastructure</text>
+<line x1="173.2" y1="167.79999999999998" x2="457.0" y2="167.79999999999998" stroke="#c0392b" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+<circle cx="173.2" cy="167.79999999999998" r="6" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="183.2" y="159.79999999999998">Explorer-coded application</text>
+<line x1="457.0" y1="265.8" x2="715.0" y2="265.8" stroke="#c0392b" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+<circle cx="457.0" cy="265.8" r="6" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="467.0" y="257.8">Coding agents</text>
+<circle cx="543.0" cy="354.0" r="6" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="553.0" y="346.0">Business data, connectors</text>
+<line x1="156.0" y1="442.2" x2="500.0" y2="442.2" stroke="#c0392b" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+<circle cx="156.0" cy="442.2" r="6" fill="#fdebd0" stroke="#222" stroke-width="1.5"/>
+<text x="166.0" y="434.2">Security for each new app</text>
+<circle cx="861.2" cy="510.8" r="6" fill="#fff" stroke="#222" stroke-width="1.5"/>
+<text x="851.2" y="502.8" text-anchor="end">Hosting, compute</text>
+<text x="207.6" y="403.0" fill="#c0392b" font-style="italic">the opportunity: security at the scale of the software</text>
+</svg>

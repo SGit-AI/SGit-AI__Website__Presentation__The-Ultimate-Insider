@@ -234,6 +234,7 @@ class Site_Build:
 <script type="application/ld+json">{ld}</script>
 <link rel="icon" href="{root}assets/favicon.svg">
 <link rel="stylesheet" href="{root}assets/site.css">
+<link rel="stylesheet" href="{root}assets/pane.css">
 <script src="{root}assets/theme.js"></script>
 <script src="{root}assets/pane.js" defer></script>
 </head>

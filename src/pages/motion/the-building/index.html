@@ -1,0 +1,41 @@
+<!--meta {"title": "M01: the building", "description": "motion@'s first story animation: people who got into a building mostly turned left, to the small things; agents turn right, to the gold. Four stops on the player's clock, frame by frame, with what is said over it and what was left out."} -->
+<style>
+.ev-frame{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg);margin:10px 0 6px}
+.ev-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+</style>
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}team/motion/index.html">motion@</a> / M01</nav>
+<p class="kicker">Story animation M01 · v1 · for deck's review</p>
+<h1>The building</h1>
+<p class="lead">The one sentence: people who got inside usually turned the wrong way, towards the small things, and agents will not; they go straight to where the value is.</p>
+<p class="note">Made by motion@the-ultimate-insider on deck's request of 29 October 2026 (the first of the story animations, from the editor's feedback brief). For the talk near the beat <code>unreported</code>, ahead of <code>collision</code>; the editor places it with the player's build mode. It carries no number and no real incident, as the request asked.</p>
+
+<div class="ev-frame"><iframe src="{{root}}motion/lab/the-building/v1/index.html" title="M01 v1: the building" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}motion/lab/the-building/v1/index.html">Open it on its own</a> · <a href="{{root}}motion/lab/the-building/v1/index.html?static">the end state</a> · <a href="{{root}}motion/lab/the-building/v1/index.html?theme=light">light theme</a></p>
+
+<h2>The stops</h2>
+<p>Seconds from the start, on the engine's clock (<code>window.RUV_STEPS</code>), so the player starts, stops, steps and seeks it. It ends at 36 s and holds still; with reduced motion it shows the still.</p>
+<div class="tbl"><table>
+<thead><tr><th>Stop</th><th>From</th><th>What is on screen</th><th>What could be said over it</th></tr></thead>
+<tbody>
+<tr><td>1 · the building and the split</td><td>0 s</td><td>A floor plan: one way in at the bottom, a corridor up to a split. Six small rooms to the left, each with small things along the back wall; the vault to the right, with the gold. An arrow each way at the split, then gone.</td><td>"Think of a large building. One way in, and a corridor that splits."</td></tr>
+<tr><td>2 · the attackers turn left</td><td>5 s</td><td>People who got in arrive one at a time (22 of them, every 0.62 s), in neutral ink. Every fourth stops at the split for half a second. All turn left: most to the nearest rooms, a few further along.</td><td>"In almost every incident you have seen, the people who got in turned left, to the small things. They could have done much more."</td></tr>
+<tr><td>3 · the agents turn right</td><td>23 s</td><td>Agents, in the agent red, come in many at once (18, every 0.17 s) at two and a half times the pace, and every one turns right, into the vault, around the gold.</td><td>"Agents will not turn left. They go straight to where the value is."</td></tr>
+<tr><td>4 · the still</td><td>31 s</td><td>The left full of small marks; every agent at the gold. One line at the foot: a pattern, not a count.</td><td>The question for the room: "where would yours have turned?"</td></tr>
+</tbody></table></div>
+
+<h2>How it was made</h2>
+<ul>
+<li>On the slide engine (<code>talk/engine/slide.js</code>), one 1280 by 720 canvas, self-contained, no script from another host. Every figure walks a polyline timed from the engine's clock, so any frame can be sought.</li>
+<li>Colours from the talk: the agent red only on the agents; the people who got in in the text colour, not red; the gold in a colour of its own, so it is not read as infrastructure amber. Both themes.</li>
+<li>Labels in the drawing ("small things", "the gold", "the way in"), one short headline per stop, the ID large, nothing overlapping at the end.</li>
+<li>Checked at 1280 by 720 and on an iPad viewport (landscape and portrait, touch), in both themes, with the player's clock seeking and pausing it.</li>
+</ul>
+
+<h2>Tried and left out</h2>
+<ul>
+<li>A number for how often attackers stopped short: left out, as deck asked; one can be added only from the researcher, through deck.</li>
+<li>Named incidents on the figures, and anything about how anyone got in: left out on purpose. The door is just a door.</li>
+<li>The figures walking in the Lemmings manner, one step at a time: left for v2 if deck wants it; v1 glides, which reads better from the back of a room.</li>
+</ul>
+</article>

@@ -124,13 +124,13 @@ class Gate:
                     self.fail('chrome', rel, 'a document without the top bar (studio/lab documents go through the build: admin/build/build.py, build_lab_documents)')
 
     def check_type_scale(self):                                     # every size in site.css is a token from tokens.css (designer@, design note 3); site.css only: other members own their own styles
-        css = ROOT / 'src' / 'static' / 'assets' / 'site.css'
-        for n, line in enumerate(css.read_text().splitlines(), 1) if css.exists() else []:
+        for css in (ROOT / 'src' / 'static' / 'assets' / f for f in ('site.css', 'pane.css')):     # the site's sheet and the pane's (moved out of it)
+          for n, line in enumerate(css.read_text().splitlines(), 1) if css.exists() else []:
             for m in re.finditer(r'font(?:-size)?:[^;}]*?(\d+(?:\.\d+)?px)', line):
-                self.fail('type scale', f'src/static/assets/site.css:{n}', f'{m.group(1)} is not on the scale: use a --t-* token from tokens.css')
-        for rule in re.findall(r'[^{}]+\{[^}]*var\(--t-xs\)[^}]*\}', css.read_text() if css.exists() else ''):     # T2: 12px only for uppercase labels, or monospace figures
+                self.fail('type scale', f'src/static/assets/{css.name}:{n}', f'{m.group(1)} is not on the scale: use a --t-* token from tokens.css')
+          for rule in re.findall(r'[^{}]+\{[^}]*var\(--t-xs\)[^}]*\}', css.read_text() if css.exists() else ''):     # T2: 12px only for uppercase labels, or monospace figures
             if 'uppercase' not in rule and 'monospace' not in rule:
-                self.fail('type scale', 'src/static/assets/site.css', f'{rule.split("{")[0].strip()[-60:]} sets --t-xs without text-transform:uppercase (T2: lowercase text is 14px or more)')
+                self.fail('type scale', f'src/static/assets/{css.name}', f'{rule.split("{")[0].strip()[-60:]} sets --t-xs without text-transform:uppercase (T2: lowercase text is 14px or more)')
 
     def check_team(self):
         r = subprocess.run([sys.executable, str(ROOT / 'admin/build/agents.py'), 'overlaps'], capture_output=True, text=True)

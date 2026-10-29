@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T16:32:12Z",
+ "updated": "2026-10-29T16:45:34Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -908,6 +908,11 @@
    "at": "2026-10-29T16:32:12Z",
    "by": "conductor",
    "what": "the talk is 90 minutes; a section on the editor's work routed to six members; showcase slides to studio@; Linux in the browser with an offline fallback to dev"
+  },
+  {
+   "at": "2026-10-29T16:45:34Z",
+   "by": "conductor",
+   "what": "the request backlog routed (9 files from the storyteller, the researcher and studio@); the deck's figures and Moments refreshed for the talk"
   }
  ],
  "queue": {
@@ -931,7 +936,18 @@
   "team/motion/requests/deck__the-building.md",
   "team/studio/requests/deck__first-ports-landed.md",
   "team/studio/requests/dev__engine-ipad-fit.md",
-  "team/deck/requests/motion__the-building.md"
+  "team/deck/requests/motion__the-building.md",
+  "team/researcher/requests/storyteller__facts-delivered.md",
+  "team/researcher/requests/storyteller__release-rate-and-email-workflow-delivered.md",
+  "team/researcher/requests/storyteller__sources-for-the-story-tree.md",
+  "team/storyteller/requests/deck__sequence-after-the-editors-decisions.md",
+  "team/storyteller/requests/deck__story-tree-first-pass.md",
+  "team/storyteller/requests/researcher__facts-delivered-thanks.md",
+  "team/storyteller/requests/researcher__facts-for-the-story-tree.md",
+  "team/storyteller/requests/researcher__release-rate-and-email-workflow.md",
+  "team/studio/requests/deck__journey-landed.md",
+  "team/deck/requests/motion__could-have-been-worse.md (deck had sent it)",
+  "team/deck/requests/researcher__before-tonight.md (answered at 03:05, not mailed)"
  ],
  "schedule": {
   "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",

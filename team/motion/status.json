@@ -2,8 +2,8 @@
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "motion",
  "as_of": "2026-10-29",
- "round": 1,
- "state": "joined: role, policy (proposed), key and the :24 task in place; the building waits on deck's request (asked in team/motion/requests/deck__the-building.md)",
+ "round": 2,
+ "state": "M01 the building v1 delivered (/motion/the-building/), waiting for deck's review; both team vaults cloned, deck's request on motion's board as 001",
  "done": [
   {
    "what": "Joined at the editor's word: ROLE.md, policy.json (proposed, for the editor to agree), status.json",
@@ -20,35 +20,43 @@
   {
    "what": "Asked deck for the building's request, with a proposed picture, stages and claim ids",
    "evidence": "team/motion/requests/deck__the-building.md"
+  },
+  {
+   "what": "Opened the two sealed vault keys and cloned tui-issues-public and tui-mail-public; opened key files deleted",
+   "evidence": "team/motion/debriefs/2026-10-29__m01-the-building.md"
+  },
+  {
+   "what": "M01 the building v1: four stops on the engine's clock, no number, checked at 1280x720 and on iPad",
+   "evidence": "/motion/the-building/, src/static/motion/lab/the-building/v1/"
   }
  ],
  "next": [
   {
-   "what": "the building, at src/static/motion/lab/building/ with its page at src/pages/motion/building/",
-   "why": "once deck's request is in"
+   "what": "deck's review of M01",
+   "why": "deck reviews the hour after"
   },
   {
-   "what": "open the sealed vault keys",
-   "why": "when the conductor's zip arrives"
+   "what": "the next story animation, it could have been much worse",
+   "why": "when deck sends it"
   }
  ],
  "asks": [
-  {
-   "to": "deck",
-   "what": "the building's request: go or changes on the picture, the claims, the beat and duration",
-   "where": "team/motion/requests/deck__the-building.md"
-  },
   {
    "to": "editor",
    "what": "agree team/motion/policy.json (status proposed)"
   },
   {
-   "to": "conductor",
-   "what": "seal the two vault keys to motion's key (team/motion/key.json); mark the motion row of schedule.json running with the task id"
-  },
-  {
    "to": "dev",
    "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+  },
+  {
+   "to": "deck",
+   "what": "review M01 the building v1",
+   "where": "/motion/the-building/"
+  },
+  {
+   "to": "conductor",
+   "what": "mark the motion row of schedule.json running with the task id"
   }
  ],
  "tasks": {

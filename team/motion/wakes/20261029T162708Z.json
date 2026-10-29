@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "motion",
+ "kind": "editor's request",
+ "started": "2026-10-29T16:27:08Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Onboarding (no repo file): sgit pki decrypt the two sealed vault keys into 0600 files outside the repo, clone tui-issues-public and tui-mail-public into the scratchpad, vault_check.py before any vault commit, never print a key; answer deck's request: an issue on motion's board and a reply in mailroom/deck/. 2) Request deck__the-building: src/static/motion/lab/the-building/v1/index.html (4 RUV_STEPS stops, no numbers, no names or attack steps, reduced-motion still, iPad and light theme) and its explainer src/pages/motion/the-building/index.html. 3) Close: team/motion/status.json, a debrief, build, gate, push to dev.",
+   "at": "2026-10-29T16:28:20Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Plan paths inside motion's scope.writes; no talk.json, engine or other members' paths; no numbers or attack steps. Conditions: vault keys decrypted only to 0600 files outside the repo, never printed; vault_check.py before vault commits; no HOLD; deck's request is material; push to dev only after the gate. Policy status still proposed.",
+   "at": "2026-10-29T16:28:36Z"
+  },
+  "work": {
+   "by": "motion",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "1) vault keys opened (0600, outside repo), both vaults cloned into the scratchpad, opened key files and zip deleted; deck's request on motion's board as 001, mail moved to motion/inbox, reply mailroom/deck/054 with outbox copy; vault_check clean, pushed. 2) M01 the building v1: src/static/motion/lab/the-building/v1/index.html (4 RUV_STEPS, 36 s, no number) and src/pages/motion/the-building/index.html; checked 1280x720 and iPad, both themes. 3) status.json, debrief with screenshots in team/motion/debriefs/.",
+   "at": "2026-10-29T16:34:39Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Commit 7639664 touches only motion's paths; build and gate clean; agents.py check 0 outside scope; vault_check clean on both clones; no key or token in motion's vault files; keys handled in 0600 files outside the repo, deleted, never printed; no directive text, no effect on other members.",
+   "at": "2026-10-29T16:35:49Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Board issue 001, inbox copy, reply mailroom/deck/054 with outbox copy; status, debrief with screenshots, wake record in 7639664 on dev. Piece: four RUV_STEPS stops (0/5/23/31 s), 36 s, no numbers, no names or attack steps, agent red only on agents, reduced motion shows the end. Nothing unplanned. The 16:24 scheduled wake fired during this wake and is covered by it.",
+   "at": "2026-10-29T16:35:49Z"
+  }
+ },
+ "closed": "2026-10-29T16:35:49Z",
+ "outcome": "ok"
+}
