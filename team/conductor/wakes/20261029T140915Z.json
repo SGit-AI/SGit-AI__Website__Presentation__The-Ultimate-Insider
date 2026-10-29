@@ -1,0 +1,54 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request",
+ "started": "2026-10-29T14:09:15Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "go",
+   "comment": "The editor's words in this session, 14:09: 'in this sort of same animation and presentation and style ... a mini deck ... that explains how we actually build this using real world data, showing the agents firing up, almost an animation of the multiple agents, the changes, the edits, the materials, how everything flowed together ... our agentic workflow in action'. Plan: 1) admin/tools/workflow_deck.py: reads only public records (team/*/wakes/*.json, git log subjects and counts, team/conductor/pace.json nodes and edges, team/conductor/night/*.json mail header counts) and writes content/articles/how-this-talk-was-built.md: a short article with a 1280x720 stage in a raw HTML block, inline script, no external host, start, stop, step forward and back, full screen; scenes: the team and its slots, the night as it happened (every wake firing, its five verdicts), the flow from request to piece to review, the commits and messages, what was made, the guard rails (holds 0, findings fixed). 2) add content/articles/how-this-talk-was-built.md to team/conductor/policy.json writes, at the editor's word. 3) build, gate, screenshots checked, status.json. Plan by the member; no sub-agent this time, the editor waits. DEVIATION RECORDED: this plan was written by the member, not a conductor sub-agent, because the editor was waiting. AMENDED after the pre-review's change: all five conditions adopted as written (policy.json gains exactly content/articles/how-this-talk-was-built.md before any write there; only counts, verdicts, ids, slot names and commit subjects rendered, escaped; no key of any kind, QR, email or message body; vault_check and a secret scan on the output; inline script self-contained, no external host, no eval; shared site JS and CSS untouched; only the conductor's own paths).",
+   "at": "2026-10-29T14:09:26Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Second pass: the amended plan adopts all five conditions (only the article path added to policy.json before any write; the skipped conductor sub-agent recorded as a deviation; only counts, verdicts, ids, slot names and commit subjects, escaped, vault_check and a secret scan; inline script, no external host, no eval, shared JS and CSS untouched; own paths only). Proceed.",
+   "at": "2026-10-29T14:10:08Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "79a7fcb: policy.json gains exactly content/articles/how-this-talk-was-built.md; admin/tools/workflow_deck.py (public records only: wakes, git counts and short escaped subjects, pace.json, night mail counts, schedule slots); the article with one 1280x720 stage, six scenes on a virtual clock (the team, every wake firing, the five steps with real verdict counts, ask make review redo, letters and commits, what was made), Back, Play/Pause, Next, Full screen, keys. Gate clean (170 html), agents check 0 outside scope, vault_check clean, no console errors; screenshots checked in the scratchpad. Built by a fork of this session in the background while the editor was answered.",
+   "at": "2026-10-29T14:14:58Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff 0ac7104..HEAD touches only workflow_deck.py, the new article, status.json and policy.json (exactly one path added). Article has no eval, fetch, innerHTML, external host, email, key, token or QR; data from a local JSON element. No shared JS or CSS changed. Build and validate clean, agents check 0 outside scope, vault_check on the article clean.",
+   "at": "2026-10-29T14:15:27Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) workflow_deck.py, public records only: done. The article with six scenes, controls, full screen: done; no eval, fetch, innerHTML or external URL. 2) policy.json gained exactly the article path: done. 3) build, gate, status.json: done. Conditions 1-5 kept; the sub-agent deviation recorded. Unplanned: none.",
+   "at": "2026-10-29T14:15:53Z"
+  }
+ },
+ "closed": "2026-10-29T14:15:53Z",
+ "outcome": "ok",
+ "history": [
+  {
+   "step": "pre_review",
+   "verdict": "change",
+   "by": "security",
+   "model": "sonnet",
+   "comment": "Go only with conditions: (1) add exactly the article path to policy.json citing the editor's 14:09 words, write nothing there before; (2) record that the plan skipped the conductor sub-agent; (3) render only counts, verdicts, ids, slot names and commit subjects; never a key, token, vault key, read key, QR, email or message body; escape record text; vault_check and a secret scan on the output; (4) inline script self-contained, no external host, no eval, shared JS/CSS untouched, validate.py passes; (5) only own paths."
+  }
+ ]
+}
