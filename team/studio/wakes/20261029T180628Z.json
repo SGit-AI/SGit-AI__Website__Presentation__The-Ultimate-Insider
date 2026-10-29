@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "studio",
+ "kind": "follow-up, tonight every 15 min (the editor's word)",
+ "started": "2026-10-29T18:06:28Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (plan brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Requests first: tell deck what landed (by mail in mailroom/deck, since studio holds the mail key; the plan named the repository fallback), no key, path or session id. 2. Showcase 2: ruv.sgit's ABP in prose from /team/ruv-sgit/index.html beside its policy.json, at src/static/studio-ports/lab/abp-prose/ with its page. 3. Showcase 3: the enforcement, agents.py check '0 file(s) outside scope' and a wake's five verdicts (/admin/wakes.html), at lab/abp-enforcement/, honestly: a scope is a setting, not a boundary; build, gate, status, debrief, push dev. Studio's own agreement unclaimed until the editor confirms here.",
+   "at": "2026-10-29T18:07:06Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (pre_review brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside scope.writes; no stop condition. Conditions: no talk.json, deck, engine or locked part 1; shots cut in the image itself to remove session ids, key.json, key QR images, fingerprints, local paths and wake record ids, checked by eye; mail to deck without key, path or session id, vault_check first; no external script; studio's own agreement not claimed; send_later only until 19:45.",
+   "at": "2026-10-29T18:07:27Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
