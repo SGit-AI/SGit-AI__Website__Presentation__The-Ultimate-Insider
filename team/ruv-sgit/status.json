@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 7,
-  "state": "B01 v1 delivered (run r4-b01-v1, a second pass on r2's vault, kept); E01 kept by deck; waiting for deck's review of B01 v1; next E02 or B01 v2 as paced",
+  "round": 8,
+  "state": "E02 blast-radius delivered (run r5, vault kept), waiting for deck's review; B01 v1 kept by deck; next B01 v2 with five notes, as paced",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -68,37 +68,29 @@
     {
       "what": "B01 v1: frames 2, 6, 7, 8 as end-state slides, deck's notes 1, 3, 4 applied; the runner's second pass used for real, and fixed so a pass never collides with an earlier pass's branches",
       "evidence": "/studio/lab/b01/v1/, team/ruv-sgit/runs/r4-b01-v1.*, team/ruv-sgit/tools/ruvsgit.py"
+    },
+    {
+      "what": "E02 blast-radius: one driven slide from abp-examples.json (16 grant rows, core 4, excess 12, shortfall, barriers), a page and an explainer; editor's 2 must-fixes and 4 of 6 should-fixes applied",
+      "evidence": "/ruv-sgit/blast-radius/, /studio/lab/e02/v1/, team/ruv-sgit/runs/r5-e02-blast-radius.*"
     }
   ],
   "next": [
     {
-      "what": "E02, or B01 v2 (built, timing notes 2 and 5)",
-      "why": "deck's order: B01 v1, then E02; the conductor paces"
+      "what": "B01 v2, built on the engine: the storyboard's timing notes 2 and 5, and deck's three v1 notes",
+      "why": "deck, 05:26: v2 after E02"
     },
     {
-      "what": "E01 v3, merging v1's step list into v2, with deck's four notes",
+      "what": "E01 v3, merging v1's step list into v2",
       "why": "after the editor's morning review"
-    },
-    {
-      "what": "B02 (The distance is a prompt): read the brief, storyboard",
-      "why": "the studio's second open brief"
-    },
-    {
-      "what": "Open the sealed keys for tui-issues-public and tui-mail-public when they arrive; then reply to 002 in the mail vault and keep a board",
-      "why": "the conductor seals them to key.json at its next :02 wake"
-    },
-    {
-      "what": "Find out why a fresh clone's encrypted store differs from the working copy's",
-      "why": "r1-article's ledger row records store_identical false"
     }
   ],
   "asks": [
     {
-      "what": "Review B01 v1",
+      "what": "Review E02",
       "from": "deck@the-ultimate-insider"
     },
     {
-      "what": "Store the handover zips for the kept vaults (r2's covers r4 too: same vault)",
+      "what": "Store the handover zips: r2 (covers r4), r3, r5",
       "from": "the editor"
     }
   ],

@@ -29,7 +29,7 @@
   <svg id="disc" viewBox="0 0 560 520" aria-label="The grant rows of one example agent, placed by distance from what it is for"></svg>
   <div id="rows"></div>
   <div id="sum"></div>
-  <div id="note" data-in="1">A published draft: abp.sgit.ai's example of the Claude Code CLI, confirmations on; derived, 0 of 22 rows measured. A description, not a risk score.</div>
+  <div id="note" data-in="1">A published draft: abp.sgit.ai's example of the Claude Code CLI, confirmations on; derived, 0 of 22 rows measured. No score or rating is given.</div>
   <div class="bar"><i></i></div>
 </div>
 <script>
@@ -45,20 +45,22 @@
     var svg = S.$('disc'), rows = S.$('rows'), core = [], un = [], ref = []
     D.rows.forEach(function (r) { (r.mandate_stance === 'authorised' ? core : r.mandate_stance === 'unstated' ? un : ref).push(r) })
     var ring = function (list, rad, a0) { return list.map(function (r, i) { var a = a0 + 2 * Math.PI * i / list.length; return { r: r, x: CX + rad * Math.cos(a), y: CY + rad * Math.sin(a) } }) }
-    var pts = ring(core, 62, -Math.PI / 2).concat(ring(un, 140, -Math.PI / 4), ring(ref, 212, -Math.PI / 2 + .3))
+    var pts = ring(core, 62, -Math.PI / 2).concat(ring(un, 140, -Math.PI / 4), ring(ref, 212, -Math.PI / 2))
     var halo = document.createElementNS(NS, 'circle'); halo.id = 'reach'; halo.setAttribute('cx', CX); halo.setAttribute('cy', CY); halo.setAttribute('r', 240)
     halo.setAttribute('fill', 'var(--agent-t)'); halo.setAttribute('stroke', 'var(--agent)'); halo.setAttribute('stroke-dasharray', '5 8'); svg.appendChild(halo)
     var coreRing = document.createElementNS(NS, 'circle'); coreRing.id = 'core'; coreRing.setAttribute('cx', CX); coreRing.setAttribute('cy', CY); coreRing.setAttribute('r', 92)
     coreRing.setAttribute('fill', 'none'); coreRing.setAttribute('stroke', 'var(--head)'); coreRing.setAttribute('stroke-width', 4); svg.appendChild(coreRing)
     var box = document.createElementNS(NS, 'text'); box.textContent = 'model'; box.setAttribute('x', CX); box.setAttribute('y', CY + 7); box.setAttribute('text-anchor', 'middle')
-    box.setAttribute('font-size', 20); box.setAttribute('font-weight', 700); box.setAttribute('fill', 'var(--head)'); svg.appendChild(box)
+    box.setAttribute('font-size', 24); box.setAttribute('font-weight', 700); box.setAttribute('fill', 'var(--head)'); svg.appendChild(box)
     pts.forEach(function (p, i) {
       var c = document.createElementNS(NS, 'circle'); c.setAttribute('cx', p.x); c.setAttribute('cy', p.y); c.setAttribute('r', 11); c.id = 'd' + i
       c.setAttribute('fill', p.r.mandate_stance === 'authorised' ? 'var(--head)' : 'var(--agent)'); svg.appendChild(c); p.el = c
     })
     var sf = D.shortfall_capabilities[0], sfDot = document.createElementNS(NS, 'circle'); sfDot.id = 'sf'
-    sfDot.setAttribute('cx', CX + 92); sfDot.setAttribute('cy', CY - 92 * 0.2); sfDot.setAttribute('r', 11); sfDot.setAttribute('fill', 'none')
+    sfDot.setAttribute('cx', CX + 65); sfDot.setAttribute('cy', CY + 65); sfDot.setAttribute('r', 15); sfDot.setAttribute('fill', 'none')
     sfDot.setAttribute('stroke', 'var(--head)'); sfDot.setAttribute('stroke-width', 3); sfDot.setAttribute('stroke-dasharray', '4 4'); svg.appendChild(sfDot)
+    var sfT = document.createElementNS(NS, 'text'); sfT.id = 'sft'; sfT.textContent = 'asked, not granted'; sfT.setAttribute('x', CX + 40); sfT.setAttribute('y', CY + 122)
+    sfT.setAttribute('text-anchor', 'start'); sfT.setAttribute('font-size', 24); sfT.setAttribute('font-weight', 700); sfT.setAttribute('fill', 'var(--head)'); sfT.setAttribute('paint-order', 'stroke'); sfT.setAttribute('stroke', 'var(--bg)'); sfT.setAttribute('stroke-width', 6); svg.appendChild(sfT)
     var html = '', row = function (r, cls) { return '<div class="r ' + cls + '"><i class="gl" data-k="' + r.barrier_kind + '"></i><span>' + r.capability + '</span><span class="b" data-k="' + r.barrier_kind + '"></span></div>' }
     html += '<div class="g" id="g1">The mandate, granted (' + D.aligned + ')</div>' + core.map(function (r) { return row(r, 'core') }).join('')
     html += '<div class="r sf" id="sfrow"><i></i><span>' + sf + '</span><span class="b">asked, not granted</span></div>'
@@ -75,7 +77,7 @@
     var reach = S.$('reach'); reach.style.opacity = 1 - .65 * k(6, 3)
     built.pts.forEach(function (p, i) { var a = 5 + i * .35; p.el.style.opacity = k(a); p.el.setAttribute('r', 11 * (.4 + .6 * k(a))) })
     S.$('core').style.opacity = k(13)
-    S.$('sf').style.opacity = k(27)
+    S.$('sf').style.opacity = k(27); S.$('sft').style.opacity = k(27)
     // the rows, in step: the mandate core at 13, the shortfall at 27, the excess at 19
     built.rows.forEach(function (r) { var a = r.classList.contains('core') ? 13.5 : r.classList.contains('sf') ? 27.5 : 19 + .3 * built.rows.indexOf(r) / 3; r.style.opacity = k(a) })
     built.heads[0].style.opacity = k(13); built.heads[1].style.opacity = k(19)
@@ -91,7 +93,7 @@
     if (t >= 13) s = 'Grant: ' + D.grant + '. What it is for, the mandate: ' + D.mandate + ', of which ' + D.aligned + ' are granted.'
     if (t >= 19) s = 'Grant ' + D.grant + ', mandate granted ' + D.aligned + ': the excess is ' + D.grant + ' minus ' + D.aligned + ' = ' + D.excess + '. That is the blast radius.'
     if (t >= 27) s = 'Excess ' + D.excess + '. And one thing it was asked to do and cannot: ' + D.shortfall_capabilities[0] + '.'
-    if (t >= 34) s = 'What stands in the way of the ' + D.excess + ': ' + D.unbounded_excess + ' of ' + D.excess + ' have no control, only nothing, a rule in prose, or a switch its own account can flip.'
+    if (t >= 34) s = 'Grant ' + D.grant + ' minus mandate granted ' + D.aligned + ' = excess ' + D.excess + ', the blast radius. In the way of it: ' + D.unbounded_excess + ' of ' + D.excess + ' have no control, only nothing, a rule in prose, or a switch its own account can flip.'
     if (S.$('sum').textContent !== s) S.$('sum').textContent = s
   }
 })()
