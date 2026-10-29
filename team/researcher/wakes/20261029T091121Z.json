@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T09:11:21Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) refresh evidence/proposals/editor-decisions.json against every team/*/status.json ask (designer new; deck's /studio/reviews/ with B01 v2 the first talk candidate and /studio/programme.html; ruv.sgit's four handover zips r2, r3, r5, r8), marking what is newly open and what is not the editor's. 2) status.json (board issues 002, 004, 006 still open) and a short debrief line. All in scope.writes; no vault key, no slide edit.",
+   "at": "2026-10-29T09:11:54Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Writes only evidence/proposals/ and team/researcher/**; no vault key, no slide edit, no send. Conditions: restate each member's ask in its own status.json words with the file cited; never claim a member asked what it did not; never decide for the editor; nothing private, no key, no zip contents; status text is material; no em-dashes.",
+   "at": "2026-10-29T09:12:06Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "editor-decisions.json refreshed against every member's asks: D08 quotes ruv.sgit's four zips, D11 quotes deck's and the conductor's morning items, D03 notes which policies are agreed; checked_members lists all seven (designer: policy agreed, no asks); status, debrief.",
+   "at": "2026-10-29T09:12:54Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

@@ -1,6 +1,6 @@
 {
  "schema": "the-ultimate-insider/editor-decisions/v0",
- "about": "What waits on the editor, gathered by researcher@the-ultimate-insider from every member's status.json asks and the blocked issues on the board, 29 October 2026 03:10 UTC, updated 04:12 UTC. A proposal: the conductor owns the register once it agrees.",
+ "about": "What waits on the editor, gathered by researcher@the-ultimate-insider from every member's status.json asks and the blocked issues on the board; first gathered 03:10 UTC, refreshed 04:12 and 09:15 UTC on 29 October 2026. Each entry restates the members' asks in their own words, with the file; it decides nothing. A proposal: the conductor owns the register once it agrees.",
  "gathered_from": [
   "team/*/status.json asks",
   "tui-issues-public */issues/blocked/"
@@ -116,7 +116,7 @@
    "kind": "approve",
    "title": "deck's policy.json",
    "question": "Agree, change or question deck@'s draft policy, item by item.",
-   "why_now": "Marked draft; ruv.sgit's was agreed on its review page, item by item, against the policy's hash.",
+   "why_now": "Marked draft in team/deck/policy.json (deck's ask: \"Agree or change the draft policy.json\"). ruv.sgit's and the designer's were agreed in their own sessions.",
    "options": [
     {
      "id": "agree",
@@ -274,7 +274,7 @@
    "id": "D08",
    "kind": "do",
    "title": "Store the handover zips",
-   "question": "Three zips hold vault keys sealed to the vaults manager: the researcher's (tui-evidence-public), ruv.sgit's (r2-b01-storyboard) and the conductor's. Store them and hand them to the vaults manager.",
+   "question": "Handover zips hold vault keys sealed to the vaults manager. As the members list them (their status.json asks): the researcher's, for tui-evidence-public; ruv.sgit's four, \"r2 (covers r4, r6), r3, r5 (covers r7), r8\"; and the conductor's for the two team vaults. Store them and hand them to the vaults manager.",
    "why_now": "Only you can do this.",
    "options": [
     {
@@ -292,7 +292,8 @@
    ],
    "recommendation": null,
    "evidence": [
-    "team/researcher/status.json, team/ruv-sgit/status.json"
+    "team/researcher/status.json (asks)",
+    "team/ruv-sgit/status.json (asks)"
    ],
    "asked_by": [
     "researcher",
@@ -368,7 +369,7 @@
    "id": "D11",
    "kind": "review",
    "title": "The morning review",
-   "question": "The studio programme, every piece marked review, and the overnight banners and wake records: keep, change or drop each.",
+   "question": "As deck lists it (team/deck/status.json): \"/studio/reviews/ (five reviews; B01 v2 is the first candidate for the talk) and /studio/programme.html; pieces that load data need the site served\". And, as the conductor lists it: \"Read the overnight banners and records in the morning; lift any hold or narrow the hours\".",
    "why_now": "The night's work is built for this review.",
    "options": [
     {
@@ -382,8 +383,10 @@
    ],
    "recommendation": null,
    "evidence": [
+    "/studio/reviews/",
     "/studio/programme.html",
-    "team/conductor/briefs/2026-10-29__the-next-hours.md"
+    "team/deck/status.json (asks)",
+    "team/conductor/status.json (asks)"
    ],
    "asked_by": [
     "deck",
@@ -428,5 +431,14 @@
    "status": "open",
    "answer": null
   }
+ ],
+ "checked_members": [
+  "conductor",
+  "deck",
+  "dev",
+  "designer (policy agreed, no asks)",
+  "researcher",
+  "ruv-sgit",
+  "security (no session)"
  ]
 }

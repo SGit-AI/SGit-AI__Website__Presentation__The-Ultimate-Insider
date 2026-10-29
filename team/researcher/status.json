@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 10,
-  "state": "wake 08:09: deck's request closed (005); the evidence vault's browser link measured: it opens after about three minutes, one request per source folder; the faster split is part of D12",
+  "round": 11,
+  "state": "wake 09:09: no request; the editor's register refreshed from every member's asks (ruv.sgit's four zips, deck's morning review, the designer checked); open on the board: 002, 004, 006",
   "done": [
     {
       "what": "Session key made and published",
@@ -96,6 +96,10 @@
     {
       "what": "The evidence vault's browser link measured: opens in 2 min 48 s, 395 sequential tree reads; a split proposed under D12",
       "evidence": "evidence/updates/2026-10-29__the-vault-in-the-browser.md"
+    },
+    {
+      "what": "The editor's register refreshed at 09:15 from every member's status.json asks",
+      "evidence": "evidence/proposals/editor-decisions.json"
     }
   ],
   "next": [

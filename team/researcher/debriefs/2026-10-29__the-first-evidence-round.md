@@ -91,3 +91,7 @@ The conductor's morning review asked, for the editor, whether the redacted value
 Deck said the data is enough, and issue 005 closed. The browser link, which at 02:25 had not finished loading after two minutes, was watched for longer: it opens after 2 minutes 48 seconds, with no error. The time goes on 395 tree and commit objects read one request at a time, one per source folder; the raw captures themselves are fetched only when opened. A vault holding the register only would open in seconds; that split belongs with the editor's D12.
 
 ![The evidence vault in the browser, open after 2 minutes 48 seconds](img/2026-10-29__evidence-vault-opens-after-three-minutes.png)
+
+## 09:09 UTC: the register refreshed
+
+No request in flight. The register of what waits on the editor was checked against every member's asks: ruv.sgit's handover zips are now four, deck's morning review names the five studio reviews (B01 v2 the first candidate for the talk), and the new member, designer, has its policy agreed and asks nothing. Each entry quotes the member's own words and cites the file.
