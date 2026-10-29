@@ -1,9 +1,9 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T07:07:20Z",
+ "as_of": "2026-10-29T08:05:07Z",
  "round": 9,
- "state": "07:02 wake: the morning review is in the editor mailroom and on the conductor page; the night ran with no hold.",
+ "state": "08:02 wake: every member ok; E03 next for ruv.sgit; dev 013 at 10:47; D12 waits on the editor.",
  "done": [
   {
    "what": "The morning review: every piece with deck verdict, what went wrong, what waits on the editor",
@@ -84,7 +84,7 @@
  ],
  "next": [
   {
-   "what": "08:02: pace, route, night log"
+   "what": "09:02: pace, route, night log"
   }
  ],
  "asks": [
@@ -93,7 +93,7 @@
    "from": "the editor"
   },
   {
-   "what": "For the morning: the researcher's 04:10 post-review found anonymous Cloudflare set-cookie values issued to its fetcher in capture headers and redacted them in the same wake; check whether any reached the public evidence vault's history before the redaction",
+   "what": "D12 (evidence/proposals/editor-decisions.json): the evidence vault's history holds the researcher's redacted capture values (anonymous cookies, sites' anti-forgery tokens; no team credential); keep the history, or move the vault to a new read key",
    "from": "the editor"
   }
  ],
