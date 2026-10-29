@@ -2,8 +2,8 @@
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "ruv-sgit",
  "as_of": "2026-10-29",
- "round": 19,
- "state": "The SHarness series rebuilt on the researcher's capture (run r24): SH1 v2 and SH4 to SH7 and the storyline; waiting for deck to place it in the editor's work section",
+ "round": 20,
+ "state": "The SHarness series and its deep dive (SH8, SH9, run r25) ready for parts 2 and 3; waiting for deck's placement, the researcher's twins and distributed, and deck's choice for the attacks' blast radius",
  "done": [
   {
    "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -140,16 +140,24 @@
   {
    "what": "Run r24-sharness-capture: SH1 v2 (the playground's measured without and with), SH4 the one idea, SH5 the kernel in a tab (the live demo's offline fallback), SH6 the last metre (key redacted), SH7 the OS of one process, and the storyline rebuilt; an editor worker's 4 must-fix and 19 should-fix applied; vault kept, handover zip to the editor",
    "evidence": "team/ruv-sgit/runs/r24-sharness-capture.*, /ruv-sgit/sharness-storyline.html, /studio/lab/sharness/"
+  },
+  {
+   "what": "Run r25-sharness-deep-dive: SH8 a new process gets nothing it does not need, SH9 the moving parts and one request (designed); the storyline's deep-dive section; editor's 1 must and 8 should applied; vault kept, handover zip to the editor",
+   "evidence": "team/ruv-sgit/runs/r25-sharness-deep-dive.*, /studio/lab/sharness/run-pipeline/v1/, /studio/lab/sharness/moving-parts/v1/"
   }
  ],
  "next": [
   {
-   "what": "deck's placement of the SHarness series in the editor's work section (SH5 is the live demo's offline fallback)",
-   "why": "the editor's ask; conductor's notice 024"
+   "what": "deck's placement of the SHarness series in parts 2 and 3 (SH2 and SH5 unchanged for the Linux demo)",
+   "why": "conductor mails 027, 028"
   },
   {
-   "what": "deck's reviews of the programme pieces; E09's numbering by E02's sectors",
-   "why": "as paced"
+   "what": "the documented attacks as blast radius, once deck names the pieces and the researcher has the reach data",
+   "why": "conductor mail 027"
+  },
+  {
+   "what": "SHarness twins, distributed, and the escape invitation, once the researcher reads them from the project's own pages",
+   "why": "conductor mail 027"
   }
  ],
  "asks": [

@@ -1,0 +1,404 @@
+{
+ "run": "r25-sharness-deep-dive",
+ "purpose": "r25-sharness-deep-dive: SHarness technical, for parts 2 and 3 (conductor mail 027): SH8 the run pipeline, SH9 the moving parts and one request",
+ "request": {
+  "from": "the editor, through the conductor (tui-mail-public ruv-sgit/027, 29 October 2026 17:08 UTC)",
+  "date": "2026-10-29",
+  "text": "SHarness, technical: the process behaviour policy; a new process gets nothing it does not need; a KMS; a virtual file system from the user's point of view; the network controlled at packet level; digital twins; running locally, or distributed."
+ },
+ "pass_of": null,
+ "commits_before": null,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "e331g4qe",
+ "created_at": "2026-10-29T17:35:38+00:00",
+ "closed_at": "2026-10-29T17:42:31+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 4,
+  "tasks": 4,
+  "ruflo_calls": 16,
+  "ruflo_failed": 0,
+  "ruflo_ms": 7979
+ },
+ "branches": [
+  {
+   "name": "w-sh8",
+   "role": "developer",
+   "files": 1,
+   "bytes": 7235,
+   "write_ms": 7892,
+   "merge_ms": 8311
+  },
+  {
+   "name": "w-sh9",
+   "role": "developer",
+   "files": 1,
+   "bytes": 10718,
+   "write_ms": 7366,
+   "merge_ms": 8966
+  },
+  {
+   "name": "w-storyline",
+   "role": "writer",
+   "files": 1,
+   "bytes": 11427,
+   "write_ms": 7689,
+   "merge_ms": 8826
+  },
+  {
+   "name": "w-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 3785,
+   "write_ms": 7618,
+   "merge_ms": 8581
+  }
+ ],
+ "commits": 6,
+ "files": 6,
+ "bytes_plain": 34925,
+ "files_delivered": 4,
+ "bytes_delivered": 33165,
+ "store": {
+  "objects": 38,
+  "bytes": 51327,
+  "plaintext_hits": 0,
+  "probe": "47 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 4011,
+  "files": 6,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "create",
+   "ms": 2515,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 897,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4391,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1632,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 913,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5346,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2215,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1920,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4177,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1525,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 862,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4979,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2118,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2027,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4822,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1550,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 905,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5233,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2265,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1818,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4743,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1560,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 828,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5230,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2152,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2057,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4373,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 818,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 4011,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 1430
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p sh8",
+   "rc": 0,
+   "ms": 608
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p sh9",
+   "rc": 0,
+   "ms": 458
+  },
+  {
+   "seq": 4,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t writer -r specialist -p storyline",
+   "rc": 0,
+   "ms": 371
+  },
+  {
+   "seq": 5,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 420
+  },
+  {
+   "seq": 6,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d sh8: SH8 a new process gets nothing it does not need: the run pipeline -p high",
+   "rc": 0,
+   "ms": 495
+  },
+  {
+   "seq": 7,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d sh9: SH9 the moving parts and one request, designed -p high",
+   "rc": 0,
+   "ms": 401
+  },
+  {
+   "seq": 8,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d storyline: the storyline page: a deep-dive section for parts 2 and 3 -p high",
+   "rc": 0,
+   "ms": 421
+  },
+  {
+   "seq": 9,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check SH8, SH9 and the section against the capture -p high",
+   "rc": 0,
+   "ms": 411
+  },
+  {
+   "seq": 10,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r25-sharness-deep-dive: r25-sharness-deep-dive: SHarness technical, for parts 2 and 3 (conductor mail 027): SH8 the run pipeline, SH9 the moving parts and one request -f conductor",
+   "rc": 0,
+   "ms": 383
+  },
+  {
+   "seq": 11,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered sh8 sha256:5052f4efb477c8e5 files:1 -f developer",
+   "rc": 0,
+   "ms": 405
+  },
+  {
+   "seq": 12,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered sh9 sha256:b0b8bd28c08d974c files:1 -f developer",
+   "rc": 0,
+   "ms": 408
+  },
+  {
+   "seq": 13,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered storyline sha256:776035eb818788ec files:1 -f writer",
+   "rc": 0,
+   "ms": 431
+  },
+  {
+   "seq": 14,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:28b4a75b6002fb4a files:1 -f editor",
+   "rc": 0,
+   "ms": 430
+  },
+  {
+   "seq": 15,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 442
+  },
+  {
+   "seq": 16,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 465
+  }
+ ],
+ "history": [
+  {
+   "id": "5945c4d3dc21",
+   "message": "init",
+   "time": "2026-10-29T17:35:44Z"
+  },
+  {
+   "id": "1c399b982351",
+   "message": "brief: run r25-sharness-deep-dive",
+   "time": "2026-10-29T17:35:46Z"
+  },
+  {
+   "id": "6109f1aadb7f",
+   "message": "developer sh8: delivered 1 files",
+   "time": "2026-10-29T17:41:21Z"
+  },
+  {
+   "id": "8a06ea631755",
+   "message": "developer sh9: delivered 1 files",
+   "time": "2026-10-29T17:41:37Z"
+  },
+  {
+   "id": "40692c234166",
+   "message": "writer storyline: delivered 1 files",
+   "time": "2026-10-29T17:41:54Z"
+  },
+  {
+   "id": "e9a138d7897a",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T17:42:11Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "sh8",
+   "role": "developer",
+   "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+   "tokens": 105447
+  },
+  {
+   "id": "sh9",
+   "role": "developer",
+   "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+   "tokens": 93073
+  },
+  {
+   "id": "storyline",
+   "role": "writer",
+   "who": "the conductor (ruv.sgit's session)",
+   "tokens": null
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 87452,
+   "tool_uses": 16,
+   "wall_s": 77,
+   "must_fix": 1,
+   "should_fix": 8
+  }
+ ],
+ "kept_at": "2026-10-29T17:42:35+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__r25-sharness-deep-dive__vault-handover.zip",
+  "sha256": "1b1ce354231c7b5b",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}

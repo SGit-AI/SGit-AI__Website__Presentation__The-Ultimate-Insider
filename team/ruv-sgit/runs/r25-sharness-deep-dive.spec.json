@@ -1,0 +1,36 @@
+{
+ "run": "r25-sharness-deep-dive",
+ "purpose": "r25-sharness-deep-dive: SHarness technical, for parts 2 and 3 (conductor mail 027): SH8 the run pipeline, SH9 the moving parts and one request",
+ "request": {
+  "from": "the editor, through the conductor (tui-mail-public ruv-sgit/027, 29 October 2026 17:08 UTC)",
+  "date": "2026-10-29",
+  "text": "SHarness, technical: the process behaviour policy; a new process gets nothing it does not need; a KMS; a virtual file system from the user's point of view; the network controlled at packet level; digital twins; running locally, or distributed."
+ },
+ "ending": "keep",
+ "workers": [
+  {
+   "id": "sh8",
+   "role": "developer",
+   "task": "SH8 a new process gets nothing it does not need: the run pipeline",
+   "out": "src/static/studio/lab/sharness/run-pipeline/v1/"
+  },
+  {
+   "id": "sh9",
+   "role": "developer",
+   "task": "SH9 the moving parts and one request, designed",
+   "out": "src/static/studio/lab/sharness/moving-parts/v1/"
+  },
+  {
+   "id": "storyline",
+   "role": "writer",
+   "task": "the storyline page: a deep-dive section for parts 2 and 3",
+   "out": "src/pages/ruv-sgit/sharness-storyline.html"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "task": "check SH8, SH9 and the section against the capture",
+   "out": "team/ruv-sgit/runs/r25-sharness-deep-dive.editor.md"
+  }
+ ]
+}

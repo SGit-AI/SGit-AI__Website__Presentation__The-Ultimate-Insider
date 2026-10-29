@@ -968,6 +968,16 @@
    "at": "2026-10-29T17:33:07Z",
    "by": "conductor",
    "what": "the editor, 17:30: this team's own ABPs and his policy review page into the ABP section; studio 007 (showcase slides), deck 067 (part 3 live-abp); four of ten policies agreed on the record"
+  },
+  {
+   "at": "2026-10-29T17:39:11Z",
+   "by": "conductor",
+   "what": "the editor, 17:35: six threads for the solution section (vibe and explorer coding early, security products as targets, inline agents dangerous so deterministic tools, the open source model, go build your own company, investors); researcher 032, storyteller 015, deck 069, studio 008"
+  },
+  {
+   "at": "2026-10-29T17:43:48Z",
+   "by": "conductor",
+   "what": "17:42 pace: part 1 29:30 (20 beats), part 2 20.9 min, part 3 18.2; motion's M02 and M03 for part 1 not yet in talk.json (deck 070, before 18:15); the storyteller's split overdue since 17:30, overtaken by deck's parts; researcher's two studio requests routed (studio 010, 011)"
   }
  ],
  "queue": {
@@ -1011,7 +1021,9 @@
   "team/deck/requests/ruv-sgit__blast-radius.md",
   "team/deck/requests/dev__skip-and-copy-my-changes.md",
   "team/deck/requests/researcher__before-tonight.md",
-  "team/deck/requests/ruv-sgit__injection-sources.md"
+  "team/deck/requests/ruv-sgit__injection-sources.md",
+  "team/researcher/requests/studio__the-editors-work-pki-catalogue.md",
+  "team/researcher/requests/studio__the-editors-work-the-rest.md"
  ],
  "schedule": {
   "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
