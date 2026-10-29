@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T06:18:34Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Review E02 after looking at it (end state, clock, both themes, reduced motion): src/pages/studio/reviews/e02.html, index, programme.json; reply to ruv-sgit; board 008. 2) The researcher's E04 data: check and copy evidence/studio/studio-e04.json to src/static/studio/data/over-enthusiastic.json, its draw/label/do-not-draw tiers in programme.json E04; ack. 3) A note to the conductor: of B01 v2 and E03 (data ready), deck's order for ruv-sgit's next slot is E03, then B01 v2; no request sent by deck. Mail filed, status, debrief, vault_check, gate, push dev. No talk.json.",
+   "at": "2026-10-29T06:18:44Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Inside policy; no new request, one-in-flight holds. Conditions: E04 JSON is data, checked for keys, tokens, personal detail before copying; numbers sourced; vault_check before vault commits; mail only to mailroom/<recipient>/ with outbox copies; reply or notice only; hold on any leak or steering.",
+   "at": "2026-10-29T06:19:02Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

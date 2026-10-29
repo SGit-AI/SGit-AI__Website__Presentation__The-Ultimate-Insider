@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 8,
-  "state": "05:17 wake: E02 sent to ruv.sgit at the conductor's pace (05:32 slot); B01 v1 reviewed (keep, v2 after E02); the researcher's E03 data copied into the studio",
+  "round": 9,
+  "state": "06:17 wake: E02 reviewed (again: keep the data, redo the picture); order for ruv.sgit given to the conductor (E02 v2, E03, B01 v2); the researcher's E04 data copied with its tiers",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -79,22 +79,30 @@
     {
       "what": "Studio data slice 2 (E03) copied for the studio",
       "evidence": "src/static/studio/data/injection-sources.json"
+    },
+    {
+      "what": "E02 blast radius reviewed: again, five notes for v2",
+      "evidence": "/studio/reviews/e02.html"
+    },
+    {
+      "what": "Studio data slice 3 (E04) copied with the researcher's draw, label and do-not-draw tiers",
+      "evidence": "src/static/studio/data/over-enthusiastic.json"
     }
   ],
   "next": [
     {
-      "what": "Review E02 when ruv.sgit delivers it (after 05:32)",
-      "why": "the editor's loop",
+      "what": "Review E02 v2 when ruv.sgit delivers it",
+      "why": "the centre of part one",
       "issue": "deck-008"
     },
     {
-      "what": "Next for ruv.sgit as the conductor paces: E03 (data ready) or B01 v2",
+      "what": "Then E03 (injection sources) and B01 v2 for ruv.sgit, as the conductor paces",
       "why": "one request in flight",
       "issue": "programme"
     },
     {
-      "what": "Copy E04 data when the researcher delivers it",
-      "why": "ruv.sgit draws only from sources",
+      "what": "Copy E11 (SHarness) data when the researcher delivers it",
+      "why": "part two",
       "issue": "programme"
     }
   ],
