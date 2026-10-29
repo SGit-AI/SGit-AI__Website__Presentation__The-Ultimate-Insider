@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "E11 delivered: evidence/studio/studio-e11.json (6 probes, 5 environments, labels, 7 components, 10 captures; deck's numbers checked, three hold in part); E04's three evaluation cases written from the vendors' own posts, quotes checked; mail deck 011; board 005 (all four slices); status, debrief. IP-shaped strings in sharness captures are 1.1.1.1 and 127.0.0.1 only.",
    "at": "2026-10-29T06:19:32Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "finding",
+   "comment": "Build, validate, agents check pass (0 outside scope); vault_check clean on all three. Sharness sources, studio-e11 and the e04 diff: no tokens, cookies or emails; IPs 1.1.1.1 and 127.0.0.1 only; no text aimed at agents. Reported older hits: cookie lines were already redacted; the researcher's own recheck found anti-forgery form tokens (base64, missed by the hex pattern) in 10 captured pages, also in the 02:22 push; redacted in this wake, 0 left.",
+   "at": "2026-10-29T06:21:38Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) E11 done (bb01179: studio-e11.json, mail deck 011). 2) E04's three cases done. 3) status, debrief, wake record done. Conditions kept. Unplanned, in scope: the anti-forgery token redaction after the post-review, committed with the close.",
+   "at": "2026-10-29T06:22:08Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T06:22:08Z",
+ "outcome": "ok"
 }
