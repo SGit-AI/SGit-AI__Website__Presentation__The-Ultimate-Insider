@@ -1,6 +1,6 @@
 {
   "about": "The studio programme: the experiments the editor asked for on 29 October 2026 (02:47 UTC, in deck's session), as data. deck@the-ultimate-insider keeps it; the conductor paces it (one experiment in flight per maker at a time); src/pages/studio/programme.html is generated from it by team/deck/tools/programme.py. Nothing here touches the talk: the deck is frozen until the editor says otherwise.",
-  "updated": "2026-10-29T15:05Z",
+  "updated": "2026-10-29T15:45Z",
   "vision": "A whole new set of visualisations to tell the story. Part one shows the threat: what an agent is and how it grew, how far one internal agent reaches, how soft the inside is, and how injected words travel. Part two shows the way out: map the mandate against the grant, type every barrier honestly, and contain the agent with boundaries it cannot reach, using RiskMandate's Agent Behaviour Policies and SHarness, with many real examples.",
   "statuses": {
     "idea": "written down, not yet asked for",
@@ -69,7 +69,7 @@
       ],
       "status": "review",
       "order": 2,
-      "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09) Capability descriptions delivered 10:20: src/static/studio/data/capabilities.json (the source's own words; reach differs per example).",
+      "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09) Capability descriptions delivered 10:20: src/static/studio/data/capabilities.json (the source's own words; reach differs per example). 15:45: no danger rating per capability exists (deployments-and-inside.json, e02b-*); the nearest proxies are reversibility and reach.",
       "request": "v3 is ruv.sgit's next item as the conductor paced (my v2 notes and the capability descriptions are its request), with E09's wording fix",
       "review": "deck, 13:55: v3 keep, ready for the editor (studio/reviews/e02-v3.html); one note with E09: the same numbering in both"
     },
@@ -91,7 +91,7 @@
       ],
       "status": "review",
       "order": 3,
-      "data_status": "delivered 04:30 by the researcher: src/static/studio/data/injection-sources.json (a copy of evidence/studio/studio-e03.json, claim ids e03-*): sixteen sources, one public case each, labelled four real-world incidents, four vendor-confirmed vulnerabilities, eight research demonstrations; no payload quoted, by design",
+      "data_status": "delivered 04:30 by the researcher: src/static/studio/data/injection-sources.json (a copy of evidence/studio/studio-e03.json, claim ids e03-*): sixteen sources, one public case each, labelled four real-world incidents, four vendor-confirmed vulnerabilities, eight research demonstrations; no payload quoted, by design More (15:40): src/static/studio/data/injection-sources-b.json (copy of evidence/studio/studio-e03b.json): 23 more cases, outside/inside labels, 9 second-order.",
       "request": "sent 08:28 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/; team/deck/requests/ruv-sgit__injection-sources.md)",
       "review": "deck, 09:30: keep (studio/reviews/e03.html); the four real-world incidents all came through what the agent builds with"
     },
@@ -135,7 +135,8 @@
       ],
       "status": "asked",
       "order": 7,
-      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)"
+      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)",
+      "data_status": "Delivered 15:55: src/static/studio/data/pivoting.json (copy of evidence/studio/studio-e05.json): nine chains; the gym-class agent."
     },
     {
       "id": "E06",
@@ -156,7 +157,8 @@
       ],
       "status": "asked",
       "order": 8,
-      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)"
+      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)",
+      "data_status": "Delivered 15:45: src/static/studio/data/deployments-and-inside.json (copy of evidence/studio/studio-e06-e07-e02b.json), the e06-* rows."
     },
     {
       "id": "E07",
@@ -174,9 +176,11 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "asked",
+      "status": "review",
       "order": 6,
-      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)"
+      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)",
+      "review": "deck, 15:45: keep (studio/reviews/e07.html); notes for a v2 there",
+      "data_status": "More (15:45): src/static/studio/data/deployments-and-inside.json, the e07-* rows: vendors' own deployment shapes."
     },
     {
       "id": "E08",
@@ -235,10 +239,11 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "asked",
+      "status": "review",
       "order": 10,
       "data_status": "asked of the researcher 03:00 (deck-005, deck-006)",
-      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)"
+      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)",
+      "review": "deck, 15:45: keep (studio/reviews/e10.html); notes for a v2 there"
     },
     {
       "id": "E11",
@@ -256,11 +261,12 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "asked",
+      "status": "review",
       "order": 11,
       "data_status": "delivered 06:30 by the researcher: src/static/studio/data/harness.json (a copy of evidence/studio/studio-e11.json, claim ids e11-*)",
       "wording": "Say: six of six held, 25 October 2026 (not 24 to 29); five environments on two kernels (not five platforms); components are running as MVPs (fs, net), runnable (policy hash, check, translate) or designed (kms, bash, llm); the launcher is designed, and a first slice (sharness-ai shell) runs since 28 October. Nothing on sharness.ai is independently corroborated: one author's network.",
-      "request": "sent 13:50 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/), with the researcher's corrections"
+      "request": "sent 13:50 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/), with the researcher's corrections",
+      "review": "deck, 15:45: keep (studio/reviews/e11.html); notes for a v2 there"
     },
     {
       "id": "E12",
@@ -301,10 +307,11 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "asked",
+      "status": "review",
       "order": 13,
       "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09)",
-      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)"
+      "request": "sent 15:05 to ruv.sgit, all eight in parallel at the editor's word (15:00)",
+      "review": "deck, 15:45: keep (studio/reviews/e13.html); notes for a v2 there"
     },
     {
       "id": "E14",
