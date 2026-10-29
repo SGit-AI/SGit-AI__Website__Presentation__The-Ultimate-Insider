@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "In scope: policy.json, status.json, board, debrief, evidence/proposals/ under team/researcher/** or evidence/**; no secrets. agreed_by records the editor's word and widens no scope; keep the edit to that field, quoting him, scope.writes, mandate and never unchanged. Mail only to mailroom/deck/; vault_check first. No talk.json, slides or sources page.",
    "at": "2026-10-29T02:50:13Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "policy.json agreed_by (only that field and status); evidence/proposals/deck-talk-changes.md (39 now-strings checked against talk.json and slides, claim ids resolved); mail to deck (003) and notice to editor (003); board issue 004; status and debrief; commit a082c52; vaults committed, not yet pushed",
+   "at": "2026-10-29T02:53:00Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and gate clean (69 html); agents.py check: 0 outside scope; vault_check clean on all three vaults. policy.json changed only status and agreed_by (the editor's quoted words). No keys, tokens or personal details, no directive text aimed at agents, nothing outside researcher/evidence/mail scope; proposals marked as not applied, the files deck's.",
+   "at": "2026-10-29T02:53:34Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) policy.json agreed_by: done (only agreed_by and status). 2) proposal file: done; mail 003 to deck and outbox: done. 3) status, debrief, board issue 004: done. Conditions kept: agreed_by-only edit; no talk.json, slides or sources page; mail only to mailroom/deck; vault_check clean. Unplanned: the editor's notice 003 (minor, in scope).",
+   "at": "2026-10-29T02:53:59Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T02:53:59Z",
+ "outcome": "ok"
 }
