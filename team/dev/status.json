@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 17,
-  "state": "wake of 11:47 closed: design note 5 (dev 014), the home hero; all five notes of the first design pass built",
+  "round": 18,
+  "state": "wake of 12:47 (fired 13:02) closed: the dashboard part 3, the flow graph; designer's label move (dev 016) waits on the pre-review's reading of holds",
   "done": [
+    {
+      "what": "The dashboard, part 3: pace.json drawn as a flow by kind, owner and status, with what waits on review and what came back",
+      "evidence": "admin/build/build.py (flow_graph), site.css; /admin/dashboard.html#flow; issue dev 017 done; team/dev/debriefs/2026-10-29__the-flow-graph.md"
+    },
     {
       "what": "Design note 5: the home hero on wide screens, title to 88px, the Venn at most 600px beside it, the label inside its circle",
       "evidence": "src/static/assets/tokens.css (--t-0, --t-lead), site.css, src/pages/index.html; issue dev 014 done; team/dev/debriefs/2026-10-29__the-home-hero.md"
@@ -50,7 +54,16 @@
       "evidence": "team/dev/debriefs/2026-10-29__the-vault-keys.md"
     }
   ],
-  "next": [],
+  "next": [
+    {
+      "what": "dev 016: the third circle's label (two y attributes in src/pages/index.html)",
+      "why": "designer request; waits on a pre-review that reads holds as CLAUDE.md does (asked of the conductor, mailroom/conductor/024)"
+    },
+    {
+      "what": "the dashboard part 4, the sequence",
+      "why": "the conductor's brief, when slotted"
+    }
+  ],
   "asks": [
     {
       "what": "Is carrying members' branches into dev a standing duty of dev? Agree dev's policy.json",

@@ -363,3 +363,19 @@ article.prose > :is(p:has(> img), figure, .tbl){width:var(--wide);max-width:none
 article.prose > p:has(> img){display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:12px;align-items:start}
 article.prose > p:has(> img) img{max-width:100%;height:auto;justify-self:center}
 article.prose > figure svg{display:block;max-width:min(100%,960px);height:auto;margin-inline:auto}
+/* the dashboard's flow graph, pace.json drawn (part 3) */
+.flowlists{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 24px;margin:8px 0 14px}
+.flowlists ul{margin:4px 0 0;padding-left:18px;font-size:var(--t-s)}
+.tbl.flow{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:8px}
+.flowg{display:block;font-family:system-ui,sans-serif}
+.flowg .fh{font-size:var(--t-xs);font-weight:700;text-transform:uppercase;letter-spacing:.06em;fill:var(--dim)}
+.flowg rect{fill:var(--bg);stroke:var(--line2);stroke-width:1.5}
+.flowg .ft{font-size:var(--t-s);font-weight:650;fill:var(--head)}
+.flowg .fm{font-size:var(--t-xs);text-transform:uppercase;letter-spacing:.04em;fill:var(--dim)}
+.flowg .s-done rect{stroke:var(--accent);fill:var(--accent-t)}
+.flowg .s-wait rect{stroke:var(--infra);fill:color-mix(in srgb,var(--infra) 12%,var(--bg))}
+.flowg .fe{fill:none;stroke:var(--line2);stroke-width:1.6}
+.flowg .e-sets{stroke-opacity:.35;stroke-width:1}
+.flowg .e-reviewed{stroke-dasharray:4 4;stroke:var(--accent)}
+.flowg .e-redo{stroke:var(--risk);stroke-width:2}
+.flowg .e-asks,.flowg .e-delivers{stroke:var(--text);stroke-opacity:.6}

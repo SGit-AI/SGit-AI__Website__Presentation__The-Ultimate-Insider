@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T13:03:00Z",
+ "steps": {
+  "plan": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "go",
+   "comment": "Amended by dev after the pre-review change. 1. Mail 019 (designer): not built this wake, per the pre-review condition on src/pages/index.html; a board issue (dev 016) and a reply to designer saying it waits; a note to the conductor asking that the pre-review brief say a member writes its holds (CLAUDE.md). 2. Mail 018 (conductor): dashboard part 3, the flow graph of team/conductor/pace.json, read at build time and never copied into the repo; rendering only id, title, kind, status and the owner (the request asks \"by owner and status\"), no paths, mail refs or condition text; in admin/build/build.py and src/static/assets/site.css. 3. Debrief, status, REALITY; vault_check and the gate before any push.",
+   "at": "2026-10-29T13:04:42Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Re-review of the amended plan: meets the earlier conditions; skips index.html. pace.json read at build time, rendering only id, title, kind, status and owner, in scope. Conditions: pace.json not copied or tracked by this change; titles checked for secrets or personal detail before rendering; replies only through the mail vault, vault_check first; the gate before the push; no main.",
+   "at": "2026-10-29T13:05:12Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "partial",
+   "comment": "dev 017 done: the flow graph (build.py flow_graph, site.css), /admin/dashboard.html#flow, measured at 1600 and 390. dev 016 (designer label) not built, by the pre-review condition; it waits, asked the conductor to clarify holds. Replies to designer and conductor; debrief, status, REALITY.",
+   "at": "2026-10-29T13:08:25Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

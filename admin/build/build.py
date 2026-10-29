@@ -336,6 +336,69 @@ class Site_Build:
                      f'<span class="oc">{esc(r.get("outcome") or "still open")}</span></header><div class="wsteps">{steps}</div></section>')
         return rows or '<p class="note">No wake records yet.</p>'
 
+    FLOW_COLS = [('Briefs', ('brief',)), ('Themes', ('theme',)), ('Ideas', ('experiment',)), ('Requests', ('request', 'backlog')),
+                 ('Artifacts', ('artifact',)), ('Reviews', ('review',)), ('Decisions', ('decision',))]
+
+    def flow_graph(self, pace):                                     # dashboard part 3 (dev, the conductor's brief): pace.json drawn, read at build time
+        esc, nodes, edges = html.escape, pace.get('nodes', []), pace.get('edges', [])
+        if not nodes:
+            return ''
+        def owner(n):                                               # only id, title, kind, status and owner are shown (the pre-review's condition)
+            return str(n.get('owner') or n.get('by') or ('editor' if 'editor' in str(n.get('for', '')) else ''))
+        def label(n):
+            return str(n.get('title') or n.get('verdict') or n['id'])
+        def state(n):
+            st = str(n.get('status') or ('reviewed' if n.get('verdict') else ''))
+            low = st.lower()
+            return st, ('done' if low in ('delivered', 'published', 'given', 'sent', 'done', 'reviewed') else
+                        'wait' if any(w in low for w in ('review', 'flight', 'scheduled', 'asked')) else 'idle')
+        W, H, CW, RH, TOP = 210, 44, 270, 54, 34
+        pos, cols = {}, []
+        for c, (name, kinds) in enumerate(self.FLOW_COLS):
+            mine = sorted((n for n in nodes if n.get('kind') in kinds), key=lambda n: (owner(n), str(n.get('at', '')), n['id']))
+            cols.append((name, len(mine)))
+            for r, n in enumerate(mine):
+                pos[n['id']] = (c * CW + 10, TOP + r * RH, n)
+        width  = len(self.FLOW_COLS) * CW
+        height = TOP + max(n for _, n in cols) * RH + 10
+        lines, dangling = '', []
+        for e in edges:
+            a, b = pos.get(e.get('from')), pos.get(e.get('to'))
+            if not a or not b:
+                dangling.append(e)
+                continue
+            k = esc(str(e.get('kind', '')))
+            if a[0] == b[0]:                                        # same column (a redo): an arc on the left
+                x, y1, y2 = a[0], a[1] + H / 2, b[1] + H / 2
+                d = f'M{x},{y1} C{x - 40},{y1} {x - 40},{y2} {x},{y2}'
+            else:
+                (x1, y1), (x2, y2) = ((a[0] + W, a[1] + H / 2), (b[0], b[1] + H / 2)) if a[0] < b[0] else ((a[0], a[1] + H / 2), (b[0] + W, b[1] + H / 2))
+                m = (x1 + x2) / 2
+                d = f'M{x1},{y1} C{m},{y1} {m},{y2} {x2},{y2}'
+            lines += f'<path class="fe e-{k}" d="{d}"><title>{esc(str(e.get("from")))} {k} {esc(str(e.get("to")))}</title></path>'
+        boxes = ''.join(f'<text class="fh" x="{c * CW + 10}" y="18">{esc(name)} · {n}</text>' for c, (name, n) in enumerate(cols))
+        for nid, (x, y, n) in pos.items():
+            st, cls = state(n)
+            t = label(n)
+            short = t if len(t) <= 27 else t[:26] + '\u2026'
+            meta = ' · '.join(v for v in (nid if nid != t else '', owner(n), st) if v)
+            boxes += (f'<g class="fn s-{cls}"><title>{esc(nid)}: {esc(t)} ({esc(str(n.get("kind")))}, {esc(owner(n) or "no owner")}, {esc(st or "no status")})</title>'
+                      f'<rect x="{x}" y="{y}" width="{W}" height="{H}" rx="8"/><text class="ft" x="{x + 10}" y="{y + 18}">{esc(short)}</text>'
+                      f'<text class="fm" x="{x + 10}" y="{y + 35}">{esc(meta if len(meta) <= 27 else meta[:26] + '\u2026')}</text></g>')
+        reviewed = {e.get('from') for e in edges if e.get('kind') == 'reviewed'}
+        waits = [n for n in nodes if n.get('kind') == 'artifact' and n['id'] not in reviewed and n['id'] in pos]
+        back  = [n for n in nodes if n.get('kind') == 'artifact' and state(n)[1] == 'done']
+        li    = lambda ns: ''.join(f'<li><b>{esc(n["id"])}</b> {esc(owner(n))} · {esc(state(n)[0])}{(" " + esc(str(n.get("at", ""))[11:16]) + " UTC") if n.get("at") else ""}</li>' for ns_ in [ns] for n in ns_)
+        miss  = ''.join(f'<li><code>{esc(str(e.get("from")))}</code> {esc(str(e.get("kind")))} <code>{esc(str(e.get("to")))}</code></li>' for e in dangling)
+        return (f'<h2 id="flow">The flow</h2><p class="note">The conductor\'s <a href="docs/pace.html">pace.json</a> drawn, read when the site was built: '
+                f'{len(nodes)} nodes and {len(edges)} edges, from briefs and themes to ideas, requests, artifacts, reviews and the editor\'s decisions. '
+                f'Green came back or is done, amber waits (in flight, scheduled, in review), grey is an idea or open. Lines: asks and delivers solid, reviewed dotted, redo red, sets faint. '
+                f'Hover a box or a line for its whole entry.</p>'
+                f'<div class="flowlists"><div><p class="kk">Waits on review · {len(waits)}</p><ul>{li(waits) or "<li>nothing</li>"}</ul></div>'
+                f'<div><p class="kk">Came back · {len(back)}</p><ul>{li(back)}</ul></div>'
+                + (f'<div><p class="kk">Edges to no node · {len(dangling)}</p><ul>{miss}</ul></div>' if dangling else '') + '</div>'
+                f'<div class="tbl flow"><svg class="flowg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-label="The flow graph of pace.json">{lines}{boxes}</svg></div>')
+
     def build_dashboard(self):                                      # dev 006, the conductor's brief: part 1, Now and the pace grid
         import datetime
         esc, team = html.escape, ROOT / 'team'
@@ -384,7 +447,7 @@ class Site_Build:
         queue = ''.join(f'<li><b>{esc(m)}</b>: ' + ' · '.join(f'{esc(i.get("at", ""))} {esc(i.get("item", ""))}' for i in (v if isinstance(v, list) else [])) + '</li>' for m, v in q.items() if isinstance(v, list)) if isinstance(q, dict) else ''
         body = (f'<section class="wrap"><p class="kicker">Activity</p><h1>Dashboard</h1>'
                 f'<p class="lead">Where the team is, read from its own files: the hour, the next wake of each member, any hold, what waits on the editor, and every wake as a grid. '
-                f'Built at {built.strftime("%H:%M")} UTC with site {self.version}; the clock and the next wakes below run live in your browser. Parts 3 to 5 of the brief (the flow graph, the sequence, the artifacts) follow at later wakes.</p>'
+                f'Built at {built.strftime("%H:%M")} UTC with site {self.version}; the clock and the next wakes below run live in your browser. Part 3, the flow, is below; parts 4 and 5 of the brief (the sequence, the artifacts) follow at later wakes.</p>'
                 f'<div class="now"><div class="nowc"><p class="kk">Now</p><p class="clock" id="dash-clock">{built.strftime("%H:%M")} UTC</p><p class="c-dim">London time; built {built.strftime("%Y-%m-%d %H:%M")} UTC</p></div>'
                 f'<div class="nowc {"held" if holds else "free"}"><p class="kk">Hold</p>' + (f'<ul>{hold}</ul><p>Every wake stops until the editor lifts it.</p>' if holds else '<p class="big2">none</p><p class="c-dim">every member\'s wake runs</p>') + '</div>'
                 f'<div class="nowc ed"><p class="kk">Waits on the editor</p>' + (('<ul>' + ''.join(f'<li><b>{esc(a)}</b>: {esc(w)}</li>' for a, w in asks) + '</ul>') if asks else '<p class="c-dim">nothing asked</p>') + '</div></div>'
@@ -392,6 +455,7 @@ class Site_Build:
                 f'<h2 id="pace">The pace</h2><p class="note">One cell per wake, by member and hour (UTC). The five dots are plan, pre-review, work, post-review and post-check; '
                 f'green is go, done, clean or as-planned, amber is change, partial, finding or off-plan, red is stop, grey is missing. Click a cell for the record.</p>'
                 + (f'<div class="tbl"><table class="pace"><thead><tr><th></th>{head}</tr></thead><tbody>{cells}</tbody></table></div>' if hours else '<p class="note">No wakes recorded yet.</p>')
+                + self.flow_graph(pace)
                 + (f'<h2 id="queue">The queue</h2><p class="note">From the conductor\'s <a href="docs/pace.html">pace.json</a>, which sets each member\'s order.</p><ul>{queue}</ul>' if queue else '')
                 + '</section><script src="../assets/dashboard.js"></script>')
         self.page('admin/dashboard.html', 'Dashboard', 'Where the team is: the hour, each member\'s next wake, holds, what waits on the editor, and every wake as a grid.', body)
