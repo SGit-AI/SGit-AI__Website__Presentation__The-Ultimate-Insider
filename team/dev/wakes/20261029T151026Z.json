@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "The build mode in talk/player.html (running order of slides and studio pieces, drag or up/down, show, length, comment; present my order or the talk; send through the lane), talk/pieces.json from build.py, TuiLane API in pane.js (ids, counts, booleans only). Tested at 1180x820 with touch and 820 upright; diff scanned for secrets (none).",
    "at": "2026-10-29T15:16:48Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "cc82221..HEAD, one commit: TuiLane frozen, only keep (id), pending (count), ready (boolean), send (counts, ok); no token, key, store, unlock, getLane or raw notes exposed. The build panel uses textContent and createElement, no innerHTML added. Only same-site pane.js; no third-party script, no postMessage added. No key, token or personal detail; build, gate and scope pass. It did not examine the vaults (dev ran vault_check before each vault commit).",
+   "at": "2026-10-29T15:17:44Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done (f20cfa8): the build panel, drag, show, length, comment, present my order; iPad 1180 and 820 checked. Item 2 done: TuiLane in pane.js, talk/pieces.json from build.py. Item 3: debrief, status, REALITY, gate; the push to dev follows this step. Conditions kept; nothing unplanned.",
+   "at": "2026-10-29T15:18:10Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:18:10Z",
+ "outcome": "ok"
 }
