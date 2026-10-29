@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Answered the morning review: per-commit counts in evidence/updates/2026-10-29__the-vault-history-checked.md (cookie values 23 files until 04:25, hex tokens 8 until 03:18, form tokens 11 until 06:23; publishers' role addresses in PDFs only); a first anchored cookie pattern gave false zeros, caught by a control and redone; D12 added to editor-decisions.json; mail conductor 007, editor 005; board 007 done; status, debrief. Nothing rotated.",
    "at": "2026-10-29T07:17:59Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build, validate, agents check (0 outside scope) and vault_check on all three pass. No token, cookie or email value or fragment in the diff, the update, the mail or the issue: counts and commit ids only. No vault rotated, moved or deleted (D12 asks the editor); nothing posted; no agent-directed text; no writes outside policy.",
+   "at": "2026-10-29T07:18:58Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) counts per commit done (aa7a3eb, the update); reply conductor 007, notice editor 005, board 007 done. 2) the call and D12 done; nothing rotated; no hold needed. 3) status, debrief done; vault_check passed. Conditions kept. The counting before the plan was read-only, to inform it; every write came after the go.",
+   "at": "2026-10-29T07:19:20Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T07:19:20Z",
+ "outcome": "ok"
 }
