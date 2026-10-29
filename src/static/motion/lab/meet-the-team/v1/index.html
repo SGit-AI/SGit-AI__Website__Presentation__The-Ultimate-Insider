@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M03 v1: meet the team</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:56px;right:260px;font-size:40px;white-space:nowrap}
+#id{position:absolute;right:40px;top:12px;font:800 68px/1 system-ui;letter-spacing:-.02em;color:var(--dim)}
+#g{position:absolute;left:0;top:0;width:1280px;height:720px}
+.who{font:800 19px system-ui;fill:var(--head)}
+.what{font:500 15px system-ui;fill:var(--dim)}
+.min{font:800 15px ui-monospace,Menlo,monospace;fill:var(--accent)}
+#nums{position:absolute;left:760px;top:150px;width:470px;display:grid;grid-template-columns:1fr 1fr;gap:14px 22px}
+.n{border-top:3px solid var(--line2);padding-top:6px}
+.n b{display:block;font:800 52px/1 ui-monospace,Menlo,monospace;color:var(--head);letter-spacing:-.02em}
+.n span{display:block;font:600 18px/22px system-ui;color:var(--dim);margin-top:4px}
+#stack{position:absolute;left:760px;top:520px;width:470px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.chip{border:2px solid var(--accent);border-radius:10px;padding:7px 10px;font:700 17px/21px system-ui;color:var(--head);background:var(--panel)}
+.chip i{display:block;font-style:normal;font-weight:500;color:var(--dim)}
+#foot{position:absolute;left:40px;right:40px;bottom:14px;font:17px/22px system-ui;color:var(--dim)}
+</style>
+<script>
+window.RUV_STEPS = [{ t: 0, label: 'nine agents, one editor' }, { t: 7, label: 'every hour, each at its minute' }, { t: 15, label: 'the counts' }, { t: 26, label: 'how they keep in step' }, { t: 33, label: 'the still' }]
+</script>
+<script src="../../../../talk/engine/slide.js"></script>
+</head>
+<body>
+<div id="cv" data-end="40">
+  <p class="kk">How this was made · meet the team · v1</p>
+  <div class="hl" data-in="0" data-out="6.6">Nine agents. <em>One editor.</em></div>
+  <div class="hl" data-in="7.2" data-out="14.6">Every hour, each wakes <em>at its own minute.</em></div>
+  <div class="hl" data-in="15.2" data-out="25.6">One day's work, <em>from the records.</em></div>
+  <div class="hl" data-in="26.2">The capability is <em>the orchestration</em>, not the model.</div>
+  <div id="id">M03</div>
+  <svg id="g" viewBox="0 0 1280 720" role="img" aria-label="An hour dial with the nine agents at the minute each one wakes, the editor at the centre; beside it the team's counts from its public records, and the four things that keep it in step."></svg>
+  <div id="nums"></div>
+  <div id="stack">
+    <div class="chip" data-in="26.6">The board<i>an SGit vault</i></div>
+    <div class="chip" data-in="27.4">The mail<i>an SGit vault</i></div>
+    <div class="chip" data-in="28.2">A key each<i>the PKI, pki.sgit.ai</i></div>
+    <div class="chip" data-in="29">Five steps<i>every wake, with a gate</i></div>
+  </div>
+  <div id="foot" data-in="15.6"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // The nine members and every number are read at load from team-in-numbers.json, a copy of the conductor's
+  // team/conductor/team-in-numbers.json (admin/tools/team_numbers.py, from the repository's public records).
+  // Only the short role words below are this piece's own.
+  var SHORT = { conductor: 'routes and paces', deck: 'what the talk says', designer: 'how it looks', dev: 'build and release',
+                motion: 'story animations', researcher: 'the facts', 'ruv-sgit': 'animations in runs', storyteller: 'the story', studio: 'ports' }
+  var NS = 'http://www.w3.org/2000/svg', D = null, M = null, CX = 380, CY = 420, R = 210
+  fetch('team-in-numbers.json').then(function (r) { return r.json() }).then(function (j) { D = j }).catch(function (e) { console.error('M03: the numbers did not load', e) })
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function pos(min, r) { var a = (min / 60) * 2 * Math.PI - Math.PI / 2; return { x: CX + r * Math.cos(a), y: CY + r * Math.sin(a) } }
+
+  function build(S) {
+    var svg = S.$('g')
+    M = { dial: el('g', {}, svg) }
+    el('circle', { cx: CX, cy: CY, r: R, fill: 'none', stroke: 'var(--line2)', 'stroke-width': 3 }, M.dial)
+    for (var m = 0; m < 60; m += 5) { var a = pos(m, R - 8), b = pos(m, R + 8); el('line', { x1: a.x, y1: a.y, x2: b.x, y2: b.y, stroke: 'var(--line2)', 'stroke-width': 3 }, M.dial) }
+    M.ed = el('g', {}, svg)
+    el('circle', { cx: CX, cy: CY, r: 54, fill: 'var(--panel)', stroke: 'var(--head)', 'stroke-width': 3 }, M.ed)
+    el('text', { x: CX, y: CY + 7, 'text-anchor': 'middle', class: 'who' }, M.ed).textContent = 'the editor'
+    M.hand = el('line', { x1: CX, y1: CY, x2: CX, y2: CY - R + 20, stroke: 'var(--accent)', 'stroke-width': 4, 'stroke-linecap': 'round' }, svg)
+    M.members = D.members.slice().sort(function (a, b) { return a.slot - b.slot }).map(function (mb, i) {
+      var min = +mb.slot, p = pos(min, R), right = p.x >= CX - 1, g = el('g', {}, svg)
+      var dot = el('circle', { cx: p.x, cy: p.y, r: 13, fill: 'var(--panel)', stroke: 'var(--accent)', 'stroke-width': 4 }, g)
+      var tx = p.x + (right ? 22 : -22), anchor = right ? 'start' : 'end', ty = p.y + (Math.abs(p.x - CX) < 40 ? (p.y < CY ? -14 : 30) : 0)
+      if (Math.abs(p.x - CX) < 40) { tx = p.x + 22; anchor = 'start' }
+      el('text', { x: tx, y: ty - 2, 'text-anchor': anchor, class: 'who' }, g).innerHTML = mb.id + ' <tspan class="min">:' + mb.slot + '</tspan>'
+      el('text', { x: tx, y: ty + 17, 'text-anchor': anchor, class: 'what' }, g).textContent = SHORT[mb.id] || ''
+      return { g: g, dot: dot, min: min, at: 1 + i * .55 }
+    })
+    var N = [[D.hours_since_first_commit, 1, ' h', 'since the first commit'], [D.commits, 0, '', 'commits'], [D.releases, 0, '', 'releases'],
+             [D.wakes, 0, '', 'wakes, ' + D.wakes_by_outcome.ok + ' ended ok'], [D.commits_overnight_22_to_06_utc, 0, '', 'commits overnight'], [D.holds, 0, '', 'holds']]
+    M.nums = N.map(function (n, i) {
+      var d = document.createElement('div'); d.className = 'n'; d.innerHTML = '<b></b><span>' + n[3] + '</span>'; S.$('nums').appendChild(d)
+      return { el: d, b: d.querySelector('b'), v: n[0], dec: n[1], suf: n[2], at: 15.6 + i * 1.3 }
+    })
+    S.$('foot').textContent = 'From the team\'s public records at ' + D.as_of.slice(11, 16) + ' UTC, ' + D.as_of.slice(0, 10) + ' (team_numbers.py). The team makes this talk, nothing else.'
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!D) return
+    if (!M) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .5))) }
+    M.dial.setAttribute('opacity', k(.2)); M.ed.setAttribute('opacity', k(.6))
+    var sweep = S.seg(t, 7.6, 13.6), hm = sweep * 60                  // one hour of the schedule in six seconds
+    var hp = pos(hm, R - 20), h0 = pos(hm, 58); M.hand.setAttribute('x1', h0.x); M.hand.setAttribute('y1', h0.y); M.hand.setAttribute('x2', hp.x); M.hand.setAttribute('y2', hp.y); M.hand.setAttribute('opacity', t < 7.4 ? 0 : t > 14.4 ? 1 - k(14.4) : 1)
+    M.members.forEach(function (mb) {
+      mb.g.setAttribute('opacity', k(mb.at))
+      var lit = sweep > 0 && hm >= mb.min && t < 14.6
+      mb.dot.setAttribute('fill', lit ? 'var(--accent)' : 'var(--panel)')
+    })
+    M.nums.forEach(function (n) {
+      n.el.style.opacity = k(n.at)
+      n.b.textContent = S.fmt(n.v * S.ease(S.seg(t, n.at, n.at + 1.4)), n.dec) + n.suf
+    })
+  }
+})()
+</script>
+</body>
+</html>

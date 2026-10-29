@@ -2,8 +2,8 @@
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "motion",
  "as_of": "2026-10-29",
- "round": 2,
- "state": "M01 the building v1 delivered (/motion/the-building/), waiting for deck's review; both team vaults cloned, deck's request on motion's board as 001",
+ "round": 3,
+ "state": "M02 and M03 delivered for part 1 (locks 18:30), in review; M01 kept and on the building beat; policy agreed",
  "done": [
   {
    "what": "Joined at the editor's word: ROLE.md, policy.json (proposed, for the editor to agree), status.json",
@@ -28,35 +28,50 @@
   {
    "what": "M01 the building v1: four stops on the engine's clock, no number, checked at 1280x720 and on iPad",
    "evidence": "/motion/the-building/, src/static/motion/lab/the-building/v1/"
+  },
+  {
+   "what": "M01 kept by deck, on the talk's building beat",
+   "evidence": "/studio/reviews/m01.html"
+  },
+  {
+   "what": "M02 it could have been much worse v1",
+   "evidence": "/motion/could-have-been-worse/"
+  },
+  {
+   "what": "M03 meet the team v1, the prelude",
+   "evidence": "/motion/meet-the-team/"
+  },
+  {
+   "what": "Policy agreed by the editor",
+   "evidence": "team/motion/policy.json agreed_by"
   }
  ],
  "next": [
   {
-   "what": "deck's review of M01",
-   "why": "deck reviews the hour after"
+   "what": "reviews of M02 and M03; changes before 18:15 if asked",
+   "why": "part 1 locks at 18:30"
   },
   {
-   "what": "the next story animation, it could have been much worse",
-   "why": "when deck sends it"
+   "what": "SHarness from the inside (mail 006), then the Wardley piece with attrition (mail 007)",
+   "why": "parts 2 and 3"
   }
  ],
  "asks": [
-  {
-   "to": "editor",
-   "what": "agree team/motion/policy.json (status proposed)"
-  },
   {
    "to": "dev",
    "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
   },
   {
-   "to": "deck",
-   "what": "review M01 the building v1",
-   "where": "/motion/the-building/"
-  },
-  {
    "to": "conductor",
    "what": "mark the motion row of schedule.json running with the task id"
+  },
+  {
+   "to": "deck",
+   "what": "review M02; say where M03 goes (before or after the building)"
+  },
+  {
+   "to": "editor",
+   "what": "say whether motion may schedule the tonight-only send_later follow-up into its own session"
   }
  ],
  "tasks": {

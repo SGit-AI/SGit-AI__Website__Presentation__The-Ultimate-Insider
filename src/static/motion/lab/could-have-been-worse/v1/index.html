@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M02 v1: it could have been much worse</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:56px;right:260px;font-size:40px;white-space:nowrap}
+.hl .a{color:var(--agent)}
+#id{position:absolute;right:40px;top:12px;font:800 68px/1 system-ui;letter-spacing:-.02em;color:var(--dim)}
+.case{position:absolute;top:140px;width:560px;height:500px}
+.case h3{margin:0;font:800 26px/32px system-ui;color:var(--head)}
+.case h3 small{display:block;font:600 19px/24px system-ui;color:var(--dim)}
+.possible{position:absolute;left:0;top:84px;width:560px;height:340px;border:3px dashed var(--line2);border-radius:14px;background:var(--panel)}
+.possible p{position:absolute;left:22px;right:22px;top:16px;margin:0;font:600 22px/28px system-ui;color:var(--dim)}
+.possible p b{display:block;font:800 15px/20px system-ui;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.done{position:absolute;left:28px;bottom:26px;display:flex;align-items:center;gap:16px;max-width:500px}
+.done i{flex:none;width:30px;height:30px;border-radius:6px;background:var(--text)}
+.done span{font:700 22px/27px system-ui;color:var(--head)}
+.done span b{display:block;font:800 15px/20px system-ui;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+#c2 .done i{background:var(--agent)}
+#c2 .possible{border-color:color-mix(in srgb,var(--agent) 45%,var(--line2))}
+#c2 h3{color:var(--agent)}
+#end{position:absolute;left:0;right:0;top:600px;text-align:center;font:700 40px/1.1 Georgia,serif;color:var(--head)}
+#foot{position:absolute;left:40px;right:40px;bottom:14px;font:18px/22px system-ui;color:var(--dim)}
+</style>
+<script>
+window.RUV_STEPS = [{ t: 0, label: 'case one: what was possible' }, { t: 6, label: 'case one: what happened' }, { t: 12, label: 'case two: what was possible' }, { t: 18, label: 'case two: what happened' }, { t: 24, label: 'the still' }]
+</script>
+<script src="../../../../talk/engine/slide.js"></script>
+</head>
+<body>
+<div id="cv" data-end="32">
+  <p class="kk">The story · it could have been much worse · v1</p>
+  <div class="hl" data-in="0" data-out="11.6">What the way in <em>could have reached.</em></div>
+  <div class="hl" data-in="12.2" data-out="23.6">What the shipped extension <span class="a">was meant to do.</span></div>
+  <div class="hl" data-in="24.2">Each time, <em>a small part</em> of what was possible.</div>
+  <div id="id">M02</div>
+
+  <div class="case" id="c1" style="left:60px" data-in="0.3">
+    <h3>Midnight Blizzard at Microsoft<small>an attacker, through a test-tenant foothold</small></h3>
+    <div class="possible" data-in="0.9"><p><b>What was possible</b>Microsoft corporate email accounts</p>
+      <div class="done" data-in="6.4"><i></i><span><b>What happened</b>"a very small percentage" accessed</span></div>
+    </div>
+  </div>
+
+  <div class="case" id="c2" style="left:660px" data-in="12.3">
+    <h3>Amazon Q extension<small>an agent, shipped with an injected prompt</small></h3>
+    <div class="possible" data-in="12.9"><p><b>What was possible</b>across its user base: wipe the disk and delete cloud resources</p>
+      <div class="done" data-in="18.4"><i></i><span><b>What happened</b>"unsuccessful in executing due to a syntax error"</span></div>
+    </div>
+  </div>
+
+  <div id="end" data-in="25">It could have been much worse.</div>
+  <div id="foot" data-in="25.6">Microsoft MSRC, 19 January 2024 · AWS security bulletin AWS-2025-015 · areas not to scale</div>
+  <div class="bar"><i></i></div>
+</div>
+</body>
+</html>

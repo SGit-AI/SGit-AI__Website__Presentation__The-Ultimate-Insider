@@ -2,8 +2,8 @@
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "deck",
  "as_of": "2026-10-29",
- "round": 18,
- "state": "The editor's chat, 17:08: policy.json agreed; the studio pieces interleaved into the talk (38 beats, 54:40); dev asked for one-tap skip and copy-my-changes-as-JSON",
+ "round": 19,
+ "state": "17:17 wake: part 1 complete and timed (20 beats, 29:30) for its 18:30 lock; every beat carries its part; live slides (SHarness Linux, a vault, sgit.ai demos) in part 3; studio pieces interleaved; policy agreed",
  "task": {
   "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
   "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -139,19 +139,19 @@
  ],
  "next": [
   {
-   "what": "Re-time the talk to 90 minutes and write the section on the editor's work",
-   "why": "the conductor's 053, the editor at 16:2x",
-   "issue": "deck-016"
+   "what": "Swap the prelude's slide for motion@'s meet-the-team if it lands by 18:15",
+   "why": "part 1 locks 18:30",
+   "issue": "prelude"
   },
   {
-   "what": "Review M02 when motion@ delivers it; then the integrity shift",
-   "why": "the editor's story",
-   "issue": "deck-014"
+   "what": "Part 2 by 19:30: W1 SGit, W2 the PKI, with studio@'s showcase slides",
+   "why": "the locks brief",
+   "issue": "parts"
   },
   {
-   "what": "Sort ruv.sgit.ai's pieces for studio@; review E12, E08, E14, E05, E06",
-   "why": "studio@ and the programme",
-   "issue": "programme"
+   "what": "Part 3 by 20:00: W3 the newsroom and PHP October, W5 this team",
+   "why": "the locks brief",
+   "issue": "parts"
   }
  ],
  "asks": [
