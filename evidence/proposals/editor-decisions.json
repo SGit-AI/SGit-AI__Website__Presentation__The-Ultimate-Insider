@@ -274,7 +274,7 @@
    "id": "D08",
    "kind": "do",
    "title": "Store the handover zips",
-   "question": "Handover zips hold vault keys sealed to the vaults manager. As the members list them (their status.json asks): the researcher's, for tui-evidence-public; ruv.sgit's four, \"r2 (covers r4, r6), r3, r5 (covers r7), r8\"; and the conductor's for the two team vaults. Store them and hand them to the vaults manager.",
+   "question": "Handover zips hold vault keys sealed to the vaults manager. As the members list them (their status.json asks): the researcher's, for tui-evidence-public; ruv.sgit's four, \"r2 (covers r4, r6), r3, r5 (covers r7), r8\". Store them and hand them to the vaults manager.",
    "why_now": "Only you can do this.",
    "options": [
     {
