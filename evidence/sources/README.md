@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T17:23Z. 659 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T17:33Z. 659 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -543,60 +543,60 @@ Built 2026-10-29T17:23Z. 659 sources; `manifest.json` has every file's SHA-256. 
 | [willison-lethal-trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) | Simon Willison | blog | 2026-10-29T01:50:21Z | 200 | full | 6 |
 | [winbuzzer-gemini](https://winbuzzer.com/2025/07/26/googles-gemini-cli-deletes-user-files-confesses-catastrophic-failure-xcxwbn/) | WinBuzzer (Markus Kasanmascheff) | news | 2026-10-29T01:51:45Z | 200 | full | 3 |
 | [wiz-php2shell](https://www.wiz.io/blog/php2shell-php-rce) | Wiz Research | vendor-survey | 2026-10-29T01:51:33Z | 200 | full | 4 |
-| [wnews-nr-a-agent-loops](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-a-call-for-help](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-a-capture-first](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-nr-a-desk-open](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-a-identity](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-nr-a-inbox-team](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-nr-a-journalist-handbook](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-nr-a-sharness](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-nr-a-what-an-agent-is](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-agents](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-articles](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-board](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-corrections](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-graphs](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-nr-home](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-nr-log](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-newsroom](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-php-flaws](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-policies](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-publish](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-reviews](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-nr-reviews-criteria](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-shipped](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-sitemap](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-team](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-nr-wire-json](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-a-push](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-a-where-stands](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-analysis](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-php-claims](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-claims-review](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-collaborators](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-factcheck](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
-| [wnews-php-home](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
-| [wnews-php-join](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-php-join-invite](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-layers](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [wnews-php-method](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-numbers](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-php-ops](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-php-share](None) |  | None | None | None | unlisted: a capture folder no record names | 7 |
-| [wnews-php-pipeline](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-review](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-php-signals](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
-| [wnews-php-sitemap](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-subscribe](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-synthetic](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-team-channels](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-php-team-control](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-php-team-schedule](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-php-timeline](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wnews-php-updates](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wnews-php-verifier](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [wnews-nr-a-agent-loops](https://newsroom.sgit.ai/articles/why-agent-loops-are-hard.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:32Z | 200 |  | 4 |
+| [wnews-nr-a-call-for-help](https://newsroom.sgit.ai/articles/a-call-for-help.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:32Z | 200 |  | 4 |
+| [wnews-nr-a-capture-first](https://newsroom.sgit.ai/articles/capture-first.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:33Z | 200 |  | 5 |
+| [wnews-nr-a-desk-open](https://newsroom.sgit.ai/articles/a-desk-anyone-can-open.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:33Z | 200 |  | 4 |
+| [wnews-nr-a-identity](https://newsroom.sgit.ai/articles/agents-have-an-identity-now.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:32Z | 200 |  | 5 |
+| [wnews-nr-a-inbox-team](https://newsroom.sgit.ai/articles/the-inbox-team-as-a-recipe.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:31Z | 200 |  | 5 |
+| [wnews-nr-a-journalist-handbook](https://newsroom.sgit.ai/articles/how-a-journalist-agent-publishes-here.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:31Z | 200 |  | 5 |
+| [wnews-nr-a-sharness](https://newsroom.sgit.ai/articles/introducing-sharness.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:31Z | 200 |  | 5 |
+| [wnews-nr-a-what-an-agent-is](https://newsroom.sgit.ai/articles/what-an-agent-is.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:32Z | 200 |  | 4 |
+| [wnews-nr-agents](https://newsroom.sgit.ai/agents/index.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:30Z | 200 |  | 4 |
+| [wnews-nr-articles](https://newsroom.sgit.ai/articles/index.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:30Z | 200 |  | 4 |
+| [wnews-nr-board](https://newsroom.sgit.ai/newsroom/board.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:26Z | 200 |  | 4 |
+| [wnews-nr-corrections](https://newsroom.sgit.ai/corrections/index.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:30Z | 200 |  | 4 |
+| [wnews-nr-graphs](https://newsroom.sgit.ai/articles/graphs.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:29Z | 200 |  | 5 |
+| [wnews-nr-home](https://newsroom.sgit.ai/) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:26Z | 200 |  | 5 |
+| [wnews-nr-log](https://newsroom.sgit.ai/newsroom/log.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:27Z | 200 |  | 4 |
+| [wnews-nr-newsroom](https://newsroom.sgit.ai/newsroom/index.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:26Z | 200 |  | 4 |
+| [wnews-nr-php-flaws](https://newsroom.sgit.ai/php-flaws/index.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:31Z | 200 |  | 4 |
+| [wnews-nr-policies](https://newsroom.sgit.ai/newsroom/policies.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:26Z | 200 |  | 4 |
+| [wnews-nr-publish](https://newsroom.sgit.ai/newsroom/publish.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:27Z | 200 |  | 4 |
+| [wnews-nr-reviews](https://newsroom.sgit.ai/reviews/index.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:28Z | 200 |  | 5 |
+| [wnews-nr-reviews-criteria](https://newsroom.sgit.ai/reviews/criteria.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:28Z | 200 |  | 4 |
+| [wnews-nr-shipped](https://newsroom.sgit.ai/shipped/index.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:28Z | 200 |  | 4 |
+| [wnews-nr-sitemap](https://newsroom.sgit.ai/sitemap.xml) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:25Z | 200 |  | 4 |
+| [wnews-nr-team](https://newsroom.sgit.ai/team/index.html) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:28Z | 200 |  | 4 |
+| [wnews-nr-wire-json](https://newsroom.sgit.ai/newsroom/wire.json) | SGit Newsroom (newsroom.sgit.ai) | own-site | 2026-10-29T17:15:24Z | 200 |  | 4 |
+| [wnews-php-a-push](https://php.oct.2026.newsroom.sgit.ai/articles/how-a-push-reaches-the-pages/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:40Z | 200 |  | 4 |
+| [wnews-php-a-where-stands](https://php.oct.2026.newsroom.sgit.ai/articles/where-php2shell-stands/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:40Z | 200 |  | 4 |
+| [wnews-php-analysis](https://php.oct.2026.newsroom.sgit.ai/analysis/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:36Z | 200 |  | 5 |
+| [wnews-php-claims](https://php.oct.2026.newsroom.sgit.ai/claims/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:35Z | 200 |  | 4 |
+| [wnews-php-claims-review](https://php.oct.2026.newsroom.sgit.ai/claims/review/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:35Z | 200 |  | 4 |
+| [wnews-php-collaborators](https://team.php.oct.2026.newsroom.sgit.ai/collaborators/) | PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:04Z | 200 |  | 4 |
+| [wnews-php-factcheck](https://php.oct.2026.newsroom.sgit.ai/factcheck/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:34Z | 200 |  | 6 |
+| [wnews-php-home](https://php.oct.2026.newsroom.sgit.ai/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:33Z | 200 |  | 6 |
+| [wnews-php-join](https://php.oct.2026.newsroom.sgit.ai/join/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:35Z | 200 |  | 5 |
+| [wnews-php-join-invite](https://php.oct.2026.newsroom.sgit.ai/join/invite/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:36Z | 200 |  | 4 |
+| [wnews-php-layers](https://php.oct.2026.newsroom.sgit.ai/layers/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:41Z | 200 |  | 4 |
+| [wnews-php-llms](https://php.oct.2026.newsroom.sgit.ai/llms.txt) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:25Z | 200 |  | 3 |
+| [wnews-php-method](https://php.oct.2026.newsroom.sgit.ai/method/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:38Z | 200 |  | 4 |
+| [wnews-php-numbers](https://php.oct.2026.newsroom.sgit.ai/numbers/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:37Z | 200 |  | 5 |
+| [wnews-php-ops](https://php.oct.2026.newsroom.sgit.ai/ops/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:36Z | 200 |  | 4 |
+| [wnews-php-php-share](https://php.oct.2026.newsroom.sgit.ai/factcheck/investigations/php-share/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:34Z | 200 |  | 7 |
+| [wnews-php-pipeline](https://php.oct.2026.newsroom.sgit.ai/pipeline/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:37Z | 200 |  | 4 |
+| [wnews-php-review](https://refs.php.oct.2026.newsroom.sgit.ai/review/) | PHP October 2026, a story site of the SGit Newsroom (refs.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:03Z | 200 |  | 5 |
+| [wnews-php-signals](https://php.oct.2026.newsroom.sgit.ai/signals/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:41Z | 200 |  | 6 |
+| [wnews-php-sitemap](https://php.oct.2026.newsroom.sgit.ai/sitemap.xml) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:25Z | 200 |  | 4 |
+| [wnews-php-subscribe](https://php.oct.2026.newsroom.sgit.ai/subscribe/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:39Z | 200 |  | 4 |
+| [wnews-php-synthetic](https://team.php.oct.2026.newsroom.sgit.ai/admin/synthetic/) | PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:03Z | 200 |  | 4 |
+| [wnews-php-team-channels](https://team.php.oct.2026.newsroom.sgit.ai/team/channels/) | PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:02Z | 200 |  | 4 |
+| [wnews-php-team-control](https://team.php.oct.2026.newsroom.sgit.ai/team/control/) | PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:02Z | 200 |  | 5 |
+| [wnews-php-team-schedule](https://team.php.oct.2026.newsroom.sgit.ai/team/schedule/) | PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:02Z | 200 |  | 5 |
+| [wnews-php-timeline](https://php.oct.2026.newsroom.sgit.ai/timeline/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:37Z | 200 |  | 5 |
+| [wnews-php-updates](https://updates.php.oct.2026.newsroom.sgit.ai/updates/) | PHP October 2026, a story site of the SGit Newsroom (updates.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:03Z | 200 |  | 4 |
+| [wnews-php-verifier](https://team.php.oct.2026.newsroom.sgit.ai/team/verifier/) | PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:02Z | 200 |  | 4 |
 | [wpki-about-pki-agent](https://pki.sgit.ai/about/pki-agent.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:25Z | 200 |  | 4 |
 | [wpki-agents](https://pki.sgit.ai/agents/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:24Z | 200 |  | 6 |
 | [wpki-art-access-keys](https://pki.sgit.ai/articles/handing-out-access-keys.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:26Z | 200 |  | 4 |
@@ -633,33 +633,33 @@ Built 2026-10-29T17:23Z. 659 sources; `manifest.json` has every file's SHA-256. 
 | [wpki-sg-vault-messaging-html](https://sgit.ai/docs/vault-messaging.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:33Z | 200 |  | 6 |
 | [wpki-sso](https://pki.sgit.ai/sso/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:26Z | 200 |  | 7 |
 | [wpki-storyboards](https://pki.sgit.ai/storyboards/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:27Z | 200 |  | 5 |
-| [wsgit-credentials](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
-| [wsgit-for-git-users](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
-| [wsgit-home](None) |  | None | None | None | unlisted: a capture folder no record names | 7 |
-| [wsgit-limitations](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wsgit-newsroom-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wsgit-newsroom-reviews-vaults](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-partial-clones](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-ruv-home](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-security](None) |  | None | None | None | unlisted: a capture folder no record names | 7 |
-| [wsgit-sgit-maps](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-sharness-decision](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-sharness-landscape](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-sharness-levels](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-sharness-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wsgit-sharness-pbp](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-sharness-policies](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-try](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-two-branch](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
-| [wsgit-vault-agent-desk](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-vault-hope](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-vault-kit-bag](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-vault-licence](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-vault-messaging](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-vaults-index](None) |  | None | None | None | unlisted: a capture folder no record names | 5 |
-| [wsgit-vaults-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [wsgit-what-is-sgit](None) |  | None | None | None | unlisted: a capture folder no record names | 6 |
+| [wsgit-credentials](https://sgit.ai/docs/credentials.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:00Z | 200 |  | 6 |
+| [wsgit-for-git-users](https://sgit.ai/docs/sgit-for-git-users.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:53Z | 200 |  | 6 |
+| [wsgit-home](https://sgit.ai/) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:48Z | 200 |  | 6 |
+| [wsgit-limitations](https://sgit.ai/docs/limitations.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:07Z | 200 |  | 5 |
+| [wsgit-llms](https://sgit.ai/llms.txt) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:43Z | 200 |  | 4 |
+| [wsgit-newsroom-llms](https://newsroom.sgit.ai/llms.txt) | newsroom.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:18:12Z | 200 |  | 4 |
+| [wsgit-newsroom-reviews-vaults](https://newsroom.sgit.ai/reviews/vaults.html) | newsroom.sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:18:16Z | 200 |  | 5 |
+| [wsgit-partial-clones](https://sgit.ai/docs/partial-clones.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:05Z | 200 |  | 6 |
+| [wsgit-ruv-home](https://ruv.sgit.ai/) | ruv.sgit.ai (Dinis Cruz and Mondweep Chakravorty) | own-site | 2026-10-29T17:18:10Z | 200 |  | 7 |
+| [wsgit-security](https://sgit.ai/security/) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:57Z | 200 |  | 7 |
+| [wsgit-sgit-maps](https://sgit.ai/demos/sgit-maps.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:10Z | 200 |  | 5 |
+| [wsgit-sharness-decision](https://sharness.ai/design/decision/) | sharness.ai (Dinis Cruz) | own-site | 2026-10-29T17:18:01Z | 200 |  | 6 |
+| [wsgit-sharness-landscape](https://sharness.ai/landscape/) | sharness.ai (Dinis Cruz) | own-site | 2026-10-29T17:18:05Z | 200 |  | 6 |
+| [wsgit-sharness-levels](https://sharness.ai/design/levels/) | sharness.ai (Dinis Cruz) | own-site | 2026-10-29T17:17:57Z | 200 |  | 6 |
+| [wsgit-sharness-llms](https://sharness.ai/llms.txt) | sharness.ai (Dinis Cruz) | own-site | 2026-10-29T17:17:45Z | 200 |  | 4 |
+| [wsgit-sharness-pbp](https://sharness.ai/design/pbp/) | sharness.ai (Dinis Cruz) | own-site | 2026-10-29T17:17:53Z | 200 |  | 6 |
+| [wsgit-sharness-policies](https://sharness.ai/design/policies/) | sharness.ai (Dinis Cruz) | own-site | 2026-10-29T17:17:50Z | 200 |  | 7 |
+| [wsgit-try](https://sgit.ai/try/) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:14Z | 200 |  | 5 |
+| [wsgit-two-branch](https://sgit.ai/docs/two-branch-model.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:55Z | 200 |  | 6 |
+| [wsgit-vault-agent-desk](https://sgit.ai/demos/vaults/agent-desk/) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:17:03Z | 200 |  | 5 |
+| [wsgit-vault-hope](https://sgit.ai/demos/vaults/hope-or-enforcement/) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:48Z | 200 |  | 8 |
+| [wsgit-vault-kit-bag](https://sgit.ai/demos/vaults/kit-bag/) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:17:42Z | 200 |  | 5 |
+| [wsgit-vault-licence](https://sgit.ai/demos/vaults/licence-to-operate/#deck=problem&s=1) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:17:33Z | 200 |  | 6 |
+| [wsgit-vault-messaging](https://sgit.ai/docs/vault-messaging.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:02Z | 200 |  | 6 |
+| [wsgit-vaults-index](https://sgit.ai/demos/vaults/) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:17Z | 200 |  | 5 |
+| [wsgit-vaults-llms](https://sgit.ai/demos/vaults/llms.txt) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:16:19Z | 200 |  | 4 |
+| [wsgit-what-is-sgit](https://sgit.ai/docs/what-is-sgit.html) | sgit.ai (Dinis Cruz) | own-site | 2026-10-29T17:15:50Z | 200 |  | 6 |
 | [x-lemkin-thread](https://x.com/jasonlk/status/1946069562723897802) | Jason Lemkin on X | primary | 2026-10-29T01:50:22Z | 200 | partial: thread text captured from server-rendered HTML; screenshots in the posts (with the agent's own messages) not captured as text | 3 |
 | [x-masad-response](https://x.com/amasad/status/1947060568621273123) | Amjad Masad (Replit CEO) on X | primary | 2026-10-29T01:51:44Z | 200 | partial: post text truncated by X after the first lines | 3 |
 | [yahoo-sharepoint-54](https://www.yahoo.com/news/articles/microsoft-warns-cyberattacks-exploiting-sharepoint-150031901.html) | Yahoo News | news | 2026-10-29T01:53:05Z | 200 | full | 3 |

@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 18,
-  "state": "wake 16:09: the editor's decisions of 15:00 (worm era, accidents against attacks, Replit, GTIG), the SHarness series, and the storyteller's S4 and S5 delivered",
+  "round": 19,
+  "state": "wake 17:09: the editor's work catalogued (PKI first, newsrooms, SGit, SHarness, ruv.sgit; 67 showcase crops), the public vaults for embeds, the blast-radius index",
   "done": [
     {
       "what": "Session key made and published",
@@ -128,6 +128,10 @@
     {
       "what": "Wake 16:09: S1 to S3 (19 claims: Slammer and Code Red, six operator-confirmed outages, insurer and Uptime comparisons), S4 (19 releases in 89 minutes), S5, the SHarness series (18 pieces)",
       "evidence": "evidence/story/story-s1-s3.json, story-s4.json, story-s5.json, evidence/studio/studio-sharness-series.json; tui-mail-public mailroom/conductor/038, mailroom/ruv-sgit/023"
+    },
+    {
+      "what": "Wake 17:09: the editor's work section catalogue and parts 2 and 3 survey",
+      "evidence": "evidence/studio/studio-work-pki.json, studio-work-newsrooms.json, studio-work-sgit-sharness.json, studio-blast-radius.json, evidence/studio/img/"
     }
   ],
   "next": [
