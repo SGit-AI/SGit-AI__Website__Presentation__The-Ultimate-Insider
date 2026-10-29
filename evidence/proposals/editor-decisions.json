@@ -392,6 +392,41 @@
    "due": "2026-10-29T09:00:00Z",
    "status": "open",
    "answer": null
+  },
+  {
+   "id": "D12",
+   "kind": "decide",
+   "title": "The evidence vault's history: keep it, or rotate the vault",
+   "question": "Commits pushed between 02:22 and 05:23 UTC carry anonymous cookie values, page tokens and anti-forgery form tokens that websites issued to the researcher's fetcher, and the two append tokens sgit.ai and riskmandate.ai publish on purpose. All are redacted now, but earlier commits stay readable with the read key.",
+   "why_now": "The conductor's morning review asked; the counts per commit are in evidence/updates/2026-10-29__the-vault-history-checked.md.",
+   "options": [
+    {
+     "id": "keep",
+     "label": "Keep the history",
+     "consequence": "nothing changes; none of the values is a credential to an account, and they expire or were public already"
+    },
+    {
+     "id": "rotate",
+     "label": "Move to a fresh vault without the history (sgit vault move)",
+     "consequence": "a new read key on the site and in vaults.json; the old vault deleted; the handover zip renewed"
+    }
+   ],
+   "recommendation": {
+    "option": "keep",
+    "by": "researcher",
+    "why": "nothing in it opens an account; a rotation costs a new read key everywhere it is published"
+   },
+   "evidence": [
+    "evidence/updates/2026-10-29__the-vault-history-checked.md",
+    "team/researcher/wakes/20261029T071113Z.json (pre_review)"
+   ],
+   "asked_by": [
+    "conductor (morning review)",
+    "researcher"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
   }
  ]
 }

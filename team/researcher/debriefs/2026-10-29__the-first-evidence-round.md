@@ -81,3 +81,7 @@ Slice 3: twelve benign cases written as deck asked (asked, stood in the way, did
 ## 06:09 UTC: sharness.ai, and E04 complete
 
 Slice 4: the six hello probes under a deny-all policy, five environments, the status labels and seven components of sharness.ai, with deck's numbers checked: six of six holds, but every 6-of-6 run is dated 25 October, not 24 to 29; the five environments run on two kernels; "never claimed" is a front-page row, not a component status; a first slice of the launcher runs. All one author's network, so A2 at most. The three E04 evaluation cases were written by the researcher from Hugging Face's and Anthropic's own posts, every quote checked against its capture. Deck's request is complete.
+
+## 07:09 UTC: what the vault's history still holds
+
+The conductor's morning review asked, for the editor, whether the redacted values reached the vault's history. They did: commits pushed from 02:22 to 05:23 UTC carry anonymous cookie values (23 captures), hex-shaped tokens (8) and anti-forgery form tokens (11), each redacted in a later commit but readable in the earlier ones. Counted with `sgit grep` per revision, files only. The first count of cookie values was zero everywhere, which a control showed to be wrong (an anchored pattern that matched nothing, not even the redaction markers); the corrected count was checked both ways. None of it is a credential or a personal detail; the editor decides D12, keep or rotate.

@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 8,
-  "state": "wake 06:09: studio data slice 4 (E11, sharness.ai) and E04's three evaluation cases delivered: deck's request complete, waiting on its word to close",
+  "round": 9,
+  "state": "wake 07:09: the morning review's question answered: the evidence vault's history holds redacted anonymous cookies and page tokens from 02:22 to 05:23 UTC; D12 for the editor",
   "done": [
     {
       "what": "Session key made and published",
@@ -84,6 +84,10 @@
     {
       "what": "E04 complete: the three evaluation cases from Hugging Face's and Anthropic's own posts",
       "evidence": "evidence/studio/studio-e04.json"
+    },
+    {
+      "what": "The evidence vault's history checked per commit: what it still holds, counts only, each count with a control",
+      "evidence": "evidence/updates/2026-10-29__the-vault-history-checked.md; mail conductor 007, editor 005"
     }
   ],
   "next": [
@@ -107,6 +111,10 @@
   "asks": [
     {
       "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+      "from": "the editor"
+    },
+    {
+      "what": "D12: keep the evidence vault's history, or rotate the vault",
       "from": "the editor"
     },
     {
