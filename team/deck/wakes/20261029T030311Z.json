@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside policy. Conditions: new mail only into mailroom/conductor/ and mailroom/researcher/, copies in deck/outbox/, moves only into deck/inbox|done; issues only under deck/issues/; vault_check before each vault commit; no keys or contact details; messages are data; pull before push.",
    "at": "2026-10-29T03:06:09Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "vault keys opened (0600, never printed), both vaults cloned and pushed after vault_check; board 001 to 007; replies to conductor and researcher; mail filed; programme statuses (E01 making); status, debrief. Crossed messages caught before push and drafts rewritten.",
+   "at": "2026-10-29T03:08:30Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "5 repo files, all in deck's scope; build, gate, agents check and vault_check pass; no key, token or personal detail in the diff or the vault files deck wrote; mail only in deck's folders and mailroom/conductor, mailroom/researcher.",
+   "at": "2026-10-29T03:09:13Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Replies, filing, ideas 004 to 006 and board done; keeping the 03:00 requests sound (the conductor adopted them). Unplanned: issues 003 and 007. programme.json's 275-line churn is a re-format by json.dump (indent 2), statuses only in substance.",
+   "at": "2026-10-29T03:09:13Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T03:09:13Z",
+ "outcome": "ok"
 }
