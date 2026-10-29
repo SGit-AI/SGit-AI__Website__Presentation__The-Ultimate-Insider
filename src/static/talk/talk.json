@@ -7,6 +7,18 @@
   "source": "Every number on screen is from the article The ultimate insider (newsroom.sgit.ai, 30 September 2026), each linked to its source on the script page",
   "beats": [
     {
+      "id": "title",
+      "act": "Opening",
+      "dur": 45,
+      "title": "The ultimate insider",
+      "slide": {
+        "src": "slides/title/index.html"
+      },
+      "say": "Good evening. I am Dinis. Tonight is about a perfect storm we are brewing. But first, how this talk was made, because the team that made it is part of the story.",
+      "cue": "Livestream starts around 7 pm. Wait for the room. The site is on the slide: everything tonight, slides and sources, is there.",
+      "part": 1
+    },
+    {
       "id": "m03",
       "act": "Prelude: how this was made",
       "dur": 60,
@@ -35,18 +47,6 @@
         ]
       ],
       "cue": "The safe floor is the conductor's article. motion@'s 'meet the team' replaces this slide if it lands by 18:15. Numbers as of 17:02 UTC; say 'by five this afternoon'."
-    },
-    {
-      "id": "title",
-      "act": "Opening",
-      "dur": 45,
-      "title": "The ultimate insider",
-      "slide": {
-        "src": "slides/title/index.html"
-      },
-      "say": "Good evening. I am Dinis. Tonight is about a perfect storm we are brewing, out of three problems you already know: agents, the infrastructure that is supposed to hold them, and the risk management that is supposed to decide what to do about both.",
-      "cue": "Livestream starts around 7 pm. Wait for the room. The site is on the slide: everything tonight, slides and sources, is there.",
-      "part": 1
     },
     {
       "id": "three",
