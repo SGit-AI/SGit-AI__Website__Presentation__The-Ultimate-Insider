@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17 (fired 17:17, read 17:23)",
+ "started": "2026-10-29T17:23:26Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the storyteller's 90-minute arc, the locks brief and the editor's answers)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Part 1 complete and timed by 18:15 (locks 18:30): talk.json beats get a lock part (1, 2, 3) for dev's locks; lock 1 = a prelude (how this was made: the conductor's article as the safe floor, motion@'s meet-the-team if it lands, numbers from team/conductor/team-in-numbers.json) then title through infrastructure with their studio pieces, re-timed to the storyteller's fourth edition and summing to under 30:00. Parts 2 and 3 get their lock part and the storyteller's times; the W1 to W5 beats follow at the next wakes (part 2 by 19:30, part 3 by 20:00). Tell dev the field and which part the SHarness row lands in (lock 3). Gate (exit code checked), release.",
+   "at": "2026-10-29T17:24:14Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "In scope; nothing secret or attack-shaped. Conditions: numbers on screen from team-in-numbers.json with its source; only the lock-part field, told to dev; nothing locked touched; recheck part 1 plays before pushing.",
+   "at": "2026-10-29T17:24:40Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "As planned: every beat carries part 1, 2 or 3; part 1 = prelude (the conductor's article) and title through infrastructure with studio pieces, 20 beats, 29:30, every slide 200, the player plays the prelude; part 2 20:55 and part 3 18:15 with room for W1 to W5; the SHarness row (watch, live, recorded) in part 3; dev told (mail 040).",
+   "at": "2026-10-29T17:26:43Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Two @deck commits in scope; prelude numbers match team-in-numbers.json with a source; no keys, contact details, em-dashes or attack-shaped content; nothing locked yet; mail 040 matches the diff.",
+   "at": "2026-10-29T17:27:21Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Every beat has a part; part 1 20 beats, 1770 s, prelude first; part 2 20:55, part 3 18:15; SHarness row in order in part 3; debrief and status agree; gate clean (271).",
+   "at": "2026-10-29T17:27:21Z"
+  }
+ },
+ "closed": "2026-10-29T17:27:22Z",
+ "outcome": "ok"
+}

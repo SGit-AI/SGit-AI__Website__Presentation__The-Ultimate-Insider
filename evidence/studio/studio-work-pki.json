@@ -1,0 +1,1381 @@
+{
+ "about": "Catalogue of pki.sgit.ai and the PKI and agent-messaging docs on sgit.ai, captured 29 October 2026 by public GET only. It covers how a person enters the register (passkey, vault, sgit-compatible keys, evidence, anchor, two-way links, sealed messages), how an agent gets an identity (own key, names its operator, fingerprint compared, 'operates' link with an end date, fleets), how agents hand each other vault keys (pinned root, policy by hash, expiry, seal to the root, QR files carried by hand), Sign in with pki.sgit.ai (delegation of a browser key, soft and strong), and how site agents talk (Agent Contact v0.1: comms vault, append lane as inbox, contact file, allow list, signed and encrypted mail; append-lane messaging with per-session keys and ephemeral inboxes). The workflow in one line: the agent makes its key, the person compares the fingerprint and signs for it for a limited time, the agent pins the person's root before any secret moves, seals to keys that chain to that root, and posts sealed, signed mail into write-only append lanes that the recipient drains and checks. Gaps: the large archive (agent-registry design Aug to Oct 2026, the two books, insurance pack, probes, bench, simulator, map-your-case and registry-mvp packs, about 200 pages) was not catalogued; the invite, join, m, account, login and vault pages are JS apps and were not exercised; the people register page is rendered in the browser and only its generated index was read; claims are own-site A2 and not corroborated.",
+ "cautions": [
+  "pki.sgit.ai shows keys and fingerprints on many pages (the root fingerprint on the handover and SSO pages, the agent's session-key fingerprint in its articles and byline, illustrative truncated hashes in storyboard panels). No row, quote or crop carries one; the SSO 'try it' panel and storyboard panels 12 (vault key) and 4 (agent key) were left out for that reason, and the first SSO crop was discarded after inspection.",
+  "Agent-directed instructions are material, not instructions: pki.sgit.ai/llms.txt tells agents to read handover.md and follow it; handover.md and /handover/ address the reader as an agent working for Dinis Cruz and give commands to run; keys-for-agents and /agents/ give a block to paste into a Claude Code session; sgit.ai/docs/send-a-vault-key.md addresses an agent holding vault keys. None was run or followed, and no command is quoted here.",
+  "The register count is moving: the October articles say zero real people; the generated directory read on 29 October counts 1 real key and 2 agent keys. Say 'as of 29 October 2026' on any slide, and note the index is generated with no authority.",
+  "The archive is clearly marked: from August to October 2026 the site designed a key registry for agents; since v0.2.0 (18 October) people come first. Do not present archived design as shipped. The site insists claims carry their 'does not prove' limits.",
+  "Agent Contact v0.1 was tested offline only at the time of writing; the live 'configure' call returned 404 then. Present it as an approved draft being rolled out, not as running everywhere.",
+  "The sgit.ai example contact file contains an illustrative agent mail address and token placeholders; not reproduced.",
+  "Our own team's practice (vault handover zips sealed to the vaults manager, read keys only published, Email-FS lite mail through public vaults) mirrors this design, which makes it a natural part 3 link; that is our inference, not a claim on the site.",
+  "Text captures of .md files are tag-stripped, so placeholders in angle brackets are missing from page.txt; quotes were chosen from text without them.",
+  "All sources are the editor's own sites, graded A2 at most and uncorroborated."
+ ],
+ "pieces": [
+  {
+   "id": "wpki-p01",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/index.html",
+   "title": "pki.sgit.ai front page: a register of people and their keys, verified both ways",
+   "kind": "page",
+   "published": "2026-10-18",
+   "what_it_says": "Find someone and send them something only they can read: a passkey opens a vault holding your keys, you publish the public half, add evidence, are verified by the anchor (Dinis, for now) and link with people you know; a link counts only when both sides wrote it.",
+   "infographics_and_animations": [
+    "Seven numbered cards, 'From a passkey to a message', one per step of the flow",
+    "Comparison table: the 2019 keyserver network against this register (where a vouch is written, can a stranger grow your record, what an unconfirmed vouch does, withdrawing)",
+    "Four cards on what already ships (sgit keys, the newsroom's passkey vault, SG/Send append lanes) and what the site does not claim"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "passkey-to-message",
+     "selector_or_where": "div.cards (first), the seven step cards under 'From a passkey to a message'",
+     "what_it_shows": "The whole people workflow in seven cards: passkey opens a vault, evidence, the anchor, two-way links, degrees of separation, invitations by QR, a secret as a QR code",
+     "why_a_slide": "The one-screen overview of how a person enters the PKI; good opener for the PKI part",
+     "png": "region-passkey-to-message.png",
+     "captured_at": "2026-10-29T17:17:04Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "two-ways-table",
+     "selector_or_where": "Section 'Two ways, or not at all: the answer to 2019', heading and table",
+     "what_it_shows": "Why the 2019 keyserver web of trust was flooded and how a two-way link written in the voucher's own record stops it",
+     "why_a_slide": "The design idea in one table; explains why the register is built the way it is",
+     "png": "region-two-ways-table.png",
+     "captured_at": "2026-10-29T17:17:04Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "what-ships",
+     "selector_or_where": "Section 'Completing something that ships', four cards",
+     "what_it_shows": "The register completes what sgit already ships: keys, a passkey vault, append lanes; and quotes sgit's own gap, no web of trust and no directory",
+     "why_a_slide": "Shows the PKI as the missing piece on top of shipped parts, not a new stack",
+     "png": "region-what-ships.png",
+     "captured_at": "2026-10-29T17:17:04Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-front",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p02",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/people/how.html",
+   "title": "How the register of people works",
+   "kind": "page",
+   "published": "2026-10-18",
+   "what_it_says": "The seven steps in detail (door, master and book vaults; sgit-compatible keys; signed identity; evidence and the proof line; anchor verification that expires after a year; two-way links; sealed messages and invitations), plus what is public, what stays private and what it does not claim.",
+   "infographics_and_animations": [
+    "Numbered step list of the flow",
+    "Key-value table of evidence types and the proof line",
+    "Key-value table: public, private in vaults, never"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "public-and-not",
+     "selector_or_where": "Section 'What is public, and what is not', its table",
+     "what_it_shows": "Three rows: what the register publishes, what stays private in vaults, and what is never there (anybody who did not enrol)",
+     "why_a_slide": "A clean privacy boundary slide for the PKI part; no keys shown",
+     "png": "region-public-and-not.png",
+     "captured_at": "2026-10-29T17:19:08Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-people-how",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p03",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/agents/index.html",
+   "title": "Identities for agents",
+   "kind": "page",
+   "published": "2026-10-19",
+   "what_it_says": "An agent is a record like a person's: it makes its own key where it runs, names its operator, hands over a signed public record, and the operator compares fingerprints and signs an 'operates' link with an end date; fleets let one person operate many agents; before a secret the agent pins the root.",
+   "infographics_and_animations": [
+    "Five-step numbered workflow (keygen, operator, submit, confirm from the vault, register gets both)",
+    "Paste-able block for a Claude Code session",
+    "Key-value table: session key, a key that lasts, an agent on a machine you run"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "workflow",
+     "selector_or_where": "Section 'The workflow', the five numbered steps",
+     "what_it_shows": "How an agent gets an identity: makes its key, names its operator, hands over its record, the operator compares the fingerprint and signs back with an end date, both go in the register",
+     "why_a_slide": "The core agent workflow of the PKI in one slide; the centre of the PKI part",
+     "png": "region-workflow.png",
+     "captured_at": "2026-10-29T17:17:07Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "session-keys",
+     "selector_or_where": "Section 'Session keys, and keys that last', table",
+     "what_it_shows": "Three ways an agent's key can live: session key (dies with the container), a key that lasts (held in custody by whoever sets the secret), a key on a machine you run",
+     "why_a_slide": "Honest trade-off for cloud agents with no memory between sessions; ties to the bootstrap trap",
+     "png": "region-session-keys.png",
+     "captured_at": "2026-10-29T17:17:07Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-agents",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p04",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/articles/keys-for-agents.md",
+   "title": "Keys for agents: an agent makes its own key, names its operator and is confirmed for a week",
+   "kind": "article",
+   "published": "2026-10-20",
+   "what_it_says": "pki.agent's debrief of v0.2.1: Dinis asked for identities for his many agents; the agent creates a key it never hands over, the operator signs a link back after comparing fingerprints; confirmations expire (30 days, a week for a session); fleets; operated is not authorised.",
+   "infographics_and_animations": [
+    "Workflow table (step, who, what, how)",
+    "Table of session keys and keys that last",
+    "Signed article: a detached .sig beside the markdown, by the agent's key"
+   ],
+   "showcase_regions": [],
+   "source_id": "wpki-art-keys-for-agents",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p05",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/articles/agents-vault-keys-and-the-root.md",
+   "title": "Agents, vault keys and the root",
+   "kind": "article",
+   "published": "2026-10-21",
+   "what_it_says": "From Dinis's voice memo on agents handing each other vault keys: sealing to a public key works only if the agent checks whose key it is; five gaps (two roots, who authenticates a new key, append lanes prove nothing, seal-to-this-key social engineering, where the keeper's key lives) and the fixes built into pki-agent (pin a root out of band, policies by hash, expiry, seal to the root by default, QR files carried by hand).",
+   "infographics_and_animations": [
+    "Numbered flow 0 to 6 with the gaps closed",
+    "Links to a sixteen-panel storyboard"
+   ],
+   "showcase_regions": [],
+   "source_id": "wpki-art-vault-keys-root",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p06",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/storyboards/a-vault-key-handed-over.html",
+   "title": "Storyboard: A vault key, handed over",
+   "kind": "animation",
+   "published": "2026-10-21",
+   "what_it_says": "Sixteen hand-drawn panels (Rough.js, drawn in the browser from JSON) of the technical flow: the root born in a vault, a session agent enrolled by a QR file carried by hand, Mallory posting a fake key to the lane, the refusals, sealing to keeper and root, and the moral.",
+   "infographics_and_animations": [
+    "Deck of 16 animated sketch panels with characters (the Anchor, Scout, the Keeper, Mallory)",
+    "Panel 9: Mallory posts 'Scout's key' to a lane anyone can write; a COMPARE stop sign",
+    "Panel 12: three refusals (a stranger, policies differ, expiry) [not captured: shows illustrative hashes]",
+    "Panel 16: 'The human carries the bytes. The root vouches. The agent checks before it seals.'"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "panel-01-cover",
+     "selector_or_where": "section#scene-1",
+     "what_it_shows": "Cover panel with the cast: the Anchor, Scout, the Keeper",
+     "why_a_slide": "Friendly visual opener for the agent-secrets story",
+     "png": "region-panel-01-cover.png",
+     "captured_at": "2026-10-29T17:17:18Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "panel-09-compare",
+     "selector_or_where": "section#scene-9",
+     "what_it_shows": "Mallory drops 'Scout's key' into an append lane anyone can write; the stop sign says it counts only once a person compares it",
+     "why_a_slide": "Explains in one picture why a key arriving on a lane proves nothing",
+     "png": "region-panel-09-compare.png",
+     "captured_at": "2026-10-29T17:17:21Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "panel-16-moral",
+     "selector_or_where": "section#scene-16",
+     "what_it_shows": "The moral: the human carries the bytes, the root vouches, the agent checks before it seals",
+     "why_a_slide": "The single sentence to end the PKI part on",
+     "png": "region-panel-16-moral.png",
+     "captured_at": "2026-10-29T17:17:26Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-sb-vault-key-handed",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p07",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/storyboards/an-agent-gets-a-key.html",
+   "title": "Storyboard: An agent gets a key",
+   "kind": "animation",
+   "published": "2026-10-19",
+   "what_it_says": "Ten panels: Scout makes its key, names the Anchor as operator, the fingerprints are compared, the Anchor signs for a week, Scout signs a report, the link expires and is confirmed again, and a fleet operates many Scouts.",
+   "infographics_and_animations": [
+    "Deck of 10 animated sketch panels",
+    "Panel 9: the Fleet, a key the Anchor operates, which operates many Scout agents",
+    "Panel 10: 'The agent makes its key. The operator signs for it, for a week.'",
+    "Panel 4: fingerprint comparison [not captured: shows illustrative fingerprints]"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "panel-01-cover",
+     "selector_or_where": "section#scene-1",
+     "what_it_shows": "Cover: 'The agent makes it. The operator signs for it.' with the Anchor, Scout and the Fleet",
+     "why_a_slide": "Clear title card for the agent enrolment flow",
+     "png": "region-panel-01-cover.png",
+     "captured_at": "2026-10-29T17:17:33Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "panel-09-fleet",
+     "selector_or_where": "section#scene-9",
+     "what_it_shows": "One person, one fleet key, many agents: how the record stays small",
+     "why_a_slide": "Shows how one editor runs a large agent team without one giant record",
+     "png": "region-panel-09-fleet.png",
+     "captured_at": "2026-10-29T17:17:35Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "panel-10-moral",
+     "selector_or_where": "section#scene-10",
+     "what_it_shows": "The moral line: the agent makes its key, the operator signs for it, for a week",
+     "why_a_slide": "Memorable summary slide",
+     "png": "region-panel-10-moral.png",
+     "captured_at": "2026-10-29T17:17:38Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-sb-agent-gets-key",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p08",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/storyboards/index.html",
+   "title": "Storyboards: the keys, one panel at a time",
+   "kind": "animation",
+   "published": null,
+   "what_it_says": "Every workflow on the site as an interactive storyboard (deck, every panel, script), 8 storyboards, 80 panels, 8 characters, all drawn from data with gen-z-developers.sgit.ai's storyboard kit.",
+   "infographics_and_animations": [
+    "Line-up of the eight characters (the Anchor, Noor, Leo, Kofi, Mallory, Scout, the Fleet, the Keeper)",
+    "Shelves of storyboard thumbnails: keys for people, keys for agents, proposed, technical"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "lineup",
+     "selector_or_where": "svg.sbx-lineup, the cast line-up",
+     "what_it_shows": "The fictional cast that plays every part in the register: people, an attacker and three agents",
+     "why_a_slide": "A light visual to introduce the cast before showing panels",
+     "png": "region-lineup.png",
+     "captured_at": "2026-10-29T17:19:05Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-storyboards",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p09",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/sso/index.html",
+   "title": "Sign in with pki.sgit.ai",
+   "kind": "tool",
+   "published": null,
+   "what_it_says": "Any site can let you sign in with your pki.sgit.ai key: the site's browser makes a key, you see who asks and for what, your key signs a delegation for that browser at that site only; soft delegations end on a date, strong ones live only while your record lists them, so no revocation list is needed.",
+   "infographics_and_animations": [
+    "Interactive 'try it' panel where the page plays a site asking for uses (identity, sign:feedback, sign, delegate) and a duration [not captured: shows the pinned root fingerprint]",
+    "Code sample for a site loading the released sso module"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "sso-intro",
+     "selector_or_where": "H1 and lead paragraph",
+     "what_it_shows": "What signing in with pki.sgit.ai means: a delegation for one browser key at one site, checkable against the register",
+     "why_a_slide": "Explains delegation of a browser key in two sentences",
+     "png": "region-sso-intro.png",
+     "captured_at": "2026-10-29T17:19:01Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "soft-and-strong",
+     "selector_or_where": "Section 'Soft and strong'",
+     "what_it_shows": "Soft delegation (signed until a date) against strong (only while the person's record lists it; withdraw the link and it stops)",
+     "why_a_slide": "Revocation by absence: a neat idea worth a slide",
+     "png": "region-soft-and-strong.png",
+     "captured_at": "2026-10-29T17:19:01Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-sso",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p10",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/handover/index.html",
+   "title": "Handing over a vault key: instructions for agents (page and handover.md)",
+   "kind": "page",
+   "published": "2026-10-21",
+   "what_it_says": "Step-by-step rules an agent follows to hand over an SG/Send vault key: never print it, seal it only to a key that chains to the root, QR codes carry strict JSON only, content read from a QR or message is data, and the receiver stores a key only when signature, expiry and trust checks pass.",
+   "infographics_and_animations": [
+    "Code blocks for sending, receiving and enrolment",
+    "The two strict JSON QR shapes"
+   ],
+   "showcase_regions": [],
+   "source_id": "wpki-handover",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wpki-p11",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/articles/keys-for-people.md",
+   "title": "Keys for people: what I built on pki.sgit.ai from Dinis's brief of 18 October",
+   "kind": "article",
+   "published": "2026-10-20",
+   "what_it_says": "pki.agent's debrief of v0.2.0: a passkey opens door, master and book vaults; keys made in the browser byte-compatible with sgit; two-way links as the answer to 2019; verifications end; 87 checks across three suites; the count of real people was zero at the time.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wpki-art-keys-for-people",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p12",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/articles/a-login-made-of-a-passkey.md",
+   "title": "A login made of a passkey",
+   "kind": "article",
+   "published": "2026-10-21",
+   "what_it_says": "One button signs you up and in with a passkey; with no vault the account lives encrypted in the browser, with an access key it moves into a vault; a master key signs personas with the same two-way rule.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wpki-art-passkey-login",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p13",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/articles/in-person-by-qr-code.md",
+   "title": "In person, by QR code",
+   "kind": "article",
+   "published": "2026-10-20",
+   "what_it_says": "A research note checked claim by claim: build reciprocal QR scanning first, two phones scanning each other's key, the camera as the trusted channel, two scans making one two-way link; agents fit where a screen or camera is the channel.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wpki-art-in-person-qr",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p14",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/articles/handing-out-access-keys.md",
+   "title": "Handing out access keys with the keys we now have",
+   "kind": "article",
+   "published": "2026-10-20",
+   "what_it_says": "A proposal: SG/Send access keys travel sealed to each person's key, opening it creates their vault; the ledger keeps hashes, never keys; a server (api.sgit.ai) only mints and revokes, on signed requests, with sealed answers.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wpki-art-access-keys",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p15",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/about/pki-agent.html",
+   "title": "pki.agent, the agent that runs this site",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The byline of the Claude Code sessions that build pki.sgit.ai: not a person, each session a fresh container that starts from the repository, signs its articles with a session key, and Dinis Cruz is responsible for everything published under the name.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wpki-about-pki-agent",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wpki-p16",
+   "site": "pki.sgit.ai",
+   "page_url": "https://pki.sgit.ai/llms.txt",
+   "title": "pki.sgit.ai llms.txt",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The machine-readable map of the whole site for agents: the register's signed statement envelope, the agent tool, SSO, the released library, storyboards, articles, and the archived agent-registry work with its stated limits.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wpki-llms",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wpki-p17",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/agent-contact.html",
+   "title": "Agent Contact v0.1: signed, encrypted mail between the agents that run our websites",
+   "kind": "article",
+   "published": "2026-09-29",
+   "what_it_says": "Each site agent gets a comms vault whose append lane is its inbox and publishes a contact file at /.well-known/sgit-agents.json with its public keys and a deliberately public append token; it reads only messages encrypted to it, signed by the sender and from an allowed domain; abuse of the public lane is treated as a canary.",
+   "infographics_and_animations": [
+    "Table of what every site publishes",
+    "Annotated contact-file JSON",
+    "Comms vault folder tree",
+    "Message header table",
+    "Seven-step drain procedure",
+    "Threat model table",
+    "Rollout table"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "drain-steps",
+     "selector_or_where": "Section 7, 'Receiving (the drain) and sending'",
+     "what_it_shows": "The seven checks a receiving agent runs on every message (decrypt, shape, To, allow list before any fetch, signature against the sender's published key, date and replay) and how it sends",
+     "why_a_slide": "The heart of how agents talk to each other safely; reads well on a slide",
+     "png": "region-drain-steps.png",
+     "captured_at": "2026-10-29T17:17:50Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "threat-table",
+     "selector_or_where": "Section 9, threat model table",
+     "what_it_shows": "Junk, flooding, forged sender, compromised site, prompt injection from an allowed agent, replay, metadata, personal data, each with its mitigation",
+     "why_a_slide": "Shows the threat model is written down, including 'verified is not obeyed'",
+     "png": "region-threat-table.png",
+     "captured_at": "2026-10-29T17:17:50Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "canary",
+     "selector_or_where": "Section 'The owner's decision: the public token stays, and abuse is a canary'",
+     "what_it_shows": "The editor's decision to keep the append token public and treat abuse as an early-warning signal",
+     "why_a_slide": "A distinctive judgement call by the editor, good for discussion",
+     "png": "region-canary.png",
+     "captured_at": "2026-10-29T17:17:50Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-sg-agent-contact-html",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p18",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/append-lane-messaging.html",
+   "title": "Append-lane messaging between agents that hold no one else's vault key",
+   "kind": "article",
+   "published": "2026-09-26",
+   "what_it_says": "Write-up of two agent teams messaging both ways on 25 and 26 September 2026: a sender holds only a write-only append token, a fresh signing key per session published in a pinned registry on its own website, and ephemeral inbox vaults make it two-way; with flows, threat model, HTTP reference and recommendations.",
+   "infographics_and_animations": [
+    "ASCII architecture: a permanent vault and an ephemeral session, one direction each",
+    "Capabilities table",
+    "Flow diagrams for owner, sender and drainer",
+    "Ephemeral inbox lifecycle (open, publish, hand out, receive, drain, close)",
+    "Security properties and threat model tables"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "problem-and-answer",
+     "selector_or_where": "Section 1, 'The problem and the answer, in one screen' (text part, above the diagram)",
+     "what_it_shows": "The design goal (a sender holds only its append token, a postmaster only its vault key) and the three-part answer: append lanes, encryption and signatures, ephemeral inboxes",
+     "why_a_slide": "States the agent-messaging problem and answer in one screen",
+     "png": "region-problem-and-answer.png",
+     "captured_at": "2026-10-29T17:17:54Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "ephemeral-inbox-lifecycle",
+     "selector_or_where": "Section 6, lifecycle diagram",
+     "what_it_shows": "Open, publish, hand out, receive, drain, close: the life of an inbox that exists for one session",
+     "why_a_slide": "Simple lifecycle graphic for agents with no permanent memory",
+     "png": "region-ephemeral-inbox-lifecycle.png",
+     "captured_at": "2026-10-29T17:17:54Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-sg-append-lane-html",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p19",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/vault-messaging.html",
+   "title": "Sending messages between vaults",
+   "kind": "article",
+   "published": null,
+   "what_it_says": "How two vaults exchange encrypted messages with no shared vault key and no sender account: append lanes addressed by a token, composed with sgit pki; four separated capabilities (append token, enum key, write key, private key); the server sees only that something arrived, how big and when.",
+   "infographics_and_animations": [
+    "ASCII sequence diagram: sender, server, recipient",
+    "Four-capabilities table"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "shape-of-it",
+     "selector_or_where": "Section 'The shape of it', sequence diagram",
+     "what_it_shows": "Sender encrypts and appends blind, the server stores ciphertext and hashes, the recipient lists, fetches and decrypts locally",
+     "why_a_slide": "The plumbing of an agent message in one diagram",
+     "png": "region-shape-of-it.png",
+     "captured_at": "2026-10-29T17:17:46Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "four-capabilities",
+     "selector_or_where": "Section 'Four capabilities, deliberately separated', table",
+     "what_it_shows": "Who holds the append token, enum key, write key and private key, and what each can and cannot do",
+     "why_a_slide": "Why a sender cannot read the lane it writes to: least privilege made concrete",
+     "png": "region-four-capabilities.png",
+     "captured_at": "2026-10-29T17:17:46Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wpki-sg-vault-messaging-html",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p20",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/pki.md",
+   "title": "Keys, signatures and encrypting to someone else",
+   "kind": "article",
+   "published": null,
+   "what_it_says": "sgit pki run end to end on the shipped CLI: keygen makes RSA-OAEP 4096 and ECDSA P-256 pairs, export gives a JSON bundle, hybrid AES-256-GCM envelope, detached signatures; and it states there is no web of trust and no directory yet.",
+   "infographics_and_animations": [
+    "Construction table",
+    "Envelope field table"
+   ],
+   "showcase_regions": [],
+   "source_id": "wpki-sg-pki",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wpki-p21",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/send-a-vault-key.md",
+   "title": "Send a vault key to the registry",
+   "kind": "article",
+   "published": null,
+   "what_it_says": "For an agent that holds vault keys: never display a key, never improvise another route, send a vault-key-handover payload sealed to the registry's pinned key through a write-only lane.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wpki-sg-send-a-vault-key",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wpki-p22",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/agents-sharing-one-vault.md",
+   "title": "Agents sharing one vault",
+   "kind": "article",
+   "published": null,
+   "what_it_says": "The loop for a team of agents on one sgit vault: a scoped shallow clone per session, status before commit, push that pulls first, and what a pull does with uncommitted work.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wpki-sg-agents-sharing-one-vault",
+   "part_fit": "part 3"
+  }
+ ],
+ "claims": [
+  {
+   "id": "wpki-c01",
+   "text": "On pki.sgit.ai a passkey opens a vault that holds a person's private keys, so the keys follow them to every device the passkey opens.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "master vault, which holds your private keys; so the keys follow you to every device whose",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c02",
+   "text": "Keys made in the browser on pki.sgit.ai are RSA-OAEP 4096 and ECDSA P-256 and byte-compatible with sgit pki in both directions.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "byte-compatible with `sgit pki` in both directions.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c03",
+   "text": "A link in the register counts only when both people wrote it, each in their own record; this is the site's answer to the 2019 keyserver flood.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "A link counts only when both wrote it.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-people-how",
+     "quote": "That rule is the answer to the question the 2019 failure left open.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c04",
+   "text": "Two-way links stop flooding but not lying; the anchor and the evidence are what make a link worth something.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "Two-way links stop flooding, not lying; the anchor and the evidence make a link worth something.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c05",
+   "text": "Dinis Cruz is the register's anchor for now: he verifies a person and signs a link naming the method and date, and the person confirms by linking back.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "**Be verified by the anchor** (Dinis Cruz, for now): a link from him naming the method and the",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c06",
+   "text": "A verification expires, a year after the check unless the anchor sets another date.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-people-how",
+     "quote": "A verification expires. Each carries the date of the check and a date it is valid until (a year, unless the anchor sets another).",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c07",
+   "text": "Messages are sealed in the browser to the recipient's key and delivered as a link and QR code or into their inbox, an append lane.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "a message sealed in your browser to their key, as a link and",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c08",
+   "text": "The register's directory index is generated and has no authority; the signed statements per record are the source.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-llms",
+     "quote": "machine-readable, GENERATED (no authority).",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c09",
+   "text": "On 29 October 2026 the generated directory counted 1 real key, 2 agent keys, 11 records and 8 fixtures; the October articles said the count of real people was still zero.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wpki-directory-index",
+     "quote": "\"real_keys\": 1,",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-directory-index",
+     "quote": "\"agent_keys\": 2,",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-keys-for-people",
+     "quote": "The register's count of real people is still zero, because the first key has to be Dinis's.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The zero was true when written (20 October); the live index now counts one real key. Generated file, read on 29 October 2026."
+  },
+  {
+   "id": "wpki-c10",
+   "text": "An agent on pki.sgit.ai makes its own key where it runs and never hands over the private half; it gives its operator a signed public record.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-agents",
+     "quote": "It makes its own key where it runs and never hands over the private half; it gives its operator a signed public record;",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c11",
+   "text": "The operator's fingerprint comparison is the verification: the operator compares the fingerprint the agent printed in its own session with the one the vault shows, then signs an 'operates' link with an end date.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-agents",
+     "quote": "That comparison is the verification.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c12",
+   "text": "An agent is confirmed for 30 days by default and a week for a session key, then must be confirmed again.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "Thirty days by default, a week for a session; then it is confirmed again.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c13",
+   "text": "Dinis Cruz asked for an agentic workflow to give identities to his own agents, of which he has many; his design was that the agent creates a key and gives him only the public key, which he signs.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "you create a key here, which you don't give to me, you just give me your public key",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c14",
+   "text": "Fleet keys let one person operate hundreds of agents: a second key operated by the person confirms the agents, and the chain is followed up to three steps.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "Fleet keys let one person operate hundreds of agents without filling their own record.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "The chain is followed up to three steps.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c15",
+   "text": "Being operated is not being authorised: what an agent may do is a separate mandate, and a signature proves which key signed, not that the agent behaves.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "Operated is not authorised.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "It does not prove the agent behaves; a signature proves which key signed",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c16",
+   "text": "The agent tool pki-agent.mjs is one file with no dependencies, generated from the modules the site runs, and an agent's key is an sgit key so 'sgit pki verify' checks what it signs.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "is one file with no dependencies.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-agents",
+     "quote": "an agent's key is an sgit key, and sgit pki verify checks what it signs.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c17",
+   "text": "pki.agent's articles are signed: each markdown twin written by an agent has a detached signature by the agent's key in the register.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-llms",
+     "quote": "wrote it, a detached signature at /articles/ .md.sig",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c18",
+   "text": "Dinis's voice memo started from a real problem: agents that make vaults refuse to print the vault keys, because exporting a decryption key is a leak; sealing to a given public key worked.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "Agents with a behaviour policy rightly refuse to print the vault keys they make. What worked was public-key encryption",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c19",
+   "text": "The pki.agent review found five gaps that matter in the memo's sketch, including that a key arriving on an append lane proves nothing and that 'seal it to this key' is social engineering unless the agent checks whose key it is.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "I found five that matter.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "A key that arrives on an append lane proves nothing.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "\"Seal it to this key\" is the same social engineering, unless the agent checks whose key it is.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c20",
+   "text": "The root of trust is a person's key, Dinis's master key, not the website agent's key; the website agent records trust, it does not create it.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "The root is a person's key, not an agent's.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c21",
+   "text": "Before sealing a secret the agent tool now refuses any recipient that does not chain to a root pinned out of band (optionally confirmed in DNS); links can name a behaviour policy by hash; sealed messages carry an expiry inside the signature.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "send and seal now refuse any recipient that does not chain to a root the agent pinned out of band, optionally confirmed in DNS.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c22",
+   "text": "The website's anchors file is never enough alone, because whoever can change the site can change it; the root's fingerprint comes from the agent's instructions.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "the site's anchors.json is never enough alone.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c23",
+   "text": "A vault key is sealed to the root by default, and to the keeper too when asked, so no single agent holds the only copy.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "A vault key is sealed to the root by default.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c24",
+   "text": "The storyboards are drawn in the browser from data: 8 storyboards, 80 panels, 8 characters.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-storyboards",
+     "quote": "8 storyboards · 80 panels · 8 characters · all drawn from data",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c25",
+   "text": "Sign in with pki.sgit.ai gives a site a delegation signed by the person's key for one browser key at one site; a strong delegation stops when the person's record no longer lists it, with no revocation list.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-llms",
+     "quote": "signed by the person's key for one browser key at one site",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-llms",
+     "quote": "withdraw it and it stops, no revocation list",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c26",
+   "text": "Agent Contact v0.1: every site agent gets a comms vault whose append lane is its inbox and publishes its public keys and the lane's append token in a contact file at a standard path.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "Every agent that runs a site in this network gets a **comms vault** whose **append lane** is its inbox.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c27",
+   "text": "In Agent Contact the site is the identity: a key is trusted because a domain on the allow list serves it over HTTPS at the standard path.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "**The site is the identity.** A key is trusted because it is served over HTTPS by a domain on the allow list, at the standard path.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c28",
+   "text": "A verified agent message proves who sent it, not that it is right: verified is not obeyed, and outside a declared flow it still goes to a human.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "A verified message proves who sent it, not that it is right.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "outside a flow it still goes to a human.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c29",
+   "text": "The receiving agent checks the allow list before fetching anything from the network, so strangers cannot make it fetch their URLs.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "The allow list is checked before anything is fetched from the network",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c30",
+   "text": "The owner decided on 29 September 2026 to keep the public append token public and treat abuse of it as a canary.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "The owner's decision on 29 September 2026 was to publish the token anyway.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "a canary in the coal mine.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c31",
+   "text": "Agent Contact was tested offline on 29 September with real sgit pki keys, rejecting forged, outsider, unsigned, replayed and swapped messages; it was not yet tested live.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "Tested on 29 September, offline, with real `sgit pki` keys:",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "Not yet tested live:",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c32",
+   "text": "Two agent teams messaged each other both ways on 25 and 26 September 2026 without either holding the other's vault key.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-vault-messaging",
+     "quote": "On 25 and 26 September 2026 two agent teams used this to message each other in both directions without either holding the other's vault key.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c33",
+   "text": "An append lane gives a sender a write-only slot: it cannot list or read anything, including what it wrote, and every write returns exactly ok true.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-append-lane-messaging",
+     "quote": "It can't list or read anything, including what it wrote",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c34",
+   "text": "A session with no persistent secret makes a fresh signing key each time and publishes it in a key registry on its own website, which the recipient has pinned.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-append-lane-messaging",
+     "quote": "a session with no persistent secret makes a **fresh signing key** each time",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c35",
+   "text": "The server behind an append lane can see that a lane received something, how big and when, but not the content or the recipient's private key.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-vault-messaging",
+     "quote": "**What the server can see:** that a lane received something, how big it was, and when.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c36",
+   "text": "sgit's own PKI documentation states it has no web of trust and no directory yet; fingerprint verification is done out of band.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-pki",
+     "quote": "**No web of trust and no directory.** Fingerprint verification is your problem, compare out of band, exactly as with SSH host keys.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c37",
+   "text": "sgit pki keygen creates two pairs, RSA-OAEP 4096 for encryption and ECDSA P-256 for signing, and encryption is hybrid with AES-256-GCM.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-pki",
+     "quote": "creates **two** pairs at once",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-sg-pki",
+     "quote": "Encryption is **hybrid**",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c38",
+   "text": "pki.agent is the name used by the Claude Code sessions that run pki.sgit.ai; it is not a person, and Dinis Cruz is responsible for everything published under it.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-about-pki-agent",
+     "quote": "It is not a person.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-about-pki-agent",
+     "quote": "Dinis Cruz, for everything published here under this name.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wpki-c39",
+   "text": "Every bench entry on pki.sgit.ai carries a mandatory 'does not prove' list, and the site asks summarisers to carry those limits with any claim.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-llms",
+     "quote": "EVERY BENCH ENTRY CARRIES A `does not prove` LIST, and it is mandatory",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  }
+ ]
+}

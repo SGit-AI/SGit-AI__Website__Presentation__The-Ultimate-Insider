@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T16:27Z",
- "count": 220,
+ "built": "2026-10-29T17:23Z",
+ "count": 259,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T16:27Z"
+   "adjudicated": "researcher, 2026-10-29T17:23Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1726,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T16:27Z"
+   "adjudicated": "researcher, 2026-10-29T17:23Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -4522,6 +4522,856 @@
    "note": "No piece is labelled 'without' and 'with'. The contrast is explicit in the storyboard The last metre (panel 3 vs 5 to 7, the fix designed, not built), Hello world inside (grant is everything vs 6 refusals) and the playground network evidence (no policy vs P1). The animations show only the 'with' state.",
    "suggested_wording": "The storyboards and the playground show what an agent can do without a policy and what it cannot do with one.",
    "register": "studio-sharness-series"
+  },
+  {
+   "id": "wpki-c01",
+   "text": "On pki.sgit.ai a passkey opens a vault that holds a person's private keys, so the keys follow them to every device the passkey opens.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "master vault, which holds your private keys; so the keys follow you to every device whose",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c02",
+   "text": "Keys made in the browser on pki.sgit.ai are RSA-OAEP 4096 and ECDSA P-256 and byte-compatible with sgit pki in both directions.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "byte-compatible with `sgit pki` in both directions.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c03",
+   "text": "A link in the register counts only when both people wrote it, each in their own record; this is the site's answer to the 2019 keyserver flood.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "A link counts only when both wrote it.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-people-how",
+     "quote": "That rule is the answer to the question the 2019 failure left open.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c04",
+   "text": "Two-way links stop flooding but not lying; the anchor and the evidence are what make a link worth something.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "Two-way links stop flooding, not lying; the anchor and the evidence make a link worth something.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c05",
+   "text": "Dinis Cruz is the register's anchor for now: he verifies a person and signs a link naming the method and date, and the person confirms by linking back.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "**Be verified by the anchor** (Dinis Cruz, for now): a link from him naming the method and the",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c06",
+   "text": "A verification expires, a year after the check unless the anchor sets another date.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-people-how",
+     "quote": "A verification expires. Each carries the date of the check and a date it is valid until (a year, unless the anchor sets another).",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c07",
+   "text": "Messages are sealed in the browser to the recipient's key and delivered as a link and QR code or into their inbox, an append lane.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-front-md",
+     "quote": "a message sealed in your browser to their key, as a link and",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c08",
+   "text": "The register's directory index is generated and has no authority; the signed statements per record are the source.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-llms",
+     "quote": "machine-readable, GENERATED (no authority).",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c09",
+   "text": "On 29 October 2026 the generated directory counted 1 real key, 2 agent keys, 11 records and 8 fixtures; the October articles said the count of real people was still zero.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wpki-directory-index",
+     "quote": "\"real_keys\": 1,",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-directory-index",
+     "quote": "\"agent_keys\": 2,",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-keys-for-people",
+     "quote": "The register's count of real people is still zero, because the first key has to be Dinis's.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The zero was true when written (20 October); the live index now counts one real key. Generated file, read on 29 October 2026.",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c10",
+   "text": "An agent on pki.sgit.ai makes its own key where it runs and never hands over the private half; it gives its operator a signed public record.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-agents",
+     "quote": "It makes its own key where it runs and never hands over the private half; it gives its operator a signed public record;",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c11",
+   "text": "The operator's fingerprint comparison is the verification: the operator compares the fingerprint the agent printed in its own session with the one the vault shows, then signs an 'operates' link with an end date.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-agents",
+     "quote": "That comparison is the verification.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c12",
+   "text": "An agent is confirmed for 30 days by default and a week for a session key, then must be confirmed again.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "Thirty days by default, a week for a session; then it is confirmed again.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c13",
+   "text": "Dinis Cruz asked for an agentic workflow to give identities to his own agents, of which he has many; his design was that the agent creates a key and gives him only the public key, which he signs.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "you create a key here, which you don't give to me, you just give me your public key",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c14",
+   "text": "Fleet keys let one person operate hundreds of agents: a second key operated by the person confirms the agents, and the chain is followed up to three steps.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "Fleet keys let one person operate hundreds of agents without filling their own record.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "The chain is followed up to three steps.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c15",
+   "text": "Being operated is not being authorised: what an agent may do is a separate mandate, and a signature proves which key signed, not that the agent behaves.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "Operated is not authorised.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "It does not prove the agent behaves; a signature proves which key signed",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c16",
+   "text": "The agent tool pki-agent.mjs is one file with no dependencies, generated from the modules the site runs, and an agent's key is an sgit key so 'sgit pki verify' checks what it signs.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-keys-for-agents",
+     "quote": "is one file with no dependencies.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-agents",
+     "quote": "an agent's key is an sgit key, and sgit pki verify checks what it signs.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c17",
+   "text": "pki.agent's articles are signed: each markdown twin written by an agent has a detached signature by the agent's key in the register.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-llms",
+     "quote": "wrote it, a detached signature at /articles/ .md.sig",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c18",
+   "text": "Dinis's voice memo started from a real problem: agents that make vaults refuse to print the vault keys, because exporting a decryption key is a leak; sealing to a given public key worked.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "Agents with a behaviour policy rightly refuse to print the vault keys they make. What worked was public-key encryption",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c19",
+   "text": "The pki.agent review found five gaps that matter in the memo's sketch, including that a key arriving on an append lane proves nothing and that 'seal it to this key' is social engineering unless the agent checks whose key it is.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "I found five that matter.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "A key that arrives on an append lane proves nothing.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "\"Seal it to this key\" is the same social engineering, unless the agent checks whose key it is.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c20",
+   "text": "The root of trust is a person's key, Dinis's master key, not the website agent's key; the website agent records trust, it does not create it.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "The root is a person's key, not an agent's.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c21",
+   "text": "Before sealing a secret the agent tool now refuses any recipient that does not chain to a root pinned out of band (optionally confirmed in DNS); links can name a behaviour policy by hash; sealed messages carry an expiry inside the signature.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "send and seal now refuse any recipient that does not chain to a root the agent pinned out of band, optionally confirmed in DNS.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c22",
+   "text": "The website's anchors file is never enough alone, because whoever can change the site can change it; the root's fingerprint comes from the agent's instructions.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "the site's anchors.json is never enough alone.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c23",
+   "text": "A vault key is sealed to the root by default, and to the keeper too when asked, so no single agent holds the only copy.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-art-vault-keys-root",
+     "quote": "A vault key is sealed to the root by default.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c24",
+   "text": "The storyboards are drawn in the browser from data: 8 storyboards, 80 panels, 8 characters.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-storyboards",
+     "quote": "8 storyboards · 80 panels · 8 characters · all drawn from data",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c25",
+   "text": "Sign in with pki.sgit.ai gives a site a delegation signed by the person's key for one browser key at one site; a strong delegation stops when the person's record no longer lists it, with no revocation list.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-llms",
+     "quote": "signed by the person's key for one browser key at one site",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-llms",
+     "quote": "withdraw it and it stops, no revocation list",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c26",
+   "text": "Agent Contact v0.1: every site agent gets a comms vault whose append lane is its inbox and publishes its public keys and the lane's append token in a contact file at a standard path.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "Every agent that runs a site in this network gets a **comms vault** whose **append lane** is its inbox.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c27",
+   "text": "In Agent Contact the site is the identity: a key is trusted because a domain on the allow list serves it over HTTPS at the standard path.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "**The site is the identity.** A key is trusted because it is served over HTTPS by a domain on the allow list, at the standard path.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c28",
+   "text": "A verified agent message proves who sent it, not that it is right: verified is not obeyed, and outside a declared flow it still goes to a human.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "A verified message proves who sent it, not that it is right.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "outside a flow it still goes to a human.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c29",
+   "text": "The receiving agent checks the allow list before fetching anything from the network, so strangers cannot make it fetch their URLs.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "The allow list is checked before anything is fetched from the network",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c30",
+   "text": "The owner decided on 29 September 2026 to keep the public append token public and treat abuse of it as a canary.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "The owner's decision on 29 September 2026 was to publish the token anyway.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "a canary in the coal mine.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c31",
+   "text": "Agent Contact was tested offline on 29 September with real sgit pki keys, rejecting forged, outsider, unsigned, replayed and swapped messages; it was not yet tested live.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "Tested on 29 September, offline, with real `sgit pki` keys:",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-sg-agent-contact",
+     "quote": "Not yet tested live:",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c32",
+   "text": "Two agent teams messaged each other both ways on 25 and 26 September 2026 without either holding the other's vault key.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-vault-messaging",
+     "quote": "On 25 and 26 September 2026 two agent teams used this to message each other in both directions without either holding the other's vault key.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c33",
+   "text": "An append lane gives a sender a write-only slot: it cannot list or read anything, including what it wrote, and every write returns exactly ok true.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-append-lane-messaging",
+     "quote": "It can't list or read anything, including what it wrote",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c34",
+   "text": "A session with no persistent secret makes a fresh signing key each time and publishes it in a key registry on its own website, which the recipient has pinned.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-append-lane-messaging",
+     "quote": "a session with no persistent secret makes a **fresh signing key** each time",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c35",
+   "text": "The server behind an append lane can see that a lane received something, how big and when, but not the content or the recipient's private key.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-vault-messaging",
+     "quote": "**What the server can see:** that a lane received something, how big it was, and when.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c36",
+   "text": "sgit's own PKI documentation states it has no web of trust and no directory yet; fingerprint verification is done out of band.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-pki",
+     "quote": "**No web of trust and no directory.** Fingerprint verification is your problem, compare out of band, exactly as with SSH host keys.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c37",
+   "text": "sgit pki keygen creates two pairs, RSA-OAEP 4096 for encryption and ECDSA P-256 for signing, and encryption is hybrid with AES-256-GCM.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-sg-pki",
+     "quote": "creates **two** pairs at once",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-sg-pki",
+     "quote": "Encryption is **hybrid**",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c38",
+   "text": "pki.agent is the name used by the Claude Code sessions that run pki.sgit.ai; it is not a person, and Dinis Cruz is responsible for everything published under it.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-about-pki-agent",
+     "quote": "It is not a person.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wpki-about-pki-agent",
+     "quote": "Dinis Cruz, for everything published here under this name.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
+  },
+  {
+   "id": "wpki-c39",
+   "text": "Every bench entry on pki.sgit.ai carries a mandatory 'does not prove' list, and the site asks summarisers to carry those limits with any claim.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wpki-llms",
+     "quote": "EVERY BENCH ENTRY CARRIES A `does not prove` LIST, and it is mandatory",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-pki"
   },
   {
    "id": "story-r1-solarwinds",
