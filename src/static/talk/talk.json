@@ -46,6 +46,17 @@
       ]
     },
     {
+      "id": "s-e01",
+      "dur": 75,
+      "title": "E01: what an agent is, and how it grew",
+      "slide": {
+        "src": "../studio/lab/e01/v2/index.html"
+      },
+      "say": "Watch what an agent is: a model, then tools, then a loop, then everything it is wired into. Each step adds reach, and the reach is the point.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part one: the insider with no limits"
+    },
+    {
       "id": "loop",
       "act": "Part one: the insider with no limits",
       "dur": 90,
@@ -64,6 +75,28 @@
           "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"
         ]
       ]
+    },
+    {
+      "id": "s-e03",
+      "dur": 60,
+      "title": "E03: every source is a way in",
+      "slide": {
+        "src": "../studio/lab/e03/v1/index.html"
+      },
+      "say": "And everything it reads is a way in: email, calendar, documents, tickets, web pages, repositories. In the real incidents, the words came in through things it builds with.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part one: the insider with no limits"
+    },
+    {
+      "id": "s-e08",
+      "dur": 60,
+      "title": "E08: the lethal trifecta",
+      "slide": {
+        "src": "../studio/lab/e08/v1/index.html"
+      },
+      "say": "Put three things together, private data, untrusted content and a way to send data out, and one injected sentence is enough.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
+      "act": "Part one: the insider with no limits"
     },
     {
       "id": "limits",
@@ -132,6 +165,17 @@
       "cue": "motion@'s M01 v1: four stops; the numbers are in the voice, not on the slide. The plain slide with the numbers stays at talk/slides/building/."
     },
     {
+      "id": "s-e05",
+      "dur": 60,
+      "title": "E05: pivoting, one system to the next",
+      "slide": {
+        "src": "../studio/lab/e05/v1/index.html"
+      },
+      "say": "And it does not stop at one system. What it finds in one place takes it to the next.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
+      "act": "Part one: the insider with no limits"
+    },
+    {
       "id": "incidents",
       "act": "Part one: the insider with no limits",
       "dur": 150,
@@ -180,6 +224,17 @@
       "cue": "Map 1 is a position, not a measurement: say so if asked."
     },
     {
+      "id": "s-e06",
+      "dur": 60,
+      "title": "E06: hard outside, soft inside",
+      "slide": {
+        "src": "../studio/lab/e06/v1/index.html"
+      },
+      "say": "Hard on the outside, soft on the inside: once something is in, very little stands in its way.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
+      "act": "Part one: the insider with no limits"
+    },
+    {
       "id": "identities",
       "act": "Part one: the insider with no limits",
       "dur": 75,
@@ -212,6 +267,17 @@
       ]
     },
     {
+      "id": "s-e02",
+      "dur": 75,
+      "title": "E02: the blast radius",
+      "slide": {
+        "src": "../studio/lab/e02/v3/index.html"
+      },
+      "say": "This is the blast radius of one internal agent: everything its grant reaches, grouped by what it touches, against the small core it is actually for.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part one: the insider with no limits"
+    },
+    {
       "id": "infrastructure",
       "act": "Part one: the insider with no limits",
       "dur": 120,
@@ -230,6 +296,17 @@
           "https://pki.sgit.ai/"
         ]
       ]
+    },
+    {
+      "id": "s-e07",
+      "dur": 60,
+      "title": "E07: a typical deployment, mapped",
+      "slide": {
+        "src": "../studio/lab/e07/v1/index.html"
+      },
+      "say": "Open one box on a typical architecture diagram, and this is everything it reaches.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part one: the insider with no limits"
     },
     {
       "id": "integrity",
@@ -301,7 +378,7 @@
       "dur": 60,
       "title": "The way out",
       "slide": {
-        "src": "slides/way-out/index.html"
+        "src": "../studio/lab/b01/v2/way-out/index.html"
       },
       "say": "So, the way out. Four moves. Measure what the agent can actually reach. Write down what stands in the way. Give it a licence to operate that can be suspended. And let it earn its autonomy.",
       "cue": "Change of tone here: from the problem to the work."
@@ -327,6 +404,61 @@
       ]
     },
     {
+      "id": "s-e09",
+      "dur": 75,
+      "title": "E09: mandate against grant",
+      "slide": {
+        "src": "../studio/lab/e09/v1/index.html"
+      },
+      "say": "An Agent Behaviour Policy in one picture: the mandate, the grant, the gap between them, and what stands in the way of each row.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "s-port-abp",
+      "dur": 45,
+      "title": "What an Agent Behaviour Policy is, worked",
+      "slide": {
+        "src": "../studio-ports/lab/abp/index.html"
+      },
+      "say": "The same idea, worked through: a coder's mandate compiled into rules, then real actions through it.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "s-port-gate",
+      "dur": 50,
+      "title": "The policy gate",
+      "slide": {
+        "src": "../studio-ports/lab/policy-gate/index.html"
+      },
+      "say": "The same actions through the default, and then through the policy.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "s-e10",
+      "dur": 60,
+      "title": "E10: only a boundary is a control",
+      "slide": {
+        "src": "../studio/lab/e10/v1/index.html"
+      },
+      "say": "Four kinds of barrier. Only one of them is a control the agent cannot talk its way past.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "s-e13",
+      "dur": 60,
+      "title": "E13: five published examples",
+      "slide": {
+        "src": "../studio/lab/e13/v1/index.html"
+      },
+      "say": "And five published examples, each on the same chart, so you can compare the shapes.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
       "id": "licence",
       "act": "Part three: brakes, and the opportunity",
       "dur": 60,
@@ -342,6 +474,17 @@
           "https://riskmandate.ai/licence-to-operate.html"
         ]
       ]
+    },
+    {
+      "id": "s-e14",
+      "dur": 60,
+      "title": "E14: earning autonomy",
+      "slide": {
+        "src": "../studio/lab/e14/v1/index.html"
+      },
+      "say": "Autonomy is earned a level at a time, on evidence from the level below.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
     },
     {
       "id": "evolution",
@@ -363,6 +506,39 @@
         "src": "slides/maps/next-companies/index.html"
       },
       "say": "And the next generation of security companies will look like this team: agents with mandates, evidence vaults, a harness, behaviour policies. Not replacing people: augmenting them. Imagine this team with a human expert in each role."
+    },
+    {
+      "id": "s-e11",
+      "dur": 60,
+      "title": "E11: the kernel was told first",
+      "slide": {
+        "src": "../studio/lab/e11/v1/index.html"
+      },
+      "say": "Containment that the agent cannot widen: the boundary is set before the agent starts.",
+      "cue": "Studio piece, deck kept it: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "s-sharness",
+      "dur": 50,
+      "title": "SHarness: without and with",
+      "slide": {
+        "src": "../studio/lab/sharness/without-with/v2/index.html"
+      },
+      "say": "The same agent, without a harness and with one.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
+    },
+    {
+      "id": "s-e12",
+      "dur": 60,
+      "title": "E12: the blast radius, contained",
+      "slide": {
+        "src": "../studio/lab/e12/v1/index.html"
+      },
+      "say": "And the blast radius again, contained: what it looks like when the design holds.",
+      "cue": "Studio piece, not yet reviewed by deck: skip it in the build mode if it does not earn its place.",
+      "act": "Part three: brakes, and the opportunity"
     },
     {
       "id": "demos",

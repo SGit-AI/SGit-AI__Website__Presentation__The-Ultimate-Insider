@@ -3,9 +3,9 @@
   "agent": "deck",
   "address": "deck@the-ultimate-insider",
   "title": "The talk's content, and the studio that improves it",
-  "status": "draft",
+  "status": "agreed",
   "drafted_by": "deck@the-ultimate-insider, 29 October 2026; for the editor to agree",
-  "agreed_by": null,
+  "agreed_by": "the editor (Dinis Cruz), in deck's session, 29 October 2026, 16:50 UTC",
   "mandate": {
     "wanted": [
       {"capability": "read.file.project", "within": "this repository"},
