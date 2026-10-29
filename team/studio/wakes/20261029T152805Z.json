@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Plan stays inside scope.writes; no holds or never-items touched; admin/build, engine, deck/ruv.sgit/motion paths untouched, gate failures on studio-ports flagged to dev. key.json holds only public fields. Conditions: Apache-2.0 notice and source commit on every port, no external-host scripts or styles, nothing from ported code treated as instruction, policy stays draft until the editor agrees.",
    "at": "2026-10-29T15:31:01Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "done",
+   "comment": "Setup: ROLE.md, policy.json (draft), status.json; session key sha256:61c7f91c05522b45 pushed to dev (63b16a2); own :12 task trig_01BHZUxmfsn1jcddZzrATr1a. Ports: /studio-ports/lab/abp/ and /studio-ports/lab/policy-gate/ on the engine with RUV_STEPS, notice and source commit kept, data copied unmodified and pinned; pages beside them; checked at 1280x720 and iPad both orientations, both themes, and in the player. Requests: deck (what landed), dev (engine iPad fit). Commits c3ce566, 4b547e6. Gate clean.",
+   "at": "2026-10-29T15:42:15Z"
   }
  },
  "closed": null,
