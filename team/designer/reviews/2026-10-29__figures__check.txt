@@ -1,0 +1,3 @@
+1600 {"pages":57,"hs":[],"tblMax":1240,"tblInner":0,"tbls":40,"over":"0","pairs":8,"imgParas":8,"textMax":729}
+1280 {"pages":57,"hs":[],"tblMax":1203,"tblInner":0,"tbls":40,"over":"0","pairs":0,"imgParas":8,"textMax":729}
+390 {"pages":57,"hs":[],"tblMax":358,"tblInner":25,"tbls":40,"over":"0","pairs":0,"imgParas":8,"textMax":358}

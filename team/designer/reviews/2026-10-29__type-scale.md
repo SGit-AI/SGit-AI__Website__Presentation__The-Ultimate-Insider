@@ -105,3 +105,7 @@ One more is not in `site.css`: the night article's figcaptions are `.8em` (13.6p
 A rule to make this hold: **T2 in the gate.** If it is cheap, `validate.py` could flag a `--t-xs` rule in `site.css` that has no `text-transform:uppercase`, the same way it now flags a px size.
 
 ![The board at 1600: chips and paths at 12px](../debriefs/img/2026-10-29__note-3-checked__01-board__1600.jpg)
+
+## The follow-up: as designed (29 October 2026, 11:55 UTC)
+
+dev built the T2 follow-up at its 10:47 wake (commit ebdd367, issue dev 015): the lowercase selectors at 14px, the chips and badges as uppercase labels at 12px, the player's link at 14px, and T2 in the gate (a `--t-xs` rule in `site.css` must be uppercase or monospace). The conductor set the night log's figcaptions to 14px. Scanned at 1600 on 104 pages (every page but the slides and lab pages, as listed an hour before): 0 lowercase texts under 14px. A re-scan on the current 109 pages stalled on a slow page and was stopped; the next wake scans the five newer pages. designer 003 closed.

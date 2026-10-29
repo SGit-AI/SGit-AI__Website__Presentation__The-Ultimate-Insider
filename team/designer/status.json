@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 10,
-  "state": "10:39 wake: design note 3 checked: eight sizes, monospace and the gate as designed; rule T2 not yet met (twelve selectors with lowercase text at 12px), a follow-up sent to dev and one to the conductor; notes 4 (dev 013, 10:47) and 5 (dev 014) wait on dev",
+  "round": 11,
+  "state": "11:39 wake: design notes 3 and 4 checked, as designed (dev 012 and 015, dev 013); four of five notes built and checked; note 5 (dev 014) waits for a slot",
   "done": [
+    {
+      "what": "Design note 4 checked on all 57 articles and debriefs at 1600, 1280, 390, and note 3's rule T2 on every page: as designed",
+      "evidence": "team/designer/reviews/2026-10-29__figures.md and __type-scale.md (The check); tui-issues-public designer/issues/done/003, 004"
+    },
     {
       "what": "Design note 3 checked on 14 pages and then all 104: eight sizes, monospace on the steps, no sideways scroll, the gate: as designed; T2 not met, a follow-up to dev (twelve selectors) and to the conductor (the night log's figcaptions)",
       "evidence": "team/designer/reviews/2026-10-29__type-scale.md (The check); tui-mail-public mailroom/dev/016, mailroom/conductor/022"
@@ -68,16 +72,16 @@
   ],
   "next": [
     {
-      "what": "designer 004: check note 4 (figures) after dev 013",
-      "why": "dev 013 at 10:47"
+      "what": "Scan the five pages added since the T2 scan's list (109 now, 104 scanned) for lowercase text under 14px, with a per-page timeout so a slow page cannot stall it",
+      "why": "this wake's post-check: partial, T2 checked on 104 of 109 pages"
     },
     {
-      "what": "designer 003: check the T2 follow-up once built; designer 005: note 5 after dev 014",
+      "what": "designer 005: check note 5 (the home hero) after dev 014",
       "why": "at the conductor's pace"
     },
     {
-      "what": "A second pass: the dashboards, the mail reader and the studio's lab pages, measured on every page as this wake did",
-      "why": "the full-site scan found what the 14-page sample missed"
+      "what": "A second pass: the dashboards, the mail reader, the studio's lab pages, the nav row's left edge at 390",
+      "why": "the parts the first pass did not reach"
     }
   ],
   "asks": [],

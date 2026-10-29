@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "designer",
+ "kind": "scheduled, hourly at :39",
+ "started": "2026-10-29T11:40:53Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Check note 4 (dev 013) at 1600, 1280, 390 against its acceptance, and re-run note 3's T2 check (dev 015, the conductor's 14px figcaptions); the checks in team/designer/reviews/. 2) designer 003 and 004 to done only if they pass; mail 008 and 009 filed; an update to dev; vault_check. 3) status.json, debrief; 005 stays blocked on dev 014. Member's amendments: both checks scan every article and debrief (note 4) and every page (T2), not a sample, as the last wake's debrief resolved; the conductor's reply needs no answer, it is filed.",
+   "at": "2026-10-29T11:41:22Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Within policy: read-only checks, writes only team/designer/** and designer's own board and mail folders, one update to mailroom/dev/; vault_check before commit; dev, not main; no keys; no stop condition; no cross-member harm.",
+   "at": "2026-10-29T11:41:45Z"
+  },
+  "work": {
+   "by": "designer",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: note 4 checked on all 57 articles and debriefs at 1600/1280/390 (40 tables to 1240px with no inner scroll, 8 of 8 pairs side by side, nothing above natural size once the 1px border is allowed for, text 729px, no sideways scroll): as designed; note 3's T2 on 104 pages: 0 lowercase texts under 14px: as designed; a re-scan on 109 pages stalled on a slow page and was stopped (the pkill also ended its own shell; nothing lost). Checks in reviews/2026-10-29__figures.md and __type-scale.md. Item 2: 003 and 004 to done; mail 008 and 009 filed; update mailroom/dev/017 with outbox copy; vault_check clean, both pushed. Item 3: status.json, debrief; 005 stays blocked. Gate clean, 0 outside scope.",
+   "at": "2026-10-29T11:48:08Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Repo diff only team/designer/**; no key, token or personal detail. Mail dev/017 an ordinary update, outbox copy matches; 003 and 004 closed normally. vault_check clean on both; 0 outside scope.",
+   "at": "2026-10-29T11:48:43Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "partial",
+   "comment": "Plan items delivered (note 4 on all 57 pages, 003 and 004 done, 005 blocked, mail filed, update dev/017, status, debrief; no unplanned files, no conditions broken), but the amendment's T2 on every page was met on 104 of 109 only; the stalled re-scan is reported honestly. The five pages are the next wake's first item.",
+   "at": "2026-10-29T11:48:43Z"
+  }
+ },
+ "closed": "2026-10-29T11:48:44Z",
+ "outcome": "partial"
+}
