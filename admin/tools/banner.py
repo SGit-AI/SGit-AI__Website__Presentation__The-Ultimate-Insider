@@ -69,9 +69,15 @@ def end(a):
     t0   = when(a.started)
     now  = datetime.datetime.now(datetime.timezone.utc)
     mins = int((now - t0).total_seconds() // 60)
-    rows = [f'<<< SESSION END   {a.agent}@the-ultimate-insider   {a.outcome.upper()}',
-            f'{t0.strftime("%H:%M")} -> {now.strftime("%H:%M")} UTC  ({mins if mins >= 0 else "?"} min)'
-            + (f'   released {a.release}' if a.release else '') + (f'   problems {a.problems}' if a.problems else '')]
+    rows = [f'<<< SESSION END   {a.agent}@the-ultimate-insider   {a.outcome.upper()}']
+    line = f'{t0.strftime("%H:%M")} -> {now.strftime("%H:%M")} UTC  ({mins if mins >= 0 else "?"} min)'
+    for part in ([f'released {a.release}'] if a.release else []) + ([f'problems {a.problems}'] if a.problems else []):
+        if len(line) + 3 + len(part) > W:                           # a field that does not fit starts its own row, never cut
+            rows.append(line)
+            line = part
+        else:
+            line += '   ' + part
+    rows.append(line)
     rows += items('ACHIEVED', a.achieved, none='nothing recorded')
     if a.next:
         rows.append(f'NEXT      {a.next}')
