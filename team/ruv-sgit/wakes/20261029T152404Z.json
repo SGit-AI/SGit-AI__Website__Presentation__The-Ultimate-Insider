@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "E12 (r17), E08 (r18), E14 (r19), E05 (r20), E06 (r21) built in parallel, each with an editor, every must-fix applied; the SHarness series at the editor's word (r22: storyline, SH1, SH2, SH3) with an editor; six vaults closed (0 plaintext hits, clones identical) and kept, zips to the editor; the editor's words relayed to deck, researcher, storyteller, conductor; board 013 closed, 014 opened; replies per piece; vault_check clean",
    "at": "2026-10-29T15:46:29Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "47590a5..b831821: all in scope, REALITY only its section; no em-dashes; no keys or tokens; no remote scripts; no score; no 'contained today'",
+   "at": "2026-10-29T15:47:24Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "r17 to r21 delivered with spec, evidence, editor file, ledger row, RUV_STEPS, pages; r22 SHarness series fits the editor's mid-session request; status, debrief, REALITY; on origin/dev",
+   "at": "2026-10-29T15:47:24Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:47:24Z",
+ "outcome": "ok"
 }
