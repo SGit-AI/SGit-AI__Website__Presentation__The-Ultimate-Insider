@@ -36,6 +36,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - `/team/board.html`: the board, `tui-issues-public` read live in the browser with sgit.ai's `vault-embed.js` (vendored, pinned by sha256); no snapshot.
 - Known keys: the vaults manager, DC Vault Registry (`sha256:956934e47063ceaa`), confirmed by the editor, with its QR image (`team/conductor/known-keys/`), on `/admin/keys.html#known`.
 - `admin/tools/start.py` (pull, then the start banner; the gate checks every `ROLE.md` names it), `admin/tools/vault_handover.py` (sealed vault-key QR codes and read-key QR codes, zipped), `admin/tools/qr.mjs` (QR images with the pinned key tool's own code).
+- `team/conductor/WAKE.md` (the wake protocol) and the guide `/articles/running-this-agent-team.html` (this project's version of the newsroom conductor's guide; it marks what is not built yet). Scheduled prompts are tiny and point at both.
 - `team/conductor/schedule.json`, on `/team/schedule.html`: hourly, conductor :02, deck :17, ruv-sgit :32, dev :47, 08:02 to 21:47 London, proposed; no scheduled task exists.
 - `/admin/keys.html` and `admin/keys/index.json`: the key register, every member's current key; each member's page shows its own key.
 - `admin/tools/banner.py`: the start and end banners every member's session report opens and closes with; the gate checks every `ROLE.md` carries the rule.

@@ -22,8 +22,9 @@ Maps the work, keeps the team's keys and banners, and runs the schedule. Joined 
 1. The schedule (`schedule.json`): proposed runs, and once the editor approves, running them: one step per agent, a row in the run ledger, a digest at the end.
 2. The session conventions every member follows: the start and end banners (`admin/tools/banner.py`) and the session key (`admin/tools/pki-agent.mjs`, pinned, with its README).
 3. Proposing roles (`team/security/`, `team/researcher/`) until the editor agrees them or drops them.
-4. The team's two public vaults (`vaults.json`): `tui-issues-public` (Issues-FS lite) and `tui-mail-public` (Email-FS lite), their READMEs and layout, and their read keys on the site. Their vault keys are escrowed with the DC Vault Registry, never in a file.
-5. Saying what is blocked and on whom, by name.
+4. The wake protocol (`WAKE.md`) and the guide to running this team (`content/articles/running-this-agent-team.md`); a change to `WAKE.md` goes to the editor first.
+5. The team's two public vaults (`vaults.json`): `tui-issues-public` (Issues-FS lite) and `tui-mail-public` (Email-FS lite), their READMEs and layout, and their read keys on the site. Their vault keys are escrowed with the DC Vault Registry, never in a file.
+6. Saying what is blocked and on whom, by name.
 
 ## The agent behaviour policy, in prose
 

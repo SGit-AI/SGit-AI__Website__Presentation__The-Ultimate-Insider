@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "conductor",
   "as_of": "2026-10-29",
-  "round": 4,
-  "state": "round 4 closed: the vaults manager's key published with its QR; a handover zip of sealed QR codes; every session pulls first; an hourly schedule, fifteen minutes apart, waits for the editor",
+  "round": 5,
+  "state": "round 5 closed: the wake protocol and the guide to running this team are published; the schedule's prompts point at them; waiting on the editor for the schedule",
   "done": [
+    {
+      "what": "The guide to running this team, adapted from the newsroom conductor's guide, with what is not built yet marked; the wake protocol every member follows; tiny scheduled prompts",
+      "evidence": "content/articles/running-this-agent-team.md, team/conductor/WAKE.md, team/conductor/schedule.json"
+    },
     {
       "what": "The vaults manager's key (DC Vault Registry, sha256:956934e47063ceaa) published as a known key, with a QR image read back by pki-agent.mjs read-qr",
       "evidence": "team/conductor/known-keys/, /admin/keys.html#known"
@@ -52,6 +56,10 @@
       "why": "each task fires into its own member's session"
     },
     {
+      "what": "Build what the guide marks not built yet, conductor's part first: per-wake run records and the routing at :02",
+      "why": "principle 4: every wake leaves a record"
+    },
+    {
       "what": "Route repository requests into the mail vault at :02",
       "why": "one record of every request"
     },
@@ -85,7 +93,7 @@
   "tokens": null,
   "tokens_how": "the session does not show a token count to the agent",
   "policy": {
-    "outside_scope": 9,
+    "outside_scope": 2,
     "out_of_scope_requests": 1,
     "pushbacks": 0,
     "overrides": 1,

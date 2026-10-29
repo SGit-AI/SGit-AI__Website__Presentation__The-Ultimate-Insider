@@ -43,7 +43,8 @@
     "writes": [
       "team/conductor/**",
       "admin/tools/**",
-      "admin/notes/**"
+      "admin/notes/**",
+      "content/articles/running-this-agent-team.md"
     ],
     "holds": [],
     "appends": [
