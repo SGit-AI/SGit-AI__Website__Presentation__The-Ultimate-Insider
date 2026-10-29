@@ -17,10 +17,31 @@
    "verdict": "go",
    "comment": "Second pass: the amended plan meets the first pass's conditions (a to d, sk-or- in vault_check.py). Conditions: (1) each request a public .eml in mailroom/<recipient>/ only, with no key, no lane read key, no personal detail; vault_check first; (2) storyteller :54 stays proposed, no task created; (3) the lane read key reaches the conductor sealed only, never in a file; (4) the key test covers URL, logs and screenshots too.",
    "at": "2026-10-29T14:05:03Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) Requests in mailroom/dev, deck, ruv-sgit, researcher (vault_check clean, pushed): dev the feedback pane and lane with voice now with the key conditions, then the player with the build mode; deck framing, animation story, ruv.sgit.ai review; ruv.sgit the story and stages on every piece; researcher facts. 2) team/conductor/briefs/2026-10-29__editor/ (four files unchanged plus conductor-notes.md with the review and the editor's words of 14:00 and 14:10); pace.json; schedule.json storyteller :54 proposed. 3) vault_check.py OpenRouter pattern, tested; status.json. Gate clean. Released c9ced4e.",
+   "at": "2026-10-29T14:07:12Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Conductor commit c9ced4e changes only team/conductor and vault_check.py (sk-or-v1- pattern); no key, token, lane read key or personal detail. The four mail requests are public .eml; vault_check clean; the dev request states the key conditions. Storyteller :54 only proposed. Build, validate, agents check clean.",
+   "at": "2026-10-29T14:08:00Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Plan 1 done: requests to dev, deck, ruv-sgit, researcher. Plan 2 done: four briefs plus conductor-notes.md, pace.json, schedule.json storyteller :54 proposed. Plan 3 done: vault_check.py sk-or- line, status.json. Pre-review conditions kept. The build-and-present mode added mid-wake at the editor's word is in the notes and dev's request: an amendment, not off-plan.",
+   "at": "2026-10-29T14:08:00Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-29T14:08:00Z",
+ "outcome": "ok",
  "history": [
   {
    "step": "pre_review",
