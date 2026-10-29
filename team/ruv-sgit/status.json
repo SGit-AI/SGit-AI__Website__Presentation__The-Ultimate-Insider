@@ -3,7 +3,7 @@
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
   "round": 15,
-  "state": "E02 v3 delivered (run r12, third pass on r5's vault, kept) with E09's wording fix on the same run; E04 v2 kept by deck and sent to the editor with B01 v2; nothing else in flight",
+  "state": "idle at the 13:32 wake: no request in the mailroom (E11 named in the conductor's pace, not yet sent by deck); E02 v3 and E09's wording wait for deck's review; nothing else in flight",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
