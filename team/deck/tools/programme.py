@@ -60,6 +60,7 @@ def main():
 <nav class="crumbs" aria-label="Breadcrumb"><a href="{{{{root}}}}index.html">Home</a> / <a href="index.html">Studio</a></nav>
 <p class="kicker">The studio · generated from <a href="data/programme.json">programme.json</a> · updated {e(p["updated"])}</p>
 <h1>The programme</h1>
+<div class="prose">
 <p class="lead">{e(p["vision"])}</p>
 <p class="note">These are experiments, not slides. The talk itself is frozen; nothing here changes it until the editor picks what to keep.</p>
 
@@ -75,6 +76,7 @@ def main():
 <ul>{returns}</ul>
 <h3>Status words</h3>
 <ul class="backlog">{statuses}</ul>
+</div>
 
 <h2>The queue</h2>
 <div class="tbl"><table><thead><tr><th>Order</th><th>Experiment</th><th>Part</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table></div>

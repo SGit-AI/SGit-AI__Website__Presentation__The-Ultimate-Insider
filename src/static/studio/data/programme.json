@@ -1,6 +1,6 @@
 {
   "about": "The studio programme: the experiments the editor asked for on 29 October 2026 (02:47 UTC, in deck's session), as data. deck@the-ultimate-insider keeps it; the conductor paces it (one experiment in flight per maker at a time); src/pages/studio/programme.html is generated from it by team/deck/tools/programme.py. Nothing here touches the talk: the deck is frozen until the editor says otherwise.",
-  "updated": "2026-10-29T03:25Z",
+  "updated": "2026-10-29T04:25Z",
   "vision": "A whole new set of visualisations to tell the story. Part one shows the threat: what an agent is and how it grew, how far one internal agent reaches, how soft the inside is, and how injected words travel. Part two shows the way out: map the mandate against the grant, type every barrier honestly, and contain the agent with boundaries it cannot reach, using RiskMandate's Agent Behaviour Policies and SHarness, with many real examples.",
   "statuses": {
     "idea": "written down, not yet asked for",
@@ -43,10 +43,11 @@
         "ruv-sgit"
       ],
       "needs_from": [],
-      "status": "making",
+      "status": "review",
       "order": 1,
       "request": "team/deck/requests/ruv-sgit__agent-evolution.md",
-      "issue": "tui-issues-public ruv-sgit/issues/open/003-e01-agent-evolution.md; deck-004"
+      "issue": "tui-issues-public ruv-sgit/issues/open/003-e01-agent-evolution.md; deck-004",
+      "review": "deck, 04:25: keep, v2 leads; a merged v3 after E02 (studio/reviews/e01.html)"
     },
     {
       "id": "E02",
@@ -68,7 +69,8 @@
       ],
       "status": "idea",
       "order": 2,
-      "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09)"
+      "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09)",
+      "request": "ready: team/deck/drafts/ruv-sgit__blast-radius.md, sent when B01 v1 is delivered (one request in flight with ruv.sgit)"
     },
     {
       "id": "E03",

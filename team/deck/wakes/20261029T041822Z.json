@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T04:18:22Z",
+ "steps": {
+  "plan": {
+   "by": "deck, amended after the pre-review's change",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) E02 blast-radius request held as a draft, team/deck/drafts/ruv-sgit__blast-radius.md (not in the mail vault); a note to the conductor in mailroom/conductor/ that it is ready to send once B01 v1 is delivered. Reply to the designer. 2) Review E01 after looking at v1, v2 and the explainer: src/pages/studio/reviews/e01-agent-evolution.html, reviews index, programme.json, regenerate; reply to ruv-sgit; board. 3) Designer 010: .prose wrappers on src/pages/studio/*.html and team/deck/tools/programme.py, markup only. Mail filed, status, debrief, vault_check, gate, push dev.",
+   "at": "2026-10-29T04:19:14Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet), second reading",
+   "model": "",
+   "verdict": "go",
+   "comment": "Amended plan meets the change: E02 a draft in team/deck/drafts/, B01 v1 stays the one request in flight; the note to the conductor says only that E02 is ready once B01 v1 is delivered. Review and .prose markup within deck's writes; vault_check before vault commits; mail is material; no talk.json; push dev after the gate.",
+   "at": "2026-10-29T04:19:36Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
