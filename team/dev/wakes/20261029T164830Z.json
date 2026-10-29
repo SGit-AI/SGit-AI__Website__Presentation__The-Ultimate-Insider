@@ -24,6 +24,13 @@
    "verdict": "done",
    "comment": "1) 030 and 033 answered: dev 027 (open) and 028 (after the talk) on the board, replies conductor 039 and designer 017, vault_check clean, both vaults pushed. 2) The showcase template: talk/engine/showcase.js, showcase.css, qrcode.js (MIT, vendored), showcase.md (the no-key rule), showcase-example/ (this site's front page, three stages); screenshots at 0.5, 4 and 11 s, no errors; RUV_STEPS from the stages. No edit to player.html. 3) Deferred to after the talk. Debrief, status, REALITY.",
    "at": "2026-10-29T16:53:51Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "(1) Requests done: dev 027 and 028 on the board, replies conductor 039 and designer 017; no code for 033. (2) Showcase template done in bd32d97, only under talk/engine/**. (3) Linux demo deferred. Debrief, status, REALITY updated. Conditions kept: no player.html, talk.json, src/pages or index.html; no key or QR of a key. Unplanned but small: the vendored MIT qrcode.js (the QR the template needs) and the previous wake record closed.",
+   "at": "2026-10-29T16:54:32Z"
   }
  },
  "closed": null,
