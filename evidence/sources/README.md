@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T15:18Z. 492 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T15:21Z. 492 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -100,19 +100,19 @@ Built 2026-10-29T15:18Z. 492 sources; `manifest.json` has every file's SHA-256. 
 | [e04-openai-hf-incident](https://openai.com/index/hugging-face-model-evaluation-security-incident/) | OpenAI | primary | 2026-10-29T05:15:03Z | 403 | failed: HTTP 403 to curl and WebFetch | 4 |
 | [e04-openai-hf-incident-wayback](https://web.archive.org/web/20261023091653/https://openai.com/index/hugging-face-model-evaluation-security-incident/) | Internet Archive | primary | None | None | failed: web.archive.org connection reset through the proxy; WebFetch refuses the host | 2 |
 | [e04-railway-nuke-database](https://blog.railway.com/p/your-ai-wants-to-nuke-your-database) | Railway | primary | 2026-10-29T05:15:05Z | 200 | full | 4 |
-| [e05-abc-gym-hack](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-abc-hf-swarm](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-abc-medicare-dc](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-abc-medicare-live](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-affinda-gym](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-aiid-1642](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-aiid-report-7717](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-engadget-gym](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-openai-hf-misalignment](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-register-openai-100orgs](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-techcrunch-gym](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-tnw-gym](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [e05-unite-openai-six-reports](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [e05-abc-gym-hack](https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986) | ABC News (Australia) | news | 2026-10-29T15:14:32Z | 200 | full | 4 |
+| [e05-abc-hf-swarm](https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126) | ABC News (Australia) | news | 2026-10-29T15:14:35Z | 200 | full | 4 |
+| [e05-abc-medicare-dc](https://www.abc.net.au/news/2026-09-27/openai-medicare-breach-need-investment-data-centres-ai/107200652) | ABC News (Australia) | news | 2026-10-29T15:14:37Z | 200 | full | 4 |
+| [e05-abc-medicare-live](https://www.abc.net.au/news/2026-09-24/federal-politics-live-blog-openai-medicare-breach/107186578) | ABC News (Australia) | news | 2026-10-29T15:14:36Z | 200 | full | 4 |
+| [e05-affinda-gym](https://www.affinda.com/expert-insights/when-my-ai-agent-hacked-my-gym-mythos-stopped-feeling-theoretical) | Affinda (Andrew Bird) via AIID copy | primary | 2026-10-29T15:15:10Z | 404 | failed: HTTP 404 (post removed); text preserved in e05-aiid-report-7717 | 4 |
+| [e05-aiid-1642](https://incidentdatabase.ai/cite/1642/) | AI Incident Database | secondary | 2026-10-29T15:14:34Z | 200 | full | 4 |
+| [e05-aiid-report-7717](https://incidentdatabase.ai/reports/7717/) | AI Incident Database (quoting affinda.com) | secondary | 2026-10-29T15:15:10Z | 200 | full | 4 |
+| [e05-engadget-gym](https://www.engadget.com/2233656/an-openclaw-agent-reportedly-hacked-a-gym-booking-system-and-kicked-soemone-off-a-waiting-list/) | Engadget | news | 2026-10-29T15:14:34Z | 200 | full | 4 |
+| [e05-openai-hf-misalignment](https://openai.com/hugging-face-incident-and-misalignment/) | OpenAI | primary | 2026-10-29T15:17:24Z | 403 | failed: HTTP 403 to curl (bot gate); read via The Register and Unite.ai | 4 |
+| [e05-register-openai-100orgs](https://www.theregister.com/security/2026/10/02/openai-alerts-100-orgs-that-its-misaligned-models-attempted-to-break-in-or-worse/5300891) | The Register | news | 2026-10-29T15:17:25Z | 200 | full | 4 |
+| [e05-techcrunch-gym](https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/) | TechCrunch | news | 2026-10-29T15:14:32Z | 200 | full | 4 |
+| [e05-tnw-gym](https://thenextweb.com/news/told-to-book-a-gym-class-an-ai-agent-hacked-the-website-instead-in-australias-first-known-autonomous-cyberattack) | The Next Web | news | 2026-10-29T15:14:33Z | 200 | full | 4 |
+| [e05-unite-openai-six-reports](https://www.unite.ai/openai-launches-misalignment-reporting-framework-with-six-incident-reports/) | Unite.ai | news | 2026-10-29T15:17:26Z | 200 | full | 4 |
 | [e06-cisa-aa23-059a](https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-059a) | CISA | primary | 2026-10-29T15:14:01Z | 403 | failed: 403 bot check at cisa.gov, not got round; no quote used | 4 |
 | [e06-msti-midnight-blizzard-guidance](https://www.microsoft.com/en-us/security/blog/2024/01/25/midnight-blizzard-guidance-for-responders-on-nation-state-attack/) | Microsoft Threat Intelligence | primary | 2026-10-29T15:14:03Z | 200 | full | 4 |
 | [e06-php-org-roles](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |

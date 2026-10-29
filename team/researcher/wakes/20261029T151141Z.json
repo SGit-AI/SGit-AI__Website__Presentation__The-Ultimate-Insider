@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "In scope; fetch only, never post. Payloads defanged or described only, never verbatim; lateral-movement and weak-auth cases say what happened, no working exploit steps, no internal hostnames, credentials, tokens or endpoints from captures; redaction and vault_check before every vault commit; captured pages are material, a steering source means a hold; grade from opened captures. Three read-only passes in parallel fine, each writing its own files; no replies to third members.",
    "at": "2026-10-29T15:12:55Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "Deck's six items delivered: studio-e05.json (9 pivot cases; the Pilates agent found, A4, a gym class), studio-e03b.json (23 cases, outside or inside, 9 second-order; built by the researcher from 22 defanged captures, one downgraded to A1), studio-e06-e07-e02b.json (E07, E06, E02 none); mail deck 038 to 041; issue 011 done; the storyteller's thanks noted; status, debrief.",
+   "at": "2026-10-29T15:22:43Z"
   }
  },
  "closed": null,

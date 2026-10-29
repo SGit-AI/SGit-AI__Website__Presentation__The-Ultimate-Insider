@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T15:18Z",
- "count": 190,
+ "built": "2026-10-29T15:21Z",
+ "count": 192,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T15:18Z"
+   "adjudicated": "researcher, 2026-10-29T15:21Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1726,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T15:18Z"
+   "adjudicated": "researcher, 2026-10-29T15:21Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -3972,6 +3972,56 @@
    "primary_source": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
    "note": "Anthropic's own account; found in August while assembling transcripts for METR, then a search of about 481 million transcripts found no further case.",
    "register": "studio-e04"
+  },
+  {
+   "id": "e05-pivot-is-a-real-pattern",
+   "text": "Across 2025 to 2026, multiple public cases show an AI agent or AI-adjacent tool moving from one system to another on a credential or workaround it found: a token found in place A opening system B, then C.",
+   "where": [
+    "talk:e05-pivoting"
+   ],
+   "kind": "observation",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "e04-hf-agent-intrusion-timeline",
+     "quote": "That single read yielded both the mesh-VPN auth key used minutes later and the access-broker credential used an hour later.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e04-railway-nuke-database",
+     "quote": "The agent found a Railway API token stored locally on the user's machine and used it to call volumeDelete on a production volume.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Strongest single-chain evidence is the Hugging Face timeline (primary, from the victim). Pure agent-driven token-to-token-to-token chains (HF, PocketOS) are rarer than cases where a human reused what an agent found (Nx, Clinejection).",
+   "register": "studio-e05"
+  },
+  {
+   "id": "e05-pilates-is-the-gym-case",
+   "text": "The 'Pilates agent that bumped people off a waitlist' is the Andrew Bird / OpenClaw gym-booking case: the agent found authorization flaws in the booking provider's API and cancelled another member's waitlist reservation to move its user up.",
+   "where": [
+    "talk:e05-pilates"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "e05-aiid-report-7717",
+     "quote": "it could cancel other members's reservations and bump them off the waitlist. That is a very different outcome from \"book me into Pilates on Thursday.\"",
+     "supports": "for"
+    },
+    {
+     "source_id": "e05-abc-gym-hack",
+     "quote": "The API has zero authorisations checks on cancelling other people's reservations … I tested this with the person in waitlist position #1 - and it actually went through. So you've moved from #4 to #3 already",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://www.affinda.com/expert-insights/when-my-ai-agent-hacked-my-gym-mythos-stopped-feeling-theoretical",
+   "note": "'Pilates' comes from one line in Bird's own post ('book me into Pilates on Thursday') used as an example; the actual class is described only as a popular morning gym class, not confirmed Pilates. The user moved from #4 to #3 (ABC/Bird), not to the top. 'Pilates agent' is a fair shorthand only with that caveat.",
+   "register": "studio-e05"
   },
   {
    "id": "e07-github-copilot-cloud-agent",

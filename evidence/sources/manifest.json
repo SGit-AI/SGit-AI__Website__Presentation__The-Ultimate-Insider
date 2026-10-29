@@ -1,6 +1,6 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T15:18Z",
+ "built": "2026-10-29T15:21Z",
  "count": 492,
  "sources": [
   {
@@ -4234,8 +4234,14 @@
   },
   {
    "id": "e05-abc-gym-hack",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986",
+   "final_url": "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986",
+   "publisher": "ABC News (Australia)",
+   "title": "AI assistant hacks gym website in first known Australian autonomous cyber attack",
+   "kind": "news",
+   "published": "2026-08-10",
+   "captured_at": "2026-10-29T15:14:32Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4267,12 +4273,20 @@
      "sha256": "75dc4a5f77af7528b2bd8c8d356ad59fbf52962008759d8de1e05671e303f20e",
      "bytes": 122
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-abc-hf-swarm",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126",
+   "final_url": "https://www.abc.net.au/news/2026-09-11/how-openai-agents-hacked-hugging-face-messages-revealed/107125126",
+   "publisher": "ABC News (Australia)",
+   "title": "How a 'swarm' of AI agents hacked another company, in the AI's own words",
+   "kind": "news",
+   "published": "2026-09-11",
+   "captured_at": "2026-10-29T15:14:35Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4303,12 +4317,20 @@
      "sha256": "8233166fdeacbe59d38146131a06d3b2b12d6815625519e868c312fc3a506ff7",
      "bytes": 130
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-abc-medicare-dc",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.abc.net.au/news/2026-09-27/openai-medicare-breach-need-investment-data-centres-ai/107200652",
+   "final_url": "https://www.abc.net.au/news/2026-09-27/openai-medicare-breach-need-investment-data-centres-ai/107200652",
+   "publisher": "ABC News (Australia)",
+   "title": "OpenAI breach proves need for 'seat at the AI table'",
+   "kind": "news",
+   "published": "2026-09-27",
+   "captured_at": "2026-10-29T15:14:37Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4339,12 +4361,20 @@
      "sha256": "6f06736eacb7e924c5e197dc1ac3415ba694e73549ef2116842b22a9f8e01cb3",
      "bytes": 129
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-abc-medicare-live",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.abc.net.au/news/2026-09-24/federal-politics-live-blog-openai-medicare-breach/107186578",
+   "final_url": "https://www.abc.net.au/news/2026-09-24/federal-politics-live-blog-openai-medicare-breach/107186578",
+   "publisher": "ABC News (Australia)",
+   "title": "Medicare AI breach live blog",
+   "kind": "news",
+   "published": "2026-09-24",
+   "captured_at": "2026-10-29T15:14:36Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4375,12 +4405,20 @@
      "sha256": "5ed3e938a591a1638b584eb6684548702ba2a59be3745364e3d712177cd1fef4",
      "bytes": 124
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-affinda-gym",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.affinda.com/expert-insights/when-my-ai-agent-hacked-my-gym-mythos-stopped-feeling-theoretical",
+   "final_url": "https://www.affinda.com/expert-insights/when-my-ai-agent-hacked-my-gym-mythos-stopped-feeling-theoretical",
+   "publisher": "Affinda (Andrew Bird) via AIID copy",
+   "title": "When my AI agent hacked my gym (original post, now removed)",
+   "kind": "primary",
+   "published": "2026-04-10",
+   "captured_at": "2026-10-29T15:15:10Z",
+   "http_status": 404,
    "files": [
     {
      "name": "page.html",
@@ -4410,12 +4448,20 @@
      "sha256": "8df4be43440479f7c992ce263536c87db48574dae1a3aa0885616dce76c78679",
      "bytes": 131
     }
-   ]
+   ],
+   "capture": "failed: HTTP 404 (post removed); text preserved in e05-aiid-report-7717",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-aiid-1642",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://incidentdatabase.ai/cite/1642/",
+   "final_url": "https://incidentdatabase.ai/cite/1642/",
+   "publisher": "AI Incident Database",
+   "title": "Incident 1642: AI Agent Powered by Claude Opus 4.6 Reportedly Exploited Gym Booking API",
+   "kind": "secondary",
+   "published": "2026-08",
+   "captured_at": "2026-10-29T15:14:34Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4445,12 +4491,20 @@
      "sha256": "2ac6a0748aa391cf919d1acc1d7e4b1c5d6785c8c39d7d6bc2094da9174d3121",
      "bytes": 64
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-aiid-report-7717",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://incidentdatabase.ai/reports/7717/",
+   "final_url": "https://incidentdatabase.ai/reports/7717/",
+   "publisher": "AI Incident Database (quoting affinda.com)",
+   "title": "Report 7717: When my AI agent hacked my gym, Mythos stopped feeling theoretical",
+   "kind": "secondary",
+   "published": "2026-04",
+   "captured_at": "2026-10-29T15:15:10Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4480,12 +4534,20 @@
      "sha256": "28ad4491da821ca662b9a5265e3ccc7aa90048c01ed7a5024786a0d8ed4aecb4",
      "bytes": 67
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-engadget-gym",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.engadget.com/2233656/an-openclaw-agent-reportedly-hacked-a-gym-booking-system-and-kicked-soemone-off-a-waiting-list/",
+   "final_url": "https://www.engadget.com/2233656/an-openclaw-agent-reportedly-hacked-a-gym-booking-system-and-kicked-soemone-off-a-waiting-list/",
+   "publisher": "Engadget",
+   "title": "An OpenClaw agent reportedly hacked a gym booking system and kicked someone off a waiting list",
+   "kind": "news",
+   "published": "2026-08-10",
+   "captured_at": "2026-10-29T15:14:34Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4516,12 +4578,20 @@
      "sha256": "f2e3833532816724c0b72ba963b223482409258cdaa8f9fc5c42912feb81422d",
      "bytes": 154
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-openai-hf-misalignment",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://openai.com/hugging-face-incident-and-misalignment/",
+   "final_url": "https://openai.com/hugging-face-incident-and-misalignment/",
+   "publisher": "OpenAI",
+   "title": "Hugging Face incident and misalignment",
+   "kind": "primary",
+   "published": "2026",
+   "captured_at": "2026-10-29T15:17:24Z",
+   "http_status": 403,
    "files": [
     {
      "name": "page.html",
@@ -4551,12 +4621,20 @@
      "sha256": "c4dd58db19cee0199b904a77752dedec5b2fcd2e7ea0190719900788b9c3307d",
      "bytes": 84
     }
-   ]
+   ],
+   "capture": "failed: HTTP 403 to curl (bot gate); read via The Register and Unite.ai",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-register-openai-100orgs",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.theregister.com/security/2026/10/02/openai-alerts-100-orgs-that-its-misaligned-models-attempted-to-break-in-or-worse/5300891",
+   "final_url": "https://www.theregister.com/security/2026/10/02/openai-alerts-100-orgs-that-its-misaligned-models-attempted-to-break-in-or-worse/5300891",
+   "publisher": "The Register",
+   "title": "OpenAI alerts 100+ orgs that its 'misaligned models' attempted to break in",
+   "kind": "news",
+   "published": "2026-10-02",
+   "captured_at": "2026-10-29T15:17:25Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4587,12 +4665,20 @@
      "sha256": "9cec506a5f603d8dbe42d1b79c76c40e5467ac0f653c619137861bc13df698e0",
      "bytes": 162
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-techcrunch-gym",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
+   "final_url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
+   "publisher": "TechCrunch",
+   "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
+   "kind": "news",
+   "published": "2026-08-10",
+   "captured_at": "2026-10-29T15:14:32Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4623,12 +4709,20 @@
      "sha256": "ac25d8fb1a3cfc7a578aad6d2e8e8baec6d701cd2c55998d5d966055d315ad4c",
      "bytes": 124
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-tnw-gym",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://thenextweb.com/news/told-to-book-a-gym-class-an-ai-agent-hacked-the-website-instead-in-australias-first-known-autonomous-cyberattack",
+   "final_url": "https://thenextweb.com/news/told-to-book-a-gym-class-an-ai-agent-hacked-the-website-instead-in-australias-first-known-autonomous-cyberattack",
+   "publisher": "The Next Web",
+   "title": "Told to book a gym class, an AI agent hacked the website instead",
+   "kind": "news",
+   "published": "2026-08-11",
+   "captured_at": "2026-10-29T15:14:33Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4659,12 +4753,20 @@
      "sha256": "abbd8e425237c43a9063a3a19b8538e7213310f99a6c12bd00c10103f61ac853",
      "bytes": 166
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e05-unite-openai-six-reports",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.unite.ai/openai-launches-misalignment-reporting-framework-with-six-incident-reports/",
+   "final_url": "https://www.unite.ai/openai-launches-misalignment-reporting-framework-with-six-incident-reports/",
+   "publisher": "Unite.ai",
+   "title": "OpenAI launches misalignment reporting framework with six incident reports",
+   "kind": "news",
+   "published": "2026-09-16",
+   "captured_at": "2026-10-29T15:17:26Z",
+   "http_status": 200,
    "files": [
     {
      "name": "page.html",
@@ -4694,7 +4796,9 @@
      "sha256": "f54c0362f743ed9f5a8c30c51e01be350b89b3edcaa3ae49c4151ae4fcef3680",
      "bytes": 122
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e05"
   },
   {
    "id": "e06-cisa-aa23-059a",
