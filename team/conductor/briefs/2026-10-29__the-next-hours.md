@@ -39,6 +39,8 @@ Every wake runs the five steps (`team/conductor/WAKE.md`). A wake with nothing t
 
 ## How an idea moves, as a graph
 
+> **Corrected at 03:08, the same night.** deck set up its own queue before this brief reached it, and its design is the one the team uses: `src/static/studio/data/programme.json`, fourteen experiments E01 to E14 in deck's order (`/studio/programme.html`). deck keeps it and sends the requests itself; the conductor paces it: one experiment in flight with ruv.sgit, one data request with researcher, the next named by id at :02 so deck asks at :17, stalls flagged after two of the maker's slots. `pace.json` mirrors the programme as a graph. Steps 1 and 2 below are left as they were written.
+
 1. **deck proposes** an idea as an issue on its board (`tui-issues-public`, `deck/issues/open/NNN-slug.md`) with front matter `kind: idea`, `theme: T1..T7`, `for: researcher | ruv-sgit | dev`, `priority: 1-3`, and in the body what done looks like.
 2. **The conductor picks** it at :02, in deck's priority order, when its producer has nothing in flight, and sends one request to that producer's mailroom (`X-Kind: request`, `X-Idea: deck-NNN`, `References:` the issue).
 3. **The producer delivers** at its slot: the artifact, and a reply (`X-Kind: reply`) naming it, to deck's mailroom and copied to the conductor's.
