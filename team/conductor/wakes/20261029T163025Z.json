@@ -17,10 +17,31 @@
    "verdict": "go",
    "comment": "Second pass: the amended plan adopts both conditions (no screenshot of a key, key QR, read key or anything private; an offline fallback for the Linux-in-the-browser demo), in the brief and every request.",
    "at": "2026-10-29T16:31:16Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) team/conductor/briefs/2026-10-29__editor/2-the-work-section-1630.md (the editor's words, what changes, who does what, the two rules); studio's brief gains the showcase slides. 2) Requests to researcher (010), storyteller (004), deck (053), studio (002), dev (030), a notice to ruv-sgit (024), each with both rules; vault_check clean, pushed. 3) pace.json (the section node, 90 minutes, producers), status.json. Gate clean. Commit 62c6b99.",
+   "at": "2026-10-29T16:32:23Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Both conditions (no key in a screenshot; an offline fallback) in all six mails; no key or personal detail; each request fits its recipient's role. vault_check, build, validate, agents check clean; the diff inside conductor scope.",
+   "at": "2026-10-29T16:32:57Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "62c6b99: the brief, studio's showcase section, pace.json, status.json; both conditions in the brief and studio's section; the six requests in the vault (checked by the post-review). Nothing unplanned.",
+   "at": "2026-10-29T16:32:57Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-29T16:32:58Z",
+ "outcome": "ok",
  "history": [
   {
    "step": "pre_review",
