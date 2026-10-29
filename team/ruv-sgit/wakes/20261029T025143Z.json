@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "no overlap (lab/** unowned); exact b01 path in appends; change recorded as agreed by the editor; hand-back as a request file; handover zip and keys only in scratchpad or ~/.sg-send; no read key published without the editor; no em-dashes",
    "at": "2026-10-29T02:52:46Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "policy: lab/** and the b01 Versions append; run r2-b01-storyboard: storyboard and notes, editor's 1 must-fix and 6 should-fixes applied; vault kept, key sealed to the DC Vault Registry (zip for the editor); hand-back request to deck; status, debrief, REALITY",
+   "at": "2026-10-29T02:59:42Z"
   }
  },
  "closed": null,

@@ -1,0 +1,265 @@
+{
+ "run": "r2-b01-storyboard",
+ "purpose": "r2-b01-storyboard: the storyboard for studio brief B01, One story, not three: one motif that carries the three problems from the opening, through each act, into the collision and the way out",
+ "request": {
+  "from": "deck@the-ultimate-insider (studio brief B01), with the editor's go in the session",
+  "date": "2026-10-29",
+  "text": "Studio brief B01, src/pages/studio/briefs/b01-one-story.html: make the audience feel, without being told twice, that the three problems are one story. Hand back a storyboard first: one frame per moment (arrival, the overlap named, act one, act two, act three, the collision, the way out, optional close), each a still with its time in the beat and the words over it. The editor, in the session, 29 October 2026: 'Go for it.'"
+ },
+ "pass_of": null,
+ "commits_before": null,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "43oz5g25",
+ "created_at": "2026-10-29T02:52:55+00:00",
+ "closed_at": "2026-10-29T02:58:52+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 2,
+  "tasks": 2,
+  "ruflo_calls": 10,
+  "ruflo_failed": 0,
+  "ruflo_ms": 5519
+ },
+ "branches": [
+  {
+   "name": "w-storyboard",
+   "role": "designer",
+   "files": 2,
+   "bytes": 15557,
+   "write_ms": 8270,
+   "merge_ms": 8892
+  },
+  {
+   "name": "w-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 5144,
+   "write_ms": 7690,
+   "merge_ms": 8719
+  }
+ ],
+ "commits": 4,
+ "files": 5,
+ "bytes_plain": 22560,
+ "files_delivered": 3,
+ "bytes_delivered": 20701,
+ "store": {
+  "objects": 26,
+  "bytes": 32772,
+  "plaintext_hits": 0,
+  "probe": "34 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 3301,
+  "files": 5,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "create",
+   "ms": 2660,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 883,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 13911,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1621,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 916,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5732,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2199,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1970,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4723,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1615,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 980,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5094,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2190,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1743,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4786,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 897,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 3301,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 1516
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t designer -r specialist -p storyboard",
+   "rc": 0,
+   "ms": 454
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 422
+  },
+  {
+   "seq": 4,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d storyboard: the storyboard page src/static/studio/lab/b01/storyboard/index.html and notes.md -p high",
+   "rc": 0,
+   "ms": 461
+  },
+  {
+   "seq": 5,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check the storyboard against the brief, the script lines it quotes and the studio checklist; list must-fixes -p high",
+   "rc": 0,
+   "ms": 426
+  },
+  {
+   "seq": 6,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r2-b01-storyboard: r2-b01-storyboard: the storyboard for studio brief B01, One story, not three: one motif that carries the three problems from the opening, through each act, into the collision and the way out -f conductor",
+   "rc": 0,
+   "ms": 422
+  },
+  {
+   "seq": 7,
+   "actor": "designer",
+   "cmd": "hive-mind broadcast -m delivered storyboard sha256:0e254ccbdb0932c2 files:2 -f designer",
+   "rc": 0,
+   "ms": 455
+  },
+  {
+   "seq": 8,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:d1a4d4efcee34735 files:1 -f editor",
+   "rc": 0,
+   "ms": 468
+  },
+  {
+   "seq": 9,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 436
+  },
+  {
+   "seq": 10,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 459
+  }
+ ],
+ "history": [
+  {
+   "id": "ea7798b4b89b",
+   "message": "init",
+   "time": "2026-10-29T02:53:00Z"
+  },
+  {
+   "id": "c47cb0f1a3d4",
+   "message": "brief: run r2-b01-storyboard",
+   "time": "2026-10-29T02:53:03Z"
+  },
+  {
+   "id": "67aa87d03fe7",
+   "message": "designer storyboard: delivered 2 files",
+   "time": "2026-10-29T02:58:15Z"
+  },
+  {
+   "id": "7aa51197c8e3",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T02:58:33Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "storyboard",
+   "role": "designer",
+   "who": "the conductor (this Claude Code session), not a subagent",
+   "tokens": null,
+   "tokens_how": "the session does not show its own token count"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 75175,
+   "tool_uses": 8,
+   "wall_s": 53,
+   "must_fix": 1,
+   "should_fix": 6
+  }
+ ],
+ "kept_at": "2026-10-29T02:59:15+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__vault-handover.zip",
+  "sha256": "6b2cd5823967e18c",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}

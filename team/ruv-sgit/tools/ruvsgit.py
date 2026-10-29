@@ -11,6 +11,7 @@
 #                                  clone compared byte for byte) and write the ledger and the run's evidence
 #   seal    RUN                    on the editor's go only: publish the READ key, prove a read-only clone is identical and cannot
 #                                  write, then destroy the vault key, so the run's vault can never change again
+#   keep    RUN ZIP                the editor keeps the vault for later passes: record the handover zip (vault_handover.py)
 #   delete  RUN                    the other ending: delete the vault on the server, check a clone with the key now fails
 #
 # The vault key and the server token live only in RUVSGIT_HOME (mode 0600) and are never printed, logged or committed. Vault keys
@@ -269,6 +270,19 @@ def seal(run):
     print(f'{run}: sealed. read-only clone identical, a write with the read key refused, vault key destroyed')
 
 
+def keep(run, zip_path):                                             # the vault stays for more passes; its key left sealed (vault_handover.py)
+    R = Run(run)
+    if not R.state.get('closed_at'):
+        raise SystemExit(f'{run}: close it first')
+    z = pathlib.Path(zip_path)
+    R.state['kept_at'] = now()
+    R.save()
+    ending(run, ending='kept', kept_at=R.state['kept_at'],
+           handover={'zip': z.name, 'sha256': hashlib.sha256(z.read_bytes()).hexdigest()[:16],
+                     'sealed_to': 'the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)', 'given_to': 'the editor'})
+    print(f'{run}: kept; key sealed in {z.name}, for the editor')
+
+
 def delete(run):
     R, kf = Run(run), HOME / 'runs' / run / 'vault.key'
     R.sgit('delete-on-remote', ['vault', 'delete-on-remote', '--base-url', SERVER, '--yes', '--json', '.'])
@@ -286,7 +300,7 @@ def delete(run):
 if __name__ == '__main__':
     a = sys.argv[1:]
     commands = {'setup': lambda: setup(), 'open': lambda: open_run(a[1], a[2], a[a.index('--vault-key-file') + 1] if '--vault-key-file' in a else None), 'deliver': lambda: deliver(a[1], a[2], a[3], a[4]),
-                'close': lambda: close(a[1], a[2]), 'seal': lambda: seal(a[1]), 'delete': lambda: delete(a[1])}
+                'close': lambda: close(a[1], a[2]), 'seal': lambda: seal(a[1]), 'keep': lambda: keep(a[1], a[2]), 'delete': lambda: delete(a[1])}
     if not a or a[0] not in commands:
-        sys.exit('usage: ruvsgit.py setup | open RUN SPEC [--vault-key-file F] | deliver RUN WORKER ROLE SRC | close RUN WORKERS.json | seal RUN | delete RUN')
+        sys.exit('usage: ruvsgit.py setup | open RUN SPEC [--vault-key-file F] | deliver RUN WORKER ROLE SRC | close RUN WORKERS.json | seal RUN | keep RUN ZIP | delete RUN')
     commands[a[0]]()
