@@ -1,6 +1,12 @@
 # The handover of vaults an agent created: a zip of QR codes the editor stores, and the public read keys for the site.
 #
 #   python3 admin/tools/vault_handover.py --agent <you> --out <scratchpad dir> <vault dir> [<vault dir> ...]
+#   python3 admin/tools/vault_handover.py --agent <you> --out <scratchpad dir> --to-member <id> [--to-member <id>] <vault dir> ...
+#
+# --to-member seals each vault key to a member's published key (team/<id>/key.json) instead, with sgit pki encrypt,
+# signed with your own key: <name>__vault-key__for-<id>.enc, and the same text as a QR image. The member opens it in its
+# own session with `sgit pki decrypt <file> --fingerprint <its encryption fingerprint>`. A member with no key.json is
+# refused: it must make and publish its key first.
 #
 # For each vault folder (an sgit clone made with the vault key) it writes, never printing a key:
 #   <name>__vault-key__sealed-to-<fp>.png   the vault key sealed to the vaults manager (pki-agent.mjs seal --from-vault),
@@ -49,18 +55,65 @@ def read_key(vault_dir):                                            # derived in
     return vid, f'sgit_public_read_{rk.hex() if isinstance(rk, bytes) else rk}:{vid}'
 
 
+def to_members(a, out):                                             # each vault key sealed to each named member's published key
+    import os
+    me   = json.loads((ROOT / 'team' / a.agent / 'key.json').read_text())
+    now  = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+    work = Path(tempfile.mkdtemp(prefix='handover-', dir=out))
+    rows = []
+    for member in a.to_member:
+        kf = ROOT / 'team' / member / 'key.json'
+        if not kf.exists():
+            sys.exit(f'refused: {member} has no published key (team/{member}/key.json): it makes and publishes one first')
+        k      = json.loads(kf.read_text())
+        bundle = {'v': 1, 'encrypt': k['encrypt_pem'], 'sign': k['sign_pem'], 'label': k['agent'] + ' (session ' + k['session'] + ')',
+                  'fingerprint': k['encryption_fingerprint'], 'signing_fingerprint': k['fingerprint']}
+        bfile  = work / f'{member}.bundle.json'
+        bfile.write_text(json.dumps(bundle))
+        run(['sgit', 'pki', 'import', str(bfile)])
+        bfile.unlink()
+        for v in a.vaults:
+            vdir   = Path(v).resolve()
+            m      = VAULT_RX.search(run(['sgit', 'vault', 'show-key'], cwd=vdir))
+            if not m:
+                sys.exit(f'{vdir}: no vault key from sgit vault show-key')
+            fd, plain = tempfile.mkstemp(dir=work)
+            os.write(fd, m.group(0).encode()); os.close(fd)
+            enc = work / f'{vdir.name}__vault-key__for-{member}.enc'
+            r = subprocess.run(['sgit', 'pki', 'encrypt', plain, '--recipient', k['encryption_fingerprint'], '--fingerprint', me['encryption_fingerprint'],
+                                '--output', str(enc)], input='\n', capture_output=True, text=True)
+            os.remove(plain)
+            if r.returncode or not enc.exists():
+                sys.exit(f'failed: sealing {vdir.name} to {member}; nothing printed from it')
+            run(['node', str(TOOLS / 'qr.mjs'), 'text', str(enc), str(work / f'{vdir.name}__vault-key__for-{member}.png')])
+            rows.append({'vault': vdir.name, 'member': member, 'to_fingerprint': k['encryption_fingerprint'], 'to_session': k['session'],
+                         'file': enc.name, 'qr': enc.with_suffix('.png').name,
+                         'open_with': f'sgit pki decrypt {enc.name} --fingerprint {k["encryption_fingerprint"]} --output <scratchpad>/{vdir.name}.vault-key'})
+            print(f'{vdir.name}: vault key sealed to {member} ({k["encryption_fingerprint"]}, session {k["session"]})')
+    (work / 'manifest.json').write_text(json.dumps({'made_by': f'{a.agent}@the-ultimate-insider', 'signed_with': me['encryption_fingerprint'], 'made_at': now,
+                                                    'sealed': rows, 'rule': 'Every file in these vaults is public: write nothing private, no key, ever.'}, indent=1) + '\n')
+    zpath = out / f'{now[:10]}__{a.agent}__vault-keys-for-{"-".join(a.to_member)}.zip'
+    with zipfile.ZipFile(zpath, 'w', zipfile.ZIP_DEFLATED) as z:
+        for f in sorted(work.iterdir()):
+            z.write(f, f.name)
+    print(f'zip: {zpath}')
+
+
 def main():
     p = argparse.ArgumentParser(description='seal and zip the keys of vaults an agent created')
     p.add_argument('vaults', nargs='+')
     p.add_argument('--agent', required=True)
     p.add_argument('--out', required=True, help='a folder outside the repository, such as the session scratchpad')
     p.add_argument('--server', default='https://dev.send.sgraph.ai')
+    p.add_argument('--to-member', action='append', default=[], help='seal to this member\'s team/<id>/key.json instead of the vaults manager')
     a = p.parse_args()
 
     out = Path(a.out).resolve()
     if ROOT in out.parents or out == ROOT:
         sys.exit('refused: --out is inside the repository; sealed vault keys never go in git')
     run(['sha256sum', '-c', str(TOOLS / 'pki-agent.mjs.sha256')], cwd=ROOT)
+    if a.to_member:
+        return to_members(a, out)
     known = json.loads(KNOWN.read_text())
     to    = known['signing_fingerprint']
     now   = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')

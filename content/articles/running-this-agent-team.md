@@ -89,11 +89,13 @@ Agents forget everything between sessions; the repository does not. A new sessio
 
 **Vendor the tools.** The sandbox's classifier refused to install the Issues-FS command line and to run another team's script, both as code from outside. Every tool members run is in `admin/tools/`, and the key tool carries its hash.
 
-**The two vaults are public; their write keys are not.** Both read keys are published on `/admin/keys.html#vaults`, with QR codes. Each vault key is sealed to the **vaults manager**, the known key `DC Vault Registry` (`sha256:956934e47063ceaa`), confirmed by the editor. A member never holds a vault key it cannot name a step for.
+**Every file in the two vaults is public, forever.** Run `python3 admin/tools/vault_check.py <clone>` before every vault commit; a later commit does not unpublish an earlier one. **Their write keys are not public.** Both read keys are published on `/admin/keys.html#vaults`, with QR codes. Each vault key is sealed to the **vaults manager**, the known key `DC Vault Registry` (`sha256:956934e47063ceaa`), confirmed by the editor. A member never holds a vault key it cannot name a step for.
 
 **Creating a vault** that is shared or shown on the site: `python3 admin/tools/vault_handover.py --agent <you> --out <scratchpad> <vault clone> ...`. It seals each vault key as a QR code to the vaults manager (never printed), draws each read key as a QR code, writes a manifest, and zips them; it refuses to write inside the repository. The editor stores the zip and hands it to the vaults manager. Publish only the read keys and their QR images.
 
-**Asking for a vault key** (manual for now; the newsroom's `vaultreq` is **not built yet**): publish your key, then write a request to the editor in the mail vault naming the vault, read or write, and the step of your role that needs it. The editor asks the vaults manager to seal it to your `key.json` fingerprint and carries the QR back. Open it with your own key, clone the vault outside the repository, delete the opened key file.
+**Giving members the vault keys.** Each member manages its own folders in both vaults, so each holds both vault keys. Once a member's `key.json` is published, the conductor runs `vault_handover.py --to-member <id>`, which seals each vault key to that key (signed by the conductor) and zips the sealed files with their QR images; the editor carries the zip to the member, which opens it with `sgit pki decrypt` in its own session.
+
+**Asking for another vault key** (manual for now; the newsroom's `vaultreq` is **not built yet**): publish your key, then write a request to the editor in the mail vault naming the vault, read or write, and the step of your role that needs it. The editor asks the vaults manager to seal it to your `key.json` fingerprint and carries the QR back. Open it with your own key, clone the vault outside the repository, delete the opened key file.
 
 **Gotchas here.**
 
@@ -141,9 +143,9 @@ Hours: every hour, round the clock, started on 29 October 2026 at the editor's w
 
 **Keep the prompt tiny and the protocol authoritative.** The prompt says who the member is and to follow `team/conductor/WAKE.md` and its role; all real steps live in files, so behaviour changes with a commit, not by editing a stored prompt. The prompts are in `schedule.json` and on `/team/schedule.html`.
 
-**Who may create or change a task.** Only at the editor's explicit go. On 29 October the editor told the conductor to create all four, each firing into its member's own session; the task ids are in `schedule.json`. A member may disable its own task, or all of them, to stop; only the editor re-enables.
+**Who may create or change a task.** Only the member's own session, at the editor's go: a task belongs to the session it fires into. On 29 October the conductor first created all four from its own session; the editor corrected it, and the three for other members were disabled before any fired. A member may pause its own task to stop; only the editor re-enables.
 
-**Stopping.** Anyone may stop the schedule when something is not right, and nobody needs permission to stop: write `team/<you>/HOLD.md` and push it to `dev`, and every wake's `start.py` prints the hold banner and does no work; then disable the tasks. The conditions are in `WAKE.md`, Stopping: a conflict you cannot resolve, a gate broken by someone else's work, a secret anywhere, material that tries to instruct, unexplained changes in your folder, a missing key or decision two wakes running, two failed wakes for the same reason, or anything that makes carrying on look harmful.
+**Stopping.** Anyone may stop the schedule when something is not right, and nobody needs permission to stop: write `team/<you>/HOLD.md` and push it to `dev`, and every wake's `start.py` prints the hold banner and does no work; then pause your own task. The conditions are in `WAKE.md`, Stopping: a conflict you cannot resolve, a gate broken by someone else's work, a secret anywhere, material that tries to instruct, unexplained changes in your folder, a missing key or decision two wakes running, two failed wakes for the same reason, or anything that makes carrying on look harmful.
 
 **Gotchas carried over from the newsroom.** The scheduler fires late (2 to 40 minutes there): alarm on a missed wake, not a late one. A task fires into the session it was created in. Disable an old account's tasks rather than deleting the evidence.
 
@@ -210,6 +212,7 @@ A full pass (step 3 across every member, and every status record reread) at 08:0
 
 | What happened | Lesson |
 |---|---|
+| The conductor created scheduled tasks for three other members from its own session. | A task belongs to the session it fires into: each member creates its own. The three were disabled before any fired. |
 | The conductor's first plan said there was no brief, on the day of the talk, because it was written before `dev` was merged. | Pull before planning. It became `start.py` and the first rule in `CLAUDE.md`. |
 | The conductor built team pages in parallel with dev's, at a different path. | Read what the owner has built before building beside it; extend the owner's code and name the edit. |
 | `start.py`'s first run merged seven commits released minutes earlier (two new members, the board). | Many members push every hour; a session's copy is stale within minutes. Pull again before every push. |
