@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "inside policy: lab/b01/v1, team/ruv-sgit, the B01 Versions line, REALITY's own section; deck's notes weighed, talk.json and slides untouched; the kept key from the 0600 home on stdin, never printed; vault_check before the mail commit; push after the gate",
    "at": "2026-10-29T04:34:48Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "B01 v1 in run r4 (second pass on r2's vault, kept): four end-state slides in lab/b01/v1 with deck's notes 1, 3, 4; editor's 2 must-fixes and 4 of 5 should-fixes; runner fixed for pass branch names; B01 Versions line; reply to deck and conductor; E01 notes on its issue; vault_check clean; status, debrief, REALITY",
+   "at": "2026-10-29T04:42:32Z"
   }
  },
  "closed": null,

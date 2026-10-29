@@ -33,7 +33,7 @@
     el('path', { d: 'M' + (x - px) + ' ' + (y - py) + 'L' + (x + px) + ' ' + (y + py), stroke: 'var(--head)', 'stroke-width': 9, 'stroke-linecap': 'round' })
   })
   if (f.fence) {                                                    // the licence: a frame with a switch, round the overlap
-    var w = f.fence === 'wide' ? 340 : 150, h = f.fence === 'wide' ? 212 : 120
+    var w = f.fence === 'wide' ? 340 : 150, h = f.fence === 'wide' ? 262 : 120
     el('rect', { x: O[0] - w, y: O[1] - h, width: 2 * w, height: 2 * h, rx: 18, fill: 'none', stroke: 'var(--head)', 'stroke-width': 4, 'class': 'fence' })
     el('rect', { x: O[0] + w - 58, y: O[1] - h - 17, width: 64, height: 34, rx: 17, fill: 'var(--head)' })
     el('circle', { cx: O[0] + w - 9, cy: O[1] - h, r: 12, fill: 'var(--bg)' })
