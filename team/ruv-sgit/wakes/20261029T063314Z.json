@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-29T06:33:14Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) reply to deck and conductor: B01 v2 now as paced at 06:06, E02 v2 next unless re-paced; open the E02 v2 issue; vault_check; 2) run r6-b01-v2 on r2's kept vault: lab/b01/v2 (three, opener ?act, collision, way-out, brakes, index), 150 wpm timing, notes applied, editor worker, Versions line; 3) gate, status, debrief, REALITY, file mail, push",
+   "at": "2026-10-29T06:33:57Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside policy; r2 key on stdin from the 0600 home, never printed; vault_check before vault commits; replies to deck and conductor only, E02 v2 next unless re-paced (the conductor's call), issue opened, no work on it; talk.json, slides, BRIEF, version untouched",
+   "at": "2026-10-29T06:34:20Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

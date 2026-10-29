@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B01 v2: three problems, one overlap</title>
+<link rel="stylesheet" href="../../../../../talk/engine/slide.css">
+<script src="../../../../../talk/engine/slide.js"></script>
+<script src="../frames.js"></script>
+<style>
+#b01{position:absolute;left:0;top:0;width:1280px;height:720px}
+.kk{font-size:20px;top:14px}
+.hl{top:58px}
+.ft{font-size:20px;bottom:14px}
+.lab{position:absolute;font:800 24px/1.2 system-ui;max-width:300px}
+.lab span{display:block;font:600 20px/1.3 system-ui;color:var(--text);margin-top:4px}
+.lab b{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--head);color:var(--bg);font:800 22px system-ui;margin-right:8px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div id="cv" data-end="36">
+  <p class="kk">Opening · three</p>
+  <div class="hl" data-in="0">Three known problems. <em data-in="31">Where they overlap is the scenario.</em></div>
+  <div class="lab c-agent" style="left:60px;top:170px" data-in="6">The insider<span>AI agents: the insider threat that never scaled before</span></div>
+  <div class="lab c-infra" style="right:60px;top:170px;text-align:right" data-in="11">The infrastructure<span>built for static code, struggling to stay up on its own</span></div>
+  <div class="lab c-risk" style="left:60px;top:560px" data-in="20">The decision<span>risk management on spreadsheets, at the speed of quarters</span></div>
+  <div class="lab c-head" style="right:60px;top:560px;text-align:right" data-in="31">the scenario<span>where all three overlap: named, and empty for now</span></div>
+  <div class="ft">B01 v2 · frames 1 and 2 · run r6-b01-v2 · timed to the script at 150 words a minute</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+window.SLIDE_RENDER = function (t, S) {
+  var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .8))) }
+  // each arrives on its number (6, 11, 20 s), apart; they land together just before "Each one is a known problem" (28 s)
+  B01.set({ pos: k(25.2, 2.4), op: [k(6), k(11), k(20)], sop: [0, 0, 0], fill: [0, 0, 0], edge: k(31), dash: true, marks: 0, fence: { w: 150, h: 120, op: 0 }, badges: [0, 0, 0, 0] })
+}
+</script>
+</body>
+</html>

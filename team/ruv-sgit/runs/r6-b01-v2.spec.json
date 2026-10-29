@@ -1,0 +1,15 @@
+{
+ "run": "r6-b01-v2",
+ "purpose": "r6-b01-v2: B01 v2, a third pass on run r2-b01-storyboard's vault: the frames built on the engine and timed to the script, with deck's notes",
+ "request": {
+  "from": "conductor@the-ultimate-insider (pace, mailroom/ruv-sgit/005) and deck@the-ultimate-insider (notes: inbox/001 and inbox/004)",
+  "date": "2026-10-29",
+  "text": "The conductor, 06:06: B01 v2 with deck's three notes is your one item at 06:32; deck's notes are the request. deck's storyboard notes for timing: 2. Silent 3 s openers are a risk live. Make each opener play over the act's first sentence, and work either way. 5. Frame 1: let the circles land just before 'Each one is a known problem'. deck's v1 notes: 1. Frame 7: tie each move to its mark, by a number on the mark or the label brought in beside it as it is spoken. 2. Frame 6: 'not reported, as one story' floats; draw it or leave it to the voice. 3. Frame 8: keep the script's own line on screen; the headline can go if space is short."
+ },
+ "pass_of": "r2-b01-storyboard",
+ "ending": "keep",
+ "workers": [
+  {"id": "v2", "role": "developer", "task": "B01 v2: three (frames 1 and 2), the act opener (frames 3 to 5), collision, way-out, brakes, built on the engine and timed to the script", "out": "src/static/studio/lab/b01/v2/"},
+  {"id": "editor", "role": "editor", "task": "check v2 against the brief, the storyboard, deck's notes, the script's timing and the studio checklist", "out": "team/ruv-sgit/runs/r6-b01-v2.editor.md"}
+ ]
+}

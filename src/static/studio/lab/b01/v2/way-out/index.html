@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B01 v2: the way out</title>
+<link rel="stylesheet" href="../../../../../talk/engine/slide.css">
+<script src="../../../../../talk/engine/slide.js"></script>
+<script src="../frames.js"></script>
+<style>
+#b01{position:absolute;left:0;top:0;width:1280px;height:720px}
+.kk{font-size:20px;top:14px}
+.hl{top:58px}
+.ft{font-size:20px;bottom:14px}
+.lab{position:absolute;font:800 24px/1.2 system-ui;max-width:300px}
+.lab span{display:block;font:600 20px/1.3 system-ui;color:var(--text);margin-top:4px}
+.lab b{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--head);color:var(--bg);font:800 22px system-ui;margin-right:8px;vertical-align:middle}
+</style>
+</head>
+<body>
+<div id="cv" data-end="15">
+  <p class="kk">The way out</p>
+  <div class="hl" data-in="0">Four moves on the overlap: <em>governed, not gone.</em></div>
+  <div class="lab c-head" style="left:60px;top:170px" data-in="2"><b>1</b>Measure<span>what the agent can actually reach</span></div>
+  <div class="lab c-head" style="right:60px;top:170px;text-align:right" data-in="5"><b>2</b>Write down<span>what stands in the way</span></div>
+  <div class="lab c-head" style="left:60px;top:520px" data-in="8"><b>3</b>A licence<span>to operate, that can be suspended</span></div>
+  <div class="lab c-head" style="right:60px;top:520px;text-align:right" data-in="12"><b>4</b>Let it earn<span>its autonomy</span></div>
+  <div class="ft">B01 v2 · frame 7 · run r6-b01-v2 · timed to the script at 150 words a minute</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+window.SLIDE_RENDER = function (t, S) {
+  var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .8))) }
+  // one move per sentence (2, 5, 8, 12 s), each with its number on the picture: 1 the outline, 2 the marks, 3 the switch, 4 the frame stepping out
+  var st = k(12, 1.5)
+  B01.set({ pos: 1, op: [1, 1, 1], sop: [.92, .92, .92], fill: [1, 1, 1], edge: k(2), dash: false, marks: k(5),
+    fence: { w: 150 + 40 * st, h: 120 + 30 * st, op: k(8) }, badges: [k(2.2), k(5.2), k(8.2), k(12.2)] })
+}
+</script>
+</body>
+</html>
