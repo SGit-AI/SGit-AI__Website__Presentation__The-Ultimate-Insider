@@ -52,6 +52,7 @@ A request outside the scope is answered with the owner's name and left undone, w
 - **Start every session with `python3 admin/tools/start.py dev ...`, whether a schedule or the editor's chat started it.** It pulls `dev` and the vaults, then prints the start banner. Many agents push every hour; work from a stale copy undoes theirs (the editor, 29 October 2026; added by the conductor at the editor's word, the role's owner may reword it).
 - **Open and close every session report with a banner** (`admin/tools/banner.py`). The editor reads a session from the last prompt down and could not tell where a report began or ended (the PHP newsroom, 27 October 2026; added by the conductor at the editor's word, 29 October 2026).
 
+- **A push is done when the commit is in `origin/dev`, not when the output looks right.** `git push --porcelain` and `git merge-base --is-ancestor HEAD origin/dev`, never a grep for `->`: a rejected push prints `HEAD -> dev` too, and on 29 October at 03:24 a session's two commits stayed off dev while the loop said pushed (found by checking, the same session).
 - **Never type a version number.** Agents racing for release numbers cost the newsroom releases on 27 October 2026.
 - **Show the version in the top bar, linked to that release's own entry.** The first pass put it only in the footer; sgit.ai's guidance says the top bar, always visible (fixed in round 2).
 - **Check what `.gitignore` hides.** The Python template ignores `build/`, which silently left `admin/build/` out of the first commit until the status looked short (round 1).
