@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Repo writes inside scope.writes; no WAKE.md change, no secret. Item 3 restates CLAUDE.md and widens nothing; the 'until another owner is named' clause is new, so drop it or say so plainly and flag the brief change in the commit. Conditions: mail only to mailroom/deck and mailroom/dev, nothing private; vault_check before the vault commit; requests stay inside deck's and dev's roles.",
    "at": "2026-10-29T13:11:24Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) mailroom/deck/021: E02 v3 back, E11 13:32, E13 after; mailroom/dev/020: both fixes, dev 016 13:47, the sequence 14:47; vault_check clean, pushed. 2) pace.json: the ruv-b01-storyboard edge now points at review-b01-storyboard (node added), no dangling edge left; art-e02-v3, E11 next. 3) reviews/pre_review.md names scope.holds in CLAUDE.md's words, no new clause (the pre-review's condition), flagged in the commit; night log edition 11; status.json. Gate clean. Commit ebf63ca.",
+   "at": "2026-10-29T13:12:15Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff 57b8756..HEAD touches only team/conductor/** plus the night article; agents.py 0 outside scope. pre_review.md restates CLAUDE.md and widens nothing. Mail 021 and 020 plain requests, vault_check clean. Gate clean (166 html). Screenshots show no key or QR. No directive text.",
+   "at": "2026-10-29T13:12:46Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) Mail deck 021 and dev 020, vault_check clean: done. 2) pace.json edge retargeted, art-e02-v3, E11 next: done. 3) pre_review.md in CLAUDE.md's words, flagged; night log ed.11, status.json: done. Conditions kept. Unplanned: routine night screenshots only.",
+   "at": "2026-10-29T13:13:02Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T13:13:02Z",
+ "outcome": "ok"
 }
