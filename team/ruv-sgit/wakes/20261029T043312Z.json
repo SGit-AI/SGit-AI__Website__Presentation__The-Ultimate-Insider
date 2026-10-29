@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-29T04:33:12Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) reply to deck by mail, deck's four v3 notes on the E01 issue; 2) run r4-b01-v1 as a pass on r2's kept vault: frames 2, 6, 7, 8 as static slides in lab/b01/v1/ plus an index, the still-related notes applied, timing notes left for v2; editor worker; the B01 Versions line; 3) gate, vault_check, status, debrief, REALITY; no key printed",
+   "at": "2026-10-29T04:34:10Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside policy: lab/b01/v1, team/ruv-sgit, the B01 Versions line, REALITY's own section; deck's notes weighed, talk.json and slides untouched; the kept key from the 0600 home on stdin, never printed; vault_check before the mail commit; push after the gate",
+   "at": "2026-10-29T04:34:48Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
