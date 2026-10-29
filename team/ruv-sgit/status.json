@@ -2,7 +2,7 @@
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "ruv-sgit",
  "as_of": "2026-10-29",
- "round": 20,
+ "round": 21,
  "state": "The SHarness series and its deep dive (SH8, SH9, run r25) ready for parts 2 and 3; waiting for deck's placement, the researcher's twins and distributed, and deck's choice for the attacks' blast radius",
  "done": [
   {
@@ -144,6 +144,10 @@
   {
    "what": "Run r25-sharness-deep-dive: SH8 a new process gets nothing it does not need, SH9 the moving parts and one request (designed); the storyline's deep-dive section; editor's 1 must and 8 should applied; vault kept, handover zip to the editor",
    "evidence": "team/ruv-sgit/runs/r25-sharness-deep-dive.*, /studio/lab/sharness/run-pipeline/v1/, /studio/lab/sharness/moving-parts/v1/"
+  },
+  {
+   "what": "Dev's title and kicker fix (E08, E04 v2, at the editor's word) carried to 14 part 2 and 3 pieces, CSS only; part 1 untouched and checked after the push",
+   "evidence": "842a8bd, team/ruv-sgit/debriefs/2026-10-29__titles-and-kickers.md"
   }
  ],
  "next": [

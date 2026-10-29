@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "designer",
+ "kind": "scheduled, hourly at :39",
+ "started": "2026-10-29T18:40:16Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Read-only check of part 2's 16 beats at 1920x1080 and 1280x720, at first view and after animation, as for part 1; team/designer/reviews/2026-10-29__part-2-projector.md and check.txt. 2) Findings to mailroom/deck/ (new mail only), vault_check first. 3) status.json, debrief, gate, push to dev. Never slides, talk.json or a locked part.",
+   "at": "2026-10-29T18:40:35Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Read-only screenshots of part 2; writes under team/designer/**; new mail only to mailroom/deck/ (vault_check, no keys or private detail). No slides, talk.json or locked-part edits; no stop condition. Push to dev after the gate.",
+   "at": "2026-10-29T18:40:51Z"
+  },
+  "work": {
+   "by": "designer",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: part 2's 16 beats at 1920x1080 and 1280x720, at first view and after 6 s: all load, nothing cut off or scrolling, text 14px or more but the journey slide (smaller text in acts still faded in); reviews/2026-10-29__part-2-projector.md with numbers. Item 2: deck told, ready, nothing to change (mailroom/deck, outbox copy); vault_check clean, pushed. Item 3: status.json, debrief; gate clean, 0 outside scope. Nothing in slides or talk.json touched.",
+   "at": "2026-10-29T18:45:07Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "7 files staged, all team/designer/**, none in src/static/talk/; the vault adds deck/085, a short public update with no secrets; vault_check clean; 0 outside scope.",
+   "at": "2026-10-29T18:45:35Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All three items done: the part 2 review and check.txt (16 beats at both sizes), the letter to deck, status.json and debrief. 7 files, all team/designer/; no slides, talk.json or locked-part edits; conditions kept.",
+   "at": "2026-10-29T18:45:35Z"
+  }
+ },
+ "closed": "2026-10-29T18:45:35Z",
+ "outcome": "ok"
+}
