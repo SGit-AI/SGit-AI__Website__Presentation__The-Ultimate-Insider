@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-29T14:16:31Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan by the member (the hour's pacing was done at 14:03 at the editor's word; this wake is the late :02 one). 1) The storyteller joined (7d0244d, its own commit, key sha256:836a0e9ddaf99144, session session_01Kw9UwEvaeh3uYw9iKe5HZ3): seal both vault keys to it with vault_handover.py --to-member storyteller, zip in the scratchpad only, for the editor (ROLE item 5). 2) schedule.json: the storyteller's run from proposed to running (trig_013ML9DZ6k9VCinyhKF7peGA, :54); pace.json in flight. 3) Night log edition; status.json.",
+   "at": "2026-10-29T14:16:50Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Storyteller key.json came from its own commit 7d0244d, so sealing to it is sound. Fits ROLE item 5 and scope. Conditions: zip only in the scratchpad outside the repo; never print or commit a vault key; vault_check before any vault commit; no pushes to main.",
+   "at": "2026-10-29T14:17:05Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

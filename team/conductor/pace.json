@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T14:05:50Z",
+ "updated": "2026-10-29T14:17:24Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -26,8 +26,8 @@
    "in_flight": "design note 1, waiting on dev"
   },
   "storyteller": {
-   "slot": ":54 (proposed)",
-   "in_flight": "joining: the story tree, Wardley maps, the arc against the beats, for the editor"
+   "slot": ":54",
+   "in_flight": "first pass: the story tree, Wardley maps, the arc against the beats; then the arc of /articles/how-this-talk-was-built.html"
   }
  },
  "nodes": [
@@ -764,6 +764,11 @@
    "at": "2026-10-29T14:05:50Z",
    "by": "conductor",
    "what": "the editor's briefs: dev's feedback pane and lane first, then the player with a build mode; storyteller proposed at :54; the register taken from the researcher"
+  },
+  {
+   "at": "2026-10-29T14:17:24Z",
+   "by": "conductor",
+   "what": "storyteller joined (7d0244d); both vault keys sealed to it; the zip to the editor"
   }
  ],
  "queue": {
