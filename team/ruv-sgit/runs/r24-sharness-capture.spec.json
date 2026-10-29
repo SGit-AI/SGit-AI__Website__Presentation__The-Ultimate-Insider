@@ -1,0 +1,54 @@
+{
+ "run": "r24-sharness-capture",
+ "purpose": "r24-sharness-capture: the SHarness series rebuilt from the researcher's capture of sharness.ai (mail 023, 024): SH1 v2 the playground's measured without and with, SH4 to SH7, and the storyline",
+ "request": {
+  "from": "the editor, in ruv.sgit's session, 29 October 2026 about 15:35 UTC",
+  "date": "2026-10-29",
+  "text": "Go to town on SHarness: recreate sharness.ai's animations and infographics, without and with, the Linux in the browser, and a storyline."
+ },
+ "ending": "keep",
+ "workers": [
+  {
+   "id": "sh1v2",
+   "role": "developer",
+   "task": "SH1 v2: the playground measured without and with",
+   "out": "src/static/studio/lab/sharness/without-with/v2/"
+  },
+  {
+   "id": "sh4",
+   "role": "developer",
+   "task": "SH4 the one idea",
+   "out": "src/static/studio/lab/sharness/one-idea/v1/"
+  },
+  {
+   "id": "sh5",
+   "role": "developer",
+   "task": "SH5 the kernel in a tab, the replay and the live demo offline fallback",
+   "out": "src/static/studio/lab/sharness/kernel-in-a-tab/v1/"
+  },
+  {
+   "id": "sh6",
+   "role": "developer",
+   "task": "SH6 the last metre: without observed, with designed, the key redacted",
+   "out": "src/static/studio/lab/sharness/last-metre/v1/"
+  },
+  {
+   "id": "sh7",
+   "role": "developer",
+   "task": "SH7 the OS of one process",
+   "out": "src/static/studio/lab/sharness/os-of-one-process/v1/"
+  },
+  {
+   "id": "storyline",
+   "role": "writer",
+   "task": "the storyline page updated from the capture",
+   "out": "src/pages/ruv-sgit/sharness-storyline.html"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "task": "check SH1 v2, SH4 to SH7 and the storyline against the capture",
+   "out": "team/ruv-sgit/runs/r24-sharness-capture.editor.md"
+  }
+ ]
+}

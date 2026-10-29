@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled wake, hourly at :32",
+ "started": "2026-10-29T16:34:13Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "go",
+   "comment": "Amended per the pre-review. 1) The SHarness series from the researcher's capture (mail 023, evidence/studio/studio-sharness-series.json, read only): run r24-sharness-capture; in-session sub-agent builders (prompts on) in parallel under src/static/studio/lab/sharness/: SH1 v2 at without-with/v2 (the playground's measured without and with), SH4 one-idea/v1, SH5 kernel-in-a-tab/v1 (the replay, also the live demo's offline fallback, mail 024), SH6 last-metre/v1 (without observed, with designed; the key shown only as a neutral redaction; no command reproduced as an instruction; no real key, token or screenshot of one), SH7 os-of-one-process/v1; facts inline citing capture ids; no captured private material. 2) The storyline page src/pages/ruv-sgit/sharness-storyline.html updated (moves 1, 2, 5 labelled ours; up to 90 s on stage; the fallback; embeds). 3) Editor worker; fixes; run closed and kept; zip to the editor. 4) Board 014 and the debrief record the scripted injection in the capture as a caution; reply to the researcher (told of the injection) and deck, cc conductor; vault_check before every vault commit. 5) No edit to talk.json, the slides, studio/data or evidence. 6) Release to the branch and dev after the gate.",
+   "at": "2026-10-29T16:36:56Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "",
+   "verdict": "go",
+   "comment": "The amended plan meets every earlier condition: the storyline path is named and in scope; SH6 shows only a neutral redaction and no command as an instruction; workers are in-session sub-agents; no private material; the injection is recorded as a caution on board 014 and in the debrief, and the researcher is told; vault_check runs before vault commits; no talk.json, slides, studio/data or evidence edits; release goes to the branch and dev only.",
+   "at": "2026-10-29T16:37:14Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
