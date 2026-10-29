@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T17:23Z",
- "count": 259,
+ "built": "2026-10-29T17:33Z",
+ "count": 303,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T17:23Z"
+   "adjudicated": "researcher, 2026-10-29T17:33Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1726,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T17:23Z"
+   "adjudicated": "researcher, 2026-10-29T17:33Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -4524,6 +4524,286 @@
    "register": "studio-sharness-series"
   },
   {
+   "id": "wnews-c01",
+   "text": "The SGit Newsroom's articles are written from Dinis Cruz's voice notes by an agent working as the newsroom.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-nr-home",
+     "quote": "Articles by Dinis Cruz, written from his voice notes by an agent working as the newsroom",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Self-description on the front page.",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c02",
+   "text": "The newsroom publishes its roles, rules, board and a log of every run.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-nr-newsroom",
+     "quote": "Public on purpose: the roles, the rules each one works under, the board, and a log of every run.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c03",
+   "text": "At capture, the independent review page showed the editor had reviewed 0 of 323 current texts and Claude Fable 1 of 323.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-nr-reviews",
+     "quote": "Dinis Cruz dinis-cruz editor 0 of 323 Claude Fable (Anthropic) anthropic-fable agent 1 of 323",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Counts as at the capture time; they will change.",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c04",
+   "text": "The PHP site's fact-check desk grades claims from captures it read, not from how often a thing is repeated.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-php-factcheck",
+     "quote": "A level is earned from captures the desk opened and read, never from how often a thing is repeated: ten outlets restating one headline are one source.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c05",
+   "text": "The PHP site went from nothing to 391 pages in about ten hours, and its own fact-check desk found 11 of its 70 claims said more than their evidence.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-php-updates",
+     "quote": "The site went from nothing to 391 pages in about ten hours, and its own fact-check desk found that 11 of its 70 claims say more than their evidence.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Daily update of 22 October; the site's own account.",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c06",
+   "text": "The PHP site is built by one editor and a team of software agents and rebuilt from its evidence vault, never written by hand.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-php-method",
+     "quote": "the site is rebuilt from the vault, never written by hand",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c07",
+   "text": "The PHP story's team page lists 21 members, two of them human.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-nr-a-call-for-help",
+     "quote": "Its team page lists 21 members: two humans, the editor and a project manager, and 19 roles run by agents or waiting to be filled.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c08",
+   "text": "In the RiskMandate inbox team no agent sends email; agents write drafts and a person sends them.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wnews-nr-a-inbox-team",
+     "quote": "Drafts only. No agent sends, replies or forwards.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The same passage names one exception: scheduled runs send START and END emails to the agent's own address.",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c09",
+   "text": "SHarness is released at sharness.ai with sharness-ai 0.2.0 on PyPI.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "wnews-nr-a-sharness",
+     "quote": "it is now released, at sharness.ai, with sharness-ai 0.2.0 on PyPI",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "PyPI not checked in this pass.",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c10",
+   "text": "In the newsroom's agent identity scheme a new session makes its own key pair and the private half never leaves it; publishing the public half is the authorisation.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-nr-a-identity",
+     "quote": "It makes its own key pair, and the private half never leaves it.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c11",
+   "text": "About 69% of websites whose server-side language W3Techs can identify use PHP, down from 80.6% in 2015.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "wnews-php-php-share",
+     "quote": "About 69% of the websites whose server-side language W3Techs can identify, and falling: it was 80.6% in 2015.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Secondary to W3Techs; W3Techs not fetched here.",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c12",
+   "text": "On the join page the signing half of the reader's key stays in the browser and cannot be copied out.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wnews-php-join",
+     "quote": "The signing half stays in this browser and cannot be copied out of it, by this site or anyone else.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A design claim; not tested in this pass.",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c13",
+   "text": "The BBC live page changed between the newsroom's first copy at 07:55 UTC and its second at 08:04 on 22 October.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-nr-a-capture-first",
+     "quote": "The BBC live page grew a new post between our first copy at 07:55 UTC and our second at 08:04",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-newsrooms"
+  },
+  {
+   "id": "wnews-c14",
+   "text": "The team's vault channels (conductor, issues, mail) were documented but not yet in use; the team synced through the repository.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wnews-php-team-channels",
+     "quote": "(Not in use yet: for now the team syncs through the repository.)",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "As stated on the page at capture.",
+   "register": "studio-work-newsrooms"
+  },
+  {
    "id": "wpki-c01",
    "text": "On pki.sgit.ai a passkey opens a vault that holds a person's private keys, so the keys follow them to every device the passkey opens.",
    "where": [
@@ -5372,6 +5652,616 @@
    "primary_source": null,
    "note": "",
    "register": "studio-work-pki"
+  },
+  {
+   "id": "wsgit-c01",
+   "text": "sgit encrypts files client-side with AES-256-GCM before they leave the machine, and the server stores ciphertext under opaque ids.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-what-is-sgit",
+     "quote": "Clone, commit, branch, diff and merge folders of files that are encrypted with AES-256-GCM before they leave your machine. The server stores ciphertext under opaque IDs, it never sees your filenames, your contents, or your commit messages.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c02",
+   "text": "A commit snapshots the folder into a git-like object graph of commits, trees and blobs, each object encrypted client-side and content-addressed, so only changed ciphertext is pushed.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-what-is-sgit",
+     "quote": "When you commit, sgit snapshots the folder into a git-like object graph, commits pointing at trees pointing at content blobs, and encrypts every object client-side. When you push, only changed ciphertext travels.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c03",
+   "text": "The vault key is three things in one string: the vault's address on the server, the credential, and the root of the key hierarchy.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-what-is-sgit",
+     "quote": "is three things in one string: the address of the vault on the server, the credential to access it, and the root of the local key-derivation hierarchy.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c04",
+   "text": "sgit differs from git in three deliberate ways: no staging area, the key is URL, auth and encryption key in one, and two layers of branches.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "The three deliberate differences from git: no staging area; every clone gets its own\n  private branch and publishing to a shared branch is explicit; the vault key is address,\n  credential and encryption key in one string.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c05",
+   "text": "sgit supports init, clone, status, commit, push, pull, fetch, branches, three-way merge, history, revert, reset and stash, but not rebase, cherry-pick, bisect, blame, hooks, submodules or tags.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "No for: pull requests (a hosting-platform\n  construct layered on merge, not a git primitive), a staging area or partial commits\n  (a commit snapshots the whole folder), bisect, blame, rebase, cherry-pick, hooks,\n  submodules and tags.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c06",
+   "text": "Each clone works on a private clone branch whose key never leaves the machine, so two agents on one vault cannot overwrite each other's unpushed work.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-two-branch",
+     "quote": "Two machines, or two agents, on the same vault physically cannot overwrite each other's uncommitted or unpushed work: they're on different branches with different keys.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c07",
+   "text": "Pushes use compare-and-swap on the server, so a stale push is rejected rather than overwriting.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-two-branch",
+     "quote": "Pushes use compare-and-swap on the server (atomic batch writes): if someone pushed before you, your push is rejected cleanly instead of silently clobbering, pull, merge, push again.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c08",
+   "text": "Merges are genuine three-way merges per file, and sgit resolve --show gives a verdict that separates genuine conflicts from one-sided or identical changes.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-two-branch",
+     "quote": "When histories diverge, sgit runs a genuine three-way merge (common ancestor + ours + theirs) per file.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c09",
+   "text": "The server never sees contents, filenames, commit messages, branch names or keys; it does see the vault id, object sizes, timing and approximate activity volume.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-security",
+     "quote": "Traffic analysis of sizes and timing is a real (if narrow) channel, and pretending otherwise would be marketing, not security.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wsgit-llms",
+     "quote": "What the server can see: the vault ID, the size of each encrypted object, and request\n  timing. Never filenames, contents, or commit messages.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c10",
+   "text": "Keys are derived from the vault key with PBKDF2-HMAC-SHA256 at 600,000 iterations, then HKDF-SHA256 for purpose-specific keys; no custom primitives.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "Crypto: AES-256-GCM, PBKDF2-HMAC-SHA256 at 600k iterations, HKDF-SHA256. No custom\n  primitives; output matches the browser Web Crypto API byte for byte.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c11",
+   "text": "The site itself says the structure-key split, separating metadata access from content access, is designed but not yet active.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wsgit-security",
+     "quote": "Today, vault objects are encrypted under the read key, activating the structure-key split across structural objects is an in-progress, reviewed design change",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A stated limit of the design, worth keeping beside claim c10.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c12",
+   "text": "A generated vault passphrase carries about 124 bits of entropy, and there is no password reset or recovery.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-security",
+     "quote": "A generated passphrase is 24 characters over a 36-symbol alphabet",
+     "supports": "for"
+    },
+    {
+     "source_id": "wsgit-security",
+     "quote": "there is no password reset. If you lose the vault key, nobody, including us, can recover the contents.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c13",
+   "text": "The CLI and the SG/Vault browser client are independent implementations of one wire format, held together by test vectors.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-security",
+     "quote": "The sgit CLI and the SG/Vault browser client are independent implementations of the same encrypted wire format, kept interoperable through a versioned contract with test vectors.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c14",
+   "text": "A read key is derived one way from the vault key, so it can be published and can never be turned into write access.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-credentials",
+     "quote": "A read key carries read only, and is derived from the vault key by a one-way function, so a read key can never be turned back into write access.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c15",
+   "text": "Revoking a read key is not retroactive: anyone who fetched the objects keeps them.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-credentials",
+     "quote": "Revocation is not retroactive. Anyone who has fetched the objects keeps them; rotating protects future commits only.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c16",
+   "text": "Append lanes let a sender write to a vault with no account; the response is blind, and the server stores only hashes of the capabilities and ciphertext.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vault-messaging",
+     "quote": "The server stores SHA-256 hashes of the first three and checks H(presented) == stored. It never holds a raw capability key, and never holds a private key at all. Compromising the server yields hashes and ciphertext.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c17",
+   "text": "Deriving the lane address from a public key is proposed, not shipped; today the token is agreed out of band.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "That derivation is PROPOSED, no shipped command emits it, so today\n  you agree the token out of band.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The shape diagram on the messaging page draws append_token = H(pubkey); the text marks it as proposed.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c18",
+   "text": "On a 600-commit, 9,400-file vault a one-folder scoped clone took 14 s against 80 s for a full clone (CLI team's numbers, one sandbox).",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-partial-clones",
+     "quote": "On a shared CRM vault of about 600 commits and 9,400 files",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Single environment, vendor-measured; the site's own check on a 55-file vault gave 9.7 s against 3.0 s.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c19",
+   "text": "A partial clone is not an access boundary: the clone holds the vault key and can widen to any folder.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-limitations",
+     "quote": "A partial clone is not an access boundary. --path decides what is downloaded, not what can be read",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c20",
+   "text": "The site states sgit is beta and has no compliance certification.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "sgit is beta; it has no compliance certification of any kind.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c21",
+   "text": "Commit author attribution is not yet recorded; per-agent identity comes from branch ids, not signed authorship (as stated on the limitations page of v0.7.87).",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "wsgit-limitations",
+     "quote": "Commit author attribution is not yet recorded, in multi-agent vaults, per-agent identity currently comes from branch IDs, not signed authorship.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "May be stale: llms.txt lists an update to sgit-ai 0.21.0 that mentions signatures; not reconciled here.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c22",
+   "text": "sgit.ai lists 54 vaults whose read keys were published on purpose.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vaults-index",
+     "quote": "54 published vaults:",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The site footer on the same pages still says thirty vaults.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c23",
+   "text": "In the Hope or enforcement simulation the hope share falls from 97.4% (one model with connectors) to 22.9% (narrow agents behind a gateway), and unbounded excess from 12 actions to none.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vault-hope",
+     "quote": "The excess falls from twelve actions to seven to none; the mandated limits that rest on hope stay at six in the first two designs and fall to none in the third.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Simulated and deterministic: no model was measured; percentages read from the app screenshot, the quote supports the excess figures.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c24",
+   "text": "After the run, all 138 rule tests in Design 1 rested on the model; in Design 3, 52 of 85 were held by a boundary.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vault-hope",
+     "quote": "In Design 1, all 138 tests rest on the model. In Design 3, 52 of 85 are held by a boundary.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Simulation; the page says whether a hostile email gets past a prose rule is an assumption.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c25",
+   "text": "On three desktops the same agent's unbounded excess falls from 23 rows to 11 to 3, and rows held by a boundary rise from 0 to 1 to 9.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vault-agent-desk",
+     "quote": "The excess over the mandate that nothing bounds falls from 23 rows on your own Mac, to 11 on a dedicated Mac, to 3 on a hardened one; rows held by a boundary rise from 0 to 1 to 9.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c26",
+   "text": "A Process Behaviour Policy is defined once, hashed, supplied from outside the agent and enforced by the runtime, never by the process it constrains.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-sharness-policies",
+     "quote": "It is defined once, hashed, supplied from outside the agent, and enforced by the runtime: never by the process it constrains.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c27",
+   "text": "In SHarness's measured environment the default grant was everything: root, all capabilities, no seccomp.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-sharness-policies",
+     "quote": "In the measured environment the default grant is everything: root, all capabilities, no seccomp, no Yama",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Measured in one Claude agent workspace on 24 Oct 2026, per the site.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c28",
+   "text": "SHarness ran a real Linux kernel in a browser tab enforcing a policy (E09), measured 25 Oct 2026; most other components are design only.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wsgit-sharness-llms",
+     "quote": "E09 is a real Linux kernel in a browser tab running hello, measured 25 Oct 2026",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Own-site measurement; the same file says no other SHarness component is built beyond the listed MVPs.",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c29",
+   "text": "The canonical policy hash was measured identical in Python, the browser and a Linux guest.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-sharness-pbp",
+     "quote": "Measured identical in Python, the browser and a Linux guest, 25 Oct 2026.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-work-sgit-sharness"
+  },
+  {
+   "id": "wsgit-c30",
+   "text": "ruv.sgit reports 27 runs in its ledger, 129 vault commits, and no probed text found in what the vault server stored.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wsgit-ruv-home",
+     "quote": "ruv.sgit runs in the ledger",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Counters are read live from data/vaults.json when the page loads; the quote supports only the label, the numbers are in page.txt as separate lines.",
+   "register": "studio-work-sgit-sharness"
   },
   {
    "id": "story-r1-solarwinds",

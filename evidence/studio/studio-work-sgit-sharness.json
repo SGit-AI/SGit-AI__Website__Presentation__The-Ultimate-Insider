@@ -1,0 +1,1337 @@
+{
+ "about": "Research pass on the SGit CLI site (sgit.ai: docs on architecture, the two-branch model, security and crypto, credentials and read keys, append lanes, partial clones, limits, the vault catalogue and four policy vaults), sharness.ai (Process Behaviour Policies, the PBP on one page, the levels, the decision engine and the landscape; the existing sharness2-* animation captures were not repeated), ruv.sgit.ai (home page) and two newsroom.sgit.ai pages for the public vault survey. 28 captures, 21 cropped regions each inspected by eye. Gaps: no article pages captured; the vault apps themselves were not opened or cloned; sharness.ai /code/browser and the playground were left to the sharness2-* series; ruv.sgit.ai sub-pages (shop, ledger, POCs) not captured; the try page terminal and the sgit-maps embed were not exercised; vault pages other than Hope or enforcement, Agent Desk, Licence to Operate and Kit Bag are described from the catalogue only.",
+ "cautions": [
+  "Every sgit.ai vault page and newsroom.sgit.ai/llms.txt print read keys in full in the page text; the captures under captures/wsgit-* therefore contain read keys in page.html, page.txt and llms.txt. They are published on purpose by their owners, but this JSON and the PNG crops carry none; do not republish the raw captures.",
+  "The home page \"What the server sees\" diagram shows illustrative object and ref ids in hex; its crop was discarded under the no-key-like-strings rule. Use the /security/ table crop instead.",
+  "Agent Desk app screenshots carry small contact text in the app sidebar; no crop saved. ruv.sgit.ai's five-steps section ends with a contact email address; the crop stops above it.",
+  "sharness.ai /design/policies/ prompt-injection table quotes example injected commands as the site's own illustrations; the crop shows them, the JSON does not quote them. sgit.ai/llms.txt carries \"Notes for agents\" and newsroom.sgit.ai/llms.txt carries instructions addressed to reviewer agents; recorded as material, not followed.",
+  "sgit.ai pages show site v0.7.87 dated 13 Oct 2026 while the capture is 29 Oct 2026; the site footer says thirty vaults while the catalogue says fifty-four. Figures may be stale relative to the CLI (llms.txt mentions sgit-ai 0.21.0; sharness.ai mentions 0.24.x).",
+  "Hope or enforcement and Agent Desk numbers are deterministic simulations with labelled assumptions, not measurements of a model; say \"simulated\" on any slide.",
+  "All claims are own-site (A2 at most). The partial-clone timings are the CLI team's single-environment numbers.",
+  "The limitations page says commit author attribution is not yet recorded; other pages mention signatures in later CLI versions. Not reconciled.",
+  "https://sgit.ai/vault/reading-a-vault-file.html returned 404 (the .md path too); dropped."
+ ],
+ "pieces": [
+  {
+   "id": "wsgit-piece-home",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/",
+   "title": "sgit (the encrypted git for humans and AI agents)",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The front door: a vault is a unit of work (data, app, history), the published vaults as proof, and a tabbed terminal showing that under the hood it is git.",
+   "infographics_and_animations": [
+    "Tabbed terminal demo in five steps (create, work like git, history and diffs, sync, agent mode)",
+    "Six feature cards: git-like version control, client-side encryption, three-way merge, two-branch model, apps inside the data, browser interop",
+    "A your-machine versus the-server diagram of what the server sees (contains illustrative object ids, not cropped)",
+    "Screenshot cards of published vaults and a network band of sibling sites"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "under-the-hood",
+     "selector_or_where": "section#demo",
+     "what_it_shows": "The five-tab terminal (create step shown, key as a placeholder) and the six feature cards.",
+     "why_a_slide": "One frame that says sgit is git with the payload encrypted, and lists the features over plain git.",
+     "png": "region-under-the-hood.png",
+     "captured_at": "2026-10-29T17:15:48Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-home",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-what-is-sgit",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/what-is-sgit.html",
+   "title": "What is sgit, Docs",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "sgit is git for encrypted vaults: a folder plus .sg_vault/, a git-like object graph encrypted client-side, and a vault key that is address, credential and key root in one.",
+   "infographics_and_animations": [
+    "Folder tree of a vault (your files untouched; .sg_vault/bare and local)"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "how-it-works",
+     "selector_or_where": "clip y 400 to 1040: \"How it works\" and \"What makes it different from git\"",
+     "what_it_shows": "The prose on the encrypted object graph, the folder tree, and the three differences from git.",
+     "why_a_slide": "The architecture in one screen, from the official docs.",
+     "png": "region-how-it-works.png",
+     "captured_at": "2026-10-29T17:15:50Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-what-is-sgit",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-for-git-users",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/sgit-for-git-users.html",
+   "title": "sgit for git users, Docs",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Every git command mapped to its sgit equivalent, and the three deliberate differences: no staging area, the key is URL plus auth plus encryption, two layers of branches.",
+   "infographics_and_animations": [
+    "The Rosetta stone table: git command, sgit command, notes"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "rosetta-stone",
+     "selector_or_where": "clip y 330 to 1030: the Rosetta stone table",
+     "what_it_shows": "Fourteen git verbs beside their sgit equivalents.",
+     "why_a_slide": "Shows a technical audience that the muscle memory carries over; a good A2 slide for \"features over git\".",
+     "png": "region-rosetta-stone.png",
+     "captured_at": "2026-10-29T17:15:53Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-for-git-users",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-two-branch",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/two-branch-model.html",
+   "title": "The two-branch model, sgit Docs",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Every clone works on a private branch whose key never leaves the machine; pushing to a shared named branch is explicit, with compare-and-swap on the server.",
+   "infographics_and_animations": [
+    "ASCII diagram: agent A clone branch, push, named branch on the server, pull, agent B clone branch"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "clone-and-named-branches",
+     "selector_or_where": "clip y 300 to 960: diagram and \"Why it works this way\"",
+     "what_it_shows": "The two-branch diagram and the three reasons: isolation by construction, explicit sharing, safe concurrent pushes.",
+     "why_a_slide": "The design choice that makes several agents on one vault safe, which is the agent-team point of the talk.",
+     "png": "region-clone-and-named-branches.png",
+     "captured_at": "2026-10-29T17:15:55Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-two-branch",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wsgit-piece-security",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/security/",
+   "title": "Security model, sgit",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The zero-knowledge model stated precisely: what the server never sees and what it does see, the crypto stack, the two key systems, key strength, and the no-reset consequence.",
+   "infographics_and_animations": [
+    "Table: what the server never sees against what it does see",
+    "Table: the crypto stack layer by layer",
+    "Table: vault key (symmetric) against keypair (asymmetric)"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "server-sees",
+     "selector_or_where": "clip y 320 to 700: first table",
+     "what_it_shows": "Never sees: contents, filenames, commit messages, keys. Does see: vault id, sizes, timing, activity volume.",
+     "why_a_slide": "An honest threat model on one slide: it names its own metadata leak.",
+     "png": "region-server-sees.png",
+     "captured_at": "2026-10-29T17:15:57Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "crypto-stack",
+     "selector_or_where": "clip y 690 to 1070: crypto stack table",
+     "what_it_shows": "AES-256-GCM, PBKDF2 at 600,000 iterations, HKDF, HMAC-derived ids, content addressing over ciphertext.",
+     "why_a_slide": "Standard primitives only, byte-compatible with Web Crypto; good for a sceptical security audience.",
+     "png": "region-crypto-stack.png",
+     "captured_at": "2026-10-29T17:15:57Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-security",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-credentials",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/credentials.html",
+   "title": "Vault credentials: what each one can do, and what its prefix declares, sgit.ai",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Two capabilities: a vault key that reads and writes and a read key derived one way from it, so a published read key can never become write access; five prefixes declare intent.",
+   "infographics_and_animations": [
+    "SVG diagram: vault key (write capability) derives one way to the read key (read capability), no way back; prefixes shown, no key values"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "two-capabilities",
+     "selector_or_where": "clip y 570 to 1060: the derive-one-way SVG",
+     "what_it_shows": "Vault key to read key, one way, with \"no way back\"; prefixes only, no key material.",
+     "why_a_slide": "The single idea behind every published vault: read access that is safe to publish.",
+     "png": "region-two-capabilities.png",
+     "captured_at": "2026-10-29T17:16:00Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-credentials",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-vault-messaging",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/vault-messaging.html",
+   "title": "Sending messages between vaults, sgit.ai",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Append lanes: a write-only channel on a recipient vault, gated by a token the sender holds; four separated capabilities, blind responses, and the server holds only hashes and ciphertext.",
+   "infographics_and_animations": [
+    "ASCII sequence diagram: sender, server, recipient, append write, list, fetch, mark-processed",
+    "Table of the four capabilities and what each can and cannot do"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "shape-of-it",
+     "selector_or_where": "clip y 480 to 1060: \"The shape of it\"",
+     "what_it_shows": "The append-lane sequence and what the server can and cannot see.",
+     "why_a_slide": "Vault-to-vault messaging without sharing a key: the transport the agent team uses for mail.",
+     "png": "region-shape-of-it.png",
+     "captured_at": "2026-10-29T17:16:02Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-vault-messaging",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wsgit-piece-partial-clones",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/partial-clones.html",
+   "title": "Partial clones: a folder scope and a history depth, sgit Docs",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Scale: a folder-scoped or shallow clone on a 600-commit, 9,400-file vault took 14 s against 80 s for a full clone; a partial clone is not an access boundary.",
+   "infographics_and_animations": [
+    "Measured table: clone type, time, objects, download"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "measured",
+     "selector_or_where": "clip y 740 to 1240: \"Measured\" table and the site's own check",
+     "what_it_shows": "Full clone 80 s and 173 MB against one folder in 14 s and 3.2 MB.",
+     "why_a_slide": "The one measured scale number on the site, with its method and caveat.",
+     "png": "region-measured.png",
+     "captured_at": "2026-10-29T17:16:05Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-partial-clones",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-limitations",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/docs/limitations.html",
+   "title": "When NOT to use sgit, Docs",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The honest page: not a secrets manager, beta, no partial commits, not for huge changing binaries, no server-side search, no key recovery, and current gaps.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wsgit-limitations",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-sgit-maps",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/demos/sgit-maps.html",
+   "title": "sgit, on a Wardley Map (sgit.ai demos)",
+   "kind": "demo",
+   "published": null,
+   "what_it_says": "Six Wardley maps of sgit's positioning, starting with where git wins, served as a second app from the same encrypted vault as the SG/Send strategy essay.",
+   "infographics_and_animations": [
+    "Six Wardley maps drawn as inline SVG inside a live vault embed (not captured: the embed opens the vault with a read key)"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "live-embed",
+     "selector_or_where": "section \"The live embed\": skipped",
+     "what_it_shows": "The maps render inside the vault embed.",
+     "why_a_slide": "Skipped: the embed region is next to read-key material; capture by hand from the vault app if wanted.",
+     "png": null,
+     "captured_at": "2026-10-29T17:16:10Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-sgit-maps",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-try",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/try/",
+   "title": "Try sgit in your browser, sgit.ai",
+   "kind": "demo",
+   "published": null,
+   "what_it_says": "The real sgit-ai wheel running in the browser under Pyodide: derive keys, encrypt and decrypt, an in-memory vault, and a terminal.",
+   "infographics_and_animations": [
+    "Interactive browser terminal and Python console (needs a 20 MB load; not captured)"
+   ],
+   "showcase_regions": [],
+   "source_id": "wsgit-try",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-vaults-index",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/demos/vaults/",
+   "title": "Published vaults, sgit.ai",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Fifty-four vaults, each opened in a browser by a read key published on purpose; categories, sizes and dates.",
+   "infographics_and_animations": [
+    "Sortable table of the 54 vaults (vault ids visible; read keys are on each vault page, not in the table)"
+   ],
+   "showcase_regions": [],
+   "source_id": "wsgit-vaults-index",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-vault-hope",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/demos/vaults/hope-or-enforcement/",
+   "title": "Hope or enforcement, the Agent Behaviour Policy at work on a customer service agent, sgit.ai",
+   "kind": "vault",
+   "published": null,
+   "what_it_says": "One customer service mandate built three ways (one model, a harness, narrow agents behind a gateway), 62 emails through each, and the policy after the run: hope falls and boundaries rise.",
+   "infographics_and_animations": [
+    "App screenshots: Design 3 view (grant equals mandate)",
+    "App screenshot: the three designs side by side, 25 actions",
+    "App screenshot: the mailbox, one hostile email through three designs",
+    "App screenshot: what the policy still says and the boundary to build next",
+    "App screenshot: Design 1 after the run, every test rested on the model",
+    "App screenshot: the promises and who keeps them",
+    "Live vault embed (app mode and vault browser)"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "three-designs",
+     "selector_or_where": "clip y 3445 to 3855: \"THREE DESIGNS\" row",
+     "what_it_shows": "Design 3 in the app: 35 rules, 22.9% hope share, zero unbounded excess, beside the text on all three designs.",
+     "why_a_slide": "The after picture: the refactor shrinks the grant until it equals the mandate.",
+     "png": "region-three-designs.png",
+     "captured_at": "2026-10-29T17:16:48Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "compare",
+     "selector_or_where": "clip y 3895 to 4275: \"COMPARE\" row",
+     "what_it_shows": "The three designs side by side: rules, expectations, boundaries, hope share 97.4%, 72.7%, 22.9%, excess 12, 7, 0.",
+     "why_a_slide": "Before and after in one table: the editor's favourite comparison.",
+     "png": "region-compare.png",
+     "captured_at": "2026-10-29T17:16:48Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "after-the-run",
+     "selector_or_where": "clip y 5190 to 5565: \"AFTER THE RUN\" row",
+     "what_it_shows": "Design 1 after the run: 138 tests, none held by a boundary, with the text giving Design 3 at 52 of 85.",
+     "why_a_slide": "The before picture, measured: everything rests on the model.",
+     "png": "region-after-the-run.png",
+     "captured_at": "2026-10-29T17:16:48Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-vault-hope",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wsgit-piece-vault-agent-desk",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/demos/vaults/agent-desk/",
+   "title": "Agent Desk, a business plan for a Mac of the agent's own, sgit.ai",
+   "kind": "vault",
+   "published": null,
+   "what_it_says": "A business plan for a Mac of the agent's own; the same customer service agent on three desktops, with unbounded excess falling from 23 rows to 11 to 3.",
+   "infographics_and_animations": [
+    "App screenshot: the same agent, three behaviour policies",
+    "App screenshot: 22 hostile inputs, three answers",
+    "App screenshot: architecture, a clean Mac, a key, a vault",
+    "Live vault embed"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "three-desktops",
+     "selector_or_where": "\"THE THREE DESKTOPS\" row: not saved",
+     "what_it_shows": "The three desktops comparison.",
+     "why_a_slide": "Not saved: the app sidebar in the screenshot carries tiny contact text; crop the app view by hand if needed.",
+     "png": null,
+     "captured_at": "2026-10-29T17:17:03Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-vault-agent-desk",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wsgit-piece-vault-licence",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/demos/vaults/licence-to-operate/",
+   "title": "Licence to Operate (an insurance policy for an agent, simulated) a published vault",
+   "kind": "vault",
+   "published": null,
+   "what_it_says": "An insurance policy for an agent, simulated: a grant of 12 capabilities, a mandate of 4, and a delta of 8 that no policy covers.",
+   "infographics_and_animations": [
+    "Table: grant, mandate, delta with the demo values",
+    "Live vault embed with a simulated support conversation",
+    "Decks read live out of the vault",
+    "Seven short videos (linked)"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "the-delta",
+     "selector_or_where": "clip y 3370 to 3810: \"The idea worth stealing: the delta\"",
+     "what_it_shows": "CAN DO 12, MAY DO 4, THE DELTA 8 including crm:write, mail:send, shell:exec.",
+     "why_a_slide": "The delta in one table: the risk the talk names, made concrete.",
+     "png": "region-the-delta.png",
+     "captured_at": "2026-10-29T17:17:33Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-vault-licence",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wsgit-piece-vault-kit-bag",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/demos/vaults/kit-bag/",
+   "title": "Kit Bag, a business plan for a Chrome extension you build yourself, with its policy written first, published as a vault",
+   "kind": "vault",
+   "published": null,
+   "what_it_says": "A Chrome extension you build yourself and load from a folder, with its Agent Behaviour Policy written first and every barrier typed; the vault is the distribution channel.",
+   "infographics_and_animations": [
+    "Three-step diagram: source published in a vault, an agent makes it yours, load it from a folder",
+    "Live vault embed"
+   ],
+   "showcase_regions": [],
+   "source_id": "wsgit-vault-kit-bag",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wsgit-piece-sharness-policies",
+   "site": "sharness.ai",
+   "page_url": "https://sharness.ai/design/policies/",
+   "title": "Process Behaviour Policies, SHarness",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Process Behaviour Policies: the ABP model applied to a process, defined once, hashed, supplied from outside, enforced by the runtime, with fractal layers that only narrow.",
+   "infographics_and_animations": [
+    "Diagram: who enforces decides the barrier kind",
+    "Diagram: fractal layers L0 to L5, effective policy as the intersection",
+    "Enforcement map table",
+    "Prompt-injection walkthrough table"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "barrier-kind",
+     "selector_or_where": "clip x 20 y 860, 955 by 200: section 2 diagram",
+     "what_it_shows": "If the agent applies the locks they are a Setting for itself; if the platform applies them, a Boundary all the way down.",
+     "why_a_slide": "Why the enforcer must sit outside the agent, in one drawing.",
+     "png": "region-barrier-kind.png",
+     "captured_at": "2026-10-29T17:17:50Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "prompt-injection",
+     "selector_or_where": "clip x 20 y 5540, 955 by 630: section 8 table",
+     "what_it_shows": "Eight injections and where each is stopped (designed), including the one not stopped locally.",
+     "why_a_slide": "Shows the defence and its honest limit; the injected phrases are the site's own examples.",
+     "png": "region-prompt-injection.png",
+     "captured_at": "2026-10-29T17:17:50Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-sharness-policies",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wsgit-piece-sharness-pbp",
+   "site": "sharness.ai",
+   "page_url": "https://sharness.ai/design/pbp/",
+   "title": "The Process Behaviour Policy, on one page, SHarness",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The PBP on one page: text, a hash from outside and an enforcer the subject does not include; the four objects for a process; two kinds of rows.",
+   "infographics_and_animations": [
+    "Table: mandate, grant, delta, barrier for a process",
+    "Tree of doors table"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "four-objects",
+     "selector_or_where": "clip x 20 y 515, 955 by 380: section 2 table",
+     "what_it_shows": "Mandate, grant, delta and barrier, and where each comes from today.",
+     "why_a_slide": "The ABP vocabulary carried down to a process, one table.",
+     "png": "region-four-objects.png",
+     "captured_at": "2026-10-29T17:17:53Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-sharness-pbp",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wsgit-piece-sharness-levels",
+   "site": "sharness.ai",
+   "page_url": "https://sharness.ai/design/levels/",
+   "title": "The levels: one policy, written at the depth you need, SHarness",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "One policy written at six levels, from a one-sentence intent to the kernel ground, each compiling deterministically into the one below so the simplest is as binding as the deepest.",
+   "infographics_and_animations": [
+    "Table: the six levels with what you write, its nouns, what it compresses away and what it emits"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "the-levels",
+     "selector_or_where": "clip x 20 y 1275, 955 by 800: section 3 table",
+     "what_it_shows": "Intent, profiles, rows in plain nouns, doors and targets, mechanisms, the ground.",
+     "why_a_slide": "How a manager's sentence becomes Landlock rules under one hash.",
+     "png": "region-the-levels.png",
+     "captured_at": "2026-10-29T17:17:57Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-sharness-levels",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wsgit-piece-sharness-decision",
+   "site": "sharness.ai",
+   "page_url": "https://sharness.ai/design/decision/",
+   "title": "The decision at the door, SHarness",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The permission prompt is a Setting and a weak decision; a decision engine answers allow, deny or ask from command, policy and intent, and asks only for what the policy cannot hold.",
+   "infographics_and_animations": [
+    "Table: principles from ux.sgit.ai",
+    "Table: the decision engine answers",
+    "Table: the prototype run on twelve commands"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "decision-engine",
+     "selector_or_where": "clip x 20 y 1730, 955 by 385: section 4",
+     "what_it_shows": "Allow, deny, ask: when, and what the person sees.",
+     "why_a_slide": "The prompt as the last resort, a crisp slide for the human-in-the-loop argument.",
+     "png": "region-decision-engine.png",
+     "captured_at": "2026-10-29T17:18:01Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-sharness-decision",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wsgit-piece-sharness-landscape",
+   "site": "sharness.ai",
+   "page_url": "https://sharness.ai/landscape/",
+   "title": "The landscape, SHarness",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Policies at the centre: ask of every product which rows of a policy it can enforce, and translate the policy into its form.",
+   "infographics_and_animations": [
+    "Table: kinds of product (outer boundaries, shell sandboxes, gateways, key holders, guardrails, platforms, standards) in SHarness terms"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "matrix",
+     "selector_or_where": "clip x 20 y 815, 955 by 1000: section 2 table",
+     "what_it_shows": "The market sorted by what each kind can enforce and what to do with it.",
+     "why_a_slide": "A landscape slide that names vendors without ranking them.",
+     "png": "region-matrix.png",
+     "captured_at": "2026-10-29T17:18:05Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-sharness-landscape",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wsgit-piece-ruv-home",
+   "site": "ruv.sgit.ai",
+   "page_url": "https://ruv.sgit.ai/",
+   "title": "ruv.sgit: agent work with a written mandate and a vault you keep",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "ruv.sgit: agent work by a Ruflo hive under an Agent Behaviour Policy, every step committed to an encrypted sgit vault handed to the client; five priced steps and a ledger of runs.",
+   "infographics_and_animations": [
+    "Five step cards with prices",
+    "Live counters read from data/vaults.json and data/report.json (27 runs, 129 commits, 0 probed text found)",
+    "The rules in four lines",
+    "Embedded talk deck (London Agentics meetup) and a photo of rUv's stack"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "five-steps",
+     "selector_or_where": "clip y 660 to 1245: section#path cards (footer with the contact address cropped out)",
+     "what_it_shows": "A conversation, a first run, expert time, a pilot, run it yourself, each with what you keep.",
+     "why_a_slide": "The commercial shape of the work: small steps, each ending in a vault you keep.",
+     "png": "region-five-steps.png",
+     "captured_at": "2026-10-29T17:18:10Z",
+     "no_keys_checked": true
+    },
+    {
+     "slug": "rules",
+     "selector_or_where": "section#rules",
+     "what_it_shows": "Open source, your code and data stay yours, an equal split, whoever has the client bills.",
+     "why_a_slide": "The rules of engagement in four lines.",
+     "png": "region-rules.png",
+     "captured_at": "2026-10-29T17:18:10Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wsgit-ruv-home",
+   "part_fit": "work section"
+  },
+  {
+   "id": "wsgit-piece-newsroom-reviews-vaults",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/reviews/vaults.html",
+   "title": "Vaults and keys · newsroom.sgit.ai",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Each outside reviewer gets a public vault with a published read key, pinned signing keys, and a stated list of what is private and who holds it.",
+   "infographics_and_animations": [
+    "Read-key QR codes per reviewer vault (not captured)",
+    "Table: what is private and where it is"
+   ],
+   "showcase_regions": [],
+   "source_id": "wsgit-newsroom-reviews-vaults",
+   "part_fit": "part 3"
+  }
+ ],
+ "claims": [
+  {
+   "id": "wsgit-c01",
+   "text": "sgit encrypts files client-side with AES-256-GCM before they leave the machine, and the server stores ciphertext under opaque ids.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-what-is-sgit",
+     "quote": "Clone, commit, branch, diff and merge folders of files that are encrypted with AES-256-GCM before they leave your machine. The server stores ciphertext under opaque IDs, it never sees your filenames, your contents, or your commit messages.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c02",
+   "text": "A commit snapshots the folder into a git-like object graph of commits, trees and blobs, each object encrypted client-side and content-addressed, so only changed ciphertext is pushed.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-what-is-sgit",
+     "quote": "When you commit, sgit snapshots the folder into a git-like object graph, commits pointing at trees pointing at content blobs, and encrypts every object client-side. When you push, only changed ciphertext travels.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c03",
+   "text": "The vault key is three things in one string: the vault's address on the server, the credential, and the root of the key hierarchy.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-what-is-sgit",
+     "quote": "is three things in one string: the address of the vault on the server, the credential to access it, and the root of the local key-derivation hierarchy.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c04",
+   "text": "sgit differs from git in three deliberate ways: no staging area, the key is URL, auth and encryption key in one, and two layers of branches.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "The three deliberate differences from git: no staging area; every clone gets its own\n  private branch and publishing to a shared branch is explicit; the vault key is address,\n  credential and encryption key in one string.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c05",
+   "text": "sgit supports init, clone, status, commit, push, pull, fetch, branches, three-way merge, history, revert, reset and stash, but not rebase, cherry-pick, bisect, blame, hooks, submodules or tags.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "No for: pull requests (a hosting-platform\n  construct layered on merge, not a git primitive), a staging area or partial commits\n  (a commit snapshots the whole folder), bisect, blame, rebase, cherry-pick, hooks,\n  submodules and tags.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c06",
+   "text": "Each clone works on a private clone branch whose key never leaves the machine, so two agents on one vault cannot overwrite each other's unpushed work.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-two-branch",
+     "quote": "Two machines, or two agents, on the same vault physically cannot overwrite each other's uncommitted or unpushed work: they're on different branches with different keys.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c07",
+   "text": "Pushes use compare-and-swap on the server, so a stale push is rejected rather than overwriting.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-two-branch",
+     "quote": "Pushes use compare-and-swap on the server (atomic batch writes): if someone pushed before you, your push is rejected cleanly instead of silently clobbering, pull, merge, push again.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c08",
+   "text": "Merges are genuine three-way merges per file, and sgit resolve --show gives a verdict that separates genuine conflicts from one-sided or identical changes.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-two-branch",
+     "quote": "When histories diverge, sgit runs a genuine three-way merge (common ancestor + ours + theirs) per file.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c09",
+   "text": "The server never sees contents, filenames, commit messages, branch names or keys; it does see the vault id, object sizes, timing and approximate activity volume.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-security",
+     "quote": "Traffic analysis of sizes and timing is a real (if narrow) channel, and pretending otherwise would be marketing, not security.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wsgit-llms",
+     "quote": "What the server can see: the vault ID, the size of each encrypted object, and request\n  timing. Never filenames, contents, or commit messages.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c10",
+   "text": "Keys are derived from the vault key with PBKDF2-HMAC-SHA256 at 600,000 iterations, then HKDF-SHA256 for purpose-specific keys; no custom primitives.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "Crypto: AES-256-GCM, PBKDF2-HMAC-SHA256 at 600k iterations, HKDF-SHA256. No custom\n  primitives; output matches the browser Web Crypto API byte for byte.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c11",
+   "text": "The site itself says the structure-key split, separating metadata access from content access, is designed but not yet active.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wsgit-security",
+     "quote": "Today, vault objects are encrypted under the read key, activating the structure-key split across structural objects is an in-progress, reviewed design change",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A stated limit of the design, worth keeping beside claim c10."
+  },
+  {
+   "id": "wsgit-c12",
+   "text": "A generated vault passphrase carries about 124 bits of entropy, and there is no password reset or recovery.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-security",
+     "quote": "A generated passphrase is 24 characters over a 36-symbol alphabet",
+     "supports": "for"
+    },
+    {
+     "source_id": "wsgit-security",
+     "quote": "there is no password reset. If you lose the vault key, nobody, including us, can recover the contents.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c13",
+   "text": "The CLI and the SG/Vault browser client are independent implementations of one wire format, held together by test vectors.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-security",
+     "quote": "The sgit CLI and the SG/Vault browser client are independent implementations of the same encrypted wire format, kept interoperable through a versioned contract with test vectors.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c14",
+   "text": "A read key is derived one way from the vault key, so it can be published and can never be turned into write access.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-credentials",
+     "quote": "A read key carries read only, and is derived from the vault key by a one-way function, so a read key can never be turned back into write access.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c15",
+   "text": "Revoking a read key is not retroactive: anyone who fetched the objects keeps them.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-credentials",
+     "quote": "Revocation is not retroactive. Anyone who has fetched the objects keeps them; rotating protects future commits only.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c16",
+   "text": "Append lanes let a sender write to a vault with no account; the response is blind, and the server stores only hashes of the capabilities and ciphertext.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vault-messaging",
+     "quote": "The server stores SHA-256 hashes of the first three and checks H(presented) == stored. It never holds a raw capability key, and never holds a private key at all. Compromising the server yields hashes and ciphertext.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c17",
+   "text": "Deriving the lane address from a public key is proposed, not shipped; today the token is agreed out of band.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "That derivation is PROPOSED, no shipped command emits it, so today\n  you agree the token out of band.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The shape diagram on the messaging page draws append_token = H(pubkey); the text marks it as proposed."
+  },
+  {
+   "id": "wsgit-c18",
+   "text": "On a 600-commit, 9,400-file vault a one-folder scoped clone took 14 s against 80 s for a full clone (CLI team's numbers, one sandbox).",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-partial-clones",
+     "quote": "On a shared CRM vault of about 600 commits and 9,400 files",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Single environment, vendor-measured; the site's own check on a 55-file vault gave 9.7 s against 3.0 s."
+  },
+  {
+   "id": "wsgit-c19",
+   "text": "A partial clone is not an access boundary: the clone holds the vault key and can widen to any folder.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-limitations",
+     "quote": "A partial clone is not an access boundary. --path decides what is downloaded, not what can be read",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c20",
+   "text": "The site states sgit is beta and has no compliance certification.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-llms",
+     "quote": "sgit is beta; it has no compliance certification of any kind.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c21",
+   "text": "Commit author attribution is not yet recorded; per-agent identity comes from branch ids, not signed authorship (as stated on the limitations page of v0.7.87).",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "wsgit-limitations",
+     "quote": "Commit author attribution is not yet recorded, in multi-agent vaults, per-agent identity currently comes from branch IDs, not signed authorship.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "May be stale: llms.txt lists an update to sgit-ai 0.21.0 that mentions signatures; not reconciled here."
+  },
+  {
+   "id": "wsgit-c22",
+   "text": "sgit.ai lists 54 vaults whose read keys were published on purpose.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vaults-index",
+     "quote": "54 published vaults:",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The site footer on the same pages still says thirty vaults."
+  },
+  {
+   "id": "wsgit-c23",
+   "text": "In the Hope or enforcement simulation the hope share falls from 97.4% (one model with connectors) to 22.9% (narrow agents behind a gateway), and unbounded excess from 12 actions to none.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vault-hope",
+     "quote": "The excess falls from twelve actions to seven to none; the mandated limits that rest on hope stay at six in the first two designs and fall to none in the third.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Simulated and deterministic: no model was measured; percentages read from the app screenshot, the quote supports the excess figures."
+  },
+  {
+   "id": "wsgit-c24",
+   "text": "After the run, all 138 rule tests in Design 1 rested on the model; in Design 3, 52 of 85 were held by a boundary.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vault-hope",
+     "quote": "In Design 1, all 138 tests rest on the model. In Design 3, 52 of 85 are held by a boundary.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Simulation; the page says whether a hostile email gets past a prose rule is an assumption."
+  },
+  {
+   "id": "wsgit-c25",
+   "text": "On three desktops the same agent's unbounded excess falls from 23 rows to 11 to 3, and rows held by a boundary rise from 0 to 1 to 9.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-vault-agent-desk",
+     "quote": "The excess over the mandate that nothing bounds falls from 23 rows on your own Mac, to 11 on a dedicated Mac, to 3 on a hardened one; rows held by a boundary rise from 0 to 1 to 9.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c26",
+   "text": "A Process Behaviour Policy is defined once, hashed, supplied from outside the agent and enforced by the runtime, never by the process it constrains.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-sharness-policies",
+     "quote": "It is defined once, hashed, supplied from outside the agent, and enforced by the runtime: never by the process it constrains.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c27",
+   "text": "In SHarness's measured environment the default grant was everything: root, all capabilities, no seccomp.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-sharness-policies",
+     "quote": "In the measured environment the default grant is everything: root, all capabilities, no seccomp, no Yama",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Measured in one Claude agent workspace on 24 Oct 2026, per the site."
+  },
+  {
+   "id": "wsgit-c28",
+   "text": "SHarness ran a real Linux kernel in a browser tab enforcing a policy (E09), measured 25 Oct 2026; most other components are design only.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wsgit-sharness-llms",
+     "quote": "E09 is a real Linux kernel in a browser tab running hello, measured 25 Oct 2026",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Own-site measurement; the same file says no other SHarness component is built beyond the listed MVPs."
+  },
+  {
+   "id": "wsgit-c29",
+   "text": "The canonical policy hash was measured identical in Python, the browser and a Linux guest.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wsgit-sharness-pbp",
+     "quote": "Measured identical in Python, the browser and a Linux guest, 25 Oct 2026.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wsgit-c30",
+   "text": "ruv.sgit reports 27 runs in its ledger, 129 vault commits, and no probed text found in what the vault server stored.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wsgit-ruv-home",
+     "quote": "ruv.sgit runs in the ledger",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Counters are read live from data/vaults.json when the page loads; the quote supports only the label, the numbers are in page.txt as separate lines."
+  }
+ ],
+ "public_vaults": [
+  {
+   "name": "Hope or enforcement (#46, vault wz9dw0m5)",
+   "where_published": "https://sgit.ai/demos/vaults/hope-or-enforcement/",
+   "what_it_shows": "One customer service mandate built three ways, 62 emails through each, and the Agent Behaviour Policy before and after the refactor: hope share, excess and boundaries per design, the analyst's report after the run, and the client's promises.",
+   "suits_an_embed": "yes: a self-contained app (67 files, about 1 MB) that the page already embeds read-only; views render at desktop and phone widths with no network requests, per its own gate",
+   "notes": "THE EDITOR'S FAVOURITE: behaviour policies before and after. Design 1 (before) puts 138 of 138 tests on the model; Design 3 (after) holds 52 of 85 by a boundary. Simulated, deterministic, no model measured."
+  },
+  {
+   "name": "Agent Desk (#49, vault 5ej8boc8)",
+   "where_published": "https://sgit.ai/demos/vaults/agent-desk/",
+   "what_it_shows": "The same customer service agent on three desktops with three behaviour policies; unbounded excess 23, 11, 3 rows; boundaries 0, 1, 9; a calculator and a Wardley map.",
+   "suits_an_embed": "yes: app mode embed already on the page",
+   "notes": "A second before-and-after on behaviour policies, by environment rather than by agent design. The app sidebar shows small contact text: crop it out of any screenshot."
+  },
+  {
+   "name": "Licence to Operate (#23, vault posrhzp3)",
+   "where_published": "https://sgit.ai/demos/vaults/licence-to-operate/",
+   "what_it_shows": "An agent's grant (12), mandate (4) and the delta of 8 no policy covers, with a simulated support conversation priced against a live policy; five decks and seven short videos.",
+   "suits_an_embed": "yes: the page embeds it and reads decks live from it",
+   "notes": "13 MB; the vault carries its own read key in a try-it/ folder, per the page."
+  },
+  {
+   "name": "Kit Bag (#39, vault r53ldcxt)",
+   "where_published": "https://sgit.ai/demos/vaults/kit-bag/",
+   "what_it_shows": "A Chrome extension business plan with its Agent Behaviour Policy written first and every barrier typed; the vault as distribution channel.",
+   "suits_an_embed": "yes, as a document app; less visual than the two above",
+   "notes": "Policy-first example; names a real retailer as the shop the author uses."
+  },
+  {
+   "name": "Agent permission games (#25, vault 4evnlwrj)",
+   "where_published": "https://sgit.ai/demos/vaults/agent-permission-games/index.md (listed in https://sgit.ai/demos/vaults/llms.txt)",
+   "what_it_shows": "Two deterministic games about grants, permissions and mandates.",
+   "suits_an_embed": "no for a talk embed: it phones home over an append lane with anonymous usage events",
+   "notes": "Page not captured; described from the catalogue."
+  },
+  {
+   "name": "Strategy Maps and sgit maps (#5, vault ookq4mn4)",
+   "where_published": "https://sgit.ai/demos/sgit-maps.html and https://sgit.ai/demos/vaults/strategy-maps/",
+   "what_it_shows": "Seven Wardley maps of the SG/Send strategy and six maps of sgit's positioning, starting with where git wins, as two apps in one vault.",
+   "suits_an_embed": "yes: inline SVG maps, two entry points, live embed already on the page",
+   "notes": "Good for a \"features over git\" slide that starts with where git wins."
+  },
+  {
+   "name": "Code Review Graphs (#40, vault 7w90lvd3)",
+   "where_published": "https://sgit.ai/demos/vaults/code-review-graphs/ (listed in https://sgit.ai/demos/vaults/llms.txt)",
+   "what_it_shows": "The sgit CLI itself read as layered graphs from its syntax tree: 72 commands, 377 classes, 1,111 methods.",
+   "suits_an_embed": "yes, if the graph views read well at projector size (not checked)",
+   "notes": "Page not captured."
+  },
+  {
+   "name": "The Vault Catalogue (#2)",
+   "where_published": "https://sgit.ai/demos/vaults/catalogue/ (listed in https://sgit.ai/demos/vaults/llms.txt)",
+   "what_it_shows": "An index of published vaults that is itself a vault and lists itself.",
+   "suits_an_embed": "possibly: a neat recursion slide; not checked",
+   "notes": "Page not captured."
+  },
+  {
+   "name": "The sgit.ai board (#26)",
+   "where_published": "https://sgit.ai/demos/vaults/board/ (listed in https://sgit.ai/demos/vaults/llms.txt)",
+   "what_it_shows": "The site's own task board as a vault, cards as files, a five-column app that requests no permissions.",
+   "suits_an_embed": "yes: small (40 KB) and visual",
+   "notes": "Page not captured."
+  },
+  {
+   "name": "Field Notes (#4)",
+   "where_published": "https://sgit.ai/demos/vaults/field-notes/ (listed in https://sgit.ai/demos/vaults/llms.txt)",
+   "what_it_shows": "The smallest complete vault app: six studies with generative SVG art.",
+   "suits_an_embed": "yes: minimal and visual",
+   "notes": "Page not captured."
+  },
+  {
+   "name": "Risk Mandate (#9)",
+   "where_published": "https://sgit.ai/demos/vaults/risk-mandate/ (listed in https://sgit.ai/demos/vaults/llms.txt)",
+   "what_it_shows": "A working application delivered as a vault that calls an LLM without holding the API key, which is sealed under the vault key.",
+   "suits_an_embed": "not checked",
+   "notes": "Page not captured."
+  },
+  {
+   "name": "Threat-sized security (#45)",
+   "where_published": "https://sgit.ai/demos/vaults/threat-sized-security/ (listed in https://sgit.ai/demos/vaults/llms.txt)",
+   "what_it_shows": "A six-tier attacker ladder on NIST SP 800-30, NCSC and MITRE ATT&CK with eight fictional startups.",
+   "suits_an_embed": "yes: same design system as Hope or enforcement",
+   "notes": "Page not captured."
+  },
+  {
+   "name": "Synthetic users, newsroom.sgit.ai (#54)",
+   "where_published": "https://sgit.ai/demos/vaults/newsroom-synthetic-users/ (listed in https://sgit.ai/demos/vaults/llms.txt)",
+   "what_it_shows": "Five invented readers driving a browser through the newsroom: 62 steps, 31 findings.",
+   "suits_an_embed": "not checked (12 MB of screenshots)",
+   "notes": "Page not captured."
+  },
+  {
+   "name": "All 54 published sgit.ai vaults",
+   "where_published": "https://sgit.ai/demos/vaults/ and https://sgit.ai/demos/vaults/llms.txt",
+   "what_it_shows": "The full catalogue, each with category, size, file count and date; read keys on each vault page and in the llms.txt list.",
+   "suits_an_embed": "n/a (index)",
+   "notes": "Footer text on the same site still says thirty vaults."
+  },
+  {
+   "name": "The Industry Wire (newsroom vault u9i9jp0l)",
+   "where_published": "https://newsroom.sgit.ai/llms.txt (section \"The wires\"; page https://newsroom.sgit.ai/wire/index.html)",
+   "what_it_shows": "A daily AI-written news wire in five beats, each story with its primary source, per-persona lenses showing what reached a reader and what was withheld, and dated corrections.",
+   "suits_an_embed": "yes: the newsroom page already reads it live; every story is marked unreviewed AI output",
+   "notes": "Wire page itself not captured; described from llms.txt."
+  },
+  {
+   "name": "The OWASP Wire (newsroom vault eitf274v)",
+   "where_published": "https://newsroom.sgit.ai/llms.txt (page /wire/owasp/index.html)",
+   "what_it_shows": "A weekly OWASP wire with a projects graph of 20 projects and their standards.",
+   "suits_an_embed": "yes, same contract as the Industry Wire",
+   "notes": "Not captured beyond llms.txt."
+  },
+  {
+   "name": "The AWS Wire (newsroom vault v202bla5)",
+   "where_published": "https://newsroom.sgit.ai/llms.txt (page /wire/aws/index.html)",
+   "what_it_shows": "AWS announcements filtered by the stack its named reader declares in the vault.",
+   "suits_an_embed": "yes, same contract",
+   "notes": "Not captured beyond llms.txt."
+  },
+  {
+   "name": "The Portugal Wire (newsroom vault p6twygul)",
+   "where_published": "https://newsroom.sgit.ai/llms.txt (page /wire/portugal/index.html)",
+   "what_it_shows": "A daily Portugal wire in English and Portuguese with an ecosystem map of 40 organisations.",
+   "suits_an_embed": "yes, same contract",
+   "notes": "Not captured beyond llms.txt."
+  },
+  {
+   "name": "Shared vault viewer (newsroom vault lkypj6zq)",
+   "where_published": "https://newsroom.sgit.ai/llms.txt names /admin/content/vaults/vault-viewer.json as where its public read key is",
+   "what_it_shows": "The viewer app linked into each reader vault.",
+   "suits_an_embed": "not checked",
+   "notes": "The JSON file was not fetched."
+  },
+  {
+   "name": "ChatGPT reviewer vault (newsroom vault gfzbzp41)",
+   "where_published": "https://newsroom.sgit.ai/reviews/vaults.html",
+   "what_it_shows": "An outside reviewer's public vault: what it was asked and what it wrote, with its signing key pinned.",
+   "suits_an_embed": "no for a talk: text records, not visual; useful as a cited example of a public review lane",
+   "notes": "Published since 2026-10-27; the page also shows read-key QR codes, not captured."
+  }
+ ]
+}

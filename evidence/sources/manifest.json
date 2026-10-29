@@ -1,6 +1,6 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T17:23Z",
+ "built": "2026-10-29T17:33Z",
  "count": 659,
  "sources": [
   {
@@ -21938,8 +21938,14 @@
   },
   {
    "id": "wnews-nr-a-agent-loops",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/why-agent-loops-are-hard.html",
+   "final_url": "https://newsroom.sgit.ai/articles/why-agent-loops-are-hard.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Why agent loops are hard: ten agents in sequence, a schedule that has to land in the right session, and why I spend as long making the system visible as building it, SGit Newsroom",
+   "kind": "own-site",
+   "published": "2026-10-25",
+   "captured_at": "2026-10-29T17:15:32Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -21969,12 +21975,19 @@
      "sha256": "48eff5d45f6c2a3e908383988d28abcc56f3f7d90dfeae454dc9ed6eb2d89022",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-a-call-for-help",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/a-call-for-help.html",
+   "final_url": "https://newsroom.sgit.ai/articles/a-call-for-help.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "A call for help: journalists, editors, students and teachers wanted for a live newsroom run with agents, where every role should have a human, we cannot pay yet, and what we can offer instead, SGit Ne...",
+   "kind": "own-site",
+   "published": "2026-10-25",
+   "captured_at": "2026-10-29T17:15:32Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22004,12 +22017,19 @@
      "sha256": "f106ff330b8eeef06da59e124703e38cfc84554c3ffc730101f0238dbd39ddbe",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-a-capture-first",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/capture-first.html",
+   "final_url": "https://newsroom.sgit.ai/articles/capture-first.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Capture first: how a BBC live page at breakfast became an evidence vault, a section here and a site of its own by lunchtime, for a story that was still changing as we covered it, SGit Newsroom",
+   "kind": "own-site",
+   "published": "2026-10-22",
+   "captured_at": "2026-10-29T17:15:33Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22048,12 +22068,19 @@
      "sha256": "f13c724d940d2d21af3020a33626d2fd8de2f5a0b3ee5da25724d50b6efd4a8b",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-a-desk-open",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/a-desk-anyone-can-open.html",
+   "final_url": "https://newsroom.sgit.ai/articles/a-desk-anyone-can-open.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "A desk anyone can open: the PHP story's work and who did it, nine names with their responsibilities, and an evidence vault anyone can now read, scanned before its key was published, SGit Newsroom",
+   "kind": "own-site",
+   "published": "2026-10-22",
+   "captured_at": "2026-10-29T17:15:33Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22085,12 +22112,19 @@
      "sha256": "6535d431fd504b910071847e78187ea0731b205919aedc68e099eead1169fec8",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-a-identity",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/agents-have-an-identity-now.html",
+   "final_url": "https://newsroom.sgit.ai/articles/agents-have-an-identity-now.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Agents have an identity now: a key pair made in every session, published with its role, so any agent can seal a secret to it, and the piece the cloud providers could add, SGit Newsroom",
+   "kind": "own-site",
+   "published": "2026-10-29",
+   "captured_at": "2026-10-29T17:15:32Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22129,12 +22163,19 @@
      "sha256": "0be5d6ff9e0b22514899f3cbb1c657cdc9201d25d7bf857c0efaa8eaa8172642",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-a-inbox-team",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/the-inbox-team-as-a-recipe.html",
+   "final_url": "https://newsroom.sgit.ai/articles/the-inbox-team-as-a-recipe.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "The inbox team as a recipe: how the RiskMandate agents run my email and CRM, written down by one of them so a second team can copy it, SGit Newsroom",
+   "kind": "own-site",
+   "published": "2026-10-28",
+   "captured_at": "2026-10-29T17:15:31Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22173,12 +22214,19 @@
      "sha256": "8f8f0d10fe11121b44ebf60060515eb68136902fb5d6a01865167066fff5054e",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-a-journalist-handbook",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/how-a-journalist-agent-publishes-here.html",
+   "final_url": "https://newsroom.sgit.ai/articles/how-a-journalist-agent-publishes-here.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "How a journalist agent publishes here: the newsroom's handbook, from the brief to the live page, with the versioning, the checks and the mistakes that taught us each rule, SGit Newsroom",
+   "kind": "own-site",
+   "published": "2026-10-28",
+   "captured_at": "2026-10-29T17:15:31Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22217,12 +22265,19 @@
      "sha256": "c1cae3c77bf70ac8c97b0fceff1b6de2c5c04d3cc0950bbdd20225d79c0df3e5",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-a-sharness",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/introducing-sharness.html",
+   "final_url": "https://newsroom.sgit.ai/articles/introducing-sharness.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "SHarness: the secure harness we could not find, so we built it, a behaviour policy the Linux kernel enforces for every process an agent starts, and we would like your feedback, SGit Newsroom",
+   "kind": "own-site",
+   "published": "2026-10-29",
+   "captured_at": "2026-10-29T17:15:31Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22261,12 +22316,19 @@
      "sha256": "07f539537e7a7509bc48156c1c913dea78b618906e7ea359e74d1080d13c5c1e",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-a-what-an-agent-is",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/what-an-agent-is.html",
+   "final_url": "https://newsroom.sgit.ai/articles/what-an-agent-is.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "What an agent is: a session, a card, a loop and a key. How the PHP newsroom's agents now run on schedules and in one session, and what the record says about it, SGit Newsroom",
+   "kind": "own-site",
+   "published": "2026-10-27",
+   "captured_at": "2026-10-29T17:15:32Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22296,12 +22358,19 @@
      "sha256": "0be402f4ce846804a59f6d34ce4463d0cbc5d346bb82e3771228d33ea984d11d",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-agents",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/agents/index.html",
+   "final_url": "https://newsroom.sgit.ai/agents/index.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Written by the agents · newsroom.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:30Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22331,12 +22400,19 @@
      "sha256": "9d64b61b57a96ef5b04ac2d85adcbc8d2143f0eabffd7ba5cc45c8db41234eee",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-articles",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/index.html",
+   "final_url": "https://newsroom.sgit.ai/articles/index.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "SGit Newsroom",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:30Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22368,12 +22444,19 @@
      "sha256": "b0466011a7e25714804820d4e091615c65c63a77409a53d027a9239e7f5b0be4",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-board",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/newsroom/board.html",
+   "final_url": "https://newsroom.sgit.ai/newsroom/board.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "The desk board, the sgit.ai newsroom",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:26Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22405,12 +22488,19 @@
      "sha256": "c083918d9b93c048c378f2cd902e636383b7703511b8904419677683ad607fcc",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-corrections",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/corrections/index.html",
+   "final_url": "https://newsroom.sgit.ai/corrections/index.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Corrections must propagate · newsroom.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:30Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22440,12 +22530,19 @@
      "sha256": "6c71104f391afd47157bf77de0246ebc46acf1ea3722aff24590122b8d2edabb",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-graphs",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/articles/graphs.html",
+   "final_url": "https://newsroom.sgit.ai/articles/graphs.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "The articles as graphs, SGit Newsroom",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:29Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22484,12 +22581,19 @@
      "sha256": "79d6cdb498a4484d664cc1037ce0f42b110ec7056dc10c12d53b65691c88d39f",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-home",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/",
+   "final_url": "https://newsroom.sgit.ai/",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "SGit Newsroom: Pay for what you read",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:26Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22526,12 +22630,19 @@
      "sha256": "d54aeff5fb9bfa031ef2c52944b8b76d9b8fbc65ef5fb18979fa37bd1ea95077",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-log",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/newsroom/log.html",
+   "final_url": "https://newsroom.sgit.ai/newsroom/log.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "The desk log, the sgit.ai newsroom",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:27Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22563,12 +22674,19 @@
      "sha256": "5ccc84a00f8466e19ed7d7969e44449b9e18f40af5b2eb30584e407d11d01798",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-newsroom",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/newsroom/index.html",
+   "final_url": "https://newsroom.sgit.ai/newsroom/index.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "How the SGit Newsroom runs, SGit Newsroom",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:26Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22600,12 +22718,19 @@
      "sha256": "24f5f39c920eb97467f86a9c75b2a5c5f49894df50b5e6f156b165cf094e8707",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-php-flaws",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/php-flaws/index.html",
+   "final_url": "https://newsroom.sgit.ai/php-flaws/index.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "The PHP flaws: AI found them, a leak forced them out, and the web went offline · newsroom.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:31Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22635,12 +22760,19 @@
      "sha256": "95dfd401c1013a64e82658de246f88a9d730ab8e2b8c36dcd96a822cf1281e81",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-policies",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/newsroom/policies.html",
+   "final_url": "https://newsroom.sgit.ai/newsroom/policies.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Behaviour policies, the sgit.ai newsroom",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:26Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22670,12 +22802,19 @@
      "sha256": "d09685d1ca5a079af7e7782c9e8d721b2274ad7f3ccf27f4b80939f20b94a88e",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-publish",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/newsroom/publish.html",
+   "final_url": "https://newsroom.sgit.ai/newsroom/publish.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "How to publish, the sgit.ai newsroom",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:27Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22705,12 +22844,19 @@
      "sha256": "a0838593ed78c7325578dd1159d3a7478c83c1237484272ec4dcab948d08524e",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-reviews",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/reviews/index.html",
+   "final_url": "https://newsroom.sgit.ai/reviews/index.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Independent review · newsroom.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:28Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22747,12 +22893,19 @@
      "sha256": "1ea9e1982fcc82e44a596f26d67c234657d5f152a42f75c53c9fab9ec163de22",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-reviews-criteria",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/reviews/criteria.html",
+   "final_url": "https://newsroom.sgit.ai/reviews/criteria.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Reviewing an article: the criteria · newsroom.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:28Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22782,12 +22935,19 @@
      "sha256": "56682367bd388e0b7ff9ce4a0df809f85f059b74141c61c0a7f880bd5475570f",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-shipped",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/shipped/index.html",
+   "final_url": "https://newsroom.sgit.ai/shipped/index.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "What runs, what is designed · newsroom.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:28Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22817,12 +22977,19 @@
      "sha256": "e32785770db31af735aa4c1bb51314e23b246083d67aa94fae4750b42c7356d5",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-sitemap",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/sitemap.xml",
+   "final_url": "https://newsroom.sgit.ai/sitemap.xml",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "Sitemap",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:25Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22852,12 +23019,19 @@
      "sha256": "4cd8dea02f4edc49219e3cb5b55a23be0ca8d8054417026f1b6936816fc0e506",
      "bytes": 75
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-team",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/team/index.html",
+   "final_url": "https://newsroom.sgit.ai/team/index.html",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "The team · newsroom.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:28Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22887,12 +23061,19 @@
      "sha256": "3cb6201a48a2062515942b3bd8420e3d3afe18930d1f14531626446dd0b159d7",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-nr-wire-json",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/newsroom/wire.json",
+   "final_url": "https://newsroom.sgit.ai/newsroom/wire.json",
+   "publisher": "SGit Newsroom (newsroom.sgit.ai)",
+   "title": "The wire as data (wire.json)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:24Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22924,12 +23105,19 @@
      "sha256": "60f4537439a55855deb9d3b8bff884a012643cde0f735da66a92445ffb9ca6f6",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-a-push",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/articles/how-a-push-reaches-the-pages/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/articles/how-a-push-reaches-the-pages/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "How a push reaches the pages: the six repositories, the edition, and why one push still waits for another · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:40Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22961,12 +23149,19 @@
      "sha256": "00d03638fc11a4316576861dedc284a130e362848e25bdd8780ea3dd4a21dd7a",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-a-where-stands",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/articles/where-php2shell-stands/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/articles/where-php2shell-stands/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Where php2shell stands: many sites dark, millions of attempts, no confirmed breach · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:40Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -22996,12 +23191,19 @@
      "sha256": "35b3f8b59c654f022732ffada129be986c1c5649d1bc0222f1a404c2fa26a3cb",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-analysis",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/analysis/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/analysis/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Analysis: how sure we are, and where the sources disagree · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:36Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23038,12 +23240,19 @@
      "sha256": "674e3534e07b680ff22e7d9102991d1368136129de428caa6e000db4e1c7ceea",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-claims",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/claims/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/claims/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Every claim, with its status and sources · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:35Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23075,12 +23284,19 @@
      "sha256": "6348eb5aba107bc1bde177327b50de821a3630f564e2d10eb15dd7d7c673b977",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-claims-review",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/claims/review/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/claims/review/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Claims waiting for review · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:35Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23112,12 +23328,19 @@
      "sha256": "a4b15d3db352823598929f7575247045938ab4bd8cfa8beca3b44da57a357e53",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-collaborators",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://team.php.oct.2026.newsroom.sgit.ai/collaborators/",
+   "final_url": "https://team.php.oct.2026.newsroom.sgit.ai/collaborators/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai)",
+   "title": "Power users: start here · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:04Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23149,12 +23372,19 @@
      "sha256": "2bdf485a948805be02d07d9365aea2c7673534412aaa5392efe428cd33050e99",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-factcheck",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/factcheck/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/factcheck/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Fact-check: how sure can you be of each claim · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:34Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23200,12 +23430,19 @@
      "sha256": "a9a2a4e8ddc1295996bb864027aefdb5bb1350ba735c2daf16920334c7aaa96f",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-home",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "PHP in October 2026: two critical security flaws, tracked as evidence · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:33Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23249,12 +23486,19 @@
      "sha256": "a1f63ed9864682e17899cac20b4240bc0e695b65c2965919cad635a59705f1a3",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-join",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/join/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/join/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Join: a key for this device, in one tap · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:35Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23291,12 +23535,19 @@
      "sha256": "2708e977a3c1d43578b907a76ebf1f620feee5cd084c6e6d97aa6b8caafb4eba",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-join-invite",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/join/invite/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/join/invite/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Invite someone: a link and a QR code, signed on this device · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:36Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23326,12 +23577,19 @@
      "sha256": "2b840d3b4a5faf849067289722fb1a0831ab3b614e6ec75b0c7473b704372de2",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-layers",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/layers/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/layers/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Evidence, derived, authored: what each file is · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:41Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23363,12 +23621,19 @@
      "sha256": "3785f3fcc1b309910e343b692ed7996c54dceb9045454a658fb1f8fee3168e13",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-llms",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/llms.txt",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/llms.txt",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:25Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23392,12 +23657,19 @@
      "sha256": "c87f968eea2ee51c4f438d7876b0e62cf239558686f41bbf5d2aa3d6eb1335c1",
      "bytes": 75
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-method",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/method/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/method/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "The method: capture, hash, claim, build, gate · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:38Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23427,12 +23699,19 @@
      "sha256": "b5f685e389be93319e1936ebc4258b74ec211ae25a5f043a3e90179e65248c54",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-numbers",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/numbers/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/numbers/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "The numbers: 70%, 30 million, 2.6 million, 6,000, 674 · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:37Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23469,12 +23748,19 @@
      "sha256": "c030155b6822324580f389bbd248aef947a4db40689ed2ecad7669114041807b",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-ops",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/ops/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/ops/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Operations: what changed, what to do next, how sure we are · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:36Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23504,12 +23790,19 @@
      "sha256": "d232411b815de586101f3f204499383ec662756b6d7057d42b559178714453b6",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-php-share",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/factcheck/investigations/php-share/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/factcheck/investigations/php-share/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "How much PHP is there, and where does '70%' come from? · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:34Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23560,12 +23853,19 @@
      "sha256": "97d9b55c17e241d4cd6619ba51b9a969c5e135cc75e8c59d302afa97f9fad6d7",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-pipeline",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/pipeline/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/pipeline/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "The fact pipeline: from a web page to a reader · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:37Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23595,12 +23895,19 @@
      "sha256": "15717b4a97aa1c393762d19fced8487ed5f0db14c4a3e46e6209cbb574c13d90",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-review",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/review/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/review/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (refs.php.oct.2026.newsroom.sgit.ai)",
+   "title": "The fix, mapped to the code · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:03Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23637,12 +23944,19 @@
      "sha256": "0018488b145d5654c5196a022008581646d7eb2dcc383b027418107217b74bc1",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-signals",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/signals/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/signals/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "The second stories: exposed, attempted, exploited, and what was within reach · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:41Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23686,12 +24000,19 @@
      "sha256": "0de932b6bcc11a52fbfab611633ffc354eabbb85f53ba6b63ce19896032361d5",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-sitemap",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/sitemap.xml",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/sitemap.xml",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Sitemap",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:25Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23721,12 +24042,19 @@
      "sha256": "5c1bcb97a0c0c709e70c741837e1890861babb12e9e875892c0df8ff5f9e75a3",
      "bytes": 75
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-subscribe",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/subscribe/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/subscribe/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "Subscribe: what changed, sent to you · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:39Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23758,12 +24086,19 @@
      "sha256": "6e4c9e0e2a0b401341004dad023525ada605ab8f843026f007ecd351a3e2358a",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-synthetic",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://team.php.oct.2026.newsroom.sgit.ai/admin/synthetic/",
+   "final_url": "https://team.php.oct.2026.newsroom.sgit.ai/admin/synthetic/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai)",
+   "title": "Synthetic readers: six test readers who read the live site · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:03Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23795,12 +24130,19 @@
      "sha256": "49bca4658142c34fa148baabc5952bdf105c796145b0f7735c234a42fef97a4c",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-team-channels",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://team.php.oct.2026.newsroom.sgit.ai/team/channels/",
+   "final_url": "https://team.php.oct.2026.newsroom.sgit.ai/team/channels/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai)",
+   "title": "How the team talks: three vaults and one run · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:02Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23824,25 +24166,25 @@
      "bytes": 10456
     },
     {
-     "name": "region-three-vaults-one-run.png",
-     "sha256_as_fetched": "358df3517d627d9652312f42358591bee14e070822adbdb915db4542edad4d7a",
-     "bytes_as_fetched": 240741,
-     "sha256": "358df3517d627d9652312f42358591bee14e070822adbdb915db4542edad4d7a",
-     "bytes": 240741
-    },
-    {
      "name": "sha256.txt",
      "sha256_as_fetched": "329b6a674f099f64745abd869983b87f0777d967cb65d859a36dcbd12a1d351a",
      "bytes_as_fetched": 76,
      "sha256": "329b6a674f099f64745abd869983b87f0777d967cb65d859a36dcbd12a1d351a",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-team-control",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://team.php.oct.2026.newsroom.sgit.ai/team/control/",
+   "final_url": "https://team.php.oct.2026.newsroom.sgit.ai/team/control/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai)",
+   "title": "Control room: every agent at a glance · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:02Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23881,12 +24223,19 @@
      "sha256": "116182a02f4d2990f4c18331a9e26fc25b1baa687835fe18f61b3af6cfe6adec",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-team-schedule",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://team.php.oct.2026.newsroom.sgit.ai/team/schedule/",
+   "final_url": "https://team.php.oct.2026.newsroom.sgit.ai/team/schedule/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai)",
+   "title": "Schedule: every agent that runs on its own · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:02Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23925,12 +24274,19 @@
      "sha256": "0eafd895fcd0e5c63bf74f27c56189391f8a96acaef2c8276b3f4a4f31af33bc",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-timeline",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/timeline/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/timeline/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai)",
+   "title": "The timeline, 2024 to the latest capture · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:37Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -23967,12 +24323,19 @@
      "sha256": "a360336f61d317b7d1cc3d1aaeea6727cc097a66cb8e0d639d84afa80d0cbf18",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-updates",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://updates.php.oct.2026.newsroom.sgit.ai/updates/",
+   "final_url": "https://updates.php.oct.2026.newsroom.sgit.ai/updates/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (updates.php.oct.2026.newsroom.sgit.ai)",
+   "title": "Updates: what changed, on the site and in the story · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:03Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -24002,12 +24365,19 @@
      "sha256": "873b05b7d8af9f8a01b11520175f18f1e5b25322fec5a5435d709169dceb8375",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wnews-php-verifier",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://team.php.oct.2026.newsroom.sgit.ai/team/verifier/",
+   "final_url": "https://team.php.oct.2026.newsroom.sgit.ai/team/verifier/",
+   "publisher": "PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai)",
+   "title": "Fact-check desk, every claim graded on a spectrum of evidence: the team · PHP October 2026",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:02Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -24039,7 +24409,8 @@
      "sha256": "a62fc965523f1e6a31491d00356a2658f966c1516afd148006a4f5964ac9eece",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-newsrooms"
   },
   {
    "id": "wpki-about-pki-agent",
@@ -25730,8 +26101,14 @@
   },
   {
    "id": "wsgit-credentials",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/docs/credentials.html",
+   "final_url": "https://sgit.ai/docs/credentials.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Vault credentials: what each one can do, and what its prefix declares, sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:00Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -25777,12 +26154,19 @@
      "sha256": "9265915f3515a8617792d02538833d1687da279c6a09f53b07c8860090d7992e",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-for-git-users",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/docs/sgit-for-git-users.html",
+   "final_url": "https://sgit.ai/docs/sgit-for-git-users.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "sgit for git users, Docs",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:53Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -25826,12 +26210,19 @@
      "sha256": "2b162067d082d94ffa596857334b75d0b2b7b0fdb5d241e7e990da26df3dbe1d",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-home",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/",
+   "final_url": "https://sgit.ai/",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "sgit (the encrypted git for humans and AI agents)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:48Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -25869,25 +26260,25 @@
      "bytes": 108232
     },
     {
-     "name": "region-what-the-server-sees.png",
-     "sha256_as_fetched": "39e655b4bb4170f4dc7701d33b36ca36f9f0222567221935f7983064198c1dc5",
-     "bytes_as_fetched": 41885,
-     "sha256": "39e655b4bb4170f4dc7701d33b36ca36f9f0222567221935f7983064198c1dc5",
-     "bytes": 41885
-    },
-    {
      "name": "sha256.txt",
      "sha256_as_fetched": "588387d77fbf79ec85c72018efe9f57d608cb509268be78dc3e4e0040ecdd1a7",
      "bytes_as_fetched": 76,
      "sha256": "588387d77fbf79ec85c72018efe9f57d608cb509268be78dc3e4e0040ecdd1a7",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-limitations",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/docs/limitations.html",
+   "final_url": "https://sgit.ai/docs/limitations.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "When NOT to use sgit, Docs",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:07Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -25924,12 +26315,19 @@
      "sha256": "f342d7e06c208d762ad563b7080f879ea884a2f1305e802039ef0f4905a2e8ed",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-llms",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/llms.txt",
+   "final_url": "https://sgit.ai/llms.txt",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "sgit.ai llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:43Z",
+   "http_status": 200,
    "files": [
     {
      "name": "llms.txt",
@@ -25961,12 +26359,19 @@
      "sha256": "5598cd4ba9a6117bdcbcefa76bb6bc1716e6be6d3c94caaf30a12c5ab67dfc19",
      "bytes": 75
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-newsroom-llms",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/llms.txt",
+   "final_url": "https://newsroom.sgit.ai/llms.txt",
+   "publisher": "newsroom.sgit.ai (Dinis Cruz)",
+   "title": "newsroom.sgit.ai llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:18:12Z",
+   "http_status": 200,
    "files": [
     {
      "name": "llms.txt",
@@ -25996,12 +26401,19 @@
      "sha256": "de4b625f8a3186aa09a1ee2693fc8f61303388677278062d641dc9c40b8c06d5",
      "bytes": 75
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-newsroom-reviews-vaults",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://newsroom.sgit.ai/reviews/vaults.html",
+   "final_url": "https://newsroom.sgit.ai/reviews/vaults.html",
+   "publisher": "newsroom.sgit.ai (Dinis Cruz)",
+   "title": "Vaults and keys · newsroom.sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:18:16Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26038,12 +26450,19 @@
      "sha256": "399976b493584a1345520157e394c8e69881ce27bbc829bc2edc4776694a4c8c",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-partial-clones",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/docs/partial-clones.html",
+   "final_url": "https://sgit.ai/docs/partial-clones.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Partial clones: a folder scope and a history depth, sgit Docs",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:05Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26074,18 +26493,32 @@
      "bytes": 9663
     },
     {
+     "name": "region-measured.png",
+     "sha256_as_fetched": "e47c016d03802a08bece1bb621d21e3df95fcd0fa14c5626c4766c3ff7aff7d4",
+     "bytes_as_fetched": 73664,
+     "sha256": "e47c016d03802a08bece1bb621d21e3df95fcd0fa14c5626c4766c3ff7aff7d4",
+     "bytes": 73664
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "407badb5a97bf0558389b0137a181a857a4a500c4d50f8db3f03ca5a763f6195",
      "bytes_as_fetched": 76,
      "sha256": "407badb5a97bf0558389b0137a181a857a4a500c4d50f8db3f03ca5a763f6195",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-ruv-home",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://ruv.sgit.ai/",
+   "final_url": "https://ruv.sgit.ai/",
+   "publisher": "ruv.sgit.ai (Dinis Cruz and Mondweep Chakravorty)",
+   "title": "ruv.sgit: agent work with a written mandate and a vault you keep",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:18:10Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26118,18 +26551,39 @@
      "bytes": 6710
     },
     {
+     "name": "region-five-steps.png",
+     "sha256_as_fetched": "6f8b2d694d27f1d21673c0b760846a50a408035db089eb11104c876ab3959f9e",
+     "bytes_as_fetched": 108901,
+     "sha256": "6f8b2d694d27f1d21673c0b760846a50a408035db089eb11104c876ab3959f9e",
+     "bytes": 108901
+    },
+    {
+     "name": "region-rules.png",
+     "sha256_as_fetched": "d069be8f6672eda7151a4a7527c378adc8ffff2cca60f58463edaa27533b0c52",
+     "bytes_as_fetched": 52604,
+     "sha256": "d069be8f6672eda7151a4a7527c378adc8ffff2cca60f58463edaa27533b0c52",
+     "bytes": 52604
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "8ec1fde8185959e63780514f26a9d01f9e10cd279f1f40ed8064623fe3762a12",
      "bytes_as_fetched": 76,
      "sha256": "8ec1fde8185959e63780514f26a9d01f9e10cd279f1f40ed8064623fe3762a12",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-security",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/security/",
+   "final_url": "https://sgit.ai/security/",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Security model, sgit",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:57Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26180,12 +26634,19 @@
      "sha256": "d20219833d9d47644faf886a70a8d68162889d80cb8038d12c6f0a63f2de2fdd",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-sgit-maps",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/demos/sgit-maps.html",
+   "final_url": "https://sgit.ai/demos/sgit-maps.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "sgit, on a Wardley Map (sgit.ai demos)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:10Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26222,12 +26683,19 @@
      "sha256": "f441d1099718ebf5752cb8c3e5e3f4e2dd4f12f7710f74baf6efeedd736dfd56",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-sharness-decision",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sharness.ai/design/decision/",
+   "final_url": "https://sharness.ai/design/decision/",
+   "publisher": "sharness.ai (Dinis Cruz)",
+   "title": "The decision at the door, SHarness",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:18:01Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26258,18 +26726,32 @@
      "bytes": 19474
     },
     {
+     "name": "region-decision-engine.png",
+     "sha256_as_fetched": "2bae91e4ef31f990b648dca96e978f911f85ef43a774d865775bb6d1acc7aa75",
+     "bytes_as_fetched": 68099,
+     "sha256": "2bae91e4ef31f990b648dca96e978f911f85ef43a774d865775bb6d1acc7aa75",
+     "bytes": 68099
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "6907feaffbe6a2471347b2f38e00ed8e6d17ecfeb09735bedce568297bf813d1",
      "bytes_as_fetched": 76,
      "sha256": "6907feaffbe6a2471347b2f38e00ed8e6d17ecfeb09735bedce568297bf813d1",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-sharness-landscape",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sharness.ai/landscape/",
+   "final_url": "https://sharness.ai/landscape/",
+   "publisher": "sharness.ai (Dinis Cruz)",
+   "title": "The landscape, SHarness",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:18:05Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26300,18 +26782,32 @@
      "bytes": 8819
     },
     {
+     "name": "region-matrix.png",
+     "sha256_as_fetched": "ee88ce7c86fcbeb9c5c82d29204b8afcfbb767611988933599cfecc41cfa0c41",
+     "bytes_as_fetched": 228426,
+     "sha256": "ee88ce7c86fcbeb9c5c82d29204b8afcfbb767611988933599cfecc41cfa0c41",
+     "bytes": 228426
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "1a48f54b1faad6fbbe0ad9cbbcd59ce82f9b9749d3afb3aeb44d20752d3d092d",
      "bytes_as_fetched": 76,
      "sha256": "1a48f54b1faad6fbbe0ad9cbbcd59ce82f9b9749d3afb3aeb44d20752d3d092d",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-sharness-levels",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sharness.ai/design/levels/",
+   "final_url": "https://sharness.ai/design/levels/",
+   "publisher": "sharness.ai (Dinis Cruz)",
+   "title": "The levels: one policy, written at the depth you need, SHarness",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:17:57Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26342,18 +26838,32 @@
      "bytes": 13351
     },
     {
+     "name": "region-the-levels.png",
+     "sha256_as_fetched": "272606ad813a4893cccaf68ae65a79cab80e48348b947ce076ab6e041b861a9c",
+     "bytes_as_fetched": 150178,
+     "sha256": "272606ad813a4893cccaf68ae65a79cab80e48348b947ce076ab6e041b861a9c",
+     "bytes": 150178
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "e19409dcd110921339f160c55fbc73c3084a9a76d4e24b4403eb102c4f499a6b",
      "bytes_as_fetched": 76,
      "sha256": "e19409dcd110921339f160c55fbc73c3084a9a76d4e24b4403eb102c4f499a6b",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-sharness-llms",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sharness.ai/llms.txt",
+   "final_url": "https://sharness.ai/llms.txt",
+   "publisher": "sharness.ai (Dinis Cruz)",
+   "title": "sharness.ai llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:17:45Z",
+   "http_status": 200,
    "files": [
     {
      "name": "llms.txt",
@@ -26383,12 +26893,19 @@
      "sha256": "521f143521d33e2682018fe353f4ea3375250dd558d37254a951b92ba1f951bf",
      "bytes": 75
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-sharness-pbp",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sharness.ai/design/pbp/",
+   "final_url": "https://sharness.ai/design/pbp/",
+   "publisher": "sharness.ai (Dinis Cruz)",
+   "title": "The Process Behaviour Policy, on one page, SHarness",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:17:53Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26419,18 +26936,32 @@
      "bytes": 23943
     },
     {
+     "name": "region-four-objects.png",
+     "sha256_as_fetched": "2b846444756cea77fb7ac3907b0b2d6393ea196e248997d8a527c97870b7523e",
+     "bytes_as_fetched": 70720,
+     "sha256": "2b846444756cea77fb7ac3907b0b2d6393ea196e248997d8a527c97870b7523e",
+     "bytes": 70720
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "d7a5c86c842a649db598d0ccd463aeec790ed1ad54f6d0c1d4c0b0f7cd366acf",
      "bytes_as_fetched": 76,
      "sha256": "d7a5c86c842a649db598d0ccd463aeec790ed1ad54f6d0c1d4c0b0f7cd366acf",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-sharness-policies",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sharness.ai/design/policies/",
+   "final_url": "https://sharness.ai/design/policies/",
+   "publisher": "sharness.ai (Dinis Cruz)",
+   "title": "Process Behaviour Policies, SHarness",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:17:50Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26461,18 +26992,39 @@
      "bytes": 17746
     },
     {
+     "name": "region-barrier-kind.png",
+     "sha256_as_fetched": "182292cbfa8f58b279f63f5e2f98f47b4427a514dd0210df3c21059ada9f157d",
+     "bytes_as_fetched": 28359,
+     "sha256": "182292cbfa8f58b279f63f5e2f98f47b4427a514dd0210df3c21059ada9f157d",
+     "bytes": 28359
+    },
+    {
+     "name": "region-prompt-injection.png",
+     "sha256_as_fetched": "022edfa40937fc18fd0f394aec16ef5bba8aa1661b3d06be141da0bffdd3557a",
+     "bytes_as_fetched": 98553,
+     "sha256": "022edfa40937fc18fd0f394aec16ef5bba8aa1661b3d06be141da0bffdd3557a",
+     "bytes": 98553
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "e405b84259d9ca4689cf2a77f22dbe5523cd1daeb91f488812da86011b34a326",
      "bytes_as_fetched": 76,
      "sha256": "e405b84259d9ca4689cf2a77f22dbe5523cd1daeb91f488812da86011b34a326",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-try",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/try/",
+   "final_url": "https://sgit.ai/try/",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Try sgit in your browser, sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:14Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26509,12 +27061,19 @@
      "sha256": "816d7a52e65cc596343b043cb6357f3654bca7020093cb8e75b6a9f38e5a3fa8",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-two-branch",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/docs/two-branch-model.html",
+   "final_url": "https://sgit.ai/docs/two-branch-model.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "The two-branch model, sgit Docs",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:55Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26558,12 +27117,19 @@
      "sha256": "e6859c16083513fc324fa711072adab5d77f2264f670ceaaa4477b7ed2684e02",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-vault-agent-desk",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/demos/vaults/agent-desk/",
+   "final_url": "https://sgit.ai/demos/vaults/agent-desk/",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Agent Desk, a business plan for a Mac of the agent's own, sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:17:03Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26602,12 +27168,19 @@
      "sha256": "80ba43caff98db9a5e677669290886986485b4be383bf720880d06925d8db4e8",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-vault-hope",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/demos/vaults/hope-or-enforcement/",
+   "final_url": "https://sgit.ai/demos/vaults/hope-or-enforcement/",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Hope or enforcement, the Agent Behaviour Policy at work on a customer service agent, sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:48Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26640,18 +27213,46 @@
      "bytes": 9771
     },
     {
+     "name": "region-after-the-run.png",
+     "sha256_as_fetched": "078694df7c29e6ca70cbb1a696a6e1a622809e223f8bb136af68438876774a63",
+     "bytes_as_fetched": 158682,
+     "sha256": "078694df7c29e6ca70cbb1a696a6e1a622809e223f8bb136af68438876774a63",
+     "bytes": 158682
+    },
+    {
+     "name": "region-compare.png",
+     "sha256_as_fetched": "5e70040176fccfe7e5ce17b98a3714cf3d4aa0e202d5d149066eec317943072a",
+     "bytes_as_fetched": 115047,
+     "sha256": "5e70040176fccfe7e5ce17b98a3714cf3d4aa0e202d5d149066eec317943072a",
+     "bytes": 115047
+    },
+    {
+     "name": "region-three-designs.png",
+     "sha256_as_fetched": "67b566d7371ff085e75615e2525899e81e2592cd972ea0747879d9ad9feecb77",
+     "bytes_as_fetched": 196708,
+     "sha256": "67b566d7371ff085e75615e2525899e81e2592cd972ea0747879d9ad9feecb77",
+     "bytes": 196708
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "1d8c48c8c856bec7e2d983d02ed536d5e2470837c9a654015397b065153b1829",
      "bytes_as_fetched": 76,
      "sha256": "1d8c48c8c856bec7e2d983d02ed536d5e2470837c9a654015397b065153b1829",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-vault-kit-bag",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/demos/vaults/kit-bag/",
+   "final_url": "https://sgit.ai/demos/vaults/kit-bag/",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Kit Bag, a business plan for a Chrome extension you build yourself, with its policy written first, published as a vault",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:17:42Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26690,12 +27291,19 @@
      "sha256": "dac7f8013efd54ce86c623967b1d954002acc22de38dcb89b7867ed98e6f1330",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-vault-licence",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/demos/vaults/licence-to-operate/",
+   "final_url": "https://sgit.ai/demos/vaults/licence-to-operate/#deck=problem&s=1",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Licence to Operate (an insurance policy for an agent, simulated) a published vault",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:17:33Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26726,18 +27334,32 @@
      "bytes": 8397
     },
     {
+     "name": "region-the-delta.png",
+     "sha256_as_fetched": "f297c4b0d2a73a88c0f3aded1956bff44986bd4a7c7ad248c4deb5e3bbcfcb7d",
+     "bytes_as_fetched": 76018,
+     "sha256": "f297c4b0d2a73a88c0f3aded1956bff44986bd4a7c7ad248c4deb5e3bbcfcb7d",
+     "bytes": 76018
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "4c70adebf2bb226d52774bbe829b315401ee16359bdbea23dff879c222d7328e",
      "bytes_as_fetched": 76,
      "sha256": "4c70adebf2bb226d52774bbe829b315401ee16359bdbea23dff879c222d7328e",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-vault-messaging",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/docs/vault-messaging.html",
+   "final_url": "https://sgit.ai/docs/vault-messaging.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Sending messages between vaults, sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:02Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26768,18 +27390,32 @@
      "bytes": 12961
     },
     {
+     "name": "region-shape-of-it.png",
+     "sha256_as_fetched": "bca6bf7d0895046a6b2da6de39235ad03f6b0762ea444dcf1a17db69788205ab",
+     "bytes_as_fetched": 66000,
+     "sha256": "bca6bf7d0895046a6b2da6de39235ad03f6b0762ea444dcf1a17db69788205ab",
+     "bytes": 66000
+    },
+    {
      "name": "sha256.txt",
      "sha256_as_fetched": "25abde17b4cbd0c1556bc370b9b2e4b8c0343d3bbc94bfbbb5c8b74a2d9afa7b",
      "bytes_as_fetched": 76,
      "sha256": "25abde17b4cbd0c1556bc370b9b2e4b8c0343d3bbc94bfbbb5c8b74a2d9afa7b",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-vaults-index",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/demos/vaults/",
+   "final_url": "https://sgit.ai/demos/vaults/",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Published vaults, sgit.ai",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:17Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26816,12 +27452,19 @@
      "sha256": "143858e662fc9a65e81f325d89be6b2a9325e1af96828d2c02dffabc736e3bb2",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-vaults-llms",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/demos/vaults/llms.txt",
+   "final_url": "https://sgit.ai/demos/vaults/llms.txt",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "Published vaults on sgit.ai (llms.txt)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:16:19Z",
+   "http_status": 200,
    "files": [
     {
      "name": "llms.txt",
@@ -26851,12 +27494,19 @@
      "sha256": "377692384edfebf590b18712b1a3e1dd01a596819f33a43c0c06cef0a409aea5",
      "bytes": 75
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "wsgit-what-is-sgit",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://sgit.ai/docs/what-is-sgit.html",
+   "final_url": "https://sgit.ai/docs/what-is-sgit.html",
+   "publisher": "sgit.ai (Dinis Cruz)",
+   "title": "What is sgit, Docs",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T17:15:50Z",
+   "http_status": 200,
    "files": [
     {
      "name": "inspect.json",
@@ -26900,7 +27550,8 @@
      "sha256": "00e14b81073fb146aa1befa1a710744920936ce2afe2a1dd52e955014a335578",
      "bytes": 76
     }
-   ]
+   ],
+   "recorded_by": "studio-work-sgit-sharness"
   },
   {
    "id": "x-lemkin-thread",
