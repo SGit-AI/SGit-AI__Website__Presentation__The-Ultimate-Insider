@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T15:21Z",
- "count": 492,
+ "built": "2026-10-29T16:23Z",
+ "count": 542,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -16503,6 +16503,827 @@
    "recorded_by": "sgit-php-ideas"
   },
   {
+   "id": "s1-caida-codered",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3787b41939d0d02c6f996b97d56db8f7da60aecd5b165d6c92d620fc19fd5d2d",
+     "bytes_as_fetched": 319,
+     "sha256": "3787b41939d0d02c6f996b97d56db8f7da60aecd5b165d6c92d620fc19fd5d2d",
+     "bytes": 319
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "beec388a6e93b4fd2e557ea6bfe0d26ba2a239bf148d2ab3dec9b46c6a20f590",
+     "bytes_as_fetched": 45560,
+     "redacted": 2,
+     "sha256": "88b969e727b9906000000c033c68c01f5eaa46bc7eaba635d38804dd05e81ee4",
+     "bytes": 45562
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ef674a7665ebb0263411f04cc2947bf5a38025406767f3d0e44dedd849ecefb8",
+     "bytes_as_fetched": 17071,
+     "sha256": "ef674a7665ebb0263411f04cc2947bf5a38025406767f3d0e44dedd849ecefb8",
+     "bytes": 17071
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f18a9d51f0456029a5272e34427183a955e733ea2e8b095b6fa53c0d440236bb",
+     "bytes_as_fetched": 76,
+     "sha256": "f18a9d51f0456029a5272e34427183a955e733ea2e8b095b6fa53c0d440236bb",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s1-caida-codered-coderedv2",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c98b2db411bd018eb00bb6fe432354fa8d85b84ad313d4dff6346419e4e00f91",
+     "bytes_as_fetched": 367,
+     "sha256": "c98b2db411bd018eb00bb6fe432354fa8d85b84ad313d4dff6346419e4e00f91",
+     "bytes": 367
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "61da678e90903dc7069c634680c6a1f52c2688f518e19c8f69ca13e6378ef368",
+     "bytes_as_fetched": 46724,
+     "redacted": 3,
+     "sha256": "3c1ca7ca84a9f2703022702151a5c98ae989f53a06551f82caf63e2133ab6eab",
+     "bytes": 46728
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e276ac09d15ba93c58490e401bb2135f467782708b69651411cb6044c7f47f82",
+     "bytes_as_fetched": 18821,
+     "redacted": 1,
+     "sha256": "05e36862ea8fb7bb92d701cc735e551d99f06bc097c8670d9dc513abaeb12095",
+     "bytes": 18823
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "8e88a8e4edc28a60d0ec39f154d23eb82837d34b8c11d068040229b641efe590",
+     "bytes_as_fetched": 76,
+     "sha256": "8e88a8e4edc28a60d0ec39f154d23eb82837d34b8c11d068040229b641efe590",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s1-caida-slammer",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "cce06dd65970db2c13ba218ab2bde3e90419262e73069ffe50a581fcad57440f",
+     "bytes_as_fetched": 343,
+     "sha256": "cce06dd65970db2c13ba218ab2bde3e90419262e73069ffe50a581fcad57440f",
+     "bytes": 343
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0a5ea622670f063d3bbde5b7110a940ac2e51953098b6bd220f308eaa224d7e4",
+     "bytes_as_fetched": 50357,
+     "redacted": 2,
+     "sha256": "dd84d230c9ba7e28ae8cb4e97a92e33a1593230d49166689d8451749fa50286e",
+     "bytes": 50359
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a794708c19e47aa2ee42cea53981bef280d84c3d0f0d8d8558174f7b463caf12",
+     "bytes_as_fetched": 23107,
+     "sha256": "a794708c19e47aa2ee42cea53981bef280d84c3d0f0d8d8558174f7b463caf12",
+     "bytes": 23107
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "bd6804446216b45ec8806450c2c41e0abbfaf1fe6a66e996c8e0db73fa160bc0",
+     "bytes_as_fetched": 76,
+     "sha256": "bd6804446216b45ec8806450c2c41e0abbfaf1fe6a66e996c8e0db73fa160bc0",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s1-ieee-inside-slammer",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e7b30848a2c9c4d505aea0de87bf0298c08f09e37045cfdd56273bffb99d7a58",
+     "bytes_as_fetched": 343,
+     "sha256": "e7b30848a2c9c4d505aea0de87bf0298c08f09e37045cfdd56273bffb99d7a58",
+     "bytes": 343
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "1083ac3d0bf4fa0c8a6b6532ddf16bd5942462c5e74521fe0afc98d9da814e83",
+     "bytes_as_fetched": 424571,
+     "sha256": "1083ac3d0bf4fa0c8a6b6532ddf16bd5942462c5e74521fe0afc98d9da814e83",
+     "bytes": 424571
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "6106afcabbd7ccf894e1c63dae57969e505ac1810bc685ea3fcc063792149f82",
+     "bytes_as_fetched": 50798,
+     "redacted": 6,
+     "sha256": "26d657c2fd76cfcb3a0c5cfd60ca636e154faec0e5703f84d4f8892d0060ae76",
+     "bytes": 50781
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "9979d06e1d6e6874c1648f6034da2f1cf5b77efa5aa93546c00ef84dbb74be72",
+     "bytes_as_fetched": 75,
+     "sha256": "9979d06e1d6e6874c1648f6034da2f1cf5b77efa5aa93546c00ef84dbb74be72",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "s2-azure-afd-oct-2025",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "64032a373e6325f1163a8d492e8dff352b51d4e9c3dc50e849bdeec09165d59d",
+     "bytes_as_fetched": 352,
+     "sha256": "64032a373e6325f1163a8d492e8dff352b51d4e9c3dc50e849bdeec09165d59d",
+     "bytes": 352
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "18e3a7c1ad54b716435acfd7636cdd4bc8a042b91acfe25756d39f135901f9c1",
+     "bytes_as_fetched": 102981,
+     "sha256": "18e3a7c1ad54b716435acfd7636cdd4bc8a042b91acfe25756d39f135901f9c1",
+     "bytes": 102981
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cf1f73a6e196f60fd557dc05333601eb6b9bce57a8d60cf5fff250c6f623feae",
+     "bytes_as_fetched": 26189,
+     "sha256": "cf1f73a6e196f60fd557dc05333601eb6b9bce57a8d60cf5fff250c6f623feae",
+     "bytes": 26189
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2b445db1642e1b053ba4f8d19decd08f0ca34f1c8fa6e7be4d5784e87c600556",
+     "bytes_as_fetched": 76,
+     "sha256": "2b445db1642e1b053ba4f8d19decd08f0ca34f1c8fa6e7be4d5784e87c600556",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-azure-afd-ykyn-bwz",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1b1d1a5b9b7c38b3a3f0bb7b7d5516e479a79ac606c61e233b1c69c3261a5dc6",
+     "bytes_as_fetched": 391,
+     "sha256": "1b1d1a5b9b7c38b3a3f0bb7b7d5516e479a79ac606c61e233b1c69c3261a5dc6",
+     "bytes": 391
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "cf3c644ff50c097027516733f3bd798eb007cbbcda00bba3e117c1e1cea7fae0",
+     "bytes_as_fetched": 67897,
+     "sha256": "cf3c644ff50c097027516733f3bd798eb007cbbcda00bba3e117c1e1cea7fae0",
+     "bytes": 67897
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "fea30d611461246a6a5ec35783a01a2e800037dcb1d20964e7d5c9e24810d7ed",
+     "bytes_as_fetched": 16986,
+     "sha256": "fea30d611461246a6a5ec35783a01a2e800037dcb1d20964e7d5c9e24810d7ed",
+     "bytes": 16986
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6569466d32ec6603d9145fc7abb6ba35ca2ec9969fb3cdaedb71d60b7f73975c",
+     "bytes_as_fetched": 76,
+     "sha256": "6569466d32ec6603d9145fc7abb6ba35ca2ec9969fb3cdaedb71d60b7f73975c",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-businessinsurance-cybercube",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ddc8accf32bfa0eeda0e7b18cd211c0128cff80804aef10e5432e6b1ab9d7d98",
+     "bytes_as_fetched": 455,
+     "sha256": "ddc8accf32bfa0eeda0e7b18cd211c0128cff80804aef10e5432e6b1ab9d7d98",
+     "bytes": 455
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "61b496038431f01e63441604740a9804de6974bef8a42bfe8d0ebed194bb28d4",
+     "bytes_as_fetched": 335088,
+     "sha256": "61b496038431f01e63441604740a9804de6974bef8a42bfe8d0ebed194bb28d4",
+     "bytes": 335088
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "6c161c0186bd03027ef1197a8f777837c262ddd26d4502bf4b1b132df1c86cbc",
+     "bytes_as_fetched": 4976,
+     "sha256": "6c161c0186bd03027ef1197a8f777837c262ddd26d4502bf4b1b132df1c86cbc",
+     "bytes": 4976
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "5391dc090b5c0601c2ba9a610ea61a2596db834942de1d0f674e09dc3c27112d",
+     "bytes_as_fetched": 76,
+     "sha256": "5391dc090b5c0601c2ba9a610ea61a2596db834942de1d0f674e09dc3c27112d",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-crowdstrike-kurtz-statement",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "2a04b1fdb22b8ed0d5c98fd5a5636196db70f732f2514f60821fabc12daf32bb",
+     "bytes_as_fetched": 427,
+     "sha256": "2a04b1fdb22b8ed0d5c98fd5a5636196db70f732f2514f60821fabc12daf32bb",
+     "bytes": 427
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ff9698b4665bb83af7e023b00241ea97a46826d0ff1d157fc39f46df5f0ef05c",
+     "bytes_as_fetched": 283687,
+     "sha256": "ff9698b4665bb83af7e023b00241ea97a46826d0ff1d157fc39f46df5f0ef05c",
+     "bytes": 283687
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e5944a2f5baa664bcaf103b19a4233887f834b65b1cb261b2185b9cbb4a79e11",
+     "bytes_as_fetched": 40344,
+     "sha256": "e5944a2f5baa664bcaf103b19a4233887f834b65b1cb261b2185b9cbb4a79e11",
+     "bytes": 40344
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "b2e558bccc4e1291f4346a85abf45fb26972e1c08ae9fd5c150e3f739c6ab286",
+     "bytes_as_fetched": 76,
+     "sha256": "b2e558bccc4e1291f4346a85abf45fb26972e1c08ae9fd5c150e3f739c6ab286",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-crowdstrike-pir",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "807b9c436584a30d5b22ee60f9d9d26d0ad6a71a6f13953b1047acb56e826c81",
+     "bytes_as_fetched": 446,
+     "sha256": "807b9c436584a30d5b22ee60f9d9d26d0ad6a71a6f13953b1047acb56e826c81",
+     "bytes": 446
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f819d3a150ab9e4f5f559d6f68f23c3172e156f3752a88455ecb3c88c46d8a96",
+     "bytes_as_fetched": 172264,
+     "redacted": 1,
+     "sha256": "5601b5a0caaf3de26f8d571b7cfd0c058236ba0f0bd785ce5c04614d8a4b8eee",
+     "bytes": 172186
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "49f0566bdbc2b73fa076de03a2061237dc8b90a42a5afb77c62f5215f9f895a1",
+     "bytes_as_fetched": 17237,
+     "sha256": "49f0566bdbc2b73fa076de03a2061237dc8b90a42a5afb77c62f5215f9f895a1",
+     "bytes": 17237
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "dcbe9f06d2d206b5fa3352a84d301f8e32015cbfd4bfd244b92808835c95244e",
+     "bytes_as_fetched": 76,
+     "sha256": "dcbe9f06d2d206b5fa3352a84d301f8e32015cbfd4bfd244b92808835c95244e",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-crowdstrike-rca-pdf",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "82d1dc542dee08bb57d5351a5b88dc23637c2ac78a77bbcfe415443480d5520b",
+     "bytes_as_fetched": 483,
+     "sha256": "82d1dc542dee08bb57d5351a5b88dc23637c2ac78a77bbcfe415443480d5520b",
+     "bytes": 483
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "740e8428c6db97a42d38975492712e4714173d2cdbe920942fa7907dc5a68a23",
+     "bytes_as_fetched": 179183,
+     "sha256": "740e8428c6db97a42d38975492712e4714173d2cdbe920942fa7907dc5a68a23",
+     "bytes": 179183
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cf5d8a0795df0a6894be14a3b7155e028c06873a980adda3e45046dbe6922968",
+     "bytes_as_fetched": 30327,
+     "sha256": "cf5d8a0795df0a6894be14a3b7155e028c06873a980adda3e45046dbe6922968",
+     "bytes": 30327
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "ced615f792e7d49e0e51a2ad9470d1be2bbcbdde6c9dd39ed8a41260d7558096",
+     "bytes_as_fetched": 75,
+     "sha256": "ced615f792e7d49e0e51a2ad9470d1be2bbcbdde6c9dd39ed8a41260d7558096",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "s2-fortune-parametrix",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "57e3b3462b16d2a213b11cc7614a28c01e3fa91ae81b8d7bf57390c389307cb3",
+     "bytes_as_fetched": 465,
+     "sha256": "57e3b3462b16d2a213b11cc7614a28c01e3fa91ae81b8d7bf57390c389307cb3",
+     "bytes": 465
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "69ec7022c19cd757bcf80f0e8e66ba7ec3538c77a825e570f111043f655ea830",
+     "bytes_as_fetched": 440745,
+     "sha256": "69ec7022c19cd757bcf80f0e8e66ba7ec3538c77a825e570f111043f655ea830",
+     "bytes": 440745
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e129238e085005790a0c58f016b15502808fb0be805cd0c2ecd77a25bbeedf9e",
+     "bytes_as_fetched": 5953,
+     "sha256": "e129238e085005790a0c58f016b15502808fb0be805cd0c2ecd77a25bbeedf9e",
+     "bytes": 5953
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e81333aa8cac445d3a28074b6e83131c8540f251251f676caf90b9ae93ebe75f",
+     "bytes_as_fetched": 76,
+     "sha256": "e81333aa8cac445d3a28074b6e83131c8540f251251f676caf90b9ae93ebe75f",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-gcp-incident-2025-06-12",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "879af306e4998bdc005f06f1a85ab52321cdc4e9fe7d0e7e4c0e76c10d217447",
+     "bytes_as_fetched": 375,
+     "sha256": "879af306e4998bdc005f06f1a85ab52321cdc4e9fe7d0e7e4c0e76c10d217447",
+     "bytes": 375
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "45cc946869a729c180275415a3923e733a60030b8e33129bfa0ae7fb712473e1",
+     "bytes_as_fetched": 49860,
+     "sha256": "45cc946869a729c180275415a3923e733a60030b8e33129bfa0ae7fb712473e1",
+     "bytes": 49860
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f36f58faed534db02f716b894219e2244bf71374d2eac2df1fcd0e4dc0a20103",
+     "bytes_as_fetched": 21044,
+     "sha256": "f36f58faed534db02f716b894219e2244bf71374d2eac2df1fcd0e4dc0a20103",
+     "bytes": 21044
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "fe55c3c1a033f35c3adc0607e87d61fa58155b287789d144b80d6ae63e8bc466",
+     "bytes_as_fetched": 76,
+     "sha256": "fe55c3c1a033f35c3adc0607e87d61fa58155b287789d144b80d6ae63e8bc466",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-house-crowdstrike-recap",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "27fcc4a00ebeed47d078f0eeed59dae7da7e549c5fc8be7b1a9b7a8593801c6b",
+     "bytes_as_fetched": 563,
+     "sha256": "27fcc4a00ebeed47d078f0eeed59dae7da7e549c5fc8be7b1a9b7a8593801c6b",
+     "bytes": 563
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b5f8770d71b721da49e72e0028378da98e2927b3af4ba5b58d4c42fa876595f0",
+     "bytes_as_fetched": 85876,
+     "sha256": "b5f8770d71b721da49e72e0028378da98e2927b3af4ba5b58d4c42fa876595f0",
+     "bytes": 85876
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "78ae3ca0fa280dd33092a368e71d1a30d35b4e9766954927192b2f9646728d41",
+     "bytes_as_fetched": 9636,
+     "sha256": "78ae3ca0fa280dd33092a368e71d1a30d35b4e9766954927192b2f9646728d41",
+     "bytes": 9636
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e75d47b5edfea5409d96359438592c6b0cfbcb61a2944410f6d58e25b526e36f",
+     "bytes_as_fetched": 76,
+     "sha256": "e75d47b5edfea5409d96359438592c6b0cfbcb61a2944410f6d58e25b526e36f",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-insjournal-guycarp-crowdstrike",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "aaf62e4a4fbab00629b1915f8296754ebd93b943666ce69084362bcbe0ee5354",
+     "bytes_as_fetched": 395,
+     "sha256": "aaf62e4a4fbab00629b1915f8296754ebd93b943666ce69084362bcbe0ee5354",
+     "bytes": 395
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4e2e1aca4780d732b1d4c514c9089ccf4587bec402177d938dfda57387b5884d",
+     "bytes_as_fetched": 98034,
+     "redacted": 4,
+     "sha256": "14c723890fe5a83de598494103f73f9cba39cd26a73573b1d8677b95e6c721e5",
+     "bytes": 97992
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "629e30e244fb081732bb6f3b6adb9f5be169309d44dd984cad42e50d7855e892",
+     "bytes_as_fetched": 8993,
+     "redacted": 2,
+     "sha256": "88a305a2b37d3880f2f7db1bdf159141ffb25d57f37c3af5d3870eb0e70dca4e",
+     "bytes": 8972
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "66f63043509d9458f627560cc5ab2bcc6b872cd63bd3cd3be7d3798418494aed",
+     "bytes_as_fetched": 76,
+     "sha256": "66f63043509d9458f627560cc5ab2bcc6b872cd63bd3cd3be7d3798418494aed",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-ms-crowdstrike-blog",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f5c44ee89a8c2f0ac53548e900532472104c85ab88e0442998e756abbf7146f0",
+     "bytes_as_fetched": 443,
+     "sha256": "f5c44ee89a8c2f0ac53548e900532472104c85ab88e0442998e756abbf7146f0",
+     "bytes": 443
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ceb3c466f402d6a8d588ef5f6df3ad44b5cf53090dedc25f21a0f328640f2abd",
+     "bytes_as_fetched": 130668,
+     "redacted": 1,
+     "sha256": "fc630d1f8f438cd6584dda28717ac4e5f81e6bc3c62051c7a2fc55f0c064065a",
+     "bytes": 130632
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "48fd73b020bb647609385187617628c583436ca4771f8e03e48ec34325df3763",
+     "bytes_as_fetched": 5705,
+     "sha256": "48fd73b020bb647609385187617628c583436ca4771f8e03e48ec34325df3763",
+     "bytes": 5705
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "358c6c73e59695770a6d3c8eaf9f8b115cc0e0b06a4d92b8ca29f17a740b13fd",
+     "bytes_as_fetched": 76,
+     "sha256": "358c6c73e59695770a6d3c8eaf9f8b115cc0e0b06a4d92b8ca29f17a740b13fd",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-networkworld-uptime-2025",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3f0edea20f3f49f1bf1f3bb32c8174247243202a2c97ce63df321c942f92893d",
+     "bytes_as_fetched": 466,
+     "sha256": "3f0edea20f3f49f1bf1f3bb32c8174247243202a2c97ce63df321c942f92893d",
+     "bytes": 466
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f4976e0ab504d08be07b2e72051278aa9e24516def276c8558ae4a84188882d0",
+     "bytes_as_fetched": 237326,
+     "sha256": "f4976e0ab504d08be07b2e72051278aa9e24516def276c8558ae4a84188882d0",
+     "bytes": 237326
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9b5b9a5ed72f913a00772b0a497b3e79bfe81150299f1420b1f1e8fde6feb7fb",
+     "bytes_as_fetched": 10064,
+     "sha256": "9b5b9a5ed72f913a00772b0a497b3e79bfe81150299f1420b1f1e8fde6feb7fb",
+     "bytes": 10064
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "95dfd325e5723184fdc365c537d966b5cba4f91df7eb85bdcecedfb1d4c4065b",
+     "bytes_as_fetched": 76,
+     "sha256": "95dfd325e5723184fdc365c537d966b5cba4f91df7eb85bdcecedfb1d4c4065b",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-parametrix-crowdstrike",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7f0afa29dff35f9224b17f82546253d89795990da787ba972f5c9451d7e340b8",
+     "bytes_as_fetched": 426,
+     "sha256": "7f0afa29dff35f9224b17f82546253d89795990da787ba972f5c9451d7e340b8",
+     "bytes": 426
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "317b2c5208d05b5e4e9a7dc964e4f94fb2a1e572b9ca553d0d25dc0acd345f87",
+     "bytes_as_fetched": 24345,
+     "sha256": "317b2c5208d05b5e4e9a7dc964e4f94fb2a1e572b9ca553d0d25dc0acd345f87",
+     "bytes": 24345
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3b2c9d563fe2fdc2538c59661f4c19503f537d8e2af2983369cb879d6d0e2a6b",
+     "bytes_as_fetched": 3406,
+     "sha256": "3b2c9d563fe2fdc2538c59661f4c19503f537d8e2af2983369cb879d6d0e2a6b",
+     "bytes": 3406
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "91504d94553aae80afab5c46e61e11789ac11ee7904ff64cdda383ef6a79cad8",
+     "bytes_as_fetched": 76,
+     "sha256": "91504d94553aae80afab5c46e61e11789ac11ee7904ff64cdda383ef6a79cad8",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-uptime-2025-outage-analysis",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "42ac054d017bcf5c64e3972641e5bbc8817c9e49d5d9ae94bb7585517b38d76f",
+     "bytes_as_fetched": 461,
+     "sha256": "42ac054d017bcf5c64e3972641e5bbc8817c9e49d5d9ae94bb7585517b38d76f",
+     "bytes": 461
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1e760086ac2378ee4a3816ffe2a0cb3b44a8971cecdb9dc14c80458c5ace6c07",
+     "bytes_as_fetched": 5795,
+     "sha256": "1e760086ac2378ee4a3816ffe2a0cb3b44a8971cecdb9dc14c80458c5ace6c07",
+     "bytes": 5795
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0b5346172e9efa2344fdb1a14159af2616323e3b215bb7c3d772fd5434aed8ad",
+     "bytes_as_fetched": 60,
+     "sha256": "0b5346172e9efa2344fdb1a14159af2616323e3b215bb7c3d772fd5434aed8ad",
+     "bytes": 60
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a8f6bf7a556b90fde22fa78e1d61f9f8e5a6aac844b253c80da9d3b04d1fdc63",
+     "bytes_as_fetched": 76,
+     "sha256": "a8f6bf7a556b90fde22fa78e1d61f9f8e5a6aac844b253c80da9d3b04d1fdc63",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s2-uptime-2025-report-pdf",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9ef30e9a537391c2c461849e50640cf403787f18709263f7960c577d86f06f67",
+     "bytes_as_fetched": 379,
+     "sha256": "9ef30e9a537391c2c461849e50640cf403787f18709263f7960c577d86f06f67",
+     "bytes": 379
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "7af698c1d96b79430e5af64f80812147493a1ff22ae49fde96767e67bb0f6f3c",
+     "bytes_as_fetched": 5633,
+     "sha256": "7af698c1d96b79430e5af64f80812147493a1ff22ae49fde96767e67bb0f6f3c",
+     "bytes": 5633
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2300a7643fca40b2bfc72e190dc498f7329f4a7f9ebcbbe7235570f84cc07bd4",
+     "bytes_as_fetched": 75,
+     "sha256": "2300a7643fca40b2bfc72e190dc498f7329f4a7f9ebcbbe7235570f84cc07bd4",
+     "bytes": 75
+    }
+   ]
+  },
+  {
+   "id": "s2-uptime-outage-2025-blog",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4d2ca2d6a37d6b93dfff82e90c168e559d88e256452c173d479b95d58de5964b",
+     "bytes_as_fetched": 405,
+     "sha256": "4d2ca2d6a37d6b93dfff82e90c168e559d88e256452c173d479b95d58de5964b",
+     "bytes": 405
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b747ac0be514087a9aa2715c241a1f755a7dd52c20e5139349d77d0ee14d7ca0",
+     "bytes_as_fetched": 5669,
+     "sha256": "b747ac0be514087a9aa2715c241a1f755a7dd52c20e5139349d77d0ee14d7ca0",
+     "bytes": 5669
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0b5346172e9efa2344fdb1a14159af2616323e3b215bb7c3d772fd5434aed8ad",
+     "bytes_as_fetched": 60,
+     "sha256": "0b5346172e9efa2344fdb1a14159af2616323e3b215bb7c3d772fd5434aed8ad",
+     "bytes": 60
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "3d00f85567d56042e796ba7d3f65744379aa0216dd6ec3293e5114f5986613d4",
+     "bytes_as_fetched": 76,
+     "sha256": "3d00f85567d56042e796ba7d3f65744379aa0216dd6ec3293e5114f5986613d4",
+     "bytes": 76
+    }
+   ]
+  },
+  {
+   "id": "s4-site-release-history",
+   "url": "git log origin/dev (SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider)",
+   "final_url": null,
+   "publisher": "this site's CI (GitHub Actions release workflow)",
+   "title": "Release commits on dev: committer time and version",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T16:21:24Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d23dc15fac3ff9dd940cfc2d7fccbd39b667f5b1a04c95857d1500ebd7681f7e",
+     "bytes_as_fetched": 5175,
+     "sha256": "d23dc15fac3ff9dd940cfc2d7fccbd39b667f5b1a04c95857d1500ebd7681f7e",
+     "bytes": 5175
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "7e938db6fbfa68c1e66aa31fd7d348fa3f4792981c8049b9522f19285f12359a",
+     "bytes_as_fetched": 86,
+     "sha256": "7e938db6fbfa68c1e66aa31fd7d348fa3f4792981c8049b9522f19285f12359a",
+     "bytes": 86
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-s4"
+  },
+  {
+   "id": "s5-explorer-coding",
+   "url": "https://newsroom.sgit.ai/articles/explorer-coding.md",
+   "final_url": "https://newsroom.sgit.ai/articles/explorer-coding.md",
+   "publisher": "SGit Newsroom (Dinis Cruz)",
+   "title": "Explorer coding",
+   "kind": "own-site",
+   "published": "2026-10-16",
+   "captured_at": "2026-10-29T16:21:33Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "article.md",
+     "sha256_as_fetched": "99aea82dec5ed63433e29c3abf455154acdd62638d79142f27c9965dd3efe4ef",
+     "bytes_as_fetched": 22904,
+     "redacted": 2,
+     "sha256": "15f7a13e114a4f609fbe6bcaef25a303499ec03c77cb01ff4ea6f0361289088c",
+     "bytes": 22896
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f72a5cac63e0900c7095f02fa57254fabd9efb392426f1a834dcf82ba9055816",
+     "bytes_as_fetched": 304,
+     "sha256": "f72a5cac63e0900c7095f02fa57254fabd9efb392426f1a834dcf82ba9055816",
+     "bytes": 304
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-s5"
+  },
+  {
+   "id": "s5-the-agent-team-as-it-runs",
+   "url": "https://newsroom.sgit.ai/articles/the-agent-team-as-it-runs.md",
+   "final_url": "https://newsroom.sgit.ai/articles/the-agent-team-as-it-runs.md",
+   "publisher": "SGit Newsroom (Dinis Cruz)",
+   "title": "The agent team as it runs",
+   "kind": "own-site",
+   "published": "2026-10-06",
+   "captured_at": "2026-10-29T16:21:34Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "article.md",
+     "sha256_as_fetched": "9840b76b33a25345ace5c36a5f7bd7585e70a3368a6dc6210556a2335239a3f7",
+     "bytes_as_fetched": 47586,
+     "redacted": 1,
+     "sha256": "4e3baaea8e92b0219ce09a8ea3ba849783967f1b775debdd22226c0206ac0ddc",
+     "bytes": 47582
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1e1ca44a40da1b6e2a807fc1a5f6d0bd97508de6ae9e258c9c1bfaed3dad27bb",
+     "bytes_as_fetched": 334,
+     "sha256": "1e1ca44a40da1b6e2a807fc1a5f6d0bd97508de6ae9e258c9c1bfaed3dad27bb",
+     "bytes": 334
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-s5"
+  },
+  {
+   "id": "s5-the-citizen-developer",
+   "url": "https://newsroom.sgit.ai/articles/the-citizen-developer.md",
+   "final_url": "https://newsroom.sgit.ai/articles/the-citizen-developer.md",
+   "publisher": "SGit Newsroom (Dinis Cruz)",
+   "title": "The citizen developer is good news",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T16:21:34Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "article.md",
+     "sha256_as_fetched": "abccf898a5e5d6e00a59248e3455543583ffa29a359c29d1c73baa622de626fb",
+     "bytes_as_fetched": 18825,
+     "redacted": 2,
+     "sha256": "32f7a4b4d5ed2c4cad097459b90fb47bfef092d669d924714aa966f753652773",
+     "bytes": 18817
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1c6fc6e19fa2fd1e9a8d2f617c7888a2137037a68eeef2ae32f9ef8da1c14cc7",
+     "bytes_as_fetched": 322,
+     "sha256": "1c6fc6e19fa2fd1e9a8d2f617c7888a2137037a68eeef2ae32f9ef8da1c14cc7",
+     "bytes": 322
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-s5"
+  },
+  {
    "id": "scmedia-amazon-q-wiper",
    "url": "https://www.scworld.com/news/amazon-q-extension-for-vs-code-reportedly-injected-with-wiper-prompt",
    "final_url": "https://www.scworld.com/news/amazon-q-extension-for-vs-code-reportedly-injected-with-wiper-prompt",
@@ -17383,6 +18204,560 @@
    "capture": "full",
    "folder": "/tmp/claude-0/-home-user-SGit-AI--Website--Presentation--The-Ultimate-Insider/8884603f-8eed-5a12-9d3c-9ba52676f53a/scratchpad/work/captures/sharness-status",
    "recorded_by": "studio-e11"
+  },
+  {
+   "id": "sharness2-anim-hello-replay",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "hello-replay.svg",
+     "sha256_as_fetched": "ac92c70cbdb1fb2c891aa7f961d985d1a21d18d05ec6ea594ddfc916d8aa98f0",
+     "bytes_as_fetched": 4937,
+     "sha256": "ac92c70cbdb1fb2c891aa7f961d985d1a21d18d05ec6ea594ddfc916d8aa98f0",
+     "bytes": 4937
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1bf2d648ca307699dd2c6d0a9a7453ce601e5e755a4c09fc509ee855c915719d",
+     "bytes_as_fetched": 1269,
+     "sha256": "1bf2d648ca307699dd2c6d0a9a7453ce601e5e755a4c09fc509ee855c915719d",
+     "bytes": 1269
+    }
+   ]
+  },
+  {
+   "id": "sharness2-anim-kernel-in-a-tab",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "kernel-in-a-tab.svg",
+     "sha256_as_fetched": "ec794785507d78fac4d84b1e5c5d576b39f255c1833e3993e97041195bc56a23",
+     "bytes_as_fetched": 5169,
+     "sha256": "ec794785507d78fac4d84b1e5c5d576b39f255c1833e3993e97041195bc56a23",
+     "bytes": 5169
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "666ec90b309a38f0742bde51a5dc7768c10adce2a14a36ac4b7cd3f86bd4a114",
+     "bytes_as_fetched": 999,
+     "sha256": "666ec90b309a38f0742bde51a5dc7768c10adce2a14a36ac4b7cd3f86bd4a114",
+     "bytes": 999
+    }
+   ]
+  },
+  {
+   "id": "sharness2-anim-one-idea",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "one-idea.svg",
+     "sha256_as_fetched": "c8eb730070f177ed994e1ff53f4f90a42b4ba35678f8fdc548a0076517a2093a",
+     "bytes_as_fetched": 6709,
+     "sha256": "c8eb730070f177ed994e1ff53f4f90a42b4ba35678f8fdc548a0076517a2093a",
+     "bytes": 6709
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c679bc78f62fc6d32084ed66ad690a33271aa7a98484138f8c484f481b3c15f2",
+     "bytes_as_fetched": 1487,
+     "sha256": "c679bc78f62fc6d32084ed66ad690a33271aa7a98484138f8c484f481b3c15f2",
+     "bytes": 1487
+    }
+   ]
+  },
+  {
+   "id": "sharness2-anim-os-of-one-process",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "os-of-one-process.svg",
+     "sha256_as_fetched": "2760f2d0e42ac2eaada0c3382615a1dd48f46b8057968b3eea2a2798c79a433f",
+     "bytes_as_fetched": 7837,
+     "sha256": "2760f2d0e42ac2eaada0c3382615a1dd48f46b8057968b3eea2a2798c79a433f",
+     "bytes": 7837
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a118248b350ced29dc232e8661952346beff639f90d6214cd9126901b7c845c4",
+     "bytes_as_fetched": 1701,
+     "sha256": "a118248b350ced29dc232e8661952346beff639f90d6214cd9126901b7c845c4",
+     "bytes": 1701
+    }
+   ]
+  },
+  {
+   "id": "sharness2-browser",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "ba51195663aa81d6afc83f667243b725021b26c0bdcfdbf04f45f3ea1b19a63a",
+     "bytes_as_fetched": 16245,
+     "sha256": "ba51195663aa81d6afc83f667243b725021b26c0bdcfdbf04f45f3ea1b19a63a",
+     "bytes": 16245
+    }
+   ]
+  },
+  {
+   "id": "sharness2-demo",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0aaaccba6f9cf30bfa9c9f6b1af11734fda3fc05e662a8c3a5f6c7982d5bf451",
+     "bytes_as_fetched": 4688,
+     "sha256": "0aaaccba6f9cf30bfa9c9f6b1af11734fda3fc05e662a8c3a5f6c7982d5bf451",
+     "bytes": 4688
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "30d109c27289e7521a7c3cbac939b979365e326b716732a21927deb100517716",
+     "bytes_as_fetched": 861,
+     "sha256": "30d109c27289e7521a7c3cbac939b979365e326b716732a21927deb100517716",
+     "bytes": 861
+    }
+   ]
+  },
+  {
+   "id": "sharness2-design-brief",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "1b001dd60c58a9fa0267c3970453306f94502a177159e71617bc8425ba88b707",
+     "bytes_as_fetched": 9356,
+     "sha256": "1b001dd60c58a9fa0267c3970453306f94502a177159e71617bc8425ba88b707",
+     "bytes": 9356
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "5e449d7ed63e2958ff563a0b2fed7b3c0593038bdb7261511d7407f2e6535a90",
+     "bytes_as_fetched": 25814,
+     "sha256": "5e449d7ed63e2958ff563a0b2fed7b3c0593038bdb7261511d7407f2e6535a90",
+     "bytes": 25814
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c265071fb922f91342060abe1794d147b1dac73ae69cfade94c02759e2057e41",
+     "bytes_as_fetched": 10898,
+     "sha256": "c265071fb922f91342060abe1794d147b1dac73ae69cfade94c02759e2057e41",
+     "bytes": 10898
+    }
+   ]
+  },
+  {
+   "id": "sharness2-design-svg-moving-parts",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "moving-parts.svg",
+     "sha256_as_fetched": "c967c4fc83e862a9d485c092b0b426df671edf6d813be5f57202a433e301b308",
+     "bytes_as_fetched": 8226,
+     "sha256": "c967c4fc83e862a9d485c092b0b426df671edf6d813be5f57202a433e301b308",
+     "bytes": 8226
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "dd62c901f9a6e08a1e247244f608d3bf6284e0f02b961c36e67a8325a0efbe5c",
+     "bytes_as_fetched": 1728,
+     "sha256": "dd62c901f9a6e08a1e247244f608d3bf6284e0f02b961c36e67a8325a0efbe5c",
+     "bytes": 1728
+    }
+   ]
+  },
+  {
+   "id": "sharness2-design-svg-one-request",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "one-request.svg",
+     "sha256_as_fetched": "34c0cc0d103a87ad6e90e89914798cbf9437e8d99e47b1fdf85c2fbcee60ff9f",
+     "bytes_as_fetched": 4708,
+     "sha256": "34c0cc0d103a87ad6e90e89914798cbf9437e8d99e47b1fdf85c2fbcee60ff9f",
+     "bytes": 4708
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d90a29594649285369ddc265bdf441c07038ac50a08ca484b370c72019bed856",
+     "bytes_as_fetched": 907,
+     "sha256": "d90a29594649285369ddc265bdf441c07038ac50a08ca484b370c72019bed856",
+     "bytes": 907
+    }
+   ]
+  },
+  {
+   "id": "sharness2-design-svg-spectrum",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "11d0a52342c8db8bdd9677767f2020775210d7ec53104eda5bc7c74437359fab",
+     "bytes_as_fetched": 1295,
+     "sha256": "11d0a52342c8db8bdd9677767f2020775210d7ec53104eda5bc7c74437359fab",
+     "bytes": 1295
+    },
+    {
+     "name": "spectrum.svg",
+     "sha256_as_fetched": "caed348d77237e9ebc3ccd65bd277ec91aa1b645e2ca922d78e3e887487cdb87",
+     "bytes_as_fetched": 5723,
+     "sha256": "caed348d77237e9ebc3ccd65bd277ec91aa1b645e2ca922d78e3e887487cdb87",
+     "bytes": 5723
+    }
+   ]
+  },
+  {
+   "id": "sharness2-design-svg-surface",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "dee66274a6803fa0c4e4b2c2640ece03430e615664b240a1ee823361ef1a5f9d",
+     "bytes_as_fetched": 1872,
+     "sha256": "dee66274a6803fa0c4e4b2c2640ece03430e615664b240a1ee823361ef1a5f9d",
+     "bytes": 1872
+    },
+    {
+     "name": "surface.svg",
+     "sha256_as_fetched": "c8acabfb64b675917757a62baaaba981b4b808267a4afca5c919245d7c8aa683",
+     "bytes_as_fetched": 8300,
+     "sha256": "c8acabfb64b675917757a62baaaba981b4b808267a4afca5c919245d7c8aa683",
+     "bytes": 8300
+    }
+   ]
+  },
+  {
+   "id": "sharness2-home",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "c89a8204ddfb0b27789aab4d82529d1a93f00ddf7927a5c5d9836903845685c9",
+     "bytes_as_fetched": 10218,
+     "sha256": "c89a8204ddfb0b27789aab4d82529d1a93f00ddf7927a5c5d9836903845685c9",
+     "bytes": 10218
+    },
+    {
+     "name": "llms.txt",
+     "sha256_as_fetched": "d92432c70866b86eed41e3904f458cfad83d914270be25f0614ad8fc6ef00f35",
+     "bytes_as_fetched": 19825,
+     "sha256": "d92432c70866b86eed41e3904f458cfad83d914270be25f0614ad8fc6ef00f35",
+     "bytes": 19825
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "cfbe907dc8ddec2137dfae9a699d0d52612bf9dd5d344c0e38598bc65ef592da",
+     "bytes_as_fetched": 31653,
+     "sha256": "cfbe907dc8ddec2137dfae9a699d0d52612bf9dd5d344c0e38598bc65ef592da",
+     "bytes": 31653
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f138df6ec534607051b2831dcec7a7ce08372277f838da7fcc979e3cd7efa249",
+     "bytes_as_fetched": 14934,
+     "sha256": "f138df6ec534607051b2831dcec7a7ce08372277f838da7fcc979e3cd7efa249",
+     "bytes": 14934
+    }
+   ]
+  },
+  {
+   "id": "sharness2-linux-in-a-tab",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "daf5bccb9037fb0fa9544ccd5860a0bd1969165657cc03541424393b0276bb07",
+     "bytes_as_fetched": 26347,
+     "sha256": "daf5bccb9037fb0fa9544ccd5860a0bd1969165657cc03541424393b0276bb07",
+     "bytes": 26347
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "eac6d3212c8bca0e3625195ced83a221eaf8b44245b3bd9172246cff62ae8a27",
+     "bytes_as_fetched": 40059,
+     "sha256": "eac6d3212c8bca0e3625195ced83a221eaf8b44245b3bd9172246cff62ae8a27",
+     "bytes": 40059
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "af991a073cffea2e806e37e9d7dc0a64deed0af2b08fc0c3501782813c8c9c0b",
+     "bytes_as_fetched": 21802,
+     "sha256": "af991a073cffea2e806e37e9d7dc0a64deed0af2b08fc0c3501782813c8c9c0b",
+     "bytes": 21802
+    }
+   ]
+  },
+  {
+   "id": "sharness2-lit-svg-interpreter",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "interpreter.svg",
+     "sha256_as_fetched": "98bbf61f813b6fe6aad38d44364ee52de8e6807e0901add0bdf96675893676ba",
+     "bytes_as_fetched": 4168,
+     "sha256": "98bbf61f813b6fe6aad38d44364ee52de8e6807e0901add0bdf96675893676ba",
+     "bytes": 4168
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "22eb6df3213d9b9ef44fa8a9cd343eae76951e964f236290398ef260e0309815",
+     "bytes_as_fetched": 954,
+     "sha256": "22eb6df3213d9b9ef44fa8a9cd343eae76951e964f236290398ef260e0309815",
+     "bytes": 954
+    }
+   ]
+  },
+  {
+   "id": "sharness2-lit-svg-run-pipeline",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "16855f507a381b50444f233eb413c8361a8e5f29fc642f8d2aefd1c256266eae",
+     "bytes_as_fetched": 1144,
+     "sha256": "16855f507a381b50444f233eb413c8361a8e5f29fc642f8d2aefd1c256266eae",
+     "bytes": 1144
+    },
+    {
+     "name": "run-pipeline.svg",
+     "sha256_as_fetched": "bceb538402ee923d475ae8ef9abe020946a6f14cd101eefd078b13f4f8aebd3b",
+     "bytes_as_fetched": 6756,
+     "sha256": "bceb538402ee923d475ae8ef9abe020946a6f14cd101eefd078b13f4f8aebd3b",
+     "bytes": 6756
+    }
+   ]
+  },
+  {
+   "id": "sharness2-lit-svg-stack",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "492d64fc441c5a47ad3bd16f5e55e08b84704e465faa455de965bcefe2adaa26",
+     "bytes_as_fetched": 1337,
+     "sha256": "492d64fc441c5a47ad3bd16f5e55e08b84704e465faa455de965bcefe2adaa26",
+     "bytes": 1337
+    },
+    {
+     "name": "stack.svg",
+     "sha256_as_fetched": "deae7bf531e3587f7d0f0db2c7c70ea09d82fc1ff1193b2ee541704ea4f70726",
+     "bytes_as_fetched": 5481,
+     "sha256": "deae7bf531e3587f7d0f0db2c7c70ea09d82fc1ff1193b2ee541704ea4f70726",
+     "bytes": 5481
+    }
+   ]
+  },
+  {
+   "id": "sharness2-lit-svg-three-hashes",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d22fb8a94ed85473464ebc2e9c835ada466baa18c47e89fe3dc18a60398c55d9",
+     "bytes_as_fetched": 820,
+     "sha256": "d22fb8a94ed85473464ebc2e9c835ada466baa18c47e89fe3dc18a60398c55d9",
+     "bytes": 820
+    },
+    {
+     "name": "three-hashes.svg",
+     "sha256_as_fetched": "8162b84ae6929617efdc62e2060890210099cc395558d48c8564cf57937253bc",
+     "bytes_as_fetched": 3813,
+     "sha256": "8162b84ae6929617efdc62e2060890210099cc395558d48c8564cf57937253bc",
+     "bytes": 3813
+    }
+   ]
+  },
+  {
+   "id": "sharness2-lit-svg-what-held",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "deeb242eda13ea0dccfc86efdc1743df5e17c9db56169d1ad83f36e2d2528836",
+     "bytes_as_fetched": 1200,
+     "sha256": "deeb242eda13ea0dccfc86efdc1743df5e17c9db56169d1ad83f36e2d2528836",
+     "bytes": 1200
+    },
+    {
+     "name": "what-held.svg",
+     "sha256_as_fetched": "14ee2eed911fe5bbcf0c1ad5220993b4ec9d770746f57cc6759456fddd99be10",
+     "bytes_as_fetched": 5259,
+     "sha256": "14ee2eed911fe5bbcf0c1ad5220993b4ec9d770746f57cc6759456fddd99be10",
+     "bytes": 5259
+    }
+   ]
+  },
+  {
+   "id": "sharness2-llms-full",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "llms-full.txt",
+     "sha256_as_fetched": "3f44b03fcaeac87e906cbc614815b61d61d7cd1d789b74e33b6a230ab610dec9",
+     "bytes_as_fetched": 1199651,
+     "redacted": 9,
+     "sha256": "ebdecf1e4edd9e7b22ae8b71f554e1b04a915d2815fc728e79e1cb21474d39a4",
+     "bytes": 1199612
+    }
+   ]
+  },
+  {
+   "id": "sharness2-mockup-edges",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "31fd38dbb847ab69ca3616e128c3c63869d321fc3c3befd600cbe26fb36b96a4",
+     "bytes_as_fetched": 21377,
+     "sha256": "31fd38dbb847ab69ca3616e128c3c63869d321fc3c3befd600cbe26fb36b96a4",
+     "bytes": 21377
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d04cb8b36b23b342a6f4447e4a56b6cec3bde5184aca00b87a451afe0f0e110b",
+     "bytes_as_fetched": 5413,
+     "sha256": "d04cb8b36b23b342a6f4447e4a56b6cec3bde5184aca00b87a451afe0f0e110b",
+     "bytes": 5413
+    }
+   ]
+  },
+  {
+   "id": "sharness2-mockup-policy-hash",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2ec3e2cc4799070446698375fdcc9dd7f5d44d480382eb362f3465518d5b7995",
+     "bytes_as_fetched": 22038,
+     "sha256": "2ec3e2cc4799070446698375fdcc9dd7f5d44d480382eb362f3465518d5b7995",
+     "bytes": 22038
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "44ebde5e813456332478d15ec8ce3d16b97e3723d0971ebeb424e02d248a6a55",
+     "bytes_as_fetched": 5752,
+     "sha256": "44ebde5e813456332478d15ec8ce3d16b97e3723d0971ebeb424e02d248a6a55",
+     "bytes": 5752
+    }
+   ]
+  },
+  {
+   "id": "sharness2-playground",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c1fb6c4898782f6fa8b497242ac7d204e7871003d72e7e9eb6b5504aca1ac165",
+     "bytes_as_fetched": 17452,
+     "sha256": "c1fb6c4898782f6fa8b497242ac7d204e7871003d72e7e9eb6b5504aca1ac165",
+     "bytes": 17452
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8f44bde8a4ef8606c71d8525a88d30a71543214819ac0b372218da43b4a77d68",
+     "bytes_as_fetched": 6670,
+     "sha256": "8f44bde8a4ef8606c71d8525a88d30a71543214819ac0b372218da43b4a77d68",
+     "bytes": 6670
+    }
+   ]
+  },
+  {
+   "id": "sharness2-sb-hello-world-inside",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "ce2824cf62d0ea1a13bf3bfb72a0b82fbf68abe7b2647a13773c714e89960c56",
+     "bytes_as_fetched": 3890,
+     "sha256": "ce2824cf62d0ea1a13bf3bfb72a0b82fbf68abe7b2647a13773c714e89960c56",
+     "bytes": 3890
+    },
+    {
+     "name": "storyboard.json",
+     "sha256_as_fetched": "4987ffa92885f300b484082f3293df013d1fa443cc8ba90fc99d863be6021d43",
+     "bytes_as_fetched": 6649,
+     "sha256": "4987ffa92885f300b484082f3293df013d1fa443cc8ba90fc99d863be6021d43",
+     "bytes": 6649
+    }
+   ]
+  },
+  {
+   "id": "sharness2-sb-its-one-job",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "5860e460104b54959602f76e7b8c2ca0d513b42b31a4e750fe2acf494b715b5b",
+     "bytes_as_fetched": 4104,
+     "sha256": "5860e460104b54959602f76e7b8c2ca0d513b42b31a4e750fe2acf494b715b5b",
+     "bytes": 4104
+    },
+    {
+     "name": "storyboard.json",
+     "sha256_as_fetched": "18040d15bec171d577f03163646e8f0ef18275bde3d60756b83117edff302b45",
+     "bytes_as_fetched": 7855,
+     "sha256": "18040d15bec171d577f03163646e8f0ef18275bde3d60756b83117edff302b45",
+     "bytes": 7855
+    }
+   ]
+  },
+  {
+   "id": "sharness2-sb-the-last-metre",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "3dcdd82647b0f8a0619832c9db7aebc142a98afa59233c3a39b316710715cd44",
+     "bytes_as_fetched": 3648,
+     "sha256": "3dcdd82647b0f8a0619832c9db7aebc142a98afa59233c3a39b316710715cd44",
+     "bytes": 3648
+    },
+    {
+     "name": "storyboard.json",
+     "sha256_as_fetched": "e535b8f49fef31f56d44250d1a68d5eb207061138514dccc74e618abe1625ca9",
+     "bytes_as_fetched": 6612,
+     "sha256": "e535b8f49fef31f56d44250d1a68d5eb207061138514dccc74e618abe1625ca9",
+     "bytes": 6612
+    }
+   ]
+  },
+  {
+   "id": "sharness2-storyboards",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "e7d5fbe4bcaa1c588d76eb607a43eeef7aa400d998b484144f049b94919db865",
+     "bytes_as_fetched": 3667,
+     "sha256": "e7d5fbe4bcaa1c588d76eb607a43eeef7aa400d998b484144f049b94919db865",
+     "bytes": 3667
+    }
+   ]
   },
   {
    "id": "silicon-cyberark-2025-press",

@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T15:21Z. 492 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T16:23Z. 542 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -404,6 +404,30 @@ Built 2026-10-29T15:21Z. 492 sources; `manifest.json` has every file's SHA-256. 
 | [rm-lto](https://riskmandate.ai/licence-to-operate.html) | RiskMandate (Dinis Cruz) | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
 | [ruflo-license](https://raw.githubusercontent.com/ruvnet/ruflo/main/LICENSE) | ruvnet (GitHub) | primary | 2026-10-29T01:56:20Z | 200 | full | 3 |
 | [ruflo-npm](https://registry.npmjs.org/ruflo/latest) | npm registry | primary | 2026-10-29T01:56:20Z | 200 | full | 4 |
+| [s1-caida-codered](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s1-caida-codered-coderedv2](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s1-caida-slammer](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s1-ieee-inside-slammer](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-azure-afd-oct-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-azure-afd-ykyn-bwz](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-businessinsurance-cybercube](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-crowdstrike-kurtz-statement](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-crowdstrike-pir](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-crowdstrike-rca-pdf](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-fortune-parametrix](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-gcp-incident-2025-06-12](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-house-crowdstrike-recap](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-insjournal-guycarp-crowdstrike](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-ms-crowdstrike-blog](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-networkworld-uptime-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-parametrix-crowdstrike](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-uptime-2025-outage-analysis](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s2-uptime-2025-report-pdf](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [s2-uptime-outage-2025-blog](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s4-site-release-history](git log origin/dev (SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider)) | this site's CI (GitHub Actions release workflow) | primary | 2026-10-29T16:21:24Z | 200 | full | 2 |
+| [s5-explorer-coding](https://newsroom.sgit.ai/articles/explorer-coding.md) | SGit Newsroom (Dinis Cruz) | own-site | 2026-10-29T16:21:33Z | 200 | full | 2 |
+| [s5-the-agent-team-as-it-runs](https://newsroom.sgit.ai/articles/the-agent-team-as-it-runs.md) | SGit Newsroom (Dinis Cruz) | own-site | 2026-10-29T16:21:34Z | 200 | full | 2 |
+| [s5-the-citizen-developer](https://newsroom.sgit.ai/articles/the-citizen-developer.md) | SGit Newsroom (Dinis Cruz) | own-site | 2026-10-29T16:21:34Z | 200 | full | 2 |
 | [scmedia-amazon-q-wiper](https://www.scworld.com/news/amazon-q-extension-for-vs-code-reportedly-injected-with-wiper-prompt) | SC Media | news | 2026-10-29T01:50:21Z | 403 | failed: 403 Cloudflare block (curl and WebFetch); web.archive.org unreachable (connection reset); saved bytes are the block page | 3 |
 | [sdtimes-gartner-agentic-40](https://sdtimes.com/agentic-ai/gartner-more-than-40-of-agentic-ai-projects-will-be-canceled-in-next-few-years/) | SD Times | news | 2026-10-29T01:55:44Z | 200 | full | 3 |
 | [secureframe-grc-stats](https://secureframe.com/blog/compliance-statistics) | Secureframe | vendor-survey | 2026-10-29T01:54:02Z | 200 | full | 3 |
@@ -428,6 +452,32 @@ Built 2026-10-29T15:21Z. 492 sources; `manifest.json` has every file's SHA-256. 
 | [sharness-linux-in-a-tab](https://sharness.ai/articles/linux-in-a-tab.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full: captured for context, not quoted | 2 |
 | [sharness-machines](https://sharness.ai/evidence/machines/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
 | [sharness-status](https://sharness.ai/evidence/status/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
+| [sharness2-anim-hello-replay](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-anim-kernel-in-a-tab](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-anim-one-idea](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-anim-os-of-one-process](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-browser](None) |  | None | None | None | unlisted: a capture folder no record names | 1 |
+| [sharness2-demo](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-design-brief](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [sharness2-design-svg-moving-parts](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-design-svg-one-request](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-design-svg-spectrum](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-design-svg-surface](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-home](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [sharness2-linux-in-a-tab](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [sharness2-lit-svg-interpreter](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-lit-svg-run-pipeline](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-lit-svg-stack](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-lit-svg-three-hashes](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-lit-svg-what-held](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-llms-full](None) |  | None | None | None | unlisted: a capture folder no record names | 1 |
+| [sharness2-mockup-edges](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-mockup-policy-hash](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-playground](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-sb-hello-world-inside](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-sb-its-one-job](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-sb-the-last-metre](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
+| [sharness2-storyboards](None) |  | None | None | None | unlisted: a capture folder no record names | 1 |
 | [silicon-cyberark-2025-press](https://www.silicon.co.uk/press-release/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security) | Silicon UK (BusinessWire syndication of CyberArk release) | vendor-survey | 2026-10-29T01:55:11Z | 200 | full | 3 |
 | [spiffe-overview](https://spiffe.io/docs/latest/spiffe-about/overview/) | SPIFFE project (CNCF) | primary | 2026-10-29T01:50:50Z | 200 | full | 4 |
 | [story-abp-llms](https://abp.sgit.ai/llms.txt) | abp.sgit.ai | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |

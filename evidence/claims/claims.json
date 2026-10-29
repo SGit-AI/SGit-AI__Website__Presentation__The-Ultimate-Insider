@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T15:21Z",
- "count": 192,
+ "built": "2026-10-29T16:23Z",
+ "count": 197,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T15:21Z"
+   "adjudicated": "researcher, 2026-10-29T16:23Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1726,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T15:21Z"
+   "adjudicated": "researcher, 2026-10-29T16:23Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -4907,6 +4907,172 @@
    "note": "His published term is 'decision policy' (Agent Decision Policy), part of the behaviour policy family; 'decision behaviour policy' not found verbatim.",
    "suggested_wording": "process behaviour policies and decision policies",
    "register": "story-r4-r9"
+  },
+  {
+   "id": "story-s4-release-rate",
+   "text": "\"v0.1.107 to v0.1.125 in about ninety minutes\"",
+   "where": [
+    "story:tree 3c",
+    "editor:line"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s4-site-release-history",
+     "quote": "2026-10-29T13:20:08+00:00 v0.1.107",
+     "supports": "for"
+    },
+    {
+     "source_id": "s4-site-release-history",
+     "quote": "2026-10-29T14:48:43+00:00 v0.1.125",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "this repository, release commits and tags on dev",
+   "note": "88.6 minutes between the two releases; 19 releases inclusive. The authoritative record is the repository itself: A6.",
+   "register": "story-s4"
+  },
+  {
+   "id": "story-s5-no-agent-sends",
+   "text": "No agent sends. Agents create drafts; a person sends.",
+   "where": [
+    "newsroom:the-agent-team-as-it-runs",
+    "newsroom:the-mandate-stack",
+    "newsroom:replicating-the-agentic-inbox"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "s5-the-agent-team-as-it-runs",
+     "quote": "Agents create drafts; a person sends. The one exception: @security may send one email, to one address, to put the team on hold.",
+     "supports": "for"
+    },
+    {
+     "source_id": "newsroom-six-agents-one-inbox",
+     "quote": "an inbox agent that sends",
+     "supports": "against"
+    },
+    {
+     "source_id": "newsroom-custom-uis-are-not-the-exception",
+     "quote": "an inbox agent that drafts and another that sends only what I approve",
+     "supports": "against"
+    },
+    {
+     "source_id": "s5-the-agent-team-as-it-runs",
+     "quote": "The policy text and the agent's own judgement. Many rows, including \"no agent sends\", rely on it.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Self-reported by the operator. The rule hardened over a week: on 29 Sept and 2 Oct one agent sent approved drafts; by 2 to 6 Oct no agent sends, with one named exception (security's hold email). The site itself grades the rule as enforced only by policy text, since one grant covers draft and send.",
+   "suggested_wording": "Agents draft; the editor reads and presses send (since early October 2026; one security hold email excepted; enforced by policy, not by the platform).",
+   "register": "story-s5"
+  },
+  {
+   "id": "story-s5-agent-count",
+   "text": "The agentic inbox is run by a team of agents and one person",
+   "where": [
+    "newsroom:six-agents-one-inbox",
+    "newsroom:custom-uis-are-not-the-exception",
+    "newsroom:the-agent-team-as-it-runs",
+    "newsroom:the-mandate-stack"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "newsroom-six-agents-one-inbox",
+     "quote": "split the work across six roles",
+     "supports": "context"
+    },
+    {
+     "source_id": "newsroom-custom-uis-are-not-the-exception",
+     "quote": "a team of ten agents with narrow jobs and one human who decides",
+     "supports": "context"
+    },
+    {
+     "source_id": "s5-the-agent-team-as-it-runs",
+     "quote": "one person, twelve agents, encrypted vaults, and a mailbox nobody sends from",
+     "supports": "context"
+    },
+    {
+     "source_id": "newsroom-the-mandate-stack",
+     "quote": "about fifteen agents and one person",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The count grew: six roles (29 Sept), ten (2 Oct), twelve (6 Oct roster), about fifteen (Mandate Stack, same day, whole business). Only a few roles touch mail. Any number used on stage needs its date.",
+   "suggested_wording": "Six agents at the start, about a dozen within a week, and one person who sends.",
+   "register": "story-s5"
+  },
+  {
+   "id": "story-s5-built-with-ai",
+   "text": "The inbox and its tools were built by the editor with agents, not by a development team",
+   "where": [
+    "newsroom:custom-uis-are-not-the-exception",
+    "newsroom:the-mandate-stack"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "newsroom-custom-uis-are-not-the-exception",
+     "quote": "a small team of agents and I went from an empty vault to a working way of doing outreach",
+     "supports": "for"
+    },
+    {
+     "source_id": "newsroom-the-mandate-stack",
+     "quote": "The model builds the tool as HTML, sized to the one use case.",
+     "supports": "for"
+    },
+    {
+     "source_id": "newsroom-the-mandate-stack",
+     "quote": "The loop is what makes it possible for one person",
+     "supports": "for"
+    },
+    {
+     "source_id": "s5-explorer-coding",
+     "quote": "My 2018 book for young developers",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The pages say agents (a @dev agent among them) built the tools at one person's request, with no human developers named. They do not call the editor a non-developer: he writes as a long-time developer (a 2018 book for young developers). Calling it a 'non-developer' example would not match the site.",
+   "suggested_wording": "One person and a team of agents built it in eight days; the agents wrote the tools.",
+   "register": "story-s5"
+  },
+  {
+   "id": "story-s5-explorer-coding-link",
+   "text": "The agentic inbox is an example of explorer coding",
+   "where": [
+    "talk:act-three"
+   ],
+   "kind": "position",
+   "grade": "A1",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "s5-explorer-coding",
+     "quote": "That is exactly what someone does when they build the tool they need with an agent.",
+     "supports": "for"
+    },
+    {
+     "source_id": "newsroom-custom-uis-are-not-the-exception",
+     "quote": "Explorer coding: a better name for what people call vibe coding",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "No captured page says in so many words that the inbox is explorer-coded. The explorer-coding article (16 Oct) defines the term generally; the inbox articles only link to it in related reading. The link is the talk's inference, a fair one, but the explorer-coding article also says such tools are 'not ready to be in line' until villagers take them, while the inbox runs in production.",
+   "suggested_wording": "The inbox's interfaces were built the way the site calls explorer coding: ask in chat, an agent builds the page.",
+   "register": "story-s5"
   }
  ]
 }

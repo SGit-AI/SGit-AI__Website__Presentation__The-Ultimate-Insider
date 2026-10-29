@@ -1,22 +1,22 @@
 # The claims register
 
-Built 2026-10-29T15:21Z. 192 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
+Built 2026-10-29T16:23Z. 197 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
 
 | Grade | Claims |
 |---|---|
 | A0 | 13 |
-| A1 | 22 |
-| A2 | 70 |
+| A1 | 23 |
+| A2 | 73 |
 | A3 | 30 |
 | A4 | 11 |
 | A5 | 10 |
-| A6 | 36 |
+| A6 | 37 |
 
 | Holds | Claims |
 |---|---|
 | does not hold | 3 |
-| holds | 104 |
-| holds in part | 36 |
+| holds | 105 |
+| holds in part | 40 |
 | not checked | 49 |
 
 ## The talk: opening and act one
@@ -188,4 +188,19 @@ Built 2026-10-29T15:21Z. 192 claims. Grades A0 to A6 as in `../METHOD.md`; "hold
 | **story-r7-security-usability-frontier-tools**: bad security usability in frontier tools (ux.sgit.ai examples) | story:tree | observation | A2 | holds | Author's own findings, one product (Claude app iOS), last checked 2026-10-25. |
 | **story-r8-non-developer-app-volume**: volume of new applications built by non-developers with AI tools | story:tree | measured | A2 | holds in part | Vendor-reported via press; counts projects and users, not non-developer apps in production. **Suggested:** Lovable alone reports more than 60 million projects since November 2024 (vendor figure). |
 | **story-r9-process-and-decision-behaviour-policies**: process behaviour policies and decision behaviour policies | story:tree | position | A2 | holds in part | His published term is 'decision policy' (Agent Decision Policy), part of the behaviour policy family; 'decision behaviour policy' not found verbatim. **Suggested:** process behaviour policies and decision policies |
+
+## The story tree: S4
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **story-s4-release-rate**: "v0.1.107 to v0.1.125 in about ninety minutes" | story:tree 3c, editor:line | measured | A6 | holds | 88.6 minutes between the two releases; 19 releases inclusive. The authoritative record is the repository itself: A6. |
+
+## The story tree: S5
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **story-s5-no-agent-sends**: No agent sends. Agents create drafts; a person sends. | newsroom:the-agent-team-as-it-runs, newsroom:the-mandate-stack, newsroom:replicating-the-agentic-inbox | observation | A2 | holds in part | Self-reported by the operator. The rule hardened over a week: on 29 Sept and 2 Oct one agent sent approved drafts; by 2 to 6 Oct no agent sends, with one named exception (security's hold email). The site itself grades the rule as enforced only by policy text, since one grant covers draft and send. **Suggested:** Agents draft; the editor reads and presses send (since early October 2026; one security hold email excepted; enforced by policy, not by the platform). |
+| **story-s5-agent-count**: The agentic inbox is run by a team of agents and one person | newsroom:six-agents-one-inbox, newsroom:custom-uis-are-not-the-exception, newsroom:the-agent-team-as-it-runs, newsroom:the-mandate-stack | measured | A2 | holds in part | The count grew: six roles (29 Sept), ten (2 Oct), twelve (6 Oct roster), about fifteen (Mandate Stack, same day, whole business). Only a few roles touch mail. Any number used on stage needs its date. **Suggested:** Six agents at the start, about a dozen within a week, and one person who sends. |
+| **story-s5-built-with-ai**: The inbox and its tools were built by the editor with agents, not by a development team | newsroom:custom-uis-are-not-the-exception, newsroom:the-mandate-stack | observation | A2 | holds in part | The pages say agents (a @dev agent among them) built the tools at one person's request, with no human developers named. They do not call the editor a non-developer: he writes as a long-time developer (a 2018 book for young developers). Calling it a 'non-developer' example would not match the site. **Suggested:** One person and a team of agents built it in eight days; the agents wrote the tools. |
+| **story-s5-explorer-coding-link**: The agentic inbox is an example of explorer coding | talk:act-three | position | A1 | holds in part | No captured page says in so many words that the inbox is explorer-coded. The explorer-coding article (16 Oct) defines the term generally; the inbox articles only link to it in related reading. The link is the talk's inference, a fair one, but the explorer-coding article also says such tools are 'not ready to be in line' until villagers take them, while the inbox runs in production. **Suggested:** The inbox's interfaces were built the way the site calls explorer coding: ask in chat, an agent builds the page. |
 
