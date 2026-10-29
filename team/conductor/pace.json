@@ -953,6 +953,11 @@
    "at": "2026-10-29T17:16:13Z",
    "by": "conductor",
    "what": "the editor answered (brief 6-answers-1715): Linux in the browser tonight as a link slide to sharness.ai's demo, kernel-in-a-tab the fallback; blast radius is this site's; Empower and billing dropped; sharness.ai capture confirmed; attrition is friction against commoditisation; api.newsroom.sgit.ai confirmed; the lane no longer blocks"
+  },
+  {
+   "at": "2026-10-29T17:22:34Z",
+   "by": "conductor",
+   "what": "17:21 pace: five deck request files already in the vault (deck mails directly now) or stale, marked routed; studio's first showcase slide (the PKI) landed 17:20; the storyteller's three-part split due 17:30"
   }
  ],
  "queue": {
@@ -991,7 +996,12 @@
   "team/storyteller/requests/deck__90-minute-arc-and-the-work-section.md",
   "team/storyteller/requests/researcher__s1-s2-s4-s5-received.md",
   "team/deck/requests/ruv-sgit__blast-radius.md (deck had sent it)",
-  "team/deck/requests/ruv-sgit__injection-sources.md (deck had sent it)"
+  "team/deck/requests/ruv-sgit__injection-sources.md (deck had sent it)",
+  "team/deck/requests/motion__could-have-been-worse.md",
+  "team/deck/requests/ruv-sgit__blast-radius.md",
+  "team/deck/requests/dev__skip-and-copy-my-changes.md",
+  "team/deck/requests/researcher__before-tonight.md",
+  "team/deck/requests/ruv-sgit__injection-sources.md"
  ],
  "schedule": {
   "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",

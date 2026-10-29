@@ -1,0 +1,37 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "follow-up wake (tonight's rule)",
+ "started": "2026-10-29T17:21:52Z",
+ "steps": {
+  "plan": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Route the five unrouted deck requests (dedupe first: some are stale), refresh the night log and Moments, pace the split (due 17:30), release, schedule a follow-up near 17:40. Amended: dedupe showed nothing to send; all five marked routed.",
+   "at": "2026-10-29T17:22:33Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Re-review of the amended plan: nothing goes into the vault this wake; the night log keeps NO_SHOT for keys, QR and team pages; grep of the generated articles before the push.",
+   "at": "2026-10-29T17:22:34Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "opus",
+   "verdict": "done",
+   "comment": "Five deck request files deduped (four already in the vault, one stale reply): none re-sent, all marked routed; night log and Moments refreshed (18 moments; four shots, the PKI showcase among them, checked by eye: the only QR is the public link pki.sgit.ai/people/how.html, no key); grep of the articles clean; build and gate clean.",
+   "at": "2026-10-29T17:23:13Z"
+  }
+ },
+ "closed": null,
+ "outcome": null,
+ "history": [
+  {
+   "at": "17:22Z",
+   "what": "pre-review said change: adopted. Dedupe found four of five already in the vault (deck sends its own mail now: motion 002, ruv-sgit done 003 and 008, dev 037) and the researcher file an old 02:35 reply: none re-sent, all five marked routed."
+  }
+ ]
+}
