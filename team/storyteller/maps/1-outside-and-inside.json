@@ -1,0 +1,20 @@
+{
+ "title": "Map 1: the outside is mature, the inside is not (shaded: behind the firewall)",
+ "components": [
+  {"id": "biz", "label": "The business: trust in its data", "vis": 0.97, "evo": 0.55},
+  {"id": "web", "label": "Internet-facing apps", "vis": 0.8, "evo": 0.72},
+  {"id": "oss", "label": "Open source, now with AI review", "vis": 0.62, "evo": 0.6, "move": 0.85},
+  {"id": "edge", "label": "Edge, cloud, patching", "vis": 0.45, "evo": 0.88},
+  {"id": "agent", "label": "Agents (the new insider)", "vis": 0.86, "evo": 0.28, "inside": true, "move": 0.55},
+  {"id": "legacy", "label": "Legacy apps nobody understands", "vis": 0.6, "evo": 0.2, "inside": true},
+  {"id": "sys", "label": "Internal systems, never met an adversary", "vis": 0.44, "evo": 0.3, "inside": true},
+  {"id": "perm", "label": "Permissions: coarse, over-granted", "vis": 0.28, "evo": 0.42, "inside": true},
+  {"id": "ux", "label": "Security usability", "vis": 0.16, "evo": 0.16, "inside": true},
+  {"id": "rec", "label": "Recovery by the day, not the transaction", "vis": 0.08, "evo": 0.5, "inside": true}
+ ],
+ "links": [["biz","web"],["biz","agent"],["web","oss"],["web","edge"],["agent","legacy"],["agent","sys"],["agent","perm"],["sys","perm"],["perm","ux"],["sys","rec"],["legacy","sys"]],
+ "notes": [
+  {"text": "outside: attacked for decades, evolved", "vis": 0.95, "evo": 0.66},
+  {"text": "inside: custom, unevolved, now under an insider with no limits", "vis": 0.03, "evo": 0.03}
+ ]
+}
