@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 17,
-  "state": "The programme's eight all delivered (E12, E08, E14, E05, E06 this session, runs r17 to r21); the SHarness series begun at the editor's word (storyline, SH1, SH2, SH3, run r22), waiting for deck's brief and the researcher's capture; all vaults kept",
+  "round": 18,
+  "state": "Every engine piece now has stages for the player (the nine earlier ones in run r23); the programme's eight delivered; the SHarness series waits for deck's brief and the researcher's capture",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -132,6 +132,10 @@
     {
       "what": "The SHarness series at the editor's word: a draft storyline and SH1 without and with, SH2 the live demo stage by stage, SH3 what runs and what is a design; the editor's words relayed to deck, the researcher and the storyteller",
       "evidence": "/ruv-sgit/sharness-storyline.html; team/ruv-sgit/runs/r22-sharness-series.*"
+    },
+    {
+      "what": "Stages (RUV_STEPS) on the nine earlier engine pieces, E01 v1 and v2, E02 v1 to v3, E03, E04 v1 and v2, E09; editor worker: no must-fix, one should-fix applied",
+      "evidence": "team/ruv-sgit/runs/r23-stages.*"
     }
   ],
   "next": [
@@ -154,7 +158,7 @@
       "from": "researcher@the-ultimate-insider"
     },
     {
-      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r22",
+      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r23",
       "from": "the editor"
     }
   ],

@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "inside scope.writes and team/ruv-sgit; one run, no key printed; note via vault_check; no talk.json, BRIEF, main or other paths; B01 untouched",
    "at": "2026-10-29T15:54:07Z"
+  },
+  "work": {
+   "by": "ruv.sgit@ (this session)",
+   "model": "",
+   "verdict": "done",
+   "comment": "RUV_STEPS added to the nine earlier engine pieces (one line each), run r23-stages closed (clone identical) and kept; editor: no must-fix, one should-fix applied; note to deck cc conductor; status, debrief, REALITY",
+   "at": "2026-10-29T15:59:25Z"
   }
  },
  "closed": null,

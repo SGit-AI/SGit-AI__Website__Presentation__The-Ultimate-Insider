@@ -3468,10 +3468,286 @@
     "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
     "given_to": "the editor"
    }
+  },
+  {
+   "run": "r23-stages",
+   "purpose": "r23-stages: stages for the player (window.RUV_STEPS) on the nine earlier engine pieces, E01 to E04 and E09",
+   "request": {
+    "from": "conductor@the-ultimate-insider (tui-mail-public ruv-sgit/done/017, the editor's briefs)",
+    "date": "2026-10-29",
+    "text": "What he asks of every piece, new and existing: start, stop, and step forward and back through its stages, on the player's clock, and on an iPad. Please give each piece its stages as you touch it."
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "xivexxv1",
+   "created_at": "2026-10-29T15:54:43+00:00",
+   "closed_at": "2026-10-29T15:58:34+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 10,
+    "tasks": 10,
+    "ruflo_calls": 35,
+    "ruflo_failed": 0,
+    "ruflo_ms": 15872
+   },
+   "branches": [
+    {
+     "name": "w-e01-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 5385,
+     "write_ms": 8011,
+     "merge_ms": 8539
+    },
+    {
+     "name": "w-e01-v2",
+     "role": "developer",
+     "files": 1,
+     "bytes": 7944,
+     "write_ms": 8290,
+     "merge_ms": 8893
+    },
+    {
+     "name": "w-e02-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 8444,
+     "write_ms": 7522,
+     "merge_ms": 8584
+    },
+    {
+     "name": "w-e02-v2",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11529,
+     "write_ms": 7884,
+     "merge_ms": 9439
+    },
+    {
+     "name": "w-e02-v3",
+     "role": "developer",
+     "files": 1,
+     "bytes": 12155,
+     "write_ms": 7992,
+     "merge_ms": 8851
+    },
+    {
+     "name": "w-e03-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 8592,
+     "write_ms": 8058,
+     "merge_ms": 8057
+    },
+    {
+     "name": "w-e04-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 9017,
+     "write_ms": 7480,
+     "merge_ms": 8608
+    },
+    {
+     "name": "w-e04-v2",
+     "role": "developer",
+     "files": 1,
+     "bytes": 9043,
+     "write_ms": 8352,
+     "merge_ms": 9253
+    },
+    {
+     "name": "w-e09-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 12177,
+     "write_ms": 8269,
+     "merge_ms": 9563
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 1187,
+     "write_ms": 7763,
+     "merge_ms": 8747
+    },
+    {
+     "name": "w-e03-v1-fixed",
+     "role": "developer",
+     "files": 1,
+     "bytes": 8592,
+     "write_ms": 8329,
+     "merge_ms": 9518
+    }
+   ],
+   "commits": 13,
+   "files": 13,
+   "bytes_plain": 96233,
+   "files_delivered": 11,
+   "bytes_delivered": 94065,
+   "store": {
+    "objects": 87,
+    "bytes": 143267,
+    "plaintext_hits": 0,
+    "probe": "97 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 5652,
+    "files": 13,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "0bd6cf5afb6b",
+     "message": "init",
+     "time": "2026-10-29T15:54:54Z"
+    },
+    {
+     "id": "e0d8ae7b9edc",
+     "message": "brief: run r23-stages",
+     "time": "2026-10-29T15:54:57Z"
+    },
+    {
+     "id": "951280be2b51",
+     "message": "developer e01-v1: delivered 1 files",
+     "time": "2026-10-29T15:55:04Z"
+    },
+    {
+     "id": "67ac2823c9cb",
+     "message": "developer e01-v2: delivered 1 files",
+     "time": "2026-10-29T15:55:21Z"
+    },
+    {
+     "id": "b49c570f9f4a",
+     "message": "developer e02-v1: delivered 1 files",
+     "time": "2026-10-29T15:55:39Z"
+    },
+    {
+     "id": "e851de37a2a7",
+     "message": "developer e02-v2: delivered 1 files",
+     "time": "2026-10-29T15:55:56Z"
+    },
+    {
+     "id": "0652a3c5e87c",
+     "message": "developer e02-v3: delivered 1 files",
+     "time": "2026-10-29T15:56:13Z"
+    },
+    {
+     "id": "38efef1c4211",
+     "message": "developer e03-v1: delivered 1 files",
+     "time": "2026-10-29T15:56:31Z"
+    },
+    {
+     "id": "9b2ee05c3b4c",
+     "message": "developer e04-v1: delivered 1 files",
+     "time": "2026-10-29T15:56:47Z"
+    },
+    {
+     "id": "80a65934bae9",
+     "message": "developer e04-v2: delivered 1 files",
+     "time": "2026-10-29T15:57:04Z"
+    },
+    {
+     "id": "8e2cb1224432",
+     "message": "developer e09-v1: delivered 1 files",
+     "time": "2026-10-29T15:57:22Z"
+    },
+    {
+     "id": "b7ed2c4200d1",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T15:57:53Z"
+    },
+    {
+     "id": "28a1f41e1c4c",
+     "message": "developer e03-v1-fixed: delivered 1 files",
+     "time": "2026-10-29T15:58:10Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "e01-v1",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e01-v2",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e02-v1",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e02-v2",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e02-v3",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e03-v1",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e04-v1",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e04-v2",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e09-v1",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 75502,
+     "tool_uses": 7,
+     "wall_s": 34,
+     "must_fix": 0,
+     "should_fix": 1
+    },
+    {
+     "id": "e03-v1-fixed",
+     "role": "developer",
+     "who": "the conductor, the editor's fix applied",
+     "tokens": null
+    }
+   ],
+   "kept_at": "2026-10-29T15:58:38+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r23-stages__vault-handover.zip",
+    "sha256": "edb705a4a6eb8c7a",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
   }
  ],
  "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
- "updated": "2026-10-29T15:45:40+00:00",
+ "updated": "2026-10-29T15:58:38+00:00",
  "server": "https://dev.send.sgraph.ai",
  "viewer": "https://dev.vault.sgraph.ai/en-gb/",
  "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"

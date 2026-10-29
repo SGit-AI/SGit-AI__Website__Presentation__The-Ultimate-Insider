@@ -81,6 +81,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - E11 harness (`/ruv-sgit/harness/`), E07 typical-deployment (`/ruv-sgit/typical-deployment/`), E10 four-barriers (`/ruv-sgit/four-barriers/`) and E13 real-examples (`/ruv-sgit/real-examples/`): v1 each under `/studio/lab/<id>/v1/`, each with stages for the player (`RUV_STEPS`) and its explainer; runs r13 to r16, vaults kept; E07, E10 and E13 built in parallel by builder workers at the editor's word. Waiting for deck's review.
 - E12 radius-contained, E08 lethal-trifecta, E14 earning-autonomy, E05 pivoting and E06 soft-inside: v1 each under `/studio/lab/<id>/v1/` with stages and its page and explainer under `/ruv-sgit/<slug>/`; runs r17 to r21, vaults kept. All eight of deck's 15:05 request are delivered.
 - The SHarness series, at the editor's word: `/ruv-sgit/sharness-storyline.html` (a draft storyline) with SH1 without and with, SH2 the live demo stage by stage and SH3 what runs and what is a design, under `/studio/lab/sharness/`; run r22, vault kept; from harness.json only, waiting for the researcher's capture of sharness.ai.
+- Every ruv.sgit@ piece on the engine declares its stages for the player (`window.RUV_STEPS`); the nine earlier ones gained them in run r23-stages. B01's storyboard, v1 and v2 are not on the engine.
 - Nothing from ruv.sgit@ is wired into the talk yet.
 
 ## Does not exist yet
