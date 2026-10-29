@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Three requests done: 007 (story-s1-s3.json, 19 claims; no source compares total losses of accidents and attacks, said so), the SHarness series (18 pieces, reply to ruv.sgit Cc deck), S4 and S5 for the storyteller. Issues 012 to 014 done. Vaults checked clean.",
    "at": "2026-10-29T16:29:49Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff only in evidence/ and team/researcher/; no tokens, keys or personal emails; no em-dashes; S4 counts and dates only; sharness.ai injection content kept as material; public GETs only.",
+   "at": "2026-10-29T16:30:53Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All three requests delivered as planned, issues 012 to 014 done, replies sent (deck by Cc on ruv-sgit 023, per pre_review). Gap found and fixed: the round's debrief, now written.",
+   "at": "2026-10-29T16:30:53Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T16:30:53Z",
+ "outcome": "ok"
 }
