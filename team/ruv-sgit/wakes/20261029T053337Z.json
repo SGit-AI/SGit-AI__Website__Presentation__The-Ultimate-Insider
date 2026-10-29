@@ -31,8 +31,15 @@
    "verdict": "as-planned",
    "comment": "1) vault items done, vault_check clean; 2) run r5: slide, page, explainer, run files; 3) status, debrief, record, REALITY. Conditions kept; data file untouched. In scope extras: the ledger row, the editor's fixes.",
    "at": "2026-10-29T05:42:52Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "two ruv-sgit commits, 13 files in scope; abp-examples.json unchanged; gate and vault_check clean; no remote scripts; on screen: published draft, 0 of 22 measured, no score; vault commits clean",
+   "at": "2026-10-29T05:43:11Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T05:43:11Z",
+ "outcome": "ok"
 }
