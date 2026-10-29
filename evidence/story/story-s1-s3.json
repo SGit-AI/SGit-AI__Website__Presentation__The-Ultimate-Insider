@@ -1,0 +1,675 @@
+{
+ "about": "S1 to S3 for the editor's asks (29 October 2026): worm-era speed (Slammer, Code Red) from CAIDA and the IEEE S&P paper; the largest recent outages caused by mistakes, each in the operator's own words, with insurer and Uptime comparisons; and S3 restated from the register without refetching. Gaps: Uptime Institute pages 403 (not got round); Parametrix full report behind a form; House hearing transcript and UK statements not captured; no capture compares total accidental and attack losses directly.",
+ "s1": {
+  "items": [
+   {
+    "id": "story-s1-slammer-90pct-10min",
+    "what": "Slammer infected more than 90 percent of vulnerable hosts within 10 minutes (25 January 2003)",
+    "quote": "infected more than 90 percent of vulnerable",
+    "source_id": "s1-ieee-inside-slammer",
+    "date": "2003-01-25",
+    "grade": "A5"
+   },
+   {
+    "id": "story-s1-slammer-doubling-8-5s",
+    "what": "Slammer doubled its infected population every 8.5 (plus or minus 1) seconds in the first minute",
+    "quote": "in the first minute, the infected population doubled in size every 8.5 (±1) seconds.",
+    "source_id": "s1-caida-slammer",
+    "date": "2003-01-25",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s1-slammer-75000-hosts",
+    "what": "Slammer infected at least 75,000 hosts",
+    "quote": "the worm infected at least 75,000 hosts, perhaps consider-",
+    "source_id": "s1-ieee-inside-slammer",
+    "date": "2003-01-25",
+    "grade": "A5"
+   },
+   {
+    "id": "story-s1-slammer-full-scan-3min",
+    "what": "Slammer reached its full scanning rate, over 55 million scans per second, after about three minutes",
+    "quote": "The worm achieved its full scanning rate (over 55 million scans per second) after approximately three minutes",
+    "source_id": "s1-caida-slammer",
+    "date": "2003-01-25",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s1-codered-359000-14h",
+    "what": "Code Red v2 infected more than 359,000 computers in less than 14 hours on 19 July 2001",
+    "quote": "On July 19, 2001 more than 359,000 computers were infected with the Code-Red (CRv2) worm in less than 14 hours.",
+    "source_id": "s1-caida-codered-coderedv2",
+    "date": "2001-07-19",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s1-codered-2000-per-minute",
+    "what": "At its peak Code Red v2 infected more than 2,000 new hosts each minute",
+    "quote": "At the peak of the infection frenzy, more than 2,000 new hosts were",
+    "source_id": "s1-caida-codered-coderedv2",
+    "date": "2001-07-19",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s1-slammer-vs-codered",
+    "what": "Slammer was two orders of magnitude faster than Code Red, whose population doubled every 37 minutes",
+    "quote": "Code Red worm population had a leisurely doubling time of about 37",
+    "source_id": "s1-caida-slammer",
+    "date": "2003",
+    "grade": "A6"
+   }
+  ]
+ },
+ "s2": {
+  "accidents": [
+   {
+    "id": "story-s2-crowdstrike-2024-07-19",
+    "date": "2024-07-19",
+    "operator": "CrowdStrike (Falcon sensor, Windows)",
+    "cause": "A Rapid Response Content update (Channel File 291) passed validation because of a bug in the Content Validator; it supplied 21 input fields where the sensor provided 20, causing an out-of-bounds read and a Windows crash. Not an attack.",
+    "scale": "About 8.5 million Windows devices (Microsoft estimate), less than one percent of all Windows machines; update live 04:09 to 05:27 UTC",
+    "quote": "Due to a bug in the Content Validator, one of the two Template Instances passed validation despite containing problematic content data.",
+    "source_id": "s2-crowdstrike-pir",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s2-aws-us-east-1-2025-10-20",
+    "date": "2025-10-19/20",
+    "operator": "Amazon Web Services (us-east-1)",
+    "cause": "A latent race condition in DynamoDB's automated DNS management left an empty DNS record for the regional endpoint that the automation failed to repair; needed manual operator intervention.",
+    "scale": "11:48 PM PDT 19 October to 2:20 PM PDT 20 October (about 14.5 hours), three periods of impact: DynamoDB, EC2 launches, Network Load Balancer, and services depending on them",
+    "quote": "The root cause of this issue was a latent race condition in the DynamoDB DNS management system that resulted in an incorrect empty DNS record for the service’s regional endpoint",
+    "source_id": "aws-dynamodb-oct-2025-summary",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s2-azure-afd-2025-10-29",
+    "date": "2025-10-29",
+    "operator": "Microsoft Azure (Azure Front Door and CDN)",
+    "cause": "A sequence of valid, non-malicious customer configuration changes across two control plane build versions produced incompatible configuration metadata that crashed the data plane.",
+    "scale": "15:41 UTC 29 October to 00:05 UTC 30 October 2025 (about 8.5 hours), connection timeouts and DNS failures for customers and Microsoft services on AFD and CDN",
+    "quote": "A specific sequence of customer configuration changes, performed across two different control plane build versions, resulted in incompatible customer configuration metadata being generated. These customer configuration changes themselves were valid and non-malicious",
+    "source_id": "s2-azure-afd-ykyn-bwz",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s2-cloudflare-2025-11-18",
+    "date": "2025-11-18",
+    "operator": "Cloudflare",
+    "cause": "A database permissions change made a query emit duplicate rows into the Bot Management feature file, doubling its size past a limit in the proxy software. Cloudflare first wrongly suspected a hyper-scale DDoS attack.",
+    "scale": "Cloudflare's worst outage since 2019: the majority of core traffic stopped flowing through its network; core traffic largely normal by 14:30 UTC, all systems by 17:06 UTC",
+    "quote": "The issue was not caused, directly or indirectly, by a cyber attack or malicious activity of any kind. Instead, it was triggered by a change to one of our database systems' permissions",
+    "source_id": "cloudflare-18-nov-2025-outage",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s2-gcp-2025-06-12",
+    "date": "2025-06-12",
+    "operator": "Google Cloud",
+    "cause": "A new Service Control quota check shipped on 29 May 2025 without error handling or a feature flag; a policy change with blank fields, replicated globally within seconds, hit a null pointer and crash-looped the binary in every region.",
+    "scale": "Incident 10:51 to 18:18 US/Pacific (about 7.5 hours), dozens of Google Cloud products across all listed regions; up to about 2h 40m to recover us-central1",
+    "quote": "This policy data contained unintended blank fields. Service Control, then regionally exercised quota checks on policies in each regional datastore.",
+    "source_id": "s2-gcp-incident-2025-06-12",
+    "grade": "A6"
+   },
+   {
+    "id": "story-s2-github-actions-2026-10-05",
+    "date": "2026-10-05",
+    "operator": "GitHub (Actions and Hosted Runners)",
+    "cause": "A partial networking failure between an on-premises datacenter region and cloud-hosted regional database and storage services.",
+    "scale": "18:48 to 22:49 UTC; 14.3% of hosted-runner workflow runs and 26.5% of jobs delayed over the incident; 47.0% of runs failed in the worst 90 minutes",
+    "quote": "The incident was caused by a partial networking failure that disrupted connectivity between one of our on-premises datacenter regions and a subset of cloud-hosted regional database and storage services.",
+    "source_id": "githubstatus-2026-10-05-mirror",
+    "grade": "A2"
+   },
+   {
+    "id": "story-s2-azure-networking-2026-09-30",
+    "date": "2026-09-30/10-01",
+    "operator": "Microsoft Azure (networking gateways control plane)",
+    "cause": "An expired deployment restriction let a large batch of paused gateway OS updates resume at once, while an earlier performance change had lengthened control plane processing; together they overwhelmed the control plane.",
+    "scale": "20:30 UTC 30 September to 02:15 UTC 1 October 2026, management failures for ExpressRoute, Application Gateway, Firewall, Bastion, VPN Gateway and others across more than 30 regions",
+    "quote": "The combination of increased request volume and longer processing times overwhelmed the control plane",
+    "source_id": "s2-azure-afd-oct-2025",
+    "grade": "A6"
+   }
+  ],
+  "comparisons": [
+   {
+    "id": "story-s2-guycarp-insured-300m-1b",
+    "who": "Guy Carpenter (via Insurance Journal)",
+    "point": "CrowdStrike insured losses likely $300 million to $1 billion; less than 1% of companies with cyber insurance affected; some cyber catastrophe models only examine malicious events",
+    "quote": "Guy Carpenter said the insured losses from the CrowdStrike outage is likely between $300 million and $1 billion.",
+    "source_id": "s2-insjournal-guycarp-crowdstrike",
+    "grade": "A2",
+    "note": ""
+   },
+   {
+    "id": "story-s2-guycarp-models-malicious-only",
+    "who": "Guy Carpenter (via Insurance Journal)",
+    "point": "The insurance models were built for attacks: accidental mass outages were a gap",
+    "quote": "some cyber catastrophe model vendors only examine malicious events",
+    "source_id": "s2-insjournal-guycarp-crowdstrike",
+    "grade": "A2",
+    "note": "A reported search summary said Guy Carpenter put a malicious version of the event at $600 million to $2 billion; that line is NOT in the captured Insurance Journal text, so it is not used."
+   },
+   {
+    "id": "story-s2-cybercube-insured-400m-1-5b",
+    "who": "CyberCube (via Reuters in Business Insurance)",
+    "point": "Global insured losses $400 million to $1.5 billion",
+    "quote": "Global insured losses from last week's massive IT outage are likely to range from $400 million to $1.5 billion, CyberCube Analytics Inc. said Thursday.",
+    "source_id": "s2-businessinsurance-cybercube",
+    "grade": "A2",
+    "note": ""
+   },
+   {
+    "id": "story-s2-parametrix-5-4b-fortune500",
+    "who": "Parametrix",
+    "point": "Direct financial loss to the US Fortune 500 (excluding Microsoft) $5.4 billion; insured $540 million to $1.08 billion (Reuters)",
+    "quote": "estimates the total direct financial loss facing the US Fortune 500 companies (excluding Microsoft) from the CrowdStrike outage on 19 July is $5.4 billion",
+    "source_id": "s2-parametrix-crowdstrike",
+    "grade": "A3",
+    "note": "$5.4 billion is Parametrix's own landing page; the insured range is from Reuters in Business Insurance; Fortune/Bloomberg carries the $5.4 billion and that most damage went uninsured. The full report was behind a form and not captured. The gap between $5.4bn direct and about $1bn insured is the point: most of the accidental loss was uninsured."
+   },
+   {
+    "id": "story-s2-uptime-2025-causes",
+    "who": "Uptime Institute 2025 outage analysis (via Network World)",
+    "point": "Of major network-related outages, configuration/change management failure 50%, malicious cyberattack 17%; change management is 62% of major IT system/software outage causes",
+    "quote": "Configuration/change management failure: 50% ... Malicious cyberattack: 17%",
+    "source_id": "s2-networkworld-uptime-2025",
+    "grade": "A2",
+    "note": "Uptime's own pages returned 403 (bot wall), not got round, so this rests on Network World's reading of the report: A2. The 17% is for major network-related outages only, not all outages. No source captured that directly compares total losses from accidental outages with those from attacks across years."
+   }
+  ]
+ },
+ "s3": {
+  "items": [
+   {
+    "claim_id": "replit-deletes-prod-db",
+    "register_file": "act1.json",
+    "text": "July: Replit's agent deletes a production database during a code freeze.",
+    "quote": ". @Replit goes rogue during a code freeze and shutdown and deletes our entire database 4:48 AM · Jul 18, 2025",
+    "quote_source_id": "x-lemkin-thread",
+    "grade": "A5",
+    "holds": "holds"
+   },
+   {
+    "claim_id": "replit-empty-results-reason",
+    "register_file": "act1.json",
+    "text": "because empty results looked like something to fix.",
+    "quote": "the agent's own internal reasoning treated empty query results, likely from a routine check, as evidence something was broken",
+    "quote_source_id": "devto-replit-joylo",
+    "grade": "A1",
+    "holds": "holds in part"
+   },
+   {
+    "claim_id": "replit-1200-executives-gone",
+    "register_file": "act1.json",
+    "text": "Live records for more than 1,200 executives, gone, by an agent doing what it judged to be a valid thing.",
+    "quote": "In all, live records for “1,206 executives and 1,196+ companies” were wiped by the AI, it admitted.",
+    "quote_source_id": "tomshardware-replit",
+    "grade": "A3",
+    "holds": "holds in part"
+   },
+   {
+    "claim_id": "story-r3-replit-fake-users",
+    "register_file": "story-r1-r3.json",
+    "text": "Replit agent invents data for about 4,000 users",
+    "quote": "The system also reportedly produced fabricated test results and fake data, and incorrectly claimed rollback was impossible, delaying recovery.",
+    "quote_source_id": "aiid-1152-replit",
+    "grade": "A3",
+    "holds": "not checked"
+   },
+   {
+    "claim_id": "story-r4-ai-mass-exploitation-not-yet",
+    "register_file": "story-r4-r9.json",
+    "text": "AI-driven mass exploitation has not been observed yet",
+    "quote": "While recent model security incident disclosures demonstrate that frontier models can autonomously identify zero-days and execute network intrusions, GTIG has not yet observed threat actors deploying fully autonomous pipelines against targets in the wild.",
+    "quote_source_id": "story-gtig-prompting-autonomy",
+    "grade": "A2",
+    "holds": "holds in part"
+   }
+  ]
+ },
+ "claims": [
+  {
+   "id": "story-s1-slammer-90pct-10min",
+   "text": "Slammer infected more than 90 percent of vulnerable hosts within 10 minutes (25 January 2003)",
+   "where": [
+    "editor:ask-s1"
+   ],
+   "kind": "measured",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s1-ieee-inside-slammer",
+     "quote": "infected more than 90 percent of vulnerable",
+     "supports": "for"
+    },
+    {
+     "source_id": "s1-caida-slammer",
+     "quote": "It infected more than 90 percent of vulnerable hosts within",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Both CAIDA's page and the IEEE article (July/August 2003) say it, same authors, so A5 rather than independent corroboration in the strict sense.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s1-slammer-doubling-8-5s",
+   "text": "Slammer doubled its infected population every 8.5 (plus or minus 1) seconds in the first minute",
+   "where": [
+    "editor:ask-s1"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s1-caida-slammer",
+     "quote": "in the first minute, the infected population doubled in size every 8.5 (±1) seconds.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The 8.5 seconds figure is in CAIDA's paper page; the text extraction of the IEEE S&P article does not carry the number (it may sit in a figure). Doubling held only in the first minute, before bandwidth saturated. Most slides say \"about ten minutes\"; the source says \"more than 90 percent of vulnerable hosts within 10 minutes\".",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s1-slammer-75000-hosts",
+   "text": "Slammer infected at least 75,000 hosts",
+   "where": [
+    "editor:ask-s1"
+   ],
+   "kind": "measured",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s1-ieee-inside-slammer",
+     "quote": "the worm infected at least 75,000 hosts, perhaps consider-",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Taken from the primary CAIDA or IEEE record.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s1-slammer-full-scan-3min",
+   "text": "Slammer reached its full scanning rate, over 55 million scans per second, after about three minutes",
+   "where": [
+    "editor:ask-s1"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s1-caida-slammer",
+     "quote": "The worm achieved its full scanning rate (over 55 million scans per second) after approximately three minutes",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Taken from the primary CAIDA or IEEE record.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s1-codered-359000-14h",
+   "text": "Code Red v2 infected more than 359,000 computers in less than 14 hours on 19 July 2001",
+   "where": [
+    "editor:ask-s1"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s1-caida-codered-coderedv2",
+     "quote": "On July 19, 2001 more than 359,000 computers were infected with the Code-Red (CRv2) worm in less than 14 hours.",
+     "supports": "for"
+    },
+    {
+     "source_id": "s1-caida-codered",
+     "quote": "more than 359,000 machines were infected with",
+     "supports": "for"
+    },
+    {
+     "source_id": "s1-ieee-inside-slammer",
+     "quote": "which infected more than 359,000 hosts on",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "CAIDA also gives 359,104 hosts in about 13 hours and, on its overview page, \"just fourteen hours\". Use \"more than 359,000 in under 14 hours\".",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s1-codered-2000-per-minute",
+   "text": "At its peak Code Red v2 infected more than 2,000 new hosts each minute",
+   "where": [
+    "editor:ask-s1"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s1-caida-codered-coderedv2",
+     "quote": "At the peak of the infection frenzy, more than 2,000 new hosts were",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Taken from the primary CAIDA or IEEE record.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s1-slammer-vs-codered",
+   "text": "Slammer was two orders of magnitude faster than Code Red, whose population doubled every 37 minutes",
+   "where": [
+    "editor:ask-s1"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s1-caida-slammer",
+     "quote": "Code Red worm population had a leisurely doubling time of about 37",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Taken from the primary CAIDA or IEEE record.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-crowdstrike-2024-07-19",
+   "text": "CrowdStrike (Falcon sensor, Windows), 2024-07-19: A Rapid Response Content update (Channel File 291) passed validation because of a bug in the Content Validator; it supplied 21 input fields where the sensor provided 20, causing an out-of-bounds read and a Windows crash. Not an attack.",
+   "where": [
+    "editor:ask-s2"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-crowdstrike-pir",
+     "quote": "Due to a bug in the Content Validator, one of the two Template Instances passed validation despite containing problematic content data.",
+     "supports": "for"
+    },
+    {
+     "source_id": "s2-ms-crowdstrike-blog",
+     "quote": "We currently estimate that CrowdStrike’s update affected 8.5 million Windows devices, or less than one percent of all Windows machines.",
+     "supports": "for"
+    },
+    {
+     "source_id": "s2-crowdstrike-kurtz-statement",
+     "quote": "The outage was caused by a defect found in a Falcon content update for Windows hosts. Mac and Linux hosts are not impacted. This was not a cyberattack.",
+     "supports": "for"
+    },
+    {
+     "source_id": "s2-crowdstrike-rca-pdf",
+     "quote": "The new IPC Template Type defined 21 input parameter fields, but the integration code that",
+     "supports": "for"
+    },
+    {
+     "source_id": "s2-house-crowdstrike-recap",
+     "quote": "held a hearing to examine CrowdStrike’s defective software update that caused a major information technology (IT) outage on July 19, 2024.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "8.5 million is Microsoft's estimate (\"We currently estimate\"), dated 20 July 2024, never revised in the capture. The House hearing (24 September 2024, witness Adam Meyers) is captured through the committee's own recap; the full transcript was not captured. No UK government statement captured.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-aws-us-east-1-2025-10-20",
+   "text": "Amazon Web Services (us-east-1), 2025-10-19/20: A latent race condition in DynamoDB's automated DNS management left an empty DNS record for the regional endpoint that the automation failed to repair; needed manual operator intervention.",
+   "where": [
+    "editor:ask-s2"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "aws-dynamodb-oct-2025-summary",
+     "quote": "The root cause of this issue was a latent race condition in the DynamoDB DNS management system that resulted in an incorrect empty DNS record for the service’s regional endpoint",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The operator's summary gives duration and services, not a customer count. Third-party scale figures (Downdetector, ThousandEyes) not used here; a ThousandEyes capture exists as thousandeyes-aws-outage-2025-10-20.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-azure-afd-2025-10-29",
+   "text": "Microsoft Azure (Azure Front Door and CDN), 2025-10-29: A sequence of valid, non-malicious customer configuration changes across two control plane build versions produced incompatible configuration metadata that crashed the data plane.",
+   "where": [
+    "editor:ask-s2"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-azure-afd-ykyn-bwz",
+     "quote": "A specific sequence of customer configuration changes, performed across two different control plane build versions, resulted in incompatible customer configuration metadata being generated. These customer configuration changes themselves were valid and non-malicious",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Microsoft says the triggering customer changes were \"valid and non-malicious\"; an earlier AFD incident on 9 October 2025 (QNBQ-5W8) is referenced in the same PIR.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-cloudflare-2025-11-18",
+   "text": "Cloudflare, 2025-11-18: A database permissions change made a query emit duplicate rows into the Bot Management feature file, doubling its size past a limit in the proxy software. Cloudflare first wrongly suspected a hyper-scale DDoS attack.",
+   "where": [
+    "editor:ask-s2"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "cloudflare-18-nov-2025-outage",
+     "quote": "The issue was not caused, directly or indirectly, by a cyber attack or malicious activity of any kind. Instead, it was triggered by a change to one of our database systems' permissions",
+     "supports": "for"
+    },
+    {
+     "source_id": "cloudflare-18-nov-2025-outage",
+     "quote": "Today was Cloudflare's worst outage since 2019.",
+     "supports": "for"
+    },
+    {
+     "source_id": "cloudflare-18-nov-2025-outage",
+     "quote": "After we initially wrongly suspected the symptoms we were seeing were caused by a hyper-scale DDoS attack",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "A useful beat: the operator first thought it was an attack. It was its own change.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-gcp-2025-06-12",
+   "text": "Google Cloud, 2025-06-12: A new Service Control quota check shipped on 29 May 2025 without error handling or a feature flag; a policy change with blank fields, replicated globally within seconds, hit a null pointer and crash-looped the binary in every region.",
+   "where": [
+    "editor:ask-s2"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-gcp-incident-2025-06-12",
+     "quote": "This policy data contained unintended blank fields. Service Control, then regionally exercised quota checks on policies in each regional datastore.",
+     "supports": "for"
+    },
+    {
+     "source_id": "s2-gcp-incident-2025-06-12",
+     "quote": "The issue with this change was that it did not have appropriate error handling nor was it feature flag protected.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-github-actions-2026-10-05",
+   "text": "GitHub (Actions and Hosted Runners), 2026-10-05: A partial networking failure between an on-premises datacenter region and cloud-hosted regional database and storage services.",
+   "where": [
+    "editor:ask-s2"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "githubstatus-2026-10-05-mirror",
+     "quote": "The incident was caused by a partial networking failure that disrupted connectivity between one of our on-premises datacenter regions and a subset of cloud-hosted regional database and storage services.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://www.githubstatus.com/",
+   "note": "Captured only through a third-party mirror (Pulsetic) of githubstatus.com, so A2. A degradation, not an outage on the scale of the others; cause is a network failure, not a stated human change.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-azure-networking-2026-09-30",
+   "text": "Microsoft Azure (networking gateways control plane), 2026-09-30/10-01: An expired deployment restriction let a large batch of paused gateway OS updates resume at once, while an earlier performance change had lengthened control plane processing; together they overwhelmed the control plane.",
+   "where": [
+    "editor:ask-s2"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-azure-afd-oct-2025",
+     "quote": "The combination of increased request volume and longer processing times overwhelmed the control plane",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Found on the Azure history page while looking for the October 2025 AFD PIR; within the last year, an accident (update rollout plus earlier performance change). Not on the editor's list.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-guycarp-insured-300m-1b",
+   "text": "CrowdStrike insured losses likely $300 million to $1 billion; less than 1% of companies with cyber insurance affected; some cyber catastrophe models only examine malicious events",
+   "where": [
+    "editor:ask-s2-comparison"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-insjournal-guycarp-crowdstrike",
+     "quote": "Guy Carpenter said the insured losses from the CrowdStrike outage is likely between $300 million and $1 billion.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-guycarp-models-malicious-only",
+   "text": "The insurance models were built for attacks: accidental mass outages were a gap",
+   "where": [
+    "editor:ask-s2-comparison"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-insjournal-guycarp-crowdstrike",
+     "quote": "some cyber catastrophe model vendors only examine malicious events",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A reported search summary said Guy Carpenter put a malicious version of the event at $600 million to $2 billion; that line is NOT in the captured Insurance Journal text, so it is not used.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-cybercube-insured-400m-1-5b",
+   "text": "Global insured losses $400 million to $1.5 billion",
+   "where": [
+    "editor:ask-s2-comparison"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-businessinsurance-cybercube",
+     "quote": "Global insured losses from last week's massive IT outage are likely to range from $400 million to $1.5 billion, CyberCube Analytics Inc. said Thursday.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-parametrix-5-4b-fortune500",
+   "text": "Direct financial loss to the US Fortune 500 (excluding Microsoft) $5.4 billion; insured $540 million to $1.08 billion (Reuters)",
+   "where": [
+    "editor:ask-s2-comparison"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-parametrix-crowdstrike",
+     "quote": "estimates the total direct financial loss facing the US Fortune 500 companies (excluding Microsoft) from the CrowdStrike outage on 19 July is $5.4 billion",
+     "supports": "for"
+    },
+    {
+     "source_id": "s2-businessinsurance-cybercube",
+     "quote": "estimated insured losses from the outage of $540 million to $1.08 billion for Fortune 500 companies, excluding Microsoft",
+     "supports": "for"
+    },
+    {
+     "source_id": "s2-fortune-parametrix",
+     "quote": "The vast majority of damages from last month’s CrowdStrike Holdings Inc.’s global IT outage will go uninsured",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "$5.4 billion is Parametrix's own landing page; the insured range is from Reuters in Business Insurance; Fortune/Bloomberg carries the $5.4 billion and that most damage went uninsured. The full report was behind a form and not captured. The gap between $5.4bn direct and about $1bn insured is the point: most of the accidental loss was uninsured.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-s2-uptime-2025-causes",
+   "text": "Of major network-related outages, configuration/change management failure 50%, malicious cyberattack 17%; change management is 62% of major IT system/software outage causes",
+   "where": [
+    "editor:ask-s2-comparison"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s2-networkworld-uptime-2025",
+     "quote": "Configuration/change management failure: 50% ... Malicious cyberattack: 17%",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Uptime's own pages returned 403 (bot wall), not got round, so this rests on Network World's reading of the report: A2. The 17% is for major network-related outages only, not all outages. No source captured that directly compares total losses from accidental outages with those from attacks across years.",
+   "suggested_wording": null
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T15:21Z. 492 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T16:27Z. 542 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -404,6 +404,30 @@ Built 2026-10-29T15:21Z. 492 sources; `manifest.json` has every file's SHA-256. 
 | [rm-lto](https://riskmandate.ai/licence-to-operate.html) | RiskMandate (Dinis Cruz) | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
 | [ruflo-license](https://raw.githubusercontent.com/ruvnet/ruflo/main/LICENSE) | ruvnet (GitHub) | primary | 2026-10-29T01:56:20Z | 200 | full | 3 |
 | [ruflo-npm](https://registry.npmjs.org/ruflo/latest) | npm registry | primary | 2026-10-29T01:56:20Z | 200 | full | 4 |
+| [s1-caida-codered](https://www.caida.org/archive/code-red/) | CAIDA | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s1-caida-codered-coderedv2](https://www.caida.org/archive/code-red/coderedv2_analysis/) | CAIDA | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s1-caida-slammer](https://www.caida.org/catalog/papers/2003_sapphire/) | CAIDA (Moore, Paxson, Savage, Shannon, Staniford, Weaver) | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s1-ieee-inside-slammer](https://www.icir.org/vern/papers/IEEESP03.pdf) | IEEE Security & Privacy (Moore et al.), copy hosted at icir.org | primary | 2026-10-29T16:22:17Z | 200 | full | 4 |
+| [s2-azure-afd-oct-2025](https://azure.status.microsoft/en-us/status/history/) | Microsoft Azure | primary | 2026-10-29T16:21:23Z | 200 | partial: list page shows only recent (2026) PIRs; the October 2025 AFD PIR captured separately as s2-azure-afd-ykyn-bwz | 4 |
+| [s2-azure-afd-ykyn-bwz](https://azure.status.microsoft/en-us/status/history/?trackingId=YKYN-BWZ) | Microsoft Azure | primary | 2026-10-29T16:23:21Z | 200 | full | 4 |
+| [s2-businessinsurance-cybercube](https://www.businessinsurance.com/insured-losses-from-crowdstrike-outage-could-reach-15b-cybercube/) | Business Insurance (Reuters) | news | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-crowdstrike-kurtz-statement](https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/) | CrowdStrike | primary | 2026-10-29T16:23:22Z | 200 | full (the statement URL redirects to the remediation hub, which carries the statement text) | 4 |
+| [s2-crowdstrike-pir](https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/) | CrowdStrike | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s2-crowdstrike-rca-pdf](https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf) | CrowdStrike | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s2-fortune-parametrix](https://fortune.com/2024/08/03/crowdstrike-outage-fortune-500-companies-5-4-billion-damages-uninsured-losses/) | Fortune (Bloomberg) | news | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-gcp-incident-2025-06-12](https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW) | Google Cloud | primary | 2026-10-29T16:21:23Z | 200 | full | 4 |
+| [s2-house-crowdstrike-recap](https://homeland.house.gov/2024/09/26/icymi-committee-examines-crowdstrike-processes-in-first-congressional-hearing-on-the-disastrous-july-global-it-outage/) | US House Committee on Homeland Security | primary | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-insjournal-guycarp-crowdstrike](https://www.insurancejournal.com/news/national/2024/08/02/786766.htm) | Insurance Journal | news | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-ms-crowdstrike-blog](https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/) | Microsoft (David Weston) | primary | 2026-10-29T16:21:23Z | 200 | full | 4 |
+| [s2-networkworld-uptime-2025](https://www.networkworld.com/article/3980366/networking-errors-pose-threat-to-data-center-reliability.html) | Network World | news | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-parametrix-crowdstrike](https://www.parametrixinsurance.com/reports-white-papers/crowdstrikes-impact-on-the-fortune-500) | Parametrix | vendor-survey | 2026-10-29T16:21:23Z | 200 | partial: landing page only; the report sits behind a contact form, not submitted | 4 |
+| [s2-uptime-2025-outage-analysis](https://uptimeinstitute.com/about-ui/press-releases/uptime-announces-annual-outage-analysis-report-2025) | Uptime Institute | primary | 2026-10-29T16:21:23Z | 403 | failed: 403 bot wall, not got round (per instructions) | 4 |
+| [s2-uptime-2025-report-pdf](https://intelligence.uptimeinstitute.com/entity_pdf/node/2747/pdf) | Uptime Institute | primary | 2026-10-29T16:24:00Z | 403 | failed: 403 bot wall, not got round (per instructions) | 3 |
+| [s2-uptime-outage-2025-blog](https://intelligence.uptimeinstitute.com/resource/annual-outage-analysis-2025) | Uptime Institute | primary | 2026-10-29T16:23:21Z | 403 | failed: 403 bot wall, not got round (per instructions) | 4 |
+| [s4-site-release-history](git log origin/dev (SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider)) | this site's CI (GitHub Actions release workflow) | primary | 2026-10-29T16:21:24Z | 200 | full | 2 |
+| [s5-explorer-coding](https://newsroom.sgit.ai/articles/explorer-coding.md) | SGit Newsroom (Dinis Cruz) | own-site | 2026-10-29T16:21:33Z | 200 | full | 2 |
+| [s5-the-agent-team-as-it-runs](https://newsroom.sgit.ai/articles/the-agent-team-as-it-runs.md) | SGit Newsroom (Dinis Cruz) | own-site | 2026-10-29T16:21:34Z | 200 | full | 2 |
+| [s5-the-citizen-developer](https://newsroom.sgit.ai/articles/the-citizen-developer.md) | SGit Newsroom (Dinis Cruz) | own-site | 2026-10-29T16:21:34Z | 200 | full | 2 |
 | [scmedia-amazon-q-wiper](https://www.scworld.com/news/amazon-q-extension-for-vs-code-reportedly-injected-with-wiper-prompt) | SC Media | news | 2026-10-29T01:50:21Z | 403 | failed: 403 Cloudflare block (curl and WebFetch); web.archive.org unreachable (connection reset); saved bytes are the block page | 3 |
 | [sdtimes-gartner-agentic-40](https://sdtimes.com/agentic-ai/gartner-more-than-40-of-agentic-ai-projects-will-be-canceled-in-next-few-years/) | SD Times | news | 2026-10-29T01:55:44Z | 200 | full | 3 |
 | [secureframe-grc-stats](https://secureframe.com/blog/compliance-statistics) | Secureframe | vendor-survey | 2026-10-29T01:54:02Z | 200 | full | 3 |
@@ -428,6 +452,32 @@ Built 2026-10-29T15:21Z. 492 sources; `manifest.json` has every file's SHA-256. 
 | [sharness-linux-in-a-tab](https://sharness.ai/articles/linux-in-a-tab.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full: captured for context, not quoted | 2 |
 | [sharness-machines](https://sharness.ai/evidence/machines/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
 | [sharness-status](https://sharness.ai/evidence/status/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
+| [sharness2-anim-hello-replay](https://sharness.ai/assets/anim/hello-replay.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-anim-kernel-in-a-tab](https://sharness.ai/assets/anim/kernel-in-a-tab.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-anim-one-idea](https://sharness.ai/assets/anim/one-idea.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-anim-os-of-one-process](https://sharness.ai/assets/anim/os-of-one-process.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-browser](https://sharness.ai/code/browser/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 1 |
+| [sharness2-demo](https://sharness.ai/code/browser/demo/index.html) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | partial: HTML and its inline script captured; the 25 MB of guest files (libv86.mjs, v86.wasm, kernel, initramfs) not fetched and the page not run | 2 |
+| [sharness2-design-brief](https://sharness.ai/design/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 3 |
+| [sharness2-design-svg-moving-parts](https://sharness.ai/assets/images/design/moving-parts.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-design-svg-one-request](https://sharness.ai/assets/images/design/one-request.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-design-svg-spectrum](https://sharness.ai/assets/images/design/spectrum.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-design-svg-surface](https://sharness.ai/assets/images/design/surface.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-home](https://sharness.ai/) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 4 |
+| [sharness2-linux-in-a-tab](https://sharness.ai/articles/linux-in-a-tab.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 3 |
+| [sharness2-lit-svg-interpreter](https://sharness.ai/articles/images/linux-in-a-tab/interpreter.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-lit-svg-run-pipeline](https://sharness.ai/articles/images/linux-in-a-tab/run-pipeline.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-lit-svg-stack](https://sharness.ai/articles/images/linux-in-a-tab/stack.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-lit-svg-three-hashes](https://sharness.ai/articles/images/linux-in-a-tab/three-hashes.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-lit-svg-what-held](https://sharness.ai/articles/images/linux-in-a-tab/what-held.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-llms-full](https://sharness.ai/llms-full.txt) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 1 |
+| [sharness2-mockup-edges](https://sharness.ai/explain/mockups/edges.html) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | partial: HTML only; not run | 2 |
+| [sharness2-mockup-policy-hash](https://sharness.ai/explain/mockups/policy-hash.html) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | partial: HTML only; not run | 2 |
+| [sharness2-playground](https://sharness.ai/code/playground/index.html) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | partial: HTML only; not run | 2 |
+| [sharness2-sb-hello-world-inside](https://sharness.ai/explain/storyboards/hello-world-inside/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-sb-its-one-job](https://sharness.ai/explain/storyboards/its-one-job/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-sb-the-last-metre](https://sharness.ai/explain/storyboards/the-last-metre/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-storyboards](https://sharness.ai/explain/storyboards/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 1 |
 | [silicon-cyberark-2025-press](https://www.silicon.co.uk/press-release/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security) | Silicon UK (BusinessWire syndication of CyberArk release) | vendor-survey | 2026-10-29T01:55:11Z | 200 | full | 3 |
 | [spiffe-overview](https://spiffe.io/docs/latest/spiffe-about/overview/) | SPIFFE project (CNCF) | primary | 2026-10-29T01:50:50Z | 200 | full | 4 |
 | [story-abp-llms](https://abp.sgit.ai/llms.txt) | abp.sgit.ai | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |
