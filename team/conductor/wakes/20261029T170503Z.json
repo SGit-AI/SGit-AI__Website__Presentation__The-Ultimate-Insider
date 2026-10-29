@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Routes two plain request files verbatim; no key, QR, personal detail or directive beyond their asks. In scope. vault_check before commit.",
    "at": "2026-10-29T17:05:50Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) The storyteller's two requests routed verbatim (deck, researcher); deck's two earlier recorded as already sent; vault_check clean, pushed. 2) pace.json waits_on_editor: Linux in the browser held out of the player until after the talk (dev's pre-review); status.json. 3) Night log and Moments. Gate clean. Commit bb91d89.",
+   "at": "2026-10-29T17:06:22Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "bb91d89: no keys, tokens or QR codes in the diff or the four night screenshots; vault_check clean on the mail clone; build, validate, agents check clean.",
+   "at": "2026-10-29T17:07:17Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "bb91d89 holds pace.json, status.json, the night log and Moments; the routing in the mail vault per the work step. Nothing unplanned.",
+   "at": "2026-10-29T17:07:17Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:07:17Z",
+ "outcome": "ok"
 }
