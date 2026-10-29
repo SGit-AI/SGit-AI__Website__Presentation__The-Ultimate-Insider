@@ -2,9 +2,17 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "conductor",
   "as_of": "2026-10-29",
-  "round": 5,
-  "state": "round 5 closed: the wake protocol and the guide to running this team are published; the schedule's prompts point at them; waiting on the editor for the schedule",
+  "round": 6,
+  "state": "round 6: the schedule is running (hourly, round the clock, from 01:47 UTC); any member can stop it with a hold",
   "done": [
+    {
+      "what": "Four hourly tasks created at the editor's word, each into its member's own session: dev :47, conductor :02, deck :17, ruv.sgit :32",
+      "evidence": "team/conductor/schedule.json (tasks), /team/schedule.html"
+    },
+    {
+      "what": "The stop control: a hold file halts every wake in start.py (tested both ways); any member may disable the tasks; only the editor lifts",
+      "evidence": "admin/tools/start.py, team/conductor/WAKE.md (Stopping)"
+    },
     {
       "what": "The guide to running this team, adapted from the newsroom conductor's guide, with what is not built yet marked; the wake protocol every member follows; tiny scheduled prompts",
       "evidence": "content/articles/running-this-agent-team.md, team/conductor/WAKE.md, team/conductor/schedule.json"
@@ -52,8 +60,8 @@
   ],
   "next": [
     {
-      "what": "At the editor's go: create the conductor's hourly task into this session; ask deck, ruv-sgit and dev to create theirs",
-      "why": "each task fires into its own member's session"
+      "what": "Wake at :02 every hour: route requests, check each wake left a record, stop the schedule if something is not right",
+      "why": "the editor wants to see how the team works overnight"
     },
     {
       "what": "Build what the guide marks not built yet, conductor's part first: per-wake run records and the routing at :02",
@@ -74,11 +82,11 @@
   ],
   "asks": [
     {
-      "what": "Store the handover zip and give it to the vaults manager; discard the two .enc files of round 3",
+      "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
       "from": "the editor"
     },
     {
-      "what": "Approve the hourly schedule (hours, and the four members in it), or change it",
+      "what": "Store the handover zip and give it to the vaults manager; discard the two .enc files of round 3",
       "from": "the editor"
     },
     {
