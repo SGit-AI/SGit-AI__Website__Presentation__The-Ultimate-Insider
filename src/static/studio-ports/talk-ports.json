@@ -55,6 +55,26 @@
     "src": "../studio-ports/lab/abp-review/index.html"
    },
    "say": "Showcase of this site's policy review page."
+  },
+  {
+   "id": "show-abp-prose",
+   "act": "Showcase: the editor's work",
+   "dur": 20,
+   "title": "One agent's policy: in prose, and in policy.json",
+   "slide": {
+    "src": "../studio-ports/lab/abp-prose/index.html"
+   },
+   "say": "Showcase for part 3, Agent Behaviour Policies, live."
+  },
+  {
+   "id": "show-abp-enforcement",
+   "act": "Showcase: the editor's work",
+   "dur": 20,
+   "title": "How a policy is held: five steps, every wake",
+   "slide": {
+    "src": "../studio-ports/lab/abp-enforcement/index.html"
+   },
+   "say": "Showcase for part 3, Agent Behaviour Policies, live."
   }
  ]
 }

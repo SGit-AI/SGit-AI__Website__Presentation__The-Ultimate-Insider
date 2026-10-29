@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "studio",
+ "kind": "follow-up, tonight every 15 min (the editor's word)",
+ "started": "2026-10-29T18:06:28Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (plan brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Requests first: tell deck what landed (by mail in mailroom/deck, since studio holds the mail key; the plan named the repository fallback), no key, path or session id. 2. Showcase 2: ruv.sgit's ABP in prose from /team/ruv-sgit/index.html beside its policy.json, at src/static/studio-ports/lab/abp-prose/ with its page. 3. Showcase 3: the enforcement, agents.py check '0 file(s) outside scope' and a wake's five verdicts (/admin/wakes.html), at lab/abp-enforcement/, honestly: a scope is a setting, not a boundary; build, gate, status, debrief, push dev. Studio's own agreement unclaimed until the editor confirms here.",
+   "at": "2026-10-29T18:07:06Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (pre_review brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside scope.writes; no stop condition. Conditions: no talk.json, deck, engine or locked part 1; shots cut in the image itself to remove session ids, key.json, key QR images, fingerprints, local paths and wake record ids, checked by eye; mail to deck without key, path or session id, vault_check first; no external script; studio's own agreement not claimed; send_later only until 19:45.",
+   "at": "2026-10-29T18:07:27Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "done",
+   "comment": "1 done: deck told (all three ABP showcases), the conductor told (007 done), board 004, dev 012 filed; vault_check clean, pushed. 2 done: abp-prose (ruv.sgit's role page, no key, key QR or session table). 3 done: abp-enforcement (one studio wake's five verdicts; a newer wake with a task id avoided). Pages, hub, test beats; gate clean after one link fix; 1280x720 and iPad. Studio's own agreement not claimed.",
+   "at": "2026-10-29T18:11:59Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (post_review brief)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Both shots viewed: no key, key QR, read key, token, path, session or task id (abp-prose: only the policy's sha256; abp-enforcement: a wake card). Gate clean, agents check 0 outside scope, vault_check clean. Diff in studio paths only. deck 077 and conductor 045 hold no keys or directives. 33 items matches ruv.sgit's agreed_by. Studio's own agreement not claimed.",
+   "at": "2026-10-29T18:12:53Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (post_check brief)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1 done: deck 077, conductor 045, board 004, dev 012 filed. 2 done: abp-prose. 3 done: abp-enforcement with the honest line; hub and test beats. Conditions kept; studio's own agreement unclaimed. Unplanned: one link fix.",
+   "at": "2026-10-29T18:12:53Z"
+  }
+ },
+ "closed": "2026-10-29T18:12:54Z",
+ "outcome": "ok"
+}
