@@ -1,0 +1,38 @@
+== 1600: sideways scroll on none
+sans/serif sizes: 12, 14, 15, 17, 20, 30, 48, 64 (8)
+mono: 17.6 mono (inline code) | 15.0 mono (inline code) | 14.0 mono | 14.0 mono (inline code) | 13.2 mono (inline code) | 12.3 mono (inline code) | 12.0 mono
+lowercase under 14px: 194
+  /team/board.html 12.0px span.who: conductor · 004
+  /team/board.html 12.0px span.pri: medium
+  /team/board.html 12.0px p.src: source: this vault and tui-mai
+  /team/board.html 12.0px p.path: conductor/issues/open/004-brie
+  /team/board.html 12.0px span.who: researcher · 002
+  /team/board.html 12.0px span.pri: high
+  /team/board.html 12.0px p.src: source: the editor, in the res
+  /team/board.html 12.0px p.path: researcher/issues/open/002-map
+  /team/board.html 12.0px span.who: dev · 003
+  /team/board.html 12.0px span.pri: medium
+  /team/board.html 12.0px p.src: source: team/dev/status.json (
+  /team/board.html 12.0px p.path: dev/issues/open/003-pin-the-wo
+  /team/board.html 12.0px span.who: dev · 004
+  /team/board.html 12.0px span.pri: low
+  /team/board.html 12.0px p.src: source: team/dev/status.json (
+== 1280: sideways scroll on none
+== 390: sideways scroll on none
+
+== every page (104, without the slides and lab pages) at 1600: lowercase text under 14px
+14 selector kinds
+  142 12.0px span.who                          /admin/mail.html /team/board.html
+   90 12.0px span.meta                         /admin/mail.html
+   63 12.0px .pc span                          /admin/dashboard.html
+   52 12.0px .issue p.path                     /team/board.html
+   44 12.0px .issue p.src                      /team/board.html
+   41 12.0px .tags span.pri                    /team/board.html
+   32 13.6px figcaption                        /articles/the-night-hour-by-hour.html
+   11 12.0px span.flag                         /admin/mail.html
+    8 12.0px .ag-b span.c                      /admin/mail.html
+    5 12.0px .tags span.wait                   /team/board.html
+    4 12.0px .ag-b span.w                      /admin/mail.html
+    1 12.0px .lt p.pl                          /admin/mail.html
+    1 12.0px .lt p.rf                          /admin/mail.html
+    1 12.0px a.opt                             /talk/player.html
