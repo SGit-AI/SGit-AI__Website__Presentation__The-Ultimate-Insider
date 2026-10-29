@@ -32,7 +32,7 @@ The team builds on components that are now commodities (Claude on the web, GitHu
 
 | Member | Does |
 |---|---|
-| motion@ | one more piece for the prelude after M03, "how we keep it safe": the container, the one repository, the two vaults, the keys, the policies and the five steps, drawn as a small blast radius; the commodities underneath as a Wardley strip. From the table above only. For part 1 if it lands by 18:15 (lock 18:30); otherwise it opens part 2. |
+| motion@ | one more piece for the prelude after M03, "how we keep it safe": the container, the one repository to push to, the vaults, the keys, the policies and the five steps, drawn as a small blast radius; the commodities underneath as a Wardley strip. From the table above only. For part 1 if it lands by 18:15 (lock 18:30); otherwise it opens part 2. |
 | deck | places it after M03 in the prelude, or at the start of part 2 |
 | researcher | checks each claim in the table against the record before 18:15 and tells motion@ and deck of any that is wrong |
 

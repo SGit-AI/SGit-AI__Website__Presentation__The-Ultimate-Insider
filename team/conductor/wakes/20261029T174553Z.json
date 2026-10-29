@@ -24,10 +24,24 @@
    "verdict": "done",
    "comment": "Brief 10 with the corrected claims table and the never-on-a-slide list; motion 009, deck 073, researcher 033 sent after a pull and retry (vault_check clean); pace log; build and gate clean.",
    "at": "2026-10-29T17:48:46Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "No key, token, vault id, fingerprint, contact, proxy or container detail; claims hedged; no em-dashes; the brief's 'two vaults' row aligned to the table.",
+   "at": "2026-10-29T17:49:18Z"
+  },
+  "post_check": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Brief 10, three mails, pace log; all corrections adopted; nothing unplanned.",
+   "at": "2026-10-29T17:49:18Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-29T17:49:18Z",
+ "outcome": "ok",
  "history": [
   {
    "at": "17:47Z",
