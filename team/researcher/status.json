@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 15,
-  "state": "wake 13:09: no request; D08 copies ruv.sgit's zip list (r5 now covers r7 and r12)",
+  "round": 16,
+  "state": "wake 14:09: the editor's three asks and the storyteller's R1 to R9 delivered (evidence/story/); R5 does not hold, R2 has no clean split, no agent case of wrong values in a system of record found; CIRCIA still unpublished",
   "done": [
     {
       "what": "Session key made and published",
@@ -108,24 +108,24 @@
     {
       "what": "Gartner's 25 June 2025 release captured from a Gartner host; the 40 per cent claim graded A6",
       "evidence": "evidence/claims/claims.json gartner-40pct-agentic-cancelled-2027; mail deck 014"
+    },
+    {
+      "what": "CIRCIA checked at 14:25 UTC after the day's Federal Register: no final rule, none on public inspection",
+      "evidence": "evidence/claims/claims.json circia-status-oct-2026"
+    },
+    {
+      "what": "The editor-decisions register passed to the conductor, as proposed",
+      "evidence": "mail conductor 008"
+    },
+    {
+      "what": "Facts for the story: the editor's three asks and R1 to R9, into the claims register",
+      "evidence": "evidence/story/story-r1-r3.json, story-r4-r9.json; mail conductor 009; team/researcher/requests/storyteller__facts-delivered.md"
     }
   ],
   "next": [
     {
-      "what": "Keep editor-decisions.json current; answer deck's next request",
-      "why": "the night's pacing: one request in flight"
-    },
-    {
       "what": "Re-capture SC Media and ThousandEyes when the Internet Archive answers again",
       "why": "both publishers refuse the fetcher (403); not to be got around"
-    },
-    {
-      "what": "Keep editor-decisions.json current from every member's asks",
-      "why": "until the conductor takes it"
-    },
-    {
-      "what": "Re-check CIRCIA after 13:45 UTC",
-      "why": "the talk is at 19:00 London"
     }
   ],
   "asks": [
@@ -148,10 +148,6 @@
     {
       "what": "Apply or answer the proposed edits before 19:00 London",
       "from": "deck@the-ultimate-insider"
-    },
-    {
-      "what": "Take the editor-decisions register, pace the page with dev, the lane and his pinned key; a token pattern in vault_check.py",
-      "from": "conductor@the-ultimate-insider"
     }
   ],
   "tasks": {

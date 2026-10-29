@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T11:24Z",
- "count": 388,
+ "built": "2026-10-29T14:31Z",
+ "count": 434,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -4140,6 +4140,35 @@
      "bytes_as_fetched": 17712,
      "sha256": "51d40a98a8ee45ded614856d416bff3090c01d12457be62f972f8bb17d3d9ba9",
      "bytes": 17712
+    }
+   ]
+  },
+  {
+   "id": "federalregister-circia-2026-10-29T1425Z",
+   "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=CIRCIA&order=newest&per_page=8 (and public-inspection-documents.json, term Cyber Incident Reporting)",
+   "final_url": null,
+   "publisher": "Federal Register (US Office of the Federal Register)",
+   "title": "Federal Register API: newest CIRCIA documents, and documents on public inspection, 29 October 2026 14:25 UTC",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T14:25:05Z",
+   "http_status": 200,
+   "capture": "full",
+   "recorded_by": "rechecks",
+   "files": [
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "51d40a98a8ee45ded614856d416bff3090c01d12457be62f972f8bb17d3d9ba9",
+     "bytes_as_fetched": 17712,
+     "sha256": "51d40a98a8ee45ded614856d416bff3090c01d12457be62f972f8bb17d3d9ba9",
+     "bytes": 17712
+    },
+    {
+     "name": "pi.json",
+     "sha256_as_fetched": "cd207d74d780e51c0cd6c6692385addb8c997256217434ccb74465685c19eb17",
+     "bytes_as_fetched": 91,
+     "sha256": "cd207d74d780e51c0cd6c6692385addb8c997256217434ccb74465685c19eb17",
+     "bytes": 91
     }
    ]
   },
@@ -15153,6 +15182,1975 @@
    ],
    "capture": "full",
    "recorded_by": "sgit-php-ideas"
+  },
+  {
+   "id": "story-abp-llms",
+   "url": "https://abp.sgit.ai/llms.txt",
+   "final_url": "https://abp.sgit.ai/llms.txt",
+   "publisher": "abp.sgit.ai",
+   "title": "llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T14:25:43Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "f620197abd9852c3ecb79febf1053a79120c2a1c326879033e90ad1c0921dfc8",
+     "bytes_as_fetched": 694,
+     "sha256": "f620197abd9852c3ecb79febf1053a79120c2a1c326879033e90ad1c0921dfc8",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "8ef9351c4688ab3c06c27aecc8e78092f0fc4a7946fc8698fcf5262231fea02c",
+     "bytes_as_fetched": 311,
+     "sha256": "8ef9351c4688ab3c06c27aecc8e78092f0fc4a7946fc8698fcf5262231fea02c",
+     "bytes": 311
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes_as_fetched": 62669,
+     "sha256": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes": 62669
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes_as_fetched": 62669,
+     "sha256": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes": 62669
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-ap-deloitte-australia-ai-2025",
+   "url": "https://apnews.com/article/australia-ai-errors-deloitte-ab54858680ffc4ae6555b31c8fb987f3",
+   "final_url": "https://apnews.com/article/australia-ai-errors-deloitte-ab54858680ffc4ae6555b31c8fb987f3",
+   "publisher": "AP News",
+   "title": "Deloitte Australia AI errors report",
+   "kind": "news",
+   "published": "2025-10",
+   "captured_at": "2026-10-29T14:25:37Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d2a7a90edfd95b82c33d508ede237812adc2c8ac6b38a88389c1a4ba56986fb0",
+     "bytes_as_fetched": 2204,
+     "redacted": 1,
+     "sha256": "d970659db2ba84901afa2c38fea4d2a009d392fbe35734ecc0bd86738dcf3fab",
+     "bytes": 1869
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d749452877129dc597669497e4d32c81a1992d900e7b38087a3c91a7fedfc681",
+     "bytes_as_fetched": 450,
+     "sha256": "d749452877129dc597669497e4d32c81a1992d900e7b38087a3c91a7fedfc681",
+     "bytes": 450
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d827a61f8e7b38bcab54a7015e1382c521d6881a76216afa1e71de87ffca8388",
+     "bytes_as_fetched": 5746,
+     "sha256": "d827a61f8e7b38bcab54a7015e1382c521d6881a76216afa1e71de87ffca8388",
+     "bytes": 5746
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d44c878b16cb238c3c267f979438cd2a940ab62532af72961dde5e9cda9b23a4",
+     "bytes_as_fetched": 17,
+     "sha256": "d44c878b16cb238c3c267f979438cd2a940ab62532af72961dde5e9cda9b23a4",
+     "bytes": 17
+    }
+   ],
+   "capture": "failed: 403; not worked round",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-ayinde-haringey-2025",
+   "url": "https://www.judiciary.uk/wp-content/uploads/2025/06/Ayinde-v-London-Borough-of-Haringey-and-Al-Haroun-v-Qatar-National-Bank.pdf",
+   "final_url": "https://www.judiciary.uk/wp-content/uploads/2025/06/Ayinde-v-London-Borough-of-Haringey-and-Al-Haroun-v-Qatar-National-Bank.pdf",
+   "publisher": "Courts and Tribunals Judiciary (High Court, Divisional Court)",
+   "title": "Ayinde v London Borough of Haringey; Al-Haroun v Qatar National Bank [2025] EWHC 1383 (Admin)",
+   "kind": "primary",
+   "published": "2025-06-06",
+   "captured_at": "2026-10-29T14:25:39Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "0ec0837ca72f91ee3e0e61733424503a1dc770ab8ba5fa329d235377e8876124",
+     "bytes_as_fetched": 562,
+     "sha256": "0ec0837ca72f91ee3e0e61733424503a1dc770ab8ba5fa329d235377e8876124",
+     "bytes": 562
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9d1d6a1b542a8098856aab80bfe03f1b5644f7003cfb2a4cac08d2b2823a342e",
+     "bytes_as_fetched": 511,
+     "sha256": "9d1d6a1b542a8098856aab80bfe03f1b5644f7003cfb2a4cac08d2b2823a342e",
+     "bytes": 511
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "ce58af64c81ca4e4125f5e1aa6ebf75d99e73ee7ef9943d75a09d04d0c9f5fcd",
+     "bytes_as_fetched": 440235,
+     "sha256": "ce58af64c81ca4e4125f5e1aa6ebf75d99e73ee7ef9943d75a09d04d0c9f5fcd",
+     "bytes": 440235
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "90fa35bffccf878476238ab6f23ad8076191d09f6bb8c26badef6c0314d5220c",
+     "bytes_as_fetched": 101086,
+     "sha256": "90fa35bffccf878476238ab6f23ad8076191d09f6bb8c26badef6c0314d5220c",
+     "bytes": 101086
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-bates-horizon-judgment-6",
+   "url": "https://www.judiciary.uk/wp-content/uploads/2019/12/bates-v-post-office-judgment.pdf",
+   "final_url": "https://www.judiciary.uk/wp-content/uploads/2019/12/bates-v-post-office-judgment.pdf",
+   "publisher": "Courts and Tribunals Judiciary (High Court)",
+   "title": "Bates v Post Office Ltd (No 6) Horizon Issues [2019] EWHC 3408 (QB)",
+   "kind": "primary",
+   "published": "2019-12-16",
+   "captured_at": "2026-10-29T14:25:39Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "856ef903fff00d241c5d23d786412ce525636c0db3c1cebcb56c4fa3fd146dc6",
+     "bytes_as_fetched": 564,
+     "sha256": "856ef903fff00d241c5d23d786412ce525636c0db3c1cebcb56c4fa3fd146dc6",
+     "bytes": 564
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b73ef7af1e832427d81e828e1e2d3a820007a25a0c1ab1218b6f6c954522aa99",
+     "bytes_as_fetched": 430,
+     "sha256": "b73ef7af1e832427d81e828e1e2d3a820007a25a0c1ab1218b6f6c954522aa99",
+     "bytes": 430
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "65c65586199bcecec16cb6d920f4bbfe0f6d5d4f8eadd03d73d9de6ef652cea1",
+     "bytes_as_fetched": 2201648,
+     "sha256": "65c65586199bcecec16cb6d920f4bbfe0f6d5d4f8eadd03d73d9de6ef652cea1",
+     "bytes": 2201648
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e03965fc57ef657887e0c06c7c546dbcda90f8190e817173b9ef4bcd69a9b551",
+     "bytes_as_fetched": 1124740,
+     "sha256": "e03965fc57ef657887e0c06c7c546dbcda90f8190e817173b9ef4bcd69a9b551",
+     "bytes": 1124740
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-bbc-phe-excel-2020",
+   "url": "https://www.bbc.co.uk/news/technology-54423988",
+   "final_url": "https://www.bbc.co.uk/news/technology-54423988",
+   "publisher": "BBC News",
+   "title": "Excel: Why using Microsoft's tool caused Covid-19 results to be lost",
+   "kind": "news",
+   "published": "2020-10-05",
+   "captured_at": "2026-10-29T14:25:38Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "f19df1c9d95c319d8319535f493859f7c00ef8907baabacb564a9f38284dbb76",
+     "bytes_as_fetched": 5362,
+     "sha256": "f19df1c9d95c319d8319535f493859f7c00ef8907baabacb564a9f38284dbb76",
+     "bytes": 5362
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "82e0c31705882714a193ba5a4834ab4e52b5c6108b53fbe0f470226385057b2e",
+     "bytes_as_fetched": 342,
+     "sha256": "82e0c31705882714a193ba5a4834ab4e52b5c6108b53fbe0f470226385057b2e",
+     "bytes": 342
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "62c2792246373722c82a1d1a713d4e531df9aa3a1ea73b96a0a8d0f3ee556000",
+     "bytes_as_fetched": 443949,
+     "sha256": "62c2792246373722c82a1d1a713d4e531df9aa3a1ea73b96a0a8d0f3ee556000",
+     "bytes": 443949
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "306dbbb8105306e7425b065482aea6aab293c9a347398e29265ac6c5b7a5a02f",
+     "bytes_as_fetched": 10238,
+     "sha256": "306dbbb8105306e7425b065482aea6aab293c9a347398e29265ac6c5b7a5a02f",
+     "bytes": 10238
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-cisa-aa20-352a",
+   "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-352a",
+   "final_url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-352a",
+   "publisher": "CISA",
+   "title": "AA20-352A Advanced Persistent Threat Compromise of Government Agencies, Critical Infrastructure, and Private Sector Organizations",
+   "kind": "primary",
+   "published": "2020-12-17",
+   "captured_at": "2026-10-29T14:25:37Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "ab8dec1677c19382331cb6f9ecc7f2aebfb98a4390bbfa064bb9aceaf1b37d51",
+     "bytes_as_fetched": 339,
+     "sha256": "ab8dec1677c19382331cb6f9ecc7f2aebfb98a4390bbfa064bb9aceaf1b37d51",
+     "bytes": 339
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1272e4c37ac188cf97c06a65a39129d7145d58fce8bc9fb3750208eebd21722f",
+     "bytes_as_fetched": 377,
+     "sha256": "1272e4c37ac188cf97c06a65a39129d7145d58fce8bc9fb3750208eebd21722f",
+     "bytes": 377
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3557b90621cded28f2fa0a8d8e3e260649d6b1928d65bdb7d88c9165816779eb",
+     "bytes_as_fetched": 432,
+     "sha256": "3557b90621cded28f2fa0a8d8e3e260649d6b1928d65bdb7d88c9165816779eb",
+     "bytes": 432
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cb982e1cbf781660376e817dda51d91dc78e0381f997c47392893e8bf56ee15b",
+     "bytes_as_fetched": 257,
+     "sha256": "cb982e1cbf781660376e817dda51d91dc78e0381f997c47392893e8bf56ee15b",
+     "bytes": 257
+    }
+   ],
+   "capture": "failed: 403; not worked round",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-dbta-cobol-2022",
+   "url": "https://www.dbta.com/Editorial/News-Flashes/COBOL-Market-Shown-to-be-Three-Times-Larger-than-Previously-Estimated-151446.aspx",
+   "final_url": "https://www.dbta.com/Editorial/News-Flashes/COBOL-Market-Shown-to-be-Three-Times-Larger-than-Previously-Estimated-151446.aspx",
+   "publisher": "DBTA (reporting a Micro Focus / Vanson Bourne survey)",
+   "title": "COBOL Market Shown to be Three Times Larger than Previously Estimated",
+   "kind": "news",
+   "published": "2022-02-22",
+   "captured_at": "2026-10-29T14:29:12Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "16805d0221752727090bb0925d399178c7c8b67d4a9263951e83d36d4355c593",
+     "bytes_as_fetched": 329,
+     "sha256": "16805d0221752727090bb0925d399178c7c8b67d4a9263951e83d36d4355c593",
+     "bytes": 329
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b8d9efe9ab28a36317e439240fea7e2dc5b3527adc1ffaf5b33fbf5e93b2a077",
+     "bytes_as_fetched": 511,
+     "sha256": "b8d9efe9ab28a36317e439240fea7e2dc5b3527adc1ffaf5b33fbf5e93b2a077",
+     "bytes": 511
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2c88ca6fc0c852d0cdbd51c5d885c0f0814aeccb26c44f7f6878b795244a5829",
+     "bytes_as_fetched": 81936,
+     "redacted": 1,
+     "sha256": "483f7441777db04b5234c9ccd0e4f7540786eafca029ed768211685dcf9a3927",
+     "bytes": 80205
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e0c8db3617f0c1506419640d889fcf11faafc6f9a330f81e21f1e6949fd15bd8",
+     "bytes_as_fetched": 7644,
+     "sha256": "e0c8db3617f0c1506419640d889fcf11faafc6f9a330f81e21f1e6949fd15bd8",
+     "bytes": 7644
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-esa-ariane501-report",
+   "url": "https://esamultimedia.esa.int/docs/esa-x-1819eng.pdf",
+   "final_url": "https://esamultimedia.esa.int/docs/esa-x-1819eng.pdf",
+   "publisher": "ESA",
+   "title": "Ariane 501 Inquiry Board report (Lions report)",
+   "kind": "primary",
+   "published": "1996-07-19",
+   "captured_at": "2026-10-29T14:25:38Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "2084f6def714277509891606b05cc93cda63ffb53910c1ca4045657239c14ce9",
+     "bytes_as_fetched": 489,
+     "sha256": "2084f6def714277509891606b05cc93cda63ffb53910c1ca4045657239c14ce9",
+     "bytes": 489
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "69cc5a08551b0af833a47fa8909f4ef662bda373d5f2879a8c0903176e82a192",
+     "bytes_as_fetched": 362,
+     "sha256": "69cc5a08551b0af833a47fa8909f4ef662bda373d5f2879a8c0903176e82a192",
+     "bytes": 362
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "a2c2ee1f22e41eb0e43a1cd230b735be3b6b88c404391d595b9dfb8f3c8f7a86",
+     "bytes_as_fetched": 2168608,
+     "sha256": "a2c2ee1f22e41eb0e43a1cd230b735be3b6b88c404391d595b9dfb8f3c8f7a86",
+     "bytes": 2168608
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3145aa55a01a70f7e2f8603ac9c64e90a3985b0a61048089ccfcd4405b808206",
+     "bytes_as_fetched": 60,
+     "sha256": "3145aa55a01a70f7e2f8603ac9c64e90a3985b0a61048089ccfcd4405b808206",
+     "bytes": 60
+    }
+   ],
+   "capture": "partial: PDF is a scan with no text layer; no quote extracted",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-gao-25-107795",
+   "url": "https://files.gao.gov/reports/GAO-25-107795/index.html",
+   "final_url": "https://files.gao.gov/reports/GAO-25-107795/index.html",
+   "publisher": "US Government Accountability Office",
+   "title": "GAO-25-107795 Information Technology: Agencies Need to Plan for Modernizing Critical Decades-Old Legacy Systems",
+   "kind": "primary",
+   "published": "2025-07-17",
+   "captured_at": "2026-10-29T14:27:46Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "1e19561f394e8ba65a0ff0db2de7bff68e8082e4bade20cb58d40fbbdca6a696",
+     "bytes_as_fetched": 503,
+     "sha256": "1e19561f394e8ba65a0ff0db2de7bff68e8082e4bade20cb58d40fbbdca6a696",
+     "bytes": 503
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "191f49455fefef85b87f209f82841398165c97eadc1952e102dc9c5052874c2f",
+     "bytes_as_fetched": 353,
+     "sha256": "191f49455fefef85b87f209f82841398165c97eadc1952e102dc9c5052874c2f",
+     "bytes": 353
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "42fba3838432831cb5eccc5b97572a07c4c935380b3fb2ff549b4f50f32ed069",
+     "bytes_as_fetched": 644879,
+     "redacted": 10,
+     "sha256": "819ee6448c12dfe5380db97a6aca2989bddf46a6da7609036e2ddcaa4952818d",
+     "bytes": 631867
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0ea3b09817bbbc494dc5c7630c3528d35fd0a9ebf2ed7719c029fc34d7ad8f45",
+     "bytes_as_fetched": 171027,
+     "redacted": 5,
+     "sha256": "708dc9bcd5ce6eb6614f043eac07533a70fcaa1abd9ff4f1d10f884294dc99fb",
+     "bytes": 171037
+    }
+   ],
+   "capture": "full (files.gao.gov HTML edition; www.gao.gov product page and PDF returned 403 to curl, not retried)",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-gtig-ai-threat-tracker",
+   "url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools",
+   "final_url": "https://cloud.google.com/blog/topics/threat-intelligence/threat-actor-usage-of-ai-tools",
+   "publisher": "Google Threat Intelligence Group",
+   "title": "GTIG AI Threat Tracker: Advances in Threat Actor Usage of AI Tools",
+   "kind": "primary",
+   "published": "2025-11-05",
+   "captured_at": "2026-10-29T14:25:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "96f300c3ec653f45e643036ee89f263498025dd8723e8ed59d0dea82189e3a31",
+     "bytes_as_fetched": 2008,
+     "redacted": 1,
+     "sha256": "dd2c100c603961455c66ac1a80c39d9c37c6bf18d01bdc92073cf9f9d7bbe727",
+     "bytes": 1639
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "764a793720cf364c8272d7018808b3129a27f4b603214e31710e87e241470045",
+     "bytes_as_fetched": 443,
+     "sha256": "764a793720cf364c8272d7018808b3129a27f4b603214e31710e87e241470045",
+     "bytes": 443
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "427980330638c1667f5f69c53b7c184f06d76f47ee9b2a78270a1a4c6b40af12",
+     "bytes_as_fetched": 396216,
+     "sha256": "427980330638c1667f5f69c53b7c184f06d76f47ee9b2a78270a1a4c6b40af12",
+     "bytes": 396216
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a40d9f1efb5ab5ee5909a80e8332c548c08ad07e73d98461fbcd19f87f9615b7",
+     "bytes_as_fetched": 35656,
+     "sha256": "a40d9f1efb5ab5ee5909a80e8332c548c08ad07e73d98461fbcd19f87f9615b7",
+     "bytes": 35656
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-gtig-ai-vuln-exploitation",
+   "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access",
+   "final_url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access",
+   "publisher": "Google Threat Intelligence Group",
+   "title": "Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access",
+   "kind": "primary",
+   "published": "2026-05-11",
+   "captured_at": "2026-10-29T14:27:55Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "4b7795faa32c82b043d28451fabc36d05df01805322e95aecf461252331984d4",
+     "bytes_as_fetched": 2008,
+     "redacted": 1,
+     "sha256": "4bd088ff1fbbe1c6e004572cb4a3b2ed7c177fb858fd6560aae8e1fa9a5ee2ae",
+     "bytes": 1639
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ef4b593269577c71f4806e40a860c9089455df76c1f47ba03113b8b73c45b36f",
+     "bytes_as_fetched": 474,
+     "sha256": "ef4b593269577c71f4806e40a860c9089455df76c1f47ba03113b8b73c45b36f",
+     "bytes": 474
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "9234e315298b667825be849969c1da71a8ec45888bc3011bf9359fdf072b8a09",
+     "bytes_as_fetched": 412990,
+     "sha256": "9234e315298b667825be849969c1da71a8ec45888bc3011bf9359fdf072b8a09",
+     "bytes": 412990
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "71d87f8780c065be59363089dc15baa1116ebe9cd0758902f237b69f6346ffd2",
+     "bytes_as_fetched": 46252,
+     "sha256": "71d87f8780c065be59363089dc15baa1116ebe9cd0758902f237b69f6346ffd2",
+     "bytes": 46252
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-gtig-prompting-autonomy",
+   "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
+   "final_url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai",
+   "publisher": "Google Threat Intelligence Group",
+   "title": "GTIG AI Threat Tracker: From Prompting to Autonomy",
+   "kind": "primary",
+   "published": "2026-09-08",
+   "captured_at": "2026-10-29T14:27:55Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "362cadad0d5b0871cd4ee5f03fca6950b76756cc44dff7f092a9d73d6d81a5d1",
+     "bytes_as_fetched": 2000,
+     "redacted": 1,
+     "sha256": "a62ec22a66d4fbe4677e2769c028f96032772941a11640901c7d172d4c16ce05",
+     "bytes": 1631
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7bb497e030df5b3bdc711519b397b8c9056d54a4b32517de254db080d57f30b5",
+     "bytes_as_fetched": 500,
+     "sha256": "7bb497e030df5b3bdc711519b397b8c9056d54a4b32517de254db080d57f30b5",
+     "bytes": 500
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d30bf29f6faf5541a6abdd5fd49113e2c495dd7601271895683b644bc68ab069",
+     "bytes_as_fetched": 462470,
+     "sha256": "d30bf29f6faf5541a6abdd5fd49113e2c495dd7601271895683b644bc68ab069",
+     "bytes": 462470
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "de3de9d3e4b60a94950f27d6240f07c2f781028589893dbf522e3f6820c32acb",
+     "bytes_as_fetched": 49462,
+     "sha256": "de3de9d3e4b60a94950f27d6240f07c2f781028589893dbf522e3f6820c32acb",
+     "bytes": 49462
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-guardian-deloitte-ai-2025",
+   "url": "https://www.theguardian.com/australia-news/2025/oct/06/deloitte-to-pay-money-back-to-albanese-government-after-using-ai-in-440000-report",
+   "final_url": "https://www.theguardian.com/australia-news/2025/oct/06/deloitte-to-pay-money-back-to-albanese-government-after-using-ai-in-440000-report",
+   "publisher": "The Guardian",
+   "title": "Deloitte to pay money back to Albanese government after using AI in $440,000 report",
+   "kind": "news",
+   "published": "2025-10-06",
+   "captured_at": "2026-10-29T14:26:48Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "0b9866bd87b809d4781f8dd2cf8b6443cdff4c4c78ffad98d0994cd86202dcf9",
+     "bytes_as_fetched": 3574,
+     "redacted": 7,
+     "sha256": "643dc2f9672e7fa226d4cc5a3b5b24a17edacfa18cbd9f0021dc4658a6d3491f",
+     "bytes": 3163
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "48178a9b208c84ad3a5ef1409e8ace0081fc166a26ec5b7f4a37d0ccc5e4b71e",
+     "bytes_as_fetched": 544,
+     "sha256": "48178a9b208c84ad3a5ef1409e8ace0081fc166a26ec5b7f4a37d0ccc5e4b71e",
+     "bytes": 544
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ad3f600b6ba3fadaca3f617bf07c81b1edbb2f9a2908c32e900fb53a5025ec78",
+     "bytes_as_fetched": 363895,
+     "redacted": 2,
+     "sha256": "98acbc655edf9c0db43e9a5455aaf8769f71c4ca329134093bc1d07da066e23b",
+     "bytes": 363826
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "184e3eb1f9d6f073c48817b76ccb986fca796f14f18b30ecd5f61bf01dd872df",
+     "bytes_as_fetched": 9046,
+     "sha256": "184e3eb1f9d6f073c48817b76ccb986fca796f14f18b30ecd5f61bf01dd872df",
+     "bytes": 9046
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-herndon-ash-pollin-2013",
+   "url": "https://peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/WP322.pdf",
+   "final_url": "https://peri.umass.edu/fileadmin/pdf/working_papers/working_papers_301-350/WP322.pdf",
+   "publisher": "PERI, UMass Amherst",
+   "title": "Herndon, Ash and Pollin, Does High Public Debt Consistently Stifle Economic Growth? (WP322)",
+   "kind": "primary",
+   "published": "2013-04-15",
+   "captured_at": "2026-10-29T14:25:58Z",
+   "http_status": 410,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "15e484ac3701477ec69579748c513dbaf8d4cc7f1061b7c7a06ba0b2f81c5523",
+     "bytes_as_fetched": 416,
+     "sha256": "15e484ac3701477ec69579748c513dbaf8d4cc7f1061b7c7a06ba0b2f81c5523",
+     "bytes": 416
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5249f18d1f35ead4f41d309fd58a77d8403bb9f35db29a830921304c2053427b",
+     "bytes_as_fetched": 420,
+     "sha256": "5249f18d1f35ead4f41d309fd58a77d8403bb9f35db29a830921304c2053427b",
+     "bytes": 420
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4c51ed3dd4ad60bed7c12353a2c5bb111071a8726e2f0e68a73457840890a3ec",
+     "bytes_as_fetched": 573,
+     "sha256": "4c51ed3dd4ad60bed7c12353a2c5bb111071a8726e2f0e68a73457840890a3ec",
+     "bytes": 573
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0dd069a05899de88d5838c19f392f9ced46db39cf064e6ae0b4190f9e4acd662",
+     "bytes_as_fetched": 124,
+     "sha256": "0dd069a05899de88d5838c19f392f9ced46db39cf064e6ae0b4190f9e4acd662",
+     "bytes": 124
+    }
+   ],
+   "capture": "failed: 404/410 at known URLs",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-jpm-task-force-2013",
+   "url": "https://www.sec.gov/Archives/edgar/data/19617/000119312513017316/d469876dex991.htm",
+   "final_url": "https://www.sec.gov/Archives/edgar/data/19617/000119312513017316/d469876dex991.htm",
+   "publisher": "SEC EDGAR (JPMorgan exhibit 99.1)",
+   "title": "Report of JPMorgan Chase Management Task Force regarding 2012 CIO losses",
+   "kind": "primary",
+   "published": "2013-01-16",
+   "captured_at": "2026-10-29T14:25:37Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "13b6e2c3774604bef2894c7cbe6f84986d4158c96bd0c18c6ba9cbdb2a5bcc15",
+     "bytes_as_fetched": 314,
+     "sha256": "13b6e2c3774604bef2894c7cbe6f84986d4158c96bd0c18c6ba9cbdb2a5bcc15",
+     "bytes": 314
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "814073ae1a03fefe540d790897bd88a43cf1c2ba1c95e95182f14ab1fea72833",
+     "bytes_as_fetched": 413,
+     "sha256": "814073ae1a03fefe540d790897bd88a43cf1c2ba1c95e95182f14ab1fea72833",
+     "bytes": 413
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b9679296793a605859f899c89d05bde699aa9081538dbe30a7ae9bff72630827",
+     "bytes_as_fetched": 4819,
+     "redacted": 2,
+     "sha256": "67b1aa15bbf7a0833351145e6f3f9ffe980d1b8c3eacd06496712569ec715709",
+     "bytes": 4819
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c2e1bbbd04c35d676eaa54f6f677180dd7564010f3675df15c29a3eb0b72a05c",
+     "bytes_as_fetched": 3011,
+     "redacted": 1,
+     "sha256": "70f458993cc6beb6d3411b2d556a768ab1cdd0ce41644c7495f44c40794697a7",
+     "bytes": 3011
+    }
+   ],
+   "capture": "failed: 403; not worked round",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-mandiant-unc5537-snowflake",
+   "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc5537-snowflake-data-theft-extortion",
+   "final_url": "https://cloud.google.com/blog/topics/threat-intelligence/unc5537-snowflake-data-theft-extortion",
+   "publisher": "Mandiant / Google Cloud",
+   "title": "UNC5537 Targets Snowflake Customer Instances for Data Theft and Extortion",
+   "kind": "primary",
+   "published": "2024-06-10",
+   "captured_at": "2026-10-29T14:25:43Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "4f64cdb2111bbcb2a82c0e0d28afdae595799c3d78b716f0bbe9b7d126b75b6d",
+     "bytes_as_fetched": 2000,
+     "redacted": 1,
+     "sha256": "036e86be4ba4c333b2b9826ebc1a789982e0d124a822dfc87b3a35a6c5de7cda",
+     "bytes": 1631
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c63e8db108a542330bf6f3fd0c8a44906d23ccdeca3451e47f9a9ca16785ef30",
+     "bytes_as_fetched": 463,
+     "sha256": "c63e8db108a542330bf6f3fd0c8a44906d23ccdeca3451e47f9a9ca16785ef30",
+     "bytes": 463
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "6202bd220adacf13798d9689ae0c2d1acb034af620ea1cc11431ab7bf3772fb3",
+     "bytes_as_fetched": 268566,
+     "sha256": "6202bd220adacf13798d9689ae0c2d1acb034af620ea1cc11431ab7bf3772fb3",
+     "bytes": 268566
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e117fda40ce050e321acc537d7212a3841300515e8eaad858dcd5a7abefa2d4f",
+     "bytes_as_fetched": 15818,
+     "sha256": "e117fda40ce050e321acc537d7212a3841300515e8eaad858dcd5a7abefa2d4f",
+     "bytes": 15818
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-mata-avianca-sanctions-2023",
+   "url": "https://www.courtlistener.com/opinion/9417767/mata-v-avianca-inc/",
+   "final_url": "https://www.courtlistener.com/opinion/9417767/mata-v-avianca-inc/",
+   "publisher": "CourtListener",
+   "title": "Mata v. Avianca opinion and order on sanctions (SDNY 2023)",
+   "kind": "primary",
+   "published": "2023-06-22",
+   "captured_at": "2026-10-29T14:25:57Z",
+   "http_status": 202,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "76f3b2b3328abae12f89e7875e8e90285d94410674e6e0ae16b679696502fe4a",
+     "bytes_as_fetched": 625,
+     "sha256": "76f3b2b3328abae12f89e7875e8e90285d94410674e6e0ae16b679696502fe4a",
+     "bytes": 625
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "667f478a37995d0b38af51124bee0ff3f7d00e8bbee688abf24546e82714dd8b",
+     "bytes_as_fetched": 399,
+     "sha256": "667f478a37995d0b38af51124bee0ff3f7d00e8bbee688abf24546e82714dd8b",
+     "bytes": 399
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+     "bytes_as_fetched": 1,
+     "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+     "bytes": 1
+    }
+   ],
+   "capture": "failed: HTTP 202 empty body (bot check); not worked round",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-ms-storm-0558-analysis-2023",
+   "url": "https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/",
+   "final_url": "https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/",
+   "publisher": "Microsoft Threat Intelligence",
+   "title": "Analysis of Storm-0558 techniques for unauthorized email access",
+   "kind": "primary",
+   "published": "2023-07-14",
+   "captured_at": "2026-10-29T14:27:11Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "56b9a1c93d0b753e029e60dd5ae9ccf976cc2b40f84ae5075d82c37d309c10af",
+     "bytes_as_fetched": 773,
+     "redacted": 1,
+     "sha256": "55e6827a6848df61655d5c9e88b381f45bb1bb50aeb15ea88c39d251d633ae92",
+     "bytes": 721
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "261d62cbd09edc4a578b87ddee748cf1b8f486f319c010467c9c6825f37f6e30",
+     "bytes_as_fetched": 516,
+     "sha256": "261d62cbd09edc4a578b87ddee748cf1b8f486f319c010467c9c6825f37f6e30",
+     "bytes": 516
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "eb9bff6e636738708b9d0e4e741ac4502e2c4137b5e00c8411ceefc9ec92a7a0",
+     "bytes_as_fetched": 302766,
+     "sha256": "eb9bff6e636738708b9d0e4e741ac4502e2c4137b5e00c8411ceefc9ec92a7a0",
+     "bytes": 302766
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a5ab9e92953d10a6650b81cf107aa5ded0e013b2e25d9cfc619316badac83b6a",
+     "bytes_as_fetched": 24427,
+     "sha256": "a5ab9e92953d10a6650b81cf107aa5ded0e013b2e25d9cfc619316badac83b6a",
+     "bytes": 24427
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-msrc-midnight-blizzard-2024",
+   "url": "https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard",
+   "final_url": "https://www.microsoft.com/en-us/msrc/blog/2024/01/microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard",
+   "publisher": "Microsoft Security Response Center",
+   "title": "Microsoft Actions Following Attack by Nation State Actor Midnight Blizzard",
+   "kind": "primary",
+   "published": "2024-01-19",
+   "captured_at": "2026-10-29T14:26:49Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "8b04449b319cea2c02a3ce2d1b7f44be1e39f57571b7a246f2e89e93036282cd",
+     "bytes_as_fetched": 819,
+     "redacted": 2,
+     "sha256": "6bfad10cdbcbb414bafe04fcb319d252b56bc56348ccb64e483dd1cbdb6a0a0e",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f89ecfb6c242b4c70fce6b80eb08cd7e9cfb15eaeed41b696eef997418e396a7",
+     "bytes_as_fetched": 521,
+     "sha256": "f89ecfb6c242b4c70fce6b80eb08cd7e9cfb15eaeed41b696eef997418e396a7",
+     "bytes": 521
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "9a346677d5937a460757c0cf101cb095cdc741835db026e948161fd9daac7c14",
+     "bytes_as_fetched": 86181,
+     "sha256": "9a346677d5937a460757c0cf101cb095cdc741835db026e948161fd9daac7c14",
+     "bytes": 86181
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "fb6e7ae43a099f0d8396888c1a9be554d495a4cc865e069398befde1f9518f91",
+     "bytes_as_fetched": 4964,
+     "sha256": "fb6e7ae43a099f0d8396888c1a9be554d495a4cc865e069398befde1f9518f91",
+     "bytes": 4964
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-msrc-midnight-blizzard-update-2024-03",
+   "url": "https://www.microsoft.com/en-us/msrc/blog/2024/03/update-on-microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard",
+   "final_url": "https://www.microsoft.com/en-us/msrc/blog/2024/03/update-on-microsoft-actions-following-attack-by-nation-state-actor-midnight-blizzard",
+   "publisher": "Microsoft Security Response Center",
+   "title": "Update on Microsoft Actions Following Attack by Nation State Actor Midnight Blizzard",
+   "kind": "primary",
+   "published": "2024-03-08",
+   "captured_at": "2026-10-29T14:26:49Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "10d6aab6cc9f56eda0de91d9d06bc6131eac040b5bc7139625c17f1b6a78d504",
+     "bytes_as_fetched": 819,
+     "redacted": 2,
+     "sha256": "96da450ff731d3cf3e2c2c91c1fbe1a179b570c0d522711ea1eb8e911378628f",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c6a062ff6cb6db01dd2f17ef4f6ce4659f6dc13e274ac8046da125b74ff60c81",
+     "bytes_as_fetched": 551,
+     "sha256": "c6a062ff6cb6db01dd2f17ef4f6ce4659f6dc13e274ac8046da125b74ff60c81",
+     "bytes": 551
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "11d984dd9fa5bc80751652e37007ab1d0882205e7ec3f7a780e39da58e09d773",
+     "bytes_as_fetched": 87202,
+     "sha256": "11d984dd9fa5bc80751652e37007ab1d0882205e7ec3f7a780e39da58e09d773",
+     "bytes": 87202
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c189ec5b3c31217297be0c2532e7895109934ce02c8cd1794e4168b52b4aad14",
+     "bytes_as_fetched": 4605,
+     "sha256": "c189ec5b3c31217297be0c2532e7895109934ce02c8cd1794e4168b52b4aad14",
+     "bytes": 4605
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-mtrends-2026",
+   "url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
+   "final_url": "https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026",
+   "publisher": "Mandiant (Google Cloud)",
+   "title": "M-Trends 2026: Data, Insights, and Strategies From the Frontlines",
+   "kind": "primary",
+   "published": "2026-03-23",
+   "captured_at": "2026-10-29T14:27:46Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "cee1f8cf76bbc7965ae0b0d8df11788b3ffc7b430c4c84791c9d8a34d11ca53e",
+     "bytes_as_fetched": 1999,
+     "redacted": 1,
+     "sha256": "7a4aac0e87ab97ca288149445e56718541ce99cf7e78e7ef69c76184971d896a",
+     "bytes": 1631
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "acbd4e7886f44f1907d1af8e0a98f0eef1aed5bb79446f93cd5d3e4cef883f83",
+     "bytes_as_fetched": 399,
+     "sha256": "acbd4e7886f44f1907d1af8e0a98f0eef1aed5bb79446f93cd5d3e4cef883f83",
+     "bytes": 399
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "6e57c34e15cb99f6d2e0132d842f6d73b7c074bb03e5d4c59beb2cda302e43c6",
+     "bytes_as_fetched": 259453,
+     "sha256": "6e57c34e15cb99f6d2e0132d842f6d73b7c074bb03e5d4c59beb2cda302e43c6",
+     "bytes": 259453
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1b8a3ecec0f56a4a1277f88cfccfdf98b56f976f07c245fb66a0fe484226dd75",
+     "bytes_as_fetched": 14884,
+     "sha256": "1b8a3ecec0f56a4a1277f88cfccfdf98b56f976f07c245fb66a0fe484226dd75",
+     "bytes": 14884
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-ncsc-ai-2027",
+   "url": "https://www.ncsc.gov.uk/report/impact-ai-cyber-threat-now-2027",
+   "final_url": "https://www.ncsc.gov.uk/report/impact-ai-cyber-threat-now-2027",
+   "publisher": "UK National Cyber Security Centre",
+   "title": "Impact of AI on cyber threat from now to 2027",
+   "kind": "primary",
+   "published": "2025-05-07",
+   "captured_at": "2026-10-29T14:25:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "9d831549005dc1a6cd94b7e485584cd764a3e533159409ec84c6eba513929812",
+     "bytes_as_fetched": 672,
+     "sha256": "9d831549005dc1a6cd94b7e485584cd764a3e533159409ec84c6eba513929812",
+     "bytes": 672
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "6cd633e46380aa53ee45de6ac1b6c99c0ea0b40b83cf77bf2a6b595738514910",
+     "bytes_as_fetched": 383,
+     "sha256": "6cd633e46380aa53ee45de6ac1b6c99c0ea0b40b83cf77bf2a6b595738514910",
+     "bytes": 383
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "072e5db963906ba69d2ee041b4c21ddffe364490fe8fb5128a2d77968659e48e",
+     "bytes_as_fetched": 248008,
+     "sha256": "072e5db963906ba69d2ee041b4c21ddffe364490fe8fb5128a2d77968659e48e",
+     "bytes": 248008
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "bbd0f13fe7acc641d228be3f217070fef1c662ca8c854ac7faf579e900c45c96",
+     "bytes_as_fetched": 16268,
+     "sha256": "bbd0f13fe7acc641d228be3f217070fef1c662ca8c854ac7faf579e900c45c96",
+     "bytes": 16268
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-newsroom-application-bp",
+   "url": "https://newsroom.sgit.ai/articles/application-behaviour-policies.md",
+   "final_url": "https://newsroom.sgit.ai/articles/application-behaviour-policies.md",
+   "publisher": "newsroom.sgit.ai (Dinis Cruz)",
+   "title": "Application behaviour policies",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T14:25:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d01e78c005ad9d266cf91d994f379f6bfcaa7a37f178fa2f7c29ffd67a8f87ba",
+     "bytes_as_fetched": 718,
+     "sha256": "d01e78c005ad9d266cf91d994f379f6bfcaa7a37f178fa2f7c29ffd67a8f87ba",
+     "bytes": 718
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "203fc6c52356d278b2f683c0cf2b0285997e4cc290905d2e4656c0eccf76e7d5",
+     "bytes_as_fetched": 407,
+     "sha256": "203fc6c52356d278b2f683c0cf2b0285997e4cc290905d2e4656c0eccf76e7d5",
+     "bytes": 407
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d94faab00c92ea091d07fc4b5b073ea164e2e3014a585da00ef5f7b44e39426c",
+     "bytes_as_fetched": 25981,
+     "sha256": "d94faab00c92ea091d07fc4b5b073ea164e2e3014a585da00ef5f7b44e39426c",
+     "bytes": 25981
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9db0bdc02bf62fd98196a86e2a94e1555fc093072ea552aeee752ed394c7b855",
+     "bytes_as_fetched": 25908,
+     "sha256": "9db0bdc02bf62fd98196a86e2a94e1555fc093072ea552aeee752ed394c7b855",
+     "bytes": 25908
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-newsroom-approve-at-altitude",
+   "url": "https://newsroom.sgit.ai/articles/approve-at-altitude.md",
+   "final_url": "https://newsroom.sgit.ai/articles/approve-at-altitude.md",
+   "publisher": "newsroom.sgit.ai (Dinis Cruz)",
+   "title": "Approve at altitude",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T14:26:10Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a0bd9a8f01675a0d52cdd951d83f93f48b57a6c2c4e54cb5984e155c2148c531",
+     "bytes_as_fetched": 718,
+     "sha256": "a0bd9a8f01675a0d52cdd951d83f93f48b57a6c2c4e54cb5984e155c2148c531",
+     "bytes": 718
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7800b99d581b1d8430d76135b09882f53e985f5606423f5d949bb88cbd47d4fd",
+     "bytes_as_fetched": 390,
+     "sha256": "7800b99d581b1d8430d76135b09882f53e985f5606423f5d949bb88cbd47d4fd",
+     "bytes": 390
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c671c6ade6ad56892321348c3d9942cc8c76e036e33c1f0e5253365710e6ff22",
+     "bytes_as_fetched": 20092,
+     "redacted": 2,
+     "sha256": "4218e891253bea3f8c6ed1af26672afac3b84737936d76b247cb34d583c0f9b1",
+     "bytes": 20084
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9a27cf4263d69c2c67531b2cd9d9e22c36383c8e14354cd5b21d14bc83d2de88",
+     "bytes_as_fetched": 20030,
+     "redacted": 2,
+     "sha256": "9673eae8320a1558416091eac0284866d1f24fe04571f2db6a4963ac20cea944",
+     "bytes": 20022
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-newsroom-llms",
+   "url": "https://newsroom.sgit.ai/llms.txt",
+   "final_url": "https://newsroom.sgit.ai/llms.txt",
+   "publisher": "newsroom.sgit.ai",
+   "title": "llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T14:25:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "b5aa3279e0cef90acfb6cce833039ed36feedbd8cafbc00fc2202f8757be330e",
+     "bytes_as_fetched": 693,
+     "sha256": "b5aa3279e0cef90acfb6cce833039ed36feedbd8cafbc00fc2202f8757be330e",
+     "bytes": 693
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "37a158050f4a70a3d2d9d179bfbe65334a66e94027b2b5f455480e2aa16a0bad",
+     "bytes_as_fetched": 326,
+     "sha256": "37a158050f4a70a3d2d9d179bfbe65334a66e94027b2b5f455480e2aa16a0bad",
+     "bytes": 326
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1337379607c0b35dd2206569d38332a9c3dbcbd8fb2f160fed7b69eeed4f80d3",
+     "bytes_as_fetched": 61601,
+     "sha256": "1337379607c0b35dd2206569d38332a9c3dbcbd8fb2f160fed7b69eeed4f80d3",
+     "bytes": 61601
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "2e323aba19bf7fa852b2e00c5df56031407add5a4bf9464014ac207b7c14f806",
+     "bytes_as_fetched": 60498,
+     "sha256": "2e323aba19bf7fa852b2e00c5df56031407add5a4bf9464014ac207b7c14f806",
+     "bytes": 60498
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-newsroom-llms-full",
+   "url": "https://newsroom.sgit.ai/llms-full.txt",
+   "final_url": "https://newsroom.sgit.ai/llms-full.txt",
+   "publisher": "newsroom.sgit.ai",
+   "title": "llms-full.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T14:25:43Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "576e7c74e639fa93067b1268426c118fa241ae3573c547fe5daf458d9e3596fc",
+     "bytes_as_fetched": 696,
+     "sha256": "576e7c74e639fa93067b1268426c118fa241ae3573c547fe5daf458d9e3596fc",
+     "bytes": 696
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "177b900327f0d1c6242a75ab29fd2d3833993d77b01cbe74f51b71d265950cc5",
+     "bytes_as_fetched": 342,
+     "sha256": "177b900327f0d1c6242a75ab29fd2d3833993d77b01cbe74f51b71d265950cc5",
+     "bytes": 342
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "79f7645f6ad6d670a5c93e2a83c6b8809c5afae5384341e185f8753d61ce2aca",
+     "bytes_as_fetched": 306243,
+     "sha256": "79f7645f6ad6d670a5c93e2a83c6b8809c5afae5384341e185f8753d61ce2aca",
+     "bytes": 306243
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0876800f6651995cf99f235a857bff5ab59c8fa60b3b0bd1c4eefbf45d19d2ba",
+     "bytes_as_fetched": 201592,
+     "sha256": "0876800f6651995cf99f235a857bff5ab59c8fa60b3b0bd1c4eefbf45d19d2ba",
+     "bytes": 201592
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-newsroom-process-bp",
+   "url": "https://newsroom.sgit.ai/articles/process-behaviour-policies.md",
+   "final_url": "https://newsroom.sgit.ai/articles/process-behaviour-policies.md",
+   "publisher": "newsroom.sgit.ai (Dinis Cruz)",
+   "title": "Process behaviour policies",
+   "kind": "own-site",
+   "published": "2026-10-24",
+   "captured_at": "2026-10-29T14:25:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "71411999d502f7caa6bf3216bdf84aa7c7d1b574cb8b91bb02a1691c4ab87312",
+     "bytes_as_fetched": 718,
+     "sha256": "71411999d502f7caa6bf3216bdf84aa7c7d1b574cb8b91bb02a1691c4ab87312",
+     "bytes": 718
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "44d6c7f9901fb7b0521ada809c6f9c4ec27a56f18131d2d7f0ca89857b045d99",
+     "bytes_as_fetched": 395,
+     "sha256": "44d6c7f9901fb7b0521ada809c6f9c4ec27a56f18131d2d7f0ca89857b045d99",
+     "bytes": 395
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1f32c65f6f27159214f26f687263c0f6e784df56612df452ae850564b924e2bb",
+     "bytes_as_fetched": 18982,
+     "sha256": "1f32c65f6f27159214f26f687263c0f6e784df56612df452ae850564b924e2bb",
+     "bytes": 18982
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cc103a17909bc2e7548691a1337491210d6df49fa87ba1b1e1ed3d267dee0831",
+     "bytes_as_fetched": 18913,
+     "sha256": "cc103a17909bc2e7548691a1337491210d6df49fa87ba1b1e1ed3d267dee0831",
+     "bytes": 18913
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-newsroom-three-policies",
+   "url": "https://newsroom.sgit.ai/articles/three-policies-for-an-agent.md",
+   "final_url": "https://newsroom.sgit.ai/articles/three-policies-for-an-agent.md",
+   "publisher": "newsroom.sgit.ai (Dinis Cruz)",
+   "title": "Three policies for an agent",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T14:26:09Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "602c87f1cdfeba541821431713584bc179cbe86812556263c6d03af51a35d8b5",
+     "bytes_as_fetched": 693,
+     "sha256": "602c87f1cdfeba541821431713584bc179cbe86812556263c6d03af51a35d8b5",
+     "bytes": 693
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "8a498d75d6d7993ebb933e77734d40cd857009741f803a8764999601db4f2ff2",
+     "bytes_as_fetched": 401,
+     "sha256": "8a498d75d6d7993ebb933e77734d40cd857009741f803a8764999601db4f2ff2",
+     "bytes": 401
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a10763b1f1afb88d151cfc4c23d8966b7637c789d0f4291cb4ed9586846e10e3",
+     "bytes_as_fetched": 23497,
+     "redacted": 2,
+     "sha256": "47b07a4552cab1b7b4afd9b4d44c85f497901ca907915c37b8830d501dbd0064",
+     "bytes": 23489
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "977601c308f7ac30d18c0b3ee042228f207cd37cc596e94f6512b8fcc6a07be0",
+     "bytes_as_fetched": 23427,
+     "redacted": 2,
+     "sha256": "b7bac73646253ec665378464da61919983fc918b3efd4ceea601f79257a1393f",
+     "bytes": 23419
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-postoffice-inquiry-report-v1",
+   "url": "https://www.postofficehorizoninquiry.org.uk/volume-1-report",
+   "final_url": "https://www.postofficehorizoninquiry.org.uk/volume-1-report",
+   "publisher": "Post Office Horizon IT Inquiry",
+   "title": "Volume 1 report",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T14:26:49Z",
+   "http_status": 404,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e886e6793de34655836ec95fff6584a3928be80836c6cfc00f3e4af3d945483d",
+     "bytes_as_fetched": 722,
+     "sha256": "e886e6793de34655836ec95fff6584a3928be80836c6cfc00f3e4af3d945483d",
+     "bytes": 722
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "a5846d8bab53a409043c14343b1e0af63fcf6a89f6aaa194667b27f173422f59",
+     "bytes_as_fetched": 392,
+     "sha256": "a5846d8bab53a409043c14343b1e0af63fcf6a89f6aaa194667b27f173422f59",
+     "bytes": 392
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "8214d10c5274115d79a8fe547781d0827a3aed0a3dba2f533789e2aa429b5c7a",
+     "bytes_as_fetched": 23726,
+     "redacted": 2,
+     "sha256": "7a0783d15c8d5bd3cb5a00ec4318df521a6aba06f9bc94c182a56bdde051ddd7",
+     "bytes": 23668
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "542ac52820b492263e4e0e0c633f3b5411acb789c5755dd19110d564eaa77c41",
+     "bytes_as_fetched": 646,
+     "redacted": 1,
+     "sha256": "96110fd1a1dc1c445ff6ebbf1c30702993574d8e6a4d85f29a1b88fb18270099",
+     "bytes": 617
+    }
+   ],
+   "capture": "failed: 404 at guessed URL",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-reuters-cobol-2017",
+   "url": "http://fingfx.thomsonreuters.com/gfx/rngs/USA-BANKS-COBOL/010040KH18J/index.html",
+   "final_url": "https://www.reuters.com/graphics/USA-BANKS-COBOL/010040KH18J/",
+   "publisher": "Reuters",
+   "title": "COBOL blues (graphic)",
+   "kind": "news",
+   "published": "2017-04",
+   "captured_at": "2026-10-29T14:28:58Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "6af2c85f4ab2031cc945642c29de184d3eed30bd3578de5dc4a21c399a99c6e7",
+     "bytes_as_fetched": 1935,
+     "sha256": "6af2c85f4ab2031cc945642c29de184d3eed30bd3578de5dc4a21c399a99c6e7",
+     "bytes": 1935
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ca233d4c587939ace5eb4e7ebfab1665f1d2d21853ae1188c81222d1ba45a393",
+     "bytes_as_fetched": 389,
+     "sha256": "ca233d4c587939ace5eb4e7ebfab1665f1d2d21853ae1188c81222d1ba45a393",
+     "bytes": 389
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "fb0566041cd3d59a348d23b1152180214df78d79a1e8ccdf7a6a010692d5f16a",
+     "bytes_as_fetched": 8771,
+     "sha256": "fb0566041cd3d59a348d23b1152180214df78d79a1e8ccdf7a6a010692d5f16a",
+     "bytes": 8771
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "54c65ec8720ebc99c2c914e8ada04a2cfd16e1d74130189ae131bc758633f484",
+     "bytes_as_fetched": 91,
+     "sha256": "54c65ec8720ebc99c2c914e8ada04a2cfd16e1d74130189ae131bc758633f484",
+     "bytes": 91
+    }
+   ],
+   "capture": "partial: JS-rendered graphic, only 11 words captured; figures not carried",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-riskmandate-llms",
+   "url": "https://riskmandate.ai/llms.txt",
+   "final_url": "https://riskmandate.ai/llms.txt",
+   "publisher": "riskmandate.ai",
+   "title": "llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T14:25:43Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e00e131c57a55cb4e31caa3e0099b9bd70f5786086c44342b247b0bae220b6cf",
+     "bytes_as_fetched": 696,
+     "sha256": "e00e131c57a55cb4e31caa3e0099b9bd70f5786086c44342b247b0bae220b6cf",
+     "bytes": 696
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "134d8f73bd8eac9a633d0a5b37768a8ae751db05059b51d92356e770eced0244",
+     "bytes_as_fetched": 325,
+     "sha256": "134d8f73bd8eac9a633d0a5b37768a8ae751db05059b51d92356e770eced0244",
+     "bytes": 325
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d83c0ced042425843601f38e495f796a265b47345d54afd140a371c87168b096",
+     "bytes_as_fetched": 74620,
+     "redacted": 2,
+     "sha256": "57df220e698fa7baace2ff09dd3390803f5456155b1f7afcacb93c94b0c52bd5",
+     "bytes": 74612
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d83c0ced042425843601f38e495f796a265b47345d54afd140a371c87168b096",
+     "bytes_as_fetched": 74620,
+     "redacted": 2,
+     "sha256": "57df220e698fa7baace2ff09dd3390803f5456155b1f7afcacb93c94b0c52bd5",
+     "bytes": 74612
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-sec-knight-capital-order",
+   "url": "https://www.sec.gov/litigation/admin/2013/34-70694.pdf",
+   "final_url": "https://www.sec.gov/litigation/admin/2013/34-70694.pdf",
+   "publisher": "SEC",
+   "title": "In the Matter of Knight Capital Americas LLC, Release 34-70694",
+   "kind": "primary",
+   "published": "2013-10-16",
+   "captured_at": "2026-10-29T14:25:37Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "5c3b205c1de8470a5d3ad947434b60ef88cea3d309e69177f2b4813ce9d5278a",
+     "bytes_as_fetched": 335,
+     "sha256": "5c3b205c1de8470a5d3ad947434b60ef88cea3d309e69177f2b4813ce9d5278a",
+     "bytes": 335
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5c5ee41f3e89122f5912240581e37f8756a9d77a048009da5ca9999ac66d3705",
+     "bytes_as_fetched": 362,
+     "sha256": "5c5ee41f3e89122f5912240581e37f8756a9d77a048009da5ca9999ac66d3705",
+     "bytes": 362
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d407b58c3179dc450a9b1d9a7c015fd9ea41b5790548afddea62c15934a78173",
+     "bytes_as_fetched": 1925,
+     "sha256": "d407b58c3179dc450a9b1d9a7c015fd9ea41b5790548afddea62c15934a78173",
+     "bytes": 1925
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "7b8923bec87a8c448032d7089aa44b2bf369b3f5f5e2d722e74262a110ec817b",
+     "bytes_as_fetched": 383,
+     "sha256": "7b8923bec87a8c448032d7089aa44b2bf369b3f5f5e2d722e74262a110ec817b",
+     "bytes": 383
+    }
+   ],
+   "capture": "failed: 403; not worked round",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-sec-solarwinds-8k-2020",
+   "url": "https://www.sec.gov/Archives/edgar/data/1739942/000162828020017451/swi-20201214.htm",
+   "final_url": "https://www.sec.gov/Archives/edgar/data/1739942/000162828020017451/swi-20201214.htm",
+   "publisher": "SEC EDGAR",
+   "title": "SolarWinds Form 8-K, 14 December 2020",
+   "kind": "primary",
+   "published": "2020-12-14",
+   "captured_at": "2026-10-29T14:25:37Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "5c544f66eb002ac1f6e2557a2da5f5eee6c1a19690f5552e23d3af2f9c2e727b",
+     "bytes_as_fetched": 314,
+     "sha256": "5c544f66eb002ac1f6e2557a2da5f5eee6c1a19690f5552e23d3af2f9c2e727b",
+     "bytes": 314
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ba26e26b1d70e3be997531519e8acc53559f7f7ea89975b14636776bf9b6e1c9",
+     "bytes_as_fetched": 418,
+     "sha256": "ba26e26b1d70e3be997531519e8acc53559f7f7ea89975b14636776bf9b6e1c9",
+     "bytes": 418
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "9bf01cdc1be1ac2735d88281b148d567ec196b80a13122ba8392af2fe66c8de8",
+     "bytes_as_fetched": 4818,
+     "redacted": 2,
+     "sha256": "27e3b18e3ea41d4e4aeb65e0c9b3a1d201447eb92a58f2c07f6bcaef4e6428c8",
+     "bytes": 4818
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a26345c36466a45fd642a8e32a2da87022a61c36f420501fefdafc974ebf6106",
+     "bytes_as_fetched": 3010,
+     "redacted": 1,
+     "sha256": "5bae34df83d97d6e925921f2efc7a2deb752484f9f4b507ae83911a748491e42",
+     "bytes": 3010
+    }
+   ],
+   "capture": "failed: 403 from sec.gov; not worked round",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-senate-psi-jpm-whale-2013",
+   "url": "https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/REPORT%20-%20JPMorgan%20Chase%20Whale%20Trades%20(3-15-13).pdf",
+   "final_url": "https://www.hsgac.senate.gov/wp-content/uploads/imo/media/doc/REPORT%20-%20JPMorgan%20Chase%20Whale%20Trades%20(3-15-13).pdf",
+   "publisher": "US Senate PSI",
+   "title": "JPMorgan Chase Whale Trades report",
+   "kind": "primary",
+   "published": "2013-03-15",
+   "captured_at": "2026-10-29T14:26:49Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "4663a3d220ec06adebc9c08cbd123106e5f50339cefc0f04401d1e3108f770f8",
+     "bytes_as_fetched": 1796,
+     "redacted": 2,
+     "sha256": "de74565913733ece18b3043f3d41fa14f7c0f3e4cd365850eedeb4d934120bdc",
+     "bytes": 443
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "fc6574eab2398ebb7fc9f7e20268b570bf35293e1357506539e26f1ef2238f2a",
+     "bytes_as_fetched": 502,
+     "sha256": "fc6574eab2398ebb7fc9f7e20268b570bf35293e1357506539e26f1ef2238f2a",
+     "bytes": 502
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "63a6c3e7ac7bdb6dbbac6c2b20127f0512d1238267decc69b7543188bb38a5af",
+     "bytes_as_fetched": 583,
+     "sha256": "63a6c3e7ac7bdb6dbbac6c2b20127f0512d1238267decc69b7543188bb38a5af",
+     "bytes": 583
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cd9b26347a3a37fe98ba151fd57e5daaf5fc292945fabcf60cf362150d14957e",
+     "bytes_as_fetched": 328,
+     "sha256": "cd9b26347a3a37fe98ba151fd57e5daaf5fc292945fabcf60cf362150d14957e",
+     "bytes": 328
+    }
+   ],
+   "capture": "failed: 403; not worked round",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-sgit-llms",
+   "url": "https://sgit.ai/llms.txt",
+   "final_url": "https://sgit.ai/llms.txt",
+   "publisher": "sgit.ai",
+   "title": "llms.txt",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T14:25:43Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a42fd67686c7a89875f966cb9889bbc65f93ffc17a12a1815a6654dad0f6f4ea",
+     "bytes_as_fetched": 696,
+     "sha256": "a42fd67686c7a89875f966cb9889bbc65f93ffc17a12a1815a6654dad0f6f4ea",
+     "bytes": 696
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "33b87ca6590cd361cf6a66fa8d2c590d6374c580986330a381c449a713d4786e",
+     "bytes_as_fetched": 305,
+     "sha256": "33b87ca6590cd361cf6a66fa8d2c590d6374c580986330a381c449a713d4786e",
+     "bytes": 305
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "70940581e28aae30b60d7fc6371599a0f0181ed3b66e2888933877ca81f15dff",
+     "bytes_as_fetched": 290040,
+     "redacted": 6,
+     "sha256": "1153d2f650093a913da2e0ba54ffe168f76fce63e81fde94d74dd01add2d1e64",
+     "bytes": 290040
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "92e55d89a243cc87463fcfe466018397e259b3054b88c4ffdfa39ac3518bedee",
+     "bytes_as_fetched": 289922,
+     "redacted": 6,
+     "sha256": "67b98673d7a8684b5f52ee1d651e5d86b6a3cfa94ced2470f0bfd380b83d07da",
+     "bytes": 289922
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-solarwinds-sa-overview",
+   "url": "https://www.solarwinds.com/sa-overview/securityadvisory",
+   "final_url": "https://www.solarwinds.com/sa-overview/securityadvisory",
+   "publisher": "SolarWinds",
+   "title": "Security advisory overview (SUNBURST)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T14:26:49Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "48898d13f755f0628fd3e843269468ed79352566f3b38885354c948607923767",
+     "bytes_as_fetched": 3039,
+     "redacted": 1,
+     "sha256": "7b2b37ca3f2b5ecb237e3b4bcd640c0c869fdb4a253eb6eef343b3082929b85f",
+     "bytes": 2895
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "14dbb1f559bdc54dbc93fdf32d2e02f13e05810ddf72df55b92db997f283fd9a",
+     "bytes_as_fetched": 379,
+     "sha256": "14dbb1f559bdc54dbc93fdf32d2e02f13e05810ddf72df55b92db997f283fd9a",
+     "bytes": 379
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "86c617ad398c518cf2ddc64f1d648c7fc2db1f7d795f27701243618dd2bf17cd",
+     "bytes_as_fetched": 578624,
+     "redacted": 1,
+     "sha256": "c6b566ba778c551ee1b530ee93d14c56a7ecddc4e44f577336aba7930e4c5d90",
+     "bytes": 578618
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "306fc239407f44bd61f5bef23ad8cc51ba54a960138e26b8ba1367d805801346",
+     "bytes_as_fetched": 23300,
+     "sha256": "306fc239407f44bd61f5bef23ad8cc51ba54a960138e26b8ba1367d805801346",
+     "bytes": 23300
+    }
+   ],
+   "capture": "full: page captured, no customer-count quote found in text",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-technode-lovable-2026",
+   "url": "https://technode.com/2026/08/13/tencent-backs-lovable-in-400-million-series-c-at-13-3-billion-valuation/",
+   "final_url": "https://technode.com/2026/08/13/tencent-backs-lovable-in-400-million-series-c-at-13-3-billion-valuation/",
+   "publisher": "TechNode",
+   "title": "Tencent backs Lovable in $400 million Series C at $13.3 billion valuation",
+   "kind": "news",
+   "published": "2026-08-13",
+   "captured_at": "2026-10-29T14:29:27Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a2645db62a502b8809f1ee846511a59ae1e1540abda95a2076d1052403206d31",
+     "bytes_as_fetched": 779,
+     "sha256": "a2645db62a502b8809f1ee846511a59ae1e1540abda95a2076d1052403206d31",
+     "bytes": 779
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3b5024940ce4a915540f69379beb5afaf8324df893fcdc6f0021e59196f8bcf1",
+     "bytes_as_fetched": 476,
+     "sha256": "3b5024940ce4a915540f69379beb5afaf8324df893fcdc6f0021e59196f8bcf1",
+     "bytes": 476
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2427167bf997579ea015671a1b877b8380a38a266d0b7b81b28c3367e10c8c7b",
+     "bytes_as_fetched": 181583,
+     "redacted": 2,
+     "sha256": "f88f5469636225e1e5d577d6678d96d6c16f8e5c95747768b2bfd0eae94e1388",
+     "bytes": 181550
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c00c30f0277ab1a942a1940e58065e8278ece9c8e022771a3a5a0eed8464e18f",
+     "bytes_as_fetched": 4566,
+     "sha256": "c00c30f0277ab1a942a1940e58065e8278ece9c8e022771a3a5a0eed8464e18f",
+     "bytes": 4566
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-trendingtopics-replit-2026",
+   "url": "https://www.trendingtopics.eu/replit-raises-400m-tripling-its-valuation-to-9-billion-in-six-months/",
+   "final_url": "https://www.trendingtopics.eu/replit-raises-400m-tripling-its-valuation-to-9-billion-in-six-months/",
+   "publisher": "Trending Topics",
+   "title": "Replit raises $400M, tripling its valuation to $9 billion in six months",
+   "kind": "news",
+   "published": "2026-03",
+   "captured_at": "2026-10-29T14:29:27Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a2256f94615d58ab5aa21768ddbebd140df7ff0f95eb51be56ea3199ba90ece1",
+     "bytes_as_fetched": 449,
+     "sha256": "a2256f94615d58ab5aa21768ddbebd140df7ff0f95eb51be56ea3199ba90ece1",
+     "bytes": 449
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "884cd6fe12336581a3fafbf2e87118f9b445b541193615c58affc0761ef4eaad",
+     "bytes_as_fetched": 471,
+     "sha256": "884cd6fe12336581a3fafbf2e87118f9b445b541193615c58affc0761ef4eaad",
+     "bytes": 471
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "5c57833c505be1bd8ee911b1a77bf8ad8760517dde5a73dbfb673e5ed690a5a5",
+     "bytes_as_fetched": 164175,
+     "redacted": 1,
+     "sha256": "91155b6ad9a2f54faaf19f838d8bf272add6429b567ca22b193653b36beaf7b7",
+     "bytes": 164165
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "431db8d2b30a8445f0ca91995eed025261cec80c48c6b2f348dc59e70e43dce8",
+     "bytes_as_fetched": 7204,
+     "sha256": "431db8d2b30a8445f0ca91995eed025261cec80c48c6b2f348dc59e70e43dce8",
+     "bytes": 7204
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-uber-security-update-2022",
+   "url": "https://www.uber.com/newsroom/security-update/",
+   "final_url": "https://www.uber.com/newsroom/security-update/",
+   "publisher": "Uber",
+   "title": "Security update (September 2022)",
+   "kind": "primary",
+   "published": "2022-09-16",
+   "captured_at": "2026-10-29T14:25:37Z",
+   "http_status": 406,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d13e6be9ab1063cb82cccb5cae4e43a3b8565c94a649f6bf0131210ed6265795",
+     "bytes_as_fetched": 1511,
+     "redacted": 5,
+     "sha256": "2fe116553684e4ca7b4f7a77e18513a6d49832201253a57a577f00867365ad8f",
+     "bytes": 788
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "df9311e7a64b563065f60d58759be465eaa841058b6d682a71862c42c9352ca0",
+     "bytes_as_fetched": 361,
+     "sha256": "df9311e7a64b563065f60d58759be465eaa841058b6d682a71862c42c9352ca0",
+     "bytes": 361
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e41e45f8e465e3f5edf3f9074174cdce0c3729088aa43cf6fef154ab069c0f7d",
+     "bytes_as_fetched": 14,
+     "sha256": "e41e45f8e465e3f5edf3f9074174cdce0c3729088aa43cf6fef154ab069c0f7d",
+     "bytes": 14
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e9dc6fb62e76744caadd79ece6678016260e298888a3dddc6bbed9cb6380e086",
+     "bytes_as_fetched": 15,
+     "sha256": "e9dc6fb62e76744caadd79ece6678016260e298888a3dddc6bbed9cb6380e086",
+     "bytes": 15
+    }
+   ],
+   "capture": "failed: HTTP 406 to curl; not worked round",
+   "recorded_by": "story-r1-r3"
+  },
+  {
+   "id": "story-ux-059",
+   "url": "https://ux.sgit.ai/findings/UX-059.md",
+   "final_url": "https://ux.sgit.ai/findings/UX-059.md",
+   "publisher": "ux.sgit.ai (Dinis Cruz)",
+   "title": "UX-059 A security prompt that asks you to approve a command it does not explain, and cuts off",
+   "kind": "own-site",
+   "published": "2026-10-25",
+   "captured_at": "2026-10-29T14:25:43Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d4ed841a608acafd19ca91ce7d763a368e8963a3aca95f8ba84a72981aa6e18e",
+     "bytes_as_fetched": 716,
+     "sha256": "d4ed841a608acafd19ca91ce7d763a368e8963a3aca95f8ba84a72981aa6e18e",
+     "bytes": 716
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0f6b5440475d48bb8a5bacd7e6179fdd72d691bedb24acf1bc0e13a47f33062f",
+     "bytes_as_fetched": 329,
+     "sha256": "0f6b5440475d48bb8a5bacd7e6179fdd72d691bedb24acf1bc0e13a47f33062f",
+     "bytes": 329
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1fd49d4004dfe3b16c57c77cb90f89056fc13b3fb635a0cec929487353348495",
+     "bytes_as_fetched": 4055,
+     "sha256": "1fd49d4004dfe3b16c57c77cb90f89056fc13b3fb635a0cec929487353348495",
+     "bytes": 4055
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1fd49d4004dfe3b16c57c77cb90f89056fc13b3fb635a0cec929487353348495",
+     "bytes_as_fetched": 4055,
+     "sha256": "1fd49d4004dfe3b16c57c77cb90f89056fc13b3fb635a0cec929487353348495",
+     "bytes": 4055
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-ux-060",
+   "url": "https://ux.sgit.ai/findings/UX-060.md",
+   "final_url": "https://ux.sgit.ai/findings/UX-060.md",
+   "publisher": "ux.sgit.ai (Dinis Cruz)",
+   "title": "UX-060 One unlabelled X throws away the whole recording, with no confirmation",
+   "kind": "own-site",
+   "published": "2026-10-25",
+   "captured_at": "2026-10-29T14:25:43Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "ded16232faf5f6697f304804d7b830cc829d7783fccb61ee85f60af57e5f843b",
+     "bytes_as_fetched": 694,
+     "sha256": "ded16232faf5f6697f304804d7b830cc829d7783fccb61ee85f60af57e5f843b",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "165adc96ee57a3396868578234d67d84fe2e00cb26b6c90c4ba2db5019a876f8",
+     "bytes_as_fetched": 329,
+     "sha256": "165adc96ee57a3396868578234d67d84fe2e00cb26b6c90c4ba2db5019a876f8",
+     "bytes": 329
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "acdec2908aebde7768fbdf2bc1648e84f1a8d919136c1d5e7f22286ea093c69f",
+     "bytes_as_fetched": 2783,
+     "sha256": "acdec2908aebde7768fbdf2bc1648e84f1a8d919136c1d5e7f22286ea093c69f",
+     "bytes": 2783
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "acdec2908aebde7768fbdf2bc1648e84f1a8d919136c1d5e7f22286ea093c69f",
+     "bytes_as_fetched": 2783,
+     "sha256": "acdec2908aebde7768fbdf2bc1648e84f1a8d919136c1d5e7f22286ea093c69f",
+     "bytes": 2783
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-ux-061",
+   "url": "https://ux.sgit.ai/findings/UX-061.md",
+   "final_url": "https://ux.sgit.ai/findings/UX-061.md",
+   "publisher": "ux.sgit.ai (Dinis Cruz)",
+   "title": "UX-061 Three voice controls with no labels",
+   "kind": "own-site",
+   "published": "2026-10-25",
+   "captured_at": "2026-10-29T14:25:43Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "58530e5e9b151c514635dc85a6d8f0cf16eae369b6e65ec4c50368ef2570d04d",
+     "bytes_as_fetched": 696,
+     "sha256": "58530e5e9b151c514635dc85a6d8f0cf16eae369b6e65ec4c50368ef2570d04d",
+     "bytes": 696
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5b8c60790fc0f24d6751dda7f2fe8fee64e923f16ad40e33b4efdff8f082fdab",
+     "bytes_as_fetched": 329,
+     "sha256": "5b8c60790fc0f24d6751dda7f2fe8fee64e923f16ad40e33b4efdff8f082fdab",
+     "bytes": 329
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ea111b3b981d229786bed99012209281121c34facbac1e3710ff9499ca03d16d",
+     "bytes_as_fetched": 2705,
+     "sha256": "ea111b3b981d229786bed99012209281121c34facbac1e3710ff9499ca03d16d",
+     "bytes": 2705
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ea111b3b981d229786bed99012209281121c34facbac1e3710ff9499ca03d16d",
+     "bytes_as_fetched": 2705,
+     "sha256": "ea111b3b981d229786bed99012209281121c34facbac1e3710ff9499ca03d16d",
+     "bytes": 2705
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-ux-sgit-home",
+   "url": "https://ux.sgit.ai/",
+   "final_url": "https://ux.sgit.ai/",
+   "publisher": "ux.sgit.ai (Dinis Cruz)",
+   "title": "ux.sgit.ai home",
+   "kind": "own-site",
+   "published": "2026-10-25",
+   "captured_at": "2026-10-29T14:25:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "ca8962f25459c36d14972f3be298142ab31dca5eff11dd620f726f533f98261a",
+     "bytes_as_fetched": 693,
+     "sha256": "ca8962f25459c36d14972f3be298142ab31dca5eff11dd620f726f533f98261a",
+     "bytes": 693
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "748f2e95e33a814858b5b7131550babf45e91eae88e119c9ece77a4586d5dcb0",
+     "bytes_as_fetched": 296,
+     "sha256": "748f2e95e33a814858b5b7131550babf45e91eae88e119c9ece77a4586d5dcb0",
+     "bytes": 296
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e80d82e4eb75fbd920e89571c39fc2c3c7284bbde9b3682b152861ec512ecb09",
+     "bytes_as_fetched": 20100,
+     "sha256": "e80d82e4eb75fbd920e89571c39fc2c3c7284bbde9b3682b152861ec512ecb09",
+     "bytes": 20100
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4847cc11e66293d1b20503dcf1dd362be477d870a3b044edceaf89a839193bc9",
+     "bytes_as_fetched": 5290,
+     "sha256": "4847cc11e66293d1b20503dcf1dd362be477d870a3b044edceaf89a839193bc9",
+     "bytes": 5290
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-ux-sgit-llms",
+   "url": "https://ux.sgit.ai/llms.txt",
+   "final_url": "https://ux.sgit.ai/llms.txt",
+   "publisher": "ux.sgit.ai (Dinis Cruz)",
+   "title": "ux.sgit.ai llms.txt",
+   "kind": "own-site",
+   "published": "2026-10-25",
+   "captured_at": "2026-10-29T14:25:32Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "634763855752de32e65c6ade4a437905ea364e4f954949b1f977b0cddd25633c",
+     "bytes_as_fetched": 694,
+     "sha256": "634763855752de32e65c6ade4a437905ea364e4f954949b1f977b0cddd25633c",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "80e5e879d960062e5085471c1f43b713fef0a8ec48385898d4a0150230f69fd7",
+     "bytes_as_fetched": 313,
+     "sha256": "80e5e879d960062e5085471c1f43b713fef0a8ec48385898d4a0150230f69fd7",
+     "bytes": 313
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c0d93a0f979ea24923111ec3ab6e15dfe683ec5b08132d3a4bb6272c6b92fc2f",
+     "bytes_as_fetched": 15234,
+     "sha256": "c0d93a0f979ea24923111ec3ab6e15dfe683ec5b08132d3a4bb6272c6b92fc2f",
+     "bytes": 15234
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4cfe0ba77ff76b8228c5cd30d65e6f9ab27b7cf415eb682b9aaf588fa45e4a8b",
+     "bytes_as_fetched": 15133,
+     "sha256": "4cfe0ba77ff76b8228c5cd30d65e6f9ab27b7cf415eb682b9aaf588fa45e4a8b",
+     "bytes": 15133
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r4-r9"
+  },
+  {
+   "id": "story-whitehouse-neuberger-2021-02-17",
+   "url": "https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2021/02/17/press-briefing-by-press-secretary-jen-psaki-and-deputy-national-security-advisor-for-cyber-and-emerging-technology-anne-neuberger-february-17-2021/",
+   "final_url": "https://bidenwhitehouse.archives.gov/briefing-room/press-briefings/2021/02/17/press-briefing-by-press-secretary-jen-psaki-and-deputy-national-security-advisor-for-cyber-and-emerging-technology-anne-neuberger-february-17-2021/",
+   "publisher": "The White House (archived Biden White House site)",
+   "title": "Press briefing by Jen Psaki and Anne Neuberger, 17 February 2021",
+   "kind": "primary",
+   "published": "2021-02-17",
+   "captured_at": "2026-10-29T14:25:37Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "4368d8e66de5a63de70db0525caba39e4f69d1d142f7056fe9cae8104d2c6a9b",
+     "bytes_as_fetched": 855,
+     "sha256": "4368d8e66de5a63de70db0525caba39e4f69d1d142f7056fe9cae8104d2c6a9b",
+     "bytes": 855
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "abfe17ad78b3f96d848020e5dc90b11a5cd507ab40f0ce42b5e4248a55d0e294",
+     "bytes_as_fetched": 728,
+     "sha256": "abfe17ad78b3f96d848020e5dc90b11a5cd507ab40f0ce42b5e4248a55d0e294",
+     "bytes": 728
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "13216f655d890a6f6a0c58d24e45bb1c9c99f1f951efa3dc2ae3a45588d16f54",
+     "bytes_as_fetched": 208329,
+     "sha256": "13216f655d890a6f6a0c58d24e45bb1c9c99f1f951efa3dc2ae3a45588d16f54",
+     "bytes": 208329
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3a2215395b893e2c5901247b4e7191078632c6733683853c60f7ec40cc9511b0",
+     "bytes_as_fetched": 67385,
+     "sha256": "3a2215395b893e2c5901247b4e7191078632c6733683853c60f7ec40cc9511b0",
+     "bytes": 67385
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "story-r1-r3"
   },
   {
    "id": "surecloud-risk-reckoning-2025",
