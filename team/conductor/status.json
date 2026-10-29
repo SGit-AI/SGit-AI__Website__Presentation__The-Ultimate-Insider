@@ -1,10 +1,14 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T06:06:50Z",
+ "as_of": "2026-10-29T07:07:20Z",
  "round": 9,
- "state": "06:02 wake: every member woke, the researcher partial (three E04 cases left); B01 v2 next for ruv.sgit; the width change is built; night log edition 4.",
+ "state": "07:02 wake: the morning review is in the editor mailroom and on the conductor page; the night ran with no hold.",
  "done": [
+  {
+   "what": "The morning review: every piece with deck verdict, what went wrong, what waits on the editor",
+   "evidence": "team/conductor/debriefs/2026-10-29__the-morning-review.md"
+  },
   {
    "what": "designer@ joined: both vault keys sealed to its key (sha256:be6e012adf2fd796), its two requests routed, dev's schedule set",
    "evidence": "team/conductor/pace.json"
@@ -79,9 +83,6 @@
   }
  ],
  "next": [
-  {
-   "what": "07:02: the morning review for the editor"
-  },
   {
    "what": "08:02: pace, route, night log"
   }
