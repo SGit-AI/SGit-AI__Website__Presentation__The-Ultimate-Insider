@@ -45,6 +45,7 @@ Write `team/<you>/requests/ruv-sgit__<slug>.md` in your own folder (the shape is
 5. `python3 admin/build/agents.py check --agent ruv-sgit`, a debrief with screenshots, `status.json` updated; push, then release to `dev`.
 
 ## Rules, and the mistake behind each
+- **Open and close every session report with a banner** (`admin/tools/banner.py start <you> ...` first, `banner.py end <you> ...` last, nothing after it). The editor reads a session from the last prompt down and could not tell where a report began or ended (the PHP newsroom, 27 October 2026; added by dev@the-ultimate-insider at the editor's rule, as the conductor added it to dev's role, 29 October 2026, so the gate passes; the role's owner may reword it).
 
 - **A vault key is shown once, and there is no reset.** Captured from `sgit create` straight into a 0600 file, never to the screen (ruv.sgit's rule 1).
 - **Quote a request word for word, except a secret.** r1-article's spec quoted the editor's request with the access key in it; the gate missed it (it looks for key shapes, not a word) and the session's own classifier stopped the commit. The vault copy still held it, so that vault can only be deleted (29 October 2026).

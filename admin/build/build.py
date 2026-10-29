@@ -503,6 +503,7 @@ class Site_Build:
         body = ('<section class="wrap narrow"><p class="kicker">The team</p><h1>Who builds this site</h1>'
                 '<p class="lead">Dinis Cruz, the editor, and a team of agents, each with a folder in <code>team/&lt;id&gt;/</code>: a role, a policy that says what it may write, '
                 'its status, and a debrief for every round. This page and each member\'s page are built from those files.</p>'
+                '<p><a class="btn p" href="board.html">The board: what each member is doing</a></p>'
                 f'<ul class="cards">{"".join(cards)}</ul>'
                 '<h2>How the team works</h2><ul>'
                 '<li><b>Every file has one owner.</b> A member writes the paths in its <code>policy.json</code>; the gate fails if two members claim the same file (<code>admin/build/agents.py overlaps</code>).</li>'
@@ -579,6 +580,37 @@ class Site_Build:
         return (f'<h2 id="vaults">The vaults the team talks through</h2><p>{esc(data["about"])}</p>{rows}'
                 f'<p>As data: <a href="vaults.json">vaults.json</a>. Each vault\'s README says how to use it.</p>')
 
+    def build_board(self):                                          # the team's Issues-FS vault, read live in the visitor's browser
+        path = ROOT / 'team' / 'conductor' / 'vaults.json'
+        if not path.exists():
+            return
+        v    = next(x for x in json.loads(path.read_text())['vaults'] if x['kind'] == 'Issues-FS')
+        key  = v['read_key'].split('sgit_public_read_', 1)[1].split(':')[0]
+        esc  = html.escape
+        body = (f'<section class="wrap"><p class="kicker">The team</p><h1>The board</h1>'
+                f'<p class="lead">Every member\'s open, blocked and done work, read live from the team\'s public Issues-FS vault, '
+                f'<code>{esc(v["name"])}</code>, and decrypted in your browser with its read key. The site holds no copy: reload for the latest.</p>'
+                f'<div id="board" data-endpoint="{esc(v["server"])}" data-vault="{esc(v["vault_id"])}" data-read-key="{esc(key)}">'
+                f'<p class="loading">Opening vault {esc(v["vault_id"])}: deriving ids, fetching ciphertext, decrypting...</p>'
+                f'<noscript><p>The board is decrypted in the browser, so it needs JavaScript. Without it, open the vault with the read key below.</p></noscript></div>'
+                f'<h2 id="how">How the board works</h2><ul>'
+                f'<li><b>One folder per member:</b> <code>{esc(v["layout"])}</code>. This is <a href="https://issues-fs.sgit.ai/lite/index.html">Issues-FS lite</a>: '
+                f'an issue is a markdown file with front matter (<code>created</code>, <code>priority</code>, and <code>blocked_on</code>, <code>source</code> when they apply), '
+                f'and it moves between <code>open/</code>, <code>blocked/</code> and <code>done/</code>.</li>'
+                f'<li><b>Read by anyone, written by the team:</b> the read key below is published on purpose and cannot write. '
+                f'The vault key is {esc(v["write_key"].split(":")[0])}; it is in no file and on no page.</li>'
+                f'<li><b>Live, not a snapshot:</b> this page fetches the vault\'s head on every load, and caches only content-addressed objects. '
+                f'What you see is the vault as it is now, not as it was when the site was built.</li>'
+                f'<li><b>The site is not the only way in.</b> The read key opens the same vault in the vault browser or with <code>sgit clone</code>.</li></ul>'
+                f'<h2 id="read-key">Read it yourself</h2><p>Read key, read only, published on purpose:</p><pre class="keyline"><code>{esc(v["read_key"])}</code></pre>'
+                f'<pre class="keyline"><code>{esc(v["clone"])}</code></pre><p><a href="{esc(v["open_url"])}">Open it in the vault browser</a> · '
+                f'<a href="../admin/keys.html#vaults">the team\'s vaults</a> · the reader is sgit.ai\'s <code>vault-embed.js</code>, copied in unmodified.</p></section>'
+                f'<script src="../assets/vendor/vault-embed.js"></script><script src="../assets/board.js"></script>')
+        bmd  = (f'The team board is the public Issues-FS vault `{v["name"]}` (vault `{v["vault_id"]}` on {v["server"]}), read live in the browser.\n\n'
+                f'Layout: `{v["layout"]}`.\n\nRead key (read only, published on purpose):\n\n```\n{v["read_key"]}\n```\n\n```\n{v["clone"]}\n```\n\n'
+                f'[Open it in the vault browser]({v["open_url"]}).\n')
+        self.page('team/board.html', 'The board', 'The team\'s open, blocked and done work, read live from its public Issues-FS vault.', body, body_md=bmd)
+
     def build_indexes(self):
         cfg   = self.config
         lines = [f'# {cfg["name"]}', '', f'> {cfg["tagline"]}', '', f'Site {self.version}. Every page has a `.md` twin at the same path.', '', '## Pages', '']
@@ -603,6 +635,7 @@ class Site_Build:
         self.build_script()
         self.build_brief()
         self.build_team()
+        self.build_board()
         self.build_versions()
         self.build_indexes()
         print(f'built {len(self.pages)} pages at site {self.version} into {OUT.relative_to(ROOT)}/')

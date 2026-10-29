@@ -2,9 +2,21 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 2,
-  "state": "round 2 closed: the version in the top bar, releases as data, the team as files; waiting for deck@ to hand over the talk",
+  "round": 3,
+  "state": "round 3 closed: three members carried into dev, the board read live from the Issues-FS vault",
   "done": [
+    {
+      "what": "Carried conductor@, deck@ and ruv.sgit@'s branches into dev, four conflicts resolved",
+      "evidence": "merge commits on claude/dreamy-mayer-dwprr2"
+    },
+    {
+      "what": "The board: tui-issues-public read live in the browser with sgit.ai's vault-embed.js, pinned",
+      "evidence": "/team/board.html, src/static/assets/board.js, src/static/assets/vendor/"
+    },
+    {
+      "what": "agents.py check counts only the member's own commits; gate checks vendored checksums",
+      "evidence": "admin/build/agents.py, admin/build/validate.py"
+    },
     {
       "what": "The version in every top bar and the player, linked to that release's own entry",
       "evidence": "admin/build/build.py (chrome), src/static/talk/player.html; gate check \"version\""
@@ -24,32 +36,32 @@
   ],
   "next": [
     {
-      "what": "Hand talk.json, the slides and the sources to deck@ in one commit when it joins",
-      "why": "they are held, not owned"
-    },
-    {
-      "what": "A board as files, rendered on /team/",
-      "why": "work between members needs one place"
-    },
-    {
-      "what": "A Stop hook reminding a session to debrief before it ends",
-      "why": "the newsroom sites found rounds were closed without one"
+      "what": "Make and publish dev's session key; ask for the Issues-FS vault key sealed to it",
+      "why": "so dev's work lives on the board, not only here"
     },
     {
       "what": "Pin the workflow's actions to commit SHAs",
-      "why": "as the PHP newsroom does; a tag can move"
+      "why": "a tag can move"
+    },
+    {
+      "what": "A Stop hook reminding a session to debrief",
+      "why": "rounds should not end without one"
     }
   ],
   "asks": [
     {
-      "what": "Agree dev's policy.json; say whether the home page stays with dev",
+      "what": "Is carrying members' branches into dev a standing duty of dev? Agree dev's policy.json",
       "from": "the editor"
+    },
+    {
+      "what": "Write team/deck/policy.json claiming talk.json, the slides and the studio",
+      "from": "deck@the-ultimate-insider"
     }
   ],
   "tokens": null,
   "tokens_how": "the session does not show a token count to the agent",
   "policy": {
-    "outside_scope": 0,
+    "outside_scope": 2,
     "out_of_scope_requests": 0,
     "pushbacks": 0,
     "overrides": 0,

@@ -39,16 +39,23 @@ class Team:
         out = subprocess.run(['git', 'ls-files'], cwd=ROOT, capture_output=True, text=True).stdout
         return [f for f in out.splitlines() if f]
 
-    def changed(self, base):
-        diff  = subprocess.run(['git', 'diff', '--name-only', f'{base}...HEAD'], cwd=ROOT, capture_output=True, text=True).stdout
+    def changed(self, agent, base):
+        # the member's own commits only, marked the house way ("@<id>:" in the subject or "Agent: <address>" in the body), plus the
+        # working tree: work carried in from another member's branch, by a merge or a fast-forward, is not counted against this one
+        address = self.members[agent].get('address', agent)
+        log     = subprocess.run(['git', 'log', '--no-merges', '--format=%H%x1f%s%x1f%b%x1e', f'{base}..HEAD'], cwd=ROOT, capture_output=True, text=True).stdout
+        mine    = [r.split('\x1f')[0].strip() for r in log.split('\x1e') if r.strip() and (r.split('\x1f')[1].startswith(f'@{agent}:') or f'Agent: {address}' in r)]
+        files   = set()
+        for sha in mine:
+            files |= set(subprocess.run(['git', 'show', '--name-only', '--format=', sha], cwd=ROOT, capture_output=True, text=True).stdout.split())
         local = subprocess.run(['git', 'status', '--porcelain'], cwd=ROOT, capture_output=True, text=True).stdout
-        files = set(diff.split()) | {line[3:].split(' -> ')[-1] for line in local.splitlines()}
+        files |= {line[3:].split(' -> ')[-1] for line in local.splitlines()}
         return sorted(f for f in files if f and f != 'version')
 
     def check(self, agent, base):
         if agent not in self.members:
             sys.exit(f'no member "{agent}": its folder is team/{agent}/ with a policy.json')
-        outside = [f for f in self.changed(base) if not self.owns(agent, f) and not self.appends(agent, f)]
+        outside = [f for f in self.changed(agent, base) if not self.owns(agent, f) and not self.appends(agent, f)]
         for f in outside:
             print(f'outside scope: {f}')
         print(f'{agent}: {len(outside)} file(s) outside scope since {base}')

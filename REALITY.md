@@ -33,6 +33,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - `team/conductor/` (kept by conductor@the-ultimate-insider): policy draft, status, `schedule.json` (two runs, proposed, none scheduled), and the only published session key, `key.json` (`sha256:7047871c97407e2b`) with its QR image and session folder.
 - `team/security/`, `team/researcher/`: proposed roles, policy marked proposed; no session holds either.
 - Two public vaults on dev.send.sgraph.ai, created 29 October 2026: `tui-issues-public` (h9fh2apf, Issues-FS lite) and `tui-mail-public` (f9d5r3dp, Email-FS lite); read keys in `team/conductor/vaults.json` and on `/admin/keys.html#vaults`; vault keys sealed to the DC Vault Registry and in no file. No private vaults.
+- `/team/board.html`: the board, `tui-issues-public` read live in the browser with sgit.ai's `vault-embed.js` (vendored, pinned by sha256); no snapshot.
 - `/admin/keys.html` and `admin/keys/index.json`: the key register, every member's current key; each member's page shows its own key.
 - `admin/tools/banner.py`: the start and end banners every member's session report opens and closes with; the gate checks every `ROLE.md` carries the rule.
 - `admin/tools/pki-agent.mjs`: pinned with its sha256, matched pki.sgit.ai on 29 October 2026; not yet read line by line.
@@ -47,6 +48,6 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - No infographic made yet; none is wired into the talk.
 
 ## Does not exist yet
-- `team/deck/policy.json`; keys for dev, deck, security and researcher; any scheduled task; a Stop hook.
+- `team/deck/policy.json` (talk.json, the slides and the studio are unowned until it exists); keys for dev, deck, security and researcher; dev's own issues on the board (no write key); any scheduled task; a Stop hook.
 - A `review/` folder.
 - Confirmed demos for the demos slide.
