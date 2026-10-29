@@ -70,6 +70,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - E03 injection-sources: `/ruv-sgit/injection-sources/` and its explainer; the slide at `/studio/lab/e03/v1/`, read from `studio/data/injection-sources.json` (sixteen sources, one public case each, labelled by shape, no payload); run r8-e03-injection-sources, vault kept. Waiting for deck's review. E02 v2 kept by deck; v3 waits for descriptions.
 - E04 over-enthusiastic-agent: `/ruv-sgit/over-enthusiastic-agent/` and its explainer; the slide at `/studio/lab/e04/v1/`, read from `studio/data/over-enthusiastic.json` (eleven cases in deck's three tiers, four beats each, short words on the slide and the file's own in the explainer); run r9-e04-over-enthusiastic, vault kept. Waiting for deck's review. E03 v1 kept by deck.
 - E09 mandate-and-grant: `/ruv-sgit/mandate-and-grant/` and its explainer; the slide at `/studio/lab/e09/v1/`, read from `studio/data/abp-examples.json` and `capabilities.json` (Claude Code's policy built as mandate, grant, delta, barrier, the source's labels, the chat example beside it, no rating); run r10-e09-mandate-and-grant, vault kept. Waiting for deck's review. E04 v1 kept for its content; v2 next.
+- E04 v2: `/studio/lab/e04/v2/` (the four checked cases as paths through the file's guardrail, the seven as tags by tier), embedded first on `/ruv-sgit/over-enthusiastic-agent/`; run r11-e04-v2, a second pass on r9's vault. Waiting for deck's review. E09 v1 kept by deck.
 - Nothing from ruv.sgit@ is wired into the talk yet.
 
 ## Does not exist yet

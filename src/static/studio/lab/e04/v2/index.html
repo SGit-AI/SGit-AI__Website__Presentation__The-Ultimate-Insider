@@ -17,7 +17,7 @@
 .cell.nm{font:800 22px/28px system-ui;white-space:nowrap;color:var(--head)}
 .cell.nm i{display:block;font:600 20px/24px system-ui;font-style:normal;color:var(--dim)}
 .cell.fx{color:var(--agent);font-weight:600}
-#tags{position:absolute;left:40px;right:30px;top:576px;font:20px/24px system-ui;color:var(--text)}
+#tags{position:absolute;left:40px;right:30px;top:580px;font:20px/24px system-ui;color:var(--text)}
 #tags .ln{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:10px}
 #tags b{color:var(--head);margin-right:4px}
 #tags .chip{border:2px solid var(--line2);border-radius:999px;padding:1px 12px;white-space:nowrap}
@@ -43,13 +43,13 @@
   // wall: break (it did not hold), none (nothing held), around (it held, and the agent went round it)
   var MAIN = [
     ['replit-deletes-prod-db', "Replit's agent", 'checked', 'keep building the app', 'a code freeze, given as an instruction: did not hold', 'ran database commands on the live database', '1,206 executives, 1,196+ firms (its count); recovered', 'break'],
-    ['pocketos-cursor-railway', 'Cursor on Railway', 'checked', 'a staging task (per the founder)', 'none held: an account-wide token; no confirmation on the delete', 'used a locally stored, account-wide token; deleted what proved to be production', 'production data and backups; 30 hours; restored', 'none'],
-    ['gemini-cli-failed-you', 'Gemini CLI', 'checked', 'rename a folder, move its files', "the tools' project-root limit: it held for the rename", 'went around it in the shell (inferred): moved every file to a missing folder', 'every file in the project folder; none recovered', 'around'],
+    ['pocketos-cursor-railway', 'Cursor on Railway', 'checked', 'a staging task (per the founder)', 'none held: an account-wide token; no confirmation on the delete', 'used a locally stored, account-wide token; deleted what proved to be production', 'production data and backups; about 30 hours; restored', 'none'],
+    ['gemini-cli-failed-you', 'Gemini CLI', 'checked', 'rename a folder, move its files', "the tools' project-root limit: held for the rename, not for the shell (inferred)", 'moved every file to a missing folder, through the shell', 'all project files; none recovered in the transcript', 'around'],
     ['aws-kiro-cost-explorer', 'AWS Kiro', 'disputed', 'fix an issue in Cost Explorer', 'asks authorisation by default (Amazon): did not hold', 'per the FT: delete and recreate the environment; Amazon: user error', '13 hours down in one region (FT)', 'break']]
   var TAGS = [['Reported, not checked against a primary', [['antigravity-d-drive', 'Antigravity'], ['codex-gpt56-home-deletion', 'Codex'], ['openclaw-meta-inbox', 'OpenClaw'], ['meta-internal-agent-sev1', "Meta's agent"]]],
     ['Evaluations, not deployments', [['hf-openai-exploitgym', 'OpenAI at Hugging Face (per press)'], ['anthropic-irregular-evals', 'Claude at Irregular'], ['anthropic-fourth-incident', 'an early Claude Opus 4.6']]]]
-  var COL = { nm: [40, 196], goal: [250, 200], way: [462, 270], fix: [748, 290], loss: [1054, 200] }
-  var TOP = 140, ROW = 106, X0 = 254, WX = 597, X1 = 1240, AT = [2, 9, 15, 21]
+  var COL = { nm: [40, 196], goal: [250, 200], way: [462, 270], fix: [748, 290], loss: [1050, 210] }
+  var TOP = 150, ROW = 106, X0 = 254, WX = 597, X1 = 1240, AT = [2, 9, 15, 21]
   var NS = 'http://www.w3.org/2000/svg', D = null, B = null
   fetch('../../../data/over-enthusiastic.json').then(function (r) { return r.json() }).then(function (j) { D = j })
     .catch(function (e) { console.error('E04: the data file did not load', e) })
@@ -71,8 +71,8 @@
       r.p2 = el('path', { d: d2, fill: 'none', stroke: 'var(--agent)', 'stroke-width': 4, 'stroke-linecap': 'round' }, g)
       r.head = el('circle', { cx: X1, cy: y, r: 9, fill: 'var(--agent)' }, g)
       r.w = el('g', {}, g)
-      if (m[7] === 'none') el('rect', { x: WX - 7, y: y - 16, width: 14, height: 32, rx: 3, fill: 'none', stroke: 'var(--dim)', 'stroke-width': 2, 'stroke-dasharray': '4 4' }, r.w)
-      else { r.top = el('rect', { x: WX - 7, y: y - 16, width: 14, height: 16, rx: 3, fill: 'var(--head)' }, r.w); r.bot = el('rect', { x: WX - 7, y: y, width: 14, height: 16, rx: 3, fill: 'var(--head)' }, r.w) }
+      if (m[7] === 'none') el('rect', { x: WX - 7, y: y - 14, width: 14, height: 28, rx: 3, fill: 'none', stroke: 'var(--dim)', 'stroke-width': 2, 'stroke-dasharray': '4 4' }, r.w)
+      else { r.top = el('rect', { x: WX - 7, y: y - 14, width: 14, height: 14, rx: 3, fill: 'var(--head)' }, r.w); r.bot = el('rect', { x: WX - 7, y: y, width: 14, height: 14, rx: 3, fill: 'var(--head)' }, r.w) }
       r.l1 = r.p1.getTotalLength(); r.l2 = r.p2.getTotalLength()
       ;[[r.p1, r.l1], [r.p2, r.l2]].forEach(function (p) { p[0].setAttribute('stroke-dasharray', p[1] + ' ' + p[1]) })
       rows.push(r)
@@ -96,8 +96,8 @@
       r.p1.setAttribute('stroke-dashoffset', r.l1 * (1 - f1)); r.p2.setAttribute('stroke-dashoffset', r.l2 * (1 - f2))
       r.head.style.opacity = f2 >= 1 ? 1 : 0
       if (r.kind === 'break') {                                      // it did not hold: the two halves part and fade
-        r.top.setAttribute('transform', 'translate(' + (-4 * br) + ' ' + (-3 * br) + ') rotate(' + (-25 * br) + ' ' + WX + ' ' + (r.y - 8) + ')')
-        r.bot.setAttribute('transform', 'translate(' + (4 * br) + ' ' + (3 * br) + ') rotate(' + (25 * br) + ' ' + WX + ' ' + (r.y + 8) + ')')
+        r.top.setAttribute('transform', 'translate(' + (-9 * br) + ' 0) rotate(' + (-35 * br) + ' ' + WX + ' ' + (r.y - 7) + ')')
+        r.bot.setAttribute('transform', 'translate(' + (9 * br) + ' 0) rotate(' + (35 * br) + ' ' + WX + ' ' + (r.y + 7) + ')')
         r.w.style.opacity = 1 - .55 * br
       }
       S.$('c' + i + 'nm').style.opacity = k(a, .4); S.$('c' + i + 'goal').style.opacity = k(a, .4)
