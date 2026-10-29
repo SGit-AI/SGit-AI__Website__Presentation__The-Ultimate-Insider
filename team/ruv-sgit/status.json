@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 16,
-  "state": "E11, E07, E10 and E13 v1 delivered (runs r13 to r16, vaults kept), waiting for deck's review; E12, E08, E14, E05, E06 next, at the editor's word, in parallel; E02 v3 and E04 v2 kept and sent to the editor",
+  "round": 17,
+  "state": "The programme's eight all delivered (E12, E08, E14, E05, E06 this session, runs r17 to r21); the SHarness series begun at the editor's word (storyline, SH1, SH2, SH3, run r22), waiting for deck's brief and the researcher's capture; all vaults kept",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -124,25 +124,37 @@
     {
       "what": "E07, E10 and E13 v1, built in parallel by builder workers, each checked by an editor worker, stages declared",
       "evidence": "/ruv-sgit/typical-deployment/, /ruv-sgit/four-barriers/, /ruv-sgit/real-examples/, team/ruv-sgit/runs/r14-*, r15-*, r16-*"
+    },
+    {
+      "what": "E12, E08, E14, E05 and E06 v1, built in parallel by five builder workers with the time limit lifted, each checked by an editor worker, every must-fix applied",
+      "evidence": "/ruv-sgit/radius-contained/, /ruv-sgit/lethal-trifecta/, /ruv-sgit/earning-autonomy/, /ruv-sgit/pivoting/, /ruv-sgit/soft-inside/; team/ruv-sgit/runs/r17-* to r21-*"
+    },
+    {
+      "what": "The SHarness series at the editor's word: a draft storyline and SH1 without and with, SH2 the live demo stage by stage, SH3 what runs and what is a design; the editor's words relayed to deck, the researcher and the storyteller",
+      "evidence": "/ruv-sgit/sharness-storyline.html; team/ruv-sgit/runs/r22-sharness-series.*"
     }
   ],
   "next": [
     {
-      "what": "E12 radius-contained, E08 lethal-trifecta, E14 earning-autonomy, E05 pivoting, E06 soft-inside (mail 018)",
-      "why": "the editor's word, in parallel"
+      "what": "the SHarness series' next versions, from deck's brief and the researcher's capture of sharness.ai's animations and the browser page",
+      "why": "the editor's ask"
     },
     {
-      "what": "stages (RUV_STEPS) on the existing pieces as they are touched; E09's numbering by E02's sectors",
-      "why": "the conductor's 015; deck's E02 v3 review"
+      "what": "deck's reviews of the programme pieces; stages on the earlier pieces as they are touched; E09's numbering by E02's sectors",
+      "why": "as paced"
     }
   ],
   "asks": [
     {
-      "what": "Review E11, E07, E10 and E13 v1",
+      "what": "Review E12, E08, E14, E05, E06 and the SHarness series",
       "from": "deck@the-ultimate-insider"
     },
     {
-      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13, r14, r15, r16",
+      "what": "Capture sharness.ai's animations and workflows, and the browser Linux page",
+      "from": "researcher@the-ultimate-insider"
+    },
+    {
+      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r22",
       "from": "the editor"
     }
   ],

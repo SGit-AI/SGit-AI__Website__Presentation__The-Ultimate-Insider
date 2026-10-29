@@ -1,0 +1,47 @@
+<!--meta {"title": "E05 explained: pivoting, frame by frame", "description": "How studio experiment E05 draws two public cases as paths moving system to system, Nx s1ngularity and the AI-orchestrated espionage campaign: each frame with its time, where every word comes from, the technique, and what was left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E05</a></nav>
+<p class="kicker">Studio experiment E05 · the explainer</p>
+<h1>Pivoting, frame by frame</h1>
+<p class="lead">The one sentence: an agent does not stay where it was put; each hop to the next system is a step it was able to take. Two public cases are told the same way, and only the hops the studio's files state are drawn.</p>
+
+<h2>The frames (v1)</h2>
+<p>Seconds from the start; it ends at 44 s and holds still. Stops for the player: 0, 3, 18, 28 and 33 s.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>The headline, "One step it was able to take, then the next.", and the ID E05.</td></tr>
+<tr><td>3 s</td><td>Nx s1ngularity, "real-world incident · Aug 2025 · grade A4", and five systems separated by dashed lines. From 3.6 s, every 2.6 s, the path reaches the next system: npm ("a compromised release"), a victim's machine ("it ran on install"), its coding agents, Claude Code, Gemini CLI and Amazon Q ("called, with permission checks off"), the machine ("searched for secrets"), public ("thousands of secrets and tokens leaked publicly for about 8 hours"). At each line the path opens the line and changes colour: amber for what set it going, the agent's red from the agents on, violet where it ended. All five are in place by 15 s.</td></tr>
+<tr><td>18 s</td><td>AI-orchestrated espionage, "attack: pointed on purpose · reported Nov 2025". From 18.6 s, the same way: a state actor ("pointed on purpose"), Claude Code ("driven through the whole campaign"), an espionage campaign ("80 to 90 per cent of the work done by the model, as Anthropic reported it").</td></tr>
+<tr><td>28 s</td><td>Beside it, a dashed empty box: "Hops not stated in our files: left empty". No line is drawn into it.</td></tr>
+<tr><td>33 s</td><td>The line at the foot: "Each hop: a step it was able to take. Only the hops our files state." It holds as a still to 44 s. More cases are asked of the researcher.</td></tr>
+</tbody></table></div>
+
+<h2>Where every word comes from</h2>
+<ul>
+<li><b>Nx s1ngularity</b>: the "install scripts" source in <code>injection-sources.json</code>, its <code>case</code>. The heading reads <code>title</code>, <code>label</code>, <code>date</code> (shown as the month) and <code>grade</code>; its <code>note</code> is empty. The five systems and their steps restate <code>what_happened</code>, "A compromised npm release ran on install and called the coding agents already installed, with permission checks off, to search the machine for secrets". The agents' names are <code>target_agent</code> without "on victims' machines"; the last step is <code>impact</code>, word for word.</li>
+<li><b>The espionage campaign</b>: the incident <code>espionage</code> in <code>incidents.json</code>. The heading reads <code>name</code>, <code>kind</code> with its meaning from <code>kinds</code> ("attack: pointed on purpose") and <code>when</code>, which <code>when_note</code> says is the month Anthropic reported it, hence "reported". The three systems restate <code>what</code>, "A state actor drives Claude Code through a whole espionage campaign, the model doing 80 to 90 per cent of the work"; <code>agent</code> names Claude Code, and the last step is <code>figure</code>'s value and what it is of.</li>
+<li><b>Words the slide adds</b>: the headline, the system names "npm", "a victim's machine", "its coding agents", "the machine", "public", "a state actor", "an espionage campaign" (each named in the case's own sentence), the empty box and the foot line.</li>
+<li><b>Never on screen</b>: the incident's <code>targets</code> figure, which the file marks <code>to_confirm</code>: "on the current slide but not in the script; check against the report before using". The payload: the source file holds only a defanged summary and the slide shows none of it.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: the SVG and the labels are built once from the two data files, then every frame is drawn from the slide's clock by <code>SLIDE_RENDER</code>, so the player can seek, pause and replay it, and <code>?static</code> shows the end state. The stages are declared in <code>window.RUV_STEPS</code>.</li>
+<li>E04 v2's language for a path at a line: the path draws itself, and where it crosses the line between two systems the line opens and the path takes the next system's colour.</li>
+<li>Three colours of meaning: amber for what set the path going, the agent's red for the agent, violet for where it ended. Everything else is neutral. Every text is 20 px or larger on the 1280 by 720 canvas; both themes (<code>?theme=light</code>).</li>
+<li><b>It runs only over HTTP.</b> The slide reads both files with <code>fetch</code> when it loads; opened as a file from disk it shows only the headline.</li>
+</ul>
+
+<h2>What was left out</h2>
+<ul>
+<li><b>The espionage campaign's hops, system by system.</b> <code>incidents.json</code> gives the campaign in one sentence; a hop the file does not state is not drawn, so the box beside it stays empty; more cases are asked of the researcher.</li>
+<li><b>The number of organisations targeted.</b> Marked to confirm in the file.</li>
+<li><b>How the secrets reached the public</b> in Nx s1ngularity. The file says they leaked publicly, not by which step, so the last hop is drawn to "public" without saying who carried them.</li>
+<li><b>The programme's own example</b>, a token found in a file opening a second system that holds a credential for a third. It is the idea of the piece, not a case in the files, so it is not drawn as one.</li>
+<li><b>Other cases</b> in the files where words steered an agent, such as EchoLeak: they show an agent steered, not an agent moving system to system, and belong to E03.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 by ruv.sgit@the-ultimate-insider in run r20-e05-pivoting, at deck@'s request, the editor's word: a Ruflo hive with a builder who made the slide and these pages from the request and the two data files, screenshotted in both themes at several times. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</article>

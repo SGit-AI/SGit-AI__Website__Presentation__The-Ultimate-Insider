@@ -1,0 +1,698 @@
+{
+ "run": "r22-sharness-series",
+ "purpose": "r22-sharness-series: a SHarness series at the editor's word: a storyline, SH1 without and with, SH2 the live demo stage by stage, SH3 what runs today and what is still a design",
+ "request": {
+  "from": "the editor, in ruv.sgit's session, 29 October 2026 about 15:35 UTC",
+  "date": "2026-10-29",
+  "text": "I'm sure it's already there, but can you really go to town on the S-harness, the sharness.ai animations and workflows, because that's new and this audience is really, really powerful. So I think a lot of the even animations and infographics that we have on the sharness.ai website that you might want to recreate here, because they're very powerful, especially when you show without and with it. And especially because I can then open up a Linux in the browser and show it. So that's quite cool, right? That's also a great way to show, maybe even get me a storyline for that. And if you need the agents to write this, then just relay them this message. Then they can create the brief for you."
+ },
+ "pass_of": null,
+ "commits_before": null,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "sgjlvny7",
+ "created_at": "2026-10-29T15:37:47+00:00",
+ "closed_at": "2026-10-29T15:45:36+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 5,
+  "tasks": 5,
+  "ruflo_calls": 23,
+  "ruflo_failed": 0,
+  "ruflo_ms": 9513
+ },
+ "branches": [
+  {
+   "name": "w-storyline",
+   "role": "writer",
+   "files": 1,
+   "bytes": 6369,
+   "write_ms": 8361,
+   "merge_ms": 8610
+  },
+  {
+   "name": "w-sh1",
+   "role": "developer",
+   "files": 1,
+   "bytes": 6197,
+   "write_ms": 7544,
+   "merge_ms": 8566
+  },
+  {
+   "name": "w-sh2",
+   "role": "developer",
+   "files": 1,
+   "bytes": 9227,
+   "write_ms": 7362,
+   "merge_ms": 8683
+  },
+  {
+   "name": "w-sh3",
+   "role": "developer",
+   "files": 1,
+   "bytes": 9868,
+   "write_ms": 8128,
+   "merge_ms": 9411
+  },
+  {
+   "name": "w-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 3386,
+   "write_ms": 7997,
+   "merge_ms": 8601
+  },
+  {
+   "name": "w-storyline-fixed",
+   "role": "writer",
+   "files": 1,
+   "bytes": 6743,
+   "write_ms": 8223,
+   "merge_ms": 8590
+  },
+  {
+   "name": "w-sh1-fixed",
+   "role": "developer",
+   "files": 1,
+   "bytes": 6379,
+   "write_ms": 7861,
+   "merge_ms": 8974
+  },
+  {
+   "name": "w-sh2-fixed",
+   "role": "developer",
+   "files": 1,
+   "bytes": 9215,
+   "write_ms": 8058,
+   "merge_ms": 10100
+  },
+  {
+   "name": "w-sh3-fixed",
+   "role": "developer",
+   "files": 1,
+   "bytes": 10114,
+   "write_ms": 8028,
+   "merge_ms": 8538
+  }
+ ],
+ "commits": 11,
+ "files": 11,
+ "bytes_plain": 70203,
+ "files_delivered": 9,
+ "bytes_delivered": 67498,
+ "store": {
+  "objects": 73,
+  "bytes": 107533,
+  "plaintext_hits": 0,
+  "probe": "86 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 5436,
+  "files": 11,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "create",
+   "ms": 2524,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 1065,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4894,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1632,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 1012,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5716,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2232,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1616,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4762,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1609,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 900,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5034,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2232,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1627,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4707,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1701,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 859,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4801,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2175,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1798,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4710,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1479,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 878,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5770,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2194,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1870,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5346,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1567,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 864,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5565,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2023,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2090,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4487,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1627,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 913,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5682,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2275,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1817,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4498,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1787,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 916,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5156,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2383,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1875,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4717,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1571,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 862,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5624,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2241,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2246,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5612,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1388,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 1110,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5528,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2241,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1905,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4392,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 884,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 5436,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 395
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t writer -r specialist -p storyline",
+   "rc": 0,
+   "ms": 424
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p sh1",
+   "rc": 0,
+   "ms": 391
+  },
+  {
+   "seq": 4,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p sh2",
+   "rc": 0,
+   "ms": 404
+  },
+  {
+   "seq": 5,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p sh3",
+   "rc": 0,
+   "ms": 429
+  },
+  {
+   "seq": 6,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 429
+  },
+  {
+   "seq": 7,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d storyline: the storyline page -p high",
+   "rc": 0,
+   "ms": 436
+  },
+  {
+   "seq": 8,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d sh1: SH1 without and with -p high",
+   "rc": 0,
+   "ms": 378
+  },
+  {
+   "seq": 9,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d sh2: SH2 the live demo, stage by stage -p high",
+   "rc": 0,
+   "ms": 444
+  },
+  {
+   "seq": 10,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d sh3: SH3 what runs today and what is a design -p high",
+   "rc": 0,
+   "ms": 395
+  },
+  {
+   "seq": 11,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check the three pieces and the storyline against harness.json -p high",
+   "rc": 0,
+   "ms": 394
+  },
+  {
+   "seq": 12,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r22-sharness-series: r22-sharness-series: a SHarness series at the editor's word: a storyline, SH1 without and with, SH2 the live demo stage by stage, SH3 what runs today and what is still a design -f conductor",
+   "rc": 0,
+   "ms": 383
+  },
+  {
+   "seq": 13,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered storyline sha256:8ca26ffca6ac925d files:1 -f writer",
+   "rc": 0,
+   "ms": 442
+  },
+  {
+   "seq": 14,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered sh1 sha256:69ea3b0cf4a50163 files:1 -f developer",
+   "rc": 0,
+   "ms": 445
+  },
+  {
+   "seq": 15,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered sh2 sha256:d06b25fedc119060 files:1 -f developer",
+   "rc": 0,
+   "ms": 426
+  },
+  {
+   "seq": 16,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered sh3 sha256:fde2ef128989fd74 files:1 -f developer",
+   "rc": 0,
+   "ms": 465
+  },
+  {
+   "seq": 17,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:61c54bdf1271a8df files:1 -f editor",
+   "rc": 0,
+   "ms": 399
+  },
+  {
+   "seq": 18,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered storyline-fixed sha256:13a64374eafd27e2 files:1 -f writer",
+   "rc": 0,
+   "ms": 398
+  },
+  {
+   "seq": 19,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered sh1-fixed sha256:6eeda56f0d9e81b3 files:1 -f developer",
+   "rc": 0,
+   "ms": 402
+  },
+  {
+   "seq": 20,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered sh2-fixed sha256:c3c6e344059cc0e4 files:1 -f developer",
+   "rc": 0,
+   "ms": 396
+  },
+  {
+   "seq": 21,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered sh3-fixed sha256:b6e33dc6e8ee8a5e files:1 -f developer",
+   "rc": 0,
+   "ms": 437
+  },
+  {
+   "seq": 22,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 376
+  },
+  {
+   "seq": 23,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 425
+  }
+ ],
+ "history": [
+  {
+   "id": "c29d51243870",
+   "message": "init",
+   "time": "2026-10-29T15:37:53Z"
+  },
+  {
+   "id": "897265149204",
+   "message": "brief: run r22-sharness-series",
+   "time": "2026-10-29T15:37:56Z"
+  },
+  {
+   "id": "a5c6ba29559a",
+   "message": "writer storyline: delivered 1 files",
+   "time": "2026-10-29T15:38:03Z"
+  },
+  {
+   "id": "8b7f967c32a5",
+   "message": "developer sh1: delivered 1 files",
+   "time": "2026-10-29T15:38:21Z"
+  },
+  {
+   "id": "24c14bbb7a64",
+   "message": "developer sh2: delivered 1 files",
+   "time": "2026-10-29T15:38:37Z"
+  },
+  {
+   "id": "8698855ce78b",
+   "message": "developer sh3: delivered 1 files",
+   "time": "2026-10-29T15:38:54Z"
+  },
+  {
+   "id": "d6bf99fb06eb",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T15:44:04Z"
+  },
+  {
+   "id": "b4ce4700ba30",
+   "message": "writer storyline-fixed: delivered 1 files",
+   "time": "2026-10-29T15:44:21Z"
+  },
+  {
+   "id": "a588b77a1746",
+   "message": "developer sh1-fixed: delivered 1 files",
+   "time": "2026-10-29T15:44:39Z"
+  },
+  {
+   "id": "056268add06a",
+   "message": "developer sh2-fixed: delivered 1 files",
+   "time": "2026-10-29T15:44:56Z"
+  },
+  {
+   "id": "e65629296661",
+   "message": "developer sh3-fixed: delivered 1 files",
+   "time": "2026-10-29T15:45:14Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "storyline",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "sh1",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "sh2",
+   "role": "developer",
+   "who": "a Claude Code subagent of this session (builder)",
+   "tokens": 110930
+  },
+  {
+   "id": "sh3",
+   "role": "developer",
+   "who": "a Claude Code subagent of this session (builder)",
+   "tokens": 100803
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 98650,
+   "tool_uses": 21,
+   "wall_s": 152,
+   "must_fix": 3,
+   "should_fix": 11
+  },
+  {
+   "id": "storyline-fixed",
+   "role": "writer",
+   "who": "the conductor, the editor's fixes applied",
+   "tokens": null
+  },
+  {
+   "id": "sh1-fixed",
+   "role": "developer",
+   "who": "the conductor, the editor's fixes applied",
+   "tokens": null
+  },
+  {
+   "id": "sh2-fixed",
+   "role": "developer",
+   "who": "the builder, the editor's fixes applied",
+   "tokens": null
+  },
+  {
+   "id": "sh3-fixed",
+   "role": "developer",
+   "who": "the builder, the editor's fixes applied",
+   "tokens": null
+  }
+ ],
+ "kept_at": "2026-10-29T15:45:40+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__r22-sharness__vault-handover.zip",
+  "sha256": "d73b767c4c793746",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}
