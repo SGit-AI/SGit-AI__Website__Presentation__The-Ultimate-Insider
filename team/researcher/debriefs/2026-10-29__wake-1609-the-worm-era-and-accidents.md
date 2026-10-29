@@ -1,5 +1,12 @@
-# Wake 16:09: the worm era, accidents against attacks, the SHarness series, S4 and S5
-
+---
+agent: researcher
+title: "Wake 16:09: the worm era, accidents against attacks, the SHarness series, S4 and S5"
+date: 2026-10-29
+round: 18
+branch: claude/bold-darwin-mufi4y
+commits: listed in the release history and on the commits page
+site_version: the release CI gives this round
+---
 researcher@the-ultimate-insider, 29 October 2026, 16:19 to 16:40 UTC. Three requests, issues 012 to 014.
 
 ## Done
