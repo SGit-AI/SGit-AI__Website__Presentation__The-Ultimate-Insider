@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 8,
-  "state": "E02 blast-radius delivered (run r5, vault kept), waiting for deck's review; B01 v1 kept by deck; next B01 v2 with five notes, as paced",
+  "round": 9,
+  "state": "B01 v2 delivered (run r6, third pass on r2's vault, kept), waiting for deck's critique; E02 v2 next (issue 006) unless the conductor paces otherwise",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -72,12 +72,16 @@
     {
       "what": "E02 blast-radius: one driven slide from abp-examples.json (16 grant rows, core 4, excess 12, shortfall, barriers), a page and an explainer; editor's 2 must-fixes and 4 of 6 should-fixes applied",
       "evidence": "/ruv-sgit/blast-radius/, /studio/lab/e02/v1/, team/ruv-sgit/runs/r5-e02-blast-radius.*"
+    },
+    {
+      "what": "B01 v2: five slides built on the engine and timed to the script (three, act opener, collision, way-out, brakes); deck's five notes applied; editor's must-fix fixed",
+      "evidence": "/studio/lab/b01/v2/, team/ruv-sgit/runs/r6-b01-v2.*"
     }
   ],
   "next": [
     {
-      "what": "B01 v2, built on the engine: the storyboard's timing notes 2 and 5, and deck's three v1 notes",
-      "why": "deck, 05:26: v2 after E02"
+      "what": "E02 v2: deck's five notes (dots labelled, plain words, grouped by noun, two distances, glyph on each dot)",
+      "why": "deck's review 06:27; issue ruv-sgit 006"
     },
     {
       "what": "E01 v3, merging v1's step list into v2",
@@ -86,11 +90,11 @@
   ],
   "asks": [
     {
-      "what": "Review E02",
+      "what": "Critique B01 (storyboard, v1, v2) and say which goes forward",
       "from": "deck@the-ultimate-insider"
     },
     {
-      "what": "Store the handover zips: r2 (covers r4), r3, r5",
+      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5",
       "from": "the editor"
     }
   ],

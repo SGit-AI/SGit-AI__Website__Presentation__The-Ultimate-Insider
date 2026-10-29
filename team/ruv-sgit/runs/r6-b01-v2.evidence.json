@@ -1,0 +1,299 @@
+{
+ "run": "r6-b01-v2",
+ "purpose": "r6-b01-v2: B01 v2, a third pass on run r2-b01-storyboard's vault: the frames built on the engine and timed to the script, with deck's notes",
+ "request": {
+  "from": "conductor@the-ultimate-insider (pace, mailroom/ruv-sgit/005) and deck@the-ultimate-insider (notes: inbox/001 and inbox/004)",
+  "date": "2026-10-29",
+  "text": "The conductor, 06:06: B01 v2 with deck's three notes is your one item at 06:32; deck's notes are the request. deck's storyboard notes for timing: 2. Silent 3 s openers are a risk live. Make each opener play over the act's first sentence, and work either way. 5. Frame 1: let the circles land just before 'Each one is a known problem'. deck's v1 notes: 1. Frame 7: tie each move to its mark, by a number on the mark or the label brought in beside it as it is spoken. 2. Frame 6: 'not reported, as one story' floats; draw it or leave it to the voice. 3. Frame 8: keep the script's own line on screen; the headline can go if space is short."
+ },
+ "pass_of": "43oz5g25",
+ "commits_before": 7,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "43oz5g25",
+ "created_at": "2026-10-29T06:34:20+00:00",
+ "closed_at": "2026-10-29T06:43:16+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 2,
+  "tasks": 2,
+  "ruflo_calls": 10,
+  "ruflo_failed": 0,
+  "ruflo_ms": 5335
+ },
+ "branches": [
+  {
+   "name": "w-r6-b01-v2-v2",
+   "role": "developer",
+   "files": 7,
+   "bytes": 20548,
+   "write_ms": 19731,
+   "merge_ms": 9723
+  },
+  {
+   "name": "w-r6-b01-v2-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 6829,
+   "write_ms": 8630,
+   "merge_ms": 9201
+  }
+ ],
+ "commits": 10,
+ "files": 24,
+ "bytes_plain": 72887,
+ "files_delivered": 8,
+ "bytes_delivered": 27377,
+ "store": {
+  "objects": 90,
+  "bytes": 111995,
+  "plaintext_hits": 0,
+  "probe": "155 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 4920,
+  "files": 24,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "clone",
+   "ms": 5256,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 940,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 917,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6750,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1603,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 874,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 17252,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2277,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2068,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5378,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1618,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 930,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6080,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2127,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2088,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4985,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 889,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 4920,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 1531
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p v2",
+   "rc": 0,
+   "ms": 454
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 433
+  },
+  {
+   "seq": 4,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d v2: B01 v2: three (frames 1 and 2), the act opener (frames 3 to 5), collision, way-out, brakes, built on the engine and timed to the script -p high",
+   "rc": 0,
+   "ms": 391
+  },
+  {
+   "seq": 5,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check v2 against the brief, the storyboard, deck's notes, the script's timing and the studio checklist -p high",
+   "rc": 0,
+   "ms": 407
+  },
+  {
+   "seq": 6,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r6-b01-v2: r6-b01-v2: B01 v2, a third pass on run r2-b01-storyboard's vault: the frames built on the engine and timed to the script, with deck's notes -f conductor",
+   "rc": 0,
+   "ms": 481
+  },
+  {
+   "seq": 7,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v2 sha256:312d1209633bcb86 files:7 -f developer",
+   "rc": 0,
+   "ms": 436
+  },
+  {
+   "seq": 8,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:218ae94f978e8548 files:1 -f editor",
+   "rc": 0,
+   "ms": 385
+  },
+  {
+   "seq": 9,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 391
+  },
+  {
+   "seq": 10,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 426
+  }
+ ],
+ "history": [
+  {
+   "id": "ea7798b4b89b",
+   "message": "init",
+   "time": "2026-10-29T02:53:00Z"
+  },
+  {
+   "id": "c47cb0f1a3d4",
+   "message": "brief: run r2-b01-storyboard",
+   "time": "2026-10-29T02:53:03Z"
+  },
+  {
+   "id": "67aa87d03fe7",
+   "message": "designer storyboard: delivered 2 files",
+   "time": "2026-10-29T02:58:15Z"
+  },
+  {
+   "id": "7aa51197c8e3",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T02:58:33Z"
+  },
+  {
+   "id": "db4ca371c986",
+   "message": "pass: run r4-b01-v1",
+   "time": "2026-10-29T04:35:03Z"
+  },
+  {
+   "id": "9dfd94288528",
+   "message": "developer v1: delivered 6 files",
+   "time": "2026-10-29T04:40:10Z"
+  },
+  {
+   "id": "911653b8dc59",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T04:40:52Z"
+  },
+  {
+   "id": "0a1bfe8d3785",
+   "message": "pass: run r6-b01-v2",
+   "time": "2026-10-29T06:34:30Z"
+  },
+  {
+   "id": "b379df0f7642",
+   "message": "developer v2: delivered 7 files",
+   "time": "2026-10-29T06:42:24Z"
+  },
+  {
+   "id": "90c8d15daf10",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T06:42:54Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "v2",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 102988,
+   "tool_uses": 22,
+   "wall_s": 198,
+   "must_fix": 1,
+   "should_fix": 9
+  }
+ ],
+ "kept_at": "2026-10-29T06:43:16+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__vault-handover.zip",
+  "sha256": "6b2cd5823967e18c",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}
