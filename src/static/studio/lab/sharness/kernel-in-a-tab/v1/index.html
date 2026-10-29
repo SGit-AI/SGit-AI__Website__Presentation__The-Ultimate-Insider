@@ -28,7 +28,7 @@
 </head>
 <body>
 <div id="cv" data-end="40">
-  <p class="kk a">SHarness · the kernel in a tab · a replay, the offline fallback</p>
+  <p class="kk a">SHarness · kernel in a tab · a replay drawn by us, the offline fallback</p>
   <div id="id">SH5</div>
   <div class="hl" data-in="0">A real Linux kernel in a browser tab, <em>nothing installed.</em></div>
   <svg id="pic" viewBox="0 0 1280 720" aria-label="A browser tab holding an emulated Linux, and the six probes of hello drawn as paths: one allowed, five refused at a wall"></svg>
@@ -47,7 +47,7 @@
     con: [
       [5.5, 'booting ...'], [6.5, 'Linux version 6.18.58-0-virt'], [8, 'x86 PC in WebAssembly, 512 MiB'], [11.2, 'LSM: ... landlock'], [12.2, '<b>landlock: Up and running.</b>'],
       [14, 'probe: uid 0, Landlock ABI 7']],
-    AP: [16, 17.5, 19, 20.5, 22, 23.5], PY: 178, PH: 56 }
+    AP: [16, 17.5, 19, 20.5, 22, 23.5], PY: 178, PH: 54 }
   var NS = 'http://www.w3.org/2000/svg', B = null
   function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
   function line(p, x0, y, x1, col) { var l = el('path', { d: 'M' + x0 + ' ' + y + 'H' + x1, fill: 'none', stroke: col, 'stroke-width': 5, 'stroke-linecap': 'round' }, p); l.L = x1 - x0; l.setAttribute('stroke-dasharray', l.L + ' ' + l.L); return l }
@@ -79,11 +79,11 @@
     })
     html += '<div class="ab" id="wl" style="left:780px;top:' + (F.PY + 6 * F.PH + 4) + 'px;font:700 20px/24px system-ui;color:var(--accent)">the policy, applied by the kernel</div>'
     // timeline
-    var ty = 586
+    var ty = 574
     el('path', { d: 'M40 ' + ty + 'H1240', stroke: 'var(--line2)', 'stroke-width': 4, fill: 'none' }, svg)
     B.tl = el('path', { d: 'M40 ' + ty + 'H1240', stroke: 'var(--infra)', 'stroke-width': 4, fill: 'none', 'stroke-dasharray': '1200 1200' }, svg)
     ;[[0, 'tab opens', 40, 'left'], [28.5, '28.5 s hello', 420, 'right'], [32.2, '32.2 s done', 469, 'left']].forEach(function (m) { el('circle', { cx: 40 + m[0] / 90 * 1200, cy: ty, r: 7, fill: 'var(--head)' }, svg); var q = el('text', { x: m[2] + (m[3] === 'right' ? 6 : (m[2] > 100 ? -6 : 0)), y: ty + 34, 'text-anchor': m[3] === 'right' ? 'end' : 'start', 'font-size': 20, 'font-weight': 700, fill: 'var(--head)' }, svg); q.textContent = m[1] })
-    html += '<div class="ab" id="tl" style="top:546px;opacity:0">about 28.5 s in one run; plan for up to 90 s</div>'
+    html += '<div class="ab" id="tl" style="top:534px;opacity:0">about 28.5 s in one run; plan for up to 90 s</div>'
     S.$('ov').innerHTML = html
   }
   window.SLIDE_RENDER = function (t, S) {
@@ -103,7 +103,7 @@
     S.$('tl').style.opacity = k(34, .5)
     B.tl.setAttribute('stroke-dashoffset', 1200 * (1 - Math.min(1, S.seg(t, 4, 36) * 1)))
     var f = ''
-    if (t >= 28) f = '<b>Six of six held</b> (one allowed, five refused), 25 October 2026. Hello ran at 28.5 s, the guest finished at 32.2 s, one run, the editor\'s Chrome (measured). '
+    if (t >= 28) f = '<b>Six of six held</b> (one allowed, five refused), 25 October 2026. The 28.5 s is one run in the editor\'s Chrome, reported by the project, browser and machine not recorded (A2); the replay\'s clock is ours. '
     if (t >= 34) f += 'Cloud runs took 58 to 96 s. '
     if (t >= 28) f += '<br>Source: sharness.ai (capture: anim-kernel-in-a-tab, anim-hello-replay, sharness2-linux-in-a-tab). Only the "with" is shown.'
     if (S.$('foot').innerHTML !== f) S.$('foot').innerHTML = f

@@ -44,10 +44,10 @@
   var ROWS = [
     { n: '1', name: 'No policy', sub: 'a measured step', at: 3, kind: 'go',
       lines: [['ok', 'DNS, TCP :80, HTTP GET: 200. The file returns.']] },
-    { n: '2', name: 'Off the allowlist', sub: 'the page\'s own list', at: 10, kind: 'page',
+    { n: '2', name: 'Off the allowlist', sub: 'the page\'s own list, read from its script', at: 10, kind: 'page',
       lines: [['wall', 'The page answers 403, logged blocked: a wall at the page.']] },
     { n: '3', name: 'Under P1', sub: 'TCP 443 only', at: 17, kind: 'kernel',
-      lines: [['wall', 'Permission denied (EACCES), before any TCP packet leaves.'], ['leak', 'The DNS query still leaks: Landlock does not see UDP.']] },
+      lines: [['wall', 'Permission denied from the kernel, before any TCP packet leaves.'], ['leak', 'The DNS query still leaks, to the page: Landlock does not see UDP.']] },
     { n: '4', name: 'Under P5', sub: '80 and 443', at: 28, kind: 'go',
       lines: [['ok', 'The policy allows it: the file returns.']] }]
   var CX = [330, 620, 900, 1190], HEAD = ['the guest', 'the kernel', 'the page\'s fetch()', 'the internet']
@@ -81,11 +81,11 @@
       o.gp = gate(g, CX[2], y, 'var(--accent)', r.kind !== 'page')
       if (r.kind === 'go') { o.end = el('circle', { cx: CX[3], cy: y, r: 9, fill: 'var(--agent)' }, g) }
       if (r.kind === 'kernel') {
-        o.leak = path(g, 'M' + CX[0] + ' ' + (y + 15) + 'H' + CX[3], 'var(--risk)', 3, '8 8')
+        o.leak = path(g, 'M' + CX[0] + ' ' + (y + 15) + 'H' + CX[2], 'var(--risk)', 3, '8 8')
         o.leak.setAttribute('stroke-dasharray', '8 8')
         o.leakwrap = o.leak
-        o.lend = el('circle', { cx: CX[3], cy: y + 15, r: 7, fill: 'none', stroke: 'var(--risk)', 'stroke-width': 3 }, g)
-        var lb = el('text', { x: CX[3] - 20, y: y - 12, 'text-anchor': 'end', 'font-size': 20, 'font-weight': 700, fill: 'var(--risk)' }, g); lb.textContent = 'DNS, UDP'; o.lb = lb
+        o.lend = el('circle', { cx: CX[2], cy: y + 15, r: 7, fill: 'none', stroke: 'var(--risk)', 'stroke-width': 3 }, g)
+        var lb = el('text', { x: CX[2] + 20, y: y - 12, 'text-anchor': 'start', 'font-size': 20, 'font-weight': 700, fill: 'var(--risk)' }, g); lb.textContent = 'DNS, UDP'; o.lb = lb
       }
       rows.push(o)
     })
@@ -111,12 +111,14 @@
       }
     })
     var f = ''
-    if (t >= 33) f = '<p><b>Without and with, both measured, in the playground (sharness.ai\'s own runs). The policy held the connect; DNS still left.</b></p>'
+    if (t >= 33) f = '<p><b>Without and with, as sharness.ai reports its own runs in the playground. The policy held the connect; DNS still left.</b></p>'
       + '<p>The caveat: we did not run the playground; the capture read the page\'s HTML and script. The measured rows are sharness.ai\'s.</p>'
     else f = ''
     var fs = S.$('foot'); if (fs.innerHTML !== f) fs.innerHTML = f
     fs.style.opacity = k(33, .6)
-    var s = S.$('src'); if (!s) { s = document.createElement('div'); s.id = 'src'; s.className = 'tx'; s.style.cssText = 'left:40px;top:560px;color:var(--dim)'; s.textContent = 'Source: sharness.ai, the playground\'s network panel (capture: playground-interceptor, sharness-evidence). One author, own site.'; S.$('cells').appendChild(s) }
+    var s = S.$('src'); if (!s) { s = document.createElement('div'); s.id = 'src'; s.className = 'tx'; s.style.cssText = 'left:40px;top:590px;color:var(--dim)'; s.textContent = 'Source: sharness.ai, the playground\'s network panel (capture: playground-interceptor, sharness-evidence). One author, own site.'; S.$('cells').appendChild(s) }
+    var kv = S.$('key'); if (!kv) { kv = document.createElement('div'); kv.id = 'key'; kv.className = 'tx'; kv.style.cssText = 'left:40px;top:558px;color:var(--dim)'; kv.innerHTML = 'Key: <b style="color:var(--agent)">red</b> the request, <b style="color:var(--accent)">teal</b> a wall that holds, <b style="color:var(--risk)">purple</b> the leak.'; S.$('cells').appendChild(kv) }
+    kv.style.opacity = k(1, .6)
     s.style.opacity = k(1, .6)
   }
 })()

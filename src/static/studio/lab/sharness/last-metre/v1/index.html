@@ -31,9 +31,9 @@
 </head>
 <body>
 <div id="cv" data-end="34">
-  <p class="kk a">SHarness · the last metre · v1, driven</p>
+  <p class="kk a">SHarness · the last metre · headline: our framing</p>
   <div id="id">SH6</div>
-  <div class="hl" data-in="0">Even with a harness, <em>the key is in reach.</em></div>
+  <div class="hl" data-in="0">Today the key arrives <em>in the clear.</em></div>
 
   <div class="col" style="left:40px"><div class="big">OBSERVED</div><div class="sub">Panel 3 of the comic. sgit 0.24.0, 24 October 2026.</div></div>
   <div class="col" style="left:660px"><div class="big">DESIGNED, NOT BUILT</div><div class="sub">Panels 5 to 7 of the comic. A proposal, no running code.</div></div>
@@ -41,8 +41,8 @@
   <svg id="pic" viewBox="0 0 1280 720" aria-label="Left: the agent process reaches the key sitting in the clear on disk. Right: the agent asks a key service for an operation; the key never leaves the service.">
     <path id="aL" d="M232 300H392" fill="none" stroke="var(--risk)" stroke-width="5" stroke-linecap="round" stroke-dasharray="160 160" stroke-dashoffset="160"/>
     <path id="aR1" d="M852 300H1002" fill="none" stroke="var(--agent)" stroke-width="5" stroke-linecap="round" stroke-dasharray="150 150" stroke-dashoffset="150"/>
-    <path id="aR2" d="M1002 372H852" fill="none" stroke="var(--infra)" stroke-width="5" stroke-linecap="round" stroke-dasharray="150 150" stroke-dashoffset="150"/>
-    <rect id="wall" x="926" y="262" width="12" height="150" rx="4" fill="var(--accent)" opacity="0"/>
+    <path id="aR2" d="M1002 372H852" fill="none" stroke="var(--dim)" stroke-width="5" stroke-linecap="round" stroke-dasharray="150 150" stroke-dashoffset="150"/>
+    <rect id="wall" x="926" y="336" width="12" height="76" rx="4" fill="none" stroke="var(--accent)" stroke-width="3" stroke-dasharray="8 6" opacity="0"/>
   </svg>
 
   <!-- observed -->
@@ -50,13 +50,14 @@
   <div class="bx o" id="l2" style="left:392px;top:236px;width:216px;height:190px">The disk<span>readable by that process</span></div>
   <div class="red o" id="l3" style="left:408px;top:352px;width:184px">[ vault key, redacted ]</div>
   <div class="tx o" id="l4" style="left:60px;top:448px;width:540px"><b>In the clear</b> on disk, in the process arguments, in the shell history and in the transcript. The last metre.</div>
-  <div class="tx o" id="l5" style="left:60px;top:522px;width:540px"><span class="thr">The threat:</span> an injected instruction asks the agent to print its key. It can.</div>
+  <div class="tx o" id="l5" style="left:60px;top:522px;width:540px"><span class="thr">Our reading:</span> an injected instruction asks the agent to print its key. Nothing stops it in this panel.</div>
 
   <!-- designed -->
   <div class="bx ag o" id="r1" style="left:680px;top:260px;width:172px">The agent<span>asks for an operation</span></div>
-  <div class="bx inf o" id="r2" style="left:1002px;top:236px;width:216px;height:190px">Key service<span>a KMS holds the key</span></div>
+  <div class="bx o" id="r2" style="left:1002px;top:236px;width:216px;height:190px">Key service<span>a KMS holds the key</span></div>
   <div class="red o" id="r3" style="left:1018px;top:352px;width:184px">[ vault key, redacted ]</div>
-  <div class="tx o" id="r4" style="left:680px;top:448px;width:540px"><span class="ok">The agent never holds the key.</span> It gets back a result sealed to a one-time key.</div>
+  <div class="tx o" id="wl" style="left:852px;top:418px;width:160px;text-align:center;color:var(--accent);font-weight:700">designed wall</div>
+  <div class="tx o" id="r4" style="left:680px;top:448px;width:540px"><span class="ok">The agent asks; it never receives the key.</span> It gets back a result sealed to a one-time key.</div>
   <div class="tx o" id="r5" style="left:680px;top:522px;width:540px"><b>The transcript sees:</b> the command, ciphertext, fingerprints, progress. Never a key.</div>
 
   <div id="foot"></div>
@@ -77,7 +78,7 @@
     S.$('wall').setAttribute('opacity', k(17))
     S.$('aR1').setAttribute('stroke-dashoffset', 150 * (1 - S.seg(t, 18, 19.5)))
     S.$('aR2').setAttribute('stroke-dashoffset', 150 * (1 - S.seg(t, 20, 21.5)))
-    al(S, 'r4', k(22)); al(S, 'r5', k(25))
+    al(S, 'wl', k(17)); al(S, 'r4', k(22)); al(S, 'r5', k(25))
     var f = 'Source: sharness.ai, the last-metre comic (capture: sb-the-last-metre, ' + 'sharness2-sb-the-last-metre). '
     f += '<b>Observed</b> in sgit 0.24.0 on 24 October 2026; <b>designed, not built</b>: the key service. Only the design was drawn on sharness.ai.'
     if (t >= 30) f = '<b>&ldquo;' + F.quote + '&rdquo;</b><br>' + f
