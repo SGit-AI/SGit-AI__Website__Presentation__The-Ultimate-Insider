@@ -3944,10 +3944,153 @@
     "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
     "given_to": "the editor"
    }
+  },
+  {
+   "run": "r25-sharness-deep-dive",
+   "purpose": "r25-sharness-deep-dive: SHarness technical, for parts 2 and 3 (conductor mail 027): SH8 the run pipeline, SH9 the moving parts and one request",
+   "request": {
+    "from": "the editor, through the conductor (tui-mail-public ruv-sgit/027, 29 October 2026 17:08 UTC)",
+    "date": "2026-10-29",
+    "text": "SHarness, technical: the process behaviour policy; a new process gets nothing it does not need; a KMS; a virtual file system from the user's point of view; the network controlled at packet level; digital twins; running locally, or distributed."
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "e331g4qe",
+   "created_at": "2026-10-29T17:35:38+00:00",
+   "closed_at": "2026-10-29T17:42:31+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 4,
+    "tasks": 4,
+    "ruflo_calls": 16,
+    "ruflo_failed": 0,
+    "ruflo_ms": 7979
+   },
+   "branches": [
+    {
+     "name": "w-sh8",
+     "role": "developer",
+     "files": 1,
+     "bytes": 7235,
+     "write_ms": 7892,
+     "merge_ms": 8311
+    },
+    {
+     "name": "w-sh9",
+     "role": "developer",
+     "files": 1,
+     "bytes": 10718,
+     "write_ms": 7366,
+     "merge_ms": 8966
+    },
+    {
+     "name": "w-storyline",
+     "role": "writer",
+     "files": 1,
+     "bytes": 11427,
+     "write_ms": 7689,
+     "merge_ms": 8826
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 3785,
+     "write_ms": 7618,
+     "merge_ms": 8581
+    }
+   ],
+   "commits": 6,
+   "files": 6,
+   "bytes_plain": 34925,
+   "files_delivered": 4,
+   "bytes_delivered": 33165,
+   "store": {
+    "objects": 38,
+    "bytes": 51327,
+    "plaintext_hits": 0,
+    "probe": "47 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 4011,
+    "files": 6,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "5945c4d3dc21",
+     "message": "init",
+     "time": "2026-10-29T17:35:44Z"
+    },
+    {
+     "id": "1c399b982351",
+     "message": "brief: run r25-sharness-deep-dive",
+     "time": "2026-10-29T17:35:46Z"
+    },
+    {
+     "id": "6109f1aadb7f",
+     "message": "developer sh8: delivered 1 files",
+     "time": "2026-10-29T17:41:21Z"
+    },
+    {
+     "id": "8a06ea631755",
+     "message": "developer sh9: delivered 1 files",
+     "time": "2026-10-29T17:41:37Z"
+    },
+    {
+     "id": "40692c234166",
+     "message": "writer storyline: delivered 1 files",
+     "time": "2026-10-29T17:41:54Z"
+    },
+    {
+     "id": "e9a138d7897a",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T17:42:11Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "sh8",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+     "tokens": 105447
+    },
+    {
+     "id": "sh9",
+     "role": "developer",
+     "who": "a Claude Code subagent of this session (Sonnet), the editor's fixes applied by it",
+     "tokens": 93073
+    },
+    {
+     "id": "storyline",
+     "role": "writer",
+     "who": "the conductor (ruv.sgit's session)",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 87452,
+     "tool_uses": 16,
+     "wall_s": 77,
+     "must_fix": 1,
+     "should_fix": 8
+    }
+   ],
+   "kept_at": "2026-10-29T17:42:35+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r25-sharness-deep-dive__vault-handover.zip",
+    "sha256": "1b1ce354231c7b5b",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
   }
  ],
  "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
- "updated": "2026-10-29T16:49:04+00:00",
+ "updated": "2026-10-29T17:42:35+00:00",
  "server": "https://dev.send.sgraph.ai",
  "viewer": "https://dev.vault.sgraph.ai/en-gb/",
  "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"
