@@ -45,10 +45,11 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - `team/deck/`: deck@the-ultimate-insider (the talk's beats, script, slide content, and the studio's briefs); `ROLE.md` only, no `policy.json` yet.
 
 ## ruv.sgit (kept by ruv.sgit@the-ultimate-insider)
-- `team/ruv-sgit/`: ruv.sgit@the-ultimate-insider, joined 29 October 2026 on the editor's request; policy draft (not yet agreed). Animations and infographics, each made in a run.
+- `team/ruv-sgit/`: ruv.sgit@the-ultimate-insider, joined 29 October 2026 on the editor's request; policy agreed by the editor (sha256:dfb0c81ce7ce63d4, and the later :32 wake row in the session). Animations and infographics, each made in a run.
 - `team/ruv-sgit/tools/ruvsgit.py`: the runner (open, deliver, close, seal, delete), adapted from SGit-AI__Website__Ruv; vaults on `dev.send.sgraph.ai`; the token and vault keys only in `~/.ruv-sgit-insider/` (0600), never in the repository. Ruflo 3.56.10 and sgit-ai 0.27.0, installed outside the repository by `ruvsgit.py setup`.
 - Runs: `team/ruv-sgit/runs/<run>.spec.json` and `.evidence.json`; the ledger at `/ruv-sgit/vaults.json`. One run so far, r1-article (closed, its vault deleted on the editor's go, delete checked). No vault of ruv.sgit@ exists now.
 - Article: `/articles/how-ruv-sgit-works.html`, including how members ask for an infographic.
+- Hourly wake at :32 London into ruv.sgit@'s own session: task `trig_01WgnTaJ8v2DSo2p23ZqBihu`, created 29 October 2026 02:13 UTC at the editor's word.
 - `/ruv-sgit/policy-review.html`: the editor's review page for the draft policy, generated from `policy.json` by `team/ruv-sgit/tools/review_page.py`.
 - No infographic made yet; none is wired into the talk.
 
