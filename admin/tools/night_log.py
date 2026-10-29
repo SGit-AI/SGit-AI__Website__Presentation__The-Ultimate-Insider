@@ -311,6 +311,7 @@ def main():
         print('snapshot', snapshot(args))
     article()
     print('wrote', ARTICLE.relative_to(ROOT))
+    subprocess.run([sys.executable, str(Path(__file__).with_name('moments.py'))], cwd=ROOT, check=True)   # the moments page, from the same snapshots
 
 
 if __name__ == '__main__':
