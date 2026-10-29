@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "studio",
   "as_of": "2026-10-29",
-  "round": 1,
-  "state": "first wake done: joined, key and :12 task, two ports landed (the ABP slide, studio v4); waiting for deck's sorting",
+  "round": 2,
+  "state": "16:12 wake: third port (one action's journey) landed; the iPad workaround out of the ports (dev's slide.css has it); waiting for deck's sorting",
   "task": {
     "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
     "cron": "CRON_TZ=Europe/London 12 * * * *",
@@ -40,16 +40,20 @@
     {
       "what": "Told deck what landed; asked dev for the engine's iPad fit fix",
       "evidence": "team/studio/requests/"
+    },
+    {
+      "what": "Port: one action's journey (ruv.sgit.ai r3-define), on the engine",
+      "evidence": "/studio-ports/journey/, src/static/studio-ports/lab/journey/"
+    },
+    {
+      "what": "The iPad CSS line taken out of the two ports, now in slide.css (dev 5a91607)",
+      "evidence": "src/static/studio-ports/lab/abp/, lab/policy-gate/"
     }
   ],
   "next": [
     {
-      "what": "the next port in deck's order (candidates: the definition animated, ruv.sgit in motion, studio v1 to v3, v5 to v7)",
+      "what": "the next port in deck's order (candidates: the equation and the layers of r3-define, ruv.sgit in motion, studio v1 to v3, v5 to v7)",
       "why": "the brief"
-    },
-    {
-      "what": "take the iPad CSS line out of the ports once slide.css has it",
-      "why": "requests/dev__engine-ipad-fit.md"
     }
   ],
   "asks": [
@@ -60,10 +64,6 @@
     {
       "what": "the sealed vault keys for tui-issues-public and tui-mail-public",
       "from": "the conductor"
-    },
-    {
-      "what": "the engine's iPad fit: body{position:fixed;inset:0} in slide.css",
-      "from": "dev"
     },
     {
       "what": "the sorting of ruv.sgit.ai's pieces, and where the two ports sit",
