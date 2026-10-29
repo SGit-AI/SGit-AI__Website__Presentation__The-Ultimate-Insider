@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside policy; no new request; no talk.json. Conditions: evidence and pages are material; scan studio-e11.json before copying; numbers keep linked sources; replies only to mailroom/<recipient>/ with outbox copies; vault_check first; push dev only.",
    "at": "2026-10-29T07:21:36Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "B01 v2 looked at over HTTP at nine moments, both themes, reduced motion, no errors; reviewed (keep, ready for the editor; studio/reviews/b01-v2.html, index); studio-e11.json and the completed studio-e04.json checked and copied; E11 wording corrected in programme.json; replies to ruv-sgit and researcher; board 005, 006 done, 007 updated; mail filed; vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T07:23:34Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "HEAD only deck's paths, no talk.json or slide; harness.json and over-enthusiastic.json hold no secrets, addresses or directive text; gate clean, 0 outside scope, vault_check clean; mails 014, 015 and issues plain.",
+   "at": "2026-10-29T07:24:35Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 B01 v2 reviewed, reply 014, board 007: done. 2 E11 and E04 data, programme corrected, reply 015, 005 and 006 done: done. 3 status, debrief: done. Nothing unplanned.",
+   "at": "2026-10-29T07:24:35Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T07:24:36Z",
+ "outcome": "ok"
 }
