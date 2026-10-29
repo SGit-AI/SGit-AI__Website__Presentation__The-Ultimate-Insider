@@ -1,0 +1,542 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T16:45:34Z",
+ "until": "2026-10-29T17:06:01Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T16:57:17Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T165717Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Plan by the member at the editor's word in this session (about 16:55 London): 'break the presentation into three parts ... each one ... half an hour ... the deadline for the first one is ... 6:30 ... the other one is at 7:30 ... and the other one is at 8:00 ... lock down a presentation and then not making any more changes to it ... make a copy of it into ... V1.1 ... a mode for the new versions ju"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T17:01:42Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T170142Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Plan by the member at the editor's word (17:0x London): 'how this was done ... introducing you guys ... an animation ... the different players ... a sense of scale and size and coordination ... maybe ... as a prelude ... the timing ... how many commits ... working overnight ... this final sprint ... only possible because of the tech that I have been developing ... SGit, the vaults, the workflows ."
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T17:05:03Z",
+   "kind": "scheduled, hourly at :02",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T170503Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Plan by the member (the hour's pacing was done at 17:00 at the editor's word; this is the scheduled 17:02, fired 17:03): 1) route the storyteller's two new requests verbatim (deck__90-minute-arc-and-the-work-section.md, researcher__s1-s2-s4-s5-received.md); record deck's two earlier ruv-sgit requests as already in the vault; vault_check first. 2) Flag to the editor: dev holds Linux in the browser "
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T16:48:30Z",
+   "kind": "scheduled wake, 16:47",
+   "outcome": "ok",
+   "record": "team/dev/wakes/20261029T164830Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Amended after the pre-review's change: 1) Requests first: issues on dev's board for mail 030 (open) and 033 (after the talk, joining 024) and replies, each through vault_check.py first; no code for 033. 2) Showcase slide template: new files only under src/static/talk/engine/** (showcase.css, showcase.js, a README with the rule: no key, no QR of a key, crop it out) and one example; inert until a sl"
+  },
+  {
+   "agent": "storyteller",
+   "started": "2026-10-29T16:55:22Z",
+   "kind": "scheduled, hourly at :54",
+   "outcome": "ok",
+   "record": "team/storyteller/wakes/20261029T165522Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) fold S4 (19 releases in 89 min) and S5 into story/tree.md with ids; label inbox-as-explorer-coding as the tree's framing, dated counts; reply to researcher. 2) place the editor's-work section (SGit, newsroom/PHP, PKI, SHarness and Linux demo; no keys in shots; offline fallback) in the 90-minute arc: sequence.md, coverage.md against deck's 22-beat talk.json (read only); proposal to deck in reque"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "conductor",
+   "sha": "e357536",
+   "at": "2026-10-29T17:04:19+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "a4cf9b0",
+   "at": "2026-10-29T17:03:28+00:00",
+   "subject": "@conductor: the prelude, how this was made: the brief, the team's numbers as data, the mini deck refreshed as its floor",
+   "changed": 7
+  },
+  {
+   "agent": "conductor",
+   "sha": "b94d3a7",
+   "at": "2026-10-29T17:00:11+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "3342cff",
+   "at": "2026-10-29T16:59:22+00:00",
+   "subject": "@conductor: the talk in three parts with locks at 18:30, 19:30, 20:00; tonight only, members keep themselves going between hourly wakes",
+   "changed": 5
+  },
+  {
+   "agent": "storyteller",
+   "sha": "e63ec51",
+   "at": "2026-10-29T16:58:30+00:00",
+   "subject": "@storyteller: close the 16:55 wake: post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "storyteller",
+   "sha": "34b06f6",
+   "at": "2026-10-29T16:57:56+00:00",
+   "subject": "@storyteller: the 90-minute arc: the editor's work placed as Part 4, deck's 22 beats re-timed, S1, S2, S4 and S5 folded in",
+   "changed": 9
+  },
+  {
+   "agent": "dev",
+   "sha": "3a9cdd4",
+   "at": "2026-10-29T16:54:55+00:00",
+   "subject": "@dev: the 16:47 wake closed (go, go, done, clean, as-planned)",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "16b9ea8",
+   "at": "2026-10-29T16:54:38+00:00",
+   "subject": "@dev: wake record: the post-check (as-planned)",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "7bd4a6f",
+   "at": "2026-10-29T16:52:07+00:00",
+   "subject": "ruv-sgit: the 16:34 wake closed, post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "a939267",
+   "at": "2026-10-29T16:51:30+00:00",
+   "subject": "ruv-sgit: r24 closed and kept, the SHarness series from the capture; status, debrief, REALITY",
+   "changed": 12
+  },
+  {
+   "agent": "conductor",
+   "sha": "47feb82",
+   "at": "2026-10-29T16:46:53+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "eb0b5cd",
+   "at": "2026-10-29T16:45:54+00:00",
+   "subject": "@conductor: the request backlog routed; the deck's figures, the night log and Moments refreshed before the talk",
+   "changed": 11
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "705d329",
+   "at": "2026-10-29T16:45:51+00:00",
+   "subject": "ruv-sgit: SHarness r24, the editor's fixes on SH1 v2, SH4 and the storyline",
+   "changed": 6
+  }
+ ],
+ "made": [
+  {
+   "page": "articles/how-this-talk-was-built.html",
+   "by": "conductor"
+  },
+  {
+   "page": "studio/lab/sharness/os-of-one-process/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "articles/moments.html",
+   "by": "conductor"
+  },
+  {
+   "page": "ruv-sgit/sharness-storyline.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/sharness/kernel-in-a-tab/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/sharness/last-metre/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/sharness/one-idea/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/sharness/without-with/v2/index.html",
+   "by": "ruv-sgit"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio/lab/sharness/os-of-one-process/v1/index.html",
+   "img": "night-20261029T1706-1.png"
+  },
+  {
+   "page": "studio/lab/sharness/kernel-in-a-tab/v1/index.html",
+   "img": "night-20261029T1706-2.png"
+  },
+  {
+   "page": "articles/how-this-talk-was-built.html",
+   "img": "night-20261029T1706-3.png"
+  },
+  {
+   "page": "articles/moments.html",
+   "img": "night-20261029T1706-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T16:47:00Z",
+   "sender": "deck",
+   "to": "motion",
+   "kind": "request",
+   "subject": "Animation request: it could have been much worse (M02)"
+  },
+  {
+   "at": "2026-10-29T16:50:00Z",
+   "sender": "researcher",
+   "to": "ruv.sgit",
+   "kind": "reply",
+   "subject": "Re: SHarness series: the capture is in, 18 pieces and the browser Linux page"
+  },
+  {
+   "at": "2026-10-29T16:52:00Z",
+   "sender": "deck",
+   "to": "studio",
+   "kind": "reply",
+   "subject": "Re: the first ports: both go beside abp in the longer talk"
+  },
+  {
+   "at": "2026-10-29T16:52:00Z",
+   "sender": "designer",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Design note 8: the mail reader says how far it has got (after the talk)"
+  },
+  {
+   "at": "2026-10-29T16:52:44Z",
+   "sender": "dev",
+   "to": "designer",
+   "kind": "reply",
+   "subject": "Re: Design note 8: taken for after the talk"
+  },
+  {
+   "at": "2026-10-29T16:52:44Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: The editor's work section: the showcase template is in; Linux after the talk"
+  },
+  {
+   "at": "2026-10-29T16:55:00Z",
+   "sender": "motion",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: Animation request: the building"
+  },
+  {
+   "at": "2026-10-29T16:57:58Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Three parts, three locks: part 1 complete and timed by 18:15, locked at 18:30"
+  },
+  {
+   "at": "2026-10-29T16:57:58Z",
+   "sender": "conductor",
+   "to": "designer",
+   "kind": "notice",
+   "subject": "Three parts, three locks: deliver for part 1 by 18:15"
+  },
+  {
+   "at": "2026-10-29T16:57:58Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Locked versions, reload to the latest, a what-changed mode; lock part 1 at 18:30"
+  },
+  {
+   "at": "2026-10-29T16:57:58Z",
+   "sender": "conductor",
+   "to": "motion",
+   "kind": "notice",
+   "subject": "Three parts, three locks: deliver for part 1 by 18:15"
+  },
+  {
+   "at": "2026-10-29T16:57:58Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "notice",
+   "subject": "Three parts, three locks: deliver for part 1 by 18:15"
+  },
+  {
+   "at": "2026-10-29T16:57:58Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "notice",
+   "subject": "Three parts, three locks: deliver for part 1 by 18:15"
+  },
+  {
+   "at": "2026-10-29T16:57:58Z",
+   "sender": "conductor",
+   "to": "storyteller",
+   "kind": "request",
+   "subject": "Three parts of 30 minutes: please send deck the split by 17:30"
+  },
+  {
+   "at": "2026-10-29T16:57:58Z",
+   "sender": "conductor",
+   "to": "studio",
+   "kind": "notice",
+   "subject": "Three parts, three locks: deliver for part 1 by 18:15"
+  },
+  {
+   "at": "2026-10-29T16:58:38Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "notice",
+   "subject": "Tonight only: keep yourself going between the hourly wakes, until 20:00 London"
+  },
+  {
+   "at": "2026-10-29T16:58:38Z",
+   "sender": "conductor",
+   "to": "designer",
+   "kind": "notice",
+   "subject": "Tonight only: keep yourself going between the hourly wakes, until 20:00 London"
+  },
+  {
+   "at": "2026-10-29T16:58:38Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "notice",
+   "subject": "Tonight only: keep yourself going between the hourly wakes, until 20:00 London"
+  },
+  {
+   "at": "2026-10-29T16:58:38Z",
+   "sender": "conductor",
+   "to": "motion",
+   "kind": "notice",
+   "subject": "Tonight only: keep yourself going between the hourly wakes, until 20:00 London"
+  },
+  {
+   "at": "2026-10-29T16:58:38Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "notice",
+   "subject": "Tonight only: keep yourself going between the hourly wakes, until 20:00 London"
+  },
+  {
+   "at": "2026-10-29T16:58:38Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "notice",
+   "subject": "Tonight only: keep yourself going between the hourly wakes, until 20:00 London"
+  },
+  {
+   "at": "2026-10-29T16:58:38Z",
+   "sender": "conductor",
+   "to": "storyteller",
+   "kind": "notice",
+   "subject": "Tonight only: keep yourself going between the hourly wakes, until 20:00 London"
+  },
+  {
+   "at": "2026-10-29T16:58:38Z",
+   "sender": "conductor",
+   "to": "studio",
+   "kind": "notice",
+   "subject": "Tonight only: keep yourself going between the hourly wakes, until 20:00 London"
+  },
+  {
+   "at": "2026-10-29T17:02:49Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The prelude at the head of part 1; the mini deck as its floor"
+  },
+  {
+   "at": "2026-10-29T17:02:49Z",
+   "sender": "conductor",
+   "to": "motion",
+   "kind": "request",
+   "subject": "The prelude: meet the team, by 18:15 for part 1"
+  },
+  {
+   "at": "2026-10-29T17:02:49Z",
+   "sender": "conductor",
+   "to": "storyteller",
+   "kind": "request",
+   "subject": "The prelude and its callback in the close"
+  }
+ ],
+ "problems": [],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or move the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
+    "from": "the editor"
+   },
+   {
+    "what": "Confirm 'newsroom.esquito.ai' = newsroom.sgit.ai and 'attrition' = commoditisation on the Wardley maps; 'Empower', 'the billing', which blast radius",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload the motion and studio vault-key zips into their sessions",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "The talk is rewritten into your 15:00 order: 22 beats, 38:30, in the player now; check the words in the script",
+    "from": "the editor"
+   },
+   {
+    "what": "Placement of the studio pieces beyond those now in the talk (E04 v2 on limits, M01 on building): set it in the build mode or say",
+    "from": "the editor"
+   },
+   {
+    "what": "Agree or change the draft policy.json",
+    "from": "the editor"
+   }
+  ],
+  "designer": [],
+  "dev": [
+   {
+    "from": "dev",
+    "to": "the editor",
+    "what": "Give the conductor's session its two sealed files from the lane handover zip"
+   }
+  ],
+  "motion": [
+   {
+    "to": "editor",
+    "what": "agree team/motion/policy.json (status proposed)"
+   },
+   {
+    "to": "dev",
+    "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+   },
+   {
+    "to": "deck",
+    "what": "review M01 the building v1",
+    "where": "/motion/the-building/"
+   },
+   {
+    "to": "conductor",
+    "what": "mark the motion row of schedule.json running with the task id"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E12, E08, E14, E05, E06 and the SHarness series",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Capture sharness.ai's animations and workflows, and the browser Linux page",
+    "from": "researcher@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r23",
+    "from": "the editor"
+   }
+  ],
+  "storyteller": [
+   {
+    "what": "does the 90 minutes include questions? is the inbox your example of explorer coding? 'attrition' as evolution?",
+    "from": "the editor"
+   },
+   {
+    "what": "seal the two vault keys to team/storyteller/key.json",
+    "from": "conductor"
+   },
+   {
+    "what": "agree policy.json; 'Empower' and 'the billing'",
+    "from": "the editor"
+   }
+  ],
+  "studio": [
+   {
+    "what": "agree team/studio/policy.json (a draft from the brief)",
+    "from": "the editor"
+   },
+   {
+    "what": "the sorting of ruv.sgit.ai's pieces, and where the two ports sit",
+    "from": "deck"
+   }
+  ]
+ }
+}
