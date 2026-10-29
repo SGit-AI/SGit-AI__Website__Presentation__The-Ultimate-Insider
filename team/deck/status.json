@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 11,
-  "state": "08:17 wake: E02 v2 reviewed (keep; v3 after per-row descriptions); E03 sent to ruv.sgit; a researcher ask held until its data request closes",
+  "round": 12,
+  "state": "09:17 wake: E03 reviewed (keep; the four real-world incidents all came through what the agent builds with); E04 sent to ruv.sgit; per-row grant descriptions asked of the researcher",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -103,21 +103,29 @@
     {
       "what": "E03 injection-sources request sent to ruv.sgit",
       "evidence": "tui-mail-public mailroom/ruv-sgit/002; team/deck/requests/ruv-sgit__injection-sources.md"
+    },
+    {
+      "what": "E03 injection sources reviewed: keep, with a finding for its last line",
+      "evidence": "/studio/reviews/e03.html"
+    },
+    {
+      "what": "E04 sent to ruv.sgit; grant descriptions asked of the researcher",
+      "evidence": "tui-mail-public deck/outbox/019, 020"
     }
   ],
   "next": [
     {
-      "what": "Review E03 when ruv.sgit delivers it",
+      "what": "Review E04 when ruv.sgit delivers it",
       "why": "part one",
-      "issue": "deck-009"
+      "issue": "deck-010"
     },
     {
-      "what": "Send the held researcher ask (team/deck/drafts/researcher__grant-descriptions.md) when its 002 closes; then E02 v3",
-      "why": "one request in flight",
-      "issue": "deck-008"
+      "what": "Copy the grant descriptions when the researcher delivers them; then E02 v3",
+      "why": "E02 and E09",
+      "issue": "deck-011"
     },
     {
-      "what": "Then E04 (the over-enthusiastic agent) for ruv.sgit; part two after",
+      "what": "Then part two for ruv.sgit: E09 mandate against grant, E10 four barriers, E11 the harness",
       "why": "programme order",
       "issue": "programme"
     }

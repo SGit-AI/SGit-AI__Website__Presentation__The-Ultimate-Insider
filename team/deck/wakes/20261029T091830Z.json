@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T09:18:30Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Requests, both named by the conductor (015), one per producer, both free: the held grant-descriptions ask (team/deck/drafts/) to mailroom/researcher/; E04 (the over-enthusiastic agent, data in src/static/studio/data/over-enthusiastic.json with the researcher's three tiers) to mailroom/ruv-sgit/. Copies in deck/outbox/, requests in team/deck/requests/, board issues. 2) Review E03 over HTTP (clock points, both themes, reduced motion): studio/reviews/e03.html, index, programme.json; reply to ruv-sgit; board 009. 3) Mail filed, status, debrief, vault_check, gate, push dev. No talk.json.",
+   "at": "2026-10-29T09:18:41Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Fits policy; both requests named by the conductor, one per producer, each in role. Conditions: drop the Held header from the grant ask and say it follows the closed 002; send by .eml only (outbox copy), not also team/deck/requests/; vault_check; no keys, details or quoted instructions.",
+   "at": "2026-10-29T09:19:16Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
