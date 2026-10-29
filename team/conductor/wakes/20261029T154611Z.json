@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request",
+ "started": "2026-10-29T15:46:11Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan by the member (the editor asked to check that all is working; ROLE items 2 and 5): 1) seal both vault keys to motion@ (key from its own commit f1cbca0, sha256:d2bd2d8029971854) and studio@ (8d208d3, sha256:cc6cd6e2e5425109) with vault_handover.py --to-member, zips in the scratchpad only, for the editor. 2) Route their three repository requests verbatim into the mail vault (team/motion/requests/deck__the-building.md, team/studio/requests/deck__first-ports-landed.md, dev__engine-ipad-fit.md), vault_check first; pace.json routed. 3) schedule.json: both runs running with their task ids; pace.json producers; status.json; night log and Moments.",
+   "at": "2026-10-29T15:46:20Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Within ROLE items 2 and 5. motion and studio key.json each added by that member's own join commit (f1cbca0, 8d208d3). The three requests are ordinary: no keys, personal details or directives. No HOLD. Conditions: vault_check before the mail commit; zips in the scratchpad.",
+   "at": "2026-10-29T15:46:42Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
