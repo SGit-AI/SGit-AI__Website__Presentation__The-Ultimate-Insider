@@ -1,6 +1,7 @@
 # For every agent working in this repository
 
-- Find your role first: `team/<role>/ROLE.md`. If you have none, ask the editor (Dinis Cruz) which you are; do not pick one. The first role is `team/dev/` (dev@the-ultimate-insider).
+- Find yourself first: `team/<id>/` holds your `ROLE.md`, `policy.json` (what you may write), `status.json` and `debriefs/`. If you have no folder, ask the editor (Dinis Cruz) which role you are; do not pick one. Write only your `scope.writes` and `scope.holds`; a request outside them is answered with the owner's name.
+- Close every round: `python3 admin/build/agents.py check --agent <you>`, a debrief in `team/<you>/debriefs/<date>__<slug>.md` with screenshots, `status.json` updated. Release your own finished work to `dev` once the gate passes; never push to `main`.
 - Read `BRIEF.md` (never edit it; findings go in `BRIEF-CORRECTIONS.md`) and `REALITY.md` (keep it current when you ship).
 - Build and gate before every push: `./run-website-locally.sh`, or `python3 admin/build/build.py && python3 admin/build/validate.py`.
 - Never write `./version` and never put a number in a commit subject: CI numbers every release (`.github/workflows/release.yml`).

@@ -1,0 +1,60 @@
+<!--meta {"title": "Admin and engineering", "description": "How this site is built, gated, released and versioned, how to add a page, and where everything lives."} -->
+<section class="wrap narrow">
+<p class="kicker">Admin</p>
+<h1>Admin and engineering</h1>
+<p class="lead">How this site is built, checked and shipped. Kept by <a href="{{root}}team/dev/index.html">dev@the-ultimate-insider</a>. This build is <a href="versions.html#{{version}}">{{version}}</a>.</p>
+
+<h2>Architecture</h2>
+<pre><code>BRIEF.md · BRIEF-CORRECTIONS.md · REALITY.md · CLAUDE.md   the brief, its corrections, what exists, the rules for agents
+site.json                      the site's name, address and top-bar navigation
+src/pages/**.html              page bodies: a &lt;!--meta {...} --&gt; line, then the &lt;main&gt; content, nothing else
+content/articles/*.md          articles, markdown with front matter
+src/static/                    copied as is: assets/, talk/ (talk.json, the slides, the engine, the player)
+team/&lt;id&gt;/                    each member: ROLE.md, policy.json, status.json, debriefs/
+admin/build/build.py           the build: _site/ from all of the above
+admin/build/validate.py        the gate
+admin/build/agents.py          the team checks: scope, overlaps, unowned files
+.github/workflows/release.yml  gate every push; number, tag, build and deploy dev and main
+version                        written only by CI</code></pre>
+
+<h2>Adding a page</h2>
+<p>A page is one file. Write the body only, with no head, navigation or footer, starting with its meta line; use <code>{{root}}</code> for links to the site root:</p>
+<pre><code>&lt;!--meta {"title": "...", "description": "..."} --&gt;
+&lt;section class="wrap narrow"&gt; ... &lt;/section&gt;</code></pre>
+<p>The build then produces, for free: the page with the top bar (and the version in it), the footer, canonical, Open Graph and JSON-LD tags, its <code>.md</code> twin, its line in <code>llms.txt</code> and its entry in <code>sitemap.xml</code>. An article is one markdown file in <code>content/articles/</code>; a slide is one folder in <code>src/static/talk/slides/</code> plus its beat in <code>talk.json</code>.</p>
+
+<h2>The gate</h2>
+<p><code>admin/build/validate.py</code> fails the build on any finding, on every push and again on the release commit:</p>
+<ul>
+<li>every internal link and image resolves against the built files;</li>
+<li>every page is reachable: some other page links to it;</li>
+<li>every page has its <code>.md</code> twin, is listed in <code>llms.txt</code>, and carries structured data (JSON-LD);</li>
+<li>every page shows the version in its top bar, and it is this build's version;</li>
+<li>no version placeholder survives the build;</li>
+<li>no page loads a script or stylesheet from another host;</li>
+<li>every script parses (Node);</li>
+<li>every beat of the talk has a slide, a title, a script and a planned length;</li>
+<li>no two members of the team claim the same file;</li>
+<li>no em-dashes in prose;</li>
+<li>the leak tripwire: private keys, cloud and API key shapes and sgit vault key shapes, in every tracked and every built file.</li>
+</ul>
+
+<h2>Releasing</h2>
+<ol>
+<li><code>git fetch origin dev &amp;&amp; git merge --ff-only origin/dev</code></li>
+<li><code>./run-website-locally.sh</code>: build, gate, serve on port 8000. The version reads <code>pending</code>: only CI numbers releases.</li>
+<li>Commit with a subject that says what changed and why, with no number in it, and push to your branch, then to <code>dev</code>.</li>
+<li>CI runs the gate, then one release job at a time picks the next number, commits it to <code>./version</code> as GitHub Actions with the subject <code>site vX.Y.Z: &lt;your subject&gt;</code>, tags it, builds that commit, gates it again and deploys it.</li>
+<li>The deploy polls the live <code>version.txt</code> until it serves the new number. A release is not done until it does.</li>
+</ol>
+<p>Every release is listed in the <a href="versions.html">release history</a>, read from git, and as data in <a href="versions/index.json">versions/index.json</a>.</p>
+
+<h2>Where everything is</h2>
+<ul>
+<li><a href="{{root}}brief/index.html">The brief</a>, published in full.</li>
+<li><a href="versions.html">The release history</a>.</li>
+<li><a href="{{root}}team/index.html">The team</a>: each member's role, scope, status and debriefs.</li>
+<li><a href="{{root}}about/index.html">About and disclosure</a>.</li>
+<li><a href="{{root}}llms.txt">llms.txt</a>, the index for agents.</li>
+</ul>
+</section>

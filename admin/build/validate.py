@@ -63,6 +63,40 @@ class Gate:
             if f'({Path(rel).with_suffix(".md")})' not in llms:
                 self.fail('llms.txt', rel, 'is not listed in llms.txt')
 
+    def chrome_pages(self):
+        return [p for p in self.html_files() if not str(p.relative_to(OUT)).startswith(self.STANDALONE)]
+
+    def check_chrome(self):                                         # structured data, and the version in the top bar
+        version = (OUT / 'version.txt').read_text().strip() if (OUT / 'version.txt').exists() else None
+        for page in self.chrome_pages():
+            text = page.read_text()
+            rel  = page.relative_to(OUT)
+            if '<script type="application/ld+json">' not in text:
+                self.fail('structured data', rel, 'no JSON-LD')
+            m = re.search(r'<a class="ver" href="[^"]*#([^"]+)"[^>]*>([^<]+)</a>', text)
+            if not m:
+                self.fail('version', rel, 'no version in the top bar')
+            elif m.group(2) != version:
+                self.fail('version', rel, f'top bar says {m.group(2)}, the build is {version}')
+
+    def check_reachable(self):                                      # a page nobody links to fails
+        attr, linked = re.compile(r'href="([^"#?]+)'), set()
+        for page in self.html_files():
+            for url in attr.findall(page.read_text()):
+                if not re.match(r'(https?:|mailto:|data:|javascript:)', url):
+                    target = ((OUT if url.startswith('/') else page.parent) / url.lstrip('/')).resolve()
+                    if target != page.resolve():
+                        linked.add(target)
+        for page in self.chrome_pages():
+            if page.resolve() not in linked and page.relative_to(OUT) != Path('index.html'):
+                self.fail('reachable', page.relative_to(OUT), 'no other page links to it')
+
+    def check_team(self):
+        r = subprocess.run([sys.executable, str(ROOT / 'admin/build/agents.py'), 'overlaps'], capture_output=True, text=True)
+        if r.returncode:
+            for line in r.stdout.splitlines():
+                self.fail('team', line.split(':')[0], 'claimed by more than one member: ' + line.split(':', 1)[-1].strip())
+
     def check_stamps(self):
         for path in OUT.rglob('*'):
             if path.is_file() and path.suffix in ('.html', '.md', '.js', '.css', '.json', '.txt'):
@@ -135,7 +169,7 @@ class Gate:
     def run(self):
         if not OUT.exists():
             sys.exit('build first: python3 admin/build/build.py')
-        for check in (self.check_links, self.check_twins_and_index, self.check_stamps, self.check_no_remote_code,
+        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_stamps, self.check_no_remote_code,
                       self.check_scripts_parse, self.check_talk, self.check_prose, self.check_leaks):
             check()
         if self.findings:

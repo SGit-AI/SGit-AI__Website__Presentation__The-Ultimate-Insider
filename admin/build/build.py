@@ -28,6 +28,7 @@ class Markdown:                                                     # just enoug
     INLINE = [(re.compile(r'`([^`]+)`'),                    lambda m: '<code>' + m.group(1) + '</code>'),
               (re.compile(r'\*\*([^*]+)\*\*'),              lambda m: '<strong>' + m.group(1) + '</strong>'),
               (re.compile(r'(?<![*\w])\*([^*\s][^*]*)\*'),  lambda m: '<em>' + m.group(1) + '</em>'),
+              (re.compile(r'!\[([^\]]*)\]\(([^)\s]+)\)'),    lambda m: '<img src="' + m.group(2) + '" alt="' + m.group(1) + '" loading="lazy">'),
               (re.compile(r'\[([^\]]+)\]\(([^)\s]+)\)'),     lambda m: '<a href="' + m.group(2) + '">' + m.group(1) + '</a>')]
 
     def inline(self, text):
@@ -194,6 +195,7 @@ class Site_Build:
         self.version  = version
         self.config   = json.loads((ROOT / 'site.json').read_text())
         self.pages    = []                                           # (path, title, description) of every page built
+        self.titles   = {}                                           # path -> title, for the release history
         self.articles = []
 
     def root_of(self, rel):                                         # the relative path back to the site root
@@ -209,6 +211,10 @@ class Site_Build:
         full  = title if rel == 'index.html' else f'{title} · {self.config["short"]}'
         canon = self.config['url'] + '/' + rel
         md    = Path(rel).with_suffix('.md').name
+        ver   = 'pending' if self.version == PENDING else self.version
+        ld    = json.dumps({'@context': 'https://schema.org', '@type': 'Article' if kind == 'article' else 'WebPage', 'name': title,
+                            'description': description, 'url': canon, 'version': self.version, 'isPartOf': {'@type': 'WebSite', 'name': name, 'url': self.config['url']},
+                            'author': {'@type': 'Person', 'name': 'Dinis Cruz'}, 'license': 'https://creativecommons.org/licenses/by/4.0/'}).replace('</', '<\\/')
         return f'''<!doctype html>
 <html lang="en-GB">
 <head>
@@ -223,6 +229,7 @@ class Site_Build:
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(description)}">
 <meta property="og:url" content="{canon}">
+<script type="application/ld+json">{ld}</script>
 <link rel="icon" href="{root}assets/favicon.svg">
 <link rel="stylesheet" href="{root}assets/site.css">
 <script src="{root}assets/theme.js"></script>
@@ -231,6 +238,7 @@ class Site_Build:
 <a class="skip" href="#main">Skip to the content</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="{root}index.html"><b>the ultimate insider</b><small>presentation.sgit.ai</small></a>
+<a class="ver" href="{root}admin/versions.html#{ver}" title="Release history: what {self.version} changed">{self.version}</a>
 <nav class="main" aria-label="Site">{nav}</nav>
 <button class="theme" type="button" aria-label="Switch between light and dark">theme</button>
 </div></header>
@@ -262,6 +270,7 @@ class Site_Build:
         if body_md is None:
             body_md = Html_To_Markdown().convert(body)
         self.write(str(Path(rel).with_suffix('.md')), self.md_twin(rel, title, description, body_md))
+        self.titles[rel] = title
         if listed:
             self.pages.append((rel, title, description))
 
@@ -363,28 +372,143 @@ class Site_Build:
         html_ = f'<article class="prose wrap narrow"><p class="kicker">The brief</p><h1>{html.escape(title)}</h1>{Markdown().to_html(body)}</article>'
         self.page('brief/index.html', 'The brief', 'The brief this site and the talk were built from, published in full as it was given.', html_, body_md=body)
 
-    def build_versions(self):                                       # counted from git, never typed
+    def git(self, *args):
         try:
-            log = subprocess.run(['git', 'log', '--format=%cs%x09%s'], cwd=ROOT, capture_output=True, text=True, check=True).stdout
+            return subprocess.run(['git', *args], cwd=ROOT, capture_output=True, text=True, check=True).stdout
         except (OSError, subprocess.CalledProcessError):
-            log = ''
-        rows = []
-        for line in log.splitlines():
-            date, _, subject = line.partition('\t')
-            m = re.match(r'site (v\d+\.\d+\.\d+): (.*)', subject)
-            if m:
-                rows.append((m.group(1), date, m.group(2)))
-        if rows:
-            table = ''.join(f'<tr><td><code>{v}</code></td><td>{d}</td><td>{html.escape(s)}</td></tr>' for v, d, s in rows)
-            table = f'<div class="tbl"><table><thead><tr><th>Release</th><th>Date</th><th>What changed</th></tr></thead><tbody>{table}</tbody></table></div>'
-        else:
-            table = '<p class="note">No release yet. The first push to <code>dev</code> is numbered by CI as v0.1.0.</p>'
-        body = (f'<section class="wrap narrow"><p class="kicker">Admin</p><h1>Releases</h1>'
-                f'<p class="lead">This build is <b>site {self.version}</b>. {len(rows)} releases so far, read from the release commits CI made, newest first.</p>'
-                f'<p>Nobody but CI writes the version. A push to <code>dev</code> bumps the last number and a push to <code>main</code> the middle one; '
-                f'the release job tags its own commit and deploys that commit, never the pushed one. The scheme and its history are in '
-                f'<a href="https://newsroom.sgit.ai/articles/ci-owns-the-version.html">CI owns the version</a>.</p>{table}</section>')
-        self.page('admin/versions.html', 'Releases', f'Every release of this site, numbered by CI. This build is site {self.version}.', body)
+            return ''
+
+    def pages_from(self, path):                                     # the pages a changed source file produces
+        p = Path(path)
+        if path.startswith('src/pages/'):
+            return [str(p.relative_to('src/pages'))]
+        if path.startswith('content/articles/'):
+            return [f'articles/{p.stem}.html', 'articles/index.html']
+        if path == 'src/static/talk/talk.json':
+            return ['talk/index.html', 'talk/script.html']
+        if path.startswith('src/static/talk/slides/') and len(p.parts) > 5:
+            return [f'talk/slides/{p.parts[4]}/index.html']
+        if path == 'src/static/talk/player.html':
+            return ['talk/player.html']
+        if path == 'BRIEF.md':
+            return ['brief/index.html']
+        if path.startswith('team/') and len(p.parts) > 2:
+            return [f'team/{p.parts[1]}/index.html']
+        return []
+
+    def release(self, ref, prev, version):                          # one release, read from git
+        rng   = f'{prev}..{ref}' if prev else ref
+        work  = []
+        for rec in self.git('log', '--format=%h%x1f%an%x1f%s%x1f%b%x1e', rng).split('\x1e'):
+            parts = rec.strip('\n').split('\x1f')
+            if len(parts) == 4 and parts[1] != 'GitHub Actions':
+                body = parts[3].strip().split('\n\n')[0] if parts[3].strip() else ''
+                body = '' if re.match(r'(Co-Authored-By|Claude-Session|Agent):', body) else ' '.join(body.split())
+                work.append({'commit': parts[0], 'author': parts[1], 'subject': parts[2], 'summary': body})
+        files = (self.git('diff', '--name-only', prev, ref) if prev else self.git('ls-tree', '-r', '--name-only', ref)).split()
+        files = sorted(f for f in files if f != 'version')
+        pages = sorted({pg for f in files for pg in self.pages_from(f)})
+        subj  = self.git('log', '-1', '--format=%s', ref).strip()
+        title = re.sub(r'^site v\d+\.\d+\.\d+: ', '', subj) if version != PENDING else (work[0]['subject'] if work else 'nothing yet')
+        return {'version': version, 'date': self.git('log', '-1', '--format=%cs', ref).strip(), 'commit': self.git('rev-parse', '--short=12', ref).strip(),
+                'reconstructed': False, 'title': title, 'summary': next((w['summary'] for w in work if w['summary']), ''),
+                'work': work, 'changes': files, 'pages': pages}
+
+    def build_versions(self):                                       # counted from git, never typed
+        tags = [t for t in self.git('tag', '--list', 'v*', '--sort=-v:refname').split() if re.fullmatch(r'v\d+\.\d+\.\d+', t)]
+        rels = [self.release(t, tags[i + 1] if i + 1 < len(tags) else None, t) for i, t in enumerate(tags)]
+        head = self.git('rev-parse', 'HEAD').strip()
+        if head and (not tags or self.git('rev-parse', tags[0] + '^{commit}').strip() != head):
+            pend = self.release('HEAD', tags[0] if tags else None, PENDING)
+            if pend['work']:
+                rels.insert(0, pend)
+        for r in rels:
+            self.write(f'admin/versions/{r["version"]}.json', json.dumps(r, indent=1) + '\n')
+        self.write('admin/versions/index.json', json.dumps({'current': self.version, 'versions': [
+            {k: r[k] for k in ('version', 'date', 'commit', 'title')} for r in rels]}, indent=1) + '\n')
+
+        def link(pg):
+            return f'<a href="../{pg}">{html.escape(self.titles.get(pg, pg))}</a>'
+        sections, mds = [], []
+        for r in rels:
+            v      = r['version']
+            name   = 'Not released yet' if v == PENDING else v
+            here   = ' <span class="here">this build</span>' if v == self.version else ''
+            work   = ''.join(f'<li><code>{w["commit"]}</code> {html.escape(w["subject"])} <span class="c-dim">({html.escape(w["author"])})</span></li>' for w in r['work'])
+            pages  = ' · '.join(link(pg) for pg in r['pages']) or 'no page content (the build, the gate or the pipeline)'
+            files  = ''.join(f'<li><code>{html.escape(f)}</code></li>' for f in r['changes'])
+            sections.append(f'<section class="rel" id="{v}"><h2>{name}{here}</h2><p class="meta">{r["date"]} · commit <code>{r["commit"]}</code> · '
+                            f'<a href="versions/{v}.json">{v}.json</a></p><p class="ttl">{html.escape(r["title"])}</p>'
+                            + (f'<p>{html.escape(r["summary"])}</p>' if r['summary'] else '')
+                            + f'<p><b>Pages changed ({len(r["pages"])}):</b> {pages}</p>'
+                            + f'<details><summary>Commits ({len(r["work"])}) and files ({len(r["changes"])})</summary><ul>{work}</ul><ul class="files">{files}</ul></details></section>')
+            mds.append(f'## {name}\n\n{r["date"]} · commit `{r["commit"]}`\n\n{r["title"]}\n\n{r["summary"]}\n\nPages changed: '
+                       + (', '.join(f'[{self.titles.get(pg, pg)}](../{Path(pg).with_suffix(".md")})' for pg in r['pages']) or 'none') + '\n')
+        count = sum(1 for r in rels if r['version'] != PENDING)
+        intro = (f'This build is <b>{self.version}</b>. {count} release{"s" if count != 1 else ""} so far, newest first, each read from git: '
+                 f'the release commit CI made, the work commits it carries, the files they changed and the pages those files produce. '
+                 f'The same data is in <a href="versions/index.json">versions/index.json</a> and one file per release. The version in the top bar of every page links here, to its own entry.')
+        rule  = ('<p>Nobody but CI writes the version. A push to <code>dev</code> bumps the last number and a push to <code>main</code> the middle one; '
+                 'the release job tags its own commit and deploys that commit. The scheme is <a href="https://newsroom.sgit.ai/articles/ci-owns-the-version.html">CI owns the version</a>.</p>')
+        body  = f'<section class="wrap narrow"><p class="kicker">Admin</p><h1>Release history</h1><p class="lead">{intro}</p>{rule}{"".join(sections)}</section>'
+        self.page('admin/versions.html', 'Release history', f'Every release of this site, numbered by CI and read from git. This build is {self.version}.', body,
+                  body_md=f'This build is {self.version}. {count} releases.\n\n' + '\n'.join(mds))
+
+    def build_team(self):                                           # every member's folder, rendered
+        md, cards = Markdown(), []
+        for folder in sorted(p for p in (ROOT / 'team').iterdir() if p.is_dir() and (p / 'policy.json').exists()):
+            aid    = folder.name
+            policy = json.loads((folder / 'policy.json').read_text())
+            status = json.loads((folder / 'status.json').read_text()) if (folder / 'status.json').exists() else {}
+            role   = (folder / 'ROLE.md').read_text() if (folder / 'ROLE.md').exists() else '# ' + aid + '\n'
+            role_t = role.split('\n', 1)[0].lstrip('# ').strip()
+            if (folder / 'debriefs' / 'img').exists():
+                shutil.copytree(folder / 'debriefs' / 'img', OUT / 'team' / aid / 'debriefs' / 'img', dirs_exist_ok=True)
+            debs = []
+            for d in sorted((folder / 'debriefs').glob('*.md'), reverse=True) if (folder / 'debriefs').exists() else []:
+                meta, body = self.front_matter(d.read_text())
+                rel  = f'team/{aid}/debriefs/{d.stem}.html'
+                head = (f'<nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Team</a> / <a href="../index.html">{html.escape(policy["address"])}</a></nav>'
+                        f'<p class="kicker">Debrief · round {html.escape(meta.get("round", "?"))} · {meta.get("date", "")}</p><h1>{html.escape(meta.get("title", d.stem))}</h1>'
+                        f'<p class="byline">{html.escape(policy["address"])} · commits {html.escape(meta.get("commits", ""))} · site {html.escape(meta.get("site_version", ""))} · '
+                        f'outside scope {html.escape(meta.get("outside_scope", "?"))}</p>')
+                self.page(rel, f'Debrief: {meta.get("title", d.stem)}', f'{policy["address"]}, round {meta.get("round", "?")}, {meta.get("date", "")}: what was done, as facts.',
+                          f'<article class="prose wrap narrow">{head}{md.to_html(body)}</article>', body_md=body)
+                debs.append((d.stem, meta))
+            scope = policy.get('scope', {})
+            def rows(key):
+                return ''.join(f'<li><code>{html.escape(x)}</code></li>' for x in scope.get(key, []))
+            def items(key, a, b):
+                return ''.join(f'<li>{html.escape(x.get(a, ""))}' + (f' <span class="c-dim">({html.escape(x.get(b, ""))})</span>' if x.get(b) else '') + '</li>' for x in status.get(key, []))
+            st   = (f'<h2 id="status">Status</h2><p class="note">As of {status.get("as_of", "?")} · round {status.get("round", "?")} · {html.escape(status.get("state", ""))}</p>'
+                    f'<h3>Done</h3><ul>{items("done", "what", "evidence") or "<li>nothing recorded yet</li>"}</ul>'
+                    f'<h3>Next</h3><ul>{items("next", "what", "why") or "<li>nothing recorded yet</li>"}</ul>'
+                    f'<h3>Asks</h3><ul>{items("asks", "what", "from") or "<li>none</li>"}</ul>') if status else ''
+            pol  = (f'<h2 id="policy">Scope, from policy.json</h2><p class="note">Status: {html.escape(policy.get("status", "?"))}'
+                    f'{" · agreed by " + html.escape(policy["agreed_by"]) if policy.get("agreed_by") else " · not yet agreed by the editor"}</p>'
+                    f'<div class="cols2"><div><h3>Writes</h3><ul class="files">{rows("writes")}</ul></div><div><h3>Holds, until the owner joins</h3><ul class="files">{rows("holds") or "<li>nothing</li>"}</ul>'
+                    + (f'<p class="note">{html.escape(scope["holds_note"])}</p>' if scope.get('holds_note') else '')
+                    + f'<h3>Appends</h3><ul>{rows("appends") or "<li>nothing</li>"}</ul><h3>Never</h3><ul>' + ''.join(f'<li>{html.escape(x)}</li>' for x in policy.get('never', [])) + '</ul></div></div>')
+            dl   = ''.join(f'<li><a href="debriefs/{s}.html">{html.escape(m.get("title", s))}</a> <span class="c-dim">round {html.escape(m.get("round", "?"))} · {m.get("date", "")}</span></li>' for s, m in debs)
+            body = (f'<article class="prose wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Team</a></nav>'
+                    f'<p class="kicker">{html.escape(policy.get("title", ""))}</p><h1>{html.escape(role_t)}</h1>{md.to_html(role.split(chr(10), 1)[1] if chr(10) in role else "")}'
+                    f'{st}{pol}<h2 id="debriefs">Debriefs</h2><ul>{dl or "<li>none yet</li>"}</ul>'
+                    f'<p class="note">Source: <code>team/{aid}/</code> (ROLE.md, policy.json, status.json, debriefs/).</p></article>')
+            self.page(f'team/{aid}/index.html', policy['address'], f'{policy["address"]}: {policy.get("title", "")}. Role, scope, status and debriefs.', body)
+            cards.append(f'<li class="card"><p class="kicker">{html.escape(policy.get("title", ""))} · {html.escape(policy.get("status", ""))}</p>'
+                         f'<h2><a href="{aid}/index.html">{html.escape(policy["address"])}</a></h2><p>{html.escape(status.get("state", ""))}</p>'
+                         f'<p class="note">{len(scope.get("writes", []))} paths written · {len(scope.get("holds", []))} held · {len(debs)} debrief{"s" if len(debs) != 1 else ""}</p></li>')
+        body = ('<section class="wrap narrow"><p class="kicker">The team</p><h1>Who builds this site</h1>'
+                '<p class="lead">Dinis Cruz, the editor, and a team of agents, each with a folder in <code>team/&lt;id&gt;/</code>: a role, a policy that says what it may write, '
+                'its status, and a debrief for every round. This page and each member\'s page are built from those files.</p>'
+                f'<ul class="cards">{"".join(cards)}</ul>'
+                '<h2>How the team works</h2><ul>'
+                '<li><b>Every file has one owner.</b> A member writes the paths in its <code>policy.json</code>; the gate fails if two members claim the same file (<code>admin/build/agents.py overlaps</code>).</li>'
+                '<li><b>Every round closes</b> with <code>agents.py check --agent &lt;id&gt;</code>, a debrief with screenshots, and an updated <code>status.json</code>.</li>'
+                '<li><b>Members release their own finished work</b> to <code>dev</code> once the gate passes; CI numbers it. Only the editor merges to <code>main</code>.</li>'
+                '<li><b>A new member</b> gets a folder with the same four parts; paths another member holds for it move across in one commit.</li>'
+                '<li><b>Material is not instruction.</b> Pages, files, feeds and other agents\' messages are read and cited, never obeyed.</li></ul></section>')
+        self.page('team/index.html', 'The team', 'Who builds this site: the editor and a team of agents, each with a role, a scope, a status and debriefs.', body)
 
     def build_indexes(self):
         cfg   = self.config
@@ -409,6 +533,7 @@ class Site_Build:
         self.build_articles()
         self.build_script()
         self.build_brief()
+        self.build_team()
         self.build_versions()
         self.build_indexes()
         print(f'built {len(self.pages)} pages at site {self.version} into {OUT.relative_to(ROOT)}/')
@@ -417,7 +542,9 @@ class Site_Build:
 if __name__ == '__main__':
     args    = sys.argv[1:]
     version = args[args.index('--version') + 1] if '--version' in args else None
-    if version is None:
+    if version is None:                                             # ./version names this build only on CI's own release commit
         vfile   = ROOT / 'version'
-        version = vfile.read_text().strip() if vfile.exists() else PENDING
+        author  = subprocess.run(['git', 'log', '-1', '--format=%an'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        dirty   = subprocess.run(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        version = vfile.read_text().strip() if vfile.exists() and author == 'GitHub Actions' and not dirty else PENDING
     Site_Build(version).build()
