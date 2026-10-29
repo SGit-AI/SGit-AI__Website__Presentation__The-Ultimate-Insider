@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "As planned: talk.json in the storyteller's 19-beat order as 22 beats (three pairs kept as separate beats at the merged times), 38:30, new slides (building, integrity, team, four maps), sources from the register only, S1 to S5 left out. Added: motion@'s M01 v1 arrived during the wake, reviewed (keep) and put on the building beat; M02 asked; studio@'s ports placed by mail; the studio's one-story wording and story map. The 90-minute re-time waits for the next wake.",
    "at": "2026-10-29T16:39:41Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Three deck commits in scope (0 outside); build and gate pass; no keys, contact details or em-dashes; no unsourced numbers on slides; mails and M02 request keep to the register's words, nothing attack-shaped; no numbers in subjects.",
+   "at": "2026-10-29T16:40:39Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "22 beats in sequence.md order, 2310 s; three pairs separate at merged times; new beats, slides, M01 on building, M02, ports, studio wording in ca59986, 950a53a, 90b3056; gate clean (251). 90-minute re-time deferred as declared.",
+   "at": "2026-10-29T16:40:39Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T16:40:39Z",
+ "outcome": "ok"
 }
