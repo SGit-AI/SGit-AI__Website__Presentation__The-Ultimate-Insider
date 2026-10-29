@@ -3,7 +3,7 @@
   "agent": "storyteller",
   "as_of": "2026-10-29",
   "round": 5,
-  "state": "17:49 wake (the editor's chat, ahead of :54): three parts placed for the locks: part 1 (deck's) checked, notes only; parts 2 (30:10) and 3 (27:30) to deck; the split was late (due 17:30); policy agreed",
+  "state": "17:55 wake (scheduled :54): idle, two minutes after the 17:49 wake; nothing new; the 18:09 follow-up checks part 2 before 19:30",
   "task": {
     "id": "trig_013ML9DZ6k9VCinyhKF7peGA",
     "cron": "CRON_TZ=Europe/London 54 * * * *",
