@@ -1,0 +1,423 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T18:00:57Z",
+ "until": "2026-10-29T18:21:15Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T18:05:52Z",
+   "kind": "scheduled, hourly at :02",
+   "outcome": "idle",
+   "record": "team/conductor/wakes/20261029T180552Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Idle hourly wake: nothing open since the 18:02 close (part 1 final, nothing to route; dev shipped the Linux link slide at 18:01); status.json state only; the 18:18 follow-up (send_later trig_01BVn9YbfL9Nvryf6L3HeGUa) holds the lock work."
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T18:19:42Z",
+   "kind": "follow-up wake (tonight's rule)",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T181942Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "18:20 flag: part 1 final (22 beats, 29:30), nothing changes it near the lock; route the storyteller's parts-2-and-3 gaps (deck 080); deck 081 the sweep (studio's abp-prose and abp-enforcement); refresh team numbers, the mini deck and Moments (conductor files only, not motion's copy); pace flag; send_later about 18:35 to check the lock."
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T18:12:27Z",
+   "kind": "scheduled, hourly at :09",
+   "outcome": "open",
+   "record": "team/researcher/wakes/20261029T181227Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "033 first (due 18:15): each row of the how-we-keep-it-safe table against the repo (ROLE.md Reach, policy.json, key.json count, vaults.json, wakes, agents.py, release.yml), holds, wrong or as stated, file cited; into the register; mail motion@ and deck. Then 032 by one public-fetch pass: open source strategy, investment workflows on newsroom.sgit.ai, PHP October cases where the exploited product wa"
+  },
+  {
+   "agent": "storyteller",
+   "started": "2026-10-29T18:14:10Z",
+   "kind": "follow-up (tonight's rule)",
+   "outcome": "ok",
+   "record": "team/storyteller/wakes/20261029T181410Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) story/part-check-1814.md: talk.json parts 2 (23:45, about 6 under 30) and 3 (21:40, about 8 under) against three-parts.md: part 2 lacks blast radius, security products as targets, inline agents; part 3 lacks SGit, PKI/newsroom showcases, open source, investors, the SHarness challenge. 2) a short request to deck in requests/. 3) status.json. talk.json not touched. (Corrected: the sub-agent's 'ov"
+  },
+  {
+   "agent": "studio",
+   "started": "2026-10-29T18:06:28Z",
+   "kind": "follow-up, tonight every 15 min (the editor's word)",
+   "outcome": "ok",
+   "record": "team/studio/wakes/20261029T180628Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1. Requests first: tell deck what landed (by mail in mailroom/deck, since studio holds the mail key; the plan named the repository fallback), no key, path or session id. 2. Showcase 2: ruv.sgit's ABP in prose from /team/ruv-sgit/index.html beside its policy.json, at src/static/studio-ports/lab/abp-prose/ with its page. 3. Showcase 3: the enforcement, agents.py check '0 file(s) outside scope' and a"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "storyteller",
+   "sha": "64859cc",
+   "at": "2026-10-29T18:15:53+00:00",
+   "subject": "@storyteller: close the 18:14 follow-up: post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "storyteller",
+   "sha": "e8c0fbb",
+   "at": "2026-10-29T18:15:31+00:00",
+   "subject": "@storyteller: parts 2 and 3 checked before their locks: the blast-radius piece the editor named is in no beat",
+   "changed": 4
+  },
+  {
+   "agent": "deck",
+   "sha": "b3f208f",
+   "at": "2026-10-29T18:14:54+00:00",
+   "subject": "@deck: the title slide first, before the 18:30 lock: the event, the talk and the editor, then meet the team",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "7323986",
+   "at": "2026-10-29T18:14:30+00:00",
+   "subject": "@researcher: how we keep it safe, nine claims checked against the record, four to correct, for motion and deck",
+   "changed": 2
+  },
+  {
+   "agent": "studio",
+   "sha": "1a56395",
+   "at": "2026-10-29T18:12:54+00:00",
+   "subject": "@studio: close the 18:04 follow-up wake (five steps, as planned)",
+   "changed": 1
+  },
+  {
+   "agent": "studio",
+   "sha": "e9578f8",
+   "at": "2026-10-29T18:11:59+00:00",
+   "subject": "@studio: wake record: the work step",
+   "changed": 1
+  },
+  {
+   "agent": "studio",
+   "sha": "95b09d9",
+   "at": "2026-10-29T18:11:59+00:00",
+   "subject": "@studio: this team's own ABPs, showcases 2 and 3: the policy in prose, and five steps every wake",
+   "changed": 15
+  },
+  {
+   "agent": "dev",
+   "sha": "36e9e65",
+   "at": "2026-10-29T18:06:56+00:00",
+   "subject": "@dev: wake record: the post-review (clean)",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "55c41a4",
+   "at": "2026-10-29T18:06:26+00:00",
+   "subject": "@conductor: the 18:05 hourly wake, idle: part 1 final, the 18:18 follow-up holds the lock work",
+   "changed": 2
+  },
+  {
+   "agent": "conductor",
+   "sha": "d1e53b1",
+   "at": "2026-10-29T18:02:17+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "9d27703",
+   "at": "2026-10-29T18:01:36+00:00",
+   "subject": "@conductor: the 18:00 flag: part 1 final for its lock, nothing misses it; two new SHarness pieces to deck",
+   "changed": 9
+  }
+ ],
+ "made": [
+  {
+   "page": "studio-ports/abp-enforcement/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/abp-prose/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/lab/abp-enforcement/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/lab/abp-prose/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "articles/moments.html",
+   "by": "conductor"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio-ports/lab/abp-enforcement/index.html",
+   "img": "night-20261029T1821-1.png"
+  },
+  {
+   "page": "studio-ports/lab/abp-prose/index.html",
+   "img": "night-20261029T1821-2.png"
+  },
+  {
+   "page": "articles/moments.html",
+   "img": "night-20261029T1821-3.png"
+  },
+  {
+   "page": "studio-ports/abp-enforcement/index.html",
+   "img": "night-20261029T1821-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T18:01:48Z",
+   "sender": "dev",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "The Linux link slide is on dev, for part 3"
+  },
+  {
+   "at": "2026-10-29T18:02:53Z",
+   "sender": "dev",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Urgent, before the 18:30 lock: the editor wants a first slide with the event, the talk and him"
+  },
+  {
+   "at": "2026-10-29T18:03:00Z",
+   "sender": "studio",
+   "to": "deck",
+   "kind": "update",
+   "subject": "Correction to 071: the editor agreed all ten policies at 17:40; the slide now says so"
+  },
+  {
+   "at": "2026-10-29T18:14:21Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "How we keep it safe: nine claims checked, four to correct (vault tokens, request files, the blast radius, the second repository)"
+  },
+  {
+   "at": "2026-10-29T18:14:21Z",
+   "sender": "researcher",
+   "to": "motion",
+   "kind": "reply",
+   "subject": "How we keep it safe: nine claims checked, four to correct (vault tokens, request files, the blast radius, the second repository)"
+  },
+  {
+   "at": "2026-10-29T18:16:00Z",
+   "sender": "deck",
+   "to": "dev",
+   "kind": "reply",
+   "subject": "Re: the first slide: done, on dev 91ce100 at 18:15; part 1 is yours to lock"
+  },
+  {
+   "at": "2026-10-29T18:16:45Z",
+   "sender": "dev",
+   "to": "studio",
+   "kind": "request",
+   "subject": "Urgent, before the 18:30 lock: E08 v1's title wraps onto the line below it"
+  },
+  {
+   "at": "2026-10-29T18:18:58Z",
+   "sender": "dev",
+   "to": "ruv-sgit",
+   "kind": "note",
+   "subject": "Two CSS rules changed in your E08 v1 and E04 v2, at the editor's word, before the part 1 lock"
+  },
+  {
+   "at": "2026-10-29T18:19:00Z",
+   "sender": "studio",
+   "to": "dev",
+   "kind": "reply",
+   "subject": "Re: Urgent, E08 v1's title: the owner is ruv.sgit@, not studio@; the fix is one line"
+  },
+  {
+   "at": "2026-10-29T18:20:00Z",
+   "sender": "storyteller",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Before 19:30: the blast-radius piece the editor named is not in the talk; part 2 has six minutes free for the attacks"
+  },
+  {
+   "at": "2026-10-29T18:20:01Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The 18:20 sweep: studio's two new ABP showcases for part 3"
+  }
+ ],
+ "problems": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T18:05:52Z",
+   "outcome": "idle",
+   "verdicts": {},
+   "record": "team/conductor/wakes/20261029T180552Z.json"
+  }
+ ],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or move the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
+    "from": "the editor"
+   },
+   {
+    "what": "Confirm 'newsroom.esquito.ai' = newsroom.sgit.ai and 'attrition' = commoditisation on the Wardley maps; 'Empower', 'the billing', which blast radius",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload the motion and studio vault-key zips into their sessions",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Skip or move studio pieces in the build mode; if the lane fails, paste the JSON of your changes in chat (dev is adding the copy button)",
+    "from": "the editor"
+   },
+   {
+    "what": "The talk is rewritten into your 15:00 order: 22 beats, 38:30, in the player now; check the words in the script",
+    "from": "the editor"
+   },
+   {
+    "what": "Placement of the studio pieces beyond those now in the talk (E04 v2 on limits, M01 on building): set it in the build mode or say",
+    "from": "the editor"
+   }
+  ],
+  "designer": [
+   {
+    "what": "Tonight's rule in WAKE.md asks each member to schedule one-off follow-ups with send_later; designer's standing wake prompt says never to create a scheduled task, and its policy allows only its own :39 task. Designer has not scheduled any. Say in this session if you want it to.",
+    "from": "the editor"
+   }
+  ],
+  "dev": [
+   {
+    "from": "dev",
+    "to": "the editor",
+    "what": "Give the conductor's session its two sealed files from the lane handover zip"
+   }
+  ],
+  "motion": [
+   {
+    "to": "dev",
+    "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+   },
+   {
+    "to": "conductor",
+    "what": "mark the motion row of schedule.json running with the task id"
+   },
+   {
+    "to": "deck",
+    "what": "review M02; say where M03 goes (before or after the building)"
+   },
+   {
+    "to": "editor",
+    "what": "say whether motion may schedule the tonight-only send_later follow-up into its own session"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E12, E08, E14, E05, E06 and the SHarness series",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Capture sharness.ai's animations and workflows, and the browser Linux page",
+    "from": "researcher@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r23",
+    "from": "the editor"
+   }
+  ],
+  "storyteller": [
+   {
+    "what": "seal the two vault keys to team/storyteller/key.json",
+    "from": "conductor"
+   }
+  ],
+  "studio": [
+   {
+    "what": "confirm in studio's session that studio's policy is agreed (the conductor relays 'So I agree with all those policies', 17:40)",
+    "from": "the editor"
+   },
+   {
+    "what": "which piece for the definition beat; where the showcases sit",
+    "from": "deck"
+   },
+   {
+    "what": "the showcase's \"end\" reaches the engine",
+    "from": "dev"
+   }
+  ]
+ }
+}

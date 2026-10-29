@@ -1,0 +1,37 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "follow-up wake (tonight's rule)",
+ "started": "2026-10-29T18:19:42Z",
+ "steps": {
+  "plan": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "18:20 flag: part 1 final (22 beats, 29:30), nothing changes it near the lock; route the storyteller's parts-2-and-3 gaps (deck 080); deck 081 the sweep (studio's abp-prose and abp-enforcement); refresh team numbers, the mini deck and Moments (conductor files only, not motion's copy); pace flag; send_later about 18:35 to check the lock.",
+   "at": "2026-10-29T18:20:55Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Re-check: 081 corrected against talk.json; conditions carried.",
+   "at": "2026-10-29T18:20:55Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "opus",
+   "verdict": "done",
+   "comment": "Deck 080 (storyteller's gaps, verbatim) and 081 (corrected sweep) pushed; pace 18:20 flag; pre-lock refresh of team-in-numbers, the mini deck and Moments (conductor files only, no talk.json or src change); four shots checked (policy hashes and page-link QR codes, no key); build and gate clean.",
+   "at": "2026-10-29T18:21:58Z"
+  }
+ },
+ "closed": null,
+ "outcome": null,
+ "history": [
+  {
+   "at": "18:20Z",
+   "what": "pre-review said change: adopted. 081 rechecked against talk.json: deck had placed the PKI and journey ports, four SHarness pieces and two b01/v2 stages; the mail now lists only what is still out (moving-parts, run-pipeline, b01/v2 opener and three)."
+  }
+ ]
+}
