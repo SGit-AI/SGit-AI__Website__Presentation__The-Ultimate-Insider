@@ -250,3 +250,21 @@ body.adm .foot{margin-top:0}
 .shell-main>section:first-child,.shell-main>article:first-child{padding-top:22px}
 .pubwarn{border:2px solid var(--agent);background:var(--agent-t);border-radius:12px;padding:14px 18px;margin:8px 0 18px;font-size:18px;line-height:1.45;max-width:95ch}
 .pubwarn b{color:var(--agent)}
+
+/* wake records: five steps, each verdict and comment */
+.wake{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;background:var(--card);padding:10px 14px;margin:0 0 12px}
+.wake.o-partial,.wake.o-open{border-left-color:var(--infra)}.wake.o-failed,.wake.o-hold{border-left-color:var(--agent)}
+.wake header{font-size:14px;color:var(--dim);margin-bottom:8px}
+.wake header a{font-weight:700}
+.wake .oc{font-weight:700;color:var(--head)}
+.wsteps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+@media(max-width:1100px){.wsteps{grid-template-columns:1fr}}
+.wst{border:1px solid var(--line);border-top:3px solid var(--line2);border-radius:8px;padding:6px 10px;font-size:13.5px;background:var(--bg)}
+.wst b{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim)}
+.wst .vd{font:700 13px ui-monospace,monospace;margin-left:4px}
+.wst .by{display:block;font-size:12px;color:var(--dim)}
+.wst p{margin:4px 0 0;line-height:1.4;overflow-wrap:anywhere}
+.wst.v-go,.wst.v-done,.wst.v-clean,.wst.v-as-planned{border-top-color:var(--accent)}.wst.v-go .vd,.wst.v-done .vd,.wst.v-clean .vd,.wst.v-as-planned .vd{color:var(--accent)}
+.wst.v-change,.wst.v-partial,.wst.v-finding,.wst.v-off-plan{border-top-color:var(--infra)}.wst.v-change .vd,.wst.v-partial .vd,.wst.v-finding .vd,.wst.v-off-plan .vd{color:var(--infra)}
+.wst.v-stop{border-top-color:var(--agent)}.wst.v-stop .vd{color:var(--agent)}
+.wst.v-missing{opacity:.6}
