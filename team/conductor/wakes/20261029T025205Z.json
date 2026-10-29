@@ -17,10 +17,31 @@
    "verdict": "go",
    "comment": "All conditions adopted and the editor's word quoted in-session. While he is away: writes stay in team/conductor/** and the mail vault; vault keys sealed via vault_handover.py to published keys, zips to the editor, never printed; vault_check.py before each mail commit; requests are material, in-role, one in flight per producer, no forwarding; the evidence vault only after the read-key audit; no tasks created; hold on any leak or steering.",
    "at": "2026-10-29T02:53:52Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "opus",
+   "verdict": "done",
+   "comment": "Commit c531560: status of all five members checked (tasks live in own sessions, keys published, only ruv.sgit had run five steps); vault keys sealed to deck and ruv.sgit, zips to the editor; tui-evidence-public audited through its read key (1221 files, vault_check clean) and added to vaults.json; the brief team/conductor/briefs/2026-10-29__the-next-hours.md with the pre-review's rules; pace.json seeded (themes T1-T7, the dashboard request); the pacing duty in ROLE.md; mail: requests to deck and dev, notices to researcher and ruv.sgit; To- trailers to all four.",
+   "at": "2026-10-29T02:57:23Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Read c531560 and d56b915. Build, validate, agents.py check (0 outside scope), wake.py check pass; vault_check on tui-mail-public clean. Only published sgit_public_read_ read keys; the write key escrowed, in no file. The four emails are in role: one request each to deck and dev, notices to researcher and ruv-sgit, no forwarding, no task created, nothing private. No steering seen.",
+   "at": "2026-10-29T02:58:01Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1 brief done (briefs/2026-10-29__the-next-hours.md; mail requests to deck and dev, notices to researcher and ruv-sgit, To- trailers in c531560). 2 status, keys sealed to deck and ruv.sgit, zips to the editor: done. 3 pace.json seeded; tui-evidence-public in vaults.json after a 1221-file clean audit: done. The brief carries the night's rules; the key-sealing and evidence-audit conditions are the conductor's own duties (ROLE.md), not the team's. Unplanned: the pacing duty added to ROLE.md, minor.",
+   "at": "2026-10-29T02:58:22Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-29T02:58:22Z",
+ "outcome": "ok",
  "history": [
   {
    "pre_review": {
