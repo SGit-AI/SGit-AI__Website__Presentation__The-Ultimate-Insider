@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "No overlap: team/motion/**, src/static/motion/**, team/studio/**, src/static/studio-ports/** match no existing scope.writes. The conductor creates no task or session. Conditions: no key in the paste prompts; motion and studio create their own tasks at the editor's word; the dev request adds the gate's standalone list.",
    "at": "2026-10-29T15:23:49Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) team/conductor/briefs/2026-10-29__onboarding-motion.md and __onboarding-studio.md, each with the role, files (pieces under <base>/lab/, pages in src/pages/<base>/, so no address clash; corrected mid-wake), slot and paste prompt; references checked against dev (the player runs engine pieces with RUV_STEPS, no clock.js). 2) schedule.json both proposed; pace.json producers; status.json. 3) Mail: dev (standalone areas, then a correction to motion/lab/ and studio-ports/lab/), deck (who gets which request), ruv-sgit (notice); vault_check clean, pushed. Gate clean. Commit f00734f.",
+   "at": "2026-10-29T15:25:40Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "f00734f: the motion and studio paths overlap no member's scope.writes; briefs and prompts hold no key; schedule.json marks both runs proposed; mails to dev, deck and ruv-sgit benign; vault_check, build, validate, agents check clean.",
+   "at": "2026-10-29T15:26:15Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "partial",
+   "comment": "Items 1 to 3 done (both briefs with role, paths, slot and prompt; schedule proposed at :24 and :12; pace and status; mail to dev, deck, ruv-sgit; vault_check and gate clean). Conditions kept. Unplanned: pieces moved to <base>/lab/ with pages in src/pages/<base>/, and a correction to dev; disclosed and sound.",
+   "at": "2026-10-29T15:26:15Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:26:15Z",
+ "outcome": "ok"
 }
