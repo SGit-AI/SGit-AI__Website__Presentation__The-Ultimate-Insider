@@ -74,7 +74,9 @@ def end(a):
     for part in ([f'released {a.release}'] if a.release else []) + ([f'problems {a.problems}'] if a.problems else []):
         if len(line) + 3 + len(part) > W:                           # a field that does not fit starts its own row, never cut
             rows.append(line)
-            line = part
+            wrapped = textwrap.wrap(part, W, subsequent_indent=' ' * 9) or ['']   # and one longer than a row wraps, never cut
+            rows   += wrapped[:-1]
+            line    = wrapped[-1]
         else:
             line += '   ' + part
     rows.append(line)
