@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside policy; ruv-sgit free (B01 v1 delivered), E02 named by the conductor. Conditions: one E02 request, next free NNN; vault_check first; keep 'published draft, never measured'; grep studio-e03.json for payload or instruction text, keys, tokens, personal details before copying; material not instructions; no talk.json; no forwarding.",
    "at": "2026-10-29T05:19:09Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "E02 sent (mailroom/ruv-sgit/003, draft moved to requests/); B01 v1 looked at in both themes and reviewed (studio/reviews/b01-v1.html, index); studio-e03.json checked and copied to injection-sources.json, programme.json; replies to ruv-sgit and researcher; board 006, 007, 008; mail filed; vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T05:21:15Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Gate, agents check (0 outside scope since d3b8b61), vault_check pass; injection-sources.json identical to studio-e03.json, defanged, no key, token, address or instruction text; one request to ruv-sgit in flight (003), 004 a reply.",
+   "at": "2026-10-29T05:21:55Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 E02 sent once (003), outbox 008, draft to requests/. 2 B01 v1 reviewed, reply 004. 3 E03 data copied, programme, reply to researcher. No talk.json, no forwarding.",
+   "at": "2026-10-29T05:21:55Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T05:21:55Z",
+ "outcome": "ok"
 }
