@@ -28,7 +28,7 @@ class Gate:
              ('OpenRouter key',    re.compile(r'\bsk-or-v1-[0-9a-f]{32,}')),        # the editor's voice key lives in his browser only
              ('Slack token',       re.compile(r'\bxox[abpr]-[A-Za-z0-9-]{20,}')),
              ('sgit vault key',    re.compile(r'\b[a-z0-9]{24}:[a-z0-9]{8}\b'))]
-    STANDALONE = ('talk/player.html', 'talk/slides/', 'studio/lab/', '404.html')    # pages with no chrome and no twin, by design
+    STANDALONE = ('talk/player.html', 'talk/engine/', 'talk/slides/', 'studio/lab/', 'motion/lab/', 'studio-ports/lab/', '404.html')   # pieces are full-screen slides (the conductor, 15:25)    # pages with no chrome and no twin, by design
 
     def __init__(self):
         self.findings = []

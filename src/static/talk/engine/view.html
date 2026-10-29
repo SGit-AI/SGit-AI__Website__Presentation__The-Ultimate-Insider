@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-GB" data-theme="dark" data-pane="api">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The viewer: one piece at a time</title>
+<meta name="site-version" content="{{version}}">
+<link rel="icon" href="../../assets/favicon.svg">
+<link rel="stylesheet" href="../../assets/tokens.css">
+<script src="../../assets/pane.js" defer></script>
+<!-- The viewer (dev, 29 October 2026; deck's request of 14:45, the editor's "steps on every piece, in the studio too"): one
+     studio piece or slide, full width, on the slide engine's clock (RuvClock): play, pause, replay, the scrub bar with its
+     stops, two stops per step as in the player, speed, the piece's id, the previous and next piece without a reload, a
+     comment to the editor's lane, and "in my order", the player's build mode. Its address: talk/engine/view.html?id=e01/v2
+     (an id from talk/pieces.json) or ?src=<path from the site root>. Everything it writes on the page is textContent. -->
+<style>
+:root { --barh:112px }
+* { box-sizing:border-box }
+html,body { margin:0; height:100%; background:var(--bg); color:var(--text); font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; overflow:hidden; -webkit-tap-highlight-color:transparent }
+button { font:inherit; cursor:pointer; touch-action:manipulation }
+#top { position:absolute; left:0; right:0; top:0; height:64px; display:flex; align-items:center; gap:12px; padding:0 14px; border-bottom:1px solid var(--line); background:var(--panel) }
+#id { font:800 26px/1 ui-monospace,SFMono-Regular,Menlo,monospace; color:var(--accent); letter-spacing:.02em; white-space:nowrap }
+#ttl { min-width:0; flex:1; font:600 18px/1.2 Georgia,serif; color:var(--head); overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+#ttl small { display:block; font:600 12px system-ui,sans-serif; letter-spacing:.06em; text-transform:uppercase; color:var(--dim); margin-top:3px }
+.b { height:42px; min-width:42px; border:1px solid var(--line); background:var(--card); color:var(--text); border-radius:10px; font-weight:650; padding:0 12px; white-space:nowrap }
+.b:hover { border-color:var(--accent) } .b.on { border-color:var(--accent); color:var(--accent) } .b.go { background:var(--accent); border-color:var(--accent); color:var(--on-accent) }
+.b:disabled { opacity:.45; cursor:default }
+#stage { position:absolute; left:0; right:0; top:64px; bottom:var(--barh); background:#000 }
+#stage iframe { position:absolute; inset:0; width:100%; height:100%; border:0; background:#000 }
+#tap { position:absolute; inset:0; z-index:2; touch-action:pan-y pinch-zoom }
+#note { position:absolute; left:50%; top:16px; transform:translateX(-50%); z-index:3; background:var(--panel); border:1px solid var(--line); color:var(--dim); border-radius:999px; padding:6px 14px; font-size:14px; display:none }
+#note.on { display:block }
+#bar { position:absolute; left:0; right:0; bottom:0; height:var(--barh); overflow:hidden; border-top:1px solid var(--line); background:var(--panel); padding:8px 14px calc(8px + env(safe-area-inset-bottom)); display:flex; flex-direction:column; gap:8px }
+#scrub { position:relative; height:34px; cursor:pointer; touch-action:none }
+#scrub .track { position:absolute; left:0; right:0; top:14px; height:6px; border-radius:3px; background:var(--line) }
+#scrub .fill { position:absolute; left:0; top:14px; height:6px; border-radius:3px; background:var(--accent); width:0 }
+#scrub .knob { position:absolute; top:7px; width:20px; height:20px; margin-left:-10px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-t); left:0 }
+#scrub .stop { position:absolute; top:6px; width:3px; height:22px; margin-left:-1px; border-radius:2px; background:var(--dim) }
+#scrub .stop.end { background:var(--infra) }
+#scrub .lab { position:absolute; top:-4px; transform:translateX(-50%); font:600 11px system-ui,sans-serif; color:var(--dim); white-space:nowrap; pointer-events:none }
+#row { display:flex; align-items:center; gap:8px; min-width:0 }
+#pp { min-width:64px; font-size:20px; background:var(--accent); border-color:var(--accent); color:var(--on-accent) }
+#time { font:700 17px ui-monospace,monospace; min-width:8.5em; white-space:nowrap; color:var(--text) }
+#stopname { flex:1; min-width:0; color:var(--dim); font-size:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+#list { position:fixed; inset:76px 14px calc(var(--barh) + 12px); z-index:20; background:var(--panel); border:1px solid var(--line); border-radius:14px; overflow:auto; padding:10px; display:none; box-shadow:0 10px 40px rgba(0,0,0,.35) }
+body.list #list { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:8px; align-content:start }
+#list a { display:block; border:1px solid var(--line); border-radius:10px; padding:10px 12px; background:var(--bg); color:var(--text); text-decoration:none }
+#list a:hover, #list a.cur { border-color:var(--accent) } #list a b { display:block; font:700 15px ui-monospace,monospace; color:var(--accent) } #list a span { font:600 14px/1.3 Georgia,serif; color:var(--head) }
+#cm { position:fixed; right:14px; bottom:calc(var(--barh) + 12px); z-index:20; width:min(420px,calc(100vw - 28px)); background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:12px; display:none; box-shadow:0 10px 40px rgba(0,0,0,.35) }
+body.cm #cm { display:block }
+#cm textarea { width:100%; min-height:110px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--text); font:16px/1.4 system-ui,sans-serif; padding:10px }
+#cm p { margin:6px 0 0; color:var(--dim); font-size:14px; min-height:1.3em } #cm .r { display:flex; gap:8px; margin-top:8px }
+#help { position:fixed; inset:12vh 12vw; z-index:30; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:20px 26px; overflow:auto; display:none } body.help #help { display:block }
+#help td { padding:5px 10px; font-size:15px } #help kbd { border:1px solid var(--line); border-radius:4px; padding:1px 6px; font:13px ui-monospace,monospace }
+#ply { display:inline-flex; align-items:center; text-decoration:none }
+@media (max-width:820px) { #ply, .wide { display:none } #ttl { font-size:15px } #id { font-size:20px } .wide { display:none } #time { min-width:0; font-size:15px } }
+@media (max-width:560px) { #ttl small, #stopname, .w, #scrub .lab { display:none } #top { gap:6px; padding:0 8px } .b { padding:0 9px } #rep { font-size:0 } #rep::before { content:'↺'; font-size:18px } }
+</style>
+</head>
+<body>
+<div id="top">
+ <button class="b" id="prev" title="previous piece ([ or PageUp)" aria-label="previous piece">‹<span class="w"> piece</span></button>
+ <div id="id">…</div><div id="ttl">loading<small></small></div>
+ <button class="b" id="mine" title="in my running order, in the player's build mode" aria-pressed="false">+ my order</button>
+ <button class="b wide" id="cmb" title="a comment on this piece, to your lane (C)">✎ comment</button>
+ <button class="b" id="lst" title="every piece (L)" aria-label="every piece">☰<span class="w"> pieces</span></button>
+ <button class="b" id="next" title="next piece (] or PageDown)" aria-label="next piece"><span class="w">piece </span>›</button>
+</div>
+<div id="stage"><div id="tap" aria-hidden="true"></div><div id="note"></div></div>
+<div id="bar">
+ <div id="scrub" title="drag to move through the piece; the marks are its stops"><div class="track"></div><div class="fill"></div><div class="knob"></div></div>
+ <div id="row">
+  <button class="b" id="pp" title="play / pause (Space)" aria-label="play or pause">▶</button>
+  <button class="b" id="back" title="previous stop (←)" aria-label="previous stop">‹</button>
+  <button class="b" id="fwd" title="next stop (→)" aria-label="next stop">›</button>
+  <button class="b" id="rep" title="replay from the start (R)">↺ replay</button>
+  <span id="time">0.0 / 0 s</span><span id="stopname"></span>
+  <button class="b" id="spd" title="speed (S)">1×</button>
+  <button class="b wide" id="thm" title="dark or light (T)">◐</button>
+  <a class="b wide" id="ply" href="../player.html" title="the talk player">player</a>
+  <button class="b wide" id="hlp" title="keys (?)">?</button>
+ </div>
+</div>
+<div id="list" role="dialog" aria-label="Every piece"></div>
+<div id="cm" role="dialog" aria-label="A comment on this piece"><textarea id="cmt" placeholder="Your comment on this piece, for deck and the conductor"></textarea><div class="r"><button class="b go" id="cms">send to the lane</button><button class="b" id="cmx">close</button></div><p id="cmst"></p></div>
+<div id="help"><h3 style="margin-top:0;font-family:Georgia,serif">The viewer</h3><table>
+<tr><td><kbd>Space</kbd> · tap</td><td>play or pause</td></tr>
+<tr><td><kbd>→</kbd> <kbd>←</kbd></td><td>next / previous stop: each step's start and its end, fully built and paused; back lands on the built end</td></tr>
+<tr><td>the bar</td><td>drag anywhere to move through the piece; the marks are its stops (amber: a built end)</td></tr>
+<tr><td><kbd>R</kbd></td><td>replay from the start</td></tr>
+<tr><td><kbd>S</kbd></td><td>speed: 0.5×, 0.75×, 1×, 1.5×, 2×</td></tr>
+<tr><td><kbd>]</kbd> <kbd>[</kbd> · swipe</td><td>next / previous piece, without a reload</td></tr>
+<tr><td><kbd>L</kbd></td><td>every piece</td></tr>
+<tr><td><kbd>M</kbd> or <b>+ my order</b></td><td>add this piece to your running order (the player's build mode), or take it out</td></tr>
+<tr><td><kbd>C</kbd> or <b>✎ comment</b></td><td>a comment on this piece, sent to your lane</td></tr>
+<tr><td><kbd>T</kbd> · <kbd>F</kbd> · <kbd>Esc</kbd></td><td>dark or light · fullscreen · close a panel</td></tr>
+</table><p style="color:var(--dim)">site <span>{{version}}</span></p></div>
+<script>
+'use strict'
+const $ = id => document.getElementById(id)
+const qs = new URLSearchParams(location.search)
+const RATES = [0.5, 0.75, 1, 1.5, 2]
+let PIECES = [], cur = -1, frame = null, C = null, END = 10, steps = [], stopsL = [], rate = 1, playing = false, theme = 'dark'
+try { theme = localStorage.getItem('tui-player-theme') === 'light' ? 'light' : 'dark' } catch {}
+document.documentElement.setAttribute('data-theme', theme)
+const fmt = s => (Math.max(0, s)).toFixed(1)
+function note(t, ms) { const n = $('note'); n.textContent = t; n.classList.toggle('on', !!t); clearTimeout(note.h); if (t && ms) note.h = setTimeout(() => n.classList.remove('on'), ms) }
+
+async function load() {
+  try { PIECES = (await (await fetch('../pieces.json', { cache: 'no-cache' })).json()).pieces || [] } catch { PIECES = [] }
+  let i = PIECES.findIndex(p => p.id === qs.get('id'))
+  if (i < 0 && qs.get('src')) { const s = qs.get('src').replace(/^\/+/, ''); i = PIECES.findIndex(p => p.src.replace(/^\.\.\//, '') === s) ; if (i < 0) { PIECES.unshift({ id: s.replace(/\/index\.html$/, ''), title: s, src: '../' + s, engine: true }); i = 0 } }
+  show(i < 0 ? 0 : i)
+  drawList()
+}
+// a piece: its frame, its clock, its stops; the address follows, so a link or a reload comes back to it
+function show(i) {
+  if (!PIECES.length) { $('ttl').firstChild.textContent = 'No pieces listed yet (talk/pieces.json).'; return }
+  cur = (i + PIECES.length) % PIECES.length
+  const p = PIECES[cur]
+  $('id').textContent = p.id.toUpperCase().replace(/\//g, ' ')
+  $('ttl').firstChild.textContent = p.title; $('ttl').querySelector('small').textContent = p.engine ? 'on the slide engine: play, pause, stops, speed' : 'keeps its own time: replay reloads it'
+  document.title = p.id + ': ' + p.title
+  const u = new URL(location.href); u.searchParams.set('id', p.id); u.searchParams.delete('src'); history.replaceState(null, '', u.href)
+  C = null; steps = []; stopsL = []; playing = false; paint()
+  const st = $('stage'); if (frame) frame.remove()
+  frame = document.createElement('iframe'); frame.title = p.title; frame.tabIndex = -1
+  frame.src = '../' + p.src + (p.src.includes('?') ? '&' : '?') + 'theme=' + theme + '&ruvpaused'
+  st.insertBefore(frame, $('tap'))
+  note('loading…')
+  frame.addEventListener('load', () => {
+    note('')
+    try {
+      const w = frame.contentWindow
+      C = w.RuvClock || null
+      const cv = w.document.getElementById('cv')
+      END = +(cv && cv.dataset.end) || p.end || 10
+      steps = (Array.isArray(w.RUV_STEPS) ? w.RUV_STEPS : [{ t: 0, label: 'start' }]).map(x => ({ t: +x.t, label: x.label || '' })).filter(x => x.t >= 0 && x.t <= END).sort((a, b) => a.t - b.t)
+      if (!steps.length || steps[0].t > 0.05) steps.unshift({ t: 0, label: 'the beginning' })
+      w.addEventListener('keydown', e => { if (!e.target.closest || !e.target.closest('input, textarea')) { e.preventDefault(); onKey(e) } })
+    } catch { C = null }
+    // two stops per step, as in the player: a step's start, then its end fully built (a second before the next starts)
+    stopsL = []
+    steps.forEach((x, k) => { const nx = k + 1 < steps.length ? steps[k + 1].t : END; if (k === 0) stopsL.push({ t: x.t, end: false, label: x.label }); const e = Math.max(x.t, nx - (k + 1 < steps.length ? 1 : 0)); if (e - x.t > 0.4) stopsL.push({ t: e, end: true, label: x.label + ', built' }) })
+    drawStops(); mineState()
+    if (!C) note('This piece keeps its own time: replay reloads it.', 4000)
+    if (C) { C.setRate(rate); C.pause(); C.seek(0) }
+    playing = false; paint()
+  }, { once: true })
+}
+function drawStops() {
+  const s = $('scrub'); s.querySelectorAll('.stop, .lab').forEach(e => e.remove())
+  stopsL.forEach(x => { const m = document.createElement('div'); m.className = 'stop' + (x.end ? ' end' : ''); m.style.left = (100 * x.t / END) + '%'; m.title = x.label + ' (' + fmt(x.t) + ' s)'; s.appendChild(m) })
+  steps.forEach(x => { if (!x.label || x.t <= 0) return; const l = document.createElement('div'); l.className = 'lab'; l.style.left = (100 * x.t / END) + '%'; l.textContent = x.label; s.appendChild(l) })
+}
+const now = () => { try { return C ? Math.min(END, C.elapsed()) : 0 } catch { return 0 } }
+function seek(t) { if (!C) return; C.seek(Math.max(0, Math.min(END, t))); paint() }
+function play(on) { if (!C) { if (on) replay(); return } playing = on; if (on) { if (now() >= END - 0.05) C.seek(0); C.play() } else C.pause(); paint() }
+function replay() { if (!C) { show(cur); return } C.seek(0); playing = true; C.play(); paint() }
+function stop(dir) {
+  if (!C) return
+  const t = now(); play(false)
+  const to = dir > 0 ? stopsL.find(x => x.t > t + 0.05) : [...stopsL].reverse().find(x => x.t < t - 0.15)
+  if (to) seek(to.t); else if (dir > 0) seek(END); else seek(0)
+}
+function paint() {
+  const t = now(), k = 100 * t / END
+  $('pp').textContent = playing ? '❚❚' : '▶'; $('spd').textContent = rate + '×'
+  $('time').textContent = fmt(t) + ' / ' + Math.round(END) + ' s'
+  $('scrub').querySelector('.fill').style.width = k + '%'; $('scrub').querySelector('.knob').style.left = k + '%'
+  const s = [...steps].reverse().find(x => x.t <= t + 0.01); $('stopname').textContent = s ? s.label : ''
+  for (const id of ['pp', 'back', 'fwd', 'spd']) $(id).disabled = !C
+}
+function tick() { if (C && playing && now() >= END - 0.02) { playing = false; C.pause() } if (C) paint(); requestAnimationFrame(tick) }
+
+// the scrub bar: press and drag anywhere on it, with a finger or a mouse
+;(function () {
+  const s = $('scrub'); let on = false
+  const at = e => { const r = s.getBoundingClientRect(); seek(END * Math.max(0, Math.min(1, (e.clientX - r.left) / r.width))) }
+  s.addEventListener('pointerdown', e => { if (!C) return; on = true; play(false); at(e); e.preventDefault() })
+  addEventListener('pointermove', e => { if (on) at(e) }); addEventListener('pointerup', () => { on = false })
+})()
+// the list of every piece
+function drawList() {
+  const L = $('list'); L.textContent = ''
+  PIECES.forEach((p, i) => { const a = document.createElement('a'); a.href = '?id=' + encodeURIComponent(p.id); if (i === cur) a.className = 'cur'; const b = document.createElement('b'); b.textContent = p.id; const s = document.createElement('span'); s.textContent = p.title; a.appendChild(b); a.appendChild(s); a.addEventListener('click', e => { e.preventDefault(); document.body.classList.remove('list'); show(i); drawList() }); L.appendChild(a) })
+}
+// "+ my order": the player's build mode keeps the running order in this browser (tui-run.v1)
+function run() { try { return JSON.parse(localStorage.getItem('tui-run.v1') || 'null') || { use: false, items: [] } } catch { return { use: false, items: [] } } }
+function mineState() {
+  const p = PIECES[cur]; if (!p) return
+  const it = (run().items || []).find(x => x.ref === 'piece:' + p.id), on = !!(it && it.show)
+  $('mine').textContent = innerWidth > 560 ? (on ? '✓ in my order' : '+ my order') : (on ? '✓' : '+'); $('mine').classList.toggle('on', on); $('mine').setAttribute('aria-pressed', on ? 'true' : 'false')
+}
+function toggleMine() {
+  const p = PIECES[cur]; if (!p) return
+  const R = run(); R.items = R.items || []
+  let it = R.items.find(x => x.ref === 'piece:' + p.id)
+  if (!it) { it = { ref: 'piece:' + p.id, show: false, dur: Math.max(5, Math.round(p.end || END || 30)), comment: '' }; R.items.push(it) }
+  it.show = !it.show
+  try { localStorage.setItem('tui-run.v1', JSON.stringify(R)) } catch {}
+  mineState(); note(it.show ? 'In your running order: the player\'s build mode shows it, at the end of the list.' : 'Taken out of your running order.', 3500)
+}
+// a comment to the editor's lane, encrypted to the conductor (assets/pane.js)
+async function sendComment() {
+  const p = PIECES[cur], t = $('cmt').value.trim(); if (!t || !p) return
+  if (!window.TuiLane) { $('cmst').textContent = 'The lane is not loaded.'; return }
+  TuiLane.keep({ kind: 'comment', page: 'talk/engine/view.html?id=' + p.id, title: p.id + ': ' + p.title, phrase: (stopsL.length ? 'at ' + fmt(now()) + ' s' : ''), text: t })
+  $('cmt').value = ''
+  if (!TuiLane.ready()) { $('cmst').textContent = 'Kept in this browser; it goes with your next send once your lane is open (Notes on any page of the site, your four words).'; return }
+  $('cmst').textContent = 'Sending…'; const r = await TuiLane.send(); $('cmst').textContent = r.left ? `Sent ${r.sent}; ${r.left} kept to retry.` : 'Sent to your lane.'
+}
+function onKey(e) {
+  const k = e.key
+  if (k === ' ' || k === 'k' || k === 'K') play(!playing)
+  else if (k === 'ArrowRight') stop(1)
+  else if (k === 'ArrowLeft') stop(-1)
+  else if (k === 'r' || k === 'R') replay()
+  else if (k === 's' || k === 'S') { rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length]; if (C) C.setRate(rate); paint() }
+  else if (k === ']' || k === 'PageDown' || k === 'swipe-next') { show(cur + 1); drawList() }
+  else if (k === '[' || k === 'PageUp' || k === 'swipe-back') { show(cur - 1); drawList() }
+  else if (k === 'l' || k === 'L') document.body.classList.toggle('list')
+  else if (k === 'm' || k === 'M') toggleMine()
+  else if (k === 'c' || k === 'C') { document.body.classList.toggle('cm'); if (document.body.classList.contains('cm')) $('cmt').focus() }
+  else if (k === 't' || k === 'T') { theme = theme === 'dark' ? 'light' : 'dark'; document.documentElement.setAttribute('data-theme', theme); try { localStorage.setItem('tui-player-theme', theme); frame.contentDocument.documentElement.setAttribute('data-theme', theme) } catch {} }
+  else if (k === 'f' || k === 'F') { const d = document.documentElement; (d.requestFullscreen || d.webkitRequestFullscreen)?.call(d) }
+  else if (k === '?') document.body.classList.toggle('help')
+  else if (k === 'Escape') document.body.classList.remove('help', 'list', 'cm')
+  else return
+  e.preventDefault?.()
+}
+addEventListener('keydown', e => { if (e.target.closest && e.target.closest('input, textarea')) { if (e.key === 'Escape') document.body.classList.remove('cm'); return } onKey(e) })
+const K = { pp: ' ', back: 'ArrowLeft', fwd: 'ArrowRight', rep: 'r', spd: 's', prev: '[', next: ']', lst: 'l', mine: 'm', cmb: 'c', thm: 't', hlp: '?' }
+for (const [id, key] of Object.entries(K)) $(id).addEventListener('click', e => { e.stopPropagation(); onKey({ key }); e.currentTarget.blur() })
+$('cms').addEventListener('click', sendComment); $('cmx').addEventListener('click', () => document.body.classList.remove('cm'))
+// touch on the piece: a tap plays or pauses, a swipe moves to the next or previous piece
+;(function () {
+  const T = $('tap'); let s = null
+  T.addEventListener('pointerdown', e => { s = { x: e.clientX, y: e.clientY, t: performance.now() } })
+  T.addEventListener('pointerup', e => {
+    if (!s) return; const dx = e.clientX - s.x, dy = e.clientY - s.y, ms = performance.now() - s.t; s = null
+    if (ms < 900 && Math.abs(dx) > 60 && Math.abs(dx) > 1.5 * Math.abs(dy)) onKey({ key: dx < 0 ? 'swipe-next' : 'swipe-back' })
+    else if (Math.abs(dx) < 12 && Math.abs(dy) < 12 && ms < 600) onKey({ key: ' ' })
+  })
+})()
+load(); requestAnimationFrame(tick)
+</script>
+</body>
+</html>

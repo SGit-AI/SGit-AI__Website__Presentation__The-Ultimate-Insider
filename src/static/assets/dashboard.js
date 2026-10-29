@@ -15,3 +15,5 @@
   }
   tick(); setInterval(tick, 20000)
 })()
+// the pace grid opens at its newest hour, so now is on screen (designer@, design note 6)
+document.querySelectorAll('table.pace').forEach(function (t) { var w = t.closest('.tbl'); if (w) w.scrollLeft = w.scrollWidth })

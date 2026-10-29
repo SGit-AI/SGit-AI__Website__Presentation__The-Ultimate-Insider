@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "the editor's wake, in session",
+ "started": "2026-10-29T15:24:12Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Amended by dev with the editor's word of 15:25 (yes to the offline cache). 1. The offline cache: src/static/sw.js, outside dev's policy and owned by no member; dev adds it to scope.writes on the editor's word; network-first for pages and data, cache-then-refresh for scripts, styles, images and slides, versioned by release, a kill switch (sw.json at the root), same-origin GETs only (never the vault server or openrouter.ai); the player registers it and warms every live slide. 2. The viewer (dev 019) at src/static/talk/engine/view.html (inside dev's talk/engine/**; talk/view.html is unowned and would need a second policy change), reading talk/pieces.json, driving the piece through RuvClock; deck told the address. 3. Design note 6 (dev 021): site.css, theme.js, build.py. 4. Close-out. The home page line waits for deck.",
+   "at": "2026-10-29T15:25:29Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "The editor's word covers adding src/static/sw.js to dev's scope.writes if recorded in policy.json (date, quote, the editor) with dev as owner. Strategy meets the earlier conditions. Conditions: same-origin GET only; skip Range, non-200 and opaque; never the lane, any API or private path, the vault server or openrouter.ai; CACHE_VERSION per release, old caches purged; sw.json fetched no-store, never cached; sw.js served no-cache; tell the other members in the debrief.",
+   "at": "2026-10-29T15:25:58Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "The offline cache (src/static/sw.js and sw.json, policy grant recorded with the editor's words; registered by theme.js and the player); the viewer at talk/engine/view.html, linked from the build panel; design note 6 (site.css, theme.js, dashboard.js). And the conductor's requests that arrived during the wake (mailroom/dev/024, 025): motion/lab/ and studio-ports/lab/ treated as studio/lab/ is (validate.py STANDALONE, build.py LAB_AREAS for lab documents and pieces.json), proved with a throwaway piece. All tested.",
+   "at": "2026-10-29T15:37:25Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "sw.js meets every pre-review condition (same-origin GET only, Range skipped, basic 200 only, /api/, sw.js and sw.json never handled, other hosts untouched, a cache per release with old ones purged, sw.json no-store, updateViaCache none); policy.json records the editor's words of 15:25 for sw.js and sw.json; view.html textContent only, nothing off-host; the lab-area change small and correct; build, gate, scope, both vaults clean; no secrets. Not checkable here: a no-cache header on sw.js is the host's (the registration bypasses the HTTP cache).",
+   "at": "2026-10-29T15:38:20Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Offline cache done (sw.js, sw.json, theme.js, player; the policy grant recorded). The viewer done (talk/engine/view.html; dev 019; deck told). Design note 6 done (dev 021). Close-out done. Conditions kept; members told (debrief, mail to the conductor, commit notes). Answered during the wake: the conductor's requests 024 and 025 (the lab areas). The home page line waits, as planned.",
+   "at": "2026-10-29T15:38:45Z"
+  }
+ },
+ "closed": "2026-10-29T15:38:46Z",
+ "outcome": "ok"
+}
