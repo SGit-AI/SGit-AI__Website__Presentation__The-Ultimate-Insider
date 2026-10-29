@@ -31,8 +31,15 @@
    "verdict": "as-planned",
    "comment": "1) keys, clones, mail done (001-003 in done, 004 in inbox as issue 003, replies to conductor and deck); 2) board: B01 filed as blocked on deck (Issues-FS has no in-review folder), B02 open, 001 done, 003 open; hand-back not resent (already routed); 3) status, REALITY, record. Conditions kept; the unverified signature disclosed.",
    "at": "2026-10-29T03:07:56Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "3 repo files in scope; vault commits only ruv-sgit/*, new mail to conductor 005 and deck 008, four moves of ruv-sgit's own mail; no key, token or directing text; gate, agents check, vault_check clean; no vault-key file left",
+   "at": "2026-10-29T03:08:20Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T03:08:20Z",
+ "outcome": "ok"
 }
