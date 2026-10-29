@@ -194,3 +194,57 @@ th{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--dim)
 #board .fresh{font-size:13.5px;color:var(--dim);margin-top:10px}
 .keyline{overflow-wrap:anywhere;white-space:pre-wrap}
 main>section.wrap:first-child,main>article.wrap:first-child{padding-top:20px}
+
+/* the admin section: a side navigation, and the full width of the screen */
+body.adm .top .wrap{max-width:none;padding:0 24px}
+.shell{display:grid;grid-template-columns:250px minmax(0,1fr);gap:0;min-height:calc(100vh - 59px)}
+.side{border-right:1px solid var(--line);background:var(--bg2);padding:18px 14px 30px}
+.side details>summary{display:none}
+.side .sg{font:700 11.5px system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:16px 8px 4px}
+.side .sg:first-of-type{margin-top:0}
+.side ul{list-style:none;margin:0;padding:0}
+.side a{display:block;padding:5px 8px;border-radius:7px;color:var(--text);font-size:14.5px;line-height:1.3}
+.side a:hover{background:var(--card);text-decoration:none}
+.side a[aria-current]{background:var(--accent);color:var(--on-accent);font-weight:650}
+@media(min-width:861px){.side>details{position:sticky;top:76px}}
+.shell-main{min-width:0;padding:0 8px 40px}
+.shell-main .wrap,.shell-main .narrow{max-width:none;margin:0;padding:0 28px}
+.shell-main .prose p,.shell-main .prose li,.shell-main .lead{max-width:95ch}
+body.adm .foot .wrap{max-width:none;padding:0 24px}
+body.adm .foot{margin-top:0}
+@media(max-width:860px){
+  .shell{grid-template-columns:1fr}
+  .side{border-right:0;border-bottom:1px solid var(--line);padding:8px 14px}
+  .side details>summary{display:block;cursor:pointer;font:650 14.5px system-ui,sans-serif;padding:6px 4px}
+  .side details:not([open])>.sg,.side details:not([open])>ul{display:none}
+  .shell-main .wrap,.shell-main .narrow{padding:0 16px}
+}
+
+/* commits and messages */
+.notes td.t{white-space:nowrap;font:13px ui-monospace,monospace;color:var(--dim)}
+.cfilters{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:10px 0 14px;font-size:14px}
+.cfilters .chips{display:flex;flex-wrap:wrap;gap:6px;flex-basis:100%}
+.cfilters button{font:600 13.5px system-ui,sans-serif;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:3px 11px;cursor:pointer}
+.cfilters button span{color:var(--dim);font-weight:500}
+.cfilters button.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.cfilters button.on span{color:var(--on-accent)}
+.cfilters input[type=search]{font:14px system-ui,sans-serif;padding:5px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);min-width:220px}
+#f-n{color:var(--dim)}
+.commits .cm{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;background:var(--card);padding:10px 16px;margin:0 0 10px;scroll-margin-top:80px}
+.commits .cm:target{box-shadow:0 0 0 3px var(--accent-t)}
+.commits .k-ci{border-left-color:var(--line2)}.commits .k-merge{border-left-color:var(--risk)}
+.commits header{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;font-size:13px;color:var(--dim)}
+.commits .who{font-weight:700;color:var(--head)}
+.commits .rel{font:600 12px ui-monospace,monospace;border:1px solid var(--line2);border-radius:999px;padding:0 7px}
+.commits .rel.un{color:var(--infra);border-color:var(--infra)}
+.commits .to{font-weight:700;color:var(--infra)}
+.commits .gh{margin-left:auto}
+.commits h3{font:650 16.5px system-ui,sans-serif;margin:4px 0 2px;color:var(--head)}
+.commits .msg{white-space:pre-wrap;font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;background:none;border:0;padding:4px 0 0;margin:0;overflow-wrap:anywhere}
+
+/* the vaults page */
+.vault{display:grid;grid-template-columns:240px minmax(0,1fr);gap:24px;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:18px 22px;margin:18px 0}
+.vault h2{margin:0 0 6px}
+.vault img.qr{width:220px;height:220px;border:1px solid var(--line);border-radius:10px;background:#fff}
+@media(max-width:700px){.vault{grid-template-columns:1fr}}
+.shell-main>section:first-child,.shell-main>article:first-child{padding-top:22px}

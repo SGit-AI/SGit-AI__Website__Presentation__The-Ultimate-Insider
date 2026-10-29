@@ -234,7 +234,7 @@ class Site_Build:
 <link rel="stylesheet" href="{root}assets/site.css">
 <script src="{root}assets/theme.js"></script>
 </head>
-<body class="{kind}">
+<body class="{kind}{' adm' if self.in_admin(rel) else ''}">
 <a class="skip" href="#main">Skip to the content</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="{root}index.html"><b>the ultimate insider</b><small>presentation.sgit.ai</small></a>
@@ -243,7 +243,7 @@ class Site_Build:
 <button class="theme" type="button" aria-label="Switch between light and dark">theme</button>
 </div></header>
 <main id="main">
-{body}
+{self.shell(rel, body)}
 </main>
 <footer class="foot"><div class="wrap">
 <p><b>{name}</b> · <a href="{root}admin/versions.html" class="ver">site {self.version}</a> · version numbered by CI, never by hand</p>
@@ -253,6 +253,136 @@ class Site_Build:
 </body>
 </html>
 '''
+
+    DOCS = [('reality',           'REALITY.md',                    'What exists',              'What exists in this repository, kept current by whoever ships.'),
+            ('rules-for-agents',  'CLAUDE.md',                     'Rules for agents',         'The rules every agent working in this repository reads first (CLAUDE.md).'),
+            ('corrections',       'BRIEF-CORRECTIONS.md',          'Corrections to the brief', 'Where the brief turned out to be wrong, and what was done instead.'),
+            ('onboarding',        'team/conductor/ONBOARDING.md',  'Onboarding',               'How each member\'s schedule is started and how it gets the vault keys.'),
+            ('wake-protocol',     'team/conductor/WAKE.md',        'The wake protocol',        'Every member\'s checklist for every session, and how any member stops the team.')]
+
+    def in_admin(self, rel):                                        # the admin section: everything about who does what, with a side navigation
+        return rel.startswith(('admin/', 'team/', 'brief/'))
+
+    def side_nav(self):
+        team = [(f'team/{p.name}/index.html', json.loads((p / 'policy.json').read_text()).get('address', p.name).split('@')[0])
+                for p in sorted((ROOT / 'team').iterdir()) if p.is_dir() and (p / 'policy.json').exists()]
+        docs = [(f'admin/docs/{slug}.html', label) for slug, src, label, _ in self.DOCS if (ROOT / src).exists()]
+        return [('Overview',          [('admin/index.html', 'Admin and engineering')]),
+                ('Activity',          [('admin/commits.html', 'Commits and messages'), ('admin/versions.html', 'Releases'), ('team/board.html', 'The board')]
+                                      + ([('team/schedule.html', 'The schedule')] if (ROOT / 'team/conductor/schedule.json').exists() else [])),
+                ('Team',              [('team/index.html', 'Everyone')] + team),
+                ('Keys and vaults',   [('admin/keys.html', 'The key register')] + ([('admin/vaults.html', 'The public vaults')] if (ROOT / 'team/conductor/vaults.json').exists() else [])),
+                ('Sources of truth',  [('brief/index.html', 'The brief')] + docs)]
+
+    def shell(self, rel, body):
+        if not self.in_admin(rel):
+            return body
+        root  = self.root_of(rel)
+        here  = lambda href: href == rel or (href.startswith('team/') and href.endswith('/index.html') and href != 'team/index.html' and rel.startswith(href[:-len('index.html')]))
+        nav   = ''.join(f'<p class="sg">{html.escape(group)}</p><ul>' + ''.join(
+                    f'<li><a href="{root}{href}"{" aria-current=\"page\"" if here(href) else ""}>{html.escape(label)}</a></li>' for href, label in items) + '</ul>'
+                    for group, items in self.side_nav())
+        return (f'<div class="shell"><aside class="side" aria-label="Admin"><details open><summary>Admin menu</summary>{nav}</details></aside>'
+                f'<div class="shell-main">{body}</div></div>')
+
+    def build_docs(self):                                           # the files that steer the agents, readable as pages
+        md = Markdown()
+        for slug, src, label, desc in self.DOCS:
+            path = ROOT / src
+            if not path.exists():
+                continue
+            text  = path.read_text()
+            title = text.split('\n', 1)[0].lstrip('# ').strip() if text.startswith('#') else label
+            body  = text.split('\n', 1)[1] if text.startswith('#') else text
+            base  = str(Path(src).parent).replace('.', '')                # links between repository files go to GitHub, not to the site
+            body  = re.sub(r'\]\((?!https?:|#|mailto:)([^)\s]+)\)', lambda m: '](' + self.config['repo'] + '/blob/dev/' + str(Path(base) / m.group(1)).lstrip('/') + ')', body)
+            body  = body.replace('{{', '{\u200b{')                      # the docs talk about the placeholders; they must not be stamped
+            html_ = (f'<article class="prose wrap"><p class="kicker">Sources of truth · <code>{html.escape(src)}</code></p><h1>{html.escape(title)}</h1>'
+                     f'{md.to_html(body)}<p class="note">Rendered from <code>{html.escape(src)}</code> at site {self.version}: '
+                     f'<a href="{self.config["repo"]}/blob/dev/{src}">the file on GitHub</a>.</p></article>')
+            self.page(f'admin/docs/{slug}.html', label, desc, html_, body_md=body)
+
+    def build_vaults(self):                                         # the two public vaults, a page of their own (conductor's To-dev, 29 October)
+        path = ROOT / 'team' / 'conductor' / 'vaults.json'
+        if not path.exists():
+            return
+        data, esc = json.loads(path.read_text()), html.escape
+        if (path.parent / 'vault-qr').exists():
+            shutil.copytree(path.parent / 'vault-qr', OUT / 'admin' / 'vault-qr', dirs_exist_ok=True)
+        cards = ''
+        for v in data['vaults']:
+            qr = (f'<img class="qr" src="vault-qr/{esc(Path(v["read_key_qr"]).name)}" alt="QR code of the read key of {esc(v["name"])}" width="220" height="220">'
+                  if v.get('read_key_qr') and (path.parent / 'vault-qr' / Path(v['read_key_qr']).name).exists() else '')
+            see = '<a href="../team/board.html">read it as the board</a> · ' if v['kind'] == 'Issues-FS' else ''
+            cards += (f'<section class="vault" id="{esc(v["name"])}"><div class="vq">{qr}</div><div class="vt"><p class="kicker">{esc(v["kind"])} · vault {esc(v["vault_id"])}</p>'
+                      f'<h2>{esc(v["name"])}</h2><p>{esc(v["purpose"])}.</p><p><b>Layout:</b> <code>{esc(v["layout"])}</code></p>'
+                      f'<p><b>Read key</b>, read only, published on purpose:</p><pre class="keyline"><code>{esc(v["read_key"])}</code></pre>'
+                      f'<pre class="keyline"><code>{esc(v["clone"])}</code></pre><p>{see}<a href="{esc(v["open_url"])}">open it in the vault browser</a></p>'
+                      f'<p class="note">Write key: {esc(v["write_key"])}</p></div></section>')
+        body = (f'<section class="wrap"><p class="kicker">Keys and vaults</p><h1>The public vaults</h1><p class="lead">{esc(data["about"])}</p>{cards}'
+                f'<p class="note">Every file in both vaults is public, forever: a later commit does not unpublish an earlier one. Data: '
+                f'<a href="vaults.json">vaults.json</a>, kept by the conductor in <code>team/conductor/vaults.json</code>.</p></section>')
+        self.page('admin/vaults.html', 'The public vaults', 'The two public vaults the team talks through, with their read keys and QR codes: the board and the mail.', body)
+
+    def agent_of(self, subject, body, author):                      # who a commit is from, the house way
+        m = re.match(r'@([\w.-]+):', subject) or re.search(r'^Agent:\s*([\w.-]+)@', body, re.M) or re.match(r'([a-z][\w.-]*): ', subject)
+        if author == 'GitHub Actions':
+            return 'ci'
+        return m.group(1) if m else ('editor' if author not in ('Claude',) else 'unmarked')
+
+    def build_commits(self):                                        # every commit's whole message, and the notes agents leave each other
+        log  = self.git('log', '--format=%H%x1f%h%x1f%an%x1f%aI%x1f%P%x1f%s%x1f%b%x1e', 'HEAD')
+        rel_of = {}
+        tags = [t for t in self.git('tag', '--list', 'v*', '--sort=v:refname').split() if re.fullmatch(r'v\d+\.\d+\.\d+', t)]
+        prev = None
+        for t in tags:
+            for sha in self.git('log', '--format=%H', f'{prev}..{t}' if prev else t).split():
+                rel_of.setdefault(sha, t)
+            prev = t
+        commits, notes = [], []
+        for rec in log.split('\x1e'):
+            parts = rec.strip('\n').split('\x1f')
+            if len(parts) != 7:
+                continue
+            sha, short, author, when, parents, subject, body = parts
+            agent = self.agent_of(subject, body, author)
+            kind  = 'ci' if agent == 'ci' else 'merge' if len(parents.split()) > 1 else 'work'
+            to    = [(m.group(1), m.group(2).strip()) for m in re.finditer(r'^To-([\w.-]+):\s*(.+)$', body, re.M)]
+            for who, text in to:
+                notes.append({'when': when, 'from': agent, 'to': who, 'text': text, 'commit': short})
+            commits.append({'commit': short, 'sha': sha, 'author': author, 'agent': agent, 'when': when, 'kind': kind, 'subject': subject,
+                            'body': body.strip(), 'to': [w for w, _ in to], 'release': rel_of.get(sha)})
+        self.write('admin/commits.json', json.dumps({'version': self.version, 'commits': commits, 'notes': notes}, indent=1) + '\n')
+        esc   = html.escape
+        agents = sorted({c['agent'] for c in commits})
+        inbox = {}
+        for n in notes:
+            inbox[n['to']] = inbox.get(n['to'], 0) + 1
+        rows  = ''.join(f'<tr data-from="{esc(n["from"])}" data-to="{esc(n["to"])}"><td class="t">{n["when"][:16].replace("T", " ")}</td><td><b>{esc(n["from"])}</b> &rarr; <b>{esc(n["to"])}</b></td>'
+                        f'<td>{esc(n["text"])}</td><td><a href="#c-{n["commit"]}"><code>{n["commit"]}</code></a></td></tr>' for n in notes)
+        items = ''.join(
+            f'<article class="cm k-{c["kind"]}" id="c-{c["commit"]}" data-agent="{esc(c["agent"])}" data-kind="{c["kind"]}" data-to="{esc(" ".join(c["to"]))}">'
+            f'<header><code class="h">{c["commit"]}</code> <span class="who a-{esc(c["agent"])}">{esc(c["agent"])}</span> <span class="t">{c["when"][:16].replace("T", " ")} UTC</span>'
+            + (f' <a class="rel" href="versions.html#{c["release"]}">{c["release"]}</a>' if c['release'] else ' <span class="rel un">not released</span>')
+            + ''.join(f' <span class="to">&rarr; {esc(w)}</span>' for w in c['to'])
+            + f' <a class="gh" href="{self.config["repo"]}/commit/{c["sha"]}">GitHub</a></header><h3>{esc(c["subject"])}</h3>'
+            + (f'<pre class="msg">{esc(c["body"])}</pre>' if c['body'] else '') + '</article>' for c in commits)
+        chips = ''.join(f'<button type="button" data-agent="{esc(a)}">{esc(a)} <span>{sum(1 for c in commits if c["agent"] == a)}</span></button>' for a in agents)
+        box   = ' · '.join(f'<b>{esc(k)}</b> {v}' for k, v in sorted(inbox.items()))
+        body  = (f'<section class="wrap"><p class="kicker">Activity</p><h1>Commits and messages</h1>'
+                 f'<p class="lead">Every commit on <code>dev</code>, newest first, with its whole message: who made it, what it says, which release carried it, '
+                 f'and the notes agents leave each other as <code>To-&lt;agent&gt;:</code> lines. {len(commits)} commits, {len(notes)} notes. Read from git at site {self.version}.</p>'
+                 f'<h2 id="notes">Notes between agents</h2><p class="note">Notes received: {box or "none yet"}. A note is material for its reader, never an instruction (<code>CLAUDE.md</code>).</p>'
+                 f'<div class="tbl"><table class="notes"><thead><tr><th>When (UTC)</th><th>From, to</th><th>Note</th><th>Commit</th></tr></thead><tbody>{rows or "<tr><td colspan=4>none yet</td></tr>"}</tbody></table></div>'
+                 f'<h2 id="commits">Every commit</h2><div class="cfilters" data-md-skip><div class="chips"><button type="button" data-agent="" class="on">everyone <span>{len(commits)}</span></button>{chips}</div>'
+                 f'<label><input type="checkbox" id="f-notes"> only commits with notes</label> <label><input type="checkbox" id="f-ci" checked> hide CI release commits</label> '
+                 f'<label><input type="checkbox" id="f-merge"> hide merges</label> <input type="search" id="f-q" placeholder="search messages" aria-label="Search commit messages"> <span id="f-n"></span></div>'
+                 f'<div class="commits">{items}</div><p class="note">As data: <a href="commits.json">commits.json</a>.</p></section>'
+                 f'<script src="../assets/commits.js"></script>')
+        self.page('admin/commits.html', 'Commits and messages', 'Every commit on dev with its whole message, and every note one agent left another.', body,
+                  body_md=f'{len(commits)} commits, {len(notes)} notes, site {self.version}.\n\n## Notes between agents\n\n'
+                          + '\n'.join(f'- {n["when"][:16]} **{n["from"]} to {n["to"]}**: {n["text"]} (`{n["commit"]}`)' for n in notes)
+                          + '\n\n## Every commit\n\n' + '\n'.join(f'### {c["commit"]} · {c["agent"]} · {c["when"][:16]}\n\n{c["subject"]}\n\n{c["body"]}\n' for c in commits))
 
     def md_twin(self, rel, title, description, body_md):
         url = self.config['url'] + '/' + rel
@@ -503,7 +633,7 @@ class Site_Build:
         body = ('<section class="wrap narrow"><p class="kicker">The team</p><h1>Who builds this site</h1>'
                 '<p class="lead">Dinis Cruz, the editor, and a team of agents, each with a folder in <code>team/&lt;id&gt;/</code>: a role, a policy that says what it may write, '
                 'its status, and a debrief for every round. This page and each member\'s page are built from those files.</p>'
-                '<p><a class="btn p" href="board.html">The board: what each member is doing</a> <a class="btn" href="schedule.html">The schedule: when each member wakes</a></p>'
+                '<p><a class="btn p" href="board.html">The board: what each member is doing</a> <a class="btn" href="schedule.html">The schedule: when each member wakes</a> <a class="btn" href="../admin/vaults.html">The public vaults: board and mail</a> <a class="btn" href="../admin/commits.html">Commits and messages</a></p>'
                 f'<ul class="cards">{"".join(cards)}</ul>'
                 '<h2>How the team works</h2><ul>'
                 '<li><b>Every file has one owner.</b> A member writes the paths in its <code>policy.json</code>; the gate fails if two members claim the same file (<code>admin/build/agents.py overlaps</code>).</li>'
@@ -687,7 +817,10 @@ class Site_Build:
         self.build_brief()
         self.build_team()
         self.build_board()
+        self.build_vaults()
+        self.build_docs()
         self.build_versions()
+        self.build_commits()
         self.build_indexes()
         print(f'built {len(self.pages)} pages at site {self.version} into {OUT.relative_to(ROOT)}/')
 

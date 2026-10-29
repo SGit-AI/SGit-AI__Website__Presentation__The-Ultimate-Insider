@@ -40,11 +40,18 @@
       var b = e.target.closest('button'); if (!b) return
       bar.querySelectorAll('button').forEach(function (x) { x.classList.toggle('on', x === b) })
       el.querySelectorAll('.issue').forEach(function (c) { c.hidden = !!b.dataset.agent && c.dataset.agent !== b.dataset.agent })
+      el.querySelectorAll('.col').forEach(function (box) {               // the counts follow the filter, and an empty column says so
+        var n = box.querySelectorAll('.issue:not([hidden])').length, none = box.querySelector('.none')
+        box.querySelector('h2').textContent = box.dataset.col + ' · ' + n
+        if (!none) { none = h('p', 'none'); box.appendChild(none) }
+        none.textContent = 'nothing ' + box.dataset.col + (b.dataset.agent ? ' for ' + b.dataset.agent : ''); none.hidden = n > 0
+      })
     })
     el.appendChild(bar)
     var grid = h('div', 'cols')
     COLS.forEach(function (col) {
       var mine = items.filter(function (i) { return i.col === col }), box = h('section', 'col c-' + col)
+      box.dataset.col = col
       box.appendChild(h('h2', '', col + ' · ' + mine.length))
       mine.forEach(function (i) { box.appendChild(card(i)) })
       if (!mine.length) box.appendChild(h('p', 'none', 'nothing ' + col))
