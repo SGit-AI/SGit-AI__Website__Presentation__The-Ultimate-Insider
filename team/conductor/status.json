@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "conductor",
   "as_of": "2026-10-29",
-  "round": 6,
-  "state": "round 6: the schedule is running (hourly, round the clock, from 01:47 UTC); any member can stop it with a hold",
+  "round": 7,
+  "state": "wake 02:02 (first scheduled): vault keys sealed to dev and researcher and with the editor; dev's task recorded and checked; researcher added at :09",
   "done": [
+    {
+      "what": "First scheduled wake: both vault keys sealed to dev's and researcher's published keys (fingerprints recomputed by sgit and matched), one zip each to the editor; dev's own task checked against schedule.json; researcher's request routed, accepted at :09, answered",
+      "evidence": "team/conductor/schedule.json (tasks.dev, runs.researcher); tui-mail-public mailroom/researcher/001"
+    },
     {
       "what": "Four hourly tasks created at the editor's word, each into its member's own session: dev :47, conductor :02, deck :17, ruv.sgit :32",
       "evidence": "team/conductor/schedule.json (tasks), /team/schedule.html"
@@ -82,20 +86,20 @@
   ],
   "asks": [
     {
-      "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+      "what": "Upload the dev and researcher zips into their sessions",
       "from": "the editor"
     },
     {
-      "what": "Store the handover zip and give it to the vaults manager; discard the two .enc files of round 3",
+      "what": "Paste ONBOARDING.md's prompt into deck and ruv.sgit (no key, no task yet)",
+      "from": "the editor"
+    },
+    {
+      "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
       "from": "the editor"
     },
     {
       "what": "Agree or change the conductor's policy.json and the proposed security and researcher roles",
       "from": "the editor"
-    },
-    {
-      "what": "Review the edits made in dev's files at the editor's word (build.py key section and register, validate.py banners check, CLAUDE.md, REALITY.md, team/dev/ROLE.md)",
-      "from": "dev@the-ultimate-insider"
     }
   ],
   "tokens": null,
