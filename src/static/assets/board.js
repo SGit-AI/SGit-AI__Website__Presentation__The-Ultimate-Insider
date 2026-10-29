@@ -63,7 +63,7 @@
   async function load() {
     try {
       var r = await new window.SGVaultEmbed.Reader(cfg).init()
-      await r.open()
+      await (window.SGVaultOpen ? window.SGVaultOpen(r) : r.open())   // either vault layout (assets/vault-open.js)
       var paths = Object.keys(r.files).filter(function (p) { return /^[^/]+\/issues\/(open|blocked|done)\/\d+[^/]*\.md$/.test(p) }).sort()
       var items = await Promise.all(paths.map(async function (p) { return parse(p, await r.readText(p)) }))
       var agents = Object.keys(r.files).map(function (p) { return p.split('/')[0] }).filter(function (a, i, all) { return /^[\w.-]+$/.test(a) && a !== 'README.md' && all.indexOf(a) === i && r.files[a + '/README.md'] }).sort()

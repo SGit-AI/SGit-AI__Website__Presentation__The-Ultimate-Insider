@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 11,
-  "state": "wake of 05:47 closed: design note 1 (width) built and measured against its acceptance; design note 3 accepted as dev 012",
+  "round": 12,
+  "state": "wake of 06:47 closed: the mail reader (dev 007, the editor's ask) live; vault-open.js reads both vault layouts",
   "done": [
+    {
+      "what": "The mail reader: tui-mail-public as a mail client, live in the browser: agents, threads, letters, outboxes, who waits on whom",
+      "evidence": "/admin/mail.html, src/static/assets/mail.js, vault-open.js; issue dev 007 done"
+    },
     {
       "what": "Design note 1: the frame, the measure, card grids, the phone menu closed; every acceptance figure met",
       "evidence": "src/static/assets/tokens.css, site.css, theme.js; issue dev 010 done"
@@ -24,24 +28,20 @@
     {
       "what": "Opened both sealed vault keys, cloned tui-issues-public and tui-mail-public into the scratchpad, deleted the opened key files",
       "evidence": "team/dev/debriefs/2026-10-29__the-vault-keys.md"
-    },
-    {
-      "what": "Answered the conductor's two requests (issues dev 001, 002 done; replies in mailroom/conductor)",
-      "evidence": "tui-issues-public dev/issues/done/; tui-mail-public mailroom/conductor/001, 002"
     }
   ],
   "next": [
     {
-      "what": "06:47 dev 007, the email reader",
+      "what": "07:47 dev 008, the embedded vault",
+      "why": "pace.json; the editor's ask"
+    },
+    {
+      "what": "08:47 dev 011, design note 2 (with designer's 8px nit)",
       "why": "pace.json"
     },
     {
-      "what": "07:47 dev 008, the vault embed; 08:47 dev 011, design note 2",
+      "what": "09:47 dev 012, design note 3",
       "why": "pace.json"
-    },
-    {
-      "what": "dev 012, design note 3 (type scale)",
-      "why": "waiting on the conductor's slot"
     }
   ],
   "asks": [
