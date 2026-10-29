@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../../../../talk/engine/slide.css">
 <style>
 .kk{font-size:20px;top:14px}
-.hl{top:56px;right:260px;font-size:40px;white-space:nowrap}
+.hl{top:60px;right:260px;font-size:40px;white-space:nowrap}
 #id{position:absolute;right:40px;top:10px;font:800 72px/1 system-ui;letter-spacing:-.02em;color:var(--head)}
 #g{position:absolute;left:0;top:0;width:1280px;height:720px}
 .lh{position:absolute;left:40px;white-space:nowrap;font:800 24px/30px system-ui;color:var(--head)}
@@ -15,7 +15,8 @@
 .zt{position:absolute;font:700 20px/24px system-ui;color:var(--head)}
 .zt i{display:block;font-weight:400;font-style:normal;color:var(--dim)}
 .zs{position:absolute;font:600 20px/24px system-ui}
-.zs.infra{color:var(--infra)}.zs.agent{color:var(--agent)}.zs.risk{color:var(--risk)}
+.zs.infra{color:var(--infra)}
+:root[data-theme="light"] .zs.infra{color:#8a5300}.zs.agent{color:var(--agent)}.zs.risk{color:var(--risk)}
 .gap{position:absolute;font:20px/24px system-ui;color:var(--dim)}
 .gap b{display:block;color:var(--head);font-weight:700}
 #foot{position:absolute;left:40px;right:40px;top:664px;font:20px/26px system-ui;color:var(--dim)}
@@ -65,14 +66,14 @@ window.RUV_STEPS = [{ t: 0, label: 'the question' }, { t: 3, label: 'Nx s1ngular
           { t: 'npm', s: 'a compromised release', c: 'infra' },
           { t: 'a victim\'s machine', s: 'it ran on install', c: 'infra' },
           { t: 'its coding agents', sub: agents, s: 'called, with permission checks off', c: 'agent' },
-          { t: 'the whole machine', s: 'searched for secrets', c: 'agent' },
+          { t: 'the machine', s: 'searched for secrets', c: 'agent' },
           { t: 'public', s: nx.impact, c: 'risk' }] },
       { top: 404, at: 18, name: es.name, tag: es.kind + ': ' + N.kinds[es.kind] + ' · reported ' + month(es.when),
         zones: [
           { t: 'a state actor', s: N.kinds[es.kind], c: 'infra' },
           { t: es.agent, s: 'driven through the whole campaign', c: 'agent' },
           { t: 'an espionage campaign', s: es.figure.value + ' of the work done by the model, as Anthropic reported it', c: 'risk' }],
-        gap: { t: 'Each system it reached, hop by hop', s: 'not in our files yet: the researcher is asked for more cases' } }]
+        gap: { t: 'Hops not stated in our files:', s: 'left empty' } }]
   }
 
   function build(S) {
@@ -105,7 +106,7 @@ window.RUV_STEPS = [{ t: 0, label: 'the question' }, { t: 3, label: 'Nx s1ngular
       }
       return o
     })
-    S.$('foot').innerHTML = '<b>Each hop: a step it was able to take.</b> Only the hops our files state; more cases are coming from the researcher.'
+    S.$('foot').innerHTML = '<b>Each hop: a step it was able to take.</b> Only the hops our files state.'
   }
 
   window.SLIDE_RENDER = function (t, S) {

@@ -68,16 +68,17 @@
       var g = el('g', {}, svg), x = xs(i), y = TR[i]
       el('path', { d: 'M' + x + ' ' + FL + 'V' + y + 'H' + (x + W) + (i < 3 ? 'V' + TR[i + 1] : 'V' + FL), fill: 'none', stroke: 'var(--line2)', 'stroke-width': 3, 'stroke-linejoin': 'round' }, g)
       el('rect', { x: x + 2, y: y + 2, width: W - 4, height: FL - y - 4, fill: 'var(--panel)' }, g)
-      var t1 = el('text', { x: x + 8, y: y - 64, fill: 'var(--dim)', 'font-size': 20, 'font-family': 'system-ui' }, g, 'level ' + (i + 1))
-      var t2 = el('text', { x: x + 8, y: y - 38, fill: 'var(--dim)', 'font-size': 21, 'font-weight': 800, 'font-family': 'system-ui' }, g, LV[i])
+      var t1 = el('text', { x: x + 8, y: y - 80, fill: 'var(--dim)', 'font-size': 20, 'font-family': 'system-ui' }, g, 'level ' + (i + 1))
+      var t2 = el('text', { x: x + 8, y: y - 54, fill: 'var(--dim)', 'font-size': 21, 'font-weight': 800, 'font-family': 'system-ui' }, g, LV[i])
       var ev = el('text', { x: x + 10, y: y + 32, fill: i ? 'var(--accent)' : 'var(--dim)', 'font-size': 20, 'font-family': 'system-ui' }, g)
       if (i) { el('tspan', { x: x + 10 }, ev, 'unlocked on'); el('tspan', { x: x + 10, dy: 24 }, ev, 'level ' + i + ' held') } else ev.textContent = 'on day one'
       b.lv.push({ g: g, name: t2, ev: ev })
     }
     for (i = 0; i < 3; i++) {           // the gate on level i+1's tread, just before its riser
       var gx = xs(i + 1) - 36, gy = TR[i], w = el('g', {}, svg)
-      var top = el('rect', { x: gx - 7, y: gy - 32, width: 14, height: 16, rx: 3, fill: 'var(--dim)' }, w)
-      var bot = el('rect', { x: gx - 7, y: gy - 16, width: 14, height: 16, rx: 3, fill: 'var(--dim)' }, w)
+      var top = el('rect', { x: gx - 6, y: gy - 44, width: 12, height: 22, rx: 3, fill: 'var(--dim)' }, w)
+      var bot = el('rect', { x: gx - 6, y: gy - 22, width: 12, height: 22, rx: 3, fill: 'var(--dim)' }, w)
+      if (i === 1) el('text', { x: gx, y: gy - 54, 'text-anchor': 'middle', fill: 'var(--dim)', 'font-size': 20, 'font-family': 'system-ui' }, w, 'gate')
       b.gates.push({ g: w, top: top, bot: bot, x: gx, y: gy })
     }
     // the agent's path: along each tread, up each riser, to the top level
@@ -91,9 +92,13 @@
     for (i = 0; i < 3; i++) { run += xs(i + 1) - 14 - (i ? xs(i) - 14 : X0 + 18); L.push(run); run += TR[i] - TR[i + 1]; L.push(run) }
     run += FX - (xs(3) - 14); L.push(run); b.L = L
     b.dot = el('circle', { r: 10, fill: 'var(--agent)' }, svg)
-    b.ag = el('text', { 'font-size': 20, 'font-weight': 700, fill: 'var(--agent)', 'font-family': 'system-ui' }, svg, 'the agent')
+    b.ag = el('text', { 'text-anchor': 'end', 'font-size': 20, 'font-weight': 700, fill: 'var(--agent)', 'font-family': 'system-ui' }, svg, 'the agent')
     // the step outside (the agent's, so red, dashed: it has not happened) and the designed suspension (dashed)
     b.out = el('path', { d: 'M' + FX + ' ' + (TR[3] - 24) + 'V' + 140, fill: 'none', stroke: 'var(--agent)', 'stroke-width': 3, 'stroke-dasharray': '6 7' }, svg)
+    // where the step outside crosses it, the mandate's wall breaks: dashed, in the designed colour
+    b.brk = el('g', {}, svg)
+    el('path', { d: 'M1036 150H1092', stroke: 'var(--bg)', 'stroke-width': 6 }, b.brk)
+    el('path', { d: 'M1036 150H1092', stroke: 'var(--risk)', 'stroke-width': 3, 'stroke-dasharray': '6 6' }, b.brk)
     b.ring = el('g', {}, svg)
     el('circle', { cx: FX, cy: 128, r: 11, fill: 'none', stroke: 'var(--agent)', 'stroke-width': 3, 'stroke-dasharray': '5 4' }, b.ring)
     el('text', { x: FX + 20, y: 135, fill: 'var(--agent)', 'font-size': 20, 'font-family': 'system-ui' }, b.ring, 'a step outside')
@@ -141,7 +146,7 @@
       var o = S.ease(S.seg(t, GO[i] + 3.5, GO[i] + 4.2)), c = t >= GO[i] + 3.5 ? 'var(--accent)' : 'var(--dim)'
       g.g.style.opacity = k(10.5)
       g.top.setAttribute('fill', c); g.bot.setAttribute('fill', c)
-      g.top.setAttribute('transform', 'rotate(' + (-70 * o) + ' ' + (g.x + 7) + ' ' + (g.y - 32) + ')')
+      g.top.setAttribute('transform', 'rotate(' + (-70 * o) + ' ' + (g.x + 7) + ' ' + (g.y - 44) + ')')
       g.bot.setAttribute('transform', 'rotate(' + (70 * o) + ' ' + (g.x + 7) + ' ' + g.y + ')')
     })
     var p = at(t), pt = B.path.getPointAtLength(Math.max(.01, p))
@@ -149,11 +154,11 @@
     B.path.style.opacity = k(11)
     B.dot.setAttribute('cx', pt.x); B.dot.setAttribute('cy', pt.y); B.dot.style.opacity = k(11, .4)
     // "the agent" beside the dot once it has stopped on the top level; the card's red "an agent" names it before
-    B.ag.setAttribute('x', pt.x + 18); B.ag.setAttribute('y', pt.y + 7)
+    B.ag.setAttribute('x', pt.x - 18); B.ag.setAttribute('y', pt.y - 14)
     B.ag.style.opacity = k(32.6, .5)
     var o = S.ease(S.seg(t, 34, 35.6))
     B.out.setAttribute('d', 'M' + FX + ' ' + (TR[3] - 24) + 'V' + S.lerp(TR[3] - 24, 140, o)); B.out.style.opacity = o > 0 ? 1 : 0
-    B.ring.style.opacity = k(35.4)
+    B.brk.style.opacity = k(35.2, .4); B.ring.style.opacity = k(35.4)
     var s2 = S.ease(S.seg(t, 37, 38.4))
     B.sus.setAttribute('d', 'M' + (FX - 14) + ' 136L' + S.lerp(FX - 14, 772, s2) + ' ' + S.lerp(136, 206, s2)); B.sus.style.opacity = s2 > 0 ? 1 : 0
     S.$('box').style.opacity = k(38.2)

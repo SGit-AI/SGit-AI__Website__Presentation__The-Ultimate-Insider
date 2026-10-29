@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>E12 v1: the blast radius, contained, designed and not today</title>
 <link rel="stylesheet" href="../../../../talk/engine/slide.css">
-<script>window.RUV_STEPS = [{ t: 0, label: 'today: 12 of 12 lit' }, { t: 8, label: 'measured in a child' }, { t: 18, label: 'designed: walls close' }, { t: 34, label: 'what stays lit' }, { t: 42, label: 'measured or designed' }]</script>
+<script>window.RUV_STEPS = [{ t: 0, label: 'today: 12 of 12 lit' }, { t: 8, label: 'measured in a child' }, { t: 18, label: 'designed: walls close' }, { t: 34, label: 'what stays lit' }, { t: 42, label: 'a boundary for the child' }]</script>
 <script src="../../../../talk/engine/slide.js"></script>
 <style>
 .kk{font-size:20px;top:14px}
@@ -21,6 +21,7 @@
 .cell .n{font:800 52px/58px system-ui;color:var(--agent)}
 .cell .s{font:600 20px/24px system-ui;color:var(--text)}
 #cB{border:2px dashed var(--accent)}
+#cB .n{color:var(--accent)}
 #cA{border:2px solid var(--line2)}
 .hd{position:absolute;left:640px;width:600px;font:700 20px/26px system-ui;color:var(--head)}
 .lt{font:600 20px/23px system-ui;fill:var(--text)}
@@ -65,7 +66,7 @@
   }).catch(function (e) { console.error('E12: a data file did not load', e) })
 
   var plain = function (id) { var c = C.capabilities.filter(function (x) { return x.id === id })[0]; return c ? c.label.replace(/\s*\([^)]*\)\s*$/, '') : id }
-  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  var MON = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   var day = function (s) { var m = /(\d{4})-(\d\d)-(\d\d)/.exec(s || ''); return m ? (+m[3]) + ' ' + MON[+m[2] - 1] + ' ' + m[1] : '' }
   function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
   function txt(p, s, a) { var e = el('text', a, p); e.textContent = s; return e }
@@ -158,6 +159,7 @@
       var d = byCap[c[0]]; if (!d || d.r.mandate_stance === 'authorised') return
       var p = c[2] && pby[c[2]], measured = !!(p && /\(held\)/.test(p.result))
       var o = lane(dg, 412 + i * 56, num[c[0]], plain(c[0]), measured ? 'measured' : 'designed', measured ? 'in a child' : '', measured)
+      var ring = d.dk.firstChild; ring.setAttribute('stroke', 'var(--accent)'); ring.setAttribute('stroke-width', 3); if (!measured) ring.setAttribute('stroke-dasharray', '5 4')
       o.d = d; dl.push(o)
     })
     S.$('hD').innerHTML = 'If a <b>files</b> and <b>network</b> wall held for the agent itself. Which rows close is the slide\'s reading:'
@@ -197,13 +199,13 @@
     })
     S.$('lit').style.opacity = k(34.5)
     var st = S.$('state'); st.classList.toggle('dz', dz)
-    var sv = dz ? 'Designed, not today: ' + B.dl.length + ' rows go dark, <i>' + B.still + ' stay lit</i>.' : 'Today, as E02 ended: <i>' + D.unbounded_excess + ' of ' + D.excess + ' lit</i>, no control on any.'
+    var sv = dz ? (t >= 34 ? 'Designed, not today: ' + B.dl.length + ' rows go dark, <i>' + B.still + ' stay lit</i>.' : 'Designed, not today: rows a wall closes go dark.') : 'Today, as E02 ended: <i>' + D.unbounded_excess + ' of ' + D.excess + ' lit</i>, no control on any.'
     if (st.innerHTML !== sv) st.innerHTML = sv
     var s = 'Claude Code, confirmations on, as E02 ended: of the excess ' + D.excess + ', ' + D.unbounded_excess + ' are bounded by nothing. No row is behind a boundary.'
     if (t >= 8) s = 'What the harness has measured: the kernel refused these for a child process, under a policy set before the child started.'
-    if (t >= 18) s = 'Designed: the launcher above the agent would make that policy a boundary for the agent itself. Rows a wall closes go dark.'
+    if (t >= 18) s = 'Designed: the launcher above the agent would make that policy a boundary for the agent itself. Dark rows: solid ring, measured in a child; dashed, designed.'
     if (t >= 34) s = 'What stays lit is the excess still bounded by nothing: ' + B.still + ' of ' + D.excess + ', even in the designed state.'
-    if (t >= 42) s = 'A process cannot bind its own session. fs and net run as MVPs, settings until the launcher gives them their own uid. Today: ' + D.unbounded_excess + ' of ' + D.excess + '.'
+    if (t >= 42) s = 'hello, ' + B.when + ': a boundary for the child, not yet for the agent. fs is a setting until the launcher gives it its own uid; net, a boundary only for the shell sharness-ai shell starts.'
     if (S.$('sum').textContent !== s) S.$('sum').textContent = s
   }
 })()

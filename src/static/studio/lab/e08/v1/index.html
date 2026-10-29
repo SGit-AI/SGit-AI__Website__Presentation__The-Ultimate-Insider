@@ -99,7 +99,7 @@
       w.knob = el('circle', { cx: s.x + 19, cy: s.y, r: 13 }, g)
       txt(g, s.x, s.y - 36, s.label, { 'text-anchor': 'middle', 'font-weight': 800, fill: 'var(--head)', 'font-size': 22 })
       w.wall = el('rect', { x: s.x - 54, y: s.y - 34, width: 10, height: 68, rx: 3, fill: 'var(--accent)' }, g)
-      w.tag = txt(g, s.x, s.y + 52, 'turn off: closed', { 'text-anchor': 'middle', 'font-weight': 700, fill: 'var(--accent)' })
+      w.tag = txt(g, s.x, s.y + 52, 'off would close it', { 'text-anchor': 'middle', 'font-weight': 700, fill: 'var(--accent)' })
       w.g = g; b.sw[k] = w
     }
     b.nodes = ['n-doc', 'n-data', 'n-agent', 'n-out'].map(function (id) { return S.$(id) })

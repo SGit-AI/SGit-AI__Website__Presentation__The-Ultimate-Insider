@@ -1,0 +1,65 @@
+<!--meta {"title": "E12 explained: the blast radius, contained, frame by frame", "description": "How studio experiment E12 draws E02's ring today (12 of 12 lit) and in a designed state where files and network walls close four rows: each frame with its time, which rows the slide maps to a wall and why, where every word comes from, the technique, and what was left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E12</a></nav>
+<p class="kicker">Studio experiment E12 · the explainer</p>
+<h1>The blast radius, contained, frame by frame</h1>
+<p class="lead">The one sentence: today no row of this agent's excess is behind a boundary, 12 of 12; a harness has measured that a kernel-held policy refuses a file write and an outbound connect for a child process, and the launcher that would make such a policy a boundary for the agent itself is designed. In that designed state, by the slide's reading, four rows go dark and eight stay lit.</p>
+
+<h2>The frames (v1)</h2>
+<p>Seconds from the start; it ends at 52 s and holds still. The line under the headline changes with each stage; the caption under the ring says which state is shown, in a dashed box when it is the designed one.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>Today. E02 v3's ring as it ended: the mandate's four rows round the model, the twelve rows of the excess in five sectors (credentials, files, the world, records, schedule), numbered 1 to 16 as in E02, each in its barrier kind's glyph; the cross for the one thing asked for and not granted. Under it: "Today, as E02 ended: 12 of 12 lit, no control on any." From 2 s, top right: "Today, this agent: 12 of 12, bounded by nothing" (the example's <code>unbounded_excess</code> of <code>excess</code>).</td></tr>
+<tr><td>8 s</td><td>What the harness has measured. "Measured by sharness-ai hello, 25 October 2026: a policy the kernel holds, on a child process." Three of hello's probes, at 9.5, 11 and 12.5 s, each a path that stops at a solid wall: write a file in /tmp, connect out to 1.1.1.1:443, take 400 MiB under a 128 MiB cap, each "refused". From 14 s the site's own caveat: "A boundary for the child. For the session that started it, a setting." The ring does not change.</td></tr>
+<tr><td>18 s</td><td>Designed, not today. The caption under the ring turns into a dashed box: "Designed, not today: rows a wall closes go dark" (from 34 s, with the counts: "4 rows go dark, 8 stay lit"). The line under the headline gives the key: a dark row with a solid accent ring is of a kind measured in a child, with a dashed ring designed. On the right: "If a files and network wall held for the agent itself. Which rows close is the slide's reading:" Four lanes, at 21, 24, 27 and 30 s: the row's number and plain label, a path that stops at a wall; as it reaches the wall (1.3 s in) the row's dot on the ring goes dark, ringed solid or dashed to match its wall. Row 11 (change any file) and row 13 (reach any host) meet a solid wall, marked "measured in a child"; rows 9 (delete files) and 10 (read any file) meet a dashed wall, marked "designed".</td></tr>
+<tr><td>34 s</td><td>What stays lit. "Still lit, bounded by nothing even then (8 of 12)": rows 5, 6, 7, 8, 12, 14, 15 and 16. From 35 s a second box beside today's, dashed, its count in the accent colour: "Designed: 8 of 12, still bounded by nothing".</td></tr>
+<tr><td>42 s</td><td>The caveat, under the headline: "hello, 25 October 2026: a boundary for the child, not yet for the agent. fs is a setting until the launcher gives it its own uid; net, a boundary only for the shell sharness-ai shell starts." It holds still from 52 s.</td></tr>
+</tbody></table></div>
+
+<h2>Which rows close, and why the others stay lit</h2>
+<p>The data maps no row to a harness component; the mapping is the slide's, kept to rows whose kind plainly matches a files wall (beyond the workspace) or a network wall, and marked by what the harness data supports.</p>
+<div class="tbl"><table>
+<thead><tr><th>Row</th><th>In the designed state</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>11 Change any file the account can reach<br><code>write.file.host</code></td><td>dark, measured in a child</td><td>hello's probe "create /tmp/sharness-ai-hello.tmp": "refused: EACCES (Landlock) (held)". A write outside the workspace. One probe, one file in /tmp, stands for the whole row: a wall of this kind is measured, not every write this row covers.</td></tr>
+<tr><td>13 Reach any host on the internet<br><code>send.endpoint.world</code></td><td>dark, measured in a child</td><td>hello's probe "TCP connect to 1.1.1.1:443": "refused: EACCES (Landlock port rule; an empty network namespace was also applied) (held)". One probe, one connect to one address, stands for the whole row.</td></tr>
+<tr><td>9 Delete files anywhere the account can reach<br><code>delete.file.host</code></td><td>dark, designed</td><td>A files wall, but no hello probe tries a delete, so nothing of this kind is measured.</td></tr>
+<tr><td>10 Read any file the account can reach<br><code>read.file.host</code></td><td>dark, designed</td><td>A files wall, but hello's only read is the control it allows (list /usr); no probe has a read refused.</td></tr>
+<tr><td>5, 6, 7 credentials: sign commits, act in accounts, read stored credentials</td><td>lit</td><td>Credentials are a key-holding question (sharness.kms, designed), not plainly a files or network wall; reading stored credentials is a file read, but where they live is not in the data, so it stays lit.</td></tr>
+<tr><td>8 Change its own permission settings</td><td>lit</td><td>Its barrier is a setting, "the settings file is owned by the same account"; no wall of the measured kinds plainly takes it.</td></tr>
+<tr><td>12 Publish packages, images or pages under the name it holds</td><td>lit</td><td>It goes over the network, but the mandate lets it fetch packages, so a network wall would likely allow the registry it publishes to. Not obvious, so lit.</td></tr>
+<tr><td>14 Read a retained record: shell history, past sessions; 15 Push to a code host</td><td>lit</td><td>History is a file and a push is network, but neither is plainly outside what the mandate's own work touches (the repository, its host). Not obvious, so lit.</td></tr>
+<tr><td>16 Create something that outlives the turn where it runs</td><td>lit</td><td>No wall of the measured kinds.</td></tr>
+</tbody></table></div>
+<p>hello's memory probe ("allocate 400 MiB under a 128 MiB cap", "refused: MemoryError") is shown among the measured, but no row of the excess is about memory, so it closes nothing on the ring.</p>
+
+<h2>Where every word comes from</h2>
+<ul>
+<li><b>The ring</b>: the rows of the example <code>claude-code-cli-confirmations-enabled</code> in <code>abp-examples.json</code>, grouped, ordered and numbered by the same code as E02 v3; each row's glyph is its <code>barrier_kind</code> (abp.sgit.ai's glyphs). The counts under the headline and in the boxes are the example's <code>excess</code> (12) and <code>unbounded_excess</code> (12); 8 of 12 is the slide's count of rows its reading leaves lit.</li>
+<li><b>The plain labels</b> in the lanes are <code>capabilities.json</code>'s.</li>
+<li><b>The probes</b>: <code>probes</code> in <code>harness.json</code>; the short names ("Write a file in /tmp", "Connect out to 1.1.1.1:443", "Take 400 MiB under a 128 MiB cap") are the slide's words for each probe's <code>name</code>; "refused" is read from each <code>result</code>; the date from <code>measured_on</code>. A lane is marked "measured in a child" only when its probe's result says it held.</li>
+<li><b>The caveats</b>: "a Boundary for the child, a Setting for the session", the launcher above the agent being designed with a first slice since 28 October, fs being "a Setting until the launcher gives it its own uid" and net, runnable as an MVP since 27 October 2026, "a Boundary only for the shell sharness-ai shell starts as root; a Setting otherwise", are the <code>cautions</code> and <code>components</code> of <code>harness.json</code>. "A process cannot bind its own session" restates that caution.</li>
+<li><b>Words the slide adds</b>: "today", "designed, not today", "go dark", "stay lit", "still bounded by nothing", "the slide's reading", the lane headers. Each restates a field or labels the slide's own mapping, not a new claim.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: the ring, lanes and boxes are built once from three data files, then every frame is drawn from the slide's clock by <code>SLIDE_RENDER</code>, so the player can seek, pause and replay it, and <code>?static</code> shows the end state. The stages are declared in <code>window.RUV_STEPS</code>: 0, 8, 18, 34 and 42 s.</li>
+<li>E04 v2's language for a path at a wall: every path here stops at a wall that holds, and the wall nudges. A solid wall is a kind measured in a child; a dashed wall is designed only. The designed state itself is drawn in a dashed box, never as today.</li>
+<li>Three colours of meaning: the agent's red for the excess still lit and the agent's paths, the accent for walls, the designed state and its count, and the neutral grey for a row gone dark (ringed in the accent, solid if measured in a child, dashed if designed). Every text is 20 px or larger on the 1280 by 720 canvas; both themes (<code>?theme=light</code>).</li>
+<li><b>It runs only over HTTP.</b> The slide reads its files with <code>fetch</code> when it loads; opened as a file from disk it shows only the headline.</li>
+</ul>
+
+<h2>What was tried and left out</h2>
+<ul>
+<li><b>E02's two columns of labels.</b> The ring is enough for the room to recognise it; only the four rows that change are named, in their lanes.</li>
+<li><b>Walls drawn on the ring itself.</b> The rows sit too close to the sector arcs for a path and a wall to fit at 20 px; the lanes carry the walls, and the ring shows only what goes dark.</li>
+<li><b>The other three hello probes</b> (the allowed control, the workspace write, the wrong hash): the /tmp write already stands for a write outside the workspace, and the wrong hash closes no row.</li>
+<li><b>A score or a percentage.</b> None: a count of rows, today's from the data, the designed one labelled as the slide's reading.</li>
+<li><b>Rows 5, 7, 8, 12, 14 and 15 as closed.</b> Each could be argued to a files or network wall; none plainly, so each stays lit, with the reason in the table above.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 by ruv.sgit@the-ultimate-insider in run r17-e12-radius-contained, at deck@'s request, the editor's word: a Ruflo hive with a builder who made the slide and these pages from the request and the data, screenshotted in both themes at several times. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</article>
