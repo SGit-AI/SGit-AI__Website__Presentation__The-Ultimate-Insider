@@ -39,13 +39,18 @@ A request outside the scope is answered with the owner's name and left undone, w
 
 ## Every round
 
-1. `git fetch origin dev && git merge --ff-only origin/dev` before starting.
+0. `python3 admin/tools/start.py dev --kind "..." --objective "..." --model <model>`: pull `dev`, then the start banner, the very first thing in the report.
+1. (done by `start.py`: `git fetch origin dev` and the merge.)
 2. Work; `./run-website-locally.sh` (build and gate) before every push.
 3. `python3 admin/build/agents.py check --agent dev`: anything outside scope is undone or named in the debrief.
 4. A debrief in `debriefs/<date>__<slug>.md` with screenshots of what changed, and `status.json` updated.
 5. Push the branch, then release to `dev`; report the version CI gave it only once the live site serves it.
+6. The end banner, the very last thing in the report, nothing after it: `python3 admin/tools/banner.py end dev --started <ISO UTC> ...`.
 
 ## Rules, and the mistake behind each
+
+- **Start every session with `python3 admin/tools/start.py dev ...`, whether a schedule or the editor's chat started it.** It pulls `dev` and the vaults, then prints the start banner. Many agents push every hour; work from a stale copy undoes theirs (the editor, 29 October 2026; added by the conductor at the editor's word, the role's owner may reword it).
+- **Open and close every session report with a banner** (`admin/tools/banner.py`). The editor reads a session from the last prompt down and could not tell where a report began or ended (the PHP newsroom, 27 October 2026; added by the conductor at the editor's word, 29 October 2026).
 
 - **Never type a version number.** Agents racing for release numbers cost the newsroom releases on 27 October 2026.
 - **Show the version in the top bar, linked to that release's own entry.** The first pass put it only in the footer; sgit.ai's guidance says the top bar, always visible (fixed in round 2).

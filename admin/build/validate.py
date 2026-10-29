@@ -27,7 +27,7 @@ class Gate:
              ('OpenAI-style key',  re.compile(r'\bsk-[A-Za-z0-9]{40,}')),
              ('Slack token',       re.compile(r'\bxox[abpr]-[A-Za-z0-9-]{20,}')),
              ('sgit vault key',    re.compile(r'\b[a-z0-9]{24}:[a-z0-9]{8}\b'))]
-    STANDALONE = ('talk/player.html', 'talk/slides/', '404.html')    # pages with no chrome and no twin, by design
+    STANDALONE = ('talk/player.html', 'talk/slides/', 'studio/lab/', '404.html')    # pages with no chrome and no twin, by design
 
     def __init__(self):
         self.findings = []
@@ -91,6 +91,22 @@ class Gate:
             if page.resolve() not in linked and page.relative_to(OUT) != Path('index.html'):
                 self.fail('reachable', page.relative_to(OUT), 'no other page links to it')
 
+    def check_banners(self):                                        # every member opens and closes its session report with a banner
+        for role in sorted((ROOT / 'team').glob('*/ROLE.md')):
+            text = role.read_text()
+            if 'admin/tools/banner.py' not in text:
+                self.fail('banners', role.relative_to(ROOT), 'does not tell its agent to open and close each session with admin/tools/banner.py')
+            if 'admin/tools/start.py' not in text:
+                self.fail('banners', role.relative_to(ROOT), 'does not tell its agent to start each session with admin/tools/start.py (pull first)')
+
+    def check_vendored(self):                                       # vendored files are unmodified copies, pinned by checksum
+        import hashlib
+        for pin in sorted((ROOT / 'src' / 'static').rglob('*.sha256')):
+            want, name = pin.read_text().split()[:2]
+            path = pin.parent / name
+            if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest() != want:
+                self.fail('vendored', path.relative_to(ROOT), 'does not match its pinned sha256')
+
     def check_team(self):
         r = subprocess.run([sys.executable, str(ROOT / 'admin/build/agents.py'), 'overlaps'], capture_output=True, text=True)
         if r.returncode:
@@ -150,7 +166,7 @@ class Gate:
 
     def check_prose(self):
         for path in self.tracked_files():
-            if path.suffix not in ('.md', '.html', '.json', '.js', '.css', '.py', '.txt') or 'LICENSE' in path.name:
+            if path.suffix not in ('.md', '.html', '.json', '.js', '.css', '.py', '.txt') or 'LICENSE' in path.name or '/vendor/' in str(path):
                 continue
             for n, line in enumerate(path.read_text(errors='ignore').splitlines(), 1):
                 if '\u2014' in line:
@@ -169,7 +185,7 @@ class Gate:
     def run(self):
         if not OUT.exists():
             sys.exit('build first: python3 admin/build/build.py')
-        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_stamps, self.check_no_remote_code,
+        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_banners, self.check_vendored, self.check_stamps, self.check_no_remote_code,
                       self.check_scripts_parse, self.check_talk, self.check_prose, self.check_leaks):
             check()
         if self.findings:
