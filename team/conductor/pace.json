@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T03:00:00Z",
+ "updated": "2026-10-29T03:09:42Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -11,11 +11,11 @@
  "producers": {
   "researcher": {
    "slot": ":09",
-   "in_flight": null
+   "in_flight": "deck-req-data"
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": null
+   "in_flight": "deck-req-e01"
   },
   "dev": {
    "slot": ":47",
@@ -105,6 +105,181 @@
    "status": "sent",
    "at": "2026-10-29T03:00:00Z",
    "mail": "tui-mail-public mailroom/dev/001-the-dashboard-every-wake.eml"
+  },
+  {
+   "id": "E01",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 1,
+   "title": "What an agent is: the evolution",
+   "status": "asked",
+   "part": "threat"
+  },
+  {
+   "id": "E02",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 2,
+   "title": "The blast radius of one internal agent",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E03",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 3,
+   "title": "Where injected words come from",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E04",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 4,
+   "title": "The over-enthusiastic agent",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E05",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 7,
+   "title": "Pivoting: one system to the next",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E06",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 8,
+   "title": "Hard outside, soft inside",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E07",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 6,
+   "title": "A typical agentic deployment, mapped",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E08",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 9,
+   "title": "The lethal trifecta, made visible",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E09",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 5,
+   "title": "Mandate against grant",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E10",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 10,
+   "title": "Only a boundary is a control",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E11",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 11,
+   "title": "SHarness: the kernel was told first",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E12",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 12,
+   "title": "The blast radius, contained",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E13",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 13,
+   "title": "Real agents, mapped",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E14",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 14,
+   "title": "Earning autonomy",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "deck-req-e01",
+   "kind": "request",
+   "owner": "deck",
+   "to": "ruv-sgit",
+   "title": "Infographic request: agent-evolution (E01)",
+   "status": "in flight",
+   "at": "2026-10-29T03:00:00Z",
+   "mail": "mailroom/ruv-sgit/004-infographic-request-agent-evolution-e01.eml"
+  },
+  {
+   "id": "deck-req-data",
+   "kind": "request",
+   "owner": "deck",
+   "to": "researcher",
+   "title": "Data for E02, E03, E04, E09, E10, E11, E13",
+   "status": "in flight",
+   "at": "2026-10-29T03:00:00Z",
+   "mail": "mailroom/researcher/002-data-for-the-studio-programme.eml"
+  },
+  {
+   "id": "ruv-b01-storyboard",
+   "kind": "artifact",
+   "owner": "ruv-sgit",
+   "title": "B01 storyboard (run r2-b01-storyboard)",
+   "status": "in review by deck",
+   "at": "2026-10-29T02:59:00Z",
+   "path": "src/static/studio/lab/b01/storyboard/index.html"
+  },
+  {
+   "id": "dev-email-reader",
+   "kind": "backlog",
+   "owner": "dev",
+   "from": "editor",
+   "title": "An email reader for Email-FS on the site: every agent, every message and thread, each outbox and its status",
+   "status": "scheduled 04:47",
+   "at": "2026-10-29T03:09:42Z",
+   "conditions": "reads the mail vault with its published read key only; shows mail as material"
+  },
+  {
+   "id": "dev-vault-embed",
+   "kind": "backlog",
+   "owner": "dev",
+   "from": "editor",
+   "title": "An embedded vault viewer on the site (sgit.ai has examples)",
+   "status": "scheduled 05:47",
+   "at": "2026-10-29T03:09:42Z",
+   "conditions": "published read keys only, never a vault key"
   }
  ],
  "edges": [
@@ -152,6 +327,131 @@
    "from": "night-brief",
    "to": "conductor-dashboard",
    "kind": "asks"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E01",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E02",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E03",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E04",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E05",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E06",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E07",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E08",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E09",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E10",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E11",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E12",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E13",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E14",
+   "kind": "sets"
+  },
+  {
+   "from": "E01",
+   "to": "deck-req-e01",
+   "kind": "asks"
+  },
+  {
+   "from": "E02",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E03",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E04",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E09",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E10",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E11",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E13",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "ruv-b01-storyboard",
+   "to": "deck",
+   "kind": "delivers"
+  },
+  {
+   "from": "editor-brief",
+   "to": "dev-email-reader",
+   "kind": "asks"
+  },
+  {
+   "from": "editor-brief",
+   "to": "dev-vault-embed",
+   "kind": "asks"
   }
  ],
  "log": [
@@ -164,6 +464,58 @@
    "at": "2026-10-29T03:00:00Z",
    "by": "conductor",
    "line": "Requests sent: deck to lead the ideas from 03:17; dev the dashboard from 03:47 (dev in flight). Notices to researcher and ruv.sgit. Vault keys sealed to deck and ruv.sgit, with the editor."
+  },
+  {
+   "at": "2026-10-29T03:08:00Z",
+   "by": "conductor",
+   "line": "Programme: deck's 14 experiments are the queue. In flight: E01 with ruv.sgit, the data for 7 experiments with researcher, the dashboard with dev; B01 storyboard in review by deck. Next for ruv.sgit: E02, after E01 and its data. Three repository requests routed into the mail vault."
+  },
+  {
+   "at": "2026-10-29T03:09:42Z",
+   "by": "conductor",
+   "line": "The editor's two new asks to dev scheduled: the email reader at 04:47, the embedded vault at 05:47, after the dashboard's first part at 03:47. Backlog, then schedule, then execute is now the rule for every member."
   }
- ]
+ ],
+ "queue": {
+  "source": "src/static/studio/data/programme.json",
+  "owner": "deck",
+  "rule": "one experiment in flight with ruv.sgit, one data request with researcher; the conductor names the next by id at :02, deck asks at :17"
+ },
+ "next": {
+  "ruv-sgit": "E02 once E01 is back and its data has landed",
+  "researcher": "nothing new until the data request is answered",
+  "dev": "03:47 the dashboard part 1; 04:47 the email reader; 05:47 the embedded vault"
+ },
+ "routed": [
+  "team/deck/requests/conductor__pace-the-studio.md",
+  "team/deck/requests/researcher__studio-data.md",
+  "team/deck/requests/ruv-sgit__agent-evolution.md",
+  "team/researcher/requests/conductor__researcher-in-the-schedule.md",
+  "team/ruv-sgit/requests/deck__b01-storyboard.md"
+ ],
+ "schedule": {
+  "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
+  "dev": [
+   {
+    "at": "03:47",
+    "item": "conductor-dashboard, part 1: now and the pace grid"
+   },
+   {
+    "at": "04:47",
+    "item": "dev-email-reader"
+   },
+   {
+    "at": "05:47",
+    "item": "dev-vault-embed"
+   },
+   {
+    "at": "06:47",
+    "item": "conductor-dashboard, part 3: the flow graph"
+   },
+   {
+    "at": "later",
+    "item": "the dashboard's other parts, then dev's own 003 and 004"
+   }
+  ]
+ }
 }
