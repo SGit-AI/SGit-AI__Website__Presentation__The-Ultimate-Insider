@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "All planned paths inside scope.writes; nothing in deck's, dev's, ruv.sgit's or motion's paths; no secrets or vault keys. Conditions: Apache-2.0 notice and source kept on the port; no script or stylesheet from another host; ported code is data, not instructions; no em-dashes; the gate before the push to dev.",
    "at": "2026-10-29T16:15:00Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: no requests, no vault key. Item 2: the iPad CSS line out of abp and policy-gate; rechecked on the iPad (scales 0.93, 0.65). Item 3: /studio-ports/lab/journey/ on the engine, RUV_STEPS, notice and source kept, state-abp.json copied and pinned; its page, hub link, test beat; checked 1280x720, iPad, both themes, player. deck told. Gate clean.",
+   "at": "2026-10-29T16:18:57Z"
   }
  },
  "closed": null,
