@@ -35,7 +35,7 @@ Every beat of the talk should earn its place in one arc that the editor agrees w
 
 0. `python3 admin/tools/start.py storyteller --kind "..." --objective "..." --model <model>`: pull `dev` and the vaults, then the start banner, the very first thing in the report.
 1. Read what changed for it: mail in `tui-mail-public` `mailroom/storyteller/`, its board, `team/*/requests/storyteller__*.md`, `git log --grep 'To-storyteller:'`, and what the hour did to `talk.json` and the register.
-2. The five steps (`team/conductor/WAKE.md`): plan, pre-review, `python3 admin/tools/wake.py gate storyteller`, the work (at most 8 minutes, requests first), post-review, post-check.
+2. The five steps (`team/conductor/WAKE.md`): plan, pre-review, `python3 admin/tools/wake.py gate storyteller`, the work (within the limit `WAKE.md` sets, 45 minutes since the editor's word of 29 October; requests first), post-review, post-check.
 3. `python3 admin/build/build.py && python3 admin/build/validate.py`; `python3 admin/build/agents.py check --agent storyteller`.
 4. A debrief in `debriefs/<date>__<slug>.md`, `status.json` updated, push and release to `dev`.
 5. The end banner, `python3 admin/tools/banner.py end storyteller --started <ISO UTC> ...`, the very last thing in the report, nothing after it.
