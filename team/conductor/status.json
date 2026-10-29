@@ -1,10 +1,14 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T14:06:58Z",
+ "as_of": "2026-10-29T14:17:24Z",
  "round": 9,
- "state": "14:03 editor's request: the editor's briefs committed and routed; dev's feedback pane and lane with voice now, then the player with a build mode; storyteller proposed at :54.",
+ "state": "14:02 wake (fired 14:15): the storyteller joined; its vault keys sealed, the zip with the editor.",
  "done": [
+  {
+   "what": "How this talk was built: a mini deck of the team in motion, six scenes animated from the team's public records (admin/tools/workflow_deck.py)",
+   "evidence": "/articles/how-this-talk-was-built.html"
+  },
   {
    "what": "The morning review: every piece with deck verdict, what went wrong, what waits on the editor",
    "evidence": "team/conductor/debriefs/2026-10-29__the-morning-review.md"
@@ -93,10 +97,6 @@
    "from": "the editor"
   },
   {
-   "what": "Wake dev for the feedback pane and lane (dev 018-style request in its mailroom)",
-   "from": "the editor"
-  },
-  {
    "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
    "from": "the editor"
   },
@@ -106,6 +106,10 @@
   },
   {
    "what": "D12: keep the evidence vault's history, or move the vault",
+   "from": "the editor"
+  },
+  {
+   "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
    "from": "the editor"
   }
  ],

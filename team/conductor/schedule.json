@@ -71,7 +71,7 @@
    "agent": "storyteller",
    "minute": "54",
    "cron": "CRON_TZ=Europe/London 54 * * * *",
-   "status": "proposed by the conductor, 29 October 2026 14:05 UTC: the editor creates the task in the storyteller's own session once it has joined",
+   "status": "running: task trig_013ML9DZ6k9VCinyhKF7peGA, hourly at :54, into the storyteller's own session (created 29 October 2026 14:14 UTC)",
    "job": "the talk's arc: the story tree, Wardley maps, the arc against the beats; proposals to deck and fact requests to the researcher by mail (team/conductor/briefs/2026-10-29__editor/storyteller-brief.md)",
    "why": ":54 sees the hour's work; the conductor routes its mail at :02 and deck reads it at :17",
    "prompt": "as the other members' prompt, with the name storyteller"
