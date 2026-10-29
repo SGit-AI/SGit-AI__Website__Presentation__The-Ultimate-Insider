@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "designer",
+ "kind": "scheduled, hourly at :39",
+ "started": "2026-10-29T07:40:47Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Sub-agent plan: 1) board and mail: 002 and 003 stay blocked; no mail. 2) Design note 4, figures beyond the article measure: team/designer/system/ and reviews/2026-10-29__figures.md, screenshots at 1600, 1280, 390. 3) The home hero at 1920 the same way; status.json, debrief; vault_check before any vault commit. Member's amendment: the hero moves to the next wake (one note per wake, 8 minutes); item 3 becomes: restore mailroom/designer/README.md in the mail vault so others can write to it, send note 4 to dev in mailroom/dev/ with an outbox copy and an issue designer 004, status.json, debrief.",
+   "at": "2026-10-29T07:41:13Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In scope: writes only team/designer/**, designer's own vault folders (mailroom/designer/README.md, outbox, issue 004) and new mail only to mailroom/dev/. No src/, admin/build or stylesheet edits. Conditions: vault_check before the vault commit; no key or personal detail in the public mail.",
+   "at": "2026-10-29T07:41:25Z"
+  },
+  "work": {
+   "by": "designer",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: no mail; 002 and 003 stay blocked. Item 2: design note 4 (W8: in articles, image paragraphs, figures and tables break out to up to 1240px on the container, text at 68ch, image pairs side by side, nothing above natural size, SVG at most 960px) in reviews/2026-10-29__figures.md, system/figures.css, layout.md; mocked up at 1600/1280/390, three mock-up faults found and fixed by measuring. Item 3 (amended): mailroom/designer/README.md restored; request mailroom/dev/011 with outbox copy; designer 004 blocked; status.json, debrief. vault_check clean, both pushed; gate clean, 0 outside scope. The home hero moves to the next wake.",
+   "at": "2026-10-29T07:44:38Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Repo diff only team/designer/**, no key, token or personal data; vault_check clean on both; 0 outside scope. Vault commits only designer's own folders plus one ordinary in-role request in mailroom/dev/; no harm to others.",
+   "at": "2026-10-29T07:45:11Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Amended plan met: 002 and 003 blocked, no mail; note 4 (reviews/figures.md, figures.css, layout.md W8, screenshots); mailroom/designer/README.md restored; mailroom/dev/011 with outbox copy 007; issue 004 blocked; status and debrief. Nothing outside team/designer; the hero deferred as amended.",
+   "at": "2026-10-29T07:45:11Z"
+  }
+ },
+ "closed": "2026-10-29T07:45:11Z",
+ "outcome": "ok"
+}

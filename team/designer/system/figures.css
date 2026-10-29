@@ -1,0 +1,7 @@
+/* designer@the-ultimate-insider, 29 October 2026: design note 4, figures and tables beyond the article measure (team/designer/reviews/2026-10-29__figures.md), as mocked up. A spec for dev, not a file the site loads. */
+main,.shell-main{container-type:inline-size}
+article.prose{--wide:min(calc(100cqi - 2 * var(--gutter, 16px)), 1240px)}
+article.prose > :is(p:has(> img), figure, .tbl){width:var(--wide);max-width:none;margin-left:calc((100% - var(--wide)) / 2)}
+article.prose > p:has(> img){display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:12px;align-items:start}
+article.prose > p:has(> img) img{max-width:100%;height:auto;justify-self:center}
+article.prose > figure svg{display:block;max-width:min(100%,960px);height:auto;margin-inline:auto}
