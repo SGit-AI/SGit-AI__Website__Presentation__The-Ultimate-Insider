@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside policy; one request (E11 to ruv-sgit), its in-flight slot named; in role. Conditions: vault_check before the vault commit; next free NNN with outbox copy; no keys or contact details; numbers sourced.",
    "at": "2026-10-29T13:46:42Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "E11 sent to ruv-sgit (named by the conductor, after a late wake); E02 v3 and E09's fix looked at over HTTP and reviewed (keep; studio/reviews/e02-v3.html, index, programme.json); reply; board 008, 012, 013; mail filed; vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T13:48:53Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Gate clean; 0 outside scope since 8f81ef5; vault_check clean; HEAD only deck's paths; mails 001, 002, outbox 027, 028, issues 008, 012, 013 hold no secrets or directives; one new request (E11).",
+   "at": "2026-10-29T13:49:32Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 E11 sent, board 013: done. 2 E02 v3 review, reply, E09 wording checked, boards 008, 012: done. 3 status, debrief: done. Nothing unplanned.",
+   "at": "2026-10-29T13:49:32Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T13:49:32Z",
+ "outcome": "ok"
 }
