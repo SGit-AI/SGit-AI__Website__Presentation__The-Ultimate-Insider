@@ -258,7 +258,8 @@ class Site_Build:
             ('rules-for-agents',  'CLAUDE.md',                     'Rules for agents',         'The rules every agent working in this repository reads first (CLAUDE.md).'),
             ('corrections',       'BRIEF-CORRECTIONS.md',          'Corrections to the brief', 'Where the brief turned out to be wrong, and what was done instead.'),
             ('onboarding',        'team/conductor/ONBOARDING.md',  'Onboarding',               'How each member\'s schedule is started and how it gets the vault keys.'),
-            ('wake-protocol',     'team/conductor/WAKE.md',        'The wake protocol',        'Every member\'s checklist for every session, and how any member stops the team.')]
+            ('wake-protocol',     'team/conductor/WAKE.md',        'The wake protocol',        'Every member\'s checklist for every session, and how any member stops the team.'),
+            ('the-next-hours',    'team/conductor/briefs/2026-10-29__the-next-hours.md', 'The next hours (brief)', 'The conductor\'s brief for the night: the themes, the flow of ideas, the dashboard, and backlog then schedule then execute.')]
 
     def in_admin(self, rel):                                        # the admin section: everything about who does what, with a side navigation
         return rel.startswith(('admin/', 'team/', 'brief/'))
@@ -267,8 +268,9 @@ class Site_Build:
         team = [(f'team/{p.name}/index.html', json.loads((p / 'policy.json').read_text()).get('address', p.name).split('@')[0])
                 for p in sorted((ROOT / 'team').iterdir()) if p.is_dir() and (p / 'policy.json').exists()]
         docs = [(f'admin/docs/{slug}.html', label) for slug, src, label, _ in self.DOCS if (ROOT / src).exists()]
+        docs += [('admin/docs/pace.html', 'The pace (pace.json)')] if (ROOT / 'team/conductor/pace.json').exists() else []
         return [('Overview',          [('admin/index.html', 'Admin and engineering')]),
-                ('Activity',          [('admin/wakes.html', 'Wakes'), ('admin/commits.html', 'Commits and messages'), ('admin/versions.html', 'Releases'), ('team/board.html', 'The board')]
+                ('Activity',          [('admin/dashboard.html', 'Dashboard'), ('admin/wakes.html', 'Wakes'), ('admin/commits.html', 'Commits and messages'), ('admin/versions.html', 'Releases'), ('team/board.html', 'The board')]
                                       + ([('team/schedule.html', 'The schedule')] if (ROOT / 'team/conductor/schedule.json').exists() else [])),
                 ('Team',              [('team/index.html', 'Everyone')] + team),
                 ('Keys and vaults',   [('admin/keys.html', 'The key register')] + ([('admin/vaults.html', 'The public vaults')] if (ROOT / 'team/conductor/vaults.json').exists() else [])),
@@ -311,6 +313,72 @@ class Site_Build:
                      f'<span class="t">{esc(r.get("started", "")[:16].replace("T", " "))} UTC</span> · {esc(r.get("kind", ""))} · '
                      f'<span class="oc">{esc(r.get("outcome") or "still open")}</span></header><div class="wsteps">{steps}</div></section>')
         return rows or '<p class="note">No wake records yet.</p>'
+
+    def build_dashboard(self):                                      # dev 006, the conductor's brief: part 1, Now and the pace grid
+        import datetime
+        esc, team = html.escape, ROOT / 'team'
+        sched = json.loads((team / 'conductor' / 'schedule.json').read_text()) if (team / 'conductor' / 'schedule.json').exists() else {'runs': []}
+        pace  = json.loads((team / 'conductor' / 'pace.json').read_text()) if (team / 'conductor' / 'pace.json').exists() else {}
+        if pace:
+            self.write('admin/pace.json', json.dumps(pace, indent=1) + '\n')
+        built = datetime.datetime.now(datetime.timezone.utc)
+        holds = sorted(team.glob('*/HOLD.md')) + ([team / 'HOLD.md'] if (team / 'HOLD.md').exists() else [])
+        hold  = ''.join(f'<li><b>{esc(h.parent.name)}</b>: {esc(h.read_text().splitlines()[0].lstrip("# "))}</li>' for h in holds)
+        wakes = self.wakes()
+        members, asks = [], []
+        for folder in sorted(p for p in team.iterdir() if p.is_dir()):
+            st = json.loads((folder / 'status.json').read_text()) if (folder / 'status.json').exists() else {}
+            for a in st.get('asks', []):
+                if 'editor' in str(a.get('from', '')).lower():
+                    asks.append((folder.name, a.get('what', '')))
+            run  = next((r for r in sched['runs'] if r['agent'] == folder.name), None)
+            last = next((w for w in wakes if w['agent'] == folder.name), None)
+            members.append((folder.name, st, run, last))
+        rows = ''
+        for aid, st, run, last in members:
+            slot = f'<span class="nx" data-minute="{esc(run["minute"])}">:{esc(run["minute"])}</span>' if run else '<span class="c-dim">no slot</span>'
+            live = '' if not run else (' <span class="c-dim">(not running yet)</span>' if not str(run.get('status', '')).startswith('running') else '')
+            lw   = (f'<a href="wakes.html#wake-{esc(aid)}-{esc(last.get("started", ""))}">{esc(last.get("started", "")[11:16])}</a> {esc(last.get("outcome") or "open")}' if last else '<span class="c-dim">none yet</span>')
+            page = f'<a href="../team/{esc(aid)}/index.html">{esc(aid)}</a>' if (team / aid / 'policy.json').exists() else esc(aid)
+            rows += f'<tr><td>{page}</td><td>{slot}{live}</td><td>{lw}</td><td>{esc(st.get("state", ""))}</td></tr>'
+        # the pace grid: members by hour, one cell per wake, five dots for its five verdicts
+        hours = sorted({w.get('started', '')[:13] for w in wakes if w.get('started')})
+        cells = ''
+        for aid, *_ in members:
+            mine = [w for w in wakes if w['agent'] == aid]
+            if not mine:
+                continue
+            cells += f'<tr><th>{esc(aid)}</th>'
+            for h in hours:
+                inh = [w for w in mine if w.get('started', '').startswith(h)]
+                dots = ''.join(
+                    f'<a class="pc o-{esc(w.get("outcome") or "open")}" href="wakes.html#wake-{esc(aid)}-{esc(w.get("started", ""))}" title="{esc(aid)} {esc(w.get("started", ""))}: {esc(w.get("outcome") or "open")}">'
+                    + ''.join(f'<i class="d v-{esc(w.get("steps", {}).get(k, {}).get("verdict", "missing"))}" title="{lbl}: {esc(w.get("steps", {}).get(k, {}).get("verdict", "missing"))}"></i>' for k, lbl in self.STEP_NAMES)
+                    + f'<span>{esc(w.get("outcome") or "open")}</span></a>' for w in inh)
+                cells += f'<td>{dots}</td>'
+            cells += '</tr>'
+        head  = ''.join(f'<th>{h[11:13]}:00</th>' for h in hours)
+        q     = pace.get('schedule', {})
+        queue = ''.join(f'<li><b>{esc(m)}</b>: ' + ' · '.join(f'{esc(i.get("at", ""))} {esc(i.get("item", ""))}' for i in (v if isinstance(v, list) else [])) + '</li>' for m, v in q.items() if isinstance(v, list)) if isinstance(q, dict) else ''
+        body = (f'<section class="wrap"><p class="kicker">Activity</p><h1>Dashboard</h1>'
+                f'<p class="lead">Where the team is, read from its own files: the hour, the next wake of each member, any hold, what waits on the editor, and every wake as a grid. '
+                f'Built at {built.strftime("%H:%M")} UTC with site {self.version}; the clock and the next wakes below run live in your browser. Parts 3 to 5 of the brief (the flow graph, the sequence, the artifacts) follow at later wakes.</p>'
+                f'<div class="now"><div class="nowc"><p class="kk">Now</p><p class="clock" id="dash-clock">{built.strftime("%H:%M")} UTC</p><p class="c-dim">London time; built {built.strftime("%Y-%m-%d %H:%M")} UTC</p></div>'
+                f'<div class="nowc {"held" if holds else "free"}"><p class="kk">Hold</p>' + (f'<ul>{hold}</ul><p>Every wake stops until the editor lifts it.</p>' if holds else '<p class="big2">none</p><p class="c-dim">every member\'s wake runs</p>') + '</div>'
+                f'<div class="nowc ed"><p class="kk">Waits on the editor</p>' + (('<ul>' + ''.join(f'<li><b>{esc(a)}</b>: {esc(w)}</li>' for a, w in asks) + '</ul>') if asks else '<p class="c-dim">nothing asked</p>') + '</div></div>'
+                f'<h2 id="members">Each member</h2><div class="tbl"><table class="dash"><thead><tr><th>Member</th><th>Slot, next wake</th><th>Last wake</th><th>State, from its status.json</th></tr></thead><tbody>{rows}</tbody></table></div>'
+                f'<h2 id="pace">The pace</h2><p class="note">One cell per wake, by member and hour (UTC). The five dots are plan, pre-review, work, post-review and post-check; '
+                f'green is go, done, clean or as-planned, amber is change, partial, finding or off-plan, red is stop, grey is missing. Click a cell for the record.</p>'
+                + (f'<div class="tbl"><table class="pace"><thead><tr><th></th>{head}</tr></thead><tbody>{cells}</tbody></table></div>' if hours else '<p class="note">No wakes recorded yet.</p>')
+                + (f'<h2 id="queue">The queue</h2><p class="note">From the conductor\'s <a href="docs/pace.html">pace.json</a>, which sets each member\'s order.</p><ul>{queue}</ul>' if queue else '')
+                + '</section><script src="../assets/dashboard.js"></script>')
+        self.page('admin/dashboard.html', 'Dashboard', 'Where the team is: the hour, each member\'s next wake, holds, what waits on the editor, and every wake as a grid.', body)
+        if pace:
+            bmd = '```json\n' + json.dumps(pace, indent=1) + '\n```\n'
+            self.page('admin/docs/pace.html', 'The pace (pace.json)', 'The conductor\'s pace.json: the queue, the schedule, the ideas and the requests of the night, as data.',
+                      f'<article class="prose wrap"><p class="kicker">Sources of truth · <code>team/conductor/pace.json</code></p><h1>The pace</h1>'
+                      f'<p>The conductor\'s working file for the night, rendered as it is at site {self.version}. As data: <a href="../pace.json">pace.json</a>.</p>'
+                      f'<pre class="msg">{esc(json.dumps(pace, indent=1))}</pre></article>', body_md=bmd)
 
     def build_wakes(self):
         recs = self.wakes()
@@ -863,6 +931,7 @@ class Site_Build:
         self.build_vaults()
         self.build_docs()
         self.build_wakes()
+        self.build_dashboard()
         self.build_versions()
         self.build_commits()
         self.build_indexes()
