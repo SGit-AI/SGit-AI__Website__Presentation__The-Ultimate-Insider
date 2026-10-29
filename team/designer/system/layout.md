@@ -44,3 +44,7 @@ They live in `src/static/assets/tokens.css` (dev's), beside the colour tokens.
 ## Checking it
 
 Every page at 1600, 1280 and 390: no line of prose longer than the measure, no horizontal scroll of the page, no card grid with one column above 800px, and on a phone the page's heading on the first screen.
+
+## The top bar (design note 2, 29 October 2026)
+
+7. **W7. On a phone the top bar gives the screen back.** Under 701px: one row for the brand, the version and the theme switch (the `presentation.sgit.ai` line hidden), one row of navigation that scrolls sideways with a fade at its right edge, and the bar scrolls away with the page (`position: static`) instead of staying. About 75px, once, instead of 114px on every screen. The current page's link is scrolled into view. CSS form: `topbar.css` beside this file.

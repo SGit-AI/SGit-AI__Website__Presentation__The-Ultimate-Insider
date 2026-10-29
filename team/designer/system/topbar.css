@@ -1,0 +1,10 @@
+/* designer@the-ultimate-insider, 29 October 2026: design note 2, the phone top bar (team/designer/reviews/2026-10-29__phone-top-bar.md), as mocked up. A spec for dev, not a file the site loads. */
+@media(max-width:700px){
+  .top{position:static}
+  .top .wrap{min-height:0;gap:6px 12px;padding-top:6px;padding-bottom:4px}
+  .brand small{display:none}
+  nav.main{order:3;flex-basis:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:0 18px;padding-bottom:6px;
+    -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  nav.main::-webkit-scrollbar{display:none}
+  nav.main a{white-space:nowrap}
+}
