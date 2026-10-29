@@ -1,0 +1,12 @@
+{
+ "agent": "researcher@the-ultimate-insider",
+ "session": "session_01Kw9UwDxA7opmQMZf3iqCjN",
+ "state": "current",
+ "from": "2026-10-29T01:49:56Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:efe173cb7f086366",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": null,
+ "note": "The first researcher session, started from the editor's chat. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys."
+}
