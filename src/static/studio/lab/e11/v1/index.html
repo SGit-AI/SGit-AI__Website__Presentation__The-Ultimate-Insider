@@ -50,7 +50,7 @@
     'hello-4-tcp-connect': ['Connect out: TCP to 1.1.1.1:443', 'refused (EACCES)', 'stop'],
     'hello-5-wrong-hash': ['Run under a wrong hash', 'nothing ran (exit 125)', 'stop'],
     'hello-6-memory': ['Take 400 MiB under a 128 MiB cap', 'refused (MemoryError)', 'stop'] }
-  var STEPS = [['Write the policy', 'what it may read, write, connect to and use; hello\'s is deny-all'],
+  var STEPS = [['Write the policy', 'files, ports, memory, processes; hello\'s is deny-all'],
     ['Hash it', 'and run only under the hash you expect'], ['The kernel enforces it', 'before the tool starts (Landlock, a memory cap)'], ['The probes run', 'six of them, each against the policy']]
   var NS = 'http://www.w3.org/2000/svg', D = null, B = null, AT = [21, 23.5, 26, 28.5, 31, 33.5]
   fetch('../../../data/harness.json').then(function (r) { return r.json() }).then(function (j) { D = j })
@@ -76,7 +76,7 @@
     t = el('text', { x: 545, y: y + 18, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700, fill: 'var(--infra)' }, g0); t.textContent = 'the internet'
     t = el('text', { x: 90, y: y - 70, 'font-size': 20, 'font-weight': 700, fill: 'var(--head)' }, g0); t.textContent = 'From E09\'s excess: "Reach any host on the internet"'
     var w0 = wall(g0, 330, y, 110, false); w0.id = 'w0'
-    t = el('text', { x: 330, y: y + 84, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700, fill: 'var(--accent)' }, g0); t.textContent = 'the policy, held by the kernel'; t.id = 'w0t'
+    t = el('text', { x: 330, y: y + 84, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700, fill: 'var(--accent)' }, g0); t.textContent = 'the policy on the tool it starts, held by the kernel'; t.id = 'w0t'
     var l0 = line(g0, 112, y, 322, 'var(--agent)'); l0.id = 'l0'
     var rf = el('text', { id: 'rf', x: 314, y: y + 34, 'text-anchor': 'end', 'font-size': 20, 'font-weight': 800, fill: 'var(--head)' }, g0); rf.textContent = 'connect refused'
     // the sequence
@@ -118,7 +118,7 @@
     else if (t < 20) q = '<b>sharness-ai hello</b>, in SHarness\'s order: write the policy, hash it, let the kernel enforce it, then probe it.'
     else if (t < 36) q = '<b>Six probes</b> under a deny-all policy: one control the policy allows, five things it refuses.'
     else if (t < 40) q = '<b>' + B.held + ' of ' + B.n + ' held</b>, on 25 October 2026, in ' + B.envs + ' environments on two kernels, all uid 0. Each probe got the verdict the policy says.'
-    else q = '<b>The honest caveat:</b> a process cannot bind its own session. Only a launcher above the agent makes the policy a boundary for the agent, and that launcher is designed.'
+    else q = '<b>' + B.held + ' of ' + B.n + ' held</b> (25 October 2026, ' + B.envs + ' environments, two kernels, uid 0). <b>The caveat:</b> a process cannot bind its own session; only a launcher above the agent, still designed, makes the policy a boundary for the agent.'
     if (S.$('q').innerHTML !== q) S.$('q').innerHTML = q
     var f = t >= 40 ? '<b>Measured:</b> the six probes. <b>Runnable:</b> fs and net (MVPs), policy hash, check, translate. <b>Designed:</b> kms, bash, llm and the launcher above the agent (its first slice runs since 28 October). sharness.ai is the editor\'s own project: every run is its own.' : ''
     if (S.$('foot').innerHTML !== f) S.$('foot').innerHTML = f
