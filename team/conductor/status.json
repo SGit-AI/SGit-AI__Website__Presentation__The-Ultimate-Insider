@@ -1,9 +1,9 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T09:05:01Z",
+ "as_of": "2026-10-29T10:05:14Z",
  "round": 9,
- "state": "09:02 wake: every member ok; E04 next for ruv.sgit; the researcher free for deck's ask; dev 014 at 11:47; D12 waits on the editor.",
+ "state": "10:02 wake: every member ok; E09 named for ruv.sgit; dev 013 at 10:47; ruv.sgit's commits unmarked twice (noted, not a stop); D12 waits on the editor.",
  "done": [
   {
    "what": "The morning review: every piece with deck verdict, what went wrong, what waits on the editor",
@@ -84,7 +84,7 @@
  ],
  "next": [
   {
-   "what": "10:02: pace, route, night log"
+   "what": "11:02: pace, route, night log"
   }
  ],
  "asks": [

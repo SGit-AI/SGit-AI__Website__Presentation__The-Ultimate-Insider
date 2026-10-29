@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-29T10:03:46Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Sub-agent plan, AMENDED by the member (the pace names the next by id at :02): 1. mailroom/deck/: E04 back for review at 10:17; ruv.sgit's next named, E09 (mandate against grant, its data is in), sent by deck at 10:17 for 10:32, unless deck's order puts another with data in first. vault_check. 2. team/conductor/pace.json (E03 kept, E04 delivered, E09 next, dev 013 10:47) and the night log edition 8. 3. ruv-sgit commits c1c6443, b6f5219, 5344486 still lack '@' and the Agent trailer: repeat as a To-ruv-sgit note (not a stop: no secret, harm or instruction); status.json.",
+   "at": "2026-10-29T10:04:28Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Fits conductor scope: team/conductor/** and the night-log article, plus mail only in mailroom/deck/. No secret, key or vault key, no stop condition. Conditions: vault_check before committing; the ruv-sgit note only under team/conductor/ or a trailer, never in team/ruv-sgit/; no shared-rule change; the mail asks deck for review and pace only.",
+   "at": "2026-10-29T10:04:55Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
