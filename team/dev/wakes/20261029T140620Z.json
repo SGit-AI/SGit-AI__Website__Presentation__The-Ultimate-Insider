@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T14:06:20Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. dev 016 (designer request, dev/inbox/019): in src/pages/index.html (a dev scope.holds path) \"the decision\" y 330 to 310 and \"risk on spreadsheets\" y 350 to 330; build, gate, check at 1920 and 390; close the issue, reply to designer, file 019 and 020. 2. Close: debrief, status, REALITY. The dashboard part 4 stays in its own slot at 14:47 (one item in flight).",
+   "at": "2026-10-29T14:07:00Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Edits only src/pages/index.html (in scope.holds, inside policy as CLAUDE.md and the corrected brief say), then build, gate, own issue, reply, debrief, status, REALITY. No secrets, no stop condition, no cross-member write. Conditions: no vault key in any reply; vault_check before any vault commit; dev only.",
+   "at": "2026-10-29T14:07:20Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "done",
+   "comment": "dev 016: index.html two y attributes; checked at 1920 and 390; issue closed, designer reply, 019 and 020 filed; debrief, status.",
+   "at": "2026-10-29T14:08:27Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
