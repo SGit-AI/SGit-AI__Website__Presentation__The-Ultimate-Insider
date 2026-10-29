@@ -99,6 +99,18 @@
         "for a security and hacking audience: show how far beyond the task the agents went, and how creatively they attacked; then 'imagine this on steroids'"
       ],
       "priority": "high: worth creating a lot of these"
+    },
+    {
+      "id": "E09",
+      "at": "15:00",
+      "verdict": "really cool; keep, needs another pass for readability",
+      "v2": [
+        "an overlap on the slide to fix",
+        "'refused' is wrong as a label: those rows are derived, not refused by anyone; relabel",
+        "much easier to read on a big screen: use the space better as an animation; fewer rows on screen, or all of them and then a zoom into a couple",
+        "show what the behaviour policy does: capturing the mandate, and the delta between mandate and grant, made visible"
+      ],
+      "priority": "after the feedback round"
     }
   ],
   "deck": [
@@ -111,6 +123,12 @@
     {
       "at": "14:50",
       "note": "Commit and release the feedback in blocks of two or three pieces, so the other members, the conductor included, can see it and pick it up early."
+    }
+  ],
+  "programme": [
+    {
+      "at": "15:00",
+      "note": "The programme's ideas: 'really freaking cool, let's do them all', the typical deployment's blast radius (E07) named; ask ruv.sgit to make all of them, spun up in parallel: 'it's okay'. This overrides the night's one-request-in-flight rule for ruv.sgit, at the editor's word."
     }
   ]
 }
