@@ -78,7 +78,7 @@
       var gx = xs(i + 1) - 36, gy = TR[i], w = el('g', {}, svg)
       var top = el('rect', { x: gx - 6, y: gy - 44, width: 12, height: 22, rx: 3, fill: 'var(--dim)' }, w)
       var bot = el('rect', { x: gx - 6, y: gy - 22, width: 12, height: 22, rx: 3, fill: 'var(--dim)' }, w)
-      if (i === 1) el('text', { x: gx, y: gy - 54, 'text-anchor': 'middle', fill: 'var(--dim)', 'font-size': 20, 'font-family': 'system-ui' }, w, 'gate')
+      if (i === 1) el('text', { x: gx - 12, y: gy - 28, 'text-anchor': 'end', fill: 'var(--dim)', 'font-size': 20, 'font-family': 'system-ui' }, w, 'gate')
       b.gates.push({ g: w, top: top, bot: bot, x: gx, y: gy })
     }
     // the agent's path: along each tread, up each riser, to the top level
