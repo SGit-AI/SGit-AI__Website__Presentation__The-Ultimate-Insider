@@ -80,7 +80,8 @@ def end(a):
     rows.append(line)
     rows += items('ACHIEVED', a.achieved, none='nothing recorded')
     if a.next:
-        rows.append(f'NEXT      {a.next}')
+        nxt   = textwrap.wrap(a.next, W - 10) or ['']
+        rows += ['NEXT      ' + nxt[0]] + ['          ' + l for l in nxt[1:]]      # wrapped like every other row, never cut
     out  = box(rows, '▛' + '▀' * (W + 2) + '▜', '▌', '▙' + '▄' * (W + 2) + '▟')
     out += '\n' + box(items('BLOCKERS', a.blockers, none='none'), '╭' + '─' * (W + 2) + '╮', '│', '╰' + '─' * (W + 2) + '╯')
     out += '\n' + box(items('FOR YOU', a.for_you, none='nothing needed from you'), '┏' + '━' * (W + 2) + '┓', '┃', '┗' + '━' * (W + 2) + '┛')
