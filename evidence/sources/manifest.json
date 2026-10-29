@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T02:05Z",
- "count": 324,
+ "built": "2026-10-29T02:12Z",
+ "count": 325,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -2520,6 +2520,28 @@
    ],
    "capture": "full",
    "recorded_by": "act2"
+  },
+  {
+   "id": "federalregister-circia-2026-10-29T0212Z",
+   "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=CIRCIA&order=newest&per_page=8",
+   "final_url": null,
+   "publisher": "Federal Register (US Office of the Federal Register)",
+   "title": "Federal Register API: newest documents matching CIRCIA",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T02:12:24Z",
+   "http_status": 200,
+   "capture": "full",
+   "recorded_by": "rechecks",
+   "files": [
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "51d40a98a8ee45ded614856d416bff3090c01d12457be62f972f8bb17d3d9ba9",
+     "bytes_as_fetched": 17712,
+     "sha256": "51d40a98a8ee45ded614856d416bff3090c01d12457be62f972f8bb17d3d9ba9",
+     "bytes": 17712
+    }
+   ]
   },
   {
    "id": "federalregister-circia-search",

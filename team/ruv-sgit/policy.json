@@ -45,13 +45,16 @@
         "within": "its own branch, and dev once the gate passes; never main, never a force-push"
       },
       {
+        "capability": "create.schedule.tenant",
+        "within": "only its own hourly wake at :32 London, into its own session, created once at the editor's word (29 October 2026) with the cron and prompt in team/conductor/schedule.json; no other scheduled task, session or workflow"
+      },
+      {
         "capability": "create.record.world",
         "within": "approval: a run's read key is published (the vault sealed) only on the editor's explicit go"
       }
     ],
     "not_wanted": [
       "send.message.world",
-      "create.schedule.tenant",
       "write.repository.main",
       "read.credential.host"
     ]
