@@ -202,7 +202,7 @@ ul.bul { list-style:none; padding:0; font-size:3.4vh; margin:0 } ul.bul li { mar
 <div id="bar">
  <div class="row"><div class="ctl"><button data-k=" " id="pp" class="pp" aria-label="play or pause" title="play / pause (Space)">▶</button></div><span class="clock" id="clock">0:00</span><span class="dim" id="beatno"></span><div id="prog" title="click to seek"><b id="progb"></b></div><span class="dim" id="state">paused</span>
   <div class="ctl"><button class="nav" data-k="PageUp" aria-label="previous slide" title="previous slide (↑ or PageUp)">«<small>slide</small></button><button class="nav" data-k="ArrowLeft" aria-label="previous step" title="previous step (←)">‹<small>step</small></button><button class="nav" data-k="ArrowRight" aria-label="next step" title="next step (→, or tap the slide)">›<small>step</small></button><button class="nav" data-k="PageDown" aria-label="next slide" title="next slide (↓ or PageDown, or swipe)">»<small>slide</small></button><button data-k="s" id="sp" aria-label="speed" title="speed (S)">1×</button></div></div>
- <div class="row"><div class="ctl small"><button data-k="x" id="ex" aria-label="leave the presentation" title="leave (X)">✕</button><button data-k="g" id="go" aria-label="go to any slide" title="go to any slide or step (G)">☰ slides</button><button data-k="w" id="ovb" aria-label="overview: every slide by section" title="overview: every slide by section, each playable; show or skip (W)">overview</button><button data-k="e" id="fb" aria-label="feedback" title="your feedback pane: a note on this slide, to your lane (E)">feedback</button><button data-k="o" id="bm" aria-label="build: your running order" title="build: your running order, show or hide, a comment on each (O)">build</button><button data-k="v" id="rv" aria-label="review mode: everything at once, no animation" title="review (V)">review</button><button data-k="p" id="nb" aria-label="speaker notes" title="notes (P)">notes</button><button data-k="t" id="th" aria-label="next theme" title="theme (T)">◐</button><button data-k="f" aria-label="fullscreen" title="fullscreen (F)">⛶</button></div><div id="steps" title="this slide's steps: click to jump"></div><span id="cache"></span><span id="count"></span><div class="ctl small"><button data-k="h" id="hd" aria-label="auto-advance to the next slide" title="auto: move to the next slide when one ends (H); off: stop at the end of each slide">auto</button><button data-k="reset-timer" id="tr" aria-label="reset the talk timer" title="reset the talk timer to 0:00" style="display:none">↺</button><button data-k="have" id="hv" class="have" aria-label="how much time you have" title="the time you have: the countdown and the plan follow it (?have=40)">⏱ time</button><button data-k="z" id="tm" class="timer" aria-label="start or stop the talk timer" title="talk timer: start when you start speaking (Z); it keeps running whatever you click, until you stop it">▶ start talk</button></div></div>
+ <div class="row"><div class="ctl small"><button data-k="x" id="ex" aria-label="leave the presentation" title="leave (X)">✕</button><button data-k="g" id="go" aria-label="go to any slide" title="go to any slide or step (G)">☰ slides</button><button data-k="w" id="ovb" aria-label="overview: every slide by section" title="overview: every slide by section, each playable; show or skip (W)">overview</button><button data-k="e" id="fb" aria-label="feedback" title="your feedback pane: a note on this slide, to your lane (E)">feedback</button><button data-k="j" id="sk" aria-label="skip this slide in your order" title="skip this slide: out of your order, on to the next (J)">skip</button><button data-k="u" id="un" aria-label="undo the last skip" title="undo the last skip (U)" style="display:none">undo</button><button data-k="o" id="bm" aria-label="build: your running order" title="build: your running order, show or hide, a comment on each (O)">build</button><button data-k="v" id="rv" aria-label="review mode: everything at once, no animation" title="review (V)">review</button><button data-k="p" id="nb" aria-label="speaker notes" title="notes (P)">notes</button><button data-k="t" id="th" aria-label="next theme" title="theme (T)">◐</button><button data-k="f" aria-label="fullscreen" title="fullscreen (F)">⛶</button></div><div id="steps" title="this slide's steps: click to jump"></div><span id="cache"></span><span id="count"></span><div class="ctl small"><button data-k="h" id="hd" aria-label="auto-advance to the next slide" title="auto: move to the next slide when one ends (H); off: stop at the end of each slide">auto</button><button data-k="reset-timer" id="tr" aria-label="reset the talk timer" title="reset the talk timer to 0:00" style="display:none">↺</button><button data-k="have" id="hv" class="have" aria-label="how much time you have" title="the time you have: the countdown and the plan follow it (?have=40)">⏱ time</button><button data-k="z" id="tm" class="timer" aria-label="start or stop the talk timer" title="talk timer: start when you start speaking (Z); it keeps running whatever you click, until you stop it">▶ start talk</button></div></div>
 </div>
 <div id="intro"><div><h2 id="ttl">Talk player</h2><p id="sub"></p><p class="dim">site <a class="ver" href="../admin/versions.html#{{version}}" title="release history">{{version}}</a> · ported from <a href="https://ruv.sgit.ai/articles/the-talk-player.html">ruv.sgit.ai's player</a></p><p>Tap ▶ or press <kbd>Space</kbd> to start · tap the slide for the next step, swipe for the next slide · <b>‹ ›</b> steps, <b>« »</b> slides · <b>1×</b> speed · <b>auto</b> moves on when a slide ends (off: it stops) · <b>start talk</b> starts your timer · <b>☰ slides</b> jumps anywhere · <b>review</b> everything at once · <b>notes</b> the words · <kbd>?</kbd> all keys</p></div></div>
 <div id="black"></div>
@@ -215,8 +215,8 @@ ul.bul { list-style:none; padding:0; font-size:3.4vh; margin:0 } ul.bul li { mar
 <div id="ovstat"></div></div><div id="ovgrid"></div></div>
 <div id="build" role="dialog" aria-label="Build: your running order"><div class="bh"><b>Your running order</b>
 <button type="button" id="b-mine" title="present this order">present my order</button><button type="button" id="b-talk" title="present talk.json as deck keeps it">present the talk</button>
-<button type="button" id="b-reset" title="start again from the talk's order">reset</button><button type="button" id="b-send" class="go" title="send your comments and this order to your lane">send to the lane</button><button type="button" id="b-x" title="close (O or Esc)">close</button>
-<div class="bstat" id="bstat"></div></div><div id="blist"></div></div>
+<button type="button" id="b-reset" title="start again from the talk's order">reset</button><button type="button" id="b-send" class="go" title="send your comments and this order to your lane">send to the lane</button><button type="button" id="b-copy" title="copy what differs from the talk's order, as JSON, for deck">copy my changes</button><button type="button" id="b-x" title="close (O or Esc)">close</button>
+<div class="bstat" id="bstat"></div><textarea id="b-json" readonly aria-label="your changes as JSON" style="display:none;width:100%;min-height:120px;font:13px/1.35 ui-monospace,monospace;margin-top:8px"></textarea></div><div id="blist"></div></div>
 <div id="help"><h3 style="margin-top:0;font-family:Georgia,serif">Keys</h3><table>
 <tr><td><kbd>Space</kbd> <kbd>K</kbd></td><td>play / pause (the live pages pause too)</td></tr>
 <tr><td><kbd>→</kbd> <kbd>←</kbd> · tap</td><td>next / previous stop: each step has a start (plays on) and an end (fully built, paused); the steps are under the timeline</td></tr>
@@ -226,6 +226,7 @@ ul.bul { list-style:none; padding:0; font-size:3.4vh; margin:0 } ul.bul li { mar
 <tr><td><kbd>Z</kbd> or <b>start talk</b></td><td>the talk timer: starts when you start speaking and keeps running whatever you click, until you stop it. Teal: ahead of the plan for the slide on screen; amber: a little late; red: behind</td></tr>
 <tr><td><kbd>]</kbd> <kbd>[</kbd></td><td>next / previous section (the talk's acts, marked on the timeline)</td></tr>
 <tr><td><b>⏱ time</b> or <code>?have=40</code></td><td>the time you have: the talk timer counts it down, and ahead or behind is measured against it</td></tr>
+<tr><td><kbd>J</kbd> or <b>skip</b>, <kbd>U</kbd> or <b>undo</b></td><td>take this slide out of your order and go on to the next (your order is presented from then on); undo puts the last one back</td></tr>
 <tr><td><kbd>W</kbd> or <b>overview</b></td><td>every slide at once, by section, as many a row as you choose; tap a tile to play it there; show or skip it in your order; go to it</td></tr>
 <tr><td><kbd>E</kbd> or <b>feedback</b></td><td>your feedback pane on the right: a note on this slide (and the phrase you select), by voice or typed, to your lane</td></tr>
 <tr><td><kbd>O</kbd> or <b>build</b></td><td>your running order: every slide and every studio piece; drag (or ↑ ↓) to order, tick to show, a length and a comment on each; present it at once; send your comments and the order to your lane</td></tr>
@@ -326,6 +327,7 @@ function adapt(T) {
 // Everything here is written with textContent; comments and the order go to his lane through assets/pane.js (TuiLane).
 let ORIG = [], PIECES = [], RUN = { use: false, items: [] }
 try { RUN = JSON.parse(localStorage.getItem('tui-run.v1') || 'null') || RUN } catch {}
+addEventListener('DOMContentLoaded', () => { try { if (localStorage.getItem('tui-last-skip')) $('un').style.display = '' } catch {} })
 const saveRun = () => { try { localStorage.setItem('tui-run.v1', JSON.stringify(RUN)) } catch {} }
 function universe() {
   return ORIG.map(b => ({ ref: 'beat:' + b.id, title: b.title, act: b.act || '', dur: b.dur, kind: 'slide' }))
@@ -348,6 +350,7 @@ function applyOrder() {
   talk.duration_s = at
   talk.event = (talk.event || '') + ' · your order'
 }
+document.addEventListener('click', e => { if (e.target && e.target.id === 'b-copy') { const j = JSON.stringify(myChanges(), null, 1), ta = $('b-json'); ta.value = j; ta.style.display = 'block'; ta.focus(); ta.select(); (navigator.clipboard ? navigator.clipboard.writeText(j) : Promise.reject()).then(() => { $('bstat').textContent = 'Copied: paste it to deck, or send it to your lane.' }, () => { $('bstat').textContent = 'Select the text below and copy it.' }) } })
 function drawBuild() {
   const L = $('blist'); L.textContent = ''
   const items = runItems()
@@ -409,7 +412,37 @@ function buildStat(msg) {
   $('bstat').textContent = (msg ? msg + ' · ' : '') + `${shown.length} shown, ${fmt(secs)}` + (HAVE ? ` against your ${Math.round(HAVE / 60)} min` : '') + ` · ${com} comment${com === 1 ? '' : 's'} not sent · presenting ${RUN.use ? 'your order' : 'the talk'}`
   $('b-mine').classList.toggle('on', !!RUN.use); $('b-talk').classList.toggle('on', !RUN.use)
 }
-function present(mine) { RUN.use = mine; saveRun(); const u = new URL(location.href); u.searchParams.delete('t'); location.href = u.href }
+// one-tap skip while presenting (deck 037, the editor's words): this slide out of his running order, his order presented
+// from then on, and on to the next slide; undo puts the last skip back. A reload, so the order is rebuilt cleanly; the
+// talk timer is kept in this browser and survives it.
+function relaunch(id) { const u = new URL(location.href); u.searchParams.delete('t'); u.hash = id ? '#' + id : ''; history.replaceState(null, '', u.href); location.reload() }   // a hash change alone would not reload
+function setShow(ref, show) { if (!RUN.items || !RUN.items.length) RUN.items = runItems().map(y => ({ ref: y.ref, show: !!y.show, dur: y.dur, comment: y.comment || '', sent: y.sent || '' })); const it = RUN.items.find(y => y.ref === ref); if (it) it.show = show; else RUN.items.push({ ref, show, dur: 30, comment: '', sent: '' }) }
+function skipHere() {
+  const i = beatAt(t), b = B[i]; if (!b || B.length < 2) return
+  const ref = b.id.startsWith('piece-') ? (runItems().find(x => !x.ref.startsWith('beat:') && 'piece-' + x.ref.slice(6).replace(/[^\w-]/g, '-') === b.id) || {}).ref : 'beat:' + b.id
+  if (!ref) return
+  setShow(ref, false); RUN.use = true; saveRun()
+  try { localStorage.setItem('tui-last-skip', JSON.stringify({ ref, id: b.id })) } catch {}
+  relaunch((B[i + 1] || B[i - 1]).id)
+}
+function undoSkip() {
+  let last = null; try { last = JSON.parse(localStorage.getItem('tui-last-skip') || 'null') } catch {}
+  if (!last) return
+  setShow(last.ref, true); saveRun(); try { localStorage.removeItem('tui-last-skip') } catch {}
+  relaunch(last.id)
+}
+// copy my changes (deck 037): what differs from the talk's order, as JSON, for deck to fold into talk.json
+function myChanges() {
+  const items = runItems(), orig = ORIG.map(o => 'beat:' + o.id), shown = items.filter(x => x.show).map(x => x.ref)
+  const keptOrig = orig.filter(r => shown.includes(r)), keptMine = shown.filter(r => orig.includes(r))
+  return { schema: 'the-ultimate-insider/run-changes/v1', from: 'the editor\'s player', at: new Date().toISOString(), talk_version: '{{version}}',
+    skipped: items.filter(x => x.kind === 'slide' && !x.show).map(x => x.ref),
+    moved: keptMine.map((r, i) => ({ ref: r, position: shown.indexOf(r) + 1, was: orig.indexOf(r) + 1 })).filter((x, i) => keptOrig[i] !== x.ref),
+    added: items.filter(x => x.kind !== 'slide' && x.show).map(x => ({ ref: x.ref, position: shown.indexOf(x.ref) + 1 })),
+    comments_not_sent: items.filter(x => (x.comment || '').trim() && !x.sent).map(x => ({ ref: x.ref, comment: x.comment })),
+    order: shown }
+}
+function present(mine) { RUN.use = mine; saveRun(); relaunch(B[beatAt(t)] && B[beatAt(t)].id) }   // stays on this slide when it is in the new order
 async function sendBuild() {
   if (!window.TuiLane) { buildStat('the lane is not loaded'); return }
   let n = 0
@@ -728,6 +761,8 @@ function onKey(e) {
   else if (k === 'have') setHave()
   else if (k === 'w' || k === 'W') { document.body.classList.toggle('ov'); if (document.body.classList.contains('ov')) drawOv(); else ovStop() }
   else if (k === 'e' || k === 'E') { const tg = document.querySelector('.tui-pane-toggle'), x = document.querySelector('.tui-pane .tp-x'); if (document.body.classList.contains('tui-pane-on')) x?.click(); else tg?.click() }
+  else if (k === 'j' || k === 'J') skipHere()
+  else if (k === 'u' || k === 'U') undoSkip()
   else if (k === 'o' || k === 'O') { document.body.classList.toggle('build'); if (document.body.classList.contains('build')) drawBuild() }
   else if (k === 's' || k === 'S') rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length] || 1
   else if (k === 'h' || k === 'H') { hold = !hold; if (!hold && held) { held = false; step(1) } }
