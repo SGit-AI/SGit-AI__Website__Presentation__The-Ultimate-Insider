@@ -155,10 +155,12 @@ def open_run(run, spec_path, key_file=None):                       # key_file: a
 
 
 def deliver(run, worker, role, src):
-    R, src, branch = Run(run), pathlib.Path(src), f'w-{worker}'
+    R, src = Run(run), pathlib.Path(src)
+    pas    = bool(R.state.get('pass_of'))                            # a later pass names its branches and folders after its run,
+    branch = f'w-{run}-{worker}' if pas else f'w-{worker}'            # so it never collides with, or overwrites, an earlier pass
     t0 = time.time()
     R.sgit('branch-new', ['branch', 'new', branch])
-    dest = R.vault / 'workers' / worker
+    dest = (R.vault / 'passes' / run / 'workers' / worker) if pas else (R.vault / 'workers' / worker)
     if dest.exists():
         shutil.rmtree(dest)
     shutil.copytree(src, dest) if src.is_dir() else (dest.mkdir(parents=True), shutil.copy(src, dest))
