@@ -470,10 +470,134 @@
     "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
     "given_to": "the editor"
    }
+  },
+  {
+   "run": "r5-e02-blast-radius",
+   "purpose": "r5-e02-blast-radius: studio experiment E02, the blast radius: one example agent's grant rows, the mandate a small core, the excess around it, from the researcher's capture of abp.sgit.ai",
+   "request": {
+    "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/003-infographic-request-blast-radius-e02.eml)",
+    "date": "2026-10-29",
+    "text": "One sentence the audience must understand: if one agent inside the company goes wrong, the damage reaches everything its grant reaches, and the grant is far larger than what it is for. The data: only src/static/studio/data/abp-examples.json. Draw from the grant rows, not from totals. The main example is the Claude Code CLI: grant 16, mandate 5, excess 12. Draw the shortfall too: one mandate item, send.endpoint.allowed, is not in the grant, so the excess is 16 minus the 4 granted mandate items. Label every example a published draft: none of the Claude Code rows is measured. What moves: start where E01's v2 ends, the model with its reach shaded. Then turn the shading into rows: each capability it can reach placed by how far it is from what the agent is for. The mandate lights up as a small core; the excess around it is the blast radius. Then, optionally, the barrier kind on each excess row. Length: 40 to 60 seconds; must read as a still at the end. What it must not say: no risk score or level; no product logos; no number that is not in the file; never 'measured' for these rows. An explainer beside it, as E01's."
+   },
+   "pass_of": null,
+   "commits_before": null,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "21mmw3tm",
+   "created_at": "2026-10-29T05:36:57+00:00",
+   "closed_at": "2026-10-29T05:41:14+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 3,
+    "tasks": 3,
+    "ruflo_calls": 13,
+    "ruflo_failed": 0,
+    "ruflo_ms": 13182
+   },
+   "branches": [
+    {
+     "name": "w-v1",
+     "role": "developer",
+     "files": 1,
+     "bytes": 8207,
+     "write_ms": 7994,
+     "merge_ms": 10875
+    },
+    {
+     "name": "w-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 7252,
+     "write_ms": 7675,
+     "merge_ms": 8565
+    },
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 5701,
+     "write_ms": 7405,
+     "merge_ms": 8496
+    }
+   ],
+   "commits": 5,
+   "files": 6,
+   "bytes_plain": 24611,
+   "files_delivered": 4,
+   "bytes_delivered": 21160,
+   "store": {
+    "objects": 32,
+    "bytes": 37849,
+    "plaintext_hits": 0,
+    "probe": "48 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 3712,
+    "files": 6,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "6462efdd287c",
+     "message": "init",
+     "time": "2026-10-29T05:37:10Z"
+    },
+    {
+     "id": "5df758165bdc",
+     "message": "brief: run r5-e02-blast-radius",
+     "time": "2026-10-29T05:37:12Z"
+    },
+    {
+     "id": "2f6d4dca7f16",
+     "message": "developer v1: delivered 1 files",
+     "time": "2026-10-29T05:40:19Z"
+    },
+    {
+     "id": "10720be8bdc5",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T05:40:38Z"
+    },
+    {
+     "id": "bf9917b81ff5",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T05:40:55Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "v1",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "explainer",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 91809,
+     "tool_uses": 10,
+     "wall_s": 84,
+     "must_fix": 2,
+     "should_fix": 6
+    }
+   ],
+   "kept_at": "2026-10-29T05:41:17+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r5-e02__vault-handover.zip",
+    "sha256": "36ac5aa7cc5f6fb8",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
   }
  ],
  "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
- "updated": "2026-10-29T04:41:27+00:00",
+ "updated": "2026-10-29T05:41:17+00:00",
  "server": "https://dev.send.sgraph.ai",
  "viewer": "https://dev.vault.sgraph.ai/en-gb/",
  "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"
