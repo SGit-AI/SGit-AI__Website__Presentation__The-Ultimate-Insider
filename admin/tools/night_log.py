@@ -180,7 +180,7 @@ def grid():                                                        # every wake 
     cw, ch, lw, top = 74, 34, 96, 26
     w_, h_ = lw + hours * cw + 8, top + len(names) * ch + 30
     s = ['<style>.night-grid svg{max-width:100%;height:auto}.night-collage{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:1em 0}'
-         '.night-collage figure{margin:0}.night-collage img{width:100%;border:1px solid #8a94a666;border-radius:6px}.night-collage figcaption{font-size:.8em;opacity:.75}</style>'
+         '.night-collage figure{margin:0}.night-collage img{width:100%;border:1px solid #8a94a666;border-radius:6px}.night-collage figcaption{font-size:14px;opacity:.75}</style>'
          f'<figure class="night-grid"><svg viewBox="0 0 {w_} {h_}" width="100%" role="img" aria-label="Every wake of the night, members by hour, coloured by outcome">']
     for i in range(hours):
         s.append(f'<text x="{lw + i * cw + cw / 2}" y="16" text-anchor="middle" font-size="12" fill="currentColor">{(first + dt.timedelta(hours=i)).strftime("%H:00")}</text>')

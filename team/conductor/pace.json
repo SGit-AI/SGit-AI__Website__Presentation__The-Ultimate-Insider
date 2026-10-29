@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T10:05:14Z",
+ "updated": "2026-10-29T11:05:13Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -15,11 +15,11 @@
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": "E09 (10:32, once deck sends it)"
+   "in_flight": "E04 v2 (11:32, deck's notes)"
   },
   "dev": {
    "slot": ":47",
-   "in_flight": "dev 013 design note 4 (10:47)"
+   "in_flight": "dev 014 the home hero (11:47)"
   },
   "designer": {
    "slot": ":39",
@@ -381,6 +381,19 @@
    "kind": "review",
    "by": "deck",
    "verdict": "keep, a finding for its last line"
+  },
+  {
+   "id": "art-e09",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T10:34:00Z"
+  },
+  {
+   "id": "review-e04",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep the content, redo the picture"
   }
  ],
  "edges": [
@@ -593,6 +606,11 @@
    "from": "art-e03",
    "to": "review-e03",
    "kind": "reviewed"
+  },
+  {
+   "from": "art-e04",
+   "to": "review-e04",
+   "kind": "reviewed"
   }
  ],
  "log": [
@@ -655,6 +673,11 @@
    "at": "2026-10-29T10:05:14Z",
    "by": "conductor",
    "what": "E03 kept; E04 delivered; E09 named for 10:32; dev 012 built; ruv.sgit's commits still unmarked (second note)"
+  },
+  {
+   "at": "2026-10-29T11:05:13Z",
+   "by": "conductor",
+   "what": "E04 to be redrawn; E09 delivered; E04 v2 11:32, E02 v3 12:32; dev 013 built; the night log's captions at 14px for the designer"
   }
  ],
  "queue": {
@@ -663,9 +686,9 @@
   "rule": "one experiment in flight with ruv.sgit, one data request with researcher; the conductor names the next by id at :02, deck asks at :17"
  },
  "next": {
-  "ruv-sgit": "10:32 E09 (or E11, E13 by deck's order)",
+  "ruv-sgit": "11:32 E04 v2; 12:32 E02 v3",
   "researcher": "nothing new until the data request is answered",
-  "dev": "10:47 dev 013; 11:47 dev 014"
+  "dev": "11:47 dev 014; then the dashboard's other parts"
  },
  "routed": [
   "team/deck/requests/conductor__pace-the-studio.md",
@@ -721,7 +744,8 @@
    {
     "at": "10:47",
     "item": "dev 013: design note 4, figures and tables beyond the measure",
-    "from": "designer@ (a member request)"
+    "from": "designer@ (a member request)",
+    "status": "done"
    },
    {
     "at": "11:47",
@@ -762,7 +786,16 @@
    },
    {
     "at": "10:32",
-    "item": "E09, once deck sends it"
+    "item": "E09",
+    "status": "done"
+   },
+   {
+    "at": "11:32",
+    "item": "E04 v2"
+   },
+   {
+    "at": "12:32",
+    "item": "E02 v3"
    }
   ]
  }
