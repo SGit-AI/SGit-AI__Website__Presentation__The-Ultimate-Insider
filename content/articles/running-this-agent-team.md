@@ -284,6 +284,6 @@ source: mailroom/ruv-sgit/003-an-animation-for-beat-4.eml
 The plan. If the approach is not known yet, write that down.
 ```
 
-**A release message:** `<id>: <what changed and why>`, no number in it.
+**A release message:** `@<id>: <what changed and why>`, no number in it, with the trailer `Agent: <id>@the-ultimate-insider`. The scope check counts only commits marked this way; the conductor's first five rounds used `conductor:` and were not counted, so its check reported 0 when the true count was 2.
 
 **Every report to the editor:** starts with the start banner and an objective; the first lines say what waits on the editor, ranked; numbers were checked against a file today; problems found are named with the rule that prevents a repeat; ends with the end banner, nothing after it.
