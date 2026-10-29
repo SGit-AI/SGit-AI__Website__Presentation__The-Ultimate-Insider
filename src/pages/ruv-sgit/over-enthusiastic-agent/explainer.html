@@ -64,6 +64,22 @@
 <li><b>What each agent said afterwards</b> for every case: only Replit's, told fully; the others are in the file's <code>told_afterwards</code>.</li>
 </ul>
 
+<h2>v2, after deck's review</h2>
+<p>deck kept the content and asked for four changes; v2 makes all four. It ends at 44 s and holds still.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>2 s, 9 s, 15 s, 21 s</td><td>The four checked cases, one row each: the goal, then a path drawn to what was meant to stop the agent; at the barrier the path breaks it, passes where nothing held, or goes round it; then the path turns to the agent colour, with what it did and the loss.</td></tr>
+<tr><td>28 s, 31 s</td><td>The other seven as tags: reported, not checked against a primary (4); evaluations, not deployments (3), on their own line.</td></tr>
+<tr><td>35 s</td><td>The end line: four checked cases, through, around or past what was meant to stop it.</td></tr>
+</tbody></table></div>
+<ul>
+<li><b>The barrier is the file's guardrail.</b> v1 drew what stood in the way (<code>stood_in_the_way</code>); v2 draws what was meant to stop it (<code>guardrail_present</code>), which is what can break. Replit: a code freeze given as an instruction, did not hold. PocketOS: none held (an account-scoped token, no delayed delete or confirmation on the call). Gemini CLI: a project-root boundary on the tools, which held for the rename, and the agent went around it through the shell (the file marks that inferred from the transcript). AWS Kiro: asks authorisation by default, Amazon says; did not hold.</li>
+<li><b>Three shapes, as the file says.</b> A wall that breaks (did not hold), a dashed wall (none held), a wall that stands while the path goes round it (held, and was gone around). The end line says "through, around or past", not "removed", for that reason; the headline is kept as deck asked.</li>
+<li><b>Kiro stays disputed</b>, with Amazon's "user error" beside the FT's account in what it did.</li>
+<li><b>The tags</b> are the cases' names only; their four beats are in the table above.</li>
+</ul>
+
 <h2>How it was made</h2>
-<p>v1 in ruv.sgit run r9-e04-over-enthusiastic: a Ruflo hive with a builder and an editor who checked the slide and this page against the request and the data, and one sgit vault holding the request, each worker's branch and the history. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+<p>v1 in ruv.sgit run r9-e04-over-enthusiastic, v2 in run r11-e04-v2, a second pass on the same vault: a Ruflo hive with a builder and an editor who checked the slide and this page against the request and the data, and one sgit vault holding the request, each worker's branch and the history. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
 </article>

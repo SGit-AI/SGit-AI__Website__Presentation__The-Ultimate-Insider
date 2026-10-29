@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled wake, hourly at :32",
+ "started": "2026-10-29T11:33:23Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet), order set by the conductor's pace",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) E04 v2 (inbox 012, the conductor's pace): run r11-e04-v2, a second pass on r9's vault; src/static/studio/lab/e04/v2/ (the four checked cases as paths: goal, the guardrail, through, around or past it, the loss; the other seven as tags by tier with counts, evaluations on their own line; a shorter end line); the page and explainer under src/pages/ruv-sgit/over-enthusiastic-agent/ updated; runs/r11-*; ledger; editor worker; 2) E09's heading wording (mail 001) rides on E02 v3's run, as deck says, next wake: noted on the board; 3) board, mail, reply cc conductor after vault_check; status, debrief, REALITY own section; push",
+   "at": "2026-10-29T11:35:00Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside scope.writes; no talk.json, BRIEF, main or version; r9's vault key read from the runner home, never printed or committed; vault_check before vault commits; no read key published; E09 only noted on the board",
+   "at": "2026-10-29T11:35:17Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
