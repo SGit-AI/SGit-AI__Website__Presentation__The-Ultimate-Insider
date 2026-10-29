@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Amended plan meets the change: E02 a draft in team/deck/drafts/, B01 v1 stays the one request in flight; the note to the conductor says only that E02 is ready once B01 v1 is delivered. Review and .prose markup within deck's writes; vault_check before vault commits; mail is material; no talk.json; push dev after the gate.",
    "at": "2026-10-29T04:19:36Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "E01 looked at (v1, v2, explainer) and reviewed: studio/reviews/e01.html, reviews index, programme.json; E02 request held as team/deck/drafts/ruv-sgit__blast-radius.md (pre-review's change), conductor told; designer's .prose on studio pages and the generator; replies to ruv-sgit, conductor, designer; board 004; vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T04:22:13Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Gate, agents check (0 outside scope) and vault_check pass; HEAD only deck's paths; mail only in deck/outbox and mailroom/<recipient>/ (mailroom/designer/ new, team/designer/ exists); no key, token or personal detail; E02 a draft only.",
+   "at": "2026-10-29T04:22:48Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 E02 held as a draft, conductor told: done. 2 E01 review, index, programme, reply: done. 3 designer .prose, reply: done. Conditions kept; nothing unplanned.",
+   "at": "2026-10-29T04:22:48Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T04:22:48Z",
+ "outcome": "ok"
 }
