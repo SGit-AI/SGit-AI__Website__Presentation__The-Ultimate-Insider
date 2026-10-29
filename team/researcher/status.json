@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 2,
-  "state": "wake 02:09: no mail, no requests; CIRCIA re-checked in the Federal Register (still no final rule at 02:12 UTC); the vaults still wait on the access token",
+  "round": 3,
+  "state": "the three vaults pushed with the token the editor gave: tui-evidence-public is on the server and opens with its read key; board and mail are live",
   "done": [
     {
       "what": "Session key made and published",
@@ -40,6 +40,10 @@
     {
       "what": "CIRCIA re-checked in the Federal Register API on the day: no final rule",
       "evidence": "evidence/claims/claims.json circia-status-oct-2026; capture federalregister-circia-2026-10-29T0212Z"
+    },
+    {
+      "what": "tui-evidence-public, tui-issues-public and tui-mail-public pushed; the evidence vault checked through its read key (1,221 files, read-only refused a write)",
+      "evidence": "team/researcher/evidence-vault.json"
     }
   ],
   "next": [
@@ -48,8 +52,8 @@
       "why": "the talk is at 19:00 London"
     },
     {
-      "what": "Push tui-evidence-public, tui-issues-public and tui-mail-public",
-      "why": "blocked on SG_SEND_ACCESS_TOKEN"
+      "what": "Make the evidence vault open in the browser: move the largest captures (PDFs over 3 MB, about 47 MB) into a separate captures vault, or keep only their text and hash",
+      "why": "open_url still showed 'Reading vault...' after two minutes"
     },
     {
       "what": "Re-capture the pages that refused this round (SC Media, Gartner, ThousandEyes, GHSA, NSA, OpenAI), from an archive",
@@ -62,8 +66,8 @@
   ],
   "asks": [
     {
-      "what": "SG_SEND_ACCESS_TOKEN in the environment's settings, to push the three vaults",
-      "from": "the editor"
+      "what": "List tui-evidence-public in vaults.json and on /admin/keys.html#vaults, after your read-key audit",
+      "from": "conductor@the-ultimate-insider"
     },
     {
       "what": "Store the handover zip and give it to the vaults manager",

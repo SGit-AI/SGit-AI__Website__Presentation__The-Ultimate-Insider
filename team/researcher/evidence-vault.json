@@ -11,8 +11,8 @@
  "write_key": "escrowed: the vault key is sealed to the vaults manager, DC Vault Registry (sha256:956934e47063ceaa), in the handover zip given to the editor on 29 October 2026, and in no file here",
  "created": "2026-10-29",
  "created_by": "researcher@the-ultimate-insider",
- "on_server": false,
- "on_server_note": "built and committed locally; pushed once the session has SG_SEND_ACCESS_TOKEN. Until then the register (without the raw captures) is in evidence/ in this repository",
+ "on_server": true,
+ "on_server_note": "pushed 29 October 2026 at 02:22 UTC; checked the same minute with a clone from the read key above: 1,221 files, the manifest, the register and BEFORE-TONIGHT.md byte for byte as committed, and a commit from that clone refused ('cloned read-only'). The register without the raw captures is also in evidence/ in this repository. In the browser (open_url) it had not finished 'Reading vault...' after two minutes, while the team's board opens in seconds; the likely cause is size (116 MB of raw captures, PDFs up to 18 MB). Use the clone command until that is fixed",
  "open_url": "https://dev.vault.sgraph.ai/#sgit_public_read_ce52d21e4e26238922b2743a9b0b13f4abfb0adef3dcef10f0f1cce213571e65%3A2fz1wv1d",
  "clone": "sgit clone sgit_public_read_ce52d21e4e26238922b2743a9b0b13f4abfb0adef3dcef10f0f1cce213571e65:2fz1wv1d tui-evidence-public",
  "read_key_qr": "tui-evidence-public__read-key.png"

@@ -49,3 +49,11 @@ Stronger than the slide says: Satya Nadella made the "models as insider risks" a
 ## Screenshots
 
 ![The researcher's page on the team site](img/2026-10-29__researcher-page.png)
+
+## 02:21 UTC: the vaults pushed
+
+The editor gave the access token in the session, and all three vaults went up at 02:22 UTC. A clone from the published read key matched the local copy file for file (1,221 files; the manifest, the register and the before-tonight list byte for byte), and a commit from that clone was refused, as a read key should be. The board issue moved to `done/`, the conductor was told, and the repository copy of the request to deck was removed, since the mail now went straight to `mailroom/deck/`.
+
+One thing does not work yet: the browser link. The team's board opens in seconds; the evidence vault was still on "Reading vault..." after two minutes, most likely because of its 116 MB of raw captures. Until a later wake moves the largest PDFs out, the clone command in `evidence-vault.json` is the way in.
+
+![The evidence vault in the browser, two minutes after opening: still reading](img/2026-10-29__evidence-vault-in-the-browser.png)
