@@ -1,0 +1,19 @@
+{
+  "about": "The editor's spoken feedback on the studio, piece by piece, as deck@the-ultimate-insider wrote it down. Recorded first, then prioritised: a note here is not a request until deck sends it.",
+  "session": "29 October 2026, from 14:25 UTC, the editor reviewing the lab live",
+  "ui": [
+    {"at": "14:25", "note": "Review pages must present, not just link: use the whole screen width (no empty margins), show the piece itself on the page instead of making him click through to it."},
+    {"at": "14:25", "note": "Each review must say plainly what decision is asked of him, and show the feedback he has already given."},
+    {"at": "14:25", "note": "A way to replay each piece and skip forward and back (scrub), to see how it works; some pieces may need to go faster."},
+    {"at": "14:25", "note": "Every piece should show its ID (E01, E02, ...) really big, so he always knows which one he is on."}
+  ],
+  "pieces": [
+    {
+      "id": "E01", "at": "14:25",
+      "verdict": "keep both v1 and v2 in the talk: they show different views",
+      "likes": ["v2 (reach in motion) is very interesting; he can tell the story with it, each step", "v1's list on the left: chat model, one tool, and so on, which he can keep reading"],
+      "v3": ["merge both: v2's visualisation with v1's step list on the left", "too much red: vary the colours"],
+      "priority": "later: not now; first collect feedback on all pieces, then decide what to put in and what to fix first"
+    }
+  ]
+}
