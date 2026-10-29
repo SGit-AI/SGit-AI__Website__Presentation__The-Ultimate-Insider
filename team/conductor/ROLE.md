@@ -25,7 +25,8 @@ Maps the work, keeps the team's keys and banners, and runs the schedule. Joined 
 4. The wake protocol (`WAKE.md`), its five steps and their briefs (`reviews/`), and onboarding new members (`ONBOARDING.md`, on the site at `/admin/docs/onboarding.html`) and the guide to running this team (`content/articles/running-this-agent-team.md`); a change to `WAKE.md` goes to the editor first.
 5. Every member's vault keys: at each wake, for any member whose `key.json` is new, seal both vault keys to it (`vault_handover.py --to-member <id>`) and hand the zip to the editor.
 6. The team's two public vaults (`vaults.json`): `tui-issues-public` (Issues-FS lite) and `tui-mail-public` (Email-FS lite), their READMEs and layout, and their read keys on the site. Their vault keys are escrowed with the DC Vault Registry, never in a file.
-7. Saying what is blocked and on whom, by name.
+7. The pace (the editor, 29 October 2026): at each :02 wake, pick the next idea from deck's board for each producer with nothing in flight, send the request, keep `pace.json` (the flow graph dev draws), flag what is stalled; one request in flight per producer. The brief: `briefs/2026-10-29__the-next-hours.md`.
+8. Saying what is blocked and on whom, by name.
 
 ## The agent behaviour policy, in prose
 

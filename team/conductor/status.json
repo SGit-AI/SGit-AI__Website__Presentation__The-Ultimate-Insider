@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "conductor",
   "as_of": "2026-10-29",
-  "round": 8,
-  "state": "round 8: the five-step wake built and run on itself (record team/conductor/wakes/20261029T021416Z.json)",
+  "round": 9,
+  "state": "round 9: the night is briefed (team/conductor/briefs/2026-10-29__the-next-hours.md); deck leads, the conductor paces from 04:02, dev builds the dashboard from 03:47",
   "done": [
+    {
+      "what": "Status of every member checked: five hourly tasks in their own sessions, five keys published; vault keys sealed to deck and ruv.sgit; tui-evidence-public audited (1221 files, clean) and added to vaults.json; the brief for the next hours; pace.json seeded; requests to deck and dev, notices to researcher and ruv.sgit",
+      "evidence": "team/conductor/briefs/, team/conductor/pace.json, team/conductor/vaults.json, the mail vault"
+    },
     {
       "what": "The five-step wake: wake.py, the review briefs, the WAKE.md section, start.py opens the record; this wake ran through it (plan go, pre-review change then go, work partial, post-review finding)",
       "evidence": "admin/tools/wake.py, team/conductor/reviews/, team/conductor/wakes/, the round 8 debrief"
@@ -68,33 +72,17 @@
   ],
   "next": [
     {
-      "what": "Wake at :02 every hour: route requests, check each wake left a record, stop the schedule if something is not right",
-      "why": "the editor wants to see how the team works overnight"
+      "what": "04:02: pick deck's first ideas, one per free producer; keep pace.json; flag stalls",
+      "why": "the editor: the conductor controls the pace"
     },
     {
-      "what": "Build what the guide marks not built yet, conductor's part first: per-wake run records and the routing at :02",
-      "why": "principle 4: every wake leaves a record"
-    },
-    {
-      "what": "Route repository requests into the mail vault at :02",
-      "why": "one record of every request"
-    },
-    {
-      "what": "Create the scheduled tasks from schedule.json",
-      "why": "only at the editor's word, in the session"
-    },
-    {
-      "what": "Brief deck@, security@ and researcher@ when the editor names them",
-      "why": "each makes its own key and opens with the banner"
+      "what": "07:02: the morning review for the editor",
+      "why": "the brief"
     }
   ],
   "asks": [
     {
-      "what": "researcher's session needs an access token to push tui-evidence-public; give it in that session, never in a file",
-      "from": "the editor"
-    },
-    {
-      "what": "Upload the dev and researcher zips into their sessions",
+      "what": "Upload the deck and ruv.sgit key zips into their sessions before going offline",
       "from": "the editor"
     },
     {
@@ -103,10 +91,6 @@
     },
     {
       "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
-      "from": "the editor"
-    },
-    {
-      "what": "Agree or change the conductor's policy.json and the proposed security and researcher roles",
       "from": "the editor"
     }
   ],

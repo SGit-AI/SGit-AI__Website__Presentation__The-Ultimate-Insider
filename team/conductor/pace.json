@@ -1,0 +1,169 @@
+{
+ "schema": "the-ultimate-insider/pace/v1",
+ "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
+ "updated": "2026-10-29T03:00:00Z",
+ "rules": {
+  "in_flight_per_producer": 1,
+  "new_requests_per_producer_per_wake": 1,
+  "ideas_per_deck_wake": 3,
+  "forwarding": "none: a producer replies to the requester"
+ },
+ "producers": {
+  "researcher": {
+   "slot": ":09",
+   "in_flight": null
+  },
+  "ruv-sgit": {
+   "slot": ":32",
+   "in_flight": null
+  },
+  "dev": {
+   "slot": ":47",
+   "in_flight": "conductor-dashboard"
+  }
+ },
+ "nodes": [
+  {
+   "id": "editor-brief",
+   "kind": "brief",
+   "owner": "editor",
+   "title": "The editor's voice memo to deck, and his words to the conductor",
+   "status": "given",
+   "at": "2026-10-29T02:50:00Z"
+  },
+  {
+   "id": "night-brief",
+   "kind": "brief",
+   "owner": "conductor",
+   "title": "The next hours: who does what, the pace, the rules, the dashboard",
+   "status": "published",
+   "at": "2026-10-29T03:00:00Z",
+   "path": "team/conductor/briefs/2026-10-29__the-next-hours.md"
+  },
+  {
+   "id": "T1",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "What an agent is: from a chat model to tools, a loop and integration",
+   "status": "open"
+  },
+  {
+   "id": "T2",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "Blast radius of an internal agent",
+   "status": "open"
+  },
+  {
+   "id": "T3",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "Apps vulnerable from the inside",
+   "status": "open"
+  },
+  {
+   "id": "T4",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "The over-enthusiastic agent: pivoting",
+   "status": "open"
+  },
+  {
+   "id": "T5",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "Prompt injection from everything an agent consumes",
+   "status": "open"
+  },
+  {
+   "id": "T6",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 2,
+   "title": "Grant, mandate and gap: RiskMandate ABP and sharness.ai",
+   "status": "open"
+  },
+  {
+   "id": "T7",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 2,
+   "title": "Containment that works, on real examples",
+   "status": "open"
+  },
+  {
+   "id": "conductor-dashboard",
+   "kind": "request",
+   "owner": "conductor",
+   "to": "dev",
+   "title": "The dashboard: now, the pace grid, the flow graph, the sequence, the artifacts; one part per wake",
+   "status": "sent",
+   "at": "2026-10-29T03:00:00Z",
+   "mail": "tui-mail-public mailroom/dev/001-the-dashboard-every-wake.eml"
+  }
+ ],
+ "edges": [
+  {
+   "from": "editor-brief",
+   "to": "night-brief",
+   "kind": "briefs"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T1",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T2",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T3",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T4",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T5",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T6",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T7",
+   "kind": "sets"
+  },
+  {
+   "from": "night-brief",
+   "to": "conductor-dashboard",
+   "kind": "asks"
+  }
+ ],
+ "log": [
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "by": "conductor",
+   "line": "The night begins: five members on hourly wakes, seven themes open, nothing in flight; first picks at 04:02 after deck proposes at 03:17."
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "by": "conductor",
+   "line": "Requests sent: deck to lead the ideas from 03:17; dev the dashboard from 03:47 (dev in flight). Notices to researcher and ruv.sgit. Vault keys sealed to deck and ruv.sgit, with the editor."
+  }
+ ]
+}

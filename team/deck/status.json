@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 3,
-  "state": "wake 1 (02:17 London) closed: session key published; researcher's before-tonight request taken; three of its five must-change items done (ASRS figures, CIRCIA status, licence wording)",
+  "round": 4,
+  "state": "editor's request (02:47 UTC): the deck is frozen; the studio programme is open (14 experiments) and the first asks are out: E01 to ruv.sgit, data to the researcher, pacing to the conductor",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -35,47 +35,54 @@
     {
       "what": "before-tonight 1 to 3: unreported (ASRS 121,128 in 2025, over 2.3 million; CIRCIA at the White House since 1 October) and licence (should be suspended)",
       "evidence": "src/static/talk/slides/unreported/index.html, src/static/talk/talk.json"
+    },
+    {
+      "what": "The studio programme: 14 experiments in two parts, as data and a generated page",
+      "evidence": "src/static/studio/data/programme.json, /studio/programme.html, team/deck/tools/programme.py"
+    },
+    {
+      "what": "Requests: conductor (pace the programme), ruv.sgit (E01 agent-evolution), researcher (data for E02, E03, E04, E09 to E11, E13)",
+      "evidence": "team/deck/requests/"
+    },
+    {
+      "what": "Studio pages point at ruv.sgit's real delivery path, ruv-sgit/<slug>/, with an explainer beside each piece",
+      "evidence": "src/pages/studio/how-it-works.html, src/pages/studio/index.html"
     }
   ],
   "next": [
     {
-      "what": "before-tonight 4: three of five not attacks (EchoLeak was a researcher's demonstration)",
-      "why": "the line act one turns on: the editor decides the wording; deck proposes the researcher's safer line",
-      "issue": "before-tonight",
-      "due": "2026-10-29T17:00:00Z"
+      "what": "Each wake: read replies; review whatever ruv.sgit delivered (studio/reviews/<id>.html) and ask for the next pass or mark it for the editor; move statuses in programme.json and regenerate",
+      "why": "the editor's loop: review every pass",
+      "issue": "programme"
     },
     {
-      "what": "before-tonight 5: definition and identities to the 2026 editions ($19.5m, 109 to 1), after reading both captures",
-      "why": "the 42 per cent may differ in the 2026 edition",
-      "issue": "before-tonight",
-      "due": "2026-10-29T17:00:00Z"
+      "what": "Ask for the next experiment when the conductor names it (E02 once the researcher's grant data is in)",
+      "why": "one experiment in flight with ruv.sgit at a time",
+      "issue": "programme"
     },
     {
-      "what": "before-tonight, should-change list: incidents (espionage dates, EchoLeak wording), loop, outages (ToolShell 54), spreadsheets (48 per cent, Gartner), collision, infrastructure, abp",
-      "why": "evidence/BEFORE-TONIGHT.md",
-      "issue": "before-tonight"
-    },
-    {
-      "what": "Send B01 and B02 to ruv.sgit as requests, and agree where versions live (studio/lab/ or src/static/ruv-sgit/)",
-      "why": "the studio's first work"
+      "what": "Copy the researcher's captured data into src/static/studio/data/ with claim ids, as each piece needs it",
+      "why": "ruv.sgit draws only from sources",
+      "issue": "programme"
     }
   ],
   "asks": [
     {
-      "what": "Decide the incidents line: keep 'three of those five were not attacks', or say 'two were agents being agents, one a researcher showing what an attacker could do, two were attacks'",
+      "what": "Morning: review the programme and every piece marked review; keep, change or drop",
       "from": "the editor"
+    },
+    {
+      "what": "before-tonight: decide the slide items while the deck is frozen, item 4 (three of five not attacks) first",
+      "from": "the editor",
+      "issue": "before-tonight, blocked"
     },
     {
       "what": "Agree or change the draft policy.json",
       "from": "the editor"
     },
     {
-      "what": "Record deck's task in schedule.json",
+      "what": "Pace the programme; record deck's task in schedule.json",
       "from": "conductor@"
-    },
-    {
-      "what": "Update the sources page for ASRS (NASA's briefing) and CIRCIA (at the White House since 1 October)",
-      "from": "dev@ (holds src/pages/sources/)"
     }
   ],
   "tokens": null,
