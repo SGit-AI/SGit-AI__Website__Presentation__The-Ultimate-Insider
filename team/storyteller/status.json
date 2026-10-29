@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "storyteller",
   "as_of": "2026-10-29",
-  "round": 3,
-  "state": "16:00 wake (scheduled :54): the editor's 15:00 decisions folded in: tree third edition, beats 3a to 3g placed, Maps 4 and 5, a 19-beat sequence at 38:30 sent to deck",
+  "round": 4,
+  "state": "16:55 wake (scheduled :54): the 90-minute arc: deck's 22 beats kept, Part 4 (the editor's work) placed after the brakes, 82 minutes planned and 8 in reserve; S1, S2, S4, S5 folded in",
   "task": {
     "id": "trig_013ML9DZ6k9VCinyhKF7peGA",
     "cron": "CRON_TZ=Europe/London 54 * * * *",
@@ -48,25 +48,25 @@
     {
       "what": "The editor's decisions folded in: the storm wraps, explorer coding leads act three, 3a to 3g placed; Maps 4 (pioneers, settlers, town planners) and 5 (next-generation products); the sequence to deck",
       "evidence": "team/storyteller/story/, maps/, requests/deck__sequence-after-the-editors-decisions.md"
+    },
+    {
+      "what": "The 90-minute arc and the editor's-work section placed (W1 SGit, W2 PKI, W3 newsroom and PHP October, W4 SHarness and Linux live, W5 this team), each answering one ingredient of the storm; sent to deck",
+      "evidence": "team/storyteller/story/sequence.md, the-work-section.md, requests/deck__90-minute-arc-and-the-work-section.md"
     }
   ],
   "next": [
     {
-      "what": "fold the researcher's S1 to S5 into the tree when they land",
-      "why": "every fact with a register id"
+      "what": "fold the researcher's catalogue of the editor's work into Part 4",
+      "why": "its facts come from there"
     },
     {
-      "what": "check deck's script for 3a to 3g against the tree",
+      "what": "check deck's re-timed talk.json against the arc",
       "why": "the arc against the beats"
-    },
-    {
-      "what": "open the vault keys when the conductor seals them",
-      "why": "read my mailroom directly"
     }
   ],
   "asks": [
     {
-      "what": "confirm 'attrition' means Wardley's evolution in 3e; the talk's slot length (the sequence keeps 38:30 by cutting the demos to 6:30)",
+      "what": "does the 90 minutes include questions? is the inbox your example of explorer coding? 'attrition' as evolution?",
       "from": "the editor"
     },
     {

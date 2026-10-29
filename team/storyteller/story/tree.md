@@ -1,10 +1,10 @@
 # The story tree: the perfect storm we are brewing
 
-storyteller@the-ultimate-insider. **Third edition, 29 October 2026, 16:00 UTC**, after the editor's decisions of about 15:00 (`team/conductor/briefs/2026-10-29__editor/1-editor-decisions-1500.md`). The first edition (14:20) was the memo laid out; the second (15:00) folded in the researcher's R1 to R9. This one is the editor's structure: the storm **wraps** the three known problems, act three **leads with explorer coding**, and his seven new beats (3a to 3g) are placed. **Nothing here is in the talk**: deck writes the beats from `sequence.md`.
+storyteller@the-ultimate-insider. **Fourth edition, 29 October 2026, 17:00 UTC** (the talk is 90 minutes; the editor's work is Part 4, see `the-work-section.md`). Third edition 16:00, after the editor's decisions of about 15:00 (`team/conductor/briefs/2026-10-29__editor/1-editor-decisions-1500.md`). The first edition (14:20) was the memo laid out; the second (15:00) folded in the researcher's R1 to R9. This one is the editor's structure: the storm **wraps** the three known problems, act three **leads with explorer coding**, and his seven new beats (3a to 3g) are placed. **Nothing here is in the talk**: deck writes the beats from `sequence.md`.
 
 How to read it:
 
-- Every fact carries a claims-register id from `evidence/claims/claims.json` with its grade (A0 unsupported to A6 established, `evidence/METHOD.md`), or **S1** to **S5**: facts the editor's decisions route to the researcher (the conductor's note of 15:15), listed at the end.
+- Every fact carries a claims-register id from `evidence/claims/claims.json` with its grade (A0 unsupported to A6 established, `evidence/METHOD.md`), or **S3**, the one fact still with the researcher (S1, S2, S4 and S5 landed by 16:45).
 - **The editor's words** are marked as his. Lines marked *proposed* are the storyteller's, for him to keep, change or drop.
 
 ## The tree at a glance
@@ -16,6 +16,9 @@ flowchart TD
   P --> A["PART 1: THE INSIDER WITH NO LIMITS"]
   P --> B["PART 2: EXPLORER CODING"]
   P --> C["PART 3: BRAKES, AND THE OPPORTUNITY"]
+  P --> D["PART 4: THE WORK: BRAKES, BUILT<br/>SGit, the PKI, the newsroom and PHP October,<br/>SHarness and Linux in the browser, this team"]
+  D -.-> C3
+  D -.-> C4
 
   A --> A1["3a The attacker's limits<br/>were accidental controls"]
   A --> A2["1.1 No worm era since: in recent years,<br/>accidents did more damage than attackers"]
@@ -74,9 +77,13 @@ The old insider (a malicious employee, bad code, a criminal who got in) was held
 
 | Fact | Source |
 |---|---|
-| The worm era: Slammer's speed, Code Red's spread | **S1** |
+| Slammer: over 90 per cent of vulnerable hosts within 10 minutes, doubling every 8.5 seconds | `story-s1-slammer-90pct-10min` A5, `story-s1-slammer-doubling-8-5s` A6 |
+| Code Red v2: more than 359,000 computers in under 14 hours | `story-s1-codered-359000-14h` A6 |
 | AWS US-East-1, October 2025: a DNS race condition, over fourteen hours (an accident) | `aws-us-east-1-oct-2025-dns-race-14h` A6 |
-| CrowdStrike's update, July 2024 (an accident); anything within the last year | **S2** |
+| CrowdStrike, 19 July 2024: a content update, not an attack; insured losses estimated at 300 million to 1 billion dollars | `story-s2-crowdstrike-2024-07-19` A6, `story-s2-guycarp-insured-300m-1b` A2 |
+| Within the last year: Azure Front Door (29 October 2025), Cloudflare (18 November 2025), Azure networking (30 September 2026) | `story-s2-azure-afd-2025-10-29` A6, `story-s2-cloudflare-2025-11-18` A6, `story-s2-azure-networking-2026-09-30` A6 |
+| Major network outages: change management 50 per cent, cyberattack 17 | `story-s2-uptime-2025-causes` A2 |
+| The insurance models were built for attacks; accidental mass outages were a gap | `story-s2-guycarp-models-malicious-only` A2 |
 | Google has "not yet observed" fully autonomous attack pipelines in the wild (the editor: this supports the argument) | `story-r4-ai-mass-exploitation-not-yet` A2 |
 
 ### 3b. Attackers are businesses (the editor's new beat)
@@ -112,7 +119,7 @@ They have objectives, budgets, office hours and a return to chase. A campaign ne
 | Fact | Source |
 |---|---|
 | Exploited vulnerabilities, 20 to 31 per cent of initial access; edge devices 3 to 22 per cent of targets | `story-r5-surface-smaller-more-mature` A0 (the register's grade is for "more mature"; the numbers in its note are the researcher's DBIR reading) |
-| Worm-era infection curves, for the comparison | **S1** |
+| Worm-era infection curves, for the comparison | `story-s1-slammer-vs-codered` A6 (Slammer two orders of magnitude faster than Code Red) |
 | Open source is about to become very secure (moved to the close, 3g) | `php2shell-found-with-ai-help` A5, `php-foundation-ai-report-load` A2 |
 
 ### 1.5 The inside: four ingredients
@@ -142,7 +149,7 @@ Eight agents with mandates, scopes, keys, hourly wakes and reviews before and af
 
 | Fact | Source |
 |---|---|
-| This site: v0.1.107 to v0.1.125 in about ninety minutes | **S4** (the release history, `admin/versions/`, can carry it as a register claim) |
+| This site: v0.1.107 to v0.1.125 in 89 minutes, 19 releases (13:20 to 14:48 UTC) | `story-s4-release-rate` A6 |
 | The PHP newsroom: 2 people and 19 agents and roles | `php-team-size` A1 |
 | ... where what stands between a push and the live site is settings, not boundaries | `e06-php-newsroom-settings-not-boundaries` A2 |
 
@@ -159,7 +166,9 @@ The example is the editor's email workflow on newsroom.sgit.ai (to be confirmed 
 | Fact | Source |
 |---|---|
 | Lovable, 60 million+ projects; Replit, 50 million+ registered users (vendor-reported) | `story-r8-non-developer-app-volume` A2 |
-| The editor's email workflow on newsroom.sgit.ai | **S5** |
+| The editor's agentic inbox on newsroom.sgit.ai: agents triage, file and draft; a person sends | `story-s5-no-agent-sends` A2, `story-s5-built-with-ai` A2 |
+| **The inbox as explorer coding is the tree's framing, not the site's** (no page says it; the editor wrote a book for young developers in 2018). Ask him, or say "my own example" rather than "a non-developer's" | `story-s5-explorer-coding-link` A1 |
+| Agent counts change with the date (6 on 29 September, about 15 now): give a date with any number | `story-s5-agent-count` A2 |
 
 ### 2.2 Risk management still runs on spreadsheets
 
@@ -184,16 +193,13 @@ Spreadsheets that become applications, wired to agents, are dangerous at scale. 
 
 **Close (*proposed*, tying both ends):** "We are brewing the storm. We are also the ones who can build the brakes, and sell them."
 
-## Facts the editor's decisions need (routed to the researcher by the conductor, 15:15)
+## Facts still with the researcher
 
-- **S1** The worm era: Slammer's speed, Code Red's spread, and infection curves to draw against today's.
-- **S2** Accidents against attacks in recent years: CrowdStrike, July 2024; anything within the last year.
-- **S3** The Replit case in full: the deletion, the fake records, the misreported results.
-- **S4** This site's release rate, from its own release history (the storyteller asks; the researcher or dev can register it).
-- **S5** The editor's email workflow on newsroom.sgit.ai, as a source for act three's example.
+- **S3** The Replit case in full: the deletion, the fake records, the misreported results (routed by the conductor at 15:15).
+- **The catalogue of the editor's work** (routed at 16:30): one row per page, with the regions worth a showcase slide. Part 4's facts come from it.
 
 ## Still open with the editor
 
 - "attrition" in 3e: taken as **evolution** (Wardley's axis) until the conductor confirms.
 - "Empower" and "the billing" in the list of projects.
-- The talk's length with seven new beats: `sequence.md` keeps 38:30 by cutting the demos to 6:30.
+- The talk is 90 minutes (16:30): does that include questions? `sequence.md` (fourth edition) plans 82 minutes and keeps 8 in reserve.
