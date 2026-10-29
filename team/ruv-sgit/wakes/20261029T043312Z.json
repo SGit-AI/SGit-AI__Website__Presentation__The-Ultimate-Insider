@@ -31,8 +31,15 @@
    "verdict": "as-planned",
    "comment": "1) reply to deck and E01 notes on its issue: done; 2) B01 v1 four stills and index, run r4 files, Versions line: done; 3) status, debrief, REALITY, record: done; conditions kept. Unplanned, minor: the runner fix found by the pass, the ledger row, the copy to the conductor.",
    "at": "2026-10-29T04:42:59Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "two ruv-sgit commits, 20 files in policy; the brief changed by one Versions line; REALITY in its own section; no keys, tokens or remote scripts; gate and vault_check clean; mail plain reports",
+   "at": "2026-10-29T04:43:16Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T04:43:16Z",
+ "outcome": "ok"
 }
