@@ -248,3 +248,5 @@ body.adm .foot{margin-top:0}
 .vault img.qr{width:220px;height:220px;border:1px solid var(--line);border-radius:10px;background:#fff}
 @media(max-width:700px){.vault{grid-template-columns:1fr}}
 .shell-main>section:first-child,.shell-main>article:first-child{padding-top:22px}
+.pubwarn{border:2px solid var(--agent);background:var(--agent-t);border-radius:12px;padding:14px 18px;margin:8px 0 18px;font-size:18px;line-height:1.45;max-width:95ch}
+.pubwarn b{color:var(--agent)}

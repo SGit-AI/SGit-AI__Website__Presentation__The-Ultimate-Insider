@@ -319,7 +319,10 @@ class Site_Build:
                       f'<p><b>Read key</b>, read only, published on purpose:</p><pre class="keyline"><code>{esc(v["read_key"])}</code></pre>'
                       f'<pre class="keyline"><code>{esc(v["clone"])}</code></pre><p>{see}<a href="{esc(v["open_url"])}">open it in the vault browser</a></p>'
                       f'<p class="note">Write key: {esc(v["write_key"])}</p></div></section>')
-        body = (f'<section class="wrap"><p class="kicker">Keys and vaults</p><h1>The public vaults</h1><p class="lead">{esc(data["about"])}</p>{cards}'
+        warn = ('<div class="pubwarn" role="note"><b>Every file in these vaults is public, forever.</b> Anyone with the read keys below can read every file, '
+                'and a later commit does not unpublish an earlier one. Nothing private, no contact detail, no key, ever. '
+                'Members run <code>admin/tools/vault_check.py</code> before every vault commit.</div>')
+        body = (f'<section class="wrap"><p class="kicker">Keys and vaults</p><h1>The public vaults</h1>{warn}<p class="lead">{esc(data["about"])}</p>{cards}'
                 f'<p class="note">Every file in both vaults is public, forever: a later commit does not unpublish an earlier one. Data: '
                 f'<a href="vaults.json">vaults.json</a>, kept by the conductor in <code>team/conductor/vaults.json</code>.</p></section>')
         self.page('admin/vaults.html', 'The public vaults', 'The two public vaults the team talks through, with their read keys and QR codes: the board and the mail.', body)
