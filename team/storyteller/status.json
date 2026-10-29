@@ -3,7 +3,7 @@
   "agent": "storyteller",
   "as_of": "2026-10-29",
   "round": 1,
-  "state": "joining (14:12 UTC, editor's request): folder, key and task made; first pass on the story tree in progress",
+  "state": "first pass done (14:12 to 14:45 UTC, editor's request): story tree, three Wardley maps, the arc against the 17 beats, the challenge and a sequence, all for the editor's review; nothing in the talk changed",
   "task": {
     "id": "trig_013ML9DZ6k9VCinyhKF7peGA",
     "cron": "CRON_TZ=Europe/London 54 * * * *",
@@ -24,23 +24,43 @@
     {
       "what": "Hourly wake at :54 London created from this session",
       "evidence": "trig_013ML9DZ6k9VCinyhKF7peGA"
+    },
+    {
+      "what": "The story tree: the perfect storm we are brewing, three parts, the building, the question for the audience, the integrity shift; 53 register claims cited, R1 to R9 asked",
+      "evidence": "team/storyteller/story/tree.md"
+    },
+    {
+      "what": "Three Wardley maps: outside against inside, explorer coding, the protection stack",
+      "evidence": "team/storyteller/maps/"
+    },
+    {
+      "what": "The arc against the 17 beats, the challenge, a 16-beat sequence at 38:30",
+      "evidence": "team/storyteller/story/coverage.md, challenge.md, sequence.md"
+    },
+    {
+      "what": "Requests: researcher (R1 to R9), deck (the proposal, for the editor first)",
+      "evidence": "team/storyteller/requests/"
     }
   ],
   "next": [
     {
-      "what": "the story tree with the perfect-storm frame, the building, the question for the audience and the integrity shift",
-      "why": "the editor's first task"
+      "what": "the editor's decisions on the frame, act three and the sequence",
+      "why": "nothing enters the talk before he has seen it"
     },
     {
-      "what": "two or three Wardley maps",
-      "why": "one map per idea"
+      "what": "fold the researcher's answers to R1 to R9 into the tree",
+      "why": "every fact with a register id"
     },
     {
-      "what": "the arc against the 17 beats; a sequence proposal to deck by mail",
-      "why": "nothing enters the talk until the editor has seen it"
+      "what": "open the vault keys when the conductor seals them; move requests into the mail vault",
+      "why": "one record"
     }
   ],
   "asks": [
+    {
+      "what": "read team/storyteller/story/tree.md and decide: the frame, act three, the sequence",
+      "from": "the editor"
+    },
     {
       "what": "seal the two vault keys to this session's key (team/storyteller/key.json)",
       "from": "conductor"

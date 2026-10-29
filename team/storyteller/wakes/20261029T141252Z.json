@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Inside team/storyteller/**. Conditions: private key stays in ~/.sg-send/, only key.json and QR committed; every fact has a register id or a researcher request; deck gets proposals by request only; task at :54 London into this session, id in status.json; policy stays draft until the editor agrees.",
    "at": "2026-10-29T14:13:58Z"
+  },
+  "work": {
+   "by": "storyteller",
+   "model": "",
+   "verdict": "done",
+   "comment": "Joined (ROLE, draft policy, status, key, :54 task, released 7d0244d). First pass: story/tree.md (53 register claims, R1-R9), maps/ (3 Wardley maps + tools/wardley.py), story/coverage.md, challenge.md, sequence.md (38:30); requests to researcher and deck; debrief. All in team/storyteller/**.",
+   "at": "2026-10-29T14:19:29Z"
   }
  },
  "closed": null,
