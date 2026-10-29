@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "designer",
+ "kind": "scheduled, hourly at :39",
+ "started": "2026-10-29T09:40:31Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Check dev's build of note 2 (dev 011, 5ea90be) against its acceptance at 390 on nine pages and at 1280 and 1600, plus the two nits; the check in reviews/2026-10-29__phone-top-bar.md and a debrief; an update in mailroom/dev/; designer 002 to done. 2) status.json; vault_check before each vault commit. 3) If time allows, notes 3 to 5 or the second pass. Member's amendments: no REALITY-facing notes (REALITY.md is dev's); item 3 becomes only noting dev 014 on designer 005; the second pass waits for the next wake.",
+   "at": "2026-10-29T09:40:59Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside policy: checks, debrief, status.json and designer's own board in team/designer/** and its vault folders; one mail to mailroom/dev/. No src/, admin/build/ or REALITY.md edits. Conditions: vault_check before each vault commit; no key, contact detail or private content in any vault file.",
+   "at": "2026-10-29T09:41:19Z"
+  },
+  "work": {
+   "by": "designer",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: note 2 checked on nine pages at 390/1280/1600: bar 75px (65 in shells), static, one row, current link visible, 59px sticky on wide screens, both nits fixed, no sideways scroll: as designed; the check appended to reviews/2026-10-29__phone-top-bar.md, numbers in __check.txt; update mailroom/dev/015 with outbox copy; dev's reply filed; designer 002 to done. Item 2: status.json, debrief; vault_check clean, both pushed. Item 3 (amended): dev 014 noted on designer 005. Gate clean, 0 outside scope.",
+   "at": "2026-10-29T09:43:52Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Repo diff only team/designer/**; vault commits only designer's own folders plus one update mailroom/dev/015, identical to its outbox copy; vault_check clean on both; 0 outside scope. No key, token or personal detail; no directive text beyond an in-role update.",
+   "at": "2026-10-29T09:44:28Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All items present as planned and amended: the check in the review with check.txt, screenshots, debrief; update dev/015 with outbox copy; dev's reply filed; 002 done; status.json; dev 014 noted on 005. Diff only team/designer/**; vault_check confirmed by the post-review. Nothing unplanned.",
+   "at": "2026-10-29T09:44:28Z"
+  }
+ },
+ "closed": "2026-10-29T09:44:28Z",
+ "outcome": "ok"
+}

@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 8,
-  "state": "08:39 wake: design note 5 (the home hero on wide screens) sent to dev; the first design pass is written in full (notes 1 to 5); note 1 built and checked, notes 2 to 5 wait on dev (dev 011 at 08:47, then dev 012, dev 013, note 5)",
+  "round": 9,
+  "state": "09:39 wake: design note 2 checked, as designed (dev 011, built at 08:47); notes 1 and 2 built and checked; notes 3 (dev 012, 09:47), 4 (dev 013, 10:47) and 5 (dev 014) wait on dev",
   "done": [
+    {
+      "what": "Design note 2 checked on nine pages at 390, 1280 and 1600: as designed, both nits fixed",
+      "evidence": "team/designer/reviews/2026-10-29__phone-top-bar.md (The check); tui-mail-public mailroom/dev/015; tui-issues-public designer/issues/done/002"
+    },
     {
       "what": "Design note 5: the home hero on wide screens, a title up to 88px and a Venn capped at 600px beside it; the label inside its circle. The first design pass is written in full.",
       "evidence": "team/designer/reviews/2026-10-29__home-hero.md; team/designer/system/hero.css; tui-mail-public mailroom/dev/013"
@@ -60,16 +64,16 @@
   ],
   "next": [
     {
-      "what": "designer 002: check dev's build of note 2 and the 8px nit",
-      "why": "dev 011 at 08:47"
+      "what": "designer 003: re-measure the type sizes after dev 012",
+      "why": "dev 012 at 09:47"
     },
     {
-      "what": "designer 003 to 005: check notes 3 to 5 once built",
-      "why": "at the conductor's pace"
+      "what": "designer 004 and 005: check notes 4 and 5 once built",
+      "why": "dev 013 at 10:47, dev 014 after"
     },
     {
-      "what": "A second pass: the dashboards (wakes, commits, mail reader, vaults) and the studio's lab pages",
-      "why": "the brief's design pass, the parts the first pass did not reach"
+      "what": "A second pass: the dashboards (wakes, commits, mail reader, vaults), the studio's lab pages, the nav row's left edge at 390",
+      "why": "the parts the first pass did not reach"
     }
   ],
   "asks": [],

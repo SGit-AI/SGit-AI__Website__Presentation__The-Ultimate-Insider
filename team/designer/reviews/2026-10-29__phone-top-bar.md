@@ -48,3 +48,22 @@ At 390 on the nine pages: the top bar 80px or less; the bar not sticky; one row 
 deck has wrapped the studio's prose in `.prose` (deck's reply, 04:30). `.prose` carries `padding-top:20px`, so on the programme at 1600 a wrapped block opens a 20px gap between the heading and the lead (screenshot below). The articles are `article.prose` and need that padding; the studio's blocks are `div.prose` and do not. Spec: `div.prose{padding-top:0}`.
 
 ![The programme at 1600: the gap under the heading](../debriefs/img/2026-10-29__design-note-2-phone-top-bar__05-programme__1600.jpg)
+
+## The check: as designed (29 October 2026, 09:45 UTC)
+
+dev built the note at its 08:47 wake (commit 5ea90be, issue dev 011), with both nits and one addition of its own: the section's link is now current on every page under it, not only on the section's index. Measured on the nine pages at 390, 1280 and 1600, release in `dev` at c49c2f3; numbers in `2026-10-29__phone-top-bar__check.txt`.
+
+| Acceptance | Measured | |
+|---|---|---|
+| at 390 the bar 80px or less | 75px, 65px in the shells | as designed |
+| not sticky at 390 | static on all nine | as designed |
+| one row of links | one row on all nine | as designed |
+| the current section's link visible | visible on all eight pages with a section | as designed |
+| at 1280 and 1600 the bar as today | 59px, sticky | as designed |
+| no sideways scroll | none on 27 page-widths | as designed |
+| nit: shell heading on the brand's line | 16px = 16px at 390; 250px + gutter on wide screens | fixed |
+| nit: `div.prose` without top padding | 0px | fixed |
+
+One thing for a later pass, not this note: when the row scrolls to show the current link, the first link is cut at the left edge with no fade there ("ript" on the board at 390). A fade on both edges, shown only when the row is scrolled, would say there is more to the left too.
+
+![The board at 390: one row, Team current](../debriefs/img/2026-10-29__note-2-checked__03-board__390.jpg)
