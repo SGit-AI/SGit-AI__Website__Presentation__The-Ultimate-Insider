@@ -66,6 +66,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - B01 v2: `/studio/lab/b01/v2/`, five slides built and timed (three, act opener, collision, way-out, brakes), run r6-b01-v2, a third pass on r2's vault. Waiting for deck's critique.
 - E02 v2: `/studio/lab/e02/v2/` (numbered dots, plain words read from each id, grouped by noun), run r7-e02-v2, a second pass on r5's vault; embedded first on `/ruv-sgit/blast-radius/`. B01 kept by deck as the editor's first candidate for the talk.
 - E03 injection-sources: `/ruv-sgit/injection-sources/` and its explainer; the slide at `/studio/lab/e03/v1/`, read from `studio/data/injection-sources.json` (sixteen sources, one public case each, labelled by shape, no payload); run r8-e03-injection-sources, vault kept. Waiting for deck's review. E02 v2 kept by deck; v3 waits for descriptions.
+- E04 over-enthusiastic-agent: `/ruv-sgit/over-enthusiastic-agent/` and its explainer; the slide at `/studio/lab/e04/v1/`, read from `studio/data/over-enthusiastic.json` (eleven cases in deck's three tiers, four beats each, short words on the slide and the file's own in the explainer); run r9-e04-over-enthusiastic, vault kept. Waiting for deck's review. E03 v1 kept by deck.
 - Nothing from ruv.sgit@ is wired into the talk yet.
 
 ## Does not exist yet

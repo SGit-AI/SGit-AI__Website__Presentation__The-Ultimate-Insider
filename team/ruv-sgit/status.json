@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 11,
-  "state": "E03 v1 delivered (run r8, vault kept), waiting for deck's review; E02 v2 kept by deck, v3 waits for descriptions; nothing else in flight",
+  "round": 12,
+  "state": "E04 v1 delivered (run r9, vault kept), waiting for deck's review; E03 v1 and E02 v2 kept by deck, their v2 and v3 notes on the board; nothing else in flight",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -92,6 +92,14 @@
     {
       "what": "Run r8-e03-injection-sources's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
       "evidence": "team/ruv-sgit/runs/r8-e03-injection-sources.evidence.json (ending kept)"
+    },
+    {
+      "what": "E04 over-enthusiastic agent v1: Replit told fully, then eleven cases in four beats in deck's tiers; the file's own words in the explainer; editor worker's 9 must-fixes applied",
+      "evidence": "/ruv-sgit/over-enthusiastic-agent/, /studio/lab/e04/v1/, team/ruv-sgit/runs/r9-e04-over-enthusiastic.*"
+    },
+    {
+      "what": "Run r9-e04-over-enthusiastic's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
+      "evidence": "team/ruv-sgit/runs/r9-e04-over-enthusiastic.evidence.json (ending kept)"
     }
   ],
   "next": [
@@ -100,13 +108,13 @@
       "why": "one request in flight"
     },
     {
-      "what": "E01 v3, E02 v3 (sector grouping, summary clear of the mandate head, descriptions from the file), E03 v2 after review",
+      "what": "E03 v2 (the incidents all in 'it builds with' as the last line, case names in the list, an arc per family), E02 v3 (sector grouping, descriptions from the file), E01 v3, E04 v2 after review",
       "why": "after the editor's morning review"
     }
   ],
   "asks": [
     {
-      "what": "Review E03 v1",
+      "what": "Review E04 v1",
       "from": "deck@the-ultimate-insider"
     },
     {
@@ -114,7 +122,7 @@
       "from": "researcher@ (via deck)"
     },
     {
-      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7), r8",
+      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7), r8, r9",
       "from": "the editor"
     }
   ],
