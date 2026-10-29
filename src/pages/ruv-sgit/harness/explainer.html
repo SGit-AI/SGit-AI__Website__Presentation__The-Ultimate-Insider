@@ -1,0 +1,81 @@
+<!--meta {"title": "E11 explained: the kernel was told first, frame by frame", "description": "How studio experiment E11 goes from one row of E09's excess to sharness-ai hello's six probes and the honest caveat: each frame with its time and stage, every probe in the capture's own words, the components' status, and what was left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E11</a></nav>
+<p class="kicker">Studio experiment E11 · the explainer</p>
+<h1>The kernel was told first, frame by frame</h1>
+<p class="lead">The one sentence: a boundary the agent cannot widen is one the kernel was told about before the tool started, by something the agent's grant does not include.</p>
+
+<h2>The frames and stages (v1)</h2>
+<p>Seconds from the start; it ends at 50 s and holds still. The stages are declared for the player as <code>window.RUV_STEPS</code> (one row of the excess at 0 s, write, hash, enforce at 9 s, six probes at 20 s, six of six held at 36 s, what is designed at 40 s); the player's clock (<code>talk/engine/clock.js</code>, dev's port) is not in the repository yet, so the slide does not load it, and will once it lands.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>The headline and the line under it: E09 ended on 12 of 12 excess with no control; take one row of it.</td></tr>
+<tr><td>1.5 s to 7 s</td><td>The agent, one row of E09's excess ("Reach any host on the internet", E09's own label from the capabilities file), and a path to any host on the internet that meets the policy, a wall in the boundary colour held by the kernel, and stops: connect refused.</td></tr>
+<tr><td>10 s to 17.5 s</td><td>SHarness's order, one step every 2.5 s: write the policy, hash it, the kernel enforces it before the tool starts, the probes run.</td></tr>
+<tr><td>21 s to 35 s</td><td>The six probes of sharness-ai hello, one every 2.5 s, each as a small path to the wall: the control passes through a gate the policy opens, the other five stop at the wall; each verdict, and "held".</td></tr>
+<tr><td>36 s</td><td>Six of six held, on 25 October 2026, in five environments on two kernels, all uid 0.</td></tr>
+<tr><td>40 s</td><td>The honest caveat under the headline, and the status line: measured, runnable, designed; sharness.ai is the editor's own project.</td></tr>
+</tbody></table></div>
+
+<h2>The six probes, in the capture's words</h2>
+<div class="tbl"><table>
+<thead><tr><th>#</th><th>Probe</th><th>What it tries</th><th>Result</th><th>Lit at</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>list /usr</td><td>read a directory the deny-all hello policy allows (the control: it should be allowed)</td><td>allowed, as the policy says (held)</td><td>21 s</td></tr>
+<tr><td>2</td><td>create /tmp/sharness-ai-hello.tmp</td><td>write a file in /tmp, which the policy refuses</td><td>refused: EACCES (Landlock) (held)</td><td>23.5 s</td></tr>
+<tr><td>3</td><td>create a file in the workspace</td><td>write a file in the working directory, which the policy refuses</td><td>refused: EACCES (Landlock) (held)</td><td>26 s</td></tr>
+<tr><td>4</td><td>TCP connect to 1.1.1.1:443</td><td>open an outbound TCP connection, which the policy refuses</td><td>refused: EACCES (Landlock port rule; an empty network namespace was also applied) (held)</td><td>28.5 s</td></tr>
+<tr><td>5</td><td>run with a wrong --expect-hash</td><td>start a command under a policy whose hash does not match the one the person supplied</td><td>refused, nothing ran: exit 125 (held)</td><td>31 s</td></tr>
+<tr><td>6</td><td>allocate 400 MiB under a 128 MiB cap</td><td>bytearray(400 &lt;&lt; 20) under max_memory_mb: 128</td><td>refused: MemoryError (the rlimit fires first) (held)</td><td>33.5 s</td></tr>
+</tbody></table></div>
+<p>All six on 25 October 2026, in the five environments:</p>
+<ul>
+<li>Claude Code cloud session (Ubuntu 24.04, Linux 6.18.44, Landlock ABI 7, uid 0, Python 3.13): native Linux, cloud microVM; run by the project</li>
+<li>Dinis Cruz&#x27;s Chrome, the E09 page: emulated Linux (v86, Alpine i686 guest 6.18.58) in a browser tab; browser version and machine not recorded</li>
+<li>headless Chromium 153, the same page: emulated Linux (same guest) in a headless browser</li>
+<li>Node 22, v86 without a browser: emulated Linux (same guest) in Node</li>
+<li>chroot into the guest&#x27;s files on the host kernel: the guest&#x27;s 32-bit userland on the host kernel 6.18.44</li>
+</ul>
+
+<h2>The components, as the capture gives them</h2>
+<div class="tbl"><table>
+<thead><tr><th>Component</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>sharness.launcher (the launcher above the agent, with its manifest)</td><td>designed, not built; its one-process form (sharness-ai run) is runnable and measured, and a first slice (sharness-ai shell) runs as an MVP on the CLI&#x27;s dev since 28 Oct 2026</td></tr>
+<tr><td>sharness.kms</td><td>designed (not built); some primitives measured (freeze/thaw 0.13 and 0.28 ms)</td></tr>
+<tr><td>sharness.net</td><td>runnable as an MVP on the CLI&#x27;s dev since 27 Oct 2026 (a Boundary only for the shell sharness-ai shell starts as root; a Setting otherwise)</td></tr>
+<tr><td>sharness.fs</td><td>runnable as an MVP on the CLI&#x27;s dev since 26 Oct 2026, a Setting until the launcher gives it its own uid</td></tr>
+<tr><td>sharness.bash</td><td>designed (not built); its sandbox half is sharness-ai run, runnable; hello 6 of 6 in five places measured</td></tr>
+<tr><td>sharness.llm</td><td>designed (not built); the Messages API flow observed 24 Oct 2026</td></tr>
+<tr><td>sharness.policy</td><td>v0 shape designed; policy hash, check, translate runnable; one hash in three implementations measured</td></tr>
+</tbody></table></div>
+
+<h2>Where every word comes from</h2>
+<ul>
+<li><b>Only <a href="{{root}}studio/data/harness.json">harness.json</a></b>, the researcher's capture of sharness.ai, read by the slide when it loads, so a corrected file corrects the slide. The probe count and the held count are counted from the file; the environment count too.</li>
+<li><b>The researcher's cautions, kept:</b> six of six held on 25 October 2026 (not "24 to 29 October", which is the front page's footnote for a strip that also carries a later figure); five environments, not five platforms, on two kernels, all uid 0; "held" means each probe got the verdict the policy says, one of them an allow.</li>
+<li><b>Own site.</b> sharness.ai is the editor's project, and every row on its machines page is its own; no third-party report exists yet. The slide says so.</li>
+<li><b>Not contained today.</b> Every result is a policy applied by a session to its own child: a boundary for the child, a setting for the session. A process cannot bind its own session; only the launcher above the agent makes the policy a boundary for the agent, and that launcher is designed, with its first slice (sharness-ai shell) running since 28 October. The slide ends on that caveat.</li>
+<li><b>Short words.</b> The tiles name each probe in short words read from the capture (for example "Take 400 MiB under a 128 MiB cap" for <code>bytearray(400 &lt;&lt; 20) under max_memory_mb: 128</code>); the table above holds the capture's own. The four steps are the order the request gives, worded from the probes (deny-all; the expected hash; Landlock and a memory cap).</li>
+<li><b>The opening row</b> is E09's: its label is the capabilities file's, as E09 and E02 show it; no number from E09 is repeated beyond the 12 of 12 its last line carries.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: SVG and tiles built once from the data, every frame drawn from the slide's clock by <code>SLIDE_RENDER</code>; <code>?static</code> shows the end state.</li>
+<li>The palette, after the editor's review: the agent red only for the agent and its path, the boundary colour (teal) for the policy and what held, the infrastructure colour for the internet and for the allowed path beyond the gate; the piece's ID large at the top right.</li>
+<li>E04 v2's language for a barrier: here the path stops at the wall, because the wall held.</li>
+<li><b>It runs only over HTTP.</b> The slide reads its data with <code>fetch</code> when it loads.</li>
+</ul>
+
+<h2>What was tried and left out</h2>
+<ul>
+<li><b>The environments on the slide.</b> Five names at 20 px crowd the probes; the count is on the slide, the names here.</li>
+<li><b>The KMS freeze and thaw timings</b> and the 243-test figure: true in the capture, not part of this sentence.</li>
+<li><b>"Never claimed"</b>: the front page's fourth row lists what the site does not claim; it is not a component status, so it is not drawn as one.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 in ruv.sgit run r13-e11-harness: a Ruflo hive with a builder and an editor who checked the slide and this page against the request and the data, and one sgit vault holding the request, each worker's branch and the history. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</article>
