@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T03:15Z",
- "count": 344,
+ "built": "2026-10-29T04:20Z",
+ "count": 361,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -7111,6 +7111,635 @@
    ],
    "capture": "full",
    "recorded_by": "incidents"
+  },
+  {
+   "id": "inj-appomni-servicenow",
+   "url": "https://appomni.com/ao-labs/ai-agent-to-agent-discovery-prompt-injection/",
+   "final_url": "https://appomni.com/ao-labs/ai-agent-to-agent-discovery-prompt-injection/",
+   "publisher": null,
+   "title": "Second-order injection, ServiceNow Now Assist (AppOmni)",
+   "kind": "primary",
+   "published": "2025-11-19",
+   "captured_at": "2026-10-29T04:13:01Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "af29d7535c9318e9b3320b20c143031b7ab600dfbd0bcd9ea52e34b7845a3bf8",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "53f5954945b23d6b883ee36c33ce1c5654b7a2a5da3737c473d0a87df550794f",
+     "bytes_as_fetched": 1073,
+     "sha256": "53f5954945b23d6b883ee36c33ce1c5654b7a2a5da3737c473d0a87df550794f",
+     "bytes": 1073
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f02d00445fd3d83dd07db9582d5710769bc3a3b37ad7c792f4225e3ad233a138",
+     "bytes_as_fetched": 602,
+     "sha256": "f02d00445fd3d83dd07db9582d5710769bc3a3b37ad7c792f4225e3ad233a138",
+     "bytes": 602
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "660b236f5c3d460f0c9cb46c3214208e8994ab002069caaa678b807d5a9fad46",
+     "bytes_as_fetched": 3382,
+     "sha256": "660b236f5c3d460f0c9cb46c3214208e8994ab002069caaa678b807d5a9fad46",
+     "bytes": 3382
+    }
+   ]
+  },
+  {
+   "id": "inj-arxiv-audiohijack",
+   "url": "https://arxiv.org/abs/2604.14604",
+   "final_url": "https://arxiv.org/abs/2604.14604",
+   "publisher": null,
+   "title": "AudioHijack (arXiv, 2026)",
+   "kind": "primary",
+   "published": "2026-04",
+   "captured_at": "2026-10-29T04:13:33Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "cea716dcdf047669899221b38f3fda42132280eab61151469ff04bafe85c6025",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "bdf3d5d1b9d8030c7ae9b6f61c6b4b90000f3279a22c6a718dc8875346a699e2",
+     "bytes_as_fetched": 663,
+     "sha256": "bdf3d5d1b9d8030c7ae9b6f61c6b4b90000f3279a22c6a718dc8875346a699e2",
+     "bytes": 663
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ea79fb90615241604ebeff123dc7ab14897d1c41c2cc5f7229f0bed30e769307",
+     "bytes_as_fetched": 518,
+     "sha256": "ea79fb90615241604ebeff123dc7ab14897d1c41c2cc5f7229f0bed30e769307",
+     "bytes": 518
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "db89c0c078e9ab9b3c56edcf301829fa74f04261b9280fad0a7085a066066611",
+     "bytes_as_fetched": 2125,
+     "sha256": "db89c0c078e9ab9b3c56edcf301829fa74f04261b9280fad0a7085a066066611",
+     "bytes": 2125
+    }
+   ]
+  },
+  {
+   "id": "inj-bitdefender-calendar",
+   "url": "https://www.bitdefender.com/en-us/blog/hotforsecurity/gemini-ai-compromised-through-malicious-calendar-invites-researchers-warn",
+   "final_url": "https://www.bitdefender.com/en-us/blog/hotforsecurity/gemini-ai-compromised-through-malicious-calendar-invites-researchers-warn",
+   "publisher": null,
+   "title": "Invitation Is All You Need (SafeBreach)",
+   "kind": "secondary",
+   "published": "2025-08-06",
+   "captured_at": "2026-10-29T04:14:59Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "1b24710a02af75b5cd11c86a634db265a3cee20b08bc413ddec7f29aeb711029",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "80321f1c0484ae4c98458cc4b04da03f5613ff3240b14ecd822c9cb95f33d1b2",
+     "bytes_as_fetched": 1479,
+     "sha256": "80321f1c0484ae4c98458cc4b04da03f5613ff3240b14ecd822c9cb95f33d1b2",
+     "bytes": 1479
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d946553ba2d4ecc6260176ab7fcd4a6a66c01c4c4acd8ac10680a62ac52274a5",
+     "bytes_as_fetched": 711,
+     "sha256": "d946553ba2d4ecc6260176ab7fcd4a6a66c01c4c4acd8ac10680a62ac52274a5",
+     "bytes": 711
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "21215dc6eeb8db77b39d6c44cccd1260a37aca17a42daf457c661c0c2f4fdde0",
+     "bytes_as_fetched": 1459,
+     "sha256": "21215dc6eeb8db77b39d6c44cccd1260a37aca17a42daf457c661c0c2f4fdde0",
+     "bytes": 1459
+    }
+   ]
+  },
+  {
+   "id": "inj-brave-comet",
+   "url": "https://brave.com/blog/comet-prompt-injection/",
+   "final_url": "https://brave.com/blog/comet-prompt-injection/",
+   "publisher": null,
+   "title": "Brave on Perplexity Comet",
+   "kind": "primary",
+   "published": "2025-08-20",
+   "captured_at": "2026-10-29T04:12:58Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "21fdf5a32bcf69fc140d678e77ad00f71a819c03104eb666f033e0c5a0ff9fea",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "38de38c5f5258e4d6775e47c85d744c7e211ae968f0d273eb55f7f94ad6ba739",
+     "bytes_as_fetched": 1935,
+     "sha256": "38de38c5f5258e4d6775e47c85d744c7e211ae968f0d273eb55f7f94ad6ba739",
+     "bytes": 1935
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d94c21fb5f438a3c2432ee6fe6dc34d37887d09f9aab39e7122e5c43a5df26a3",
+     "bytes_as_fetched": 525,
+     "sha256": "d94c21fb5f438a3c2432ee6fe6dc34d37887d09f9aab39e7122e5c43a5df26a3",
+     "bytes": 525
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "dd69b8d79f0b02c58c1672a0f70e421558e36e909d368e351e644306ba2ffa87",
+     "bytes_as_fetched": 4672,
+     "sha256": "dd69b8d79f0b02c58c1672a0f70e421558e36e909d368e351e644306ba2ffa87",
+     "bytes": 4672
+    }
+   ]
+  },
+  {
+   "id": "inj-cato-jira-living-off-ai",
+   "url": "https://www.catonetworks.com/blog/cato-ctrl-poc-attack-targeting-atlassians-mcp/?x=1",
+   "final_url": "https://www.catonetworks.com/blog/cato-ctrl-poc-attack-targeting-atlassians-mcp/?x=1",
+   "publisher": null,
+   "title": "Living off AI: Atlassian MCP and Jira Service Management (Cato CTRL)",
+   "kind": "primary",
+   "published": "2025-06-19",
+   "captured_at": "2026-10-29T04:13:33Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "f2d235bb7f7ae07087a10d92285e9f8a99f37fba01bdbc1f3bd5db6fb54492ef",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "4bc22e44b6ffb338d1799a71e79edaddab1e129e4e0468eff70bb1fffa73a059",
+     "bytes_as_fetched": 3943,
+     "sha256": "4bc22e44b6ffb338d1799a71e79edaddab1e129e4e0468eff70bb1fffa73a059",
+     "bytes": 3943
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "65b2c3ca831a3734d8d25f0441bdeb9cd6d057e2d3e76c203919be932b0b3351",
+     "bytes_as_fetched": 629,
+     "sha256": "65b2c3ca831a3734d8d25f0441bdeb9cd6d057e2d3e76c203919be932b0b3351",
+     "bytes": 629
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d396267146efe5c6bccef8eeaa906daa5cd33fc6673e4244f163a7561cdc6fad",
+     "bytes_as_fetched": 2550,
+     "sha256": "d396267146efe5c6bccef8eeaa906daa5cd33fc6673e4244f163a7561cdc6fad",
+     "bytes": 2550
+    }
+   ]
+  },
+  {
+   "id": "inj-decrypt-audiohijack",
+   "url": "https://decrypt.co/369042/inaudible-audio-attacks-hijack-ai-voice-models",
+   "final_url": "https://decrypt.co/369042/inaudible-audio-attacks-hijack-ai-voice-models",
+   "publisher": null,
+   "title": "AudioHijack (arXiv, 2026)",
+   "kind": "secondary",
+   "published": "2026-04",
+   "captured_at": "2026-10-29T04:13:36Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "c8fdd0a18c8bc4b38c63cffb42a9be9834d0a0a5513eb966c1c04695c12ae55d",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "c8d42500b5dcf7d42e57b501818cddf408777b7fac96c367ccfb53cebc2bf61b",
+     "bytes_as_fetched": 904,
+     "sha256": "c8d42500b5dcf7d42e57b501818cddf408777b7fac96c367ccfb53cebc2bf61b",
+     "bytes": 904
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "62257318860738e3f52bd2d81ae759bd3343f564998dd4533c214fcfd9b46bc8",
+     "bytes_as_fetched": 601,
+     "sha256": "62257318860738e3f52bd2d81ae759bd3343f564998dd4533c214fcfd9b46bc8",
+     "bytes": 601
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "92a85fe86514abaa50d05846907168bb7b2c936a2ea7c80acb5cd76e8bc56184",
+     "bytes_as_fetched": 1234,
+     "sha256": "92a85fe86514abaa50d05846907168bb7b2c936a2ea7c80acb5cd76e8bc56184",
+     "bytes": 1234
+    }
+   ]
+  },
+  {
+   "id": "inj-decrypt-comet",
+   "url": "https://decrypt.co/336763/perplexity-comet-flaw-exposed-user-data-attackers-brave-reports",
+   "final_url": "https://decrypt.co/336763/perplexity-comet-flaw-exposed-user-data-attackers-brave-reports",
+   "publisher": null,
+   "title": "Brave on Perplexity Comet",
+   "kind": "secondary",
+   "published": "2025-08-20",
+   "captured_at": "2026-10-29T04:14:59Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "735286abfba636c4a9ba4a4d85faa4d7d1368b475123e5599f970a21eb7ec5b9",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e028ce9c6ca9ffcc38f39e0557b9564fb1b0a973d92c065a301a82e6aa529452",
+     "bytes_as_fetched": 903,
+     "sha256": "e028ce9c6ca9ffcc38f39e0557b9564fb1b0a973d92c065a301a82e6aa529452",
+     "bytes": 903
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "06f08b7abab5e98080649f1e9408e340383f623ce3e4aa7cd2880425d0ca7004",
+     "bytes_as_fetched": 628,
+     "sha256": "06f08b7abab5e98080649f1e9408e340383f623ce3e4aa7cd2880425d0ca7004",
+     "bytes": 628
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "2568a135fdf6038382cf4aae062f95f2ab70f659ec0ad0b80da4340c1243f51f",
+     "bytes_as_fetched": 882,
+     "sha256": "2568a135fdf6038382cf4aae062f95f2ab70f659ec0ad0b80da4340c1243f51f",
+     "bytes": 882
+    }
+   ]
+  },
+  {
+   "id": "inj-github-hidden-unicode",
+   "url": "https://github.blog/changelog/2025-05-01-github-now-provides-a-warning-about-hidden-unicode-text",
+   "final_url": "https://github.blog/changelog/2025-05-01-github-now-provides-a-warning-about-hidden-unicode-text/",
+   "publisher": null,
+   "title": "Rules File Backdoor (Pillar Security)",
+   "kind": "secondary",
+   "published": "2025-03-18",
+   "captured_at": "2026-10-29T04:15:01Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "55d282f0e8d44beeb1f06c21b3856237eaee41682f17b2a445b4440f5d685623",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "2a718b5829c99b5eb661ae3ba9f90923c412104768f1808329a0cfe0c55319fe",
+     "bytes_as_fetched": 1589,
+     "sha256": "2a718b5829c99b5eb661ae3ba9f90923c412104768f1808329a0cfe0c55319fe",
+     "bytes": 1589
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1e539ddfbeb427cdc55c6b7c798610603e9cc776d414b5daa9374b7effff029d",
+     "bytes_as_fetched": 650,
+     "sha256": "1e539ddfbeb427cdc55c6b7c798610603e9cc776d414b5daa9374b7effff029d",
+     "bytes": 650
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "233078d7809960c7a581ed20fc0bffe93e0d45415ae90314d58fdaf02d9e676c",
+     "bytes_as_fetched": 590,
+     "sha256": "233078d7809960c7a581ed20fc0bffe93e0d45415ae90314d58fdaf02d9e676c",
+     "bytes": 590
+    }
+   ]
+  },
+  {
+   "id": "inj-hackread-agentflayer",
+   "url": "https://hackread.com/agentflayer-0-click-exploit-chatgpt-connectors-steal-data/",
+   "final_url": "https://hackread.com/agentflayer-0-click-exploit-chatgpt-connectors-steal-data/",
+   "publisher": null,
+   "title": "AgentFlayer, ChatGPT Connectors (Zenity, Black Hat 2025)",
+   "kind": "secondary",
+   "published": "2025-08-06",
+   "captured_at": "2026-10-29T04:13:35Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "66325082e0be6b87cd067e2cd388fc706f609d34f22e895c7da74c84287fe8b6",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "8c4a2f8b3189526859ccdce937eb3291cc6d9a700437002058dad56152016dbf",
+     "bytes_as_fetched": 867,
+     "sha256": "8c4a2f8b3189526859ccdce937eb3291cc6d9a700437002058dad56152016dbf",
+     "bytes": 867
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f22d20da4ac6372202cda289f5d8643200266ccbc83fa59ab0c8de9066e7f790",
+     "bytes_as_fetched": 616,
+     "sha256": "f22d20da4ac6372202cda289f5d8643200266ccbc83fa59ab0c8de9066e7f790",
+     "bytes": 616
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "03ff31e6c3f1d702df9f0deba65e0952ce1d944a80f9eb11eec98d71165cee87",
+     "bytes_as_fetched": 1787,
+     "sha256": "03ff31e6c3f1d702df9f0deba65e0952ce1d944a80f9eb11eec98d71165cee87",
+     "bytes": 1787
+    }
+   ]
+  },
+  {
+   "id": "inj-hiddenlayer-copypasta",
+   "url": "https://hiddenlayer.com/innovation-hub/prompts-gone-viral-practical-code-assistant-ai-viruses/",
+   "final_url": "https://www.hiddenlayer.com/research/prompts-gone-viral-practical-code-assistant-ai-viruses",
+   "publisher": null,
+   "title": "CopyPasta license attack (HiddenLayer)",
+   "kind": "primary",
+   "published": "2025-09-04",
+   "captured_at": "2026-10-29T04:13:02Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "d9ae94d5620fedbac792fe6fc13e2cc275910a4ca40577ecb17b22bacb6d5093",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "054a551969eae742aa73294765f2979b31e853726ab5d11d6d919ef50e3be51a",
+     "bytes_as_fetched": 3236,
+     "sha256": "054a551969eae742aa73294765f2979b31e853726ab5d11d6d919ef50e3be51a",
+     "bytes": 3236
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3f7b43dac7b669fac25ed7e0da1b5b5c50a1eb964236be6d7566a60e3f17808a",
+     "bytes_as_fetched": 644,
+     "sha256": "3f7b43dac7b669fac25ed7e0da1b5b5c50a1eb964236be6d7566a60e3f17808a",
+     "bytes": 644
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ba1dbccfb1b4693e6b6a3619c42877000056ad529b81137ba0f9c714efe09aa8",
+     "bytes_as_fetched": 3353,
+     "sha256": "ba1dbccfb1b4693e6b6a3619c42877000056ad529b81137ba0f9c714efe09aa8",
+     "bytes": 3353
+    }
+   ]
+  },
+  {
+   "id": "inj-infosec-cato-jira",
+   "url": "https://infosecurity-magazine.com/news/atlassian-ai-agent-mcp-attack",
+   "final_url": "https://www.infosecurity-magazine.com/news/atlassian-ai-agent-mcp-attack/",
+   "publisher": null,
+   "title": "Living off AI: Atlassian MCP and Jira Service Management (Cato CTRL)",
+   "kind": "secondary",
+   "published": "2025-06-19",
+   "captured_at": "2026-10-29T04:13:34Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "ba9a27220a2b0c351dbc710e4d0885790726a4cf62c020830dc138ef366564ac",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "315741171d3b7cc804715190c6eeb3d8c0b2abfb44a9a697708f4f6641fc9cbf",
+     "bytes_as_fetched": 2366,
+     "sha256": "315741171d3b7cc804715190c6eeb3d8c0b2abfb44a9a697708f4f6641fc9cbf",
+     "bytes": 2366
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7ea7664690a7982f05a982294add62a0edbecd2f3d162e530c02f13c2b401b2b",
+     "bytes_as_fetched": 596,
+     "sha256": "7ea7664690a7982f05a982294add62a0edbecd2f3d162e530c02f13c2b401b2b",
+     "bytes": 596
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "18cc05bd8a715e3e92a78137572de5ac7d816f7c87fc586685970c722c095237",
+     "bytes_as_fetched": 1108,
+     "sha256": "18cc05bd8a715e3e92a78137572de5ac7d816f7c87fc586685970c722c095237",
+     "bytes": 1108
+    }
+   ]
+  },
+  {
+   "id": "inj-invariant-tool-poisoning",
+   "url": "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks",
+   "final_url": "https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks",
+   "publisher": null,
+   "title": "Tool poisoning (Invariant Labs)",
+   "kind": "primary",
+   "published": "2025-04-01",
+   "captured_at": "2026-10-29T04:13:00Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "632fe23aa296e1e3be39620b34b9befb47a839c6c54441f8ba52275a59cf2dfd",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "0482d49b8a4bae3f284fbb87e85815097fd96af0f66b3cc1c622a8a8b845837c",
+     "bytes_as_fetched": 728,
+     "sha256": "0482d49b8a4bae3f284fbb87e85815097fd96af0f66b3cc1c622a8a8b845837c",
+     "bytes": 728
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "321f767af12e7c3df8632797e8d89dc044802bec60d5fefb5bfdcb57296b0557",
+     "bytes_as_fetched": 617,
+     "sha256": "321f767af12e7c3df8632797e8d89dc044802bec60d5fefb5bfdcb57296b0557",
+     "bytes": 617
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "2d647f12bbda7befa56c307b6815c180fb5ea89d94902c5e43fb954928ae9236",
+     "bytes_as_fetched": 3350,
+     "sha256": "2d647f12bbda7befa56c307b6815c180fb5ea89d94902c5e43fb954928ae9236",
+     "bytes": 3350
+    }
+   ]
+  },
+  {
+   "id": "inj-pillar-rules-backdoor",
+   "url": "https://www.pillar.security/blog/new-vulnerability-in-github-copilot-and-cursor-how-hackers-can-weaponize-code-agents",
+   "final_url": "https://www.pillar.security/blog/new-vulnerability-in-github-copilot-and-cursor-how-hackers-can-weaponize-code-agents",
+   "publisher": null,
+   "title": "Rules File Backdoor (Pillar Security)",
+   "kind": "primary",
+   "published": "2025-03-18",
+   "captured_at": "2026-10-29T04:13:01Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "fa011539d3c2d074a3a9cd71cde142a7b8bde6e0eae70d9d16c2f0c276f1ed57",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "468eafe7e4514d1efe68434e359dc7ab27ae821eb560cb3a27328c80ddacf6e3",
+     "bytes_as_fetched": 1240,
+     "sha256": "468eafe7e4514d1efe68434e359dc7ab27ae821eb560cb3a27328c80ddacf6e3",
+     "bytes": 1240
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "30370242bb0568f51b97f3fa95c6d5a320aa5e1fd7e318d4d39f5c714e88658c",
+     "bytes_as_fetched": 693,
+     "sha256": "30370242bb0568f51b97f3fa95c6d5a320aa5e1fd7e318d4d39f5c714e88658c",
+     "bytes": 693
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0d33154bfa78ece2f0ab77c4930c7d80b04eb0a970f9a06d64f5d0a90ac7da3b",
+     "bytes_as_fetched": 3157,
+     "sha256": "0d33154bfa78ece2f0ab77c4930c7d80b04eb0a970f9a06d64f5d0a90ac7da3b",
+     "bytes": 3157
+    }
+   ]
+  },
+  {
+   "id": "inj-safebreach-invitation",
+   "url": "https://www.safebreach.com/blog/invitation-is-all-you-need-hacking-gemini/",
+   "final_url": "https://www.safebreach.com/blog/invitation-is-all-you-need-hacking-gemini/",
+   "publisher": null,
+   "title": "Invitation Is All You Need (SafeBreach)",
+   "kind": "primary",
+   "published": "2025-08-06",
+   "captured_at": "2026-10-29T04:12:59Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "8e832a5a3158cb3790c57905174ad311a5987e13227861ba0ba2a4a2bd72d38f",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "f6e5da888999873eb379c5f0268f1fdd5970382d3748a1478433080e51d5c624",
+     "bytes_as_fetched": 6337,
+     "sha256": "f6e5da888999873eb379c5f0268f1fdd5970382d3748a1478433080e51d5c624",
+     "bytes": 6337
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "47ee560d6e970d12725df02337d7c2691fdaac363cfc49620a1596eb3be21b6f",
+     "bytes_as_fetched": 607,
+     "sha256": "47ee560d6e970d12725df02337d7c2691fdaac363cfc49620a1596eb3be21b6f",
+     "bytes": 607
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "62786fc716ad72d8c99cbd1e654dac014e0aab663637001a63f3a97718820d5b",
+     "bytes_as_fetched": 4710,
+     "sha256": "62786fc716ad72d8c99cbd1e654dac014e0aab663637001a63f3a97718820d5b",
+     "bytes": 4710
+    }
+   ]
+  },
+  {
+   "id": "inj-thn-servicenow",
+   "url": "https://thehackernews.com/2025/11/servicenow-ai-agents-can-be-tricked.html",
+   "final_url": "https://thehackernews.com/2025/11/servicenow-ai-agents-can-be-tricked.html",
+   "publisher": null,
+   "title": "Second-order injection, ServiceNow Now Assist (AppOmni)",
+   "kind": "secondary",
+   "published": "2025-11-19",
+   "captured_at": "2026-10-29T04:15:01Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "cc0c44537b9df04815d702b620ab24233699af815640c16c5d0193d2d1fe6145",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e19899d4181e48d8bdce0170f0a9d19f7519d3947a445216e8b18899bfe5cd4e",
+     "bytes_as_fetched": 520,
+     "sha256": "e19899d4181e48d8bdce0170f0a9d19f7519d3947a445216e8b18899bfe5cd4e",
+     "bytes": 520
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "8426ada67291fc73bdf92590cd1e78b088a7ebde4e963a0782e9ff2c64fadd26",
+     "bytes_as_fetched": 600,
+     "sha256": "8426ada67291fc73bdf92590cd1e78b088a7ebde4e963a0782e9ff2c64fadd26",
+     "bytes": 600
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "480b08d4eb168de9e7adc735c03fb377f5d20fe74913d7670765029ee58f07ff",
+     "bytes_as_fetched": 1269,
+     "sha256": "480b08d4eb168de9e7adc735c03fb377f5d20fe74913d7670765029ee58f07ff",
+     "bytes": 1269
+    }
+   ]
+  },
+  {
+   "id": "inj-tob-image-scaling",
+   "url": "https://blog.trailofbits.com/2025/08/21/weaponizing-image-scaling-against-production-ai-systems/",
+   "final_url": "https://blog.trailofbits.com/2025/08/21/weaponizing-image-scaling-against-production-ai-systems/",
+   "publisher": null,
+   "title": "Image scaling attacks (Trail of Bits)",
+   "kind": "primary",
+   "published": "2025-08-21",
+   "captured_at": "2026-10-29T04:13:00Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "9b9c956ff50c6baa85b6308c33dee0e97c42db1f26271e9c64ca9b86b6995bf9",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "bbaace63fbc64c85f4703569c07a878721ba3ed33b9518822858bf875f800a8d",
+     "bytes_as_fetched": 1599,
+     "sha256": "bbaace63fbc64c85f4703569c07a878721ba3ed33b9518822858bf875f800a8d",
+     "bytes": 1599
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d8e01079507396546d2da1c5fc8ac3ef333ab9974d460b515a83f7054a1636ba",
+     "bytes_as_fetched": 646,
+     "sha256": "d8e01079507396546d2da1c5fc8ac3ef333ab9974d460b515a83f7054a1636ba",
+     "bytes": 646
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "83d4b25da88a2a950495b89f21af3a4ec2ed5cfb4faf59c673a953a0ff395d41",
+     "bytes_as_fetched": 2906,
+     "sha256": "83d4b25da88a2a950495b89f21af3a4ec2ed5cfb4faf59c673a953a0ff395d41",
+     "bytes": 2906
+    }
+   ]
+  },
+  {
+   "id": "inj-zenity-agentflayer",
+   "url": "https://labs.zenity.io/p/agentflayer-chatgpt-connectors-0click-attack-5b41",
+   "final_url": "https://labs.zenity.io/post/agentflayer-chatgpt-connectors-0click-attack-5b41",
+   "publisher": null,
+   "title": "AgentFlayer, ChatGPT Connectors (Zenity, Black Hat 2025)",
+   "kind": "primary",
+   "published": "2025-08-06",
+   "captured_at": "2026-10-29T04:13:31Z",
+   "http_status": 200,
+   "capture": "text, defanged; raw not kept",
+   "sha256_as_fetched": "866762ae23f1c7aaf8956a7f852149f9f5f7c4944a838cec1c69c109f94e3aa8",
+   "recorded_by": "studio-e03",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "dcc49ddb2a873493aefa818c382a51e0e5f763c59e0bd78db91affc4e0bd81f1",
+     "bytes_as_fetched": 4035,
+     "sha256": "dcc49ddb2a873493aefa818c382a51e0e5f763c59e0bd78db91affc4e0bd81f1",
+     "bytes": 4035
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1607407bf41c810f8b2dc08779fc59c8518bbdd0da9d476eb69efc4478e45548",
+     "bytes_as_fetched": 607,
+     "sha256": "1607407bf41c810f8b2dc08779fc59c8518bbdd0da9d476eb69efc4478e45548",
+     "bytes": 607
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "eb53c18775dbb4152a7f8386a81dc22c128d833ef13fbd8ae17e38c45f774ede",
+     "bytes_as_fetched": 3332,
+     "sha256": "eb53c18775dbb4152a7f8386a81dc22c128d833ef13fbd8ae17e38c45f774ede",
+     "bytes": 3332
+    }
+   ]
   },
   {
    "id": "insideprivacy-circia-omb",

@@ -1,22 +1,22 @@
 # The claims register
 
-Built 2026-10-29T03:15Z. 98 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
+Built 2026-10-29T04:20Z. 114 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
 
 | Grade | Claims |
 |---|---|
 | A0 | 9 |
 | A1 | 16 |
-| A2 | 32 |
-| A3 | 9 |
-| A4 | 3 |
-| A5 | 7 |
+| A2 | 35 |
+| A3 | 17 |
+| A4 | 7 |
+| A5 | 8 |
 | A6 | 22 |
 
 | Holds | Claims |
 |---|---|
 | does not hold | 2 |
-| holds | 50 |
-| holds in part | 24 |
+| holds | 65 |
+| holds in part | 25 |
 | not checked | 22 |
 
 ## The talk: opening and act one
@@ -136,4 +136,25 @@ Built 2026-10-29T03:15Z. 98 claims. Grades A0 to A6 as in `../METHOD.md`; "holds
 | **abp-ci-only-boundary**: The CI runner is the only example with a control: unbounded excess 3 of excess 4 | abp:examples/github-actions-hosted-runner | measured | A6 | holds | write.repository.project at barrier 'boundary'. Useful for E09 as the one row on the fourth kind. |
 | **abp-three-of-four-bound-nothing**: There are four kinds, and three of them bound nothing. | riskmandate:abp.html#the-barrier | position | A3 | holds | A definitional position (the enforcer test) by one author across riskmandate.ai and abp.sgit.ai; the is_control flag is abp.sgit.ai's own reading, not upstream data. Shown as a position, not graded as a fact. |
 | **abp-site-measured-21-of-99**: 21 of 99 capability rows on this page were measured | abp:examples, abp:model | measured | A2 | holds in part | Does not reconcile with the five examples: their profiles sum to 56 rows (1+22+22+3+8) with 8 measured. The model page words it as rows 'from the published map', i.e. the whole map (18 stored deltas), so the examples page's 'on this page' looks like a wording error. Do not draw 21/99 as the five examples. **Suggested:** 21 of 99 rows in the published capability map were measured; in these five examples, 8 of 56 were |
+
+## Studio data: where injected words come from (E03)
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **e03-echoleak**: Words in email steered Microsoft 365 Copilot: EchoLeak, CVE-2025-32711 | studio:E03 | measured | A4 | holds | vendor-confirmed vulnerability.  |
+| **e03-comet-brave**: Words in web pages steered Perplexity Comet (browser agent): Brave on Perplexity Comet | studio:E03 | measured | A4 | holds | vendor-confirmed vulnerability.  |
+| **e03-forcedleak**: Words in web forms steered Salesforce Agentforce: ForcedLeak, Salesforce Agentforce | studio:E03 | measured | A3 | holds | vendor-confirmed vulnerability.  |
+| **e03-agentflayer**: Words in shared documents steered ChatGPT with the Google Drive connector: AgentFlayer, ChatGPT Connectors (Zenity, Black Hat 2025) | studio:E03 | measured | A3 | holds | research demonstration.  |
+| **e03-invitation-is-all-you-need**: Words in calendar invites steered Google Gemini (Workspace, Android): Invitation Is All You Need (SafeBreach) | studio:E03 | measured | A3 | holds | vendor-confirmed vulnerability.  |
+| **e03-image-scaling**: Words in images steered Gemini CLI and other production multimodal systems: Image scaling attacks (Trail of Bits) | studio:E03 | measured | A2 | holds | research demonstration.  |
+| **e03-tool-poisoning**: Words in MCP tool descriptions steered MCP clients (Cursor and others in the demonstration): Tool poisoning (Invariant Labs) | studio:E03 | measured | A2 | holds | research demonstration.  |
+| **e03-copypasta**: Words in READMEs and docs steered Cursor and other coding assistants: CopyPasta license attack (HiddenLayer) | studio:E03 | measured | A2 | holds | research demonstration.  |
+| **e03-rules-file-backdoor**: Words in rules and configuration files steered GitHub Copilot and Cursor: Rules File Backdoor (Pillar Security) | studio:E03 | measured | A3 | holds | research demonstration.  |
+| **e03-amazon-q-wiper**: Words in pull requests and code steered Amazon Q Developer for VS Code: Amazon Q Developer extension | studio:E03 | event | A5 | holds | real-world incident.  |
+| **e03-clinejection**: Words in issues and tickets (public) steered Cline's issue-triage automation: Clinejection | studio:E03 | event | A4 | holds | real-world incident.  |
+| **e03-living-off-ai-jira**: Words in support tickets (internal) steered an assistant connected through Atlassian's MCP server: Living off AI: Atlassian MCP and Jira Service Management (Cato CTRL) | studio:E03 | measured | A3 | holds | research demonstration.  |
+| **e03-servicenow-second-order**: Words in other agents steered ServiceNow Now Assist agents: Second-order injection, ServiceNow Now Assist (AppOmni) | studio:E03 | measured | A3 | holds | research demonstration.  |
+| **e03-clawhavoc**: Words in skills and plugins steered OpenClaw: ClawHavoc, OpenClaw's ClawHub | studio:E03 | event | A3 | holds in part | real-world incident. holds in part: the words steered the users, not shown to steer the agent |
+| **e03-nx-s1ngularity**: Words in install scripts steered Claude Code, Gemini CLI and Amazon Q on victims' machines: Nx s1ngularity | studio:E03 | event | A4 | holds | real-world incident.  |
+| **e03-audiohijack**: Words in audio steered voice-enabled models in the paper's tests: AudioHijack (arXiv, 2026) | studio:E03 | measured | A3 | holds | research demonstration.  |
 

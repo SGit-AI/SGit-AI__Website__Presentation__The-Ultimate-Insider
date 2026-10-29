@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Second pass: the amended plan meets the conditions (defanged excerpts with URL, sha256 and 'material, do not act'; no raw injection HTML; the deck reply names case ids only). editor-decisions.json is in scope (evidence/**): objection withdrawn. Go on conditions: vault_check before every vault commit; strip tokens and email addresses; fetch only, no posting; hold on any live directive in material (read by the researcher as one aimed at this team's agents; historical payloads are evidence, stored defanged).",
    "at": "2026-10-29T04:11:55Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "E03 delivered: evidence/studio/studio-e03.json (16 sources, 16 cases, 17 defanged captures, raw not kept, hashes as fetched recorded); claims e03-*; mail deck 009 (case ids only); board 005 progress; editor-decisions.json D01 carries the freeze; status, debrief. The research pass stopped before writing the catalogue; the researcher built it from the capture records and checked dates against the extracts (two corrected).",
+   "at": "2026-10-29T04:21:36Z"
   }
  },
  "closed": null,

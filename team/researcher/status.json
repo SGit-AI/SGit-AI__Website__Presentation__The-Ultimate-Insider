@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 5,
-  "state": "the editor's decisions deck started and handed to the conductor; studio data slice 1 delivered to deck; token-shaped values redacted from the vault's captures",
+  "round": 6,
+  "state": "wake 04:09: studio data slice 2 (E03, where injected words come from: sixteen sources, payloads defanged) delivered to deck; the editor's register carries the deck freeze",
   "done": [
     {
       "what": "Session key made and published",
@@ -64,11 +64,15 @@
     {
       "what": "Token-shaped values found in captured public pages, redacted; three were in the 02:22 push",
       "evidence": "evidence/sources/manifest.json (redacted counts)"
+    },
+    {
+      "what": "Studio data slice 2 (E03): sixteen sources an agent consumes, one graded public case each, payloads never quoted",
+      "evidence": "evidence/studio/studio-e03.json; mail deck 009"
     }
   ],
   "next": [
     {
-      "what": "Studio data slice 2 (E03): where injected words come from, one graded case per source",
+      "what": "Studio data slice 3 (E04): the over-enthusiastic agent, each benign case as asked, stood in the way, did, lost",
       "why": "deck's request, issue 005"
     },
     {

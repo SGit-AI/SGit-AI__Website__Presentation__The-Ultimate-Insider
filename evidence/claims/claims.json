@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T03:15Z",
- "count": 98,
+ "built": "2026-10-29T04:20Z",
+ "count": 114,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1713,7 +1713,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T03:15Z"
+   "adjudicated": "researcher, 2026-10-29T04:20Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -2682,6 +2682,376 @@
    "note": "Does not reconcile with the five examples: their profiles sum to 56 rows (1+22+22+3+8) with 8 measured. The model page words it as rows 'from the published map', i.e. the whole map (18 stored deltas), so the examples page's 'on this page' looks like a wording error. Do not draw 21/99 as the five examples.",
    "suggested_wording": "21 of 99 rows in the published capability map were measured; in these five examples, 8 of 56 were",
    "register": "studio-e02-e09"
+  },
+  {
+   "id": "e03-echoleak",
+   "text": "Words in email steered Microsoft 365 Copilot: EchoLeak, CVE-2025-32711",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "msrc-cve-2025-32711-api",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "hackthebox-echoleak",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-comet-brave",
+   "text": "Words in web pages steered Perplexity Comet (browser agent): Brave on Perplexity Comet",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-brave-comet",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-decrypt-comet",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-forcedleak",
+   "text": "Words in web forms steered Salesforce Agentforce: ForcedLeak, Salesforce Agentforce",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "forcedleak-agentforce",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-agentflayer",
+   "text": "Words in shared documents steered ChatGPT with the Google Drive connector: AgentFlayer, ChatGPT Connectors (Zenity, Black Hat 2025)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-zenity-agentflayer",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-hackread-agentflayer",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-invitation-is-all-you-need",
+   "text": "Words in calendar invites steered Google Gemini (Workspace, Android): Invitation Is All You Need (SafeBreach)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-safebreach-invitation",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-bitdefender-calendar",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "vendor-confirmed vulnerability. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-image-scaling",
+   "text": "Words in images steered Gemini CLI and other production multimodal systems: Image scaling attacks (Trail of Bits)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-tob-image-scaling",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-tool-poisoning",
+   "text": "Words in MCP tool descriptions steered MCP clients (Cursor and others in the demonstration): Tool poisoning (Invariant Labs)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-invariant-tool-poisoning",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-copypasta",
+   "text": "Words in READMEs and docs steered Cursor and other coding assistants: CopyPasta license attack (HiddenLayer)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-hiddenlayer-copypasta",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-rules-file-backdoor",
+   "text": "Words in rules and configuration files steered GitHub Copilot and Cursor: Rules File Backdoor (Pillar Security)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-pillar-rules-backdoor",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-github-hidden-unicode",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-amazon-q-wiper",
+   "text": "Words in pull requests and code steered Amazon Q Developer for VS Code: Amazon Q Developer extension",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "aws-bulletin-2025-015",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "404media-amazon-q",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "nvd-cve-2025-8217",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "real-world incident. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-clinejection",
+   "text": "Words in issues and tickets (public) steered Cline's issue-triage automation: Clinejection",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "clinejection",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "real-world incident. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-living-off-ai-jira",
+   "text": "Words in support tickets (internal) steered an assistant connected through Atlassian's MCP server: Living off AI: Atlassian MCP and Jira Service Management (Cato CTRL)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-cato-jira-living-off-ai",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-infosec-cato-jira",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-servicenow-second-order",
+   "text": "Words in other agents steered ServiceNow Now Assist agents: Second-order injection, ServiceNow Now Assist (AppOmni)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-appomni-servicenow",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-thn-servicenow",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-clawhavoc",
+   "text": "Words in skills and plugins steered OpenClaw: ClawHavoc, OpenClaw's ClawHub",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "clawhub-clawhavoc",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "real-world incident. holds in part: the words steered the users, not shown to steer the agent",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-nx-s1ngularity",
+   "text": "Words in install scripts steered Claude Code, Gemini CLI and Amazon Q on victims' machines: Nx s1ngularity",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "nx-s1ngularity-ai-cli",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "real-world incident. ",
+   "register": "studio-e03"
+  },
+  {
+   "id": "e03-audiohijack",
+   "text": "Words in audio steered voice-enabled models in the paper's tests: AudioHijack (arXiv, 2026)",
+   "where": [
+    "studio:E03"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "inj-arxiv-audiohijack",
+     "quote": "",
+     "supports": "for"
+    },
+    {
+     "source_id": "inj-decrypt-audiohijack",
+     "quote": "",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "research demonstration. ",
+   "register": "studio-e03"
   }
  ]
 }

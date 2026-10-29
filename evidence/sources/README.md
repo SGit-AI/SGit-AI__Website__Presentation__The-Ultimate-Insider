@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T03:15Z. 344 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T04:20Z. 361 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -168,6 +168,23 @@ Built 2026-10-29T03:15Z. 344 sources; `manifest.json` has every file's SHA-256. 
 | [incident-shadowleak-thn](https://thehackernews.com/2025/09/shadowleak-zero-click-flaw-leaks-gmail.html) | The Hacker News | news | 2026-10-29T01:52:00Z | 200 | full | 4 |
 | [incident-vercel-context-bulletin](https://vercel.com/kb/bulletin/vercel-april-2026-security-incident) | Vercel | primary | 2026-10-29T01:52:00Z | 200 | full | 4 |
 | [incident-vercel-context-register](https://www.theregister.com/security/2026/04/20/nextjs-developer-vercel-warns-customer-creds-compromised/5229462) | The Register | news | 2026-10-29T01:52:00Z | 200 | full | 4 |
+| [inj-appomni-servicenow](https://appomni.com/ao-labs/ai-agent-to-agent-discovery-prompt-injection/) |  | primary | 2026-10-29T04:13:01Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-arxiv-audiohijack](https://arxiv.org/abs/2604.14604) |  | primary | 2026-10-29T04:13:33Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-bitdefender-calendar](https://www.bitdefender.com/en-us/blog/hotforsecurity/gemini-ai-compromised-through-malicious-calendar-invites-researchers-warn) |  | secondary | 2026-10-29T04:14:59Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-brave-comet](https://brave.com/blog/comet-prompt-injection/) |  | primary | 2026-10-29T04:12:58Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-cato-jira-living-off-ai](https://www.catonetworks.com/blog/cato-ctrl-poc-attack-targeting-atlassians-mcp/?x=1) |  | primary | 2026-10-29T04:13:33Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-decrypt-audiohijack](https://decrypt.co/369042/inaudible-audio-attacks-hijack-ai-voice-models) |  | secondary | 2026-10-29T04:13:36Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-decrypt-comet](https://decrypt.co/336763/perplexity-comet-flaw-exposed-user-data-attackers-brave-reports) |  | secondary | 2026-10-29T04:14:59Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-github-hidden-unicode](https://github.blog/changelog/2025-05-01-github-now-provides-a-warning-about-hidden-unicode-text/) |  | secondary | 2026-10-29T04:15:01Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-hackread-agentflayer](https://hackread.com/agentflayer-0-click-exploit-chatgpt-connectors-steal-data/) |  | secondary | 2026-10-29T04:13:35Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-hiddenlayer-copypasta](https://www.hiddenlayer.com/research/prompts-gone-viral-practical-code-assistant-ai-viruses) |  | primary | 2026-10-29T04:13:02Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-infosec-cato-jira](https://www.infosecurity-magazine.com/news/atlassian-ai-agent-mcp-attack/) |  | secondary | 2026-10-29T04:13:34Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-invariant-tool-poisoning](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) |  | primary | 2026-10-29T04:13:00Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-pillar-rules-backdoor](https://www.pillar.security/blog/new-vulnerability-in-github-copilot-and-cursor-how-hackers-can-weaponize-code-agents) |  | primary | 2026-10-29T04:13:01Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-safebreach-invitation](https://www.safebreach.com/blog/invitation-is-all-you-need-hacking-gemini/) |  | primary | 2026-10-29T04:12:59Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-thn-servicenow](https://thehackernews.com/2025/11/servicenow-ai-agents-can-be-tricked.html) |  | secondary | 2026-10-29T04:15:01Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-tob-image-scaling](https://blog.trailofbits.com/2025/08/21/weaponizing-image-scaling-against-production-ai-systems/) |  | primary | 2026-10-29T04:13:00Z | 200 | text, defanged; raw not kept | 3 |
+| [inj-zenity-agentflayer](https://labs.zenity.io/post/agentflayer-chatgpt-connectors-0click-attack-5b41) |  | primary | 2026-10-29T04:13:31Z | 200 | text, defanged; raw not kept | 3 |
 | [insideprivacy-circia-omb](https://www.insideprivacy.com/critical-infrastructure/cisa-submits-final-circia-rule-for-omb-review/) | Covington, Inside Privacy | secondary | 2026-10-29T01:51:15Z | 200 | full | 3 |
 | [keys-openpgp-about](https://keys.openpgp.org/about/) | keys.openpgp.org | primary | 2026-10-29T01:50:51Z | 200 | full | 4 |
 | [krebs-toolshell-2025-07](https://krebsonsecurity.com/2025/07/microsoft-fix-targets-attacks-on-sharepoint-zero-day/) | Krebs on Security | news | 2026-10-29T01:51:16Z | 200 | full | 3 |
