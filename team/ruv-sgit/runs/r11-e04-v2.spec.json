@@ -1,0 +1,30 @@
+{
+ "run": "r11-e04-v2",
+ "purpose": "r11-e04-v2: studio experiment E04 v2, a second pass on r9's vault: the four checked cases as paths through what was meant to stop them, the other seven as tags by tier",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public ruv-sgit/inbox/012-re-e04-reviewed-again-v2.eml)",
+  "date": "2026-10-29",
+  "text": "Keep the content, redo the picture: the still is an eleven-row table at 20 px. 1. On screen, the four checked cases as the main rows; the other seven as tags grouped by tier with counts; the full eleven in the explainer. 2. Each row as a path: the goal, a barrier, the agent going through it, the loss. The barrier breaking is the picture. 3. Evaluations on their own line, apart from deployments. 4. The end line, shorter."
+ },
+ "ending": "keep",
+ "workers": [
+  {
+   "id": "v2",
+   "role": "developer",
+   "task": "E04 v2, driven, from over-enthusiastic.json",
+   "out": "src/static/studio/lab/e04/v2/"
+  },
+  {
+   "id": "explainer",
+   "role": "writer",
+   "task": "the page and explainer updated for v2",
+   "out": "src/pages/ruv-sgit/over-enthusiastic-agent/"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "task": "check v2 and the pages against the review, the data and the studio checklist",
+   "out": "team/ruv-sgit/runs/r11-e04-v2.editor.md"
+  }
+ ]
+}
