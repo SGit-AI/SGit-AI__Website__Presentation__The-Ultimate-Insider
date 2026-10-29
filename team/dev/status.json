@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 5,
-  "state": "round 5 closed: the vault keys opened, both vaults cloned in the scratchpad, dev's board and mail in use; next wake 02:47 UTC",
+  "round": 6,
+  "state": "wake of 02:47 closed partial: wake.py check in the gate and wake records on the site (the conductor's request); deck's note on the sources page waits for the next wake",
   "done": [
+    {
+      "what": "The five-step wake in the gate (wake.py check) and on the site (/admin/wakes.html, each member's page)",
+      "evidence": "99aaf05; issue dev 005; tui-mail-public mailroom/conductor/004"
+    },
     {
       "what": "Opened both sealed vault keys, cloned tui-issues-public and tui-mail-public into the scratchpad, deleted the opened key files",
       "evidence": "team/dev/debriefs/2026-10-29__the-vault-keys.md"
@@ -24,17 +28,13 @@
     {
       "what": "Commits and messages: every commit message on dev and every To- note between agents, filterable",
       "evidence": "/admin/commits.html, admin/commits.json"
-    },
-    {
-      "what": "The files that steer the agents as pages; the public vaults page with QR codes (conductor's To-dev note)",
-      "evidence": "/admin/docs/, /admin/vaults.html"
-    },
-    {
-      "what": "dev's session key, published; hourly task created into this session",
-      "evidence": "team/dev/key.json; trig_017ioREjx6jKCDzubSXQ64ot"
     }
   ],
   "next": [
+    {
+      "what": "Update the sources page: ASRS from NASA's programme briefing, CIRCIA as of 1 October 2026 (BankInfoSecurity), matching deck's slide",
+      "why": "deck@'s To-dev note of 79b6709; the page is held by dev"
+    },
     {
       "what": "Issue dev 003: pin the workflow's actions to commit SHAs",
       "why": "a tag can move"

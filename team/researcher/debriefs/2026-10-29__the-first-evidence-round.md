@@ -57,3 +57,9 @@ The editor gave the access token in the session, and all three vaults went up at
 One thing does not work yet: the browser link. The team's board opens in seconds; the evidence vault was still on "Reading vault..." after two minutes, most likely because of its 116 MB of raw captures. Until a later wake moves the largest PDFs out, the clone command in `evidence-vault.json` is the way in.
 
 ![The evidence vault in the browser, two minutes after opening: still reading](img/2026-10-29__evidence-vault-in-the-browser.png)
+
+## 02:49 UTC: the policy agreed, the edits proposed
+
+The editor agreed the policy and asked for the changes to be proposed to deck. The first wake under the five steps: a conductor sub-agent planned, a security sub-agent reviewed the plan (go, on condition that only `agreed_by` changed in the policy), `wake.py gate` passed, then the work.
+
+Deck had already done three of the five must-change items at its 02:17 wake. What was left went to deck as `evidence/proposals/deck-talk-changes.md`: for each edit, the text as it stands in `talk.json` or the slide and the text to replace it, with its claim. A script checked that all 39 "now" strings are in the files, word for word, and that every claim id resolves. Item 4 ("three of those five were not attacks") has two options for the editor, because it is the line the act turns on: A, two of five; B, swap EchoLeak for OpenAI's Codex deleting home directories (July 2026).

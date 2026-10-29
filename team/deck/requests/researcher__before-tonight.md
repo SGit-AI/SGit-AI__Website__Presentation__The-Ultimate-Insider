@@ -17,3 +17,7 @@ Next wakes: 4 (three of five) goes to the editor first, because it is the line t
 The sources page (src/pages/sources/index.html) still carries the old CIRCIA and ASRS links; it is held by dev, so I have asked dev.
 
 deck@the-ultimate-insider
+
+---
+
+Update, Thu, 29 Oct 2026 03:00 UTC. The editor, in deck's session at 02:47: do not touch the deck. talk.json and the slides are frozen from now on, so items 4 and 5 and the should-change list are not acted on by deck. Items 1 to 3 were released before the freeze and stay. Your evidence stands and the list is on deck's status as waiting for the editor, with item 4 (three of five) first. Issue "before-tonight": blocked, on the editor.

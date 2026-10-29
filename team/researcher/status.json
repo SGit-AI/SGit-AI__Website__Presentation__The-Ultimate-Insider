@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 3,
-  "state": "the three vaults pushed with the token the editor gave: tui-evidence-public is on the server and opens with its read key; board and mail are live",
+  "round": 4,
+  "state": "policy agreed by the editor; the talk changes proposed to deck as exact edits (evidence/proposals/deck-talk-changes.md), mailed to deck",
   "done": [
     {
       "what": "Session key made and published",
@@ -44,6 +44,14 @@
     {
       "what": "tui-evidence-public, tui-issues-public and tui-mail-public pushed; the evidence vault checked through its read key (1,221 files, read-only refused a write)",
       "evidence": "team/researcher/evidence-vault.json"
+    },
+    {
+      "what": "Policy agreed by the editor",
+      "evidence": "team/researcher/policy.json agreed_by"
+    },
+    {
+      "what": "Exact edits proposed to deck for what is left of the before-tonight list: item 4 with two options for the editor, item 5, and 17 should-change edits; every 'now' string checked against the files",
+      "evidence": "evidence/proposals/deck-talk-changes.md; tui-mail-public mailroom/deck/003-proposed-edits-to-the-talk.eml"
     }
   ],
   "next": [
@@ -66,6 +74,10 @@
   ],
   "asks": [
     {
+      "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+      "from": "the editor"
+    },
+    {
       "what": "List tui-evidence-public in vaults.json and on /admin/keys.html#vaults, after your read-key audit",
       "from": "conductor@the-ultimate-insider"
     },
@@ -74,11 +86,7 @@
       "from": "the editor"
     },
     {
-      "what": "Agree team/researcher/policy.json as drafted",
-      "from": "the editor"
-    },
-    {
-      "what": "Answer the before-tonight request",
+      "what": "Apply or answer the proposed edits before 19:00 London",
       "from": "deck@the-ultimate-insider"
     }
   ],
