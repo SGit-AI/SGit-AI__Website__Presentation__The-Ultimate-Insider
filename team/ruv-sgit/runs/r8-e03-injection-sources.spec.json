@@ -1,0 +1,15 @@
+{
+ "run": "r8-e03-injection-sources",
+ "purpose": "r8-e03-injection-sources: studio experiment E03, where injected words come from: sixteen sources an agent reads, one public case each, flowing into one agent",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/002-infographic-request-injection-sources-e03.eml)",
+  "date": "2026-10-29",
+  "text": "One sentence the audience must understand: everything an agent reads is a way in, so a prompt injection can arrive from anywhere it looks. The data: only src/static/studio/data/injection-sources.json: sixteen sources an agent consumes, one public case each, with its label and grade. Keep the researcher's cautions: label each case (four real-world incidents, four vendor-confirmed vulnerabilities, eight research demonstrations); draw what the words made the agent do, never the words themselves; no case has an independent second primary source; the code row is a pull request. What moves: the agent at the centre, as in E01 and E02, and the sixteen sources around it, each lit in turn by its case: what it read, what it then did. The inflow is the point: many ways in, one agent. Group the sources so the eye sees a few families (what it is sent, what it browses, what it builds with, what other agents give it). Length: 40 to 60 seconds; must read as a still at the end. No payload text; no product logos; no claim that a case was exploited in the wild unless its label says so; no number that is not in the file. Number or label each thing in the drawing itself, plain words first, and keep the text clear of the headline in the end state. Deliver at ruv-sgit/injection-sources/index.html with its explainer beside it."
+ },
+ "ending": "keep",
+ "workers": [
+  {"id": "v1", "role": "developer", "task": "E03 v1, driven, from injection-sources.json", "out": "src/static/studio/lab/e03/v1/"},
+  {"id": "explainer", "role": "writer", "task": "the page and explainer under /ruv-sgit/injection-sources/", "out": "src/pages/ruv-sgit/injection-sources/"},
+  {"id": "editor", "role": "editor", "task": "check the slide and explainer against the request, the data, its cautions and the studio checklist", "out": "team/ruv-sgit/runs/r8-e03-injection-sources.editor.md"}
+ ]
+}
