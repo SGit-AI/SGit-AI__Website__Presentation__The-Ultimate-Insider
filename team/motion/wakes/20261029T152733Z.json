@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Plan stays inside motion's intended scope (team/motion/**, src/static/motion/**, src/pages/motion/**); no talk.json, slides, studio/lab, ruv-sgit, engine or player. No stop condition, no HOLD. Scheduled task covered by the editor's word in this session. Conditions: commit only public key.json/key.png, private half stays in ~/.sg-send/; never print a key; numbers only from claims.json; nothing in src/pages outside motion/; request to deck only via team/motion/requests/.",
    "at": "2026-10-29T15:28:37Z"
+  },
+  "work": {
+   "by": "motion",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "Items 1 and 2 done in f1cbca0, released to dev: team/motion/ROLE.md, policy.json (proposed), status.json, key.json/key.png/sessions/session_01Kw9UwFirjPUZb7umbBZpZL/, request team/motion/requests/deck__the-building.md; own task trig_01GM4cSLdDMfUPmuZaAhzZTw at :24 London. Item 3 skipped as planned: no deck request for the building yet.",
+   "at": "2026-10-29T15:31:44Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Commit f1cbca0 touches only team/motion/** (10 files); agents.py check 0 outside scope; build+validate clean (194 html); key.json holds only public PEMs and the k1. public key, no private, token or vault-key material; no vaults touched; no cross-member harm.",
+   "at": "2026-10-29T15:31:44Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done (request to deck in f1cbca0, To-deck trailer). Item 2 done in f1cbca0 (ROLE, policy, status, key, session folder, pushed to dev); task trig_01GM4cSLdDMfUPmuZaAhzZTw at :24 in status.json. Item 3 skipped as planned (no deck request yet). Only team/motion/** changed.",
+   "at": "2026-10-29T15:32:07Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:32:08Z",
+ "outcome": "ok"
 }
