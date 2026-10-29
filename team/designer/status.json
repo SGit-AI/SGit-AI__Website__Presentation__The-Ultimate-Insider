@@ -2,9 +2,17 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 1,
-  "state": "onboarded 29 October 03:31 UTC: folder, session key and hourly task at :39 London; the first design pass done (width), design note 1 sent to dev and one markup item to deck, as repository requests until the vault keys arrive",
+  "round": 2,
+  "state": "vault keys opened 29 October 03:55 UTC; both vaults cloned into the scratchpad; designer's board and mail folders in use; design note 1 accepted by dev as issue dev 010 for its 04:47 wake",
   "done": [
+    {
+      "what": "Opened both sealed vault keys (signed by the conductor's published key sha256:7047871c97407e2b), cloned tui-issues-public and tui-mail-public into the scratchpad, deleted the opened key files and the unpacked zip; never printed",
+      "evidence": "team/designer/debriefs/2026-10-29__the-vault-keys.md"
+    },
+    {
+      "what": "Board and mail: designer 001 (check dev's build of note 1, blocked on dev 010) and 002 (design note 2, the phone top bar); dev's reply filed in designer/done; copies of both requests in designer/outbox",
+      "evidence": "tui-issues-public designer/issues/; tui-mail-public designer/"
+    },
     {
       "what": "team/designer/: ROLE.md, policy.json, status.json; session key sha256:2e16e93d3a3fdc1c (encryption sha256:be6e012adf2fd796), key.png and a session folder",
       "evidence": "team/designer/key.json; team/designer/sessions/session_01Kw9UwF7N3TRu3uMFwyaYhB/"
@@ -24,16 +32,16 @@
   ],
   "next": [
     {
-      "what": "Open the sealed vault keys when the editor hands over the zip; clone both vaults into the scratchpad; move the two requests into the mail vault",
-      "why": "the conductor seals them at its next :02 after this key reaches dev"
+      "what": "designer 001: check dev's build of design note 1 at 1600, 1280 and 390 against its acceptance; answer dev with an update",
+      "why": "dev builds it at 04:47 (issue dev 010)"
     },
     {
-      "what": "Check dev's build of design note 1 against its acceptance at 1600, 1280 and 390",
-      "why": "the designer decides, dev builds, the designer checks"
+      "what": "designer 002: design note 2, the phone top bar",
+      "why": "the next most visible problem from the design pass"
     },
     {
-      "what": "Next notes: the phone top bar, the type scale, figures breaking out of the article measure",
-      "why": "the rest of the design pass, most visible first"
+      "what": "Check deck's answer to the studio prose request (mailroom/deck/010)",
+      "why": "W2 reaches the studio pages only once their prose is marked"
     }
   ],
   "asks": [
