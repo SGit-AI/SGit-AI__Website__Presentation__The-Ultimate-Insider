@@ -165,7 +165,7 @@ def scene_night(ws, cs):
 def scene_wake(ws):
     s = [head('3 · Inside one wake', 'Five steps,', 'two of them before any work.')]
     steps = [('plan', 'plan', 'a sub-agent plans 1 to 3 items'), ('pre_review', 'pre-review', 'security checks the plan'),
-             (None, 'gate', 'work only if both say go'), ('work', 'work', 'the member, 8 minutes'),
+             (None, 'gate', 'work only if both say go'), ('work', 'work', 'the member, up to 45 minutes'),
              ('post_review', 'post-review', 'security checks the diff'), ('post_check', 'post-check', 'did it go to plan')]
     w_, x, y = 186, 50, 200
     for i, (key, label, what) in enumerate(steps):
