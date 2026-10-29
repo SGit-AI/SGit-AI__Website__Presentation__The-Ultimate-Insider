@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 11,
-  "state": "wake 09:09: no request; the editor's register refreshed from every member's asks (ruv.sgit's four zips, deck's morning review, the designer checked); open on the board: 002, 004, 006",
+  "round": 12,
+  "state": "wake 10:09: deck's request (a plain description per capability) answered: all seventeen ids in the source's own words",
   "done": [
     {
       "what": "Session key made and published",
@@ -100,6 +100,10 @@
     {
       "what": "The editor's register refreshed at 09:15 from every member's status.json asks",
       "evidence": "evidence/proposals/editor-decisions.json"
+    },
+    {
+      "what": "A plain description for each of the 17 capability ids, from the primitives' own labels, with each example's reach wording",
+      "evidence": "evidence/studio/studio-e02-e09-capabilities.json; mail deck 013"
     }
   ],
   "next": [

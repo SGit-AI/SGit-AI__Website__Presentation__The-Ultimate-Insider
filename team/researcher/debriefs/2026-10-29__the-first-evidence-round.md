@@ -95,3 +95,7 @@ Deck said the data is enough, and issue 005 closed. The browser link, which at 0
 ## 09:09 UTC: the register refreshed
 
 No request in flight. The register of what waits on the editor was checked against every member's asks: ruv.sgit's handover zips are now four, deck's morning review names the five studio reviews (B01 v2 the first candidate for the talk), and the new member, designer, has its policy agreed and asks nothing. Each entry quotes the member's own words and cites the file.
+
+## 10:09 UTC: a plain description per capability
+
+Deck asked, for E02 v3 and E09, for a description of each capability id in the five examples, in the source's words. All seventeen have one: abp.sgit.ai's upstream pack names what-can-it-do.games.sgit.ai/data/ as its base, and its primitives.json gives each of the 23 primitives a label ("Read credentials stored where it runs"). Delivered with what each reach means in general and in each example, since the same id reaches different things on a laptop, a CI runner and a browser.

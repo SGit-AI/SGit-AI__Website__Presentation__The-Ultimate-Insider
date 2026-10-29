@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T06:20Z. 382 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T10:13Z. 387 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -10,6 +10,9 @@ Built 2026-10-29T06:20Z. 382 sources; `manifest.json` has every file's SHA-256. 
 | [abp-sgit-cc-off-data](https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-confirmations-off.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:37Z | 200 | full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/) | 4 |
 | [abp-sgit-cc-on-data](https://abp.sgit.ai/data/profiles/anthropic/claude-code/local-default.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:37Z | 200 | full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/) | 5 |
 | [abp-sgit-chatgpt-data](https://abp.sgit.ai/data/profiles/openai/chatgpt-web/default.json) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:09:02Z | 200 | full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/) | 4 |
+| [abp-sgit-data-contributed-riskmandate-manifest-json](https://abp.sgit.ai/data/contributed/riskmandate/manifest.json) | sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai) | own-site | 2026-10-29T10:14:00Z | 200 | full | 2 |
+| [abp-sgit-data-index-md](https://abp.sgit.ai/data/index.md) | sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai) | own-site | 2026-10-29T10:14:00Z | 200 | full | 2 |
+| [abp-sgit-data-upstream-pack-json](https://abp.sgit.ai/data/upstream/pack.json) | sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai) | own-site | 2026-10-29T10:14:00Z | 200 | full | 2 |
 | [abp-sgit-ex-browserext](https://abp.sgit.ai/examples/browser-extension-broad-host-permissions/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:35Z | 200 | full | 3 |
 | [abp-sgit-ex-cc-off](https://abp.sgit.ai/examples/claude-code-cli-confirmations-disabled/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:04Z | 200 | full | 3 |
 | [abp-sgit-ex-cc-on](https://abp.sgit.ai/examples/claude-code-cli-confirmations-enabled/) | abp.sgit.ai (sgit.ai network) | own-site | 2026-10-29T03:08:04Z | 200 | full | 3 |
@@ -378,6 +381,8 @@ Built 2026-10-29T06:20Z. 382 sources; `manifest.json` has every file's SHA-256. 
 | [verizon-dbir-2025](https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf) | Verizon | primary | 2026-10-29T01:50:31Z | 200 | full | 3 |
 | [virtualizationreview-mit-nanda](https://virtualizationreview.com/articles/2025/08/19/mit-report-finds-most-ai-business-investments-fail-reveals-genai-divide.aspx) | Virtualization Review | news | 2026-10-29T01:50:29Z | 200 | full | 3 |
 | [w3c-webauthn-l3](https://www.w3.org/TR/webauthn-3/) | W3C | primary | 2026-10-29T01:53:32Z | 200 | full | 5 |
+| [wcid-data-primitives](https://what-can-it-do.games.sgit.ai/data/primitives.json) | sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai) | own-site | 2026-10-29T10:14:00Z | 200 | full | 2 |
+| [wcid-data-vocabulary](https://what-can-it-do.games.sgit.ai/data/vocabulary.json) | sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai) | own-site | 2026-10-29T10:14:00Z | 200 | full | 2 |
 | [wikipedia-asrs](https://en.wikipedia.org/wiki/Aviation_Safety_Reporting_System) | Wikipedia | secondary | 2026-10-29T01:50:29Z | 200 | full | 3 |
 | [wikipedia-risk-compensation](https://en.wikipedia.org/wiki/Risk_compensation) | Wikipedia | secondary | 2026-10-29T01:53:32Z | 200 | full | 5 |
 | [willison-lethal-trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) | Simon Willison | blog | 2026-10-29T01:50:21Z | 200 | full | 6 |

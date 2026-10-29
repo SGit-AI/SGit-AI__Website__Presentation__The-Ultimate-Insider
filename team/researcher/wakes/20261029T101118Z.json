@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T10:11:18Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) deck's request 001 (conductor-named, X-Idea E02, E09): issue 008 on the board and a reply; for each of the 17 capability ids in the five abp.sgit.ai examples, a description in the source's own words (abp.sgit.ai's model or vocabulary, riskmandate.ai) with the capture it comes from, 'no source describes it' where none does, into evidence/studio/studio-e02-e09-capabilities.json and the vault's studio/; captures from the slice-1 folders first, new ones only if needed. 2) board, status, debrief. Same-plan steps as every slice: no em-dashes, redaction, vault_check.",
+   "at": "2026-10-29T10:11:36Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Fits the role and scope.writes; answers deck's single request in flight; reply to the requester only. Conditions: captures already taken or public sources only; say 'no source describes it' honestly; no keys or personal detail; vault_check before the vault commit; no em-dashes; no main; no new schedule.",
+   "at": "2026-10-29T10:11:49Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "deck's request answered: evidence/studio/studio-e02-e09-capabilities.json (17 ids, each with its primitive label from what-can-it-do.games.sgit.ai/data/primitives.json, the reach's general and per-example wording, each row's note); 5 new captures; mail deck 013 (two reach wordings marked as paraphrase); board 008 done; status, debrief.",
+   "at": "2026-10-29T10:14:31Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

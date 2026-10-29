@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T06:20Z",
- "count": 134,
+ "built": "2026-10-29T10:13Z",
+ "count": 135,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1713,7 +1713,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T06:20Z"
+   "adjudicated": "researcher, 2026-10-29T10:13Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -2682,6 +2682,27 @@
    "note": "Does not reconcile with the five examples: their profiles sum to 56 rows (1+22+22+3+8) with 8 measured. The model page words it as rows 'from the published map', i.e. the whole map (18 stored deltas), so the examples page's 'on this page' looks like a wording error. Do not draw 21/99 as the five examples.",
    "suggested_wording": "21 of 99 rows in the published capability map were measured; in these five examples, 8 of 56 were",
    "register": "studio-e02-e09"
+  },
+  {
+   "id": "e02-labels-from-source",
+   "text": "Each of the 17 capability ids in the five abp.sgit.ai examples has a label in the source's own words",
+   "where": [
+    "studio:E02",
+    "studio:E09"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wcid-data-primitives",
+     "quote": "\"label\": \"Read the project it is working on\"",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://what-can-it-do.games.sgit.ai/data/primitives.json",
+   "note": "A6 for what the definition says (the authoritative record of its own vocabulary); it says nothing about measurement.",
+   "register": "studio-e02-e09-capabilities"
   },
   {
    "id": "e03-echoleak",

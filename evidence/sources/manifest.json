@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T06:20Z",
- "count": 382,
+ "built": "2026-10-29T10:13Z",
+ "count": 387,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -247,6 +247,93 @@
    ],
    "capture": "full: several files, URLs in status.txt in the folder (profiles/, deltas/, mandates/ under https://abp.sgit.ai/data/)",
    "recorded_by": "studio-e02-e09"
+  },
+  {
+   "id": "abp-sgit-data-contributed-riskmandate-manifest-json",
+   "url": "https://abp.sgit.ai/data/contributed/riskmandate/manifest.json",
+   "final_url": "https://abp.sgit.ai/data/contributed/riskmandate/manifest.json",
+   "publisher": "sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai)",
+   "title": "RiskMandate's contributed pack manifest",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T10:14:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "50c14b9025c5459304690857a105bffae2741807ef5eae8d2cec683965db790e",
+     "bytes_as_fetched": 14863,
+     "sha256": "50c14b9025c5459304690857a105bffae2741807ef5eae8d2cec683965db790e",
+     "bytes": 14863
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "5b927dd5160a651a13c75592b427c0505815ddc55c637e7a9c6a8e4c253e8f01",
+     "bytes_as_fetched": 67,
+     "sha256": "5b927dd5160a651a13c75592b427c0505815ddc55c637e7a9c6a8e4c253e8f01",
+     "bytes": 67
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09-capabilities"
+  },
+  {
+   "id": "abp-sgit-data-index-md",
+   "url": "https://abp.sgit.ai/data/index.md",
+   "final_url": "https://abp.sgit.ai/data/index.md",
+   "publisher": "sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai)",
+   "title": "abp.sgit.ai data index",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T10:14:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.md",
+     "sha256_as_fetched": "e5a84c92934d9a682dabf8b0a3fdc0504ed42b3b428da52e71823646155bd34a",
+     "bytes_as_fetched": 9637,
+     "sha256": "e5a84c92934d9a682dabf8b0a3fdc0504ed42b3b428da52e71823646155bd34a",
+     "bytes": 9637
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "603a8315b99b391603cbb94f7c89cd888818682b3700a01e7ff43e71b9b7cfdc",
+     "bytes_as_fetched": 38,
+     "sha256": "603a8315b99b391603cbb94f7c89cd888818682b3700a01e7ff43e71b9b7cfdc",
+     "bytes": 38
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09-capabilities"
+  },
+  {
+   "id": "abp-sgit-data-upstream-pack-json",
+   "url": "https://abp.sgit.ai/data/upstream/pack.json",
+   "final_url": "https://abp.sgit.ai/data/upstream/pack.json",
+   "publisher": "sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai)",
+   "title": "abp.sgit.ai's upstream pack: names what-can-it-do.games.sgit.ai/data/ as the base of the vocabulary and the primitives",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T10:14:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "ecddd3df72487d696d9b7c51f841882b297122a629919d81ca8963f3c75ee48c",
+     "bytes_as_fetched": 2445,
+     "sha256": "ecddd3df72487d696d9b7c51f841882b297122a629919d81ca8963f3c75ee48c",
+     "bytes": 2445
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "5483b90c0d64ad84ca6ae510acdcdd19a34801a72ef131f23686e413ff744dce",
+     "bytes_as_fetched": 48,
+     "sha256": "5483b90c0d64ad84ca6ae510acdcdd19a34801a72ef131f23686e413ff744dce",
+     "bytes": 48
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09-capabilities"
   },
   {
    "id": "abp-sgit-ex-browserext",
@@ -15505,6 +15592,64 @@
    ],
    "capture": "full",
    "recorded_by": "newsroom-ideas"
+  },
+  {
+   "id": "wcid-data-primitives",
+   "url": "https://what-can-it-do.games.sgit.ai/data/primitives.json",
+   "final_url": "https://what-can-it-do.games.sgit.ai/data/primitives.json",
+   "publisher": "sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai)",
+   "title": "The 23 primitives of the capability grammar verb.object.reach, each with its label",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T10:14:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "6803ed9cf45e17a2bdc7920069dd08f08cfd5d7de71a80abedda3c1778e25e69",
+     "bytes_as_fetched": 9322,
+     "sha256": "6803ed9cf45e17a2bdc7920069dd08f08cfd5d7de71a80abedda3c1778e25e69",
+     "bytes": 9322
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "970e637d4584afb17b0d5843cfde43293c510dc3db7d72f6400f00018af8856c",
+     "bytes_as_fetched": 62,
+     "sha256": "970e637d4584afb17b0d5843cfde43293c510dc3db7d72f6400f00018af8856c",
+     "bytes": 62
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09-capabilities"
+  },
+  {
+   "id": "wcid-data-vocabulary",
+   "url": "https://what-can-it-do.games.sgit.ai/data/vocabulary.json",
+   "final_url": "https://what-can-it-do.games.sgit.ai/data/vocabulary.json",
+   "publisher": "sgit.ai network (abp.sgit.ai, what-can-it-do.games.sgit.ai)",
+   "title": "The evidence tiers, control tiers and reversibility classes",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T10:14:00Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "0e42d32675a3e46a4c723543dd062294b76c08273ca7f16e1958d74d2212af13",
+     "bytes_as_fetched": 1505,
+     "sha256": "0e42d32675a3e46a4c723543dd062294b76c08273ca7f16e1958d74d2212af13",
+     "bytes": 1505
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "e731edd809ea0e49d16837a3c609906f005adbe40f55aa4af05db99837813c1b",
+     "bytes_as_fetched": 62,
+     "sha256": "e731edd809ea0e49d16837a3c609906f005adbe40f55aa4af05db99837813c1b",
+     "bytes": 62
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e02-e09-capabilities"
   },
   {
    "id": "wikipedia-asrs",
