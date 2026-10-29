@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Deck's six items delivered: studio-e05.json (9 pivot cases; the Pilates agent found, A4, a gym class), studio-e03b.json (23 cases, outside or inside, 9 second-order; built by the researcher from 22 defanged captures, one downgraded to A1), studio-e06-e07-e02b.json (E07, E06, E02 none); mail deck 038 to 041; issue 011 done; the storyteller's thanks noted; status, debrief.",
    "at": "2026-10-29T15:22:43Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build, validate and agents check pass (0 outside scope); vault_check clean on all three. The 23 inj2 sources hold no raw HTML; the imperative-phrase scan found only descriptive wording, none addressed to an AI. No hosts, credentials or endpoints in e05 or e06-e07-e02b. Replies 038 to 041 go only to deck.",
+   "at": "2026-10-29T15:24:17Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Every item present: issue 011 done; E05, E03 per source (23 cases), E07, E06, E02; replies 038 to 041; status and debrief. Conditions kept: defanged only, redaction and vault_check clean, in scope, no reply to a third member.",
+   "at": "2026-10-29T15:24:17Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:24:18Z",
+ "outcome": "ok"
 }
