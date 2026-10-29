@@ -1,0 +1,60 @@
+{
+  "kinds": {"agent": "an agent being an agent", "finding": "a researcher's finding", "attack": "pointed on purpose"},
+  "about": "The five public incidents in beat 5 of The ultimate insider (incidents), as data for studio brief B02. Each fact is the one the talk states, with the source the talk cites. Anything marked to_confirm is an open question for deck@the-ultimate-insider, not facts to put on screen.",
+  "beat": "incidents",
+  "thesis": "Three of those five were not attacks. They were agents being agents. The distance between the two is a prompt.",
+  "updated": "2026-10-29",
+  "incidents": [
+    {
+      "id": "echoleak",
+      "name": "EchoLeak",
+      "when": "2025-06",
+      "agent": "Microsoft 365 Copilot",
+      "what": "One crafted email makes Copilot read internal files and send them out, with no click.",
+      "ref": "CVE-2025-32711",
+      "kind": "finding",
+      "kind_note": "A researcher's finding, as the current slide tags it, and counted among the talk's three that were not attacks. How to word that honestly on screen is an open question in brief B02.",
+      "source": ["EchoLeak, Hack The Box", "https://www.hackthebox.com/blog/cve-2025-32711-echoleak-copilot-vulnerability"]
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "when": "2025-07",
+      "agent": "Replit's coding agent",
+      "what": "The agent deletes a production database during a code freeze, because empty results looked like something to fix.",
+      "kind": "agent",
+      "source": ["Replit, July 2025", "https://dev.to/joylo/why-replits-ai-agent-deleted-a-production-database-389p"]
+    },
+    {
+      "id": "gemini-cli",
+      "name": "Gemini CLI",
+      "when": "2025-07",
+      "agent": "Gemini CLI",
+      "what": "The agent destroys a user's files and then writes: I have failed you completely and catastrophically.",
+      "quote": "I have failed you completely and catastrophically.",
+      "kind": "agent",
+      "source": ["Gemini CLI, AIID 1178", "https://incidentdatabase.ai/cite/1178/"]
+    },
+    {
+      "id": "amazon-q",
+      "name": "Amazon Q",
+      "when": "2025-07",
+      "agent": "Amazon Q extension for VS Code",
+      "what": "The extension ships with an injected prompt to wipe the disk and delete cloud resources; it only failed because of a formatting flaw.",
+      "kind": "attack",
+      "source": ["Amazon Q, SC Media", "https://www.scworld.com/news/amazon-q-extension-for-vs-code-reportedly-injected-with-wiper-prompt"]
+    },
+    {
+      "id": "espionage",
+      "name": "AI-orchestrated espionage",
+      "when": "2025-11",
+      "when_note": "the month Anthropic reported it",
+      "agent": "Claude Code",
+      "what": "A state actor drives Claude Code through a whole espionage campaign, the model doing 80 to 90 per cent of the work.",
+      "figure": {"value": "80 to 90 per cent", "of": "the campaign's work done by the model, as Anthropic reported it"},
+      "targets": {"value": "about 30", "of": "organisations targeted, as Anthropic reported it", "to_confirm": "on the current slide but not in the script; check against the report before using"},
+      "kind": "attack",
+      "source": ["Anthropic, AI-orchestrated espionage", "https://www-cdn.anthropic.com/d7dd50dd1185f59be051b307150d877f2b82bd2c.pdf"]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<!--meta {"title": "The studio's techniques", "description": "The visual techniques from ruv.sgit.ai and the storytelling moves that suit The ultimate insider, with when to use each and what it costs on a projector."} -->
+<section class="wrap studio-top">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}index.html">Home</a> / <a href="index.html">Studio</a></nav>
+<p class="kicker">The studio</p>
+<h1>The techniques</h1>
+<p class="lead">A starting toolbox, not a rulebook. The first half is how to draw, carried over from the ruv.sgit.ai studio, where seven versions of one story climbed from a plain SVG diagram to a 3D city. The second half is how to tell: the moves that suit an argument made of three problems and one way out.</p>
+
+<h2>How to draw</h2>
+<ul class="cards tech">
+<li class="card"><p class="kicker">Rung 1 · cheapest</p><h2>SVG diagram</h2><p>Shapes, lines and type, crisp at any size and easy to change. The engine draws strokes in (<code>data-draw</code>) and fades parts in (<code>data-in</code>). Use first, always: the static version of every idea.</p></li>
+<li class="card"><p class="kicker">Rung 2</p><h2>CSS motion</h2><p>Transforms and transitions on HTML blocks: cards that arrive, bars that grow (<code>data-grow</code>), numbers that count (<code>data-count</code>). Most slides in the deck today are this rung.</p></li>
+<li class="card"><p class="kicker">Rung 3</p><h2>Data-driven drawing</h2><p>The picture is computed from a JSON file in <code>SLIDE_RENDER</code>: a timeline placed by date, a bar sized by its number. The slide cannot disagree with its source.</p></li>
+<li class="card"><p class="kicker">Rung 4</p><h2>Canvas particles</h2><p>Many small moving things: identities, requests, permissions. Good when the point is scale or flow (82 to 1). Costly to make readable; pair with one large label.</p></li>
+<li class="card"><p class="kicker">Rung 5</p><h2>2.5D without a library</h2><p>Isometric layers drawn with CSS or canvas: the stack of systems an agent moves through, the layers of what stands in the way. Depth without a dependency.</p></li>
+<li class="card"><p class="kicker">Rung 6 · richest</p><h2>WebGL</h2><p>Three dimensions and real camera moves, as in the ruv.sgit.ai vault city. Only when space itself is the message. Any library is copied into the lab folder: the gate refuses scripts from another host, and a talk venue's network is never to be trusted.</p></li>
+</ul>
+
+<h2>How to tell</h2>
+<div class="tbl"><table>
+<thead><tr><th>Move</th><th>What it does</th><th>Where it might serve this talk</th></tr></thead>
+<tbody>
+<tr><td>The recurring motif</td><td>One picture that comes back changed in every act, so the audience always knows where they are.</td><td>The three circles: introduced in the opening, each act zooms into one, the collision brings them together (B01).</td></tr>
+<tr><td>The record</td><td>Real events placed on one axis, so a pattern shows that no single story shows.</td><td>The eighteen months of incidents (B02); the outages.</td></tr>
+<tr><td>The one big number</td><td>A single figure, large, with what it is and where it is from, and nothing else.</td><td>82 to 1; under 5 per cent used; 48 per cent on spreadsheets.</td></tr>
+<tr><td>The iceberg</td><td>What is used next to what is granted, at true scale.</td><td>The unused grant (permissions).</td></tr>
+<tr><td>The chain</td><td>Cause and effect as links, with the break shown where it happens.</td><td>Register, appetite, funding, control, pull the plug (spreadsheets).</td></tr>
+<tr><td>The side by side</td><td>Two worlds with the same problem, one that solved it.</td><td>Aviation's near-miss reports next to cyber's silence (unreported).</td></tr>
+<tr><td>The ledger</td><td>Rows that fill in, typed honestly, so the gaps are visible.</td><td>Reach, mandate, the gap, and what stands in each row (abp).</td></tr>
+<tr><td>The ladder</td><td>Levels unlocked one at a time, each by evidence from the one below.</td><td>Earning autonomy (licence). Illustrative, and labelled so.</td></tr>
+<tr><td>The flip</td><td>The same scene shown twice, a single word changed, a different outcome.</td><td>The distance between benign and malicious is a prompt (B02).</td></tr>
+</tbody>
+</table></div>
+
+<h2>What the stage asks of all of them</h2>
+<ul>
+<li>The room is dark and the screen is far: big type, few words, high contrast. The slide supports the speaker; it is not read.</li>
+<li>Motion follows the words. Something that moves while Dinis is making a different point steals the room.</li>
+<li>The livestream is compressed: fine lines and small particles turn to noise, so test a version at a low resolution too.</li>
+<li>Everything runs offline from the built site, in the player, on one laptop.</li>
+</ul>
+</section>

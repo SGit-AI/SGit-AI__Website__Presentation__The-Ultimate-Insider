@@ -9,6 +9,7 @@
     ["Script",   "talk/script.html"],
     ["Articles", "articles/index.html"],
     ["Sources",  "sources/index.html"],
+    ["Studio",   "studio/index.html"],
     ["Team",     "team/index.html"],
     ["Admin",    "admin/index.html"]
   ]
