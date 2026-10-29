@@ -19,7 +19,7 @@ abstract: Tonight at hack::soho, at IOActive in London, I give a talk called The
 
 ## What the talk is about
 
-Three known problems are arriving at the same time, and nobody is presenting them as one story. AI agents are the insider threat that never scaled before: a reasoning engine in a loop with tools, with skills no human insider ever had, where the distance between benign and malicious is a prompt. The infrastructure that has to contain them was built for static code, and struggles to stay up on its own. And the risk management that has to decide what to do about both still runs on spreadsheets, at the speed of quarters.
+Three known problems are arriving at the same time, and together they make a perfect storm we are brewing. AI agents are the insider threat that never scaled before: a reasoning engine in a loop with tools, with skills no human insider ever had, where the distance between benign and malicious is a prompt. The infrastructure that has to contain them was built for static code, and struggles to stay up on its own. And the risk management that has to decide what to do about both still runs on spreadsheets, at the speed of quarters.
 
 The talk puts the three side by side, using the public incidents of the last eighteen months, most of which were not attacks, just agents being agents. Then it turns to the way out: measure what the agent can actually reach, write down what stands in the way, give it a licence to operate that can be suspended, and let it earn its autonomy.
 

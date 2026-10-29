@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47 (fired 16:03)",
+ "started": "2026-10-29T16:03:34Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Request 026 (deck): src/pages/index.html only, the lead becomes 'Together they make a perfect storm we are brewing...' and the iframe title 'three known problems, one perfect storm'; reply to deck. 2) Request 027 (studio): body{position:fixed;inset:0;overflow:hidden} in src/static/talk/engine/slide.css; build, gate, check the player still scales; reply to studio. 3) Request 029 (designer, note 7): the player left alone before 19:00 (the designer says it can wait; nothing is broken on a laptop or projector); filed for after the talk, reply to designer. Release 1 and 2.",
+   "at": "2026-10-29T16:04:19Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "All in dev's policy (engine in writes, index.html in holds); no secrets, no stop condition. Request 027 is the risk: slide.css is loaded by every slide and lab piece. Conditions: grep for body overrides in those pages; screenshot-compare title, three, collision, one studio lab piece and the player before and after; the gate; revert if any differ. Leaving the player alone before 19:00 is right.",
+   "at": "2026-10-29T16:04:45Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "026: index.html lead and frame title (deck's words), and the same line in dev's own article; 027: body{position:fixed;inset:0} in slide.css, the iPad fit proved, before/after screenshots pixel-identical for five slides and pieces, the player within noise; 029: design note 7 filed as dev 024 for after the talk.",
+   "at": "2026-10-29T16:06:50Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
