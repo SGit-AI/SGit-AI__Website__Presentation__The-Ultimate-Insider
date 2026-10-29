@@ -1,0 +1,70 @@
+<!--meta {"title": "E09 explained: mandate against grant, frame by frame", "description": "How studio experiment E09 builds one agent's behaviour policy in the source's order: each frame with its time, every row with its label, reach and barrier, the technique, and what was left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E09</a></nav>
+<p class="kicker">Studio experiment E09 · the explainer</p>
+<h1>Mandate against grant, frame by frame</h1>
+<p class="lead">The one sentence: an Agent Behaviour Policy writes down, for one agent in one deployment, what it is for (the mandate), what it can actually do (the grant), the gap between them (the delta), and what stands in the way of each thing in the gap (the barrier). Part one ended on E02's blast radius; E09 names its rings.</p>
+
+<h2>The frames (v1)</h2>
+<p>Seconds from the start; it ends at 54 s and holds still. The line under the headline gives the source's own definition of the object being built.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>The definition of an Agent Behaviour Policy, in RiskMandate's words, and the example: Claude Code on your own machine, confirmations on.</td></tr>
+<tr><td>2 s</td><td>The mandate, elicited: a ring at the centre, its four granted items numbered 1 to 4 and listed, and the fifth, asked and not granted (<code>send.endpoint.allowed</code>), as a dashed dot from 5 s.</td></tr>
+<tr><td>12 s</td><td>The grant: two more rings, unstated and refused, and twelve more numbered dots, faint until the delta; the heading says the model measures the grant and this example derives it (0 of 22 rows measured), and the line under the headline gives what "host" means in this example.</td></tr>
+<tr><td>22 s</td><td>The delta, derived: the twelve outside the mandate light in the agent colour and are listed 5 to 16 in the source's words; excess 12, shortfall 1.</td></tr>
+<tr><td>32 s</td><td>The barrier on every row, one after another: abp.sgit.ai's shapes (filled for nothing, double circle for a rule in prose, half filled for a switch its own account can flip), the enforcer test in the source's words, and the count: 12 of 12 excess with no control. No row has a boundary.</td></tr>
+<tr><td>42 s</td><td>The chat example beside it, in one line: mandate 1, grant 1, excess 0. The line under the headline gives the no-rating rule and the caution about published drafts.</td></tr>
+</tbody></table></div>
+
+<h2>The sixteen rows, in the slide's numbering</h2>
+<p>Each label is the source's (capabilities.json); the slide drops a bracketed aside at the end of two labels ("(a cron, a service)", "(any branch it can reach)") for width. The reach is this example's own, where the file gives one.</p>
+<div class="tbl"><table>
+<thead><tr><th>#</th><th>Capability</th><th>Where it sits</th><th>Reach in this example</th><th>Barrier</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Change the project it is working on<br><code>write.file.project</code></td><td>mandate, granted</td><td>the working tree or workspace it was pointed at</td><td>none: nothing</td></tr>
+<tr><td>2</td><td>Commit to the repository it was pointed at<br><code>write.repository.project</code></td><td>mandate, granted</td><td>the working tree or workspace it was pointed at</td><td>none: nothing</td></tr>
+<tr><td>3</td><td>Run programs as the account<br><code>execute.process.host</code></td><td>mandate, granted</td><td>your machine, as your user account</td><td>setting: the tool&#x27;s own directory restriction and its confirmation prompt, enforced by the tool, which runs inside the grant; anything that can execute as you steps around it</td></tr>
+<tr><td>4</td><td>Read the project it is working on<br><code>read.file.project</code></td><td>mandate, granted</td><td>the working tree or workspace it was pointed at</td><td>none: nothing</td></tr>
+<tr><td>5</td><td>Reach any host on the internet<br><code>send.endpoint.world</code></td><td>excess, unstated</td><td>the internet</td><td>none: nothing</td></tr>
+<tr><td>6</td><td>Push to a code host (any branch it can reach)<br><code>write.repository.tenant</code></td><td>excess, unstated</td><td>your accounts, with the credentials in your home directory</td><td>expectation: branch discipline in prose, if any</td></tr>
+<tr><td>7</td><td>Sign commits with the key it holds<br><code>authenticate-as.credential.signing</code></td><td>excess, refused</td><td>your accounts, with the credentials in your home directory</td><td>none: nothing</td></tr>
+<tr><td>8</td><td>Act in accounts with the credentials it holds<br><code>authenticate-as.credential.tenant</code></td><td>excess, refused</td><td>your accounts, with the credentials in your home directory</td><td>none: nothing</td></tr>
+<tr><td>9</td><td>Publish packages, images or pages under the name it holds<br><code>create.record.world</code></td><td>excess, refused</td><td>the internet</td><td>none: nothing</td></tr>
+<tr><td>10</td><td>Delete files anywhere the account can reach<br><code>delete.file.host</code></td><td>excess, refused</td><td>your machine, as your user account</td><td>none: nothing</td></tr>
+<tr><td>11</td><td>Read credentials stored where it runs<br><code>read.credential.host</code></td><td>excess, refused</td><td>your machine, as your user account</td><td>none: nothing</td></tr>
+<tr><td>12</td><td>Read any file the account can reach<br><code>read.file.host</code></td><td>excess, refused</td><td>your machine, as your user account</td><td>none: nothing</td></tr>
+<tr><td>13</td><td>Read a retained record: shell history, past sessions<br><code>read.record.history</code></td><td>excess, refused</td><td>your machine, as your user account</td><td>none: nothing</td></tr>
+<tr><td>14</td><td>Change any file the account can reach<br><code>write.file.host</code></td><td>excess, refused</td><td>your machine, as your user account</td><td>none: nothing</td></tr>
+<tr><td>15</td><td>Create something that outlives the turn where it runs (a cron, a service)<br><code>create.schedule.host</code></td><td>excess, refused</td><td>your machine, as your user account</td><td>none: nothing</td></tr>
+<tr><td>16</td><td>Change its own permission settings<br><code>grant.credential.self</code></td><td>excess, refused</td><td>the agent&#x27;s own process, sandbox or turn</td><td>setting: the settings file is owned by the same account</td></tr>
+</tbody></table></div>
+<p>And the shortfall: <code>send.endpoint.allowed</code>, in the mandate and not in the grant. The capabilities file gives it no label, so the slide shows its id.</p>
+
+<h2>Where every word comes from</h2>
+<ul>
+<li><b>The definitions</b> are the data file's: the policy, the mandate, the grant and the delta as RiskMandate words them, the enforcer test and the no-rating rule as quoted. The slide adds only "Elicited: asked of the people who deployed it" as a plain gloss on the source's "Elicited".</li>
+<li><b>The numbers</b> are the example's fields: mandate 5, aligned 4, grant 16, excess 12, shortfall 1, unbounded excess 12, 0 of 22 rows measured; chat 1, 1, 0. The barrier counts are counted from the rows.</li>
+<li><b>Measured in the model, derived here.</b> The source calls the grant measured; this example's rows are derived from what a CLI running as your account is. The slide says both, so nothing derived is shown as measured.</li>
+<li><b>The same id means different things per example.</b> The slide shows Claude Code's own reach ("host" is your machine, as your user account), as the researcher's caution asks.</li>
+<li><b>No rating.</b> There is no score, colour of risk or traffic light; the agent colour marks only what is outside the mandate.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: SVG and list built once from the two data files, then every frame drawn from the slide's clock by <code>SLIDE_RENDER</code>, so the player can seek, pause and replay it, and <code>?static</code> shows the whole policy.</li>
+<li>Colour carries one meaning, the agent red, for the excess; the heading colour for the mandate. Every text is 20 px or larger on the 1280 by 720 canvas.</li>
+<li><b>It runs only over HTTP.</b> The slide reads both files with <code>fetch</code> when it loads; opened as a file from disk it shows only the headline.</li>
+</ul>
+
+<h2>What was tried and left out</h2>
+<ul>
+<li><b>The chat example as a second picture.</b> A second ring set beside the first left no room for the sixteen rows in plain words; v1 gives the chat example one line and its one-dot shape.</li>
+<li><b>The other three examples</b> (confirmations off, the browser extension, the CI runner): left for E13, the small multiples.</li>
+<li><b>A word per row on the ring.</b> Sixteen labels at 20 px do not fit round a circle; the dots are numbered and the list carries the words, as in E02 v2.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 in ruv.sgit run r10-e09-mandate-and-grant: a Ruflo hive with a builder and an editor who checked the slide and this page against the request and the data, and one sgit vault holding the request, each worker's branch and the history. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</article>

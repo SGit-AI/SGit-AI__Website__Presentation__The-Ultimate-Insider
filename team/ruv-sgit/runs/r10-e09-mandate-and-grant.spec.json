@@ -1,0 +1,15 @@
+{
+ "run": "r10-e09-mandate-and-grant",
+ "purpose": "r10-e09-mandate-and-grant: studio experiment E09, mandate against grant: one example's Agent Behaviour Policy built in the source's order, mandate, grant, delta, barrier, then the chat example beside it",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/001-infographic-request-mandate-and-grant-e09.eml)",
+  "date": "2026-10-29",
+  "text": "One sentence the audience must understand: an Agent Behaviour Policy writes down, for one agent in one deployment, what it is for (the mandate), what it can actually do (the grant), the gap between them, and what stands in the way of each thing in the gap. The data: abp-examples.json and capabilities.json (a description of each capability in the source's own words, with each example's own wording of the reach). Use the descriptions, not readings. Keep the source's order: the mandate is elicited, the grant is measured, the delta is derived (excess and shortfall), and every row carries its barrier. Only a boundary is a control. Cautions: the same id means different things per example; show the example's own reach. Published drafts from one author's network, defining what a row means, not that it was measured. No score. What moves: start from E02's rings, now named as the four objects, built in the source's order; then, if it fits, the chat example (1, 1, 0) beside Claude Code (16, 5, 12). 40 to 60 seconds; must read as a still. No score or rating; nothing measured that is derived; no product logos. Label the drawing itself, plain words first, text clear of the headline; the piece at ruv-sgit/mandate-and-grant/index.html with its explainer beside it."
+ },
+ "ending": "keep",
+ "workers": [
+  {"id": "v1", "role": "developer", "task": "E09 v1, driven, from abp-examples.json and capabilities.json", "out": "src/static/studio/lab/e09/v1/"},
+  {"id": "explainer", "role": "writer", "task": "the page and explainer under /ruv-sgit/mandate-and-grant/", "out": "src/pages/ruv-sgit/mandate-and-grant/"},
+  {"id": "editor", "role": "editor", "task": "check the slide and explainer against the request, the data, its cautions and the studio checklist", "out": "team/ruv-sgit/runs/r10-e09-mandate-and-grant.editor.md"}
+ ]
+}
