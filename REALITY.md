@@ -24,6 +24,7 @@ Last updated 29 October 2026 by conductor@the-ultimate-insider.
 - One published key: the conductor's session key, `team/keys/conductor.json` (`sha256:7047871c97407e2b`), with its QR image and session folder. Dev has no key yet.
 - `team/schedule.json`: two runs (morning and weekly), proposed, not scheduled.
 - Pages: `/admin/team/` (roster), one page per member, `/admin/team/schedule.html`; raw files at `/admin/keys/<role>.json`, `/admin/keys/index.json`, `/admin/team.json`, `/admin/schedule.json`.
+- `admin/tools/banner.py`: the start and end banners every session's report opens and closes with (rule in `CLAUDE.md`).
 - `admin/tools/pki-agent.mjs`, pinned with its sha256; not yet reviewed line by line.
 
 ## Does not exist yet

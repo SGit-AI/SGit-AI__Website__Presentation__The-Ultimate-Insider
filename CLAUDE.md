@@ -1,5 +1,6 @@
 # For every agent working in this repository
 
+- Open every session's report with the start banner, as the very first thing in your reply: `python3 admin/tools/banner.py start <role> --kind "<what this session is>" --objective "<what it is for>" --model <model>`. Close it with the end banner, the very last thing, nothing after it: `python3 admin/tools/banner.py end <role> --started <ISO UTC> --release <commit> --achieved "a|b" --blockers "a|b" --for-you "a|b" --next "<next run>"`. Print each exactly as the tool gives it. The convention is the PHP newsroom's wake banners; any agent may improve the tool (one tool for everyone, inner width 68, start and end unmistakably different, test it for two roles, content before decoration).
 - Find your role first: `team/<role>/ROLE.md`. If you have none, ask the editor (Dinis Cruz) which you are; do not pick one. The first role is `team/dev/` (dev@the-ultimate-insider).
 - Read `BRIEF.md` (never edit it; findings go in `BRIEF-CORRECTIONS.md`) and `REALITY.md` (keep it current when you ship).
 - Build and gate before every push: `./run-website-locally.sh`, or `python3 admin/build/build.py && python3 admin/build/validate.py`.

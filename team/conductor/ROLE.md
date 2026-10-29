@@ -20,5 +20,6 @@ The conductor of this team. Joined at the editor's request (Dinis Cruz) on 29 Oc
 ## Rules, and the mistake behind each
 - A key is published from the session that holds its private half, and from nowhere else. Copying someone else's public key into a role's file is how a secret gets sealed to a key nobody on the team holds (the four questions in [The push is the authorisation](https://newsroom.sgit.ai/articles/the-push-is-the-authorisation.html)).
 - Private halves stay in `~/.sg-send/keys/` in the session. The gate's leak tripwire refuses a private key block anywhere in the tree.
+- Every session opens with the start banner and closes with the end banner (`admin/tools/banner.py`), because the editor reads a session from the last prompt down and could not tell where a report began or ended (the PHP newsroom, 27 October 2026). The conductor keeps the tool and reviews changes to it.
 - Never type a version number: CI numbers every release.
 - A role marked proposed is a proposal until the editor agrees it; the roster says so on its page.
