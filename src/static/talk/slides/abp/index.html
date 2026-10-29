@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reach, mandate, the gap</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+#bars{position:absolute;left:60px;right:60px;top:160px}
+.br{position:relative;height:62px;margin-bottom:14px;border-radius:12px}
+.br span{position:absolute;left:18px;top:50%;transform:translateY(-50%);font:800 22px system-ui;white-space:nowrap}
+.br small{font-weight:600;font-size:16px;margin-left:10px;opacity:.85}
+#reach{background:var(--infra-t);border:2px solid var(--infra);color:var(--infra);width:0}
+#mand{background:var(--accent-t);border:2px solid var(--accent);color:var(--accent);width:0}
+#gap{position:absolute;top:0;height:62px;border:2px dashed var(--agent);border-radius:12px;background:var(--agent-t)}
+#gap span{position:absolute;top:50%;transform:translateY(-50%);right:18px;font:800 22px system-ui;color:var(--agent)}
+#types{position:absolute;left:60px;top:400px;width:600px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ty{border:2px solid var(--line);border-radius:14px;padding:10px 14px;background:var(--panel)}
+.ty b{display:block;font:800 22px system-ui;color:var(--head)}
+.ty span{font-size:16px;color:var(--dim)}
+.ty.ctl{border-color:var(--accent);background:var(--accent-t)}.ty.ctl b{color:var(--accent)}
+#only{position:absolute;left:60px;top:620px;font:700 26px Georgia,serif;color:var(--head)}
+#only em{font-style:normal;color:var(--accent)}
+#kb{position:absolute;left:720px;top:400px;width:500px}
+#kb h4{margin:0 0 10px;font:800 15px system-ui;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+#sq{display:grid;grid-template-columns:repeat(13,1fr);gap:7px}
+#sq i{aspect-ratio:1;border-radius:6px;background:var(--line);transform:scale(0)}
+#sq i.b{background:var(--accent)}#sq i.e{background:var(--infra)}
+#kb p{font-size:19px;line-height:1.35;margin:12px 0 0}
+</style>
+</head>
+<body>
+<div id="cv" data-end="12">
+  <p class="kk w">The way out · the Agent Behaviour Policy</p>
+  <div class="hl" data-in="0" style="font-size:40px">Reach, mandate, <span class="a">the gap</span>, and what stands in it.</div>
+  <div id="bars">
+    <div class="br" id="reach"><span>Reach<small>what it can do, measured</small></span></div>
+    <div class="br" id="mand"><span>Mandate<small>what it is for</small></span></div>
+    <div id="gap" style="opacity:0"><span>the gap</span></div>
+  </div>
+  <div id="types">
+    <div class="ty ctl" data-in="4.2"><b>boundary</b><span>the platform will not let it</span></div>
+    <div class="ty" data-in="4.6"><b>setting</b><span>a configuration that can change</span></div>
+    <div class="ty" data-in="5"><b>expectation</b><span>we hope it will not</span></div>
+    <div class="ty" data-in="5.4"><b>nothing</b><span>said out loud, at last</span></div>
+  </div>
+  <div id="only" data-in="6.2">Only a <em>boundary</em> is a control.</div>
+  <div id="kb" data-in="7.4"><h4>One browser extension, mapped</h4><div id="sq"></div><p><b class="c-head">13</b> things it could do beyond its purpose: <b class="c-acc">4</b> stopped by the platform, <b class="c-infra">9</b> by nothing but the code as written.</p></div>
+  <div class="ft">RiskMandate, Agent Behaviour Policy (riskmandate.ai/abp.html; reach was the grant, the gap the delta) · the Kit Bag plan on sgit.ai</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+var SQ = []
+window.SLIDE_INIT = function (S) { var g = S.$('sq'); for (var i = 0; i < 13; i++) { var d = document.createElement('i'); g.appendChild(d); SQ.push(d) } }
+window.SLIDE_RENDER = function (t, S) {
+  var r = S.ease(S.seg(t, .6, 1.8)), m = S.ease(S.seg(t, 1.6, 2.6)), g = S.ease(S.seg(t, 2.8, 3.4))
+  S.$('reach').style.width = 100 * r + '%'; S.$('mand').style.width = 34 * m + '%'
+  var gap = S.$('gap'); gap.style.left = '34%'; gap.style.width = '66%'; gap.style.top = '76px'; gap.style.opacity = g
+  SQ.forEach(function (d, i) { d.style.transform = 'scale(' + S.ease(S.seg(t, 7.6 + i * .12, 7.9 + i * .12)) + ')'; d.className = t >= 9.4 ? (i < 4 ? 'b' : 'e') : '' })
+}
+</script>
+</body>
+</html>

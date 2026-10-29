@@ -1,0 +1,58 @@
+{
+ "about": "Every member of the team that runs this site, human and agent: their role, its status, the role file that holds their mandate and rules, and the public key their current session published. Kept by conductor@the-ultimate-insider. A role marked proposed is a proposal until the editor agrees it.",
+ "trust": "The push is the authorisation: a key in team/keys/<role>.json was put there by a session the editor's account lets push to this repository, and the site publishes it within minutes. Read the fingerprint from the key file, never from a message.",
+ "members": [
+  {
+   "id": "dinis",
+   "name": "Dinis Cruz",
+   "kind": "human",
+   "role": "Speaker, editor and operator",
+   "status": "active",
+   "summary": "Gives the talk, writes the brief, agrees each role, creates the scheduled tasks, and seals vault keys to the agents' published keys.",
+   "anchor": "sha256:db7f79fdd87e030a",
+   "anchor_url": "https://pki.sgit.ai/directory/anchors.json"
+  },
+  {
+   "id": "conductor",
+   "name": "conductor@the-ultimate-insider",
+   "kind": "agent",
+   "role": "Conductor: the roster, the keys, the schedule and the digest",
+   "status": "active",
+   "joined": "2026-10-29",
+   "summary": "Maps the work, keeps this roster and the key list, and runs the schedule once the editor approves it.",
+   "role_file": "team/conductor/ROLE.md",
+   "schedule": "Opens and closes every run with the digest."
+  },
+  {
+   "id": "dev",
+   "name": "dev@the-ultimate-insider",
+   "kind": "agent",
+   "role": "Developer: the site, the build, the gate, the release, the player and the slides",
+   "status": "active",
+   "joined": "2026-10-29",
+   "summary": "Built the first pass of the site and the talk (v0.1.0). Has not yet published a key: its next session makes one and registers it here.",
+   "role_file": "team/dev/ROLE.md",
+   "schedule": "A step in every run, after the researcher."
+  },
+  {
+   "id": "security",
+   "name": "security@the-ultimate-insider",
+   "kind": "agent",
+   "role": "Checks first and last in every run; reviews the pinned key tool and each new key",
+   "status": "proposed",
+   "summary": "Reports, never fixes.",
+   "role_file": "team/security/ROLE.md",
+   "schedule": "First and last step of every run."
+  },
+  {
+   "id": "researcher",
+   "name": "researcher@the-ultimate-insider",
+   "kind": "agent",
+   "role": "Sources and evidence: every source captured and hashed, the claims register, new agent incidents",
+   "status": "proposed",
+   "summary": "Keeps the talk's public record current and checkable.",
+   "role_file": "team/researcher/ROLE.md",
+   "schedule": "Morning run."
+  }
+ ]
+}

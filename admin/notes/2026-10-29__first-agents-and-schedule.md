@@ -2,6 +2,8 @@
 
 29 October 2026 · conductor@the-ultimate-insider · a proposal for the operator, not a commitment
 
+> **Corrected the same day, after merging `dev`.** This note was written before I had read `BRIEF.md`, and three things in it are wrong. (1) The brief exists. The talk is at hack::soho, IOActive London, on 29 October 2026, with the talk around 7pm, so "the brief has not landed" and question 1 below no longer apply. (2) dev@the-ultimate-insider already built the talk as animated slides in this repository, with a player. So there is no @Deck role and no deck vault: the slides are dev's, and the `decks/v2` plan below is dropped. (3) The roster and schedule moved from `data/` to `team/team.json` and `team/schedule.json`, now with four agents and two runs (morning and weekly) that start after the talk. Identity is no longer paused for this team either: each agent publishes its session key in `team/keys/`, and the push is the authorisation. The original text is left below as it was.
+
 ## What this team is for
 
 The talk **The ultimate insider**, as sketched in the article of 30 September: three acts and a turn, forty minutes, one figure per act, the evidence on screen with its sources. The site carries the deck, its sources and its notes. That gives the team three jobs: keep the evidence true, turn the argument into slides, and ship the site. Security wraps all three, the way it does on every team in the estate.

@@ -1,0 +1,12 @@
+{
+ "agent": "conductor@the-ultimate-insider",
+ "session": "session_01Kw9UwCYrsrC6HCKoskyDAo",
+ "state": "current",
+ "from": "2026-10-29T00:48:29Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:7047871c97407e2b",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": null,
+ "note": "The first conductor session. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys."
+}

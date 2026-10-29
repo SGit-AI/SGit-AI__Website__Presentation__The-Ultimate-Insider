@@ -1,0 +1,34 @@
+{
+ "about": "The proposed run schedule. Each run is one scheduled task that starts a conductor session on this repository; the conductor runs each step as a sub-agent that reads its state, does one kind of work, writes its state and stops. A draft: no scheduled task exists until the editor approves this file. Kept by conductor@the-ultimate-insider.",
+ "status": "proposed",
+ "timezone": "Europe/London",
+ "starts": "after the talk on 29 October 2026, when the site turns from the deck into the record of the talk",
+ "step_limit_minutes": 12,
+ "lock": "admin/runs/LOCK: written when a run opens, removed when it closes. A run that finds a lock says so first and does not start a second one.",
+ "ledger": "admin/runs/index.jsonl: one row per run, with each step's outcome",
+ "runs": [
+  {
+   "id": "morning",
+   "when": "Weekdays 07:47",
+   "cron": "CRON_TZ=Europe/London 47 7 * * 1-5",
+   "steps": [
+    {"agent": "security",   "do": "open: hold check, uncommitted changes, leak check over the tree"},
+    {"agent": "researcher", "do": "sweep for new public agent incidents; capture and hash the next sources in the claims register"},
+    {"agent": "dev",        "do": "the next card: build, gate, release; check the live site shows the new version"},
+    {"agent": "security",   "do": "close: leak check over the run's diff"},
+    {"agent": "conductor",  "do": "digest: what each step did, what is blocked and on whom, the asks for the editor"}
+   ]
+  },
+  {
+   "id": "weekly",
+   "when": "Fridays 11:37",
+   "cron": "CRON_TZ=Europe/London 37 11 * * 5",
+   "steps": [
+    {"agent": "security",   "do": "open; review any key published this week against the session that published it"},
+    {"agent": "researcher", "do": "re-check every captured source still says what the claim needs; flag drift"},
+    {"agent": "security",   "do": "close"},
+    {"agent": "conductor",  "do": "the week: what shipped, what the site still lacks, roster and schedule changes to propose"}
+   ]
+  }
+ ]
+}

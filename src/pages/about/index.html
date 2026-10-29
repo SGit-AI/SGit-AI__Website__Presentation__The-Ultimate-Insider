@@ -1,0 +1,41 @@
+<!--meta {"title": "About this site", "description": "Who publishes this site, how it is built and released, what its gate checks, and what it does not claim."} -->
+<section class="wrap narrow">
+<p class="kicker">About</p>
+<h1>About this site, and a disclosure</h1>
+<p class="lead">The companion site for <b>The ultimate insider</b>, a talk by Dinis Cruz at hack::soho, hosted by IOActive in London on 29 October 2026. It holds the slides, the script, the sources and the articles written for the talk.</p>
+
+<h2>A participant disclosure</h2>
+<p>This site is published by the person giving the talk, and the way out it argues for runs through projects Dinis Cruz founded or works on: <a href="https://riskmandate.ai/">RiskMandate.ai</a>, <a href="https://sgit.ai/">sgit.ai</a> and The Cyber Boardroom. Read the second half of the talk with that in mind. The first half is built from public incidents and surveys, each linked on <a href="{{root}}sources/index.html">the sources page</a>. This site is not published by IOActive, and the event details are from the event page as it was given in <a href="{{root}}brief/index.html">the brief</a>.</p>
+
+<h2>How it is built</h2>
+<ul>
+<li><b>Static pages, built by one script.</b> <code>admin/build/build.py</code>, standard library only, builds every page from <code>src/</code> and <code>content/</code>, with the navigation and footer injected so they cannot drift.</li>
+<li><b>Every page has a markdown twin</b> at the same path ending in <code>.md</code>, and the site has an <a href="{{root}}llms.txt">llms.txt</a>, for agents.</li>
+<li><b>The talk is data.</b> <a href="{{root}}talk/talk.json">talk.json</a> holds every beat; the player, the script and the slide list all read it.</li>
+<li><b>CI owns the version.</b> Nobody types a version number. A push to <code>dev</code> or <code>main</code> runs one release job at a time, which picks the next number from the tags, commits and tags it as GitHub Actions, then builds and deploys that commit. The scheme is <a href="https://newsroom.sgit.ai/articles/ci-owns-the-version.html">CI owns the version</a>; the history is on <a href="{{root}}admin/versions.html">releases</a>.</li>
+</ul>
+
+<h2>What the gate checks</h2>
+<p><code>admin/build/validate.py</code> fails the build on any of these, in CI before every release and again on the built site:</p>
+<ul>
+<li>every internal link and image resolves against the built files;</li>
+<li>every page has its <code>.md</code> twin and is listed in <code>llms.txt</code>;</li>
+<li>no version placeholder survives the build;</li>
+<li>no page loads a script or stylesheet from another host;</li>
+<li>every script parses;</li>
+<li>every beat of the talk has a slide, a title, a script and a planned length;</li>
+<li>no em-dashes in prose;</li>
+<li>the leak tripwire: private keys, cloud and API key shapes and sgit vault key shapes, in every tracked file and every built file.</li>
+</ul>
+
+<h2>Who builds it</h2>
+<p>Dinis Cruz, with AI agents. The first pass was built in one Claude Code session from <a href="{{root}}brief/index.html">the brief</a>. A team of agents, each with a written mandate, in the shape of the <a href="https://newsroom.sgit.ai/">SGit Newsroom</a> and the <a href="https://php.oct.2026.newsroom.sgit.ai/">PHP October 2026 newsroom</a>, is next; its design will be published here before it runs.</p>
+
+<h2>What this site does not claim</h2>
+<ul>
+<li>The script is a draft from the article, written before rehearsal; the talk on the night will differ from it.</li>
+<li>The demos slide lists candidates; the running order is confirmed on the night.</li>
+<li>The licence and the autonomy ladder on the licence slide are examples, not a published scale.</li>
+<li>The figures are the sources' figures, read as of the article (30 September 2026); none was re-measured here.</li>
+</ul>
+</section>

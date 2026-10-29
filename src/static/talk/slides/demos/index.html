@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live demos, all open source</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+.ds{position:absolute;left:60px;right:60px;top:170px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.d{border:2px solid var(--line);border-radius:16px;background:var(--panel);padding:16px 20px;display:flex;gap:16px;align-items:flex-start}
+.d .n{flex:none;width:42px;height:42px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:800 20px system-ui;display:flex;align-items:center;justify-content:center}
+.d h3{margin:0 0 4px;font:800 23px system-ui;color:var(--head)}
+.d p{margin:0;font-size:17.5px;line-height:1.35}
+.d .u{font:600 15px ui-monospace,monospace;color:var(--accent);margin-top:6px}
+#tbc{position:absolute;left:60px;right:60px;top:610px;font-size:18px;color:var(--dim);text-align:center}
+</style>
+</head>
+<body>
+<div id="cv" data-end="6">
+  <p class="kk w">Live demos</p>
+  <div class="hl" data-in="0">Live, and <em>all open source.</em></div>
+  <div class="ds">
+    <div class="d" data-in=".6"><div class="n">1</div><div><h3>An Agent Behaviour Policy</h3><p>Reach, mandate, gap and barriers for a real agent, written down.</p><p class="u">riskmandate.ai/abp.html</p></div></div>
+    <div class="d" data-in="1.2"><div class="n">2</div><div><h3>A vault as the agent's memory</h3><p>Encrypted before it leaves the agent; versioned, so you know who did what.</p><p class="u">sgit.ai · pip install sgit-ai</p></div></div>
+    <div class="d" data-in="1.8"><div class="n">3</div><div><h3>Agent permission games</h3><p>Grants and mandates, played: what an agent can reach against what it was asked to do.</p><p class="u">sgit.ai · published vaults</p></div></div>
+    <div class="d" data-in="2.4"><div class="n">4</div><div><h3>A team of agents, in the open</h3><p>The newsroom, and this site: written mandates, briefs as files, CI owns the version.</p><p class="u">newsroom.sgit.ai</p></div></div>
+  </div>
+  <p id="tbc" data-in="3">Running order to be confirmed on the night.</p>
+  <div class="ft">Every demo's source is linked from the-ultimate-insider.presentation.sgit.ai</div>
+  <div class="bar"><i></i></div>
+</div>
+</body>
+</html>

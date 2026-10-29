@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Five public incidents, three of them not attacks</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+#axis{position:absolute;left:80px;right:80px;top:330px;height:4px;background:var(--line2);border-radius:2px;transform-origin:0 50%}
+.m{position:absolute;top:322px;width:20px;height:20px;border-radius:50%;margin-left:-10px;border:4px solid var(--bg)}
+.ev{position:absolute;width:214px;margin-left:-107px;border:2px solid var(--line);border-radius:14px;background:var(--panel);padding:10px 14px}
+.ev .d{font:800 14px ui-monospace,monospace;color:var(--dim)}
+.ev h4{margin:2px 0 4px;font:800 22px system-ui;color:var(--head)}
+.ev p{margin:0;font-size:15.5px;line-height:1.3}
+.ev .tag{display:inline-block;margin-top:8px;font:800 12.5px system-ui;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px}
+.up{top:128px}.dn{top:366px}
+.nat .tag{background:var(--infra-t);color:var(--infra)}.nat{border-color:var(--infra)}
+.att .tag{background:var(--agent-t);color:var(--agent)}.att{border-color:var(--agent)}
+.nat+.m,.m.nat{background:var(--infra)}.m.att{background:var(--agent)}
+#tally{position:absolute;left:60px;right:60px;top:574px;display:flex;justify-content:center;gap:40px;font:800 24px system-ui}
+#line{position:absolute;left:60px;right:60px;top:614px;text-align:center;font:700 34px Georgia,serif;color:var(--head)}
+#line em{font-style:normal;color:var(--agent)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="14">
+  <p class="kk a">Act one · the public record, June to November 2025</p>
+  <div class="hl" data-in="0" style="font-size:40px">Not anecdotes any more. <em>A pattern.</em></div>
+  <div id="axis"></div>
+  <div class="m nat" style="left:12%" data-in="1"></div><div class="ev up nat" style="left:12%" data-in="1"><p class="d">June 2025</p><h4>EchoLeak</h4><p>One crafted email; Copilot reads internal files and sends them out. No click.</p><span class="tag">a researcher's finding</span></div>
+  <div class="m nat" style="left:31%" data-in="2.6"></div><div class="ev dn nat" style="left:31%" data-in="2.6"><p class="d">July 2025</p><h4>Replit</h4><p>Deletes a production database during a code freeze. Empty results looked like a bug.</p><span class="tag">an agent being an agent</span></div>
+  <div class="m nat" style="left:50%" data-in="4.2"></div><div class="ev up nat" style="left:50%" data-in="4.2"><p class="d">July 2025</p><h4>Gemini CLI</h4><p>Destroys a user's files. "I have failed you completely and catastrophically."</p><span class="tag">an agent being an agent</span></div>
+  <div class="m att" style="left:69%" data-in="5.8"></div><div class="ev dn att" style="left:69%" data-in="5.8"><p class="d">July 2025</p><h4>Amazon Q</h4><p>Ships with an injected prompt to wipe disks and cloud. Saved by a formatting flaw.</p><span class="tag">pointed on purpose</span></div>
+  <div class="m att" style="left:88%" data-in="7.4"></div><div class="ev up att" style="left:88%" data-in="7.4"><p class="d">November 2025</p><h4>Claude Code</h4><p>A state actor's espionage campaign, ~30 targets; the model did 80 to 90% of the work.</p><span class="tag">pointed on purpose</span></div>
+  <div id="tally" data-in="9.2"><span class="c-infra">3 not attacks</span><span class="c-dim">·</span><span class="c-agent">2 on purpose</span></div>
+  <div id="line" data-in="10.6">The distance between the two is <em>a prompt.</em></div>
+  <div class="ft">Hack The Box (EchoLeak, CVE-2025-32711) · dev.to and Jason Lemkin (Replit) · AI Incident Database 1178 (Gemini CLI) · SC Media (Amazon Q) · Anthropic, November 2025</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+window.SLIDE_RENDER = function (t, S) { S.$('axis').style.transform = 'scaleX(' + S.ease(S.seg(t, .3, 8)) + ')' }
+</script>
+</body>
+</html>
