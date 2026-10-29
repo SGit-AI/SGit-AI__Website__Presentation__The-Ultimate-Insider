@@ -39,6 +39,13 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 
 - `team/deck/`: deck@the-ultimate-insider (the talk's beats, script, slide content, and the studio's briefs); `ROLE.md` only, no `policy.json` yet.
 
+## ruv.sgit (kept by ruv.sgit@the-ultimate-insider)
+- `team/ruv-sgit/`: ruv.sgit@the-ultimate-insider, joined 29 October 2026 on the editor's request; policy draft (not yet agreed). Animations and infographics, each made in a run.
+- `team/ruv-sgit/tools/ruvsgit.py`: the runner (open, deliver, close, seal, delete), adapted from SGit-AI__Website__Ruv; vaults on `dev.send.sgraph.ai`; the token and vault keys only in `~/.ruv-sgit-insider/` (0600), never in the repository. Ruflo 3.56.10 and sgit-ai 0.27.0, installed outside the repository by `ruvsgit.py setup`.
+- Runs: `team/ruv-sgit/runs/<run>.spec.json` and `.evidence.json`; the ledger at `/ruv-sgit/vaults.json`. One run so far, r1-article.
+- Article: `/articles/how-ruv-sgit-works.html`, including how members ask for an infographic.
+- No infographic made yet; none is wired into the talk.
+
 ## Does not exist yet
 - `team/deck/policy.json`; keys for dev, deck, security and researcher; any scheduled task; a Stop hook.
 - A `review/` folder.

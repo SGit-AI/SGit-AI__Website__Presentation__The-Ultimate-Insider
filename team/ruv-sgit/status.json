@@ -1,0 +1,13 @@
+{
+  "schema": "the-ultimate-insider/agent-status/v1",
+  "agent": "ruv-sgit",
+  "as_of": "2026-10-29",
+  "round": 1,
+  "state": "round 1: joined; the runner set up against dev.send.sgraph.ai; run r1-article made the article on how ruv.sgit works",
+  "done": [],
+  "next": [],
+  "asks": [],
+  "tokens": null,
+  "tokens_how": "the session does not show its own token count; workers' tokens are in the ledger",
+  "policy": { "outside_scope": 0, "out_of_scope_requests": 0, "pushbacks": 0, "overrides": 0, "injection_seen": 0 }
+}
