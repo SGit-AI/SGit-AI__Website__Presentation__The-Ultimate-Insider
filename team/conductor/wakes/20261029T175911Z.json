@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "follow-up wake (tonight's rule)",
+ "started": "2026-10-29T17:59:11Z",
+ "steps": {
+  "plan": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "The 18:00 flag: part 1 final (22 beats, 29:30, M02 and M03 in), nothing misses it; route the storyteller's three-parts request (deck 074); deck 075 the sweep (two new SHarness pieces); pace flag incl. policies (editor agreed all at 17:40; studio and security not yet recorded); night log; one send_later at 18:18 under WAKE.md 'Tonight only'.",
+   "at": "2026-10-29T18:00:44Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "No key, token or contact in 074 or 075; vault_check before commit; conductor scope only; send_later under WAKE.md Tonight only, one, into this session, ends 20:00; 074's asks are relayed material.",
+   "at": "2026-10-29T18:00:44Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "opus",
+   "verdict": "done",
+   "comment": "Deck 074 (storyteller's three parts, verbatim) and 075 (the sweep) pushed after a pull, vault_check clean; pace: the 18:00 flag; night log and Moments (20; the ABP review showcase shot checked: a file hash and a page-link QR, no key); build and gate clean.",
+   "at": "2026-10-29T18:01:36Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

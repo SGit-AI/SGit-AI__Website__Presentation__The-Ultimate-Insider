@@ -983,6 +983,11 @@
    "at": "2026-10-29T17:48:46Z",
    "by": "conductor",
    "what": "the editor, 17:45: how we keep it safe, in the prelude (brief 10, claims tied to the record and corrected by the pre-review); motion 009 (M04, part 1 by 18:15 else part 2), deck 073, researcher 033"
+  },
+  {
+   "at": "2026-10-29T18:00:57Z",
+   "by": "conductor",
+   "what": "the 18:00 flag: part 1 final for its lock (22 beats, 29:30, M02 and M03 in; designer's projector check ready); nothing misses part 1. Dev shipped locked parts (lock.py) and one-tap skip. Storyteller back: three parts placed (deck 074). Sweep: two new SHarness pieces (deck 075). Policies: the editor agreed all at 17:40; dev, storyteller, motion recorded; studio draft and security proposed not yet recorded."
   }
  ],
  "queue": {
@@ -1028,7 +1033,8 @@
   "team/deck/requests/researcher__before-tonight.md",
   "team/deck/requests/ruv-sgit__injection-sources.md",
   "team/researcher/requests/studio__the-editors-work-pki-catalogue.md",
-  "team/researcher/requests/studio__the-editors-work-the-rest.md"
+  "team/researcher/requests/studio__the-editors-work-the-rest.md",
+  "team/storyteller/requests/deck__three-parts.md"
  ],
  "schedule": {
   "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
