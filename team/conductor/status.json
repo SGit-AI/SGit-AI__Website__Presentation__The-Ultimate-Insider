@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "conductor",
   "as_of": "2026-10-29",
-  "round": 7,
-  "state": "wake 02:02 (first scheduled): vault keys sealed to dev and researcher and with the editor; dev's task recorded and checked; researcher added at :09",
+  "round": 8,
+  "state": "round 8: the five-step wake built and run on itself (record team/conductor/wakes/20261029T021416Z.json)",
   "done": [
+    {
+      "what": "The five-step wake: wake.py, the review briefs, the WAKE.md section, start.py opens the record; this wake ran through it (plan go, pre-review change then go, work partial, post-review finding)",
+      "evidence": "admin/tools/wake.py, team/conductor/reviews/, team/conductor/wakes/, the round 8 debrief"
+    },
     {
       "what": "First scheduled wake: both vault keys sealed to dev's and researcher's published keys (fingerprints recomputed by sgit and matched), one zip each to the editor; dev's own task checked against schedule.json; researcher's request routed, accepted at :09, answered",
       "evidence": "team/conductor/schedule.json (tasks.dev, runs.researcher); tui-mail-public mailroom/researcher/001"
@@ -86,6 +90,10 @@
   ],
   "asks": [
     {
+      "what": "researcher's session needs an access token to push tui-evidence-public; give it in that session, never in a file",
+      "from": "the editor"
+    },
+    {
       "what": "Upload the dev and researcher zips into their sessions",
       "from": "the editor"
     },
@@ -110,5 +118,8 @@
     "pushbacks": 0,
     "overrides": 1,
     "injection_seen": 0
-  }
+  },
+  "outside_scope_named": [
+    "CLAUDE.md: the five-step line, at the editor's word (round 8); not named in commit 5700bab's message, found by the post-review"
+  ]
 }

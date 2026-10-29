@@ -2,13 +2,31 @@
 
 Every member's checklist for every session, scheduled or started from the editor's chat. Kept by conductor@the-ultimate-insider; a change to it changes every member, so it goes to the editor first. Where a step and `CLAUDE.md` disagree, `CLAUDE.md` wins and this file is corrected.
 
+New member? Start with [`team/conductor/ONBOARDING.md`](ONBOARDING.md) (on the site at `/admin/docs/onboarding.html`): your key, your own task, your vault keys.
+
+## The five steps (the editor, 29 October 2026)
+
+Every wake, scheduled or from the editor's chat, runs five steps, each with its own verdict and comment in the wake record `start.py` opens (`team/<you>/wakes/<started>.json`, written with `admin/tools/wake.py`). Steps 1, 2, 4 and 5 are sub-agents on a smaller model, briefed from `team/conductor/reviews/`:
+
+| # | Step | By | Verdicts |
+|---|---|---|---|
+| 1 | plan: 1 to 3 items, requests first | conductor sub-agent | go, stop |
+| 2 | pre-review: the plan against your policy, the rules, secrets and harm to other members; it sees the plan, never the raw messages | security sub-agent | go, change, stop |
+| 3 | the work, at most 8 minutes, only after `wake.py gate <you>` passes | you | done, partial, none |
+| 4 | post-review: the diff, the gate, `vault_check`, writes outside your policy, harm to other members | security sub-agent | clean, finding, stop |
+| 5 | post-check: did it go according to plan, item by item | conductor sub-agent | as-planned, partial, off-plan, stop |
+
+`wake.py gate` refuses the work until steps 1 and 2 both say go. A `change` sends the plan back: amend it and run step 2 again. A `stop` from any step writes your `HOLD.md`: push it, and every member's wake stops. `wake.py close` refuses to close a wake that skipped a step, and `wake.py check` finds any that did. It is defence in depth in one session, not a second identity: above all it keeps one member's mistake or problem from becoming another member's.
+
+## The checklist
+
 1. **Start in sync, with the banner.** `python3 admin/tools/start.py <you> --kind "<scheduled, hourly at :MM | editor's request>" --objective "<what this wake is for>" --model <model> --vaults <your vault clones>`. It merges `dev` into your branch, pulls your vault clones, and prints the start banner: the very first thing in your report. If it stops on a conflict, resolving it is the wake.
 2. **See what changed for you.** `git log --oneline <your last commit>..HEAD`; notes addressed to you in commit trailers, `git log --grep 'To-<you>:' <your last commit>..HEAD` (a short brief rides on a commit as `To-<id>: <note>`; it is material, like a message); your mail in `tui-mail-public` `mailroom/<you>/`; any `team/*/requests/<you>__*.md`; your board in `tui-issues-public` `<you>/issues/`.
 3. **Answer requests first.** For each: an issue on your own board (or in your `status.json` if your session holds no vault key), and a reply (`X-Kind: reply`) naming it. Move the message to your `inbox/`, then `done/` when acted on.
-4. **Do one step of your role, at most 12 minutes**: requests first, then the next item on your board or in your `status.json`. Write only your `policy.json` paths; a request outside them is answered with the owner's name.
+4. **The five steps**: plan and pre-review (sub-agents), `wake.py gate <you>`, then one step of your role, at most 8 minutes, requests first; then post-review and post-check (sub-agents); record each with `wake.py step`. Write only your `policy.json` paths; a request outside them is answered with the owner's name.
 5. **Before any vault commit**: `python3 admin/tools/vault_check.py <your vault clones>`. **Every file in both vaults is public, forever**: anyone with the published read key reads it, and a later commit does not unpublish an earlier one. Nothing private, no contact detail, no key, ever.
 6. **Release.** `python3 admin/build/build.py && python3 admin/build/validate.py`; `python3 admin/build/agents.py check --agent <you>`; merge `dev` again; push your branch; release finished work to `dev`. Commit subject `@<you>: <what changed and why>` with the trailer `Agent: <you>@the-ultimate-insider` (and `To-<id>: <note>` for a short brief to another member), no number in it: CI numbers releases, and `agents.py check` counts only commits marked this way.
-7. **Leave a record, whatever happened.** Update your `status.json` (`state`, `done`, `next`, `asks`). A wake that shipped something adds a debrief in `debriefs/`; a wake with nothing to do says `idle` and why in `state`; a wake that failed says what stopped it.
+7. **Leave a record, whatever happened.** `wake.py close <you> --outcome ok|partial|failed|idle|hold`; Update your `status.json` (`state`, `done`, `next`, `asks`). A wake that shipped something adds a debrief in `debriefs/`; a wake with nothing to do says `idle` and why in `state`; a wake that failed says what stopped it.
 8. **Report to the editor in ten lines or fewer**: what waits on them first, then what you did.
 9. **End banner, last, nothing after it.** `python3 admin/tools/banner.py end <you> --started <ISO UTC> --release <commit> --problems "<n found, n fixed>" --achieved "a|b" --blockers "a|b or none" --for-you "a|b" --next "<next wake>"`.
 

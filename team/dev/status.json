@@ -2,9 +2,21 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 4,
-  "state": "round 4 closed: the admin section for seeing what the agents do; dev's key published; hourly task created, first wake 02:47 UTC; waiting for the sealed vault keys",
+  "round": 5,
+  "state": "round 5 closed: the vault keys opened, both vaults cloned in the scratchpad, dev's board and mail in use; next wake 02:47 UTC",
   "done": [
+    {
+      "what": "Opened both sealed vault keys, cloned tui-issues-public and tui-mail-public into the scratchpad, deleted the opened key files",
+      "evidence": "team/dev/debriefs/2026-10-29__the-vault-keys.md"
+    },
+    {
+      "what": "Answered the conductor's two requests (issues dev 001, 002 done; replies in mailroom/conductor)",
+      "evidence": "tui-issues-public dev/issues/done/; tui-mail-public mailroom/conductor/001, 002"
+    },
+    {
+      "what": "The vaults page warns at the top: every file is public, forever",
+      "evidence": "/admin/vaults.html"
+    },
     {
       "what": "Admin section: a side navigation at full width over admin, team and brief pages",
       "evidence": "admin/build/build.py (shell, side_nav), /admin/"
@@ -20,39 +32,19 @@
     {
       "what": "dev's session key, published; hourly task created into this session",
       "evidence": "team/dev/key.json; trig_017ioREjx6jKCDzubSXQ64ot"
-    },
-    {
-      "what": "Carried conductor@, deck@ and ruv.sgit@'s branches into dev, four conflicts resolved",
-      "evidence": "merge commits on claude/dreamy-mayer-dwprr2"
-    },
-    {
-      "what": "The board: tui-issues-public read live in the browser with sgit.ai's vault-embed.js, pinned",
-      "evidence": "/team/board.html, src/static/assets/board.js, src/static/assets/vendor/"
-    },
-    {
-      "what": "agents.py check counts only the member's own commits; gate checks vendored checksums",
-      "evidence": "admin/build/agents.py, admin/build/validate.py"
     }
   ],
   "next": [
     {
-      "what": "Open the sealed vault keys when the editor gives them; clone both vaults into the scratchpad",
-      "why": "so dev's work lives on the board and dev reads its mail"
-    },
-    {
-      "what": "Pin the workflow's actions to commit SHAs",
+      "what": "Issue dev 003: pin the workflow's actions to commit SHAs",
       "why": "a tag can move"
     },
     {
-      "what": "A Stop hook reminding a session to debrief",
+      "what": "Issue dev 004: a Stop hook reminding a session to debrief",
       "why": "rounds should not end without one"
     }
   ],
   "asks": [
-    {
-      "what": "The zip of vault keys sealed to sha256:ecc1af727bb053cb",
-      "from": "the editor"
-    },
     {
       "what": "Is carrying members' branches into dev a standing duty of dev? Agree dev's policy.json",
       "from": "the editor"
@@ -78,5 +70,10 @@
     "fingerprint": "sha256:34bb81872471a542",
     "encryption_fingerprint": "sha256:ecc1af727bb053cb",
     "file": "team/dev/key.json"
+  },
+  "vaults": {
+    "clones": "the session scratchpad: vaults/tui-issues-public, vaults/tui-mail-public (never in a repository)",
+    "opened_key_files": "deleted after cloning",
+    "push": "sgit push --token from the environment's SG_SEND_ACCESS_TOKEN"
   }
 }
