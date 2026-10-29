@@ -4,6 +4,9 @@
   try { saved = localStorage.getItem(KEY) } catch (e) {}
   if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved)
   document.addEventListener('DOMContentLoaded', function () {
+    // the side navigation starts closed on a phone, so each page shows its own heading first (designer@, design note 1, item 5);
+    // it is rendered open, so a wide screen shows it even without script
+    if (window.matchMedia && !matchMedia('(min-width:861px)').matches) document.querySelectorAll('.side > details[open]').forEach(function (d) { d.removeAttribute('open') })
     var btn = document.querySelector('button.theme')
     if (!btn) return
     btn.addEventListener('click', function () {

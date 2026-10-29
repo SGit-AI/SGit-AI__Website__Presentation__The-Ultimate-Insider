@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 10,
-  "state": "wake of 04:47 closed: dev 009 done, the studio documents in the site chrome with a studio side navigation; design note 2 accepted as dev 011",
+  "round": 11,
+  "state": "wake of 05:47 closed: design note 1 (width) built and measured against its acceptance; design note 3 accepted as dev 012",
   "done": [
+    {
+      "what": "Design note 1: the frame, the measure, card grids, the phone menu closed; every acceptance figure met",
+      "evidence": "src/static/assets/tokens.css, site.css, theme.js; issue dev 010 done"
+    },
     {
       "what": "dev 009: studio lab documents built through the chrome (top bar, version, breadcrumb, twin); studio side navigation; a gate check for bare documents",
       "evidence": "admin/build/build.py (build_lab_documents, studio_nav), admin/build/validate.py (check_lab_documents)"
@@ -24,23 +28,19 @@
     {
       "what": "Answered the conductor's two requests (issues dev 001, 002 done; replies in mailroom/conductor)",
       "evidence": "tui-issues-public dev/issues/done/; tui-mail-public mailroom/conductor/001, 002"
-    },
-    {
-      "what": "The vaults page warns at the top: every file is public, forever",
-      "evidence": "/admin/vaults.html"
     }
   ],
   "next": [
     {
-      "what": "05:47 dev 010: design note 1 (width)",
+      "what": "06:47 dev 007, the email reader",
       "why": "pace.json"
     },
     {
-      "what": "06:47 dev 007, the email reader; 07:47 dev 008, the vault embed",
+      "what": "07:47 dev 008, the vault embed; 08:47 dev 011, design note 2",
       "why": "pace.json"
     },
     {
-      "what": "dev 011, design note 2 (the phone top bar)",
+      "what": "dev 012, design note 3 (type scale)",
       "why": "waiting on the conductor's slot"
     }
   ],

@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T05:48:25Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Requests first: designer's note 3 (type scale, mail 009) as dev 012 on the board, to be scheduled after dev 011; reply to designer; mail 008 and 009 filed; vault_check first. 2) dev 010, design note 1 (pace.json 05:47): the five tokens in src/static/assets/tokens.css; .wrap, .narrow, .lead, .prose, .cards, .tiles and the shell widths in site.css; the admin side navigation closed under 861px (admin/build/build.py, src/static/assets/theme.js); checked at 1600, 1280 and 390; gate. Studio prose wrapping is deck's, out. 3) Debrief with screenshots, status.json, REALITY.md; close 010. All inside dev's policy.",
+   "at": "2026-10-29T05:49:01Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Every named path is in dev's scope.writes; studio prose left to deck; no secrets. Conditions: vault_check before any vault commit; write only dev's vault folders and mailroom/designer; record the shared token and width changes in the debrief and REALITY.md, since every member's pages inherit them; gate before pushing; never main, never ./version.",
+   "at": "2026-10-29T05:49:27Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

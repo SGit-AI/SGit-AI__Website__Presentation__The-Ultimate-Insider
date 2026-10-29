@@ -13,11 +13,11 @@ p,li{overflow-wrap:anywhere}
 code{font:.88em ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--bg2);border:1px solid var(--line);border-radius:5px;padding:0 .3em}
 pre{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;font-size:14px}
 pre code{background:none;border:0;padding:0}
-.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
-.narrow{max-width:780px}
+.wrap{max-width:var(--frame);margin:0 auto;padding:0 var(--gutter)}
+.narrow{max-width:calc(var(--measure) + 2*var(--gutter))}
 .skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:var(--card);padding:6px 10px;z-index:9}
 .kicker{font:700 12.5px system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
-.lead{font-size:19px;color:var(--dim);max-width:70ch}
+.lead{font-size:19px;color:var(--dim);max-width:var(--measure)}
 .note{font-size:14.5px;color:var(--dim)}
 
 /* chrome */
@@ -84,13 +84,13 @@ button.theme{font:600 13px system-ui,sans-serif;background:var(--card);color:var
 .deck iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
 /* cards, articles, script */
-.cards{list-style:none;padding:0;margin:20px 0;display:grid;gap:14px}
+.cards{list-style:none;padding:0;margin:20px 0;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--card-min)),1fr))}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;box-shadow:var(--shadow)}
 .card h2{font-size:22px;margin:0 0 6px}.card p{margin:0}
 .card .kicker{margin-bottom:4px}
 .card.ext{border-style:dashed}
 .prose{padding-top:20px}
-.prose p,.prose li{max-width:70ch}
+.prose :is(p,li,blockquote,dl),.measure{max-width:var(--measure)}
 .prose blockquote{margin:1.2em 0;padding:4px 18px;border-left:4px solid var(--accent);background:var(--accent-t);border-radius:0 10px 10px 0}
 .crumbs{font-size:14px;color:var(--dim);margin:6px 0 0}
 .art-head{border-bottom:1px solid var(--line);margin-bottom:10px;padding-bottom:10px}
@@ -111,7 +111,7 @@ th{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--dim)
 .beat .say{margin:8px 0 4px;font-size:16.5px}
 .beat .cue,.beat .srcs{font-size:14px;color:var(--dim);margin:4px 0 0}
 .src-list li{margin:0 0 8px}
-.tiles{list-style:none;padding:0;margin:22px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.tiles{list-style:none;padding:0;margin:22px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--thumb-min)),1fr));gap:16px}
 .tile a{display:block;color:var(--text)}
 .tile a:hover{text-decoration:none}
 .tile .thumb{display:block;position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0c0f15}
@@ -196,7 +196,7 @@ th{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--dim)
 main>section.wrap:first-child,main>article.wrap:first-child{padding-top:20px}
 
 /* the admin section: a side navigation, and the full width of the screen */
-body.adm .top .wrap{max-width:none;padding:0 24px}
+body.adm .top .wrap{padding:0 var(--gutter)}
 .shell{display:grid;grid-template-columns:250px minmax(0,1fr);gap:0;min-height:calc(100vh - 59px)}
 .side{border-right:1px solid var(--line);background:var(--bg2);padding:18px 14px 30px}
 .side details>summary{display:none}
@@ -208,16 +208,15 @@ body.adm .top .wrap{max-width:none;padding:0 24px}
 .side a[aria-current]{background:var(--accent);color:var(--on-accent);font-weight:650}
 @media(min-width:861px){.side>details{position:sticky;top:76px}}
 .shell-main{min-width:0;padding:0 8px 40px}
-.shell-main .wrap,.shell-main .narrow{max-width:none;margin:0;padding:0 28px}
-.shell-main .prose p,.shell-main .prose li,.shell-main .lead{max-width:95ch}
-body.adm .foot .wrap{max-width:none;padding:0 24px}
+.shell-main .wrap,.shell-main .narrow{max-width:none;margin:0;padding:0 var(--gutter)}
+.shell-main .prose p,.shell-main .prose li,.shell-main .lead{max-width:var(--measure)}
+body.adm .foot .wrap{padding:0 var(--gutter)}
 body.adm .foot{margin-top:0}
 @media(max-width:860px){
   .shell{grid-template-columns:1fr}
   .side{border-right:0;border-bottom:1px solid var(--line);padding:8px 14px}
   .side details>summary{display:block;cursor:pointer;font:650 14.5px system-ui,sans-serif;padding:6px 4px}
   .side details:not([open])>.sg,.side details:not([open])>ul{display:none}
-  .shell-main .wrap,.shell-main .narrow{padding:0 16px}
 }
 
 /* commits and messages */
@@ -248,7 +247,7 @@ body.adm .foot{margin-top:0}
 .vault img.qr{width:220px;height:220px;border:1px solid var(--line);border-radius:10px;background:#fff}
 @media(max-width:700px){.vault{grid-template-columns:1fr}}
 .shell-main>section:first-child,.shell-main>article:first-child{padding-top:22px}
-.pubwarn{border:2px solid var(--agent);background:var(--agent-t);border-radius:12px;padding:14px 18px;margin:8px 0 18px;font-size:18px;line-height:1.45;max-width:95ch}
+.pubwarn{border:2px solid var(--agent);background:var(--agent-t);border-radius:12px;padding:14px 18px;margin:8px 0 18px;font-size:18px;line-height:1.45;max-width:var(--measure)}
 .pubwarn b{color:var(--agent)}
 
 /* wake records: five steps, each verdict and comment */
