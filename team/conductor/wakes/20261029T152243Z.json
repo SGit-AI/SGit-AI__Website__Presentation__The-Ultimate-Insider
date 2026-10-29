@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request",
+ "started": "2026-10-29T15:22:43Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan by the member at the editor's word ('can you create the briefs for the motion@ and studio@ agents and can you give me here their first prompts'). Split so that no file has two owners and nothing in flight is duplicated: ruv.sgit keeps the programme (E05 to E14, its redos, stages on its pieces); motion@ makes the new story animations deck requests (the building, could have been worse, the integrity shift, the worm era against today, Wardley evolution, limits as controls, the team as the example), writing team/motion/** and src/static/motion/**; studio@ ports and adapts ruv.sgit.ai's pieces (ABP slides, studio v4 the policy gate, the definition animated, the POC1 policy-engine result), writing team/studio/** and src/static/studio-ports/**. 1) team/conductor/briefs/2026-10-29__onboarding-motion.md and __onboarding-studio.md, each with the role, paths, slot (motion :24, studio :12, proposed) and the paste prompt. 2) schedule.json: both runs proposed; pace.json producers. 3) Requests: dev (add motion/ and studio-ports/ to the gate's standalone list), deck (who gets which request), ruv.sgit (notice: what moved and what stays). vault_check first.",
+   "at": "2026-10-29T15:22:57Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "No overlap: team/motion/**, src/static/motion/**, team/studio/**, src/static/studio-ports/** match no existing scope.writes. The conductor creates no task or session. Conditions: no key in the paste prompts; motion and studio create their own tasks at the editor's word; the dev request adds the gate's standalone list.",
+   "at": "2026-10-29T15:23:49Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
