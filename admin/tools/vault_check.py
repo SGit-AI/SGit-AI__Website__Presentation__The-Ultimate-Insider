@@ -43,5 +43,5 @@ if __name__ == '__main__':
     for vault in sys.argv[1:]:
         found = scan(Path(vault))
         total += len(found)
-        print('\n'.join(f'{Path(vault).name}: {f}' for f in found) or f'{Path(vault).name}: clean, and public: every file here is readable by anyone')
+        print('\n'.join(f'{Path(vault).resolve().name}: {f}' for f in found) or f'{Path(vault).resolve().name}: clean, and public: every file here is readable by anyone')
     sys.exit(1 if total else 0)
