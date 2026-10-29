@@ -993,6 +993,11 @@
    "at": "2026-10-29T18:21:48Z",
    "by": "conductor",
    "what": "the 18:20 flag: part 1 final for the 18:30 lock (22 beats, 29:30; deck put the title slide first at 18:14); nothing else for part 1. Deck placed most of the gap list; still out: SHarness moving-parts and run-pipeline, b01/v2 opener and three, studio's abp-prose and abp-enforcement (deck 081). Storyteller's parts-2-and-3 gaps routed (deck 080). Pre-lock refresh: 616 commits, 198 releases, 154 wakes, 18.1 h; the mini deck and Moments (21). M03 in part 1 shows its own 17:02 copy of the numbers. Policies: studio draft and security proposed still unrecorded."
+  },
+  {
+   "at": "2026-10-29T18:38:34Z",
+   "by": "conductor",
+   "what": "18:36: part 1 NOT locked (no talk/engine/locked); its beats and 22 slide folders unchanged since 18:30 (99d0a5c), so a lock now freezes the 18:30 state. Dev asked to run lock.py now (dev 046); deck asked to treat part 1 as locked (084); the editor told. Sweep: studio's open-source, invest, fork showcases (084)."
   }
  ],
  "queue": {
@@ -1040,7 +1045,8 @@
   "team/researcher/requests/studio__the-editors-work-pki-catalogue.md",
   "team/researcher/requests/studio__the-editors-work-the-rest.md",
   "team/storyteller/requests/deck__three-parts.md",
-  "team/storyteller/requests/deck__parts-2-and-3-gaps.md"
+  "team/storyteller/requests/deck__parts-2-and-3-gaps.md",
+  "team/researcher/requests/studio__open-source-investors-security-products.md"
  ],
  "schedule": {
   "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
