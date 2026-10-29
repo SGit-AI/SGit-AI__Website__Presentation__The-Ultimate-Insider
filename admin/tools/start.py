@@ -87,7 +87,9 @@ def main():
                 rows += [flag, value]
         subprocess.run(rows)
         sys.exit(3)
-    synced         = f'in sync: {branch} at {head}, {behind} commit(s) from dev merged' + (f'; vaults pulled: {", ".join(pulled)}' if pulled else '; no vaults pulled')
+    opened         = subprocess.run([sys.executable, str(ROOT / 'admin' / 'tools' / 'wake.py'), 'open', a.agent, '--kind', a.kind],
+                                    capture_output=True, text=True).stdout.strip()            # the five-step wake record (WAKE.md)
+    synced         = f'in sync: {branch} at {head}, {behind} commit(s) from dev merged' + (f'; vaults pulled: {", ".join(pulled)}' if pulled else '; no vaults pulled') + (f'; wake record {opened}' if opened else '')
     banner         = [sys.executable, str(ROOT / 'admin' / 'tools' / 'banner.py'), 'start', a.agent, '--kind', a.kind,
                       '--objective', (a.objective or 'not stated') + f' ({synced})']
     for flag, value in (('--model', a.model), ('--scheduled', a.scheduled)):

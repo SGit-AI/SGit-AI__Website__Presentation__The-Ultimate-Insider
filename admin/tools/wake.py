@@ -8,6 +8,7 @@
 #   python3 admin/tools/wake.py step  <you> post_review --by security  --model sonnet --verdict clean|finding|stop --comment "..."
 #   python3 admin/tools/wake.py step  <you> post_check  --by conductor --model sonnet --verdict as-planned|partial|off-plan --comment "<plan vs actual>"
 #   python3 admin/tools/wake.py close <you> --outcome ok|partial|failed|idle|hold    exit 1 if a step is missing
+#   python3 admin/tools/wake.py check                                               every closed record has its five steps (for the gate)
 #
 # The editor's rule (29 October 2026): every wake runs the conductor and security before and after the work, each as a
 # sub-agent with its own comment, so a mistake, a steered message or one member's problem does not spread to another
@@ -58,8 +59,8 @@ def hold(agent, step, comment):
 
 def main():
     p = argparse.ArgumentParser(description='the five-step wake record')
-    p.add_argument('action', choices=('open', 'step', 'gate', 'close'))
-    p.add_argument('agent')
+    p.add_argument('action', choices=('open', 'step', 'gate', 'close', 'check'))
+    p.add_argument('agent', nargs='?')
     p.add_argument('step', nargs='?', choices=list(STEPS))
     p.add_argument('--kind', default='wake')
     p.add_argument('--by')
@@ -69,6 +70,10 @@ def main():
     p.add_argument('--outcome', choices=('ok', 'partial', 'failed', 'idle', 'hold'))
     a = p.parse_args()
 
+    if a.action == 'check':
+        sys.exit(1 if check() else 0)
+    if not a.agent:
+        sys.exit('wake: name the member')
     if a.action == 'open':
         folder(a.agent).mkdir(parents=True, exist_ok=True)
         started = now()
@@ -105,6 +110,28 @@ def main():
         rec['closed'], rec['outcome'] = now(), a.outcome or 'ok'
         save(path, rec)
         print(f'wake: closed {path.relative_to(ROOT)} ({rec["outcome"]})')
+
+
+def check():                                                        # every closed wake record, from 29 October 2026 on, has all five steps
+    findings = []
+    for path in sorted((ROOT / 'team').glob('*/wakes/*.json')):
+        rel = path.relative_to(ROOT)
+        try:
+            rec = json.loads(path.read_text())
+        except ValueError:
+            findings.append(f'{rel}: not JSON'); continue
+        if rec.get('schema') != 'the-ultimate-insider/wake/v1' or not rec.get('closed') or rec.get('outcome') == 'hold':
+            continue
+        for step, (_, allowed) in STEPS.items():
+            s = rec['steps'].get(step)
+            if not s:
+                findings.append(f'{rel}: closed without {step}')
+            elif s.get('verdict') not in allowed or not s.get('comment', '').strip():
+                findings.append(f'{rel}: {step} has no valid verdict or no comment')
+        if rec['steps'].get('work') and not gate_ok(rec):
+            findings.append(f'{rel}: work recorded without two go verdicts before it')
+    print('\n'.join(findings) or 'wake: every closed wake record has its five steps')
+    return findings
 
 
 def verdict(rec, step):

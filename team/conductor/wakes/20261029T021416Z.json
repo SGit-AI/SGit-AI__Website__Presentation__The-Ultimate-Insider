@@ -10,6 +10,13 @@
    "verdict": "go",
    "comment": "Amended after the pre-review's change, all five conditions adopted: 0) the five-step wake: WAKE.md section (the conductor's file), sub-agent briefs in team/conductor/reviews/, `wake.py check` in admin/tools/ for wake records from now on (dev asked by request to call it from the gate), one CLAUDE.md line at the editor's word, named outside scope, every member told by To- trailers; 1) onboarding: ONBOARDING.md stays in team/conductor/ (already on the site at /admin/docs/onboarding.html), linked from the conductor's WAKE.md and ROLE.md, requests to deck and ruv-sgit in the mail vault; 2) tui-evidence-public: read-key clone, vault_check.py, then only its read key into vaults.json; 3) researcher's own task id copied into schedule.json only; nothing written in team/researcher/, no task created.",
    "at": "2026-10-29T02:14:53Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "The amended plan adopts all five conditions and stays inside policy scope.writes: ONBOARDING.md stays in team/conductor/, the gate check lives in admin/tools/ and applies only to new wake records, only the tui-evidence-public READ key goes into vaults.json after vault_check.py, schedule.json is the only file touched for researcher, no task is created. Keep the CLAUDE.md line named outside scope, run vault_check before any vault commit, ask dev by request to call wake.py check from the gate.",
+   "at": "2026-10-29T02:16:07Z"
   }
  },
  "closed": null,
