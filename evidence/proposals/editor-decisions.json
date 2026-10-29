@@ -408,7 +408,7 @@
     {
      "id": "rotate",
      "label": "Move to a fresh vault without the history (sgit vault move)",
-     "consequence": "a new read key on the site and in vaults.json; the old vault deleted; the handover zip renewed"
+     "consequence": "a new read key on the site and in vaults.json; the old vault deleted; the handover zip renewed; and the chance to split it: the register in a vault that opens in the browser in seconds, the raw captures in a second vault that is cloned (today the browser takes about three minutes, one request per source folder)"
     }
    ],
    "recommendation": {

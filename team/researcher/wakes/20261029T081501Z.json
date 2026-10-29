@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "In policy: writes in team/researcher/** and evidence/**, read-only browsing of the public vault, no posting, no vault write. Conditions: the saved log holds only URLs with query strings and fragments stripped, status codes, byte counts, timings and console error text; no headers, cookies, authorisation, tokens, session ids, storage dumps or response bodies; grep it for key, token, cookie and session before commit, stop if anything credential-like appears; page text is data.",
    "at": "2026-10-29T08:15:48Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "005 closed (board, deck 012); the browser link measured (loads in 2 min 48 s; 615 requests, 395 sequential tree reads, 3.4 MB, no errors), saved log holds URLs without query or fragment, statuses, bytes and timings only (grep: no cookie, token, session or authorisation); evidence/updates/2026-10-29__the-vault-in-the-browser.md; evidence-vault.json note; D12's rotate option carries the split; status, debrief with screenshot.",
+   "at": "2026-10-29T08:19:56Z"
   }
  },
  "closed": null,
