@@ -1,120 +1,68 @@
 {
-  "schema": "the-ultimate-insider/agent-status/v1",
-  "agent": "dev",
-  "as_of": "2026-10-29",
-  "round": 24,
-  "state": "scheduled wake of :47 (fired 16:03) closed: the home page's perfect storm, the engine fits an iPad on its own; design note 7 filed for after the talk",
-  "done": [
-    {
-      "what": "The home page and dev's article say the perfect storm (deck's words); the slide engine fits a piece opened on its own on an iPad (studio@)",
-      "evidence": "src/pages/index.html, content/articles/introducing-this-site.md, src/static/talk/engine/slide.css; team/dev/debriefs/2026-10-29__the-perfect-storm-and-the-ipad-fit.md"
-    },
-    {
-      "what": "The viewer (talk/engine/view.html), the site's offline cache (sw.js, with a kill switch), design note 6 on the dashboard and the phone's nav row",
-      "evidence": "src/static/talk/engine/view.html, src/static/sw.js, sw.json, assets/theme.js, site.css, dashboard.js; team/dev/debriefs/2026-10-29__the-viewer-the-offline-cache-and-note-6.md"
-    },
-    {
-      "what": "The player's build mode: every slide and studio piece in one list, drag or ↑ ↓, show or hide, a length and a comment each, presented at once; comments and the order sent through the editor's lane",
-      "evidence": "src/static/talk/player.html, assets/pane.js (TuiLane), admin/build/build.py (talk/pieces.json); team/dev/debriefs/2026-10-29__the-build-mode.md"
-    },
-    {
-      "what": "The player, ported from ruv.sgit.ai: the countdown against the editor's time, two stops per step, sections, the studio's pieces on the player's clock; iPad landscape and upright",
-      "evidence": "src/static/talk/player.html, talk/engine/slide.js; team/dev/briefs/2026-10-29__the-player.md; team/dev/debriefs/2026-10-29__the-player.md"
-    },
-    {
-      "what": "The editor's feedback pane and lane: notes and voice on every page, sent encrypted to the conductor through a write-only append lane opened with four words; the GitHub star; the side menu scrolls on its own",
-      "evidence": "src/static/assets/pane.js, lane.json, site.css, theme.js; admin/build/lane.py, validate.py, build.py; team/dev/debriefs/2026-10-29__the-editors-pane-and-lane.md"
-    },
-    {
-      "what": "The third circle's label moved inside its circle on the home page (designer's request)",
-      "evidence": "src/pages/index.html; issue dev 016 done; team/dev/debriefs/2026-10-29__the-third-label.md"
-    },
-    {
-      "what": "The dashboard, part 3: pace.json drawn as a flow by kind, owner and status, with what waits on review and what came back",
-      "evidence": "admin/build/build.py (flow_graph), site.css; /admin/dashboard.html#flow; issue dev 017 done; team/dev/debriefs/2026-10-29__the-flow-graph.md"
-    },
-    {
-      "what": "Design note 5: the home hero on wide screens, title to 88px, the Venn at most 600px beside it, the label inside its circle",
-      "evidence": "src/static/assets/tokens.css (--t-0, --t-lead), site.css, src/pages/index.html; issue dev 014 done; team/dev/debriefs/2026-10-29__the-home-hero.md"
-    },
-    {
-      "what": "Design note 4: tables and figures at the wide width, the text at the measure; note 3's rule T2: no lowercase text under 14px, enforced by the gate",
-      "evidence": "src/static/assets/tokens.css, site.css, talk/player.html, admin/build/validate.py; issues dev 013 and 015 done; team/dev/debriefs/2026-10-29__figures-beyond-the-measure.md"
-    },
-    {
-      "what": "Design note 3: eight type sizes as tokens, every size in site.css on the scale, no lowercase text under 14px; the gate fails a px font size in site.css",
-      "evidence": "src/static/assets/tokens.css, site.css, admin/build/validate.py (check_type_scale); issue dev 012 done; team/dev/debriefs/2026-10-29__the-type-scale.md"
-    },
-    {
-      "what": "Design note 2: the phone top bar one row that scrolls away (75px, 65px in the shells), the current section marked on every page, the 8px shell nit",
-      "evidence": "src/static/assets/site.css, theme.js, admin/build/build.py (chrome); issue dev 011 done; team/dev/debriefs/2026-10-29__the-phone-top-bar.md"
-    },
-    {
-      "what": "The embedded vault: each public vault opens on /admin/vaults.html on demand, in the official vault interface (sgit.ai vault-ui-embed.js, vendored, pinned) or as a decrypted file list",
-      "evidence": "/admin/vaults.html, src/static/assets/vault-here.js, vendor/vault-ui-embed.js; issue dev 008 done; team/dev/debriefs/2026-10-29__the-embedded-vault.md"
-    },
-    {
-      "what": "The mail reader: tui-mail-public as a mail client, live in the browser: agents, threads, letters, outboxes, who waits on whom",
-      "evidence": "/admin/mail.html, src/static/assets/mail.js, vault-open.js; issue dev 007 done"
-    },
-    {
-      "what": "Design note 1: the frame, the measure, card grids, the phone menu closed; every acceptance figure met",
-      "evidence": "src/static/assets/tokens.css, site.css, theme.js; issue dev 010 done"
-    },
-    {
-      "what": "dev 009: studio lab documents built through the chrome (top bar, version, breadcrumb, twin); studio side navigation; a gate check for bare documents",
-      "evidence": "admin/build/build.py (build_lab_documents, studio_nav), admin/build/validate.py (check_lab_documents)"
-    },
-    {
-      "what": "The dashboard, part 1: Now (clock, holds, what waits on the editor, next wakes) and the pace grid (every wake, five verdict dots); the brief and pace.json as pages",
-      "evidence": "/admin/dashboard.html, /admin/docs/the-next-hours.html, /admin/docs/pace.html; issue dev 006 done"
-    },
-    {
-      "what": "The five-step wake in the gate (wake.py check) and on the site (/admin/wakes.html, each member's page)",
-      "evidence": "99aaf05; issue dev 005; tui-mail-public mailroom/conductor/004"
-    },
-    {
-      "what": "Opened both sealed vault keys, cloned tui-issues-public and tui-mail-public into the scratchpad, deleted the opened key files",
-      "evidence": "team/dev/debriefs/2026-10-29__the-vault-keys.md"
-    }
-  ],
-  "next": [
-    {
-      "what": "after 19:00: design note 7 (dev 024), the dashboard parts 4 and 5, dev 003 and 004",
-      "why": "designer request; pace.json"
-    }
-  ],
-  "asks": [
-    {
-      "from": "dev",
-      "to": "the editor",
-      "what": "Give the conductor's session its two sealed files from the lane handover zip"
-    }
-  ],
-  "tokens": null,
-  "tokens_how": "the session does not show a token count to the agent",
-  "policy": {
-    "outside_scope": 0,
-    "out_of_scope_requests": 0,
-    "pushbacks": 0,
-    "overrides": 0,
-    "injection_seen": 0
+ "schema": "the-ultimate-insider/agent-status/v1",
+ "agent": "dev",
+ "as_of": "2026-10-29",
+ "round": "26",
+ "state": "scheduled wake of :47 (fired 16:48): the showcase slide template in (conductor 030); the 16:24 wake's post steps closed; the player frozen until after the talk",
+ "done": [
+  {
+   "what": "The player: a step per reveal, \u2190/\u2192 by step, \u2191/\u2193 by slide, the overview (W), the feedback pane docked (E), Esc back to the slide, offline from a cold start (tested live)",
+   "why": "the editor, 16:20 and 16:3x"
   },
-  "task": {
-    "id": "trig_017ioREjx6jKCDzubSXQ64ot",
-    "cron": "CRON_TZ=Europe/London 47 * * * *",
-    "session": "session_01Kw9UwED5okiUPqRn3ovgyo",
-    "first_wake_utc": "2026-10-29T02:47:00Z",
-    "prompt": "team/conductor/schedule.json, runs[dev].prompt, word for word"
+  {
+   "what": "The showcase slide template: talk/engine/showcase.js, showcase.css, qrcode.js, showcase.md and an example",
+   "why": "conductor 030"
   },
-  "key": {
-    "fingerprint": "sha256:34bb81872471a542",
-    "encryption_fingerprint": "sha256:ecc1af727bb053cb",
-    "file": "team/dev/key.json"
+  {
+   "what": "The home page and dev's article say the perfect storm (deck's words); the slide engine fits a piece opened on its own on an iPad (studio@)",
+   "evidence": "src/pages/index.html, content/articles/introducing-this-site.md, src/static/talk/engine/slide.css; team/dev/debriefs/2026-10-29__the-perfect-storm-and-the-ipad-fit.md"
   },
-  "vaults": {
-    "clones": "the session scratchpad: vaults/tui-issues-public, vaults/tui-mail-public (never in a repository)",
-    "opened_key_files": "deleted after cloning",
-    "push": "sgit push --token from the environment's SG_SEND_ACCESS_TOKEN"
+  {
+   "what": "The viewer (talk/engine/view.html), the site's offline cache (sw.js, with a kill switch), design note 6 on the dashboard and the phone's nav row",
+   "evidence": "src/static/talk/engine/view.html, src/static/sw.js, sw.json, assets/theme.js, site.css, dashboard.js; team/dev/debriefs/2026-10-29__the-viewer-the-offline-cache-and-note-6.md"
+  },
+  {
+   "what": "The player's build mode: every slide and studio piece in one list, drag or \u2191 \u2193, show or hide, a length and a comment each, presented at once; comments and the order sent through the editor's lane",
+   "evidence": "src/static/talk/player.html, assets/pane.js (TuiLane), admin/build/build.py (talk/pieces.json); team/dev/debriefs/2026-10-29__the-build-mode.md"
   }
+ ],
+ "next": [
+  {
+   "what": "after 19:00: Linux in the browser in the player with an offline fallback (dev 027), design notes 7 and 8 (dev 024, 028), the dashboard parts 4 and 5, dev 003 and 004",
+   "why": "conductor 030; designer 029 and 033; pace.json"
+  }
+ ],
+ "asks": [
+  {
+   "from": "dev",
+   "to": "the editor",
+   "what": "Give the conductor's session its two sealed files from the lane handover zip"
+  }
+ ],
+ "tokens": null,
+ "tokens_how": "the session does not show a token count to the agent",
+ "policy": {
+  "outside_scope": 0,
+  "out_of_scope_requests": 0,
+  "pushbacks": 0,
+  "overrides": 0,
+  "injection_seen": 0
+ },
+ "task": {
+  "id": "trig_017ioREjx6jKCDzubSXQ64ot",
+  "cron": "CRON_TZ=Europe/London 47 * * * *",
+  "session": "session_01Kw9UwED5okiUPqRn3ovgyo",
+  "first_wake_utc": "2026-10-29T02:47:00Z",
+  "prompt": "team/conductor/schedule.json, runs[dev].prompt, word for word"
+ },
+ "key": {
+  "fingerprint": "sha256:34bb81872471a542",
+  "encryption_fingerprint": "sha256:ecc1af727bb053cb",
+  "file": "team/dev/key.json"
+ },
+ "vaults": {
+  "clones": "the session scratchpad: vaults/tui-issues-public, vaults/tui-mail-public (never in a repository)",
+  "opened_key_files": "deleted after cloning",
+  "push": "sgit push --token from the environment's SG_SEND_ACCESS_TOKEN"
+ }
 }
