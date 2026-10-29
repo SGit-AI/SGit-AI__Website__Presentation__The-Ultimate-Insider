@@ -472,14 +472,27 @@ class Site_Build:
                       f'<h2>{esc(v["name"])}</h2><p>{esc(v["purpose"])}.</p><p><b>Layout:</b> <code>{esc(v["layout"])}</code></p>'
                       f'<p><b>Read key</b>, read only, published on purpose:</p><pre class="keyline"><code>{esc(v["read_key"])}</code></pre>'
                       f'<pre class="keyline"><code>{esc(v["clone"])}</code></pre><p>{see}<a href="{esc(v["open_url"])}">open it in the vault browser</a></p>'
-                      f'<p class="note">Write key: {esc(v["write_key"])}</p></div></section>')
+                      f'<p class="note">Write key: {esc(v["write_key"])}</p></div>{self.vault_here(v)}</section>')
         warn = ('<div class="pubwarn" role="note"><b>Every file in these vaults is public, forever.</b> Anyone with the read keys below can read every file, '
                 'and a later commit does not unpublish an earlier one. Nothing private, no contact detail, no key, ever. '
                 'Members run <code>admin/tools/vault_check.py</code> before every vault commit.</div>')
         body = (f'<section class="wrap"><p class="kicker">Keys and vaults</p><h1>The public vaults</h1>{warn}<p class="lead">{esc(data["about"])}</p>{cards}'
                 f'<p class="note">Every file in both vaults is public, forever: a later commit does not unpublish an earlier one. Data: '
                 f'<a href="vaults.json">vaults.json</a>, kept by the conductor in <code>team/conductor/vaults.json</code>.</p></section>')
-        self.page('admin/vaults.html', 'The public vaults', 'The two public vaults the team talks through, with their read keys and QR codes: the board and the mail.', body)
+        body += ('<script src="../assets/vendor/vault-embed.js"></script><script src="../assets/vault-open.js"></script>'
+                 '<script src="../assets/vault-here.js"></script>')
+        self.page('admin/vaults.html', 'The public vaults', 'The public vaults the team talks through, with their read keys and QR codes, and each one opened on the page: the board and the mail.', body)
+
+    def vault_here(self, v):                                        # open the vault on the page, on demand (dev 008); a published read key only
+        if not v.get('read_key', '').startswith('sgit_public_read_'):
+            return ''
+        esc, key = html.escape, v['read_key'].split('sgit_public_read_', 1)[1].split(':')[0]
+        return (f'<div class="here" data-endpoint="{esc(v["server"])}" data-vault="{esc(v["vault_id"])}" data-read-key="{esc(key)}">'
+                f'<div class="btns"><button type="button" class="here-open">Open it here, in the vault interface</button>'
+                f'<button type="button" class="here-list">List its files</button></div>'
+                f'<p class="note">Nothing loads until you press one. "Open it here" frames the official SG/Vault interface from <code>dev.vault.sgraph.ai</code> '
+                f'with sgit.ai\'s <code>vault-ui-embed.js</code>, which hands it this read key by <code>postMessage</code>; "List its files" decrypts the tree in this page.</p>'
+                f'<div class="here-ui"></div><div class="here-files"></div></div>')
 
     def agent_of(self, subject, body, author):                      # who a commit is from, the house way
         m = re.match(r'@([\w.-]+):', subject) or re.search(r'^Agent:\s*([\w.-]+)@', body, re.M) or re.match(r'([a-z][\w.-]*): ', subject)

@@ -332,3 +332,16 @@ table.pace td{min-width:92px}
 .lh .t{margin-left:auto;font-family:ui-monospace,monospace;font-size:12.5px}
 .lt .pl,.lt .rf{font-size:12.5px;color:var(--dim);margin:4px 0 0;overflow-wrap:anywhere}
 .lt .bd{white-space:pre-wrap;font:14px/1.5 system-ui,sans-serif;background:none;border:0;padding:8px 0 0;margin:0;overflow-wrap:anywhere}
+/* the vaults, opened on the page (dev 008) */
+.here{grid-column:1/-1;border-top:1px solid var(--line);padding-top:14px}
+.here .btns{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px}
+.here .btns button{font:inherit;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);cursor:pointer}
+.here .btns button:disabled{opacity:.55;cursor:default}
+.sgv-uiembed-label{font-weight:700;margin-top:10px}
+.sgv-embed-frame{width:100%;height:min(80vh,820px);border:1px solid var(--line);border-radius:10px;background:#fff}
+.here-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px;margin-top:8px}
+.here-tree{list-style:none;margin:0;padding:0;max-height:70vh;overflow:auto;font-size:14px}
+.here-tree button{font:inherit;background:none;border:0;color:var(--ink);padding:3px 6px;text-align:left;cursor:pointer;overflow-wrap:anywhere;width:100%;border-radius:6px}
+.here-tree button:hover,.here-tree button.on{background:var(--panel2)}
+.here-view{margin:0;max-height:70vh;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--bg)}
+@media(max-width:700px){.here-grid{grid-template-columns:1fr}}
