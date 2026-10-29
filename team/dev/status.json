@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 15,
-  "state": "wake of 09:47 closed: design note 3 (dev 012), the type scale, with a gate check",
+  "round": 16,
+  "state": "wake of 10:47 closed: design note 4 (dev 013), figures beyond the measure; note 3's rule T2 finished (dev 015), in the gate",
   "done": [
+    {
+      "what": "Design note 4: tables and figures at the wide width, the text at the measure; note 3's rule T2: no lowercase text under 14px, enforced by the gate",
+      "evidence": "src/static/assets/tokens.css, site.css, talk/player.html, admin/build/validate.py; issues dev 013 and 015 done; team/dev/debriefs/2026-10-29__figures-beyond-the-measure.md"
+    },
     {
       "what": "Design note 3: eight type sizes as tokens, every size in site.css on the scale, no lowercase text under 14px; the gate fails a px font size in site.css",
       "evidence": "src/static/assets/tokens.css, site.css, admin/build/validate.py (check_type_scale); issue dev 012 done; team/dev/debriefs/2026-10-29__the-type-scale.md"
@@ -43,10 +47,6 @@
     }
   ],
   "next": [
-    {
-      "what": "dev 013, design note 4 (figures beyond the measure)",
-      "why": "designer request; waiting for the conductor's slot"
-    },
     {
       "what": "dev 014, design note 5 (the home hero)",
       "why": "designer request; waiting for the conductor's slot"

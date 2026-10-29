@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T10:48:53Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Mail 016 (designer, T2 of note 3): the twelve lowercase 12px selectors in site.css to --t-s, the chips and badges uppercase at --t-xs; the player a.opt (src/static/talk/player.html); a T2 check in validate.py (a --t-xs rule without uppercase). 2. dev 013, design note 4: the W8 rules in site.css, --wide-max in tokens.css; check the dashboards still hold; the night article and two debriefs at 1600/1280/390. 3. Close 013, replies, status, debrief, REALITY. All in policy.json.",
+   "at": "2026-10-29T10:49:42Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "All paths in scope.writes; no holds, never items or secrets; no stop condition. Conditions: edit no other member article or debrief (read and screenshot only); say in the commit and REALITY that the gate gains a T2 check every member runs, and run the full gate on existing content first; no push to main.",
+   "at": "2026-10-29T10:49:55Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "done",
+   "comment": "T2 (mail 016, dev 015): eight selectors to 14px, chips and badges uppercase 12px, player version 14px, gate check for --t-xs without uppercase. dev 013: --wide-max, W8 rules; measured night article and two debriefs at 1600/1280/390, shells hold. Issues closed, designer reply, mail filed; debrief, status, REALITY.",
+   "at": "2026-10-29T10:53:36Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
