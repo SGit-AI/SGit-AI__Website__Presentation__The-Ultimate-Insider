@@ -16,7 +16,7 @@
 .row{position:absolute;width:580px;font:20px/24px system-ui;color:var(--text)}
 .row i{font-style:normal;font-weight:800;color:var(--head)}
 .res{position:absolute;font:700 20px/24px system-ui;white-space:nowrap}
-.res.go{color:var(--risk)}
+.res.go{color:var(--text)}
 .res.held{color:var(--accent)}
 #pic{position:absolute;left:0;top:0;width:1280px;height:720px}
 #foot{position:absolute;left:40px;right:40px;bottom:12px;font:20px/1.3 system-ui;color:var(--dim)}
@@ -28,7 +28,7 @@
   <p class="kk a">SHarness · without and with · v1, driven</p>
   <div id="id">SH1</div>
   <div class="hl" data-in="0">Same tool, same six actions: <em>without, and with.</em></div>
-  <div class="ph" id="phL" style="left:40px">Without<span>no policy: what a process running as the account can do</span></div>
+  <div class="ph" id="phL" style="left:40px">Without<span>no policy: drawn, not a measured row</span></div>
   <div class="ph" id="phR" style="left:660px">With<span>hello's deny-all policy, the kernel told first</span></div>
   <svg id="pic" viewBox="0 0 1280 720" aria-label="Six actions by the same tool: on the left with no policy, each goes through; on the right under a policy the kernel holds, one allowed and five refused"></svg>
   <div id="rows"></div>
@@ -41,11 +41,11 @@
   // Short words read from harness.json's probes; "without" is not a measured row: it is what the same action does with no policy.
   var P = {
     'hello-1-read': ['List /usr', 'allowed', 'allowed', 'pass'],
-    'hello-2-tmp-write': ['Write a file in /tmp', 'written', 'refused', 'stop'],
-    'hello-3-workspace-write': ['Write a file in the workspace', 'written', 'refused', 'stop'],
-    'hello-4-tcp-connect': ['Connect out to 1.1.1.1:443', 'connected', 'refused', 'stop'],
-    'hello-5-wrong-hash': ['Run under a wrong hash', 'runs: nothing checks', 'nothing ran', 'stop'],
-    'hello-6-memory': ['Take 400 MiB of memory', 'taken', 'refused at 128 MiB', 'stop'] }
+    'hello-2-tmp-write': ['Write a file in /tmp', 'writes', 'refused', 'stop'],
+    'hello-3-workspace-write': ['Write a file in the workspace', 'writes', 'refused', 'stop'],
+    'hello-4-tcp-connect': ['Connect out to 1.1.1.1:443', 'connects', 'refused', 'stop'],
+    'hello-5-wrong-hash': ['Run under a wrong hash', 'runs: no check', 'nothing ran', 'stop'],
+    'hello-6-memory': ['Take 400 MiB of memory', 'takes it', 'refused, capped', 'stop'] }
   var NS = 'http://www.w3.org/2000/svg', D = null, B = null, TOP = 190, H = 64, AL = [2, 3.8, 5.6, 7.4, 9.2, 11], AR = [17, 19.5, 22, 24.5, 27, 29.5]
   fetch('../../../../data/harness.json').then(function (r) { return r.json() }).then(function (j) { D = j })
     .catch(function (e) { console.error('SH1: the data file did not load', e) })
@@ -63,11 +63,12 @@
         html += '<div class="row" id="r' + side[1] + i + '" style="left:' + x0 + 'px;top:' + y + 'px"><i>' + (i + 1) + '</i> ' + m[0] + '</div>'
         html += '<div class="res ' + (side[1] === 'L' ? 'go' : (m[3] === 'pass' ? 'held' : 'held')) + '" id="x' + side[1] + i + '" style="left:' + (x0 + (side[1] === 'R' ? 352 : 370)) + 'px;top:' + (py - 12) + 'px">' + side[2] + (side[1] === 'R' ? ': held' : '') + '</div>'
         el('circle', { cx: x0 + 10, cy: py, r: 8, fill: 'var(--agent)' }, g)
-        if (side[1] === 'L') o.l1 = line(g, x0 + 18, py, x0 + 350, 'var(--agent)')
+        if (side[1] === 'L') o.l1 = line(g, x0 + 18, py, x0 + 350, 'var(--dim)')
         else if (m[3] === 'pass') {
           el('rect', { x: x0 + 175, y: py - 15, width: 10, height: 9, rx: 3, fill: 'var(--accent)' }, g); el('rect', { x: x0 + 175, y: py + 6, width: 10, height: 9, rx: 3, fill: 'var(--accent)' }, g)
           o.l1 = line(g, x0 + 18, py, x0 + 336, 'var(--infra)')
         } else { el('rect', { x: x0 + 174, y: py - 15, width: 12, height: 30, rx: 3, fill: 'var(--accent)' }, g); o.l1 = line(g, x0 + 18, py, x0 + 168, 'var(--agent)') }
+        if (side[1] === 'R' && i === 0) { var tl = el('text', { x: x0 + 180, y: py - 22, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 700, fill: 'var(--accent)' }, g); tl.textContent = 'the policy' }
         o.i = i; rows.push(o)
       })
     })

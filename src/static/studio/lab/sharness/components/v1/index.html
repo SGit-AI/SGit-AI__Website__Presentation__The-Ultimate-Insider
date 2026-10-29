@@ -62,7 +62,7 @@ window.RUV_STEPS = [{ t: 0, label: 'the agent and its tool' }, { t: 7, label: 'w
 .sw.hold{border-top:8px solid var(--accent)}
 .sw.set{border-top:3px solid var(--accent)}
 .sw.drawn{border-top:5px dashed var(--infra)}
-#cav{position:absolute;left:40px;right:40px;top:626px;font:700 24px/30px Georgia,serif;color:var(--head)}
+#cav{position:absolute;left:40px;right:40px;top:638px;font:700 24px/30px Georgia,serif;color:var(--head)}
 #key{position:absolute;left:40px;right:40px;top:676px;font:20px/24px system-ui;color:var(--dim);white-space:nowrap}
 #key span{margin-right:44px}
 #key .b{display:inline-block;width:34px;height:20px;border-radius:5px;vertical-align:-4px;margin-right:8px}
@@ -110,14 +110,14 @@ window.RUV_STEPS = [{ t: 0, label: 'the agent and its tool' }, { t: 7, label: 'w
     <span class="st">hash, check, translate: runnable</span><span class="ms" data-in="34.6">&#10003;</span></div>
   <div class="part run" style="left:40px;top:312px" data-in="9" data-c="sharness.fs">
     <b>Files <span>sharness.fs</span></b><br>sole writer of protected folders<br>
-    <span class="st">runnable MVP since 26 Oct</span></div>
+    <span class="st">MVP; a Setting until its own uid</span></div>
   <div class="part run" style="left:40px;top:410px" data-in="11" data-c="sharness.net">
     <b>Network <span>sharness.net</span></b><br>the only network client<br>
-    <span class="st">runnable MVP since 27 Oct</span></div>
+    <span class="st">MVP; Boundary in shell only</span></div>
 
   <div class="part des" style="left:880px;top:214px" data-in="16" data-c="sharness.kms">
     <b>Keys <span>sharness.kms</span></b><br>never returns a clear key<br>
-    <span class="st">designed, not built</span><span class="ms" data-in="35">&#10003;</span></div>
+    <span class="st">designed; freeze/thaw timed</span><span class="ms" data-in="35">&#10003;</span></div>
   <div class="part des" style="left:880px;top:312px" data-in="18" data-c="sharness.bash">
     <b>Shell <span>sharness.bash</span></b><br>a fresh sandbox per command<br>
     <span class="st">designed; sandbox half runnable</span></div>
@@ -131,9 +131,10 @@ window.RUV_STEPS = [{ t: 0, label: 'the agent and its tool' }, { t: 7, label: 'w
   <div class="cap" data-in="26" data-out="32.4">Above the agent: the launcher, a design whose first slice runs.</div>
   <div class="cap" data-in="33.5" data-out="40.4">Measured: <span class="held">6 of 6 held</span>, 25 October 2026, five places.</div>
 
-  <div class="wl" style="top:520px" data-in="41"><span class="sw hold"></span><b>A wall that holds:</b> the policy around the tool, for the tool, not for the agent.</div>
-  <div class="wl" style="top:554px" data-in="42"><span class="sw set"></span><b>Runs, but a Setting:</b> files and network, until the launcher gives each its own uid.</div>
-  <div class="wl" style="top:588px" data-in="43"><span class="sw drawn"></span><b>A wall only drawn:</b> the launcher above the agent, keys, shell, model.</div>
+  <div class="wl" style="top:514px" data-in="41"><span class="sw hold"></span><b>A wall that holds:</b> the policy around the tool, for its child, in hello&#39;s <span class="held">6 of 6 held</span>; not for the agent.</div>
+  <div class="wl" style="top:544px" data-in="42"><span class="sw set"></span><b>Files runs:</b> a Setting until the launcher gives it its own uid.</div>
+  <div class="wl" style="top:574px" data-in="42.6"><span class="sw set"></span><b>Network runs:</b> a Boundary only for the shell sharness-ai shell starts, as root; a Setting otherwise.</div>
+  <div class="wl" style="top:604px" data-in="43.2"><span class="sw drawn"></span><b>A wall only drawn:</b> the launcher above the agent, keys, shell, model.</div>
   <div id="cav" data-in="44.5">A process cannot bind its own session: the wall around the agent is the launcher&#39;s, and it is a design.</div>
 
   <div id="key" data-in="7.6"><span><i class="b r"></i>Runnable: tests pass</span><span data-in="16.6"><i class="b d"></i>Designed / proposed</span><span data-in="33.2"><i class="m">&#10003;</i>Measured: probed or timed, date named</span></div>

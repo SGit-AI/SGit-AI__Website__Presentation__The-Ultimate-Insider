@@ -13,12 +13,12 @@ ol.story>li{margin:0 0 14px}
 
 <h2>The storyline, in six moves</h2>
 <ol class="story">
-<li><b>Without: one agent and its grant.</b> E02's ring: everything its grant reaches, sorted by what it touches; and E09's last line, twelve of twelve excess with no control. <a href="blast-radius/index.html">E02</a> · <a href="mandate-and-grant/index.html">E09</a></li>
-<li><b>Without, the same actions.</b> The agent's tool writes outside its workspace, connects out to the internet, takes as much memory as it likes: with no policy, nothing stands in the way. (The left half of the piece below.)</li>
-<li><b>With: the kernel is told first.</b> Write the policy (files, ports, memory, processes; hello's is deny-all), hash it, and the kernel enforces it before the tool starts. <a href="harness/index.html">E11</a></li>
+<li><b>Without: one agent and its grant.</b> E02's ring: everything its grant reaches, sorted by what it touches; and E09's last line, twelve of twelve excess with no control (from abp.sgit.ai's example, as E09 shows it). <a href="blast-radius/index.html">E02</a> · <a href="mandate-and-grant/index.html">E09</a></li>
+<li><b>Without, the same actions.</b> The agent's tool writes a file in /tmp and in its workspace, connects out to the internet, takes as much memory as it asks for: with no policy, nothing stands in the way. Drawn, not measured: the capture records only the runs with a policy. (The left half of the piece below.)</li>
+<li><b>With: the kernel is told first.</b> Write the policy (what it may read and write, the ports it may use, a memory cap; hello's is deny-all; to check against the capture), hash it, and the kernel enforces it before the tool starts. <a href="harness/index.html">E11</a></li>
 <li><b>With, live: the Linux in the browser.</b> Open sharness.ai's browser page, an emulated Alpine Linux, and run <code>sharness-ai hello</code>: six probes, one allowed, five refused, six of six held. On 25 October 2026 it took 28.5 s to the result in the editor's Chrome, so the slide beside it pauses on the player's clock while the browser runs.</li>
-<li><b>The side by side.</b> The same session, without and with: the paths that went through now stop at walls that hold (the language of E04 v2 that the editor liked).</li>
-<li><b>The honest caveat.</b> A process cannot bind its own session: only a launcher above the agent makes the policy a boundary for the agent, and that launcher is designed, with its first slice (<code>sharness-ai shell</code>) running since 28 October. Measured, runnable, designed, as the site labels them.</li>
+<li><b>The side by side.</b> The same session, without (drawn, not measured) and with: the paths that went through now stop at walls that hold (the language of E04 v2 that the editor liked).</li>
+<li><b>The honest caveat.</b> A process cannot bind its own session: only a launcher above the agent makes the policy a boundary for the agent, and that launcher is designed, with its first slice (<code>sharness-ai shell</code>) running since 28 October; today sharness.fs is a Setting until the launcher gives it its own uid, and sharness.net a Boundary only for the shell <code>sharness-ai shell</code> starts. Measured, runnable, designed, as the site labels them.</li>
 </ol>
 
 <h2>A first piece: without and with</h2>
