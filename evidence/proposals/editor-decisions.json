@@ -331,8 +331,11 @@
     "conductor"
    ],
    "due": null,
-   "status": "open",
-   "answer": null
+   "status": "done",
+   "answer": {
+    "by": "the members' own records",
+    "note": "deck (983782b), ruv.sgit (b5213de) and designer (f04c531) each opened their team vault keys in their own sessions; the conductor no longer asks it"
+   }
   },
   {
    "id": "D10",

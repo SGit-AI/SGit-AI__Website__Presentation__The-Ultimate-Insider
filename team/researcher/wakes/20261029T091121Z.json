@@ -22,8 +22,8 @@
    "by": "researcher",
    "model": "claude-opus-5-5",
    "verdict": "done",
-   "comment": "editor-decisions.json refreshed against every member's asks: D08 quotes ruv.sgit's four zips, D11 quotes deck's and the conductor's morning items, D03 notes which policies are agreed; checked_members lists all seven (designer: policy agreed, no asks); status, debrief.",
-   "at": "2026-10-29T09:12:54Z"
+   "comment": "editor-decisions.json refreshed against every member's asks: D08 quotes ruv.sgit's four zips, D11 quotes deck's and the conductor's morning items, D03 notes which policies are agreed, D09 done (deck 983782b, ruv.sgit b5213de, designer f04c531 opened their keys); checked_members lists all seven; status, debrief.",
+   "at": "2026-10-29T09:13:26Z"
   }
  },
  "closed": null,
