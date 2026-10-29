@@ -10,19 +10,19 @@
 #steps{position:absolute;left:60px;top:128px;width:470px;margin:0;padding:0;list-style:none}
 #steps li{display:flex;gap:14px;align-items:flex-start;margin:0 0 8px;padding:7px 14px;border-radius:12px;border:2px solid transparent;color:var(--dim);transition:none}
 #steps li b{flex:none;width:34px;height:34px;border-radius:50%;border:2px solid var(--line2);display:flex;align-items:center;justify-content:center;font:800 18px system-ui;color:var(--dim)}
-#steps li div{font-size:20px;line-height:1.22}
+#steps li div{font-size:20px;line-height:1.2}
 #steps li div strong{display:block;font-size:24px;color:var(--head)}
 #steps li.on{border-color:var(--agent);background:var(--agent-t);color:var(--text)}
 #steps li.on b{border-color:var(--agent);background:var(--agent);color:#fff}
-#sv{position:absolute;left:560px;top:120px;width:680px;height:560px}
+#sv{position:absolute;left:560px;top:106px;width:680px;height:580px}
 .ring{fill:var(--agent);fill-opacity:.06;stroke:var(--agent);stroke-width:2.5;stroke-opacity:.75}
 .rl{font-size:20px;font-weight:700;fill:var(--head)}
 .rl,.rs{paint-order:stroke;stroke:var(--bg);stroke-width:7px;stroke-linejoin:round}
 .rs{font-size:20px;fill:var(--dim)}
 #box{fill:var(--panel);stroke:var(--head);stroke-width:3}
 #loop{fill:none;stroke:var(--agent);stroke-width:4;stroke-dasharray:14 10}
-#quote{position:absolute;left:60px;right:60px;bottom:22px;font:italic 22px/1.3 Georgia,serif;color:var(--head)}
-#quote span{font-style:normal;color:var(--dim);font-size:16px;display:block}
+#quote{position:absolute;left:60px;right:60px;bottom:16px;font:italic 22px/1.25 Georgia,serif;color:var(--head)}
+#quote span{font-style:normal;color:var(--dim);font-size:20px;display:block}
 </style>
 </head>
 <body>
@@ -37,7 +37,7 @@
     <li data-on="28"><b>5</b><div><strong>Integrated</strong>our accounts, tokens, other systems</div></li>
     <li data-on="35"><b>6</b><div><strong>Agents calling agents</strong>today's agentic flows</div></li>
   </ol>
-  <svg id="sv" viewBox="0 0 680 560" aria-label="Six rings of reach around a chat model">
+  <svg id="sv" viewBox="0 0 680 580" aria-label="Six rings of reach around a chat model">
     <circle class="ring" id="r6" cx="340" cy="290" r="268" data-in="35"/>
     <circle class="ring" id="r5" cx="340" cy="290" r="222" data-in="28"/>
     <circle class="ring" id="r4" cx="340" cy="290" r="176" data-in="20"/>
@@ -53,10 +53,10 @@
       <circle cx="96" cy="150" r="22" class="ring" style="fill-opacity:.25"/><circle cx="600" cy="170" r="22" class="ring" style="fill-opacity:.25"/>
       <circle cx="110" cy="450" r="22" class="ring" style="fill-opacity:.25"/><circle cx="586" cy="440" r="22" class="ring" style="fill-opacity:.25"/>
       <path d="M118 158 L250 230 M578 178 L432 236 M130 440 L254 352 M566 430 L428 350" stroke="var(--agent)" stroke-width="2" stroke-dasharray="5 6" fill="none"/>
-      <text class="rs" x="340" y="48" text-anchor="middle">other agents, each with reach of its own</text>
+      <text class="rs" x="340" y="544" text-anchor="middle">other agents</text>
     </g>
   </svg>
-  <div id="quote" data-in="22">"LLMs using tools based on environmental feedback in a loop." <span>Anthropic, Building effective agents. The steps are a sketch, in order, without dates.</span></div>
+  <div id="quote" data-in="22">"LLMs using tools based on environmental feedback in a loop." <span>Anthropic, Building effective agents. A sketch: the steps in order, without dates; ring sizes are illustrative.</span></div>
   <div class="bar"><i></i></div>
 </div>
 <script>

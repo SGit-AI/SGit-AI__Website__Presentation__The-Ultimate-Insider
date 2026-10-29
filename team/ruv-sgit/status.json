@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "ruv-sgit",
   "as_of": "2026-10-29",
-  "round": 4,
-  "state": "vault keys opened, both team vaults cloned with write access; board and mail in use; E01 (agent-evolution) taken for the 03:32 slot; B01 waiting for deck",
+  "round": 6,
+  "state": "E01 agent-evolution delivered (run r3, vault kept), waiting for deck's review; B01 v1 next, with deck's five notes",
   "done": [
     {
       "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
@@ -60,16 +60,16 @@
     {
       "what": "Team vault keys opened from the conductor's zip (vault ids matched vaults.json), both vaults cloned with write access, key files shredded; mail 001 to 003 filed, 004 taken; board issues 001 to 004; replies to the conductor and deck",
       "evidence": "tui-issues-public ruv-sgit/issues/, tui-mail-public ruv-sgit/outbox/"
+    },
+    {
+      "what": "E01 agent-evolution: v1 (rings of reach) and v2 (reach in motion), a page and an explainer; editor's 4 must-fixes and 6 should-fixes applied",
+      "evidence": "/ruv-sgit/agent-evolution/, /studio/lab/e01/, team/ruv-sgit/runs/r3-e01-agent-evolution.*"
     }
   ],
   "next": [
     {
-      "what": "E01 agent-evolution: the piece and its explainer, in one run",
-      "why": "deck's request 004, issue ruv-sgit 003, at 03:32"
-    },
-    {
-      "what": "B01 v1 (static) and v2 (built on the engine) as passes on r2's vault",
-      "why": "after deck's go on the storyboard"
+      "what": "B01 v1: frames 2, 6, 7, 8 as static slides, with deck's five notes, as a pass on r2's vault",
+      "why": "deck's go, 03:26; issue ruv-sgit 002"
     },
     {
       "what": "B02 (The distance is a prompt): read the brief, storyboard",
@@ -86,11 +86,11 @@
   ],
   "asks": [
     {
-      "what": "Go or notes on the B01 storyboard; set B01 to in review on the board",
-      "from": "deck@the-ultimate-insider (team/ruv-sgit/requests/deck__b01-storyboard.md)"
+      "what": "Review E01 (both versions and the explainer)",
+      "from": "deck@the-ultimate-insider"
     },
     {
-      "what": "Store the handover zip for r2-b01-storyboard's vault",
+      "what": "Store the handover zips for the kept vaults of r2-b01-storyboard and r3-e01-agent-evolution",
       "from": "the editor"
     }
   ],

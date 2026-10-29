@@ -1,0 +1,404 @@
+{
+ "run": "r3-e01-agent-evolution",
+ "purpose": "r3-e01-agent-evolution: studio experiment E01, what an agent is: a chat model, one tool, many tools, the loop, integrated, agents calling agents; each step adds reach",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/004-infographic-request-agent-evolution-e01.eml)",
+  "date": "2026-10-29",
+  "text": "One sentence the audience must understand: an agent is a chat model that was given tools, then more tools, then a loop, then our accounts, and each step added reach. The steps, in order: (1) a chat model answering in a box; (2) one tool; (3) many tools; (4) the loop: it acts, looks at the result and acts again until it decides it is done; (5) integrated: accounts, tokens, other systems; (6) today's agentic flows, agents calling agents. Keep the earlier steps visible as the picture grows. No numbers needed; the loop is Anthropic's own definition in Building effective agents. No dates unless each has a public source; otherwise label the timeline a sketch. A build, each step a few seconds; 40 to 60 seconds; reads as a still at the end. No product logos; no claim that any one product is unsafe; nothing that reads as a forecast. An explainer beside it. Two versions welcome."
+ },
+ "pass_of": null,
+ "commits_before": null,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "n4xadu9v",
+ "created_at": "2026-10-29T03:34:17+00:00",
+ "closed_at": "2026-10-29T03:41:33+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 4,
+  "tasks": 4,
+  "ruflo_calls": 16,
+  "ruflo_failed": 0,
+  "ruflo_ms": 16216
+ },
+ "branches": [
+  {
+   "name": "w-v1",
+   "role": "developer",
+   "files": 1,
+   "bytes": 5149,
+   "write_ms": 15769,
+   "merge_ms": 6839
+  },
+  {
+   "name": "w-v2",
+   "role": "developer",
+   "files": 1,
+   "bytes": 7708,
+   "write_ms": 7180,
+   "merge_ms": 6541
+  },
+  {
+   "name": "w-explainer",
+   "role": "writer",
+   "files": 2,
+   "bytes": 7499,
+   "write_ms": 6125,
+   "merge_ms": 7152
+  },
+  {
+   "name": "w-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 5435,
+   "write_ms": 6152,
+   "merge_ms": 7565
+  }
+ ],
+ "commits": 6,
+ "files": 7,
+ "bytes_plain": 28900,
+ "files_delivered": 5,
+ "bytes_delivered": 25791,
+ "store": {
+  "objects": 39,
+  "bytes": 45644,
+  "plaintext_hits": 0,
+  "probe": "56 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 3713,
+  "files": 7,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "create",
+   "ms": 2251,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 431,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 11602,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 956,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 509,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 14303,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 1636,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1115,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4087,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1049,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 479,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5651,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 1678,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1433,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 3430,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 936,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 451,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4737,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 1811,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1170,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4171,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1110,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 438,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4604,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 1767,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1414,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4384,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 506,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 3713,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 10691
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p v1",
+   "rc": 0,
+   "ms": 540
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p v2",
+   "rc": 0,
+   "ms": 457
+  },
+  {
+   "seq": 4,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t writer -r specialist -p explainer",
+   "rc": 0,
+   "ms": 444
+  },
+  {
+   "seq": 5,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 366
+  },
+  {
+   "seq": 6,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d v1: v1, built: SVG on the slide engine, the six steps as nested rings of reach -p high",
+   "rc": 0,
+   "ms": 296
+  },
+  {
+   "seq": 7,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d v2: v2, driven: canvas, the agent at the centre and its reach drawn as live connections -p high",
+   "rc": 0,
+   "ms": 309
+  },
+  {
+   "seq": 8,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d explainer: the page and the explainer under /ruv-sgit/agent-evolution/ -p high",
+   "rc": 0,
+   "ms": 330
+  },
+  {
+   "seq": 9,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check both versions and the explainer against the request and the studio checklist -p high",
+   "rc": 0,
+   "ms": 415
+  },
+  {
+   "seq": 10,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r3-e01-agent-evolution: r3-e01-agent-evolution: studio experiment E01, what an agent is: a chat model, one tool, many tools, the loop, integrated, agents calling agents; each step adds reach -f conductor",
+   "rc": 0,
+   "ms": 383
+  },
+  {
+   "seq": 11,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v1 sha256:8c8bf63b063b5109 files:1 -f developer",
+   "rc": 0,
+   "ms": 356
+  },
+  {
+   "seq": 12,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v2 sha256:5bdb260c91a27bbf files:1 -f developer",
+   "rc": 0,
+   "ms": 303
+  },
+  {
+   "seq": 13,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer sha256:972f3492b0b792de files:2 -f writer",
+   "rc": 0,
+   "ms": 307
+  },
+  {
+   "seq": 14,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:21feab51091c769a files:1 -f editor",
+   "rc": 0,
+   "ms": 413
+  },
+  {
+   "seq": 15,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 304
+  },
+  {
+   "seq": 16,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 302
+  }
+ ],
+ "history": [
+  {
+   "id": "145dd2e1f574",
+   "message": "init",
+   "time": "2026-10-29T03:34:32Z"
+  },
+  {
+   "id": "2e6d2136b91a",
+   "message": "brief: run r3-e01-agent-evolution",
+   "time": "2026-10-29T03:34:34Z"
+  },
+  {
+   "id": "8286bcef0070",
+   "message": "developer v1: delivered 1 files",
+   "time": "2026-10-29T03:40:25Z"
+  },
+  {
+   "id": "dedec12dc951",
+   "message": "developer v2: delivered 1 files",
+   "time": "2026-10-29T03:40:48Z"
+  },
+  {
+   "id": "e25e72c85386",
+   "message": "writer explainer: delivered 2 files",
+   "time": "2026-10-29T03:41:02Z"
+  },
+  {
+   "id": "250df5dda78c",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T03:41:16Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "v1",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "v2",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "explainer",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 82631,
+   "tool_uses": 10,
+   "wall_s": 77,
+   "must_fix": 4,
+   "should_fix": 6
+  }
+ ],
+ "kept_at": "2026-10-29T03:41:35+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__vault-handover.zip",
+  "sha256": "b162358213332ef9",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}
