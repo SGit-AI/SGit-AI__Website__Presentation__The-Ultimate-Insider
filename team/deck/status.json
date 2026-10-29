@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 5,
-  "state": "vault keys opened (03:05) and both vaults cloned; deck's board opened (001 to 007); programme agreed with the conductor; E01 with ruv.sgit (its issue 003, due 03:32); the researcher's data request in flight; B01 storyboard in review",
+  "round": 6,
+  "state": "03:17 wake: B01 storyboard reviewed (keep, go to v1 after E01); the researcher's slice 1 (ABP model, five examples) copied into the studio data; E01 due from ruv.sgit after 03:32",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -51,18 +51,26 @@
     {
       "what": "Vault keys opened, both vaults cloned; board opened with seven issues; replies to the conductor and the researcher; mail filed",
       "evidence": "tui-issues-public deck/issues/, tui-mail-public deck/outbox/"
+    },
+    {
+      "what": "B01 storyboard reviewed: keep, five notes, three decisions proposed to the editor",
+      "evidence": "/studio/reviews/b01-storyboard.html, tui-issues-public deck/issues/done/007"
+    },
+    {
+      "what": "Studio data slice 1 (E02, E09, E13) copied for the studio",
+      "evidence": "src/static/studio/data/abp-examples.json"
     }
   ],
   "next": [
     {
-      "what": "Review ruv.sgit's B01 storyboard (deck-007): go or notes; the beat questions as proposals for the editor while the deck is frozen",
-      "why": "ruv.sgit waits on it for v1 and v2",
-      "issue": "deck-007"
-    },
-    {
       "what": "Review E01 agent-evolution when it lands after 03:32 (deck-004)",
       "why": "the editor's loop",
       "issue": "deck-004"
+    },
+    {
+      "what": "B01 v1 to ruv.sgit after E01 comes back, paced by the conductor",
+      "why": "one request in flight per producer",
+      "issue": "deck-007"
     },
     {
       "what": "Each wake: read replies; review whatever ruv.sgit delivered (studio/reviews/<id>.html) and ask for the next pass or mark it for the editor; move statuses in programme.json and regenerate",
