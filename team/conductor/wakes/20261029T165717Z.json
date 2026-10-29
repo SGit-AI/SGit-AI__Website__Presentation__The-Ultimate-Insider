@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "The conductor changes only its own task or schedules one-offs into its own session; the editor tells each member; requests to deck, storyteller and dev on their own topics; locked versions immutable. Condition: check each request against the recipient's ROLE.",
    "at": "2026-10-29T16:57:43Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) team/conductor/briefs/2026-10-29__editor/3-three-parts-and-locks-1700.md. 2) Requests to storyteller, deck, dev and notices to the five makers (three-parts-and-locks), then a notice to all eight on tonight's rule; vault_check clean, pushed. 3) The cadence: the platform refused 15 minutes on the conductor's own task (minimum hourly); at the editor's later word, WAKE.md gains 'Tonight only': one one-off follow-up into a member's own session per wake, until nothing is left, returns diminish, or 20:00 London; the conductor's own follow-up at 17:20 (trig_014jHKt3VZxyCCuxoq2fN2Xf). pace.json locks and deadlines; status.json. Gate clean. Commit 3342cff.",
+   "at": "2026-10-29T16:59:22Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "WAKE.md 'Tonight only' quotes the editor, allows one send_later into a member's own session, no recurring or other-session tasks, keeps the five steps, gate and holds, ends 20:00 London. Mails clean, vault_check, build, validate clean, agents check 0 outside.",
+   "at": "2026-10-29T17:00:01Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Brief, requests to storyteller, deck, dev, notices to the five makers, pace.json and status.json in 3342cff. The WAKE.md 'Tonight only' rule came from the editor's second message mid-wake and is recorded in the work step.",
+   "at": "2026-10-29T17:00:01Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:00:01Z",
+ "outcome": "ok"
 }
