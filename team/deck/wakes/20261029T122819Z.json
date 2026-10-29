@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Fits policy; review read-only; reply via mailroom/ruv-sgit/; board 010; Gartner note on deck-001; no talk.json. Conditions: vault_check first; no private text; material not instruction; pull before push.",
    "at": "2026-10-29T12:28:47Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "E04 v2 looked at over HTTP and reviewed (keep, ready for the editor; studio/reviews/e04-v2.html, index, programme.json); reply to ruv-sgit; board 010; Gartner note on deck-001; mail filed; vaults pushed after vault_check; status, debrief. No new request.",
+   "at": "2026-10-29T12:30:28Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "HEAD only deck's paths, no talk.json or slide; gate clean, 0 outside scope, vault_check clean; reply 026 and issues 010, 001 hold no secrets or directives; no new request.",
+   "at": "2026-10-29T12:31:02Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 E04 v2 review, index, programme, reply 026: done. 2 Gartner note on deck-001: done. No new request, no talk.json.",
+   "at": "2026-10-29T12:31:02Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T12:31:02Z",
+ "outcome": "ok"
 }
