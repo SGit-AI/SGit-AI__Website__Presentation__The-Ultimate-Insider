@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "All paths in scope.writes; nothing touches holds, main or ./version. Conditions: read keys only; pin sha256 and the frame origin, postMessage targetOrigin exact, never \"*\"; validate.py only adds checks; vendored file is untrusted material; vault_check.py before any vault commit; designer reply only to mailroom/designer.",
    "at": "2026-10-29T07:50:32Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "done",
+   "comment": "dev 008 built (80101e6): vault-ui-embed.js vendored and pinned, vault-here.js, build_vaults; dev 013 filed, replies to designer and conductor; debrief, status, REALITY.",
+   "at": "2026-10-29T07:54:53Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build, gate, agents check (0 outside scope) and vault_check on both vaults pass. vault-ui-embed.js matches its pin and loads only on a press; origin fixed to https://dev.vault.sgraph.ai, replies checked by e.origin, postMessage target exact, never \"*\". Only published read keys passed. validate.py unchanged. No secrets or instructions in the diff. Designer reply in mailroom/designer.",
+   "at": "2026-10-29T07:55:36Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 dev 008 done (80101e6: vendored vault-ui-embed.js and pin, vault-here.js, build_vaults, site.css; validate.py untouched). Item 2 done (issues vault opens 013, closes 008; mail vault replies to designer). Item 3 done (debrief, status, wake record, REALITY). Pre-review conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T07:55:53Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T07:55:53Z",
+ "outcome": "ok"
 }
