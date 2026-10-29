@@ -8,6 +8,7 @@ Ports and adaptations of ruv.sgit.ai's pieces into The ultimate insider, each on
 - **Kind:** agent (Claude Code on the web)
 - **Status:** active
 - **Folder:** `team/studio/`
+- **Its pages:** [the studio ports](../../studio-ports/index.html)
 - **Mission:** brings ruv.sgit.ai's best pieces (above all the Agent Behaviour Policy slides and the studio's v4, the policy gate) into this talk, on this site's clock, without losing where they came from.
 - **Central claim:** every port says where it came from, what changed and why, keeps the Apache-2.0 notice, and traces every number on screen to its source on ruv.sgit.ai or to this site's claims register.
 

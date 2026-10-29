@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What an Agent Behaviour Policy is (port of ruv.sgit.ai's ABP slide)</title>
+<meta name="description" content="A port of ruv.sgit.ai's talk slide 'What an Agent Behaviour Policy is' onto this site's slide engine: the coder's mandate card, compiled into Ruflo's policy engine, then POC1's 11 actions and their receipts.">
+<!--
+  Ported by studio@the-ultimate-insider, 29 October 2026, from SGit-AI/SGit-AI__Website__Ruv site/talk/slides/abp/index.html
+  (ruv.sgit run r8-explain), at commit 47b447585111b213071fda4e90c21927152071b7.
+  Copyright the SGit-AI authors. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file
+  except in compliance with the License. A copy is in ../../LICENSE-ruv-sgit.txt and at http://www.apache.org/licenses/LICENSE-2.0.
+  Distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  Changes: rebuilt on talk/engine/slide.js (one clock the player drives: RUV_STEPS, pause, seek, ?review); the canvas is
+  1280x720 instead of 1280x600; this site's colour tokens; the act line became the headline; the slide's ID drawn large;
+  all 11 actions shown at once (no scrolling feed); the data read from ../../data/ (copied unmodified, see SOURCES.md there).
+-->
+<link rel="stylesheet" href="../../../talk/engine/slide.css">
+<style>
+/* iPad: keep the unscaled 1280px canvas from widening the layout viewport, so the engine's fit() reads the real width (the engine fix is asked of dev) */
+body{position:fixed;inset:0;overflow:hidden}
+.kk{font-size:18px;top:14px;margin:0}
+.hl{top:46px;right:300px;font-size:38px;white-space:nowrap}
+.hl.sw{transition:none}
+#id{position:absolute;right:48px;top:14px;font:800 72px/1 system-ui;letter-spacing:-.02em;color:var(--dim)}
+
+#card{position:absolute;left:48px;top:128px;width:640px;height:452px;padding:12px 18px}
+#card h3{margin:0;font:800 24px/30px system-ui;color:var(--infra);display:flex;justify-content:space-between;align-items:baseline;white-space:nowrap}
+#card h3 span{font-size:20px;color:var(--head)}
+#meta{font:600 17px/24px system-ui;color:var(--dim);display:flex;justify-content:space-between;white-space:nowrap}
+#meta b{color:var(--head)}
+#gram{font:600 17px/24px system-ui;color:var(--dim);white-space:nowrap;padding-bottom:6px;border-bottom:2px solid var(--line);margin-bottom:4px}
+#gram .mono{color:var(--accent);font-weight:800}
+.r{display:grid;grid-template-columns:262px 98px 1fr;gap:8px;align-items:baseline;height:31px;border-radius:6px;padding:0 6px;white-space:nowrap}
+.r .c{font:700 18px/31px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--head)}
+.r .m{font:800 18px/31px system-ui}
+.r .w{font:16px/31px system-ui;color:var(--dim);overflow:hidden;text-overflow:ellipsis}
+.yes{color:var(--accent)} .no{color:var(--agent)} .ap{color:var(--infra)}
+.r.hit{background:var(--accent-t)}
+#bar1{margin:6px 0 0 6px;font:16px/22px system-ui;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#bar1 b{color:var(--agent)}
+
+#arrow{position:absolute;left:692px;top:178px;width:64px;height:40px;overflow:visible}
+#arrowL{position:absolute;left:688px;top:136px;width:72px;text-align:center;font:800 15px/18px system-ui;color:var(--accent)}
+#eng{position:absolute;left:760px;top:128px;width:472px;height:170px;padding:12px 18px;border-color:var(--accent)}
+#eng h3{margin:0;font:800 24px/30px system-ui;color:var(--head);white-space:nowrap}
+#eng h3 span{font:600 15px system-ui;color:var(--dim);margin-left:6px}
+#modes{display:flex;gap:8px;margin:8px 0 8px}
+#modes i{font:750 17px/24px system-ui;font-style:normal;padding:1px 12px;border-radius:999px;border:2px solid var(--line);color:var(--dim)}
+#modes i.on{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+#rules{display:flex;align-items:baseline;gap:12px;white-space:nowrap}
+#rn{font:800 48px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);min-width:62px}
+#rl{font:750 20px system-ui;color:var(--head)}
+#rb{font:600 16px/22px system-ui;color:var(--dim);margin-top:6px;white-space:nowrap}
+
+#feedH{position:absolute;left:760px;top:310px;width:472px;font:800 17px/22px system-ui;color:var(--dim);white-space:nowrap;display:flex;justify-content:space-between}
+#feed{position:absolute;left:760px;top:334px;width:472px}
+.a{display:grid;grid-template-columns:150px 1fr 120px;gap:8px;align-items:baseline;height:22px;padding:0 8px;border-radius:5px;white-space:nowrap}
+.a .who{font:700 15px/22px system-ui;color:var(--dim);overflow:hidden;text-overflow:ellipsis}
+.a .x{font:700 16px/22px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--head);overflow:hidden;text-overflow:ellipsis}
+.a .o{font:800 16px/22px system-ui;text-align:right}
+.a.new{background:var(--accent-t)}
+#chain{position:absolute;left:760px;top:582px;width:472px}
+#chainL{font:700 15px/20px system-ui;color:var(--dim);white-space:nowrap;margin-top:2px}
+#chainL b{color:var(--accent)}
+
+#tally{position:absolute;left:48px;width:690px;top:594px;font:800 27px/34px system-ui;color:var(--head);white-space:nowrap}
+#tally .no{color:var(--agent)} #tally .ap{color:var(--infra)}
+#close{position:absolute;left:48px;right:48px;top:636px;font:800 26px/32px system-ui;color:var(--head);letter-spacing:-.01em;white-space:nowrap}
+#close em{font-style:normal;color:var(--accent)}
+.ft{bottom:12px}
+</style>
+<script>
+// the stops (seconds), as on ruv.sgit.ai; the player adds a "built" stop at the end of each
+var A2 = 8.5, A3 = 14.0, STEP = .8, FIN = 24.0, END = 26
+window.RUV_STEPS = [
+  { t: 0, label: 'a written mandate' },
+  { t: 4.6, label: 'mandate, why, barrier' },
+  { t: A2, label: 'compiled into Ruflo' },
+  { t: A3, label: 'actions hit it' },
+  { t: FIN, label: 'enforced, with receipts' }
+]
+</script>
+<script src="../../../talk/engine/slide.js"></script>
+</head>
+<body>
+<div id="cv" data-end="26">
+  <p class="kk a">Agent Behaviour Policy · ported from ruv.sgit.ai</p>
+  <div class="hl" id="h1">An ABP is <em>a written mandate</em>, per role</div>
+  <div class="hl" id="h2">It <em>compiles into</em> Ruflo's policy engine</div>
+  <div class="hl" id="h3">Real actions hit it, <em>with receipts</em></div>
+  <div id="id">ABP</div>
+
+  <div id="card" class="panel" style="border-color:var(--infra)" data-in=".3">
+    <h3>Agent Behaviour Policy <span id="role">role: coder</span></h3>
+    <div id="meta"><span>owner <b id="owner">–</b></span><span>valid until <b id="until">–</b></span></div>
+    <div id="gram">one row per capability · <span class="mono">verb.object.reach</span> · <b>23</b> primitives</div>
+    <div id="rows"></div>
+    <div id="bar1" data-in="5"></div>
+  </div>
+
+  <svg id="arrow" viewBox="0 0 64 40"><path id="arp" d="M4 20 H52" style="stroke:var(--accent);stroke-width:5;fill:none;stroke-linecap:round" data-draw="8.7 9.6"/><path d="M42 6 L58 20 L42 34" style="stroke:var(--accent);stroke-width:5;fill:none;stroke-linecap:round;stroke-linejoin:round" data-in="9.4"/></svg>
+  <div id="arrowL" data-in="9">compiles<br>into</div>
+  <div id="eng" class="panel" data-in="9.3">
+    <h3>Ruflo's policy engine<span>by rUv / ruvnet · MIT</span></h3>
+    <div id="modes"><i>legacy</i><i>observe</i><i data-on="10.2">enforce</i></div>
+    <div id="rules"><span id="rn">0</span><span id="rl">rules, from the ABP rows</span></div>
+    <div id="rb" data-in="12.5"></div>
+  </div>
+
+  <div id="feedH" data-in="14"><span>POC1: real actions hit the engine</span><span id="fcount"></span></div>
+  <div id="feed"></div>
+  <div id="chain" data-in="14"><svg id="chs" width="472" height="22" viewBox="0 0 472 22"></svg><div id="chainL"></div></div>
+
+  <div id="tally" data-in="24"></div>
+  <div id="close" data-in="24.7">A mandate you can read, <em>enforced by Ruflo's own engine</em>, with receipts.</div>
+  <p class="ft">Data: ruv.sgit.ai data/abp.json, rules.json, report.json (POC1). Slide: ruv.sgit run r8-explain, Apache-2.0. Ruflo: MIT, rUv / ruvnet.</p>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  var $ = function (id) { return document.getElementById(id) }
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] }) }
+  var D = { rows: [], rules: null, acts: [], ledger: null }, E = {}, ready = 0
+  var MAND = { yes: ['yes', 'yes'], no: ['no', 'no'], approval: ['ap', 'approval'] }
+  function outc(s) { return /^allowed/.test(s) ? ['yes', '✓ allowed'] : /^denied/.test(s) ? ['no', '✗ denied'] : ['ap', '→ a human'] }
+  var get = function (u) { return fetch(u).then(function (r) { if (!r.ok) throw new Error(u + ' HTTP ' + r.status); return r.json() }) }
+
+  Promise.all([get('../../data/abp.json'), get('../../data/rules.json'), get('../../data/report.json')]).then(function (j) {
+    var A = j[0], R = j[1], P = j[2]
+    $('owner').textContent = A.owner || '–'; $('until').textContent = A.valid_until || '–'
+    var role = (A.roles || []).filter(function (r) { return r.id === 'coder' })[0] || (A.roles || [])[0]
+    $('role').textContent = 'role: ' + role.id
+    D.rows = role.rows
+    $('rows').innerHTML = role.rows.map(function (r) {
+      var m = MAND[r.mandate] || ['ap', r.mandate]
+      return '<div class="r" data-cap="' + esc(r.capability) + '"><span class="c">' + esc(r.capability) + '</span><span class="m ' + m[0] + '">' + esc(m[1]) + '</span><span class="w">' + esc(r.why) + '</span></div>'
+    }).join('')
+    var b = role.rows.filter(function (r) { return r.capability === 'send.message.world' && r.barrier })[0] || role.rows.filter(function (r) { return r.barrier })[0]
+    if (b) $('bar1').innerHTML = '<b>barrier</b> on <span class="mono">' + esc(b.capability) + '</span>: ' + esc(b.barrier)
+    E.rows = [].slice.call(document.querySelectorAll('#rows .r'))
+
+    D.rules = R.length
+    var c = { allow: 0, deny: 0, require_approval: 0 }, roles = {}
+    R.forEach(function (r) { c[r.effect] = (c[r.effect] || 0) + 1; (r.principals || []).forEach(function (p) { roles[p] = 1 }) })
+    $('rb').textContent = c.allow + ' allow · ' + c.deny + ' deny · ' + c.require_approval + ' require approval · ' + Object.keys(roles).length + ' roles'
+
+    D.acts = P.rows || []; D.ledger = (P.ledger || {}).abp || null
+    $('feed').innerHTML = D.acts.map(function (r) {
+      var o = outc(r.abp)
+      return '<div class="a"><span class="who">' + esc(r.who) + '</span><span class="x">' + esc(r.action) + '</span><span class="o ' + o[0] + '">' + o[1] + '</span></div>'
+    }).join('')
+    E.acts = [].slice.call(document.querySelectorAll('#feed .a'))
+    var n = D.acts.length, gap = n > 1 ? (472 - 24) / (n - 1) : 0, h = ''
+    for (var i = 0; i < n; i++) {
+      var x = 12 + i * gap
+      if (i) h += '<line class="lk" x1="' + (x - gap + 10) + '" y1="11" x2="' + (x - 10) + '" y2="11" style="stroke:var(--accent);stroke-width:3"/>'
+      h += '<rect class="rc" x="' + (x - 9) + '" y="2" width="18" height="18" rx="4" style="stroke-width:2"/>'
+    }
+    $('chs').innerHTML = h
+    E.rc = [].slice.call(document.querySelectorAll('#chs .rc')); E.lk = [].slice.call(document.querySelectorAll('#chs .lk'))
+    var den = D.acts.filter(function (r) { return /^denied/.test(r.abp) }).length, ap = D.acts.filter(function (r) { return /^approval/.test(r.abp) }).length
+    $('tally').innerHTML = (den + ap) + ' of ' + n + ' actions stopped: <span class="no">' + den + ' denied</span>, <span class="ap">' + ap + ' sent to a human</span>'
+    ready = 1
+  }).catch(function (e) { console.error('ABP port: a data file did not load', e); $('tally').textContent = 'could not read the data files (serve the site, do not open the file)'; $('tally').style.visibility = 'visible'; $('tally').style.opacity = 1 })
+
+  window.SLIDE_RENDER = function (t, S) {
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .5))) }
+    // the headline follows the act
+    $('h1').style.opacity = 1 - k(A2, .4); $('h2').style.opacity = k(A2 + .3, .4) * (1 - k(A3, .4)); $('h3').style.opacity = k(A3 + .3, .4)
+    if (!ready) return
+    var nR = E.rows.length
+    E.rows.forEach(function (r, i) {
+      var a0 = 1.2 + i * .32, q = k(a0, .35)
+      r.style.opacity = q; r.style.translate = ((1 - q) * -16) + 'px 0'
+      var c0 = A2 + 2 + i * (2 / Math.max(1, nR)), hit = t >= c0 && t < c0 + .45       // each row pulses as its rule is made
+      if (t >= A3 && t < FIN) {                                                                  // the row that decided a coder action lights up
+        var j = Math.floor((t - A3 - .3) / STEP), ar = D.acts[j]
+        if (ar && t - (A3 + .3 + j * STEP) < STEP * .9 && ar.who === 'coder' && ar.abp.indexOf(':coder:' + r.getAttribute('data-cap') + ')') > 0) hit = true
+      }
+      r.classList.toggle('hit', hit)
+    })
+    var rn = String(Math.round(D.rules * S.seg(t, A2 + 2, A2 + 4)))
+    if ($('rn').textContent !== rn) $('rn').textContent = rn
+    var shown = 0
+    E.acts.forEach(function (el, i) {
+      var a0 = A3 + .3 + i * STEP; el.style.opacity = k(a0, .3)
+      if (t >= a0) shown = i + 1
+      el.classList.toggle('new', t >= a0 && t < a0 + STEP && t < FIN)
+    })
+    var fc = shown ? shown + ' of ' + E.acts.length : ''
+    if ($('fcount').textContent !== fc) $('fcount').textContent = fc
+    E.rc.forEach(function (r, i) { var on = t >= A3 + .3 + i * STEP + .25; r.style.fill = on ? 'var(--accent)' : 'var(--panel)'; r.style.stroke = on ? 'var(--accent)' : 'var(--line2)' })
+    E.lk.forEach(function (l, i) { l.style.opacity = t >= A3 + .3 + (i + 1) * STEP + .25 ? 1 : .15 })
+    var L = D.ledger, n = E.rc.length, done = t >= A3 + .3 + (n - 1) * STEP + .6
+    var cl = 'decision receipts, hash-chained: <b>' + Math.min(shown, n) + '</b>' + (L ? ' · ledger length ' + L.length : '') + (done && L ? ' · chain <b>' + (L.valid ? 'valid ✓' : 'INVALID') + '</b>' : '')
+    if ($('chainL').innerHTML !== cl) $('chainL').innerHTML = cl
+  }
+})()
+</script>
+</body>
+</html>
