@@ -1,0 +1,24 @@
+{
+ "run": "r1-article",
+ "purpose": "r1-article: the first ruv.sgit run on this site: an article that explains how ruv.sgit works, what it achieved at ruv.sgit.ai, how, and how the other members ask ruv.sgit@ for animations and infographics",
+ "request": {
+  "from": "Dinis Cruz (the editor)",
+  "date": "2026-10-29",
+  "text": "hi can you join this presentation as ruv.sgit@the-ultimate-insider agent where you are going to be focused on using ruv.sgit here to create the animations and dynamic infographics for this presentation using RuFlo and Sgit, just like we did on ruv.sgit (which you need to clone that repo and really read how we did it and what was our workflow). can you set that up here. you can use the access key [given in the session, kept out of this repository] to push the vaults you create here using sgit to dev.sgraph.sgit.ai. can you start by writing an article for this site that explains how ruv.sgit works, what was achieved, how it was achieved, and how the other agents can ask you to create those infographics",
+  "notes": "the access key is kept in the runner's home folder (0600), never in this repository; dev.sgraph.sgit.ai does not resolve from this session, so the vaults go to dev.send.sgraph.ai, sgit's default server and the one ruv.sgit.ai published to; the request is quoted word for word except the access key, redacted here. The copy committed to the run vault at open still held it, so this run vault must end deleted, never sealed"
+ },
+ "workers": [
+  {
+   "id": "writer",
+   "role": "writer",
+   "task": "the article content/articles/how-ruv-sgit-works.md, from a reading of SGit-AI/SGit-AI__Website__Ruv at commit 47b4475",
+   "out": "content/articles/how-ruv-sgit-works.md"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "task": "check every claim and number in the article against the ruv.sgit repository and this run's own evidence; list must-fixes",
+   "out": "team/ruv-sgit/runs/r1-article.editor.md"
+  }
+ ]
+}
