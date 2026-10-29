@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Studio 010 and 011 routed verbatim; deck 070 (M02, M03 for part 1); pace log; night log and Moments (19 moments; M03 shot checked: no key); team-in-numbers refreshed for motion before the lock; build and gate clean.",
    "at": "2026-10-29T17:44:20Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff, three mails and four screenshots: no key, fingerprint, key QR or contact; no em-dashes; in scope.",
+   "at": "2026-10-29T17:45:20Z"
+  },
+  "post_check": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All planned items done; the numbers refresh is in remit, not drift; 17:58 follow-up scheduled (trig_01JKmrEE91E62A21RL1ysTDe).",
+   "at": "2026-10-29T17:45:20Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:45:20Z",
+ "outcome": "ok"
 }
