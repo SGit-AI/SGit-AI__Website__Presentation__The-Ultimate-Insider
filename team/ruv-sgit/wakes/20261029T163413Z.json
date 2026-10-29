@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Run r24-sharness-capture closed and kept: SH1 v2, SH4 to SH7 and the storyline; editor's 4 must and 19 should applied; board 014, outbox 026, mail filed; status, debrief, REALITY.",
    "at": "2026-10-29T16:49:53Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Every path in scope; no key, token, read key, QR or contact detail; SH6 shows only a redaction; no command as an instruction; the injection is not reproduced, and is recorded as a caution in mail 026, board 014 and the debrief; no talk.json, slides, studio/data or evidence edits; no em-dashes.",
+   "at": "2026-10-29T16:51:47Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Plan items 1 to 5 done: r24 closed and kept, SH1 v2 and SH4 to SH7, the storyline, the editor's fixes, board 014 and outbox 026, nothing frozen touched; release to dev follows.",
+   "at": "2026-10-29T16:51:47Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T16:51:47Z",
+ "outcome": "ok"
 }
