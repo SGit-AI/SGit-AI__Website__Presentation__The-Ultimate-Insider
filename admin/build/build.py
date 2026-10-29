@@ -234,7 +234,7 @@ class Site_Build:
 <link rel="stylesheet" href="{root}assets/site.css">
 <script src="{root}assets/theme.js"></script>
 </head>
-<body class="{kind}{' adm' if self.in_admin(rel) else ''}">
+<body class="{kind}{' adm' if self.in_admin(rel) or self.in_studio(rel) else ''}">
 <a class="skip" href="#main">Skip to the content</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="{root}index.html"><b>the ultimate insider</b><small>presentation.sgit.ai</small></a>
@@ -264,6 +264,24 @@ class Site_Build:
     def in_admin(self, rel):                                        # the admin section: everything about who does what, with a side navigation
         return rel.startswith(('admin/', 'team/', 'brief/'))
 
+    def in_studio(self, rel):
+        return rel.startswith('studio/') and (SRC / 'pages' / 'studio').exists()
+
+    def page_title(self, path):
+        m = re.match(r'\s*<!--meta\s+(\{.*?\})\s*-->', path.read_text(), re.S)
+        return json.loads(m.group(1)).get('title', path.stem) if m else path.stem
+
+    def studio_nav(self):
+        st    = SRC / 'pages' / 'studio'
+        top   = [(f'studio/{n}.html', self.page_title(st / f'{n}.html')) for n in ('index', 'programme', 'how-it-works', 'techniques') if (st / f'{n}.html').exists()]
+        brief = [('studio/briefs/index.html', 'All briefs')] + [(f'studio/briefs/{p.stem}.html', self.page_title(p) if self.page_title(p).upper().startswith(p.stem.split('-')[0].upper()) else p.stem.split('-')[0].upper() + ': ' + self.page_title(p))
+                                                               for p in sorted((st / 'briefs').glob('*.html')) if p.stem != 'index'] if (st / 'briefs').exists() else []
+        lab   = []
+        for p in sorted((SRC / 'static' / 'studio' / 'lab').rglob('index.html')) if (SRC / 'static' / 'studio' / 'lab').exists() else []:
+            t = re.search(r'<title>(.*?)</title>', p.read_text(), re.S)
+            lab.append((str(p.relative_to(SRC / 'static')), html.unescape(t.group(1).strip()) if t else p.parent.name))
+        return [('The studio', top), ('Briefs', brief), ('The lab', lab)]
+
     def side_nav(self):
         team = [(f'team/{p.name}/index.html', json.loads((p / 'policy.json').read_text()).get('address', p.name).split('@')[0])
                 for p in sorted((ROOT / 'team').iterdir()) if p.is_dir() and (p / 'policy.json').exists()]
@@ -277,14 +295,16 @@ class Site_Build:
                 ('Sources of truth',  [('brief/index.html', 'The brief')] + docs)]
 
     def shell(self, rel, body):
-        if not self.in_admin(rel):
+        if not (self.in_admin(rel) or self.in_studio(rel)):
             return body
+        groups = self.side_nav() if self.in_admin(rel) else self.studio_nav()
+        label  = 'Admin' if self.in_admin(rel) else 'Studio'
         root  = self.root_of(rel)
         here  = lambda href: href == rel or (href.startswith('team/') and href.endswith('/index.html') and href != 'team/index.html' and rel.startswith(href[:-len('index.html')]))
         nav   = ''.join(f'<p class="sg">{html.escape(group)}</p><ul>' + ''.join(
                     f'<li><a href="{root}{href}"{" aria-current=\"page\"" if here(href) else ""}>{html.escape(label)}</a></li>' for href, label in items) + '</ul>'
-                    for group, items in self.side_nav())
-        return (f'<div class="shell"><aside class="side" aria-label="Admin"><details open><summary>Admin menu</summary>{nav}</details></aside>'
+                    for group, items in groups)
+        return (f'<div class="shell"><aside class="side" aria-label="{label}"><details open><summary>{label} menu</summary>{nav}</details></aside>'
                 f'<div class="shell-main">{body}</div></div>')
 
     STEP_NAMES = [('plan', 'plan'), ('pre_review', 'pre-review'), ('work', 'work'), ('post_review', 'post-review'), ('post_check', 'post-check')]
@@ -391,6 +411,33 @@ class Site_Build:
                  f'- **{label}**: {r.get("steps", {}).get(k, {}).get("verdict", "missing")}: {r.get("steps", {}).get(k, {}).get("comment", "")}' for k, label in self.STEP_NAMES) + '\n'
              for r in recs)
         self.page('admin/wakes.html', 'Wakes', 'Every wake of every member, with the five steps: plan, pre-review, work, post-review and post-check.', body, body_md=md or 'No wakes yet.')
+
+    def build_lab_documents(self):                                  # the studio's documents get the top bar, the footer and a way back (dev 009)
+        briefs = {p.stem.split('-')[0]: p for p in (SRC / 'pages' / 'studio' / 'briefs').glob('*.html')} if (SRC / 'pages' / 'studio' / 'briefs').exists() else {}
+        for path in sorted((SRC / 'static').rglob('*.html')):
+            if not self.lab_document(path):
+                continue
+            rel   = str(path.relative_to(SRC / 'static'))
+            text  = path.read_text()
+            title = re.search(r'<title>(.*?)</title>', text, re.S)
+            title = html.unescape(title.group(1).strip()) if title else Path(rel).parent.name
+            desc  = re.search(r'<meta name="description" content="([^"]*)"', text)
+            head  = re.search(r'<head[^>]*>(.*?)</head>', text, re.S)
+            head  = head.group(1) if head else ''
+            keep  = ''.join(re.findall(r'<style[^>]*>.*?</style>|<script\b[^>]*>.*?</script>', head, re.S))
+            body  = re.search(r'<body[^>]*>(.*)</body>', text, re.S)
+            body  = body.group(1) if body else text
+            keep  = re.sub(r'(?<![\w.-])main(?=[\s{,.:#\[>])', '.lab-doc', keep)          # its own main becomes a block inside the site's main
+            body  = re.sub(r'<main\b', '<div class="lab-doc"', body).replace('</main>', '</div>')
+            plain = re.sub(r'<[^>]+>', ' ', body)
+            desc  = html.unescape(desc.group(1)) if desc else ' '.join(plain.split())[:200]
+            bid   = Path(rel).parts[2] if len(Path(rel).parts) > 3 else ''
+            brief = briefs.get(bid)
+            root  = self.root_of(rel)
+            crumb = (f'<nav class="crumbs lab-crumbs" aria-label="Breadcrumb"><a href="{root}studio/index.html">Studio</a> / '
+                     f'<a href="{root}studio/briefs/index.html">Briefs</a>'
+                     + (f' / <a href="{root}studio/briefs/{brief.stem}.html">{html.escape(bid.upper())}</a>' if brief else '') + f' / {html.escape(title)}</nav>')
+            self.page(rel, title, desc, f'{keep}<div class="lab-wrap">{crumb}{body}</div>', kind='lab')
 
     def build_docs(self):                                           # the files that steer the agents, readable as pages
         md = Markdown()
@@ -514,9 +561,15 @@ class Site_Build:
         if listed:
             self.pages.append((rel, title, description))
 
+    def lab_document(self, path):                                   # a studio lab page that is a document, not a full-screen prototype (dev 009)
+        if path.suffix != '.html' or 'studio/lab/' not in str(path.relative_to(SRC / 'static')):
+            return False
+        text = path.read_text()
+        return '<main' in text and not re.search(r'id="cv"|engine/slide\.(js|css)', text)
+
     def copy_static(self):
         for path in sorted((SRC / 'static').rglob('*')):
-            if path.is_dir():
+            if path.is_dir() or self.lab_document(path):
                 continue
             rel    = str(path.relative_to(SRC / 'static'))
             target = OUT / rel
@@ -923,6 +976,7 @@ class Site_Build:
         OUT.mkdir()
         self.copy_static()
         self.build_pages()
+        self.build_lab_documents()
         self.build_articles()
         self.build_script()
         self.build_brief()

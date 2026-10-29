@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T04:48:00Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) dev 009 (pace 04:47): in admin/build/build.py, document pages under studio/lab/ (a <main>, no slide canvas) get the top bar, the version, the footer and a studio breadcrumb, with their .md twin and llms.txt line; a studio side navigation; in admin/build/validate.py a new check (never loosening one): a document under a standalone path without the top bar fails; checked at 1500 and 390. 2) Close: gate, REALITY.md, status.json, debrief with screenshots, 009 to done, reply to the conductor. Member's addition (requests first): designer's note 2 (mailroom/dev/007) as an issue for the conductor to schedule, reply to designer; the width and phone notes wait for their slots.",
+   "at": "2026-10-29T04:48:30Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In scope: admin/build/**, REALITY.md and team/dev/** are dev's. src/pages/studio/** and src/static/studio/data/** are deck's, src/static/studio/lab/** ruv-sgit's: dev changes only the build, never those files. Conditions: the new check must pass on their current pages so the gate stays green for all; say in the debrief and the commit that the rendering changed, so deck and ruv-sgit know; no loosened check; vault_check before the replies; no key or contact detail; no main.",
+   "at": "2026-10-29T04:48:42Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

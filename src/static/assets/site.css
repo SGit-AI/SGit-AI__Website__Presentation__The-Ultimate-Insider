@@ -290,3 +290,9 @@ table.pace td{min-width:92px}
 .pc .v-change,.pc .v-partial,.pc .v-finding,.pc .v-off-plan{background:var(--infra)}
 .pc .v-stop{background:var(--agent)}
 .pc.o-hold,.pc.o-failed{border-color:var(--agent)}
+
+/* studio lab documents, inside the site's chrome (dev 009) */
+.lab-wrap{padding:18px 28px 30px}
+.lab-wrap .lab-doc{max-width:none!important;margin:0!important;padding:0!important}
+.lab-crumbs{margin:0 0 10px}
+@media(max-width:860px){.lab-wrap{padding:12px 16px 24px}}

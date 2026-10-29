@@ -34,6 +34,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - `team/conductor/` (kept by conductor@the-ultimate-insider): policy draft, status, `schedule.json` (two runs, proposed, none scheduled), and the only published session key, `key.json` (`sha256:7047871c97407e2b`) with its QR image and session folder.
 - `team/security/`, `team/researcher/`: proposed roles, policy marked proposed; no session holds either.
 - Two public vaults on dev.send.sgraph.ai, created 29 October 2026: `tui-issues-public` (h9fh2apf, Issues-FS lite) and `tui-mail-public` (lotalm0w, Email-FS lite; moved from f9d5r3dp after its first key was printed in a session log); read keys in `team/conductor/vaults.json` and on `/admin/keys.html#vaults`; vault keys sealed to the DC Vault Registry and in no file. No private vaults.
+- Studio lab documents (a `<main>`, no slide canvas) are built through the site chrome with a studio side navigation; canvas prototypes under `studio/lab/` stay bare; the gate fails a bare document.
 - `/admin/dashboard.html`: the dashboard, part 1 (Now and the pace grid), built from status.json, schedule.json, pace.json and every wake record; `/admin/wakes.html`, `/admin/commits.html`.
 - `/team/board.html`: the board, `tui-issues-public` read live in the browser with sgit.ai's `vault-embed.js` (vendored, pinned by sha256); no snapshot.
 - Known keys: the vaults manager, DC Vault Registry (`sha256:956934e47063ceaa`), confirmed by the editor, with its QR image (`team/conductor/known-keys/`), on `/admin/keys.html#known`.

@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 9,
-  "state": "wake of 03:47 closed: the dashboard, part 1 (Now and the pace grid), live; design note 1 accepted as dev 010 for 04:47",
+  "round": 10,
+  "state": "wake of 04:47 closed: dev 009 done, the studio documents in the site chrome with a studio side navigation; design note 2 accepted as dev 011",
   "done": [
+    {
+      "what": "dev 009: studio lab documents built through the chrome (top bar, version, breadcrumb, twin); studio side navigation; a gate check for bare documents",
+      "evidence": "admin/build/build.py (build_lab_documents, studio_nav), admin/build/validate.py (check_lab_documents)"
+    },
     {
       "what": "The dashboard, part 1: Now (clock, holds, what waits on the editor, next wakes) and the pace grid (every wake, five verdict dots); the brief and pace.json as pages",
       "evidence": "/admin/dashboard.html, /admin/docs/the-next-hours.html, /admin/docs/pace.html; issue dev 006 done"
@@ -24,23 +28,19 @@
     {
       "what": "The vaults page warns at the top: every file is public, forever",
       "evidence": "/admin/vaults.html"
-    },
-    {
-      "what": "Admin section: a side navigation at full width over admin, team and brief pages",
-      "evidence": "admin/build/build.py (shell, side_nav), /admin/"
     }
   ],
   "next": [
     {
-      "what": "04:47 dev 010: design note 1 (width), items 1 to 4, then 5",
-      "why": "scheduled by the conductor"
+      "what": "05:47 dev 010: design note 1 (width)",
+      "why": "pace.json"
     },
     {
-      "what": "05:47 the mail reader (007); 06:47 the vault embed (008)",
-      "why": "the editor's asks, scheduled (the conductor's mail 005)"
+      "what": "06:47 dev 007, the email reader; 07:47 dev 008, the vault embed",
+      "why": "pace.json"
     },
     {
-      "what": "dev 009, studio documents without chrome",
+      "what": "dev 011, design note 2 (the phone top bar)",
       "why": "waiting on the conductor's slot"
     }
   ],

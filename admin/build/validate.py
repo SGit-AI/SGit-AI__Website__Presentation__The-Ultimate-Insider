@@ -63,8 +63,8 @@ class Gate:
             if f'({Path(rel).with_suffix(".md")})' not in llms:
                 self.fail('llms.txt', rel, 'is not listed in llms.txt')
 
-    def chrome_pages(self):
-        return [p for p in self.html_files() if not str(p.relative_to(OUT)).startswith(self.STANDALONE)]
+    def chrome_pages(self):                                         # every page with the site's chrome, including documents in standalone areas
+        return [p for p in self.html_files() if not str(p.relative_to(OUT)).startswith(self.STANDALONE) or '<header class="top"' in p.read_text()]
 
     def check_chrome(self):                                         # structured data, and the version in the top bar
         version = (OUT / 'version.txt').read_text().strip() if (OUT / 'version.txt').exists() else None
@@ -113,6 +113,14 @@ class Gate:
             for line in r.stdout.splitlines():
                 if ': ' in line and not line.startswith('wake: every'):
                     self.fail('wakes', line.split(': ', 1)[0], line.split(': ', 1)[1])
+
+    def check_lab_documents(self):                                  # a document never lands bare: a <main> under a standalone path needs the top bar (dev 009)
+        for page in self.html_files():
+            rel = str(page.relative_to(OUT))
+            if rel.startswith(self.STANDALONE) and rel != '404.html':
+                text = page.read_text()
+                if '<main' in text.split('<header class="top"')[0] and '<header class="top"' not in text and not re.search(r'id="cv"|engine/slide\.(js|css)', text):
+                    self.fail('chrome', rel, 'a document without the top bar (studio/lab documents go through the build: admin/build/build.py, build_lab_documents)')
 
     def check_team(self):
         r = subprocess.run([sys.executable, str(ROOT / 'admin/build/agents.py'), 'overlaps'], capture_output=True, text=True)
@@ -192,7 +200,7 @@ class Gate:
     def run(self):
         if not OUT.exists():
             sys.exit('build first: python3 admin/build/build.py')
-        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_wakes, self.check_banners, self.check_vendored, self.check_stamps, self.check_no_remote_code,
+        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_lab_documents, self.check_wakes, self.check_banners, self.check_vendored, self.check_stamps, self.check_no_remote_code,
                       self.check_scripts_parse, self.check_talk, self.check_prose, self.check_leaks):
             check()
         if self.findings:
