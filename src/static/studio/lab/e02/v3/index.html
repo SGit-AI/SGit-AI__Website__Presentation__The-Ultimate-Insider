@@ -66,8 +66,8 @@
     el('circle', { id: 'core', cx: CX, cy: CY, r: 88, fill: 'none', stroke: 'var(--head)', 'stroke-width': 4 }, svg)
     var t = el('text', { x: CX, y: CY + 7, 'text-anchor': 'middle', 'font-size': 22, 'font-weight': 700, fill: 'var(--head)' }, svg); t.textContent = 'model'
     var lab = function (id, s, x, y, col) { var e = el('text', { id: id, x: x, y: y, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 800, fill: col, 'paint-order': 'stroke', stroke: 'var(--bg)', 'stroke-width': 6 }, svg); e.textContent = s }
-    lab('lab-core', 'the mandate', CX, CY - 98, 'var(--head)'); lab('lab-un', 'unstated (' + ex.filter(function (r) { return r.mandate_stance === 'unstated' }).length + ')', CX + 122 * Math.cos(-2.62) - 52, CY + 122 * Math.sin(-2.62) + 4, 'var(--agent)')
-    lab('lab-ref', 'refused (' + ex.filter(function (r) { return r.mandate_stance === 'refused' }).length + ')', CX + 160 * Math.cos(-2.62) - 52, CY + 160 * Math.sin(-2.62) + 4, 'var(--agent)')
+    lab('lab-core', 'the mandate', CX, CY - 98, 'var(--head)'); lab('lab-un', 'unstated (' + ex.filter(function (r) { return r.mandate_stance === 'unstated' }).length + ')', CX - 115 - 52, CY - 68, 'var(--agent)')
+    lab('lab-ref', 'refused (' + ex.filter(function (r) { return r.mandate_stance === 'refused' }).length + ')', CX - 170 - 52, CY - 102, 'var(--agent)')
     var dots = []
     var place = function (list, rad, a0, span) { list.forEach(function (r, i) { var a = a0 + span * (list.length === 1 ? .5 : i / (list.length - 1)); dots.push({ r: r, x: CX + rad * Math.cos(a), y: CY + rad * Math.sin(a) }) }) }
     place(core, R.authorised, -2.2, 2 * Math.PI - 1.2)
@@ -80,8 +80,8 @@
       var rr = 176, p0 = [CX + rr * Math.cos(a0 + .04), CY + rr * Math.sin(a0 + .04)], p1 = [CX + rr * Math.cos(a - .04), CY + rr * Math.sin(a - .04)]
       el('path', { d: 'M' + p0[0] + ' ' + p0[1] + 'A' + rr + ' ' + rr + ' 0 ' + (a - a0 > Math.PI ? 1 : 0) + ' 1 ' + p1[0] + ' ' + p1[1], fill: 'none', stroke: 'var(--agent)', 'stroke-width': 4, 'stroke-linecap': 'round' }, arcs)
       var m = (a0 + a) / 2; if (Math.cos(m) > .9) m = a0 - .02
-      var lr = Math.cos(m) < -.9 ? 140 : 200, lx = CX + lr * Math.cos(m), ly = CY + lr * Math.sin(m) + (Math.cos(m) < -.9 ? 44 : 7)
-      var tx = el('text', { x: lx, y: ly, 'text-anchor': Math.abs(Math.cos(m)) < .4 || Math.cos(m) < -.9 ? 'middle' : Math.cos(m) > 0 ? 'start' : 'end', 'font-size': 20, 'font-weight': 800, fill: 'var(--agent)', 'paint-order': 'stroke', stroke: 'var(--bg)', 'stroke-width': 6 }, arcs)
+      var lr = Math.cos(m) < -.9 ? 186 : 200, lx = CX + lr * Math.cos(m), ly = CY + lr * Math.sin(m) + (Math.cos(m) < -.9 ? 36 : 7)
+      var tx = el('text', { x: lx, y: ly, 'text-anchor': Math.abs(Math.cos(m)) < .4 ? 'middle' : Math.cos(m) > 0 ? 'start' : 'end', 'font-size': 20, 'font-weight': 800, fill: 'var(--agent)', 'paint-order': 'stroke', stroke: 'var(--bg)', 'stroke-width': 6 }, arcs)
       tx.textContent = g.short + ' (' + g.rows.length + ')'
       a += gap
     })

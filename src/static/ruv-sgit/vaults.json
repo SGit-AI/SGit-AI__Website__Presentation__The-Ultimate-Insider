@@ -1551,10 +1551,250 @@
     "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
     "given_to": "the editor"
    }
+  },
+  {
+   "run": "r12-e02-v3",
+   "purpose": "r12-e02-v3: studio experiment E02 v3, a third pass on r5's vault: the source's labels from capabilities.json, the excess grouped by sector on the ring, the summary clear of the list; and E09's mandate heading reworded",
+   "request": {
+    "from": "deck@the-ultimate-insider (tui-mail-public ruv-sgit/done/007-re-e02-v2-reviewed-keep.eml and ruv-sgit/done/013-re-e09-reviewed-keep.eml)",
+    "date": "2026-10-29",
+    "text": "E02 v2 review: two things for a v3: in the end state the two-line summary runs into 'The mandate, granted (4)'; and group the dots on the ring by sector (the four credential dots are in four places), so the picture alone says what is at risk. v3 waits for a description per row. E09 review: the list heading 'The mandate \u00b7 elicited' reads as a fact about this example, but this mandate is the site's own draft. Say 'elicited (here, the site's own draft)'; it can ride on E02 v3's run."
+   },
+   "pass_of": "21mmw3tm",
+   "commits_before": 9,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "21mmw3tm",
+   "created_at": "2026-10-29T12:42:25+00:00",
+   "closed_at": "2026-10-29T12:51:45+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 4,
+    "tasks": 4,
+    "ruflo_calls": 19,
+    "ruflo_failed": 0,
+    "ruflo_ms": 18542
+   },
+   "branches": [
+    {
+     "name": "w-r12-e02-v3-v3",
+     "role": "developer",
+     "files": 1,
+     "bytes": 12012,
+     "write_ms": 8889,
+     "merge_ms": 10562
+    },
+    {
+     "name": "w-r12-e02-v3-e09-wording",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11944,
+     "write_ms": 9074,
+     "merge_ms": 9722
+    },
+    {
+     "name": "w-r12-e02-v3-e09-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 12666,
+     "write_ms": 8054,
+     "merge_ms": 10531
+    },
+    {
+     "name": "w-r12-e02-v3-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 12568,
+     "write_ms": 9541,
+     "merge_ms": 10829
+    },
+    {
+     "name": "w-r12-e02-v3-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 2407,
+     "write_ms": 9369,
+     "merge_ms": 11382
+    },
+    {
+     "name": "w-r12-e02-v3-v3-fixed",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11910,
+     "write_ms": 9159,
+     "merge_ms": 10859
+    },
+    {
+     "name": "w-r12-e02-v3-explainer-fixed",
+     "role": "writer",
+     "files": 2,
+     "bytes": 12853,
+     "write_ms": 9166,
+     "merge_ms": 11619
+    }
+   ],
+   "commits": 17,
+   "files": 24,
+   "bytes_plain": 134627,
+   "files_delivered": 10,
+   "bytes_delivered": 76360,
+   "store": {
+    "objects": 134,
+    "bytes": 204381,
+    "plaintext_hits": 0,
+    "probe": "190 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 8780,
+    "files": 24,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "6462efdd287c",
+     "message": "init",
+     "time": "2026-10-29T05:37:10Z"
+    },
+    {
+     "id": "5df758165bdc",
+     "message": "brief: run r5-e02-blast-radius",
+     "time": "2026-10-29T05:37:12Z"
+    },
+    {
+     "id": "2f6d4dca7f16",
+     "message": "developer v1: delivered 1 files",
+     "time": "2026-10-29T05:40:19Z"
+    },
+    {
+     "id": "10720be8bdc5",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T05:40:38Z"
+    },
+    {
+     "id": "bf9917b81ff5",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T05:40:55Z"
+    },
+    {
+     "id": "13a01970708f",
+     "message": "pass: run r7-e02-v2",
+     "time": "2026-10-29T07:35:08Z"
+    },
+    {
+     "id": "e5922a2a3fb1",
+     "message": "developer v2: delivered 1 files",
+     "time": "2026-10-29T07:41:22Z"
+    },
+    {
+     "id": "519fedcc6405",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T07:41:49Z"
+    },
+    {
+     "id": "4681a45ff4f7",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T07:42:07Z"
+    },
+    {
+     "id": "c69ef16f0fa8",
+     "message": "pass: run r12-e02-v3",
+     "time": "2026-10-29T12:42:47Z"
+    },
+    {
+     "id": "5b39dee056f2",
+     "message": "developer v3: delivered 1 files",
+     "time": "2026-10-29T12:46:31Z"
+    },
+    {
+     "id": "d3fda3113983",
+     "message": "developer e09-wording: delivered 1 files",
+     "time": "2026-10-29T12:46:51Z"
+    },
+    {
+     "id": "ad28a60d990b",
+     "message": "writer e09-explainer: delivered 2 files",
+     "time": "2026-10-29T12:47:11Z"
+    },
+    {
+     "id": "6acd810fa3cf",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T12:47:30Z"
+    },
+    {
+     "id": "1b8680b44d59",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T12:50:33Z"
+    },
+    {
+     "id": "2fbbe7a813ca",
+     "message": "developer v3-fixed: delivered 1 files",
+     "time": "2026-10-29T12:50:54Z"
+    },
+    {
+     "id": "8c7a782d1255",
+     "message": "writer explainer-fixed: delivered 2 files",
+     "time": "2026-10-29T12:51:15Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "v3",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e09-wording",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "e09-explainer",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "explainer",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 84310,
+     "tool_uses": 13,
+     "wall_s": 88,
+     "must_fix": 0,
+     "should_fix": 4
+    },
+    {
+     "id": "v3-fixed",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    },
+    {
+     "id": "explainer-fixed",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session), the editor's fixes applied",
+     "tokens": null
+    }
+   ],
+   "kept_at": "2026-10-29T12:51:45+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r5-e02__vault-handover.zip",
+    "sha256": "36ac5aa7cc5f6fb8",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
   }
  ],
  "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
- "updated": "2026-10-29T11:42:59+00:00",
+ "updated": "2026-10-29T12:51:45+00:00",
  "server": "https://dev.send.sgraph.ai",
  "viewer": "https://dev.vault.sgraph.ai/en-gb/",
  "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"
