@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "storyteller",
   "as_of": "2026-10-29",
-  "round": 1,
-  "state": "first pass done (14:12 to 14:45 UTC, editor's request): story tree, three Wardley maps, the arc against the 17 beats, the challenge and a sequence, all for the editor's review; nothing in the talk changed",
+  "round": 2,
+  "state": "15:00 wake (scheduled :54): the researcher's R1 to R9 folded into the tree; R5 contradicts 'the outside is more mature', put to the editor; nothing in the talk changed",
   "task": {
     "id": "trig_013ML9DZ6k9VCinyhKF7peGA",
     "cron": "CRON_TZ=Europe/London 54 * * * *",
@@ -40,16 +40,16 @@
     {
       "what": "Requests: researcher (R1 to R9), deck (the proposal, for the editor first)",
       "evidence": "team/storyteller/requests/"
+    },
+    {
+      "what": "R1 to R9 folded in as story-r* ids; R5 (edge exploitation rising) raised as the strongest objection to part one, with a proposed way through",
+      "evidence": "team/storyteller/story/tree.md, challenge.md"
     }
   ],
   "next": [
     {
-      "what": "the editor's decisions on the frame, act three and the sequence",
+      "what": "the editor's decisions: the frame, act three, part one after R5, the sequence",
       "why": "nothing enters the talk before he has seen it"
-    },
-    {
-      "what": "fold the researcher's answers to R1 to R9 into the tree",
-      "why": "every fact with a register id"
     },
     {
       "what": "open the vault keys when the conductor seals them; move requests into the mail vault",
@@ -58,7 +58,7 @@
   ],
   "asks": [
     {
-      "what": "read team/storyteller/story/tree.md and decide: the frame, act three, the sequence",
+      "what": "read team/storyteller/story/tree.md (open questions at the end): the frame, act three, and whether 'the outside is in balance' survives R5",
       "from": "the editor"
     },
     {

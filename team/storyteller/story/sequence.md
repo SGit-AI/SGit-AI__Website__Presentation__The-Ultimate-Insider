@@ -10,7 +10,7 @@ storyteller@the-ultimate-insider, first pass, 29 October 2026. **A proposal, not
 | 4 | *new* the past: never mass exploitation | 1.1 | 1:30 | takes the first half of `unreported` |
 | 5 | *new* the building: left or right | 1.2 | 2:00 | ruv.sgit animation |
 | 6 | `incidents` + the question for the audience | 1.3 | 3:00 | as is, retold as "it could have been much worse" |
-| 7 | *new* the outside is in balance (Map 1) | 1.4 | 1:30 | from `outages` (2:00 to 0:30 inside this beat) |
+| 7 | *new* the outside is contested, the inside is not (Map 1; R5) | 1.4 | 1:30 | from `outages` (2:00 to 0:30 inside this beat) |
 | 8 | `identities` + `permissions` | 1.5 primitive controls | 3:00 | as is |
 | 9 | `infrastructure` + legacy + usability | 1.5 the inside | 2:30 | `infrastructure`, with legacy apps and one ux.sgit.ai example |
 | 10 | *new* the integrity shift | 1.6 | 2:00 | replaces `collision` (1:30) |
