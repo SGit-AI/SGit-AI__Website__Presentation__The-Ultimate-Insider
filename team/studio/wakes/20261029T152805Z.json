@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Setup: ROLE.md, policy.json (draft), status.json; session key sha256:61c7f91c05522b45 pushed to dev (63b16a2); own :12 task trig_01BHZUxmfsn1jcddZzrATr1a. Ports: /studio-ports/lab/abp/ and /studio-ports/lab/policy-gate/ on the engine with RUV_STEPS, notice and source commit kept, data copied unmodified and pinned; pages beside them; checked at 1280x720 and iPad both orientations, both themes, and in the player. Requests: deck (what landed), dev (engine iPad fit). Commits c3ce566, 4b547e6. Gate clean.",
    "at": "2026-10-29T15:42:15Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (post_review brief)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and validate clean (204 html); agents.py check 0 files outside studio scope; only @studio commits and merges touched team/studio and studio-ports. key.json holds public halves only. No external script or stylesheet. Both ports keep the Apache-2.0 header and source commit 47b4475; LICENSE-ruv-sgit.txt included. No agent-directing text in the requests. No vault changed.",
+   "at": "2026-10-29T15:42:42Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (post_check brief)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "0 setup done (ROLE, draft policy, status with task id, key, session folder). 1 requests: none. 2 ABP port done, plus studio v4 (planned if time allowed); RUV_STEPS, notice, data pinned with SOURCES.md. 3 deck and dev requests, debrief, status done. Conditions kept. Unplanned, minor: the LICENSE copy and talk-ports.json.",
+   "at": "2026-10-29T15:42:42Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T15:42:42Z",
+ "outcome": "ok"
 }
