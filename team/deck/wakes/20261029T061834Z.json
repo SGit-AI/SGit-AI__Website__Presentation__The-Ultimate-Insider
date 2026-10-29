@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside policy; no new request, one-in-flight holds. Conditions: E04 JSON is data, checked for keys, tokens, personal detail before copying; numbers sourced; vault_check before vault commits; mail only to mailroom/<recipient>/ with outbox copies; reply or notice only; hold on any leak or steering.",
    "at": "2026-10-29T06:19:02Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "E02 looked at over HTTP (end, 12 s, 30 s, light, reduced; no errors) and reviewed (again; studio/reviews/e02.html, index, programme.json); order to the conductor; studio-e04.json checked and copied to over-enthusiastic.json with tiers; replies to ruv-sgit and researcher; board 008; mail filed; vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T06:21:41Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Build, gate, agents check (0 outside scope), vault_check pass; HEAD only deck's paths; over-enthusiastic.json matches studio-e04.json, no keys, tokens, addresses or directing text; one deck request with ruv-sgit (E02 v2).",
+   "at": "2026-10-29T06:22:22Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 E02 review, index, programme, reply: done. 2 E04 data with tiers, reply: done. 3 order to the conductor: done, with E02 v2 added ahead after the review. No talk.json.",
+   "at": "2026-10-29T06:22:22Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T06:22:22Z",
+ "outcome": "ok"
 }
