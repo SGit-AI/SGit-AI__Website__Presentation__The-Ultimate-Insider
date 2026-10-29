@@ -480,16 +480,21 @@ class Site_Build:
              for r in recs)
         self.page('admin/wakes.html', 'Wakes', 'Every wake of every member, with the five steps: plan, pre-review, work, post-review and post-check.', body, body_md=md or 'No wakes yet.')
 
+    LAB_AREAS = ('studio/lab/', 'motion/lab/', 'studio-ports/lab/')        # full-screen pieces on the engine: ruv.sgit's, motion@'s and studio@'s
+
     def build_pieces(self):                                          # the studio's pieces, for the player's build mode: talk/pieces.json
-        lab, out = SRC / 'static' / 'studio' / 'lab', []
-        for p in sorted(lab.rglob('index.html')) if lab.exists() else []:
-            text = p.read_text()
-            if '<header class="top"' in text or 'storyboard' in p.parts:
-                continue                                            # documents and storyboards are not pieces to present
-            t, e = re.search(r'<title>(.*?)</title>', text, re.S), re.search(r'id="cv"[^>]*data-end="([0-9.]+)"', text)
-            rel = p.relative_to(lab).parent
-            out.append({'id': str(rel), 'title': html.unescape(t.group(1).strip()) if t else str(rel), 'src': f'../studio/lab/{rel}/index.html',
-                        'end': float(e.group(1)) if e else None, 'engine': 'engine/slide.js' in text})
+        out = []
+        for area in self.LAB_AREAS:
+            lab = SRC / 'static' / area.rstrip('/')
+            for p in sorted(lab.rglob('index.html')) if lab.exists() else []:
+                text = p.read_text()
+                if '<header class="top"' in text or 'storyboard' in p.parts:
+                    continue                                        # documents and storyboards are not pieces to present
+                t, e = re.search(r'<title>(.*?)</title>', text, re.S), re.search(r'id="cv"[^>]*data-end="([0-9.]+)"', text)
+                rel = p.relative_to(lab).parent
+                pid = str(rel) if area == 'studio/lab/' else area.split('/')[0] + '/' + str(rel)   # the studio's ids as before; motion/<slug>, studio-ports/<slug>
+                out.append({'id': pid, 'title': html.unescape(t.group(1).strip()) if t else pid, 'src': f'../{area}{rel}/index.html',
+                            'end': float(e.group(1)) if e else None, 'engine': 'engine/slide.js' in text})
         self.write('talk/pieces.json', json.dumps({'about': "The studio's lab pieces, listed when the site is built, for the player's build mode.", 'pieces': out}, indent=1) + '\n')
 
     def build_lab_documents(self):                                  # the studio's documents get the top bar, the footer and a way back (dev 009)
@@ -655,7 +660,7 @@ class Site_Build:
             self.pages.append((rel, title, description))
 
     def lab_document(self, path):                                   # a studio lab page that is a document, not a full-screen prototype (dev 009)
-        if path.suffix != '.html' or 'studio/lab/' not in str(path.relative_to(SRC / 'static')):
+        if path.suffix != '.html' or not str(path.relative_to(SRC / 'static')).startswith(self.LAB_AREAS):
             return False
         text = path.read_text()
         return '<main' in text and not re.search(r'id="cv"|engine/slide\.(js|css)', text)
