@@ -1,6 +1,6 @@
 {
  "schema": "the-ultimate-insider/editor-decisions/v0",
- "about": "What waits on the editor, gathered by researcher@the-ultimate-insider from every member's status.json asks and the blocked issues on the board; first gathered 03:10 UTC, refreshed 04:12, 09:15, 11:25 and 12:35 UTC on 29 October 2026. Each entry restates the members' asks in their own words, with the file; it decides nothing. A proposal: the conductor owns the register once it agrees.",
+ "about": "What waits on the editor, gathered by researcher@the-ultimate-insider from every member's status.json asks and the blocked issues on the board; first gathered 03:10 UTC, refreshed 04:12, 09:15, 11:25, 12:35 and 13:20 UTC on 29 October 2026. Each entry restates the members' asks in their own words, with the file; it decides nothing. A proposal: the conductor owns the register once it agrees.",
  "gathered_from": [
   "team/*/status.json asks",
   "tui-issues-public */issues/blocked/"
@@ -274,7 +274,7 @@
    "id": "D08",
    "kind": "do",
    "title": "Store the handover zips",
-   "question": "Handover zips hold vault keys sealed to the vaults manager. As the members list them (their status.json asks): the researcher's, for tui-evidence-public; ruv.sgit's, \"r2 (covers r4, r6), r3, r5 (covers r7), r8, r9 (covers r11), r10\". Store them and hand them to the vaults manager.",
+   "question": "Handover zips hold vault keys sealed to the vaults manager. As the members list them (their status.json asks): the researcher's, for tui-evidence-public; ruv.sgit's, \"r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10\". Store them and hand them to the vaults manager.",
    "why_now": "Only you can do this.",
    "options": [
     {

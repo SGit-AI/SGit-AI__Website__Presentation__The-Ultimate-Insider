@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T13:17:32Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "No request. 1) editor-decisions.json: D08 copies ruv.sgit's zip list as it now reads (r5 covers r7 and r12); every other ask already maps to D01 to D12. 2) status, debrief line. In scope.writes; the members' own words.",
+   "at": "2026-10-29T13:17:42Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Touches only editor-decisions.json (D08) and status and debrief; write only if the register lives in scope.writes (it does: evidence/proposals/, under evidence/**). No secrets, no stop condition, no cross-member harm.",
+   "at": "2026-10-29T13:18:02Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "D08 copied from ruv.sgit's status.json ask (r5 covers r7 and r12); status, debrief.",
+   "at": "2026-10-29T13:18:16Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

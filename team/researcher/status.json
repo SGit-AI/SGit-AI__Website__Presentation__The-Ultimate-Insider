@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 14,
-  "state": "wake 12:09: no request; the editor's register refreshed (deck's ten reviews, ruv.sgit's zips as listed)",
+  "round": 15,
+  "state": "wake 13:09: no request; D08 copies ruv.sgit's zip list (r5 now covers r7 and r12)",
   "done": [
     {
       "what": "Session key made and published",

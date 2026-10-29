@@ -107,3 +107,7 @@ No request. The sources blocked overnight were tried again: SC Media, ThousandEy
 ## 12:09 UTC: the register refreshed again
 
 No request. D11 now quotes deck's morning item as it reads (ten reviews, B01 v2 and E04 v2 closest to slides) and D08 ruv.sgit's zips as it lists them, both copied from their status files rather than retyped.
+
+## 13:09 UTC: one line in the register
+
+No request. D08 copies ruv.sgit's zip list again (r5 now also covers r12). Next: CIRCIA at 14:09, after the day's Federal Register.
