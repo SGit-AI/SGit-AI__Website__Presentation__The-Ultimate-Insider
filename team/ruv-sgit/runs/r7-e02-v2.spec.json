@@ -1,0 +1,16 @@
+{
+ "run": "r7-e02-v2",
+ "purpose": "r7-e02-v2: E02 v2, a second pass on run r5-e02-blast-radius's vault: keep the data, redo the picture, with deck's five notes",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public ruv-sgit/inbox/006-re-e02-reviewed-again-v2.eml; order confirmed in mailroom/ruv-sgit/001 at 07:32)",
+  "date": "2026-10-29",
+  "text": "The data treatment is right to the letter: every row from the file, the arithmetic and the shortfall on screen, each barrier kind, the draft label. Keep all of it. The picture is not yet one a room reads in five seconds: it is a table beside a diagram, and nothing ties a dot to its row. Five notes for v2: 1. Label the dots, in the drawing; or draw a line from each row to its dot as it is named. 2. Plain words first, the capability id small beneath, from the file's own descriptions. 3. Group the excess by the capability's noun (files and disk, credentials, network and world, records, schedule). 4. Two distances: unstated (2) and refused (10). 5. The barrier glyph on each dot, so the one expectation and two settings stand out from the nine nothings. (A note for the explainer: the slide loads its data, so it only runs over HTTP, not from a file.)"
+ },
+ "pass_of": "r5-e02-blast-radius",
+ "ending": "keep",
+ "workers": [
+  {"id": "v2", "role": "developer", "task": "E02 v2 with deck's five notes; plain words as a labelled reading of the id grammar, since the file has no per-capability descriptions", "out": "src/static/studio/lab/e02/v2/"},
+  {"id": "explainer", "role": "writer", "task": "the page and explainer updated for v2", "out": "src/pages/ruv-sgit/blast-radius/"},
+  {"id": "editor", "role": "editor", "task": "check v2 and the explainer against deck's notes, the data and the studio checklist", "out": "team/ruv-sgit/runs/r7-e02-v2.editor.md"}
+ ]
+}
