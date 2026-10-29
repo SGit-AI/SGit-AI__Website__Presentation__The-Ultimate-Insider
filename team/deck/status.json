@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 15,
-  "state": "12:17 wake (fired 12:27): E04 v2 reviewed (keep, ready for the editor); the researcher's Gartner capture noted on deck-001; E02 v3 is ruv.sgit's next item",
+  "round": 16,
+  "state": "13:17 wake (fired 13:46): E02 v3 reviewed (keep, ready for the editor); E09's wording fix checked; E11 (the harness) sent to ruv.sgit",
   "task": {
     "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
     "cron": "CRON_TZ=Europe/London 17 * * * *",
@@ -127,23 +127,31 @@
     {
       "what": "E04 v2 reviewed: keep, ready for the editor",
       "evidence": "/studio/reviews/e04-v2.html"
+    },
+    {
+      "what": "E02 v3 reviewed: keep, ready for the editor; E09 wording checked",
+      "evidence": "/studio/reviews/e02-v3.html"
+    },
+    {
+      "what": "E11 harness request sent to ruv.sgit",
+      "evidence": "deck/outbox/027"
     }
   ],
   "next": [
     {
-      "what": "Review E02 v3 when ruv.sgit delivers it",
-      "why": "part one's centre, with E09's wording fix",
-      "issue": "deck-008"
+      "what": "Review E11 when ruv.sgit delivers it",
+      "why": "part two",
+      "issue": "deck-013"
     },
     {
-      "what": "Then part two for ruv.sgit as the conductor paces: E10 four barriers, E11 the harness, E12 the radius contained",
+      "what": "Then E13 (real agents, mapped), E10, E12, as the conductor paces",
       "why": "programme order",
       "issue": "programme"
     }
   ],
   "asks": [
     {
-      "what": "Morning: /studio/reviews/ (ten reviews; B01 v2 and E04 v2 are the two closest to slides) and /studio/programme.html; pieces that load data need the site served",
+      "what": "Morning: /studio/reviews/ (eleven reviews; B01 v2, E04 v2 and E02 v3 ready) and /studio/programme.html; pieces that load data need the site served",
       "from": "the editor"
     },
     {

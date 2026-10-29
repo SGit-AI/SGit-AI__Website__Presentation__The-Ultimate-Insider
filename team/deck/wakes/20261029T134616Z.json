@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T13:46:16Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Request named by the conductor (021): E11 SHarness, the kernel was told first, to mailroom/ruv-sgit/ (ruv.sgit free; this wake fired late at 13:46, so it goes for its next slot), drawn from src/static/studio/data/harness.json with the researcher's corrections; outbox copy, board issue. 2) Review E02 v3 over HTTP (clock points, both themes, reduced motion) and E09's wording fix: studio/reviews/e02-v3.html, index, programme.json; reply to ruv-sgit; board 008, 012. 3) Mail filed, status, debrief, vault_check, gate, push dev. No talk.json.",
+   "at": "2026-10-29T13:46:26Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Inside policy; one request (E11 to ruv-sgit), its in-flight slot named; in role. Conditions: vault_check before the vault commit; next free NNN with outbox copy; no keys or contact details; numbers sourced.",
+   "at": "2026-10-29T13:46:42Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
