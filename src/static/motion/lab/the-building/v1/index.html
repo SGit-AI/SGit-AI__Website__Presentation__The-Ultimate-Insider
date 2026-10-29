@@ -18,20 +18,20 @@
 .lab.gold{fill:var(--gold)}
 </style>
 <script>
-window.RUV_STEPS = [{ t: 0, label: 'the building and the split' }, { t: 5, label: 'the attackers turn left' }, { t: 23, label: 'the agents turn right' }, { t: 31, label: 'the still' }]
+window.RUV_STEPS = [{ t: 0, label: 'the building and the split' }, { t: 5, label: 'people who got in' }, { t: 23, label: 'agents' }, { t: 37, label: 'the still' }]
 </script>
 <script src="../../../../talk/engine/slide.js"></script>
 </head>
 <body>
-<div id="cv" data-end="36">
+<div id="cv" data-end="43">
   <p class="kk">The story · the building · v1</p>
   <div class="hl" data-in="0" data-out="4.6">A building. One way in. <em>A corridor that splits.</em></div>
-  <div class="hl" data-in="5.2" data-out="22.6">Most who got in <em>turned left</em>, to the small things.</div>
-  <div class="hl" data-in="23.2" data-out="30.6">Agents <span class="a">turn right.</span> Every one.</div>
-  <div class="hl" data-in="31.2">Left: small marks. Right: <span class="a">every agent.</span></div>
+  <div class="hl" data-in="5.2" data-out="22.6">Most turned left. <em>Now and then</em>, one found the gold.</div>
+  <div class="hl" data-in="23.2" data-out="36.6">Agents: more of them, and <span class="a">they keep going.</span></div>
+  <div class="hl" data-in="37.2">People stop at a room. <span class="a">Agents don't stop.</span></div>
   <div id="id">M01</div>
-  <svg id="g" viewBox="0 0 1280 720" role="img" aria-label="A floor plan of a building: one door at the bottom, a corridor that splits. People who got in walk in one by one and most turn left into small rooms with small things. Then agents arrive, faster, and every one turns right into the vault with the gold."></svg>
-  <div id="foot" data-in="31.5">A pattern, not a count: no real incident, no number.</div>
+  <svg id="g" viewBox="0 0 1280 720" role="img" aria-label="A floor plan of a building: one door at the bottom, a corridor that splits. People who got in walk in one by one; most turn left into small rooms, and now and then one finds the gold and turns red. Then many more agents arrive, white at first, turning red as they start doing damage; they go through room after room, some through walls, and most end at the gold."></svg>
+  <div id="foot" data-in="37.5">Red: doing damage. A pattern, not a count.</div>
   <div class="bar"><i></i></div>
 </div>
 <script>
@@ -39,6 +39,7 @@ window.RUV_STEPS = [{ t: 0, label: 'the building and the split' }, { t: 5, label
   'use strict'
   // The plan, in canvas pixels. One door at the bottom, a corridor up to the split at FORK, small rooms to the left,
   // the vault to the right. Every figure walks a polyline on the engine's clock, so the player can seek any frame.
+  // Every figure starts white; it turns red at the point on its path where it starts doing damage.
   var NS = 'http://www.w3.org/2000/svg'
   var B = { x: 80, y: 150, w: 1120, h: 520 }, DOOR = { x: 640, y: 670 }, FORK = { x: 640, y: 410 }
   var ROOMS = [                                                         // far, mid, near; above and below the corridor
@@ -47,26 +48,26 @@ window.RUV_STEPS = [{ t: 0, label: 'the building and the split' }, { t: 5, label
   var RW = 160, RH = 200, VAULT = { x: 820, y: 170, w: 360, h: 480 }, VDOOR = { x: 820, y: 410 }
   var GOLD = { x: 950, y: 370, w: 100, h: 90 }
   var A_START = 5.4, A_GAP = .62, A_SPEED = 170, N_A = 22             // people who got in: one at a time, walking
-  var G_START = 23.4, G_GAP = .17, G_SPEED = 430, N_G = 18             // agents: many at once, faster
-  var ROOM_OF = [2, 5, 1, 2, 4, 5, 2, 1, 5, 4, 0, 2, 5, 1, 4, 3, 2, 5, 1, 4, 0, 3]   // most stay near; a few reach a little further
+  var G_START = 23.4, G_GAP = .2, G_SPEED = 330, N_G = 36             // agents: more of them, faster, and they keep going
+  var GOLD_FINDERS = [6, 13, 19]                                       // now and then, one of the people finds the gold
+  var ROOM_OF = [2, 5, 1, 2, 4, 5, -1, 1, 5, 4, 0, 2, 5, -1, 4, 3, 2, 5, 1, -1, 0, 3]   // -1: the gold
   var figs = []
 
   function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296 } }
   function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
-  function figure(p, fill) {
+  function figure(p) {
     var g = el('g', { opacity: 0 }, p)
-    el('circle', { cx: 0, cy: -15, r: 6.5, fill: fill }, g)
-    el('rect', { x: -6, y: -7, width: 12, height: 17, rx: 5, fill: fill }, g)
-    return g
+    return { g: g, parts: [el('circle', { cx: 0, cy: -15, r: 6.5 }, g), el('rect', { x: -6, y: -7, width: 12, height: 17, rx: 5 }, g)] }
   }
-  function timed(pts, t0, speed, pauses) {                             // waypoints with arrival times; pauses[i] = seconds held at point i
-    var out = [{ x: pts[0].x, y: pts[0].y, t: t0 }], t = t0
+  function timed(pts, t0, speed) {                                     // waypoints with arrival times; p.hold = seconds held there; p.dmg = damage starts here
+    var out = [{ x: pts[0].x, y: pts[0].y, t: t0 }], t = t0, red = Infinity
     for (var i = 1; i < pts.length; i++) {
       t += Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y) / speed
       out.push({ x: pts[i].x, y: pts[i].y, t: t })
-      if (pauses && pauses[i]) { t += pauses[i]; out.push({ x: pts[i].x, y: pts[i].y, t: t }) }
+      if (pts[i].dmg && red === Infinity) red = t
+      if (pts[i].hold) { t += pts[i].hold; out.push({ x: pts[i].x, y: pts[i].y, t: t }) }
     }
-    return out
+    return { p: out, red: red }
   }
   function at(path, t) {
     if (t <= path[0].t) return path[0]
@@ -103,33 +104,53 @@ window.RUV_STEPS = [{ t: 0, label: 'the building and the split' }, { t: 5, label
     el('path', { d: 'M640 470V420M640 420H590M582 420l14-9v18z', fill: 'none', stroke: 'var(--dim)', 'stroke-width': 4, 'stroke-linecap': 'round' }, split)
     el('path', { d: 'M640 420H690M698 420l-14-9v18z', fill: 'none', stroke: 'var(--dim)', 'stroke-width': 4, 'stroke-linecap': 'round' }, split)
 
-    // people who got in: one at a time, most turn left to the nearest small rooms; some stop at the split first
-    var slots = ROOMS.map(function () { var s = []; for (var a = 0; a < 4; a++) for (var b = 0; b < 3; b++) s.push({ c: a, r: b }); return s.sort(function () { return r() - .5 }) })
-    for (var i = 0; i < N_A; i++) {
-      var rm = ROOMS[ROOM_OF[i]], sl = slots[ROOM_OF[i]].pop(), dx = rm.x + RW / 2
-      var spot = { x: rm.x + 28 + sl.c * 35 + (sl.r % 2) * 10, y: rm.up ? rm.y + 70 + sl.r * 46 : rm.y + 44 + sl.r * 46 }
-      var pts = [{ x: DOOR.x, y: 712 }, { x: DOOR.x, y: FORK.y }, { x: dx, y: FORK.y }, { x: dx, y: rm.up ? rm.y + RH - 10 : rm.y + 10 }, spot]
-      figs.push({ g: figure(svg, 'var(--text)'), p: timed(pts, A_START + i * A_GAP, A_SPEED, i % 4 === 1 ? { 1: .5 } : null) })
-    }
-    // agents: many at once, faster, every one to the vault; spots around the gold, nearest first, clear of its label
+    // where figures end: slots in each room, and spots around the gold, nearest first, clear of its label
+    var slots = ROOMS.map(function (rm) {
+      var s = []; for (var a = 0; a < 4; a++) for (var b = 0; b < 3; b++) s.push({ x: rm.x + 28 + a * 35 + (b % 2) * 10, y: rm.up ? rm.y + 70 + b * 46 : rm.y + 44 + b * 46 })
+      return s.sort(function () { return r() - .5 })
+    })
     var cx = GOLD.x + GOLD.w / 2, cy = GOLD.y + GOLD.h / 2, spots = []
-    for (var x = VAULT.x + 34; x < VAULT.x + VAULT.w - 20; x += 40) for (var y = VAULT.y + 40; y < VAULT.y + VAULT.h - 10; y += 48) {
+    for (var x = VAULT.x + 30; x < VAULT.x + VAULT.w - 16; x += 38) for (var y = VAULT.y + 40; y < VAULT.y + VAULT.h - 8; y += 44) {
       if (x > GOLD.x - 24 && x < GOLD.x + GOLD.w + 24 && y > GOLD.y - 46 && y < GOLD.y + GOLD.h + 34) continue
       spots.push({ x: x, y: y, d: Math.hypot(x - cx, (y - cy) * 1.2) })
     }
     spots.sort(function (a, b) { return a.d - b.d })
+    function inside(k) { var rm = ROOMS[k]; return { x: rm.x + 24 + r() * (RW - 48), y: rm.up ? rm.y + 50 + r() * 120 : rm.y + 30 + r() * 120 } }
+    function door(k) { var rm = ROOMS[k]; return { x: rm.x + RW / 2, y: rm.up ? rm.y + RH - 8 : rm.y + 8 } }
+    function corridor(k, lane) { return { x: ROOMS[k].x + RW / 2, y: FORK.y + (lane || 0) } }
+
+    // people who got in: one at a time; most turn left and stop in a room; now and then one finds the gold and turns red
+    for (var i = 0; i < N_A; i++) {
+      var k = ROOM_OF[i], pts = [{ x: DOOR.x, y: 712 }, { x: DOOR.x, y: FORK.y, hold: i % 4 === 1 ? .5 : 0 }]
+      if (k < 0) pts.push({ x: VDOOR.x + 14, y: FORK.y }, Object.assign({ dmg: true }, spots.shift()))
+      else pts.push(corridor(k), door(k), slots[k].pop())
+      var tm = timed(pts, A_START + i * A_GAP, A_SPEED), f = figure(svg); f.p = tm.p; f.red = tm.red; figs.push(f)
+    }
+    // agents: more of them, white until they start doing damage; they go into a room, start, and keep going:
+    // room after room, some straight through the walls, some trying the outer walls first; most end at the gold
+    var KINDS = ['rooms-then-gold', 'rooms-then-gold', 'through-walls', 'every-room', 'walls-first', 'room-and-stay']
     for (var j = 0; j < N_G; j++) {
-      var s = spots[j], lane = (j % 5 - 2) * 8
-      var gp = [{ x: DOOR.x + lane, y: 712 }, { x: DOOR.x + lane, y: FORK.y + lane }, { x: VDOOR.x + 14, y: FORK.y + lane }, s]
-      figs.push({ g: figure(svg, 'var(--agent)'), p: timed(gp, G_START + j * G_GAP, G_SPEED) })
+      var kind = KINDS[j % 6], lane = (j % 5 - 2) * 7, a0 = Math.floor(r() * 6), a1 = (a0 + 1 + Math.floor(r() * 5)) % 6
+      var gp = [{ x: DOOR.x + lane, y: 712 }, { x: DOOR.x + lane, y: FORK.y + lane }]
+      var room = function (k2, first) { var p = inside(k2); if (first) p.dmg = true; gp.push(corridor(k2, lane), door(k2), p); return p }
+      var out = function (k2) { gp.push(door(k2), corridor(k2, lane)) }
+      var toGold = function () { gp.push({ x: VDOOR.x + 14, y: FORK.y + lane }, spots.shift()) }
+      if (kind === 'rooms-then-gold') { room(a0, true); out(a0); room(a1); out(a1); toGold() }
+      else if (kind === 'through-walls') { room(a0, true); gp.push(spots.shift()) }                         // straight through the walls
+      else if (kind === 'every-room') { room(a0, true); out(a0); room(a1); out(a1); var a2 = (a1 + 2) % 6; room(a2); out(a2); toGold() }
+      else if (kind === 'walls-first') {                                                                    // tries the outer walls, then the vault
+        gp.push({ x: 700 + r() * 80, y: B.y + 22, dmg: true }, { x: 610 + r() * 40, y: 300 + r() * 60 }, { x: 760, y: B.y + 22 }); toGold() }
+      else { room(a0, true); out(a0); room(a1); gp.push(slots[a1].pop()) }                                    // stays, still doing damage
+      var tg = timed(gp, G_START + j * G_GAP, G_SPEED), fg = figure(svg); fg.p = tg.p; fg.red = tg.red; figs.push(fg)
     }
   }
 
   window.SLIDE_RENDER = function (t, S) {
     figs.forEach(function (f) {
-      var on = t >= f.p[0].t, q = at(f.p, t)
+      var on = t >= f.p[0].t, q = at(f.p, t), col = t >= f.red ? 'var(--agent)' : 'var(--text)'
       f.g.setAttribute('opacity', on ? 1 : 0)
       f.g.setAttribute('transform', 'translate(' + q.x.toFixed(1) + ' ' + q.y.toFixed(1) + ')')
+      if (f.col !== col) { f.col = col; f.parts.forEach(function (p) { p.setAttribute('fill', col) }) }
     })
   }
 })()

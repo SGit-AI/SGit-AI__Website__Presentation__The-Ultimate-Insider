@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "motion",
+ "kind": "scheduled, hourly at :24",
+ "started": "2026-10-29T18:25:43Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. M01 the building v1 (src/static/motion/lab/the-building/v1/index.html), the editor's changes: a smaller gap between people/attackers and agents; now and then a person/attacker finds the gold and turns red; more agents, they keep going after a room, start white and turn red when doing damage, wander, several rooms, through walls. 2. Explainer src/pages/motion/the-building/index.html to match; build, gate, push to dev before 19:00 (part 1's new cut-off, the editor). 3. M02/M03 reviews if mail arrives (none new). All within motion's policy; no HOLD.",
+   "at": "2026-10-29T18:26:37Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Plan inside motion's scope.writes; no HOLD, secrets, other members' paths or rule changes. Conditions: the attackers/damage depiction stays a story metaphor, nothing operational; no on-screen number outside the register; talk.json, engine, ruv.sgit paths untouched; gate before the push; the 19:00 cut-off is the editor's stated word.",
+   "at": "2026-10-29T18:26:51Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
