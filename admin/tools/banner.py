@@ -36,8 +36,8 @@ def items(label, text, none):
     rows = []
     for n, part in enumerate(parts, 1):
         lead    = f'{n}. ' if len(parts) > 1 else ''
-        wrapped = textwrap.wrap(lead + part, W - len(pad)) or ['']
-        rows   += [(f'{label}  ' if not rows else pad) + wrapped[0]] + [pad + ' ' * len(lead) + w for w in wrapped[1:]]
+        wrapped = textwrap.wrap(lead + part, W - len(pad), subsequent_indent=' ' * len(lead)) or ['']   # the hanging indent counts in the width, so nothing is cut
+        rows   += [(f'{label}  ' if not rows else pad) + wrapped[0]] + [pad + w for w in wrapped[1:]]
     return rows
 
 
