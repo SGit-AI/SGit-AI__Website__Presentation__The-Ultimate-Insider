@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T12:05:48Z",
+ "updated": "2026-10-29T13:11:24Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -15,11 +15,11 @@
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": "E02 v3 (12:32)"
+   "in_flight": "E11 (13:32, once deck sends it)"
   },
   "dev": {
    "slot": ":47",
-   "in_flight": "the dashboard part 3, the flow graph (12:47)"
+   "in_flight": "dev 016 the label (13:47)"
   },
   "designer": {
    "slot": ":39",
@@ -407,6 +407,26 @@
    "kind": "review",
    "by": "deck",
    "verdict": "keep, one wording to fix"
+  },
+  {
+   "id": "review-b01-storyboard",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, go to v1",
+   "page": "/studio/reviews/b01-storyboard.html"
+  },
+  {
+   "id": "art-e02-v3",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T12:40:00Z"
+  },
+  {
+   "id": "review-e04-v2",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, ready for the editor"
   }
  ],
  "edges": [
@@ -567,8 +587,8 @@
   },
   {
    "from": "ruv-b01-storyboard",
-   "to": "deck",
-   "kind": "delivers"
+   "to": "review-b01-storyboard",
+   "kind": "reviewed"
   },
   {
    "from": "editor-brief",
@@ -634,6 +654,16 @@
    "from": "art-e04",
    "to": "art-e04-v2",
    "kind": "redo"
+  },
+  {
+   "from": "art-e02-v2",
+   "to": "art-e02-v3",
+   "kind": "redo"
+  },
+  {
+   "from": "art-e04-v2",
+   "to": "review-e04-v2",
+   "kind": "reviewed"
   }
  ],
  "log": [
@@ -706,6 +736,11 @@
    "at": "2026-10-29T12:05:48Z",
    "by": "conductor",
    "what": "E09 kept; E04 v2 delivered (review 12:17); E02 v3 12:32; dev 014 built; dev: the flow graph at 12:47"
+  },
+  {
+   "at": "2026-10-29T13:11:24Z",
+   "by": "conductor",
+   "what": "E04 v2 kept; E02 v3 delivered; E11 13:32; dev 016 13:47, the sequence 14:47; the edge to no node fixed; the pre-review brief names scope.holds"
   }
  ],
  "queue": {
@@ -714,9 +749,9 @@
   "rule": "one experiment in flight with ruv.sgit, one data request with researcher; the conductor names the next by id at :02, deck asks at :17"
  },
  "next": {
-  "ruv-sgit": "12:32 E02 v3",
+  "ruv-sgit": "13:32 E11; then E13",
   "researcher": "nothing new until the data request is answered",
-  "dev": "12:47 the flow graph; then part 4, the sequence"
+  "dev": "13:47 dev 016; 14:47 the dashboard part 4, the sequence"
  },
  "routed": [
   "team/deck/requests/conductor__pace-the-studio.md",
@@ -784,11 +819,20 @@
    {
     "at": "12:47",
     "item": "the dashboard part 3: the flow graph from pace.json",
-    "from": "the conductor's brief"
+    "from": "the conductor's brief",
+    "status": "done"
+   },
+   {
+    "at": "13:47",
+    "item": "dev 016: the third circle's label (designer's note 5, in dev's holds)"
+   },
+   {
+    "at": "14:47",
+    "item": "the dashboard part 4: the sequence"
    },
    {
     "at": "later",
-    "item": "part 4 the sequence, part 5 the artifacts, then dev's own 003 and 004"
+    "item": "part 5 the artifacts, then dev's own 003 and 004"
    }
   ],
   "designer": [
@@ -830,7 +874,16 @@
    },
    {
     "at": "12:32",
-    "item": "E02 v3"
+    "item": "E02 v3",
+    "status": "done"
+   },
+   {
+    "at": "13:32",
+    "item": "E11"
+   },
+   {
+    "at": "14:32",
+    "item": "E13"
    }
   ]
  }
