@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Inside scope.writes; talk.json, part 1 (locked 18:30) and the engine untouched. Recording the editor's 17:24 word in policy.json is the member's own file and matches WAKE.md Tonight only. Conditions: vault_check before mail; shots cut in the image itself so no local path, session id, key or key QR shows; pull before push; gate; no em-dashes.",
    "at": "2026-10-29T17:42:18Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "done",
+   "comment": "1 done: deck 071 and correction 072, conductor 043, board 004; 007 to 011 filed; vault_check clean, pushed. 2 done in part: 007 item 1, the policy review showcase (no key, path or session id), page, 1280x720 and iPad; items 2 and 3 next. 3 done: the editor's 17:24 word recorded in policy.json. Not done: marking studio's policy agreed on the conductor's relayed word (refused by the session's safety check; asked the editor).",
+   "at": "2026-10-29T17:47:28Z"
   }
  },
  "closed": null,
