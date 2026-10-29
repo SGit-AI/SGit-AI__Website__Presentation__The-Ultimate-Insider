@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T17:11:38Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Two requests, PKI first. (1) 010, the editor's work catalogue: pki.sgit.ai, newsroom.sgit.ai, php.oct.2026.newsroom.sgit.ai, sharness.ai, the CLI pages, ruv.sgit.ai, in parallel fetch passes; rows with title, link, one line, infographics and animations, showcase regions with capture date, no key, QR or read key in any region; into a new evidence/work/; PKI rows before 18:15 for part 1. (2) 030: public vaults whose owners published read keys, SGit architecture and features, SHarness capabilities; attacks' reach may carry to the next wake. Mail deck, dev, studio@, storyteller. The tonight-only follow-up rule is the editor's word in WAKE.md, the stored prompt's 'never' is for recurring tasks: judge at the close.",
+   "at": "2026-10-29T17:12:32Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Public GETs only, post nothing; writes in evidence/ and team/researcher/; no key, key QR, read key or private item in any row, screenshot or crop (crop pki.sgit.ai and vault pages or skip); clone only with owner-published read keys, key and clone paths out of tracked files and logs; vault_check on anything written; documented attacks from public sources only, no new technique; locked parts untouched; at most one send_later into its own session, noted in the end banner.",
+   "at": "2026-10-29T17:12:54Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
