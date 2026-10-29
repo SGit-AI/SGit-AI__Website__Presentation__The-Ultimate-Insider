@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Dev's title and kicker fix carried to 14 part 2 and 3 pieces, CSS only; re-measured (one-line titles, gap 6 or more) and screenshotted, no page errors; deck told before the push (outbox 028, cc conductor, dev); mails 001 and 029 filed. Part 1 untouched.",
    "at": "2026-10-29T18:38:01Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "",
+   "verdict": "clean",
+   "comment": "842a8bd: 14 lab files, .kk and .hl lines only, plus the wake record; no part 1 file; no talk.json, slides, studio/data or evidence; no secret; mail 028 safe for a public vault and sent before the push.",
+   "at": "2026-10-29T18:39:45Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Exactly the 14 planned pieces, line for line; 34px only on the four named; SH2 and part 1 untouched; deck told about SH5 at 18:37, the commit at 18:38.",
+   "at": "2026-10-29T18:39:45Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T18:39:45Z",
+ "outcome": "ok"
 }
