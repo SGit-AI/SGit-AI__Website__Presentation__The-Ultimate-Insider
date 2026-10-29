@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three known problems, one story</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+#sv{position:absolute;left:0;top:110px;width:1280px;height:560px}
+#sv circle{fill-opacity:.12;stroke-width:4}
+.lab{position:absolute;width:300px;text-align:center;transform:translate(-50%,-50%)}
+.lab b{display:block;font:800 30px system-ui;letter-spacing:-.01em}
+.lab span{display:block;font-size:19px;color:var(--text);margin-top:6px;line-height:1.3}
+#mid{position:absolute;left:640px;top:465px;transform:translate(-50%,-50%);text-align:center;font:800 24px system-ui;color:var(--head);width:240px}
+#mid small{display:block;font-size:16px;color:var(--dim);font-weight:600}
+#close{position:absolute;left:60px;right:60px;bottom:48px;text-align:center;font:600 26px Georgia,serif;color:var(--head)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="9">
+  <p class="kk">Three things arriving at the same time</p>
+  <div class="hl" data-in="0">Three known problems. <em>Nobody presents them as one story.</em></div>
+  <svg id="sv" viewBox="0 110 1280 560">
+    <circle id="c1" r="170" style="fill:var(--agent);stroke:var(--agent)"/>
+    <circle id="c2" r="170" style="fill:var(--infra);stroke:var(--infra)"/>
+    <circle id="c3" r="170" style="fill:var(--risk);stroke:var(--risk)"/>
+  </svg>
+  <div class="lab" id="l1" data-in=".6"><b class="c-agent">The insider</b><span>AI agents: the insider threat that never scaled before</span></div>
+  <div class="lab" id="l2" data-in="1.6"><b class="c-infra">The infrastructure</b><span>built for static code, struggling to stay up on its own</span></div>
+  <div class="lab" id="l3" data-in="2.6"><b class="c-risk">The decision</b><span>risk management on spreadsheets, at the speed of quarters</span></div>
+  <div id="mid" data-in="6.6">the scenario<small>where all three overlap</small></div>
+  <div class="ft">From the abstract of the talk and the article The ultimate insider, newsroom.sgit.ai, 30 September 2026</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+// three circles side by side, then they slide together into one overlap
+var FROM = [[230, 400], [640, 400], [1050, 400]], TO = [[560, 380], [720, 380], [640, 505]]
+var LFROM = [[230, 400], [640, 400], [1050, 400]], LTO = [[250, 330], [1030, 330], [290, 590]]
+window.SLIDE_RENDER = function (t, S) {
+  var k = S.ease(S.seg(t, 4, 6.2))
+  for (var i = 0; i < 3; i++) {
+    var c = S.$('c' + (i + 1)), a = S.ease(S.seg(t, .4 + i, 1 + i))
+    c.setAttribute('cx', S.lerp(FROM[i][0], TO[i][0], k)); c.setAttribute('cy', S.lerp(FROM[i][1], TO[i][1], k))
+    c.setAttribute('r', S.lerp(170, 150, k)); c.style.opacity = a
+    var l = S.$('l' + (i + 1)); l.style.left = S.lerp(LFROM[i][0], LTO[i][0], k) + 'px'; l.style.top = S.lerp(LFROM[i][1], LTO[i][1], k) + 'px'
+    l.querySelector('span').style.opacity = 1 - k * .35
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The ultimate insider</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+#t{position:absolute;left:60px;top:170px;width:700px}
+#t .ev{font:800 15px system-ui;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin:0 0 18px}
+#t h1{font:700 92px/1 Georgia,serif;margin:0 0 22px;color:var(--head);letter-spacing:-.02em}
+#t h1 em{font-style:normal;color:var(--agent)}
+#t p{font-size:27px;line-height:1.35;color:var(--text);margin:0 0 34px;max-width:640px}
+#t .who{font-size:21px;color:var(--dim)}
+#t .who b{color:var(--head)}
+#v{position:absolute;left:760px;top:120px;width:480px;height:480px}
+#v circle{fill-opacity:.12;stroke-width:4}
+</style>
+</head>
+<body>
+<div id="cv" data-end="4">
+  <div id="t">
+    <p class="ev" data-in="0">hack::soho · IOActive London · 29 October 2026</p>
+    <h1 data-in=".3">The ultimate <em>insider</em></h1>
+    <p data-in=".8">Agents, the infrastructure that cannot hold them, and risk management that cannot keep up</p>
+    <p class="who" data-in="1.4"><b>Dinis Cruz</b> · founder, The Cyber Boardroom</p>
+  </div>
+  <svg id="v" viewBox="0 0 480 480">
+    <circle id="c1" r="135" style="fill:var(--agent);stroke:var(--agent)"/>
+    <circle id="c2" r="135" style="fill:var(--infra);stroke:var(--infra)"/>
+    <circle id="c3" r="135" style="fill:var(--risk);stroke:var(--risk)"/>
+  </svg>
+  <div class="ft mono" data-in="2">the-ultimate-insider.presentation.sgit.ai · slides, script and every source</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+window.SLIDE_RENDER = function (t, S) {
+  var k = S.ease(S.seg(t, .4, 2.6)), c = [['c1', 160, 175, 40, 40], ['c2', 320, 175, 440, 40], ['c3', 240, 310, 240, 470]]
+  c.forEach(function (x, i) { var e = S.$(x[0]), j = S.ease(S.seg(t, .4 + i * .25, 2.2 + i * .25)); e.setAttribute('cx', S.lerp(x[3], x[1], j)); e.setAttribute('cy', S.lerp(x[4], x[2], j)); e.style.opacity = j })
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* Every colour on the site and in the slides is one of these tokens. Dark is the default for the slides
+   (a projector in a dark room); the site follows the reader's system. */
+:root{
+  --bg:#f7f6f2; --bg2:#efede6; --card:#ffffff; --panel:#ffffff; --panel2:#f3f1ea;
+  --ink:#151821; --head:#0d1017; --text:#262a33; --dim:#5d6270; --line:#dcd8cc; --line2:#c4bfb0;
+  --agent:#d61f45; --infra:#c27803; --risk:#7c4ddb; --accent:#0f8a7e; --on-accent:#ffffff;
+  --agent-t:rgba(214,31,69,.10); --infra-t:rgba(194,120,3,.10); --risk-t:rgba(124,77,219,.10); --accent-t:rgba(15,138,126,.10);
+  --shadow:0 1px 2px rgba(20,20,30,.06),0 6px 18px rgba(20,20,30,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0f15; --bg2:#121721; --card:#151b26; --panel:#161c28; --panel2:#1c2331;
+    --ink:#e8eaf0; --head:#ffffff; --text:#d3d7e0; --dim:#8d94a5; --line:#283044; --line2:#36405a;
+    --agent:#ff4d6d; --infra:#fbbf24; --risk:#a78bfa; --accent:#2dd4bf; --on-accent:#06201d;
+    --agent-t:rgba(255,77,109,.14); --infra-t:rgba(251,191,36,.13); --risk-t:rgba(167,139,250,.15); --accent-t:rgba(45,212,191,.13);
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c0f15; --bg2:#121721; --card:#151b26; --panel:#161c28; --panel2:#1c2331;
+  --ink:#e8eaf0; --head:#ffffff; --text:#d3d7e0; --dim:#8d94a5; --line:#283044; --line2:#36405a;
+  --agent:#ff4d6d; --infra:#fbbf24; --risk:#a78bfa; --accent:#2dd4bf; --on-accent:#06201d;
+  --agent-t:rgba(255,77,109,.14); --infra-t:rgba(251,191,36,.13); --risk-t:rgba(167,139,250,.15); --accent-t:rgba(45,212,191,.13);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}

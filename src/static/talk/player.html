@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The ultimate insider: the talk</title>
+<meta name="site-version" content="{{version}}">
+<link rel="icon" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/tokens.css">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#000;color:var(--text);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow:hidden}
+button{font:inherit;cursor:pointer}
+.stage{position:absolute;overflow:hidden;background:#0c0f15}
+.stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;transition:opacity .35s}
+.stage iframe.back{opacity:0;pointer-events:none}
+.stage .black{position:absolute;inset:0;background:#000;opacity:0;transition:opacity .3s;pointer-events:none}
+.stage.blk .black{opacity:1}
+#aud{inset:0}
+#hud{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);display:flex;align-items:center;gap:6px;background:rgba(14,18,26,.86);border:1px solid #2a3245;border-radius:12px;padding:6px 8px;color:#d3d7e0;transition:opacity .4s;z-index:3;max-width:calc(100vw - 24px)}
+#hud.idle{opacity:0;pointer-events:none}
+#hud button{background:transparent;color:#d3d7e0;border:1px solid #2a3245;border-radius:8px;padding:5px 10px;font-size:14px;white-space:nowrap}
+#hud button:hover{border-color:#2dd4bf;color:#fff}
+#hud .pos{font:600 14px ui-monospace,monospace;padding:0 6px;white-space:nowrap}
+#hud .ttl{font-size:14px;max-width:34vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:6px}
+#hud a{color:#2dd4bf;font-size:14px;padding:0 6px;text-decoration:none}
+@media(max-width:720px){#hud .ttl,#hud .opt{display:none}}
+#help{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.7);z-index:5}
+#help.on{display:flex}
+#help div{background:#151b26;border:1px solid #2a3245;border-radius:14px;padding:20px 26px;color:#d3d7e0;max-width:520px}
+#help h2{margin:0 0 10px;font:600 22px Georgia,serif;color:#fff}
+#help table{border-collapse:collapse;font-size:15px}
+#help td{padding:3px 12px 3px 0}
+#help kbd{font:600 13px ui-monospace,monospace;background:#0c0f15;border:1px solid #2a3245;border-radius:5px;padding:1px 6px;color:#fff}
+
+/* presenter view */
+body.pres{background:var(--bg);overflow:auto}
+#pres{display:none}
+body.pres #pres{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:14px;padding:14px;height:100vh}
+body.pres #aud,body.pres #hud{display:none}
+#pres .bar{grid-column:1/3;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+#pres .clock{font:700 34px ui-monospace,monospace;color:var(--head)}
+#pres .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);display:block}
+#pres .tm{font:700 26px ui-monospace,monospace;color:var(--head)}
+#pres .tm.ok{color:var(--accent)}#pres .tm.warn{color:var(--infra)}#pres .tm.over{color:var(--agent)}
+#pres .bar button{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 12px}
+#pres .left{display:flex;flex-direction:column;gap:12px;min-height:0}
+#pres .cur{position:relative;aspect-ratio:16/9;width:100%;border-radius:10px;border:2px solid var(--accent)}
+#pres .notes{flex:1;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
+#pres .notes h2{margin:0 0 6px;font:600 24px Georgia,serif;color:var(--head)}
+#pres .notes .act{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:0}
+#pres .say{font-size:22px;line-height:1.5;color:var(--text);margin:8px 0}
+#pres .cue{font-size:16px;color:var(--infra);margin:8px 0 0}
+#pres .right{display:flex;flex-direction:column;gap:12px;min-height:0}
+#pres .nxt{position:relative;aspect-ratio:16/9;width:100%;border-radius:10px;border:1px solid var(--line)}
+#pres .nt{font-size:15px;color:var(--dim);margin:-4px 0 0}
+#pres .nt b{color:var(--head)}
+#pres ol{flex:1;overflow:auto;margin:0;padding:8px 10px 8px 34px;background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:14.5px}
+#pres ol li{padding:3px 0;cursor:pointer;color:var(--dim)}
+#pres ol li.done{color:var(--text)}
+#pres ol li.now{color:var(--accent);font-weight:700}
+#pres ol li span{float:right;font:12.5px ui-monospace,monospace;color:var(--dim)}
+@media(max-width:900px){body.pres #pres{grid-template-columns:1fr;height:auto}}
+</style>
+</head>
+<body>
+<div id="aud" class="stage"><iframe title="slide" tabindex="-1"></iframe><iframe class="back" title="next slide" tabindex="-1"></iframe><div class="black"></div></div>
+<div id="hud">
+  <button id="prev" aria-label="Previous slide">&larr;</button>
+  <span class="pos" id="pos">0 / 0</span>
+  <button id="next" aria-label="Next slide">&rarr;</button>
+  <span class="ttl" id="ttl"></span>
+  <button id="replay" class="opt" aria-label="Replay this slide's animation">replay</button>
+  <button id="presBtn" class="opt" aria-label="Open the presenter view">presenter</button>
+  <button id="fs" aria-label="Full screen">full screen</button>
+  <button id="helpBtn" aria-label="Keyboard shortcuts">?</button>
+  <a href="index.html" class="opt">site</a>
+</div>
+<div id="help" role="dialog" aria-label="Keyboard shortcuts"><div>
+  <h2>Keys</h2>
+  <table>
+    <tr><td><kbd>&rarr;</kbd> <kbd>Space</kbd> <kbd>PgDn</kbd></td><td>next slide</td></tr>
+    <tr><td><kbd>&larr;</kbd> <kbd>PgUp</kbd></td><td>previous slide</td></tr>
+    <tr><td><kbd>Home</kbd> <kbd>End</kbd></td><td>first, last</td></tr>
+    <tr><td><kbd>R</kbd></td><td>replay this slide's animation</td></tr>
+    <tr><td><kbd>E</kbd></td><td>jump to the end of the animation</td></tr>
+    <tr><td><kbd>.</kbd></td><td>pause or play the animation</td></tr>
+    <tr><td><kbd>B</kbd></td><td>black screen</td></tr>
+    <tr><td><kbd>F</kbd></td><td>full screen</td></tr>
+    <tr><td><kbd>P</kbd></td><td>presenter view in a new window (kept in step)</td></tr>
+    <tr><td><kbd>T</kbd></td><td>restart the talk timer (presenter view)</td></tr>
+    <tr><td><kbd>?</kbd> <kbd>Esc</kbd></td><td>this help</td></tr>
+  </table>
+</div></div>
+<div id="pres">
+  <div class="bar">
+    <div><span class="lbl">time</span><span class="clock" id="clock">00:00</span></div>
+    <div><span class="lbl">talk elapsed</span><span class="tm" id="el">0:00</span></div>
+    <div><span class="lbl">this beat / planned</span><span class="tm ok" id="bt">0:00</span></div>
+    <div><span class="lbl">plan says by now</span><span class="tm" id="plan">0:00</span></div>
+    <div><span class="lbl">beat</span><span class="tm" id="ppos">0 / 0</span></div>
+    <button id="pPrev">&larr; prev</button><button id="pNext">next &rarr;</button><button id="pReplay">replay</button><button id="pBlack">black</button><button id="pReset">restart timer</button>
+  </div>
+  <div class="left">
+    <div class="cur stage" id="pcur"><iframe title="current slide" tabindex="-1"></iframe><iframe class="back" title="" tabindex="-1"></iframe><div class="black"></div></div>
+    <div class="notes"><p class="act" id="nact"></p><h2 id="ntitle"></h2><p class="say" id="nsay"></p><p class="cue" id="ncue"></p></div>
+  </div>
+  <div class="right">
+    <div class="nxt stage" id="pnext"><iframe title="next slide" tabindex="-1"></iframe></div>
+    <p class="nt" id="nnext"></p>
+    <ol id="list"></ol>
+  </div>
+</div>
+<script>
+(function () {
+'use strict'
+var Q = new URLSearchParams(location.search), PRES = Q.has('presenter'), ME = Math.random().toString(36).slice(2)
+var $ = function (id) { return document.getElementById(id) }
+var talk = null, B = [], idx = 0, black = false, paused = false, started = Date.now(), beatStart = Date.now()
+var chan = null; try { chan = new BroadcastChannel('ultimate-insider-talk') } catch (e) {}
+if (PRES) document.body.classList.add('pres')
+
+function mmss(s) { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0') }
+function src(i, extra) { var b = B[i]; return b ? b.slide.src + (extra ? (b.slide.src.indexOf('?') < 0 ? '?' : '&') + extra : '') : 'about:blank' }
+
+// a stage holds two frames: the front one shows the slide, the back one loads the next so the change is instant
+function Stage(el, extra) { this.el = el; this.f = el.querySelectorAll('iframe'); this.extra = extra || ''; this.cur = null }
+Stage.prototype.show = function (i) {
+  var want = src(i, this.extra), front = this.f[0], back = this.f[1]
+  if (this.cur === want) return
+  if (back && back.dataset.src === want) {                         // preloaded: swap, and start its animation from 0
+    back.classList.remove('back'); front.classList.add('back'); this.f = [back, front]
+    try { back.contentWindow.postMessage({ slide: 'seek', t: 0 }, '*') } catch (e) {}
+  } else { front.dataset.src = want; front.src = want }
+  this.cur = want
+  var nb = this.f[1]; if (nb && B[i + 1]) { var n = src(i + 1, this.extra); if (nb.dataset.src !== n) { nb.dataset.src = n; nb.src = n } }
+}
+Stage.prototype.post = function (m) { try { this.f[0].contentWindow.postMessage(m, '*') } catch (e) {} }
+Stage.prototype.dark = function (on) { this.el.classList.toggle('blk', on) }
+Stage.prototype.fit = function () {
+  if (this.el.id !== 'aud') return
+  var w = innerWidth, h = innerHeight, k = Math.min(w / 16, h / 9)
+  this.el.style.width = 16 * k + 'px'; this.el.style.height = 9 * k + 'px'; this.el.style.left = (w - 16 * k) / 2 + 'px'; this.el.style.top = (h - 9 * k) / 2 + 'px'
+}
+var aud = new Stage($('aud')), pcur = new Stage($('pcur')), pnext = { f: $('pnext').querySelector('iframe') }
+
+function render(fromRemote) {
+  var b = B[idx]; if (!b) return
+  if (PRES) { pcur.show(idx); pcur.dark(black) } else { aud.show(idx); aud.dark(black) }
+  $('pos').textContent = (idx + 1) + ' / ' + B.length; $('ttl').textContent = b.title
+  document.title = (idx + 1) + '. ' + b.title + ' · The ultimate insider'
+  if (location.hash.slice(1) !== b.id) history.replaceState(null, '', '#' + b.id)
+  if (PRES) {
+    $('ppos').textContent = (idx + 1) + ' / ' + B.length; $('nact').textContent = b.act || ''; $('ntitle').textContent = b.title
+    $('nsay').textContent = b.say; $('ncue').textContent = b.cue ? 'Cue: ' + b.cue : ''
+    var n = B[idx + 1], ns = n ? src(idx + 1, 'static') : 'about:blank'
+    if (pnext.f.dataset.src !== ns) { pnext.f.dataset.src = ns; pnext.f.src = ns }
+    $('nnext').innerHTML = n ? 'Next: <b></b>' : 'Last slide'; if (n) $('nnext').querySelector('b').textContent = n.title
+    ;[].forEach.call($('list').children, function (li, i) { li.className = i < idx ? 'done' : i === idx ? 'now' : '' })
+    var now = $('list').children[idx]; if (now) now.scrollIntoView({ block: 'nearest' })
+  }
+  if (!fromRemote && chan) chan.postMessage({ from: ME, idx: idx, black: black })
+}
+function go(i) { i = Math.max(0, Math.min(B.length - 1, i)); if (i !== idx) { idx = i; beatStart = Date.now(); paused = false } render() }
+function stage() { return PRES ? pcur : aud }
+function replay() { stage().post({ slide: 'seek', t: 0 }); paused = false; if (chan) chan.postMessage({ from: ME, cmd: 'seek' }) }
+function toEnd() { stage().post({ slide: 'end' }); if (chan) chan.postMessage({ from: ME, cmd: 'end' }) }
+function togglePause() { paused = !paused; stage().post({ slide: paused ? 'pause' : 'play' }); if (chan) chan.postMessage({ from: ME, cmd: paused ? 'pause' : 'play' }) }
+function toggleBlack() { black = !black; render() }
+function fullscreen() { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(function () {}) }
+function presenter() { window.open('player.html?presenter' + location.hash, 'ultimate-insider-presenter', 'width=1280,height=800') }
+
+function onKey(k) {
+  if (k === 'ArrowRight' || k === 'PageDown' || k === ' ' || k === 'ArrowDown' || k === 'Enter') go(idx + 1)
+  else if (k === 'ArrowLeft' || k === 'PageUp' || k === 'ArrowUp' || k === 'Backspace') go(idx - 1)
+  else if (k === 'Home') go(0)
+  else if (k === 'End') go(B.length - 1)
+  else if (k === 'r' || k === 'R') replay()
+  else if (k === 'e' || k === 'E') toEnd()
+  else if (k === '.') togglePause()
+  else if (k === 'b' || k === 'B') toggleBlack()
+  else if (k === 'f' || k === 'F') fullscreen()
+  else if (k === 'p' || k === 'P') presenter()
+  else if (k === 't' || k === 'T') { started = Date.now(); beatStart = Date.now() }
+  else if (k === '?') $('help').classList.toggle('on')
+  else if (k === 'Escape') $('help').classList.remove('on')
+  else return false
+  return true
+}
+addEventListener('keydown', function (e) { if (e.metaKey || e.ctrlKey || e.altKey) return; if (onKey(e.key)) e.preventDefault(); wake() })
+addEventListener('message', function (e) { if (e.data && e.data.slideKey) { onKey(e.data.slideKey); wake() } })
+if (chan) chan.onmessage = function (e) {
+  var m = e.data; if (!m || m.from === ME) return
+  if (m.cmd === 'seek') stage().post({ slide: 'seek', t: 0 })
+  else if (m.cmd === 'end') stage().post({ slide: 'end' })
+  else if (m.cmd === 'pause' || m.cmd === 'play') stage().post({ slide: m.cmd })
+  else if (m.hello) chan.postMessage({ from: ME, idx: idx, black: black })
+  else if (typeof m.idx === 'number') { if (m.idx !== idx) beatStart = Date.now(); idx = m.idx; black = !!m.black; render(true) }
+}
+
+var idleT = null
+function wake() { $('hud').classList.remove('idle'); clearTimeout(idleT); idleT = setTimeout(function () { $('hud').classList.add('idle') }, 2600) }
+addEventListener('mousemove', wake)
+$('prev').onclick = function () { go(idx - 1) }; $('next').onclick = function () { go(idx + 1) }
+$('replay').onclick = replay; $('presBtn').onclick = presenter; $('fs').onclick = fullscreen; $('helpBtn').onclick = function () { $('help').classList.toggle('on') }
+$('help').onclick = function (e) { if (e.target === this) this.classList.remove('on') }
+$('pPrev').onclick = function () { go(idx - 1) }; $('pNext').onclick = function () { go(idx + 1) }; $('pReplay').onclick = replay
+$('pBlack').onclick = toggleBlack; $('pReset').onclick = function () { started = Date.now(); beatStart = Date.now() }
+addEventListener('resize', function () { aud.fit() })
+
+function tick() {
+  if (PRES && B.length) {
+    var d = new Date(); $('clock').textContent = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0')
+    var el = (Date.now() - started) / 1000, bt = (Date.now() - beatStart) / 1000, dur = B[idx].dur || 60, plan = 0
+    for (var i = 0; i < idx; i++) plan += B[i].dur || 60
+    $('el').textContent = mmss(el); $('plan').textContent = mmss(plan)
+    $('bt').textContent = mmss(bt) + ' / ' + mmss(dur); $('bt').className = 'tm ' + (bt > dur * 1.25 ? 'over' : bt > dur ? 'warn' : 'ok')
+    $('el').className = 'tm ' + (el > plan + dur + 60 ? 'over' : 'ok')
+  }
+  setTimeout(tick, 500)
+}
+
+fetch(Q.get('talk') && /^[\w-]+\.json$/.test(Q.get('talk')) ? Q.get('talk') : 'talk.json').then(function (r) { return r.json() }).then(function (t) {
+  talk = t; B = t.beats
+  var h = location.hash.slice(1), at = 0
+  B.forEach(function (b, i) { if (b.id === h) idx = i })
+  B.forEach(function (b, i) { var li = document.createElement('li'); li.textContent = b.title; var s = document.createElement('span'); s.textContent = mmss(at); li.appendChild(s); li.onclick = function () { go(i) }; $('list').appendChild(li); at += b.dur || 60 })
+  aud.fit(); render(); wake(); tick()
+  if (chan && PRES) chan.postMessage({ from: ME, hello: true })
+}).catch(function (e) { document.body.innerHTML = '<p style="color:#fff;padding:20px">Could not load the talk: ' + String(e).replace(/[<&]/g, '') + '</p>' })
+})()
+</script>
+</body>
+</html>

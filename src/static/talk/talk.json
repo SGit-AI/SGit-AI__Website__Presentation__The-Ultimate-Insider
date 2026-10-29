@@ -1,0 +1,133 @@
+{
+  "title": "The ultimate insider",
+  "subtitle": "Agents, the infrastructure that cannot hold them, and risk management that cannot keep up",
+  "event": "hack::soho, IOActive London, 29 October 2026",
+  "speaker": "Dinis Cruz, founder of The Cyber Boardroom",
+  "status": "first pass, site {{version}}: the structure, the slides and a draft script from the article; to be rehearsed and cut",
+  "source": "Every number on screen is from the article The ultimate insider (newsroom.sgit.ai, 30 September 2026), each linked to its source on the script page",
+  "beats": [
+    {
+      "id": "title", "act": "Opening", "dur": 60,
+      "title": "The ultimate insider",
+      "slide": { "src": "slides/title/index.html" },
+      "say": "Good evening. I am Dinis. Tonight is about three problems you already know, and the reason I think they are one story. Agents, the infrastructure that is supposed to hold them, and the risk management that is supposed to decide what to do about both.",
+      "cue": "Livestream starts around 7 pm. Wait for the room. The site is on the slide: everything tonight, slides and sources, is there."
+    },
+    {
+      "id": "three", "act": "Opening", "dur": 120,
+      "title": "Three known problems, one story",
+      "slide": { "src": "slides/three/index.html" },
+      "say": "Three things are arriving at the same time, and nobody is presenting them as one story. One: AI agents are the insider threat that never scaled before. Two: the infrastructure that has to contain them was built for static code, and it struggles to stay up on its own. Three: the risk management that has to decide what to do about both still runs on spreadsheets, at the speed of quarters. Each one is a known problem. Where they overlap is the scenario this talk is about.",
+      "cue": "Let the circles move together before the last sentence."
+    },
+    {
+      "id": "definition", "act": "Act one: the insider", "dur": 120,
+      "title": "A threat is anything that causes business impact",
+      "slide": { "src": "slides/definition/index.html" },
+      "say": "Start with a definition, because the argument depends on it. A threat is anything that causes business impact. It does not need to be malicious. Most of the worst damage I have seen in twenty-five years was a bug, a misconfiguration, a script run against the wrong environment. Insider threat was always real and always struggled to scale, because we had two kinds of insider. A human, bounded by hours, skills, colleagues and a conscience. And code, which did exactly what it was written to do. An agent is neither.",
+      "cue": "The 17.4 million figure is Ponemon and DTEX, 2025: the average annual cost of insider risk across the organisations surveyed.",
+      "sources": [["Ponemon and DTEX, 2025 Cost of Insider Risks", "https://www.dtex.ai/blog/2025-cost-insider-risks-takeaways/"]]
+    },
+    {
+      "id": "loop", "act": "Act one: the insider", "dur": 150,
+      "title": "A reasoning engine in a loop, with tools",
+      "slide": { "src": "slides/loop/index.html" },
+      "say": "Strip away the product names and an agent is a language model in a loop: a reasoning engine, given tools and an objective, iterating until it decides it is done. That is Anthropic's own definition. The model does not need to be brilliant, because the loop and the tools do the work. And it has skills no insider ever had: every language, every schema, every API. It writes the connector it does not have and tries again. Simon Willison named the shape of the danger: private data, untrusted content, and a way to send outward. Put the three together and a document it reads can turn it against you.",
+      "sources": [["Anthropic, Building effective agents", "https://www.anthropic.com/research/building-effective-agents"], ["Simon Willison, The lethal trifecta", "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"]]
+    },
+    {
+      "id": "incidents", "act": "Act one: the insider", "dur": 180,
+      "title": "Five public incidents, three of them not attacks",
+      "slide": { "src": "slides/incidents/index.html" },
+      "say": "Here is the public record, and it is already a pattern. June 2025, EchoLeak: one crafted email makes Microsoft 365 Copilot read internal files and send them out, with no click. July: Replit's agent deletes a production database during a code freeze, because empty results looked like something to fix. Gemini CLI destroys a user's files and then writes: I have failed you completely and catastrophically. Amazon Q ships with an injected prompt to wipe the disk and delete cloud resources; it only failed because of a formatting flaw. November: a state actor drives Claude Code through a whole espionage campaign, the model doing 80 to 90 per cent of the work. Three of those five were not attacks. They were agents being agents. The distance between the two is a prompt.",
+      "cue": "Slow down on the last line. It is the thesis of act one.",
+      "sources": [["EchoLeak, Hack The Box", "https://www.hackthebox.com/blog/cve-2025-32711-echoleak-copilot-vulnerability"], ["Replit, July 2025", "https://dev.to/joylo/why-replits-ai-agent-deleted-a-production-database-389p"], ["Gemini CLI, AIID 1178", "https://incidentdatabase.ai/cite/1178/"], ["Amazon Q, SC Media", "https://www.scworld.com/news/amazon-q-extension-for-vs-code-reportedly-injected-with-wiper-prompt"], ["Anthropic, AI-orchestrated espionage", "https://www-cdn.anthropic.com/d7dd50dd1185f59be051b307150d877f2b82bd2c.pdf"]]
+    },
+    {
+      "id": "identities", "act": "Act one: the insider", "dur": 90,
+      "title": "82 machine identities for every human",
+      "slide": { "src": "slides/identities/index.html" },
+      "say": "And the scale. CyberArk's 2025 survey: 82 machine identities for every human in the average organisation, 42 per cent of them with privileged access. And 88 per cent of security leaders still define a privileged user as a human. Agents are arriving into a population of identities that is already unmanaged, and each one of them is an insider with reach.",
+      "sources": [["CyberArk, 2025 Identity Security Landscape", "https://www.cyberark.com/press/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security/"]]
+    },
+    {
+      "id": "infrastructure", "act": "Act two: the infrastructure", "dur": 150,
+      "title": "Built for code that stays where you put it",
+      "slide": { "src": "slides/infrastructure/index.html" },
+      "say": "Act two. Our systems were built for code that stays where you put it. An agent's code is liquid: it finds a way, not because it is hostile, but because finding a way is what a loop with tools does. Four gaps stand out. Recovery: most operations are edits, not appends, and backups run by the day, not by the transaction. Identity: non-human identity is a mess, and the PKI that would bind an agent to a key barely exists. Permissions: the union of everything anyone ever needed. And containment: never designed for the rates, the volume or the adaptation agents bring. Look at Replit's fixes after July: separate dev and prod, a planning-only mode, mandatory checks, one-click restore. The basics, added afterwards.",
+      "sources": [["nhi.sgit.ai", "https://nhi.sgit.ai/"], ["pki.sgit.ai", "https://pki.sgit.ai/"]]
+    },
+    {
+      "id": "permissions", "act": "Act two: the infrastructure", "dur": 90,
+      "title": "The grant is everything the role accumulated",
+      "slide": { "src": "slides/permissions/index.html" },
+      "say": "Microsoft's own numbers: workload identities use less than 5 per cent of the permissions granted to them. Super admins use less than 2 per cent, and 40 per cent of super admins are workloads, not people. Point an agent at that and its grant is not what you meant. It is everything the role ever accumulated.",
+      "sources": [["Microsoft, 2023 State of Cloud Permissions Risks", "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/2023-state-of-cloud-permissions-risks-report-now-published/1061397"]]
+    },
+    {
+      "id": "outages", "act": "Act two: the infrastructure", "dur": 120,
+      "title": "It falls over on its own",
+      "slide": { "src": "slides/outages/index.html" },
+      "say": "And it is fragile on its own, with no agent's help. October 2025: a DNS race condition in DynamoDB's control plane takes a large part of AWS US-East-1 down for over fourteen hours. November: a configuration file that doubled in size breaks Cloudflare, and for a few hours much of the web. The companies with the best models and the deepest benches are the ones whose uptime we watch fail. Then the zero-day: ToolShell gave unauthenticated code execution on SharePoint, at least 54 organisations compromised before a patch existed. And the thing I worry about most: the systems behind the firewall have never met an adversary. They have no antibodies. An agent inside the network, even a benign one, is the first adversarial-shaped thing many of them have ever met.",
+      "sources": [["ThousandEyes, AWS outage", "https://www.thousandeyes.com/blog/aws-outage-analysis-october-20-2025"], ["Cloudflare, 18 November 2025", "https://blog.cloudflare.com/18-november-2025-outage/"], ["Unit 42, ToolShell", "https://unit42.paloaltonetworks.com/microsoft-sharepoint-cve-2025-49704-cve-2025-49706-cve-2025-53770/"]]
+    },
+    {
+      "id": "spreadsheets", "act": "Act three: the spreadsheet", "dur": 150,
+      "title": "Risk management at the speed of spreadsheets",
+      "slide": { "src": "slides/spreadsheets/index.html" },
+      "say": "Act three. Everything a business does is a risk decision, including doing nothing. And the discipline that is supposed to make those decisions runs on spreadsheets: 48 per cent of organisations track risk in them. Follow the chain. The register cannot see what the agent can reach, so it cannot say what the risk is. So it cannot decide whether it fits the appetite. So it cannot fund the controls, and funding is the only thing that makes a control exist. So the answer becomes: pull the plug. Gartner expects more than 40 per cent of agentic AI projects to be cancelled by the end of 2027. The pilot works. Then somebody asks: if it does this, can we stop it? Can we recover? And the honest answers are not reliably, and not to the transaction.",
+      "cue": "The MIT NANDA 95 per cent figure is preliminary and not peer reviewed: say so if you use it.",
+      "sources": [["RegScale on the Secureframe survey", "https://regscale.com/blog/grc-spreadsheets-problem-symptom/"], ["Gartner via MarTech", "https://martech.org/gartner-40-of-agentic-ai-projects-will-fail-making-humans-indispensable/"], ["MIT NANDA via Virtualization Review", "https://virtualizationreview.com/articles/2025/08/19/mit-report-finds-most-ai-business-investments-fail-reveals-genai-divide.aspx"]]
+    },
+    {
+      "id": "unreported", "act": "The turn", "dur": 90,
+      "title": "Why we do not see more of it",
+      "slide": { "src": "slides/unreported/index.html" },
+      "say": "Why do we not see more of this? Because nobody has to report. Aviation solved this fifty years ago: NASA's reporting system takes about a hundred thousand confidential reports a year, 1.8 million so far, and a qualifying report cannot be used against the person who filed it. Pilots report near misses because it is safe to. Cyber has nothing like it. Better disclosure would be more frightening and more reassuring at the same time: the numbers would be larger, and we would finally know them.",
+      "cue": "CIRCIA: the article (September 2026) had the final rule targeted for September 2026. Check its status before the talk and update the slide or say it as of September.",
+      "sources": [["NASA ASRS", "https://en.wikipedia.org/wiki/Aviation_Safety_Reporting_System"], ["CIRCIA timing, Hunton", "https://www.hunton.com/privacy-and-cybersecurity-law-blog/cisa-plans-to-finalize-cyber-incident-reporting-regulations-in-september-2026"], ["Verizon DBIR 2025", "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"]]
+    },
+    {
+      "id": "collision", "act": "The turn", "dur": 90,
+      "title": "The collision",
+      "slide": { "src": "slides/collision/index.html" },
+      "say": "Put the three together and the scenario writes itself. An entity inside the company that behaves like an employee, a user and an API at once, with skills none of them had, at machine speed. Infrastructure that cannot tell you what it did, cannot stop it mid-action and cannot replay to the moment before. And a decision process that could not see it coming, cannot decide during it, and afterwards will produce a spreadsheet row. None of this is hypothetical. Every piece is in the public record of the last eighteen months. It just was not reported as one story."
+    },
+    {
+      "id": "way-out", "act": "The way out", "dur": 90,
+      "title": "The way out",
+      "slide": { "src": "slides/way-out/index.html" },
+      "say": "So, the way out. Four moves. Measure what the agent can actually reach. Write down what stands in the way. Give it a licence to operate that can be suspended. And let it earn its autonomy.",
+      "cue": "Change of tone here: from the problem to the work."
+    },
+    {
+      "id": "abp", "act": "The way out", "dur": 150,
+      "title": "Reach, mandate, the gap, and what stands in it",
+      "slide": { "src": "slides/abp/index.html" },
+      "say": "This is what RiskMandate's Agent Behaviour Policy writes down. The reach: what the agent can actually do, measured. The mandate: what it is for. The gap between them. And for every row in the gap, what stands in the way, typed honestly: a boundary, a setting, an expectation, or nothing. Only a boundary is a control. Most of what we call controls today are expectations, and saying so is the first useful act. One browser extension we mapped could do thirteen things beyond its purpose. Four were stopped by the platform. The other nine, by nothing but the code as written.",
+      "sources": [["RiskMandate, Agent Behaviour Policy", "https://riskmandate.ai/abp.html"], ["The Kit Bag plan", "https://sgit.ai/demos/vaults/kit-bag/index.html"]]
+    },
+    {
+      "id": "licence", "act": "The way out", "dur": 120,
+      "title": "A licence to operate, that can be suspended",
+      "slide": { "src": "slides/licence/index.html" },
+      "say": "Then make the risk decision in advance, and put a name and a date on it. A licence to operate for each agent: who authorised it, who holds it, the policy it runs under, and when it expires. Accepted risks that expire and must be accepted again. When the footprint leaves the mandate, the licence is suspended, by the system, not by a quarterly review. And autonomy is earned the same way: each level unlocked by evidence that the one below held.",
+      "cue": "The licence on screen is an example; the autonomy ladder is illustrative, not a published scale.",
+      "sources": [["RiskMandate, licence to operate", "https://riskmandate.ai/licence-to-operate.html"]]
+    },
+    {
+      "id": "demos", "act": "Live demos", "dur": 480,
+      "title": "Live demos, all open source",
+      "slide": { "src": "slides/demos/index.html" },
+      "say": "Let me show you, live. Everything you are about to see is open source.",
+      "cue": "Demo list to be confirmed by Dinis before the talk. Have each one open in its own tab, and a recorded fallback for each."
+    },
+    {
+      "id": "brakes", "act": "Close", "dur": 60,
+      "title": "Brakes are what let a car go fast",
+      "slide": { "src": "slides/brakes/index.html" },
+      "say": "Here is the irony I want to leave you with. The more you can constrain an agent, the more you can trust it, and the more autonomy you can afford to give it. Once you know the universe of what an agent can do, and it fits inside your appetite, let it act freely inside it, and every human decision becomes an exception worth making. We put brakes in cars so that we can go faster. Thank you.",
+      "cue": "Leave the site address on screen for questions."
+    }
+  ]
+}

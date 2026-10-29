@@ -1,0 +1,15 @@
+{
+  "name":        "the-ultimate-insider.presentation.sgit.ai",
+  "short":       "The ultimate insider",
+  "url":         "https://the-ultimate-insider.presentation.sgit.ai",
+  "repo":        "https://github.com/SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider",
+  "tagline":     "Agents, the infrastructure that cannot hold them, and risk management that cannot keep up. A talk by Dinis Cruz at hack::soho, IOActive London, 29 October 2026.",
+  "nav": [
+    ["Talk",     "talk/index.html"],
+    ["Script",   "talk/script.html"],
+    ["Articles", "articles/index.html"],
+    ["Sources",  "sources/index.html"],
+    ["Brief",    "brief/index.html"],
+    ["Releases", "admin/versions.html"]
+  ]
+}

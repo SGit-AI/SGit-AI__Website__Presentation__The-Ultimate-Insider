@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The grant is everything the role accumulated</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+.rows{position:absolute;left:60px;right:60px;top:190px}
+.row{display:grid;grid-template-columns:300px 1fr 130px;align-items:center;gap:18px;margin-bottom:34px}
+.row .n{font:700 23px system-ui;color:var(--head)}
+.row .n small{display:block;font-size:16px;color:var(--dim);font-weight:500}
+.track{position:relative;height:56px;border-radius:10px;background:var(--infra-t);border:2px solid var(--infra)}
+.track .used{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:8px 0 0 8px;width:0}
+.track .lbl{position:absolute;right:14px;top:50%;transform:translateY(-50%);font:700 17px system-ui;color:var(--infra)}
+.row .v{font:800 46px ui-monospace,monospace;color:var(--accent);text-align:right}
+#sa{position:absolute;left:60px;top:470px;font-size:24px;color:var(--text)}
+#sa b{font:800 40px ui-monospace,monospace;color:var(--agent);margin-right:10px}
+#line{position:absolute;left:60px;right:60px;top:560px;font:700 32px/1.25 Georgia,serif;color:var(--head)}
+#line em{font-style:normal;color:var(--infra)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="9">
+  <p class="kk i">Act two · permissions</p>
+  <div class="hl" data-in="0" style="font-size:40px">What is granted, against what is <em>used.</em></div>
+  <div class="rows">
+    <div class="row" data-in=".6"><div class="n">Workload identities<small>share of granted permissions used</small></div><div class="track"><div class="used" data-grow=".05" data-at="1.4" data-dur="1.2"></div><span class="lbl">granted: 100%</span></div><div class="v">&lt;<span data-count="5" data-at="1.4" data-dur="1.2">0</span>%</div></div>
+    <div class="row" data-in="2.6"><div class="n">Super-admin identities<small>share of granted permissions used</small></div><div class="track"><div class="used" data-grow=".02" data-at="3.4" data-dur="1.2"></div><span class="lbl">granted: 100%</span></div><div class="v">&lt;<span data-count="2" data-at="3.4" data-dur="1.2">0</span>%</div></div>
+  </div>
+  <div id="sa" data-in="4.8"><b data-count="40" data-at="4.8" data-dur="1" data-suf="%">0%</b>of super admins are workloads, not people</div>
+  <div id="line" data-in="6.4">Point an agent at that, and its grant is not what you meant. <em>It is everything the role ever accumulated.</em></div>
+  <div class="ft">Microsoft, 2023 State of Cloud Permissions Risks report</div>
+  <div class="bar"><i></i></div>
+</div>
+</body>
+</html>

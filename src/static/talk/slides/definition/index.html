@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A threat is anything that causes business impact</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+.cards{position:absolute;left:60px;right:60px;top:200px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cd{border:2px solid var(--line);border-radius:18px;background:var(--panel);padding:20px 24px;height:370px}
+.cd .k{font:800 15px system-ui;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:4px}
+.cd h3{font:700 34px Georgia,serif;margin:0 0 12px;color:var(--head)}
+.cd ul{margin:0;padding:0 0 0 20px;font-size:20px;line-height:1.45}
+.cd li{margin-bottom:6px}
+.cd.ag{border-color:var(--agent);background:var(--agent-t)}
+.cd.ag h3{color:var(--agent)}
+#cost{position:absolute;right:60px;top:120px;text-align:right;font-size:17px;color:var(--dim)}
+#cost b{display:block;font:800 40px ui-monospace,monospace;color:var(--head)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="9">
+  <p class="kk a">Act one · the insider</p>
+  <div class="hl" data-in="0">A threat is anything that causes<br><em>business impact.</em> Malice is optional.</div>
+  <div id="cost" data-in="1"><b data-count="17.4" data-dec="1" data-pre="$" data-suf="M" data-at="1" data-dur="1.4">$0.0M</b>a year: the average cost of insider risk</div>
+  <div class="cards">
+    <div class="cd" data-in="2"><p class="k">Insider one</p><h3>The human</h3><ul><li>bounded by hours and skills</li><li>an HR policy, and colleagues</li><li>most stop when they see they are causing harm</li></ul></div>
+    <div class="cd" data-in="3.4"><p class="k">Insider two</p><h3>The code</h3><ul><li>static: does what it was written to do</li><li>even a worm carries its logic with it</li><li>it cannot improvise</li></ul></div>
+    <div class="cd ag" data-in="5.2"><p class="k c-agent">Neither</p><h3>The agent</h3><ul><li>a reasoning engine in a loop, with tools</li><li>every language, every schema, every API</li><li>writes the connector it lacks, tries again</li><li>machine speed; malice optional</li></ul></div>
+  </div>
+  <div class="ft">Ponemon Institute and DTEX Systems, 2025 Cost of Insider Risks Global Report (average annual cost across the organisations surveyed)</div>
+  <div class="bar"><i></i></div>
+</div>
+</body>
+</html>

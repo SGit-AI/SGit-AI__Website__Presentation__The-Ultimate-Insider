@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>It falls over on its own</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+.g3{position:absolute;left:60px;right:60px;top:170px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.o{border:2px solid var(--line);border-radius:16px;background:var(--panel);padding:18px 20px;height:270px}
+.o .d{font:800 14px ui-monospace,monospace;color:var(--dim)}
+.o h3{font:800 26px system-ui;margin:4px 0 6px;color:var(--head)}
+.o .big{font-size:64px;color:var(--infra);margin:6px 0 4px}
+.o .big small{font-size:24px;color:var(--dim)}
+.o p{margin:0;font-size:18px;line-height:1.35}
+.o.z{border-color:var(--agent)}.o.z .big{color:var(--agent)}
+#ab{position:absolute;left:60px;right:60px;top:470px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#ab div{border-radius:16px;padding:14px 20px;font-size:21px;line-height:1.35}
+#ab .out{background:var(--accent-t);border:2px solid var(--accent)}
+#ab .in{background:var(--agent-t);border:2px solid var(--agent)}
+#ab b{display:block;font:800 15px system-ui;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+</style>
+</head>
+<body>
+<div id="cv" data-end="11">
+  <p class="kk i">Act two · fragile on its own</p>
+  <div class="hl" data-in="0" style="font-size:40px">No agent required: <em>it falls over on its own.</em></div>
+  <div class="g3">
+    <div class="o" data-in=".8"><p class="d">20 October 2025</p><h3>AWS US-East-1</h3><div class="big"><span data-count="14" data-at="1" data-dur="1.2">0</span>+<small> hours</small></div><p>A DNS race condition in DynamoDB's control plane, and thousands of services with it.</p></div>
+    <div class="o" data-in="2.4"><p class="d">18 November 2025</p><h3>Cloudflare</h3><div class="big">2&times;<small> file size</small></div><p>A configuration file that doubled after a permissions change, and for a few hours much of the web.</p></div>
+    <div class="o z" data-in="4"><p class="d">July 2025</p><h3>ToolShell, SharePoint</h3><div class="big"><span data-count="54" data-at="4.2" data-dur="1.2">0</span>+<small> orgs</small></div><p>Unauthenticated code execution; compromised before a patch existed. A zero-day dissolves every control in its path.</p></div>
+  </div>
+  <div id="ab">
+    <div class="out" data-in="6"><b class="c-acc">Facing the internet</b>Probed constantly, so it hardens. It has antibodies.</div>
+    <div class="in" data-in="7.4"><b class="c-agent">Behind the firewall</b>Never met an adversary. An agent inside, even a benign one, is the first adversarial-shaped thing it meets.</div>
+  </div>
+  <div class="ft">ThousandEyes, AWS outage analysis · Cloudflare post-mortem, 18 November 2025 · Palo Alto Unit 42, ToolShell threat brief</div>
+  <div class="bar"><i></i></div>
+</div>
+</body>
+</html>
