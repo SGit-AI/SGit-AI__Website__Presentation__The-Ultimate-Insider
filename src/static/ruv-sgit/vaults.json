@@ -729,10 +729,154 @@
     "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
     "given_to": "the editor"
    }
+  },
+  {
+   "run": "r7-e02-v2",
+   "purpose": "r7-e02-v2: E02 v2, a second pass on run r5-e02-blast-radius's vault: keep the data, redo the picture, with deck's five notes",
+   "request": {
+    "from": "deck@the-ultimate-insider (tui-mail-public ruv-sgit/inbox/006-re-e02-reviewed-again-v2.eml; order confirmed in mailroom/ruv-sgit/001 at 07:32)",
+    "date": "2026-10-29",
+    "text": "The data treatment is right to the letter: every row from the file, the arithmetic and the shortfall on screen, each barrier kind, the draft label. Keep all of it. The picture is not yet one a room reads in five seconds: it is a table beside a diagram, and nothing ties a dot to its row. Five notes for v2: 1. Label the dots, in the drawing; or draw a line from each row to its dot as it is named. 2. Plain words first, the capability id small beneath, from the file's own descriptions. 3. Group the excess by the capability's noun (files and disk, credentials, network and world, records, schedule). 4. Two distances: unstated (2) and refused (10). 5. The barrier glyph on each dot, so the one expectation and two settings stand out from the nine nothings. (A note for the explainer: the slide loads its data, so it only runs over HTTP, not from a file.)"
+   },
+   "pass_of": "21mmw3tm",
+   "commits_before": 5,
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "21mmw3tm",
+   "created_at": "2026-10-29T07:34:58+00:00",
+   "closed_at": "2026-10-29T07:42:34+00:00",
+   "ending": "kept",
+   "hive": {
+    "workers": 3,
+    "tasks": 3,
+    "ruflo_calls": 13,
+    "ruflo_failed": 0,
+    "ruflo_ms": 7293
+   },
+   "branches": [
+    {
+     "name": "w-r7-e02-v2-v2",
+     "role": "developer",
+     "files": 1,
+     "bytes": 11285,
+     "write_ms": 15649,
+     "merge_ms": 10119
+    },
+    {
+     "name": "w-r7-e02-v2-explainer",
+     "role": "writer",
+     "files": 2,
+     "bytes": 10202,
+     "write_ms": 8121,
+     "merge_ms": 9652
+    },
+    {
+     "name": "w-r7-e02-v2-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 6919,
+     "write_ms": 8217,
+     "merge_ms": 10597
+    }
+   ],
+   "commits": 9,
+   "files": 12,
+   "bytes_plain": 55914,
+   "files_delivered": 4,
+   "bytes_delivered": 28406,
+   "store": {
+    "objects": 64,
+    "bytes": 85394,
+    "plaintext_hits": 0,
+    "probe": "96 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 7303,
+    "files": 12,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "6462efdd287c",
+     "message": "init",
+     "time": "2026-10-29T05:37:10Z"
+    },
+    {
+     "id": "5df758165bdc",
+     "message": "brief: run r5-e02-blast-radius",
+     "time": "2026-10-29T05:37:12Z"
+    },
+    {
+     "id": "2f6d4dca7f16",
+     "message": "developer v1: delivered 1 files",
+     "time": "2026-10-29T05:40:19Z"
+    },
+    {
+     "id": "10720be8bdc5",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T05:40:38Z"
+    },
+    {
+     "id": "bf9917b81ff5",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T05:40:55Z"
+    },
+    {
+     "id": "13a01970708f",
+     "message": "pass: run r7-e02-v2",
+     "time": "2026-10-29T07:35:08Z"
+    },
+    {
+     "id": "e5922a2a3fb1",
+     "message": "developer v2: delivered 1 files",
+     "time": "2026-10-29T07:41:22Z"
+    },
+    {
+     "id": "519fedcc6405",
+     "message": "writer explainer: delivered 2 files",
+     "time": "2026-10-29T07:41:49Z"
+    },
+    {
+     "id": "4681a45ff4f7",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T07:42:07Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "v2",
+     "role": "developer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "explainer",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session)",
+     "tokens": null
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session (Sonnet)",
+     "tokens": 87453,
+     "tool_uses": 9,
+     "wall_s": 83,
+     "must_fix": 5,
+     "should_fix": 4
+    }
+   ],
+   "kept_at": "2026-10-29T07:42:34+00:00",
+   "handover": {
+    "zip": "2026-10-29__ruv-sgit__r5-e02__vault-handover.zip",
+    "sha256": "36ac5aa7cc5f6fb8",
+    "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+    "given_to": "the editor"
+   }
   }
  ],
  "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
- "updated": "2026-10-29T06:43:16+00:00",
+ "updated": "2026-10-29T07:42:34+00:00",
  "server": "https://dev.send.sgraph.ai",
  "viewer": "https://dev.vault.sgraph.ai/en-gb/",
  "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"

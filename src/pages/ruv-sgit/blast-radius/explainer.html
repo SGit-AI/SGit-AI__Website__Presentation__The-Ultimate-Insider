@@ -5,8 +5,8 @@
 <h1>The blast radius, frame by frame</h1>
 <p class="lead">The one sentence: if one agent inside the company goes wrong, the damage reaches everything its grant reaches, and the grant is far larger than what it is for. E01 ended on a shaded reach; E02 turns that shading into the rows it is made of.</p>
 
-<h2>The frames</h2>
-<p>Seconds from the start; it ends at 54 s and holds still. The summary line at the top left changes with each step; the rows on the right keep everything that came before.</p>
+<h2>The frames (v1)</h2>
+<p>v1, seconds from the start; it ends at 54 s and holds still. v2 keeps the same order a second later in places: dots from 5 s, the mandate at 13 s, the excess groups from 19 s, the shortfall (a dashed dot with a cross) at 28 s, the glyphs at 35 s, the end at 56 s. The summary line at the top left changes with each step; the rows on the right keep everything that came before.</p>
 <div class="tbl"><table>
 <thead><tr><th>From</th><th>What is on screen</th></tr></thead>
 <tbody>
@@ -35,7 +35,7 @@
 
 <h2>What was tried and left out</h2>
 <ul>
-<li><b>Labels on the dots.</b> Sixteen capability names round a circle at a readable size do not fit; the names live in the list beside it, in the same groups.</li>
+<li><b>Names on the dots</b> (v1). Sixteen capability names round a circle at a readable size do not fit, so v1 kept them in the list; v2 numbers the dots instead and leads each line with the same number.</li>
 <li><b>The other four examples</b> in the file (confirmations off, a chat window with nothing connected, a browser extension, a CI runner). Left for a comparison piece: with confirmations off the same 16 rows move only one barrier, which is a story of its own.</li>
 <li><b>A two-line headline</b> ran into the summary; the headline was cut to one line.</li>
 </ul>
@@ -44,10 +44,10 @@
 <p>deck kept the data treatment and asked for five changes; v2 makes all five, and keeps v1's timings within a second.</p>
 <ul>
 <li><b>Numbered dots.</b> Each of the 16 dots carries a number, and the same number leads its line in the list, so a dot and its row are tied without a line across the slide.</li>
-<li><b>Plain words first, the id beneath.</b> The data file gives each capability as an id (<code>verb.object.reach</code>) and no description, so the plain words are a reading of that grammar written for this slide (for example <code>read.credential.host</code> as "read stored credentials"), and the slide says so. The gap is reported to deck, so a description can be added to the file.</li>
+<li><b>Plain words first, the id beneath.</b> The data file gives each capability as an id (<code>verb.object.reach</code>) and no description, so the plain words are a reading of that grammar written for this slide (for example <code>read.credential.host</code> as "read credentials on the machine"), and the slide says so. The gap is reported to deck in the reply for this run, so a description can be added to the file.</li>
 <li><b>Grouped by what it touches.</b> The 12 excess rows in five groups by the id's noun: files and disk (3), credentials (4), network and world (2: the two rows whose reach is the world), records and repositories (2), schedule (1). Each row is in one group only.</li>
 <li><b>Two distances.</b> The rings are labelled: the mandate (4 granted), unstated (2), refused (10).</li>
-<li><b>The glyph on each dot</b>, from 35 s: abp.sgit.ai's filled circle for nothing in the way, double circle for a rule in prose, half filled for a switch the agent's own account can flip. In this example that marks one rule in prose and two switches (one of them on a mandate row); the other 13 rows have nothing in the way.</li>
+<li><b>The glyph on each dot</b>, from 35 s: abp.sgit.ai's filled circle for nothing in the way, double circle for a rule in prose, half filled for a switch the agent's own account can flip. In this example that marks one rule in prose and two switches (one of them on a mandate row); the other 13 rows have nothing in the way. The last summary line carries the key to the shapes.</li>
 <li><b>It runs only over HTTP.</b> The slide reads its data with <code>fetch</code> when it loads, so opened as a file from disk it shows the frame and no rows; on the site, or any local web server, it works.</li>
 </ul>
 <h2>How it was made</h2>

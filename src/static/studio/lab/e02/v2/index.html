@@ -39,11 +39,11 @@
   'use strict'
   // The file gives each capability as an id, verb.object.reach, and no description; the plain words below are a reading
   // of that grammar, not the file's words, and the slide says so.
-  var VERB = { read: 'read', write: 'change', 'delete': 'delete', create: 'create', send: 'send to', 'authenticate-as': 'act as', grant: 'give', execute: 'run' }
+  var VERB = { read: 'read', write: 'change', 'delete': 'delete', create: 'create', send: 'send to', 'authenticate-as': 'act with', grant: 'grant', execute: 'run' }
   var OBJ = { 'file.project': "the project's files", 'file.host': 'any file on disk', 'repository.project': "the project's repo",
-    'repository.tenant': 'your other repositories', 'process.host': 'programs', 'credential.signing': 'your signing keys',
-    'credential.tenant': 'your account credentials', 'credential.host': 'stored credentials', 'credential.self': 'itself new permissions',
-    'record.world': 'public records', 'record.history': 'your history records', 'endpoint.world': 'any host',
+    'repository.tenant': 'repos in your accounts', 'process.host': 'programs', 'credential.signing': 'your signing credentials',
+    'credential.tenant': 'your account credentials', 'credential.host': 'credentials on the machine', 'credential.self': 'itself credentials',
+    'record.world': 'public records', 'record.history': 'history records', 'endpoint.world': 'any host',
     'endpoint.allowed': 'allowed hosts', 'schedule.host': 'scheduled tasks' }
   var plain = function (id) { var p = id.split('.'), v = VERB[p[0]] || p[0], o = OBJ[p[1] + '.' + p[2]] || (p[1] + ', ' + p[2]); return v + ' ' + o }
   var GROUPS = [['Files and disk', function (c) { return /\.file\./.test(c) }], ['Credentials', function (c) { return /\.credential\./.test(c) }],
@@ -125,7 +125,7 @@
     if (t >= 13) s = 'What it is for, the mandate: ' + D.mandate + ', of which ' + D.aligned + ' are granted.'
     if (t >= 19) s = 'The excess: ' + D.grant + ' minus ' + D.aligned + ' = ' + D.excess + ', the blast radius, grouped by what it touches.'
     if (t >= 28) s = 'Excess ' + D.grant + ' minus ' + D.aligned + ' = ' + D.excess + '. And one thing asked for and not granted (×).'
-    if (t >= 35) s = 'Excess ' + D.excess + ' (' + D.grant + ' minus ' + D.aligned + '). In the way of it: ' + D.unbounded_excess + ' of ' + D.excess + ' have no control; the shapes mark the one rule in prose and the switch its account can flip.'
+    if (t >= 35) s = 'Excess ' + D.excess + ' (' + D.grant + ' minus ' + D.aligned + '); ' + D.unbounded_excess + ' of ' + D.excess + ' have no control. Dot shapes: filled, nothing in the way; double ring, a rule in prose; half filled, a switch its own account can flip.'
     if (S.$('sum').textContent !== s) S.$('sum').textContent = s
   }
 })()
