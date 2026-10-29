@@ -10,12 +10,10 @@
 <style>
 .kk{font-size:20px;top:14px}
 .hl{top:52px;font-size:40px;right:230px}
-#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--dim);letter-spacing:.02em}
+#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--head);letter-spacing:.02em}
 #q{position:absolute;left:40px;right:40px;top:110px;height:28px;font:20px/1.3 system-ui;color:var(--text);white-space:nowrap}
 #q b{color:var(--head)}
 .pn{position:absolute;top:146px;width:236px;height:522px;border:2px solid var(--line);border-radius:14px;padding:8px 8px 0;background:var(--panel)}
-.pn.der{border-style:dashed;border-color:var(--line2)}
-.pn.mea{border-color:var(--head)}
 .pn .nm{height:74px;font:700 20px/24px system-ui;color:var(--head)}
 .pn svg{display:block;width:216px;height:194px;margin:0 auto}
 .pn .ln{font:20px/24px system-ui;color:var(--text);white-space:nowrap}
@@ -96,7 +94,7 @@
       var inM = ex.rows.filter(function (r) { return r.in_mandate }), out = ex.rows.filter(function (r) { return !r.in_mandate })
       out.sort(function (a, b) { return ORDER.indexOf(a.barrier_kind) - ORDER.indexOf(b.barrier_kind) })
       var slots = inM.length + ex.shortfall, ms = slots === 1 ? [[CX, CY]] : ring(slots, RS, -Math.PI / 2 - Math.PI / slots, 3 * Math.PI / 2 - Math.PI / slots)
-      var gap = .62, xs = ring(out.length, RX, -Math.PI / 2 + gap, 3 * Math.PI / 2 - gap)
+      var gap = .75, xs = ring(out.length, RX, -Math.PI / 2 + gap, 3 * Math.PI / 2 - gap)
       if (out.length && out[out.length - 1].barrier_kind === 'boundary') {     // a boundary sits at the foot of the ring, its name inside above it
         var m = out.length - 1, rt = Math.ceil(m / 2), bb = .8
         xs = ring(rt, RX, -Math.PI / 2 + gap, Math.PI / 2 - bb).concat(ring(m - rt, RX, Math.PI / 2 + bb, 3 * Math.PI / 2 - gap), [[CX, CY + RX]])
@@ -155,7 +153,6 @@
       p.L.g.style.opacity = k(P1 + st); p.L.m.style.opacity = k(P2 + st); p.L.x.style.opacity = k(P3 + st)
       p.L.u.style.opacity = k(P4 + 1 + st); p.L.ms.style.opacity = k(P5 + st); p.L.hs.style.opacity = k(P5 + 2 + st)
       var mm = t >= P5 + st
-      p.pn.classList.toggle('der', mm && !p.ex.rows_measured.measured); p.pn.classList.toggle('mea', mm && !!p.ex.rows_measured.measured)
     })
     S.$('key').style.opacity = k(P4 + .5)
     var q = ''
@@ -164,7 +161,7 @@
     else if (t < P3) q = '<b>The mandate:</b> what it is authorised to do. A dashed dot: asked for, not granted.'
     else if (t < P4) q = '<b>The excess:</b> in the grant, not in the mandate.'
     else if (t < P5) q = '<b>What bounds it:</b> only a boundary, the empty circle, is a control. ' + (B.bRows.length === 1 ? 'One' : B.bRows.length) + ' in all five: "' + label(B.bRows[0].r.capability).toLowerCase() + '".'
-    else if (t < P6) q = '<b>Measured or derived:</b> ' + B.meas.length + ' example measured inside the runner; the other ' + (A.examples.length - B.meas.length) + ' derived, not measured.'
+    else if (t < P6) q = '<b>Measured or derived:</b> ' + B.meas.length + ' example measured inside the runner; the other ' + (A.examples.length - B.meas.length) + ' derived, not measured (the coding agents count 22 tool-level rows).'
     else q = '<b>No rating, no ranking:</b> published drafts from one author\'s network, side by side.'
     if (S.$('q').innerHTML !== q) S.$('q').innerHTML = q
   }

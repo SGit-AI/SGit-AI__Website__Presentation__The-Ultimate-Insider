@@ -188,9 +188,9 @@ window.RUV_STEPS = [
     S.$('vd').style.opacity = k(P4 + 3, .6)
     var M = A.model, q = ''
     if (t < P1) q = '<b>The barrier:</b> ' + esc(M.barrier.definition.toLowerCase()) + '.'
-    else if (t < P2) q = '<b>The test:</b> "' + esc(M.enforcer_test.quote) + '"'
-    else if (t < P3) q = '<b>' + esc(B.on.name) + ':</b> ' + B.on.rows.length + ' rows, ' + (B.on.rows.filter(function (r) { return r.barrier_kind === 'boundary' }).length || 'none') + ' at a boundary.'
-    else if (t < P4) q = '<b>' + esc(B.off.name) + ':</b> ' + B.movers.length + ' row moves.'
+    else if (t < P2) q = '<b>The test,</b> in abp.sgit.ai\'s reading: "' + esc(M.enforcer_test.quote) + '"'
+    else if (t < P3) q = '<b>' + esc(B.on.name) + ':</b> ' + B.on.rows.length + ' rows, ' + (B.on.rows.filter(function (r) { return r.barrier_kind === 'boundary' }).length || 'none') + ' at a boundary. Derived: ' + B.on.rows_measured.measured + ' of ' + B.on.rows_measured.total + ' rows measured.'
+    else if (t < P4) q = '<b>' + esc(B.off.name) + ':</b> ' + B.movers.length + ' row moves. Derived, like the first.'
     else q = '<b>Published drafts</b> from one author\'s network, derived: ' + B.on.rows_measured.measured + ' of ' + B.on.rows_measured.total + ' rows measured. No score.'
     if (S.$('q').innerHTML !== q) S.$('q').innerHTML = q
   }

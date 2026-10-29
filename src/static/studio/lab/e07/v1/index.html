@@ -48,7 +48,7 @@ window.RUV_STEPS = [{ t: 0, label: 'the box' }, { t: 5, label: 'where it reaches
   var BANDS = [
     { ex: 'github-actions-hosted-runner', key: 'github/actions-runner/ci', top: 130, title: 'CI job', sub: 'on a hosted runner',
       zones: ['project', 'host', 'world'], zoneWords: { project: 'the checked-out tree at this ref' },   // from its project rows' notes
-      wall: { 'write.repository.project': 'boundary: the token is contents:read' },                       // from the row's barrier text
+      wall: { 'write.repository.project': 'boundary, holds: the token is contents:read' },                       // from the row's barrier text
       tagWords: function (e) { return 'measured: ' + e.rows_measured.measured + ' of ' + e.rows_measured.total + ' rows, inside the runner' },
       boxAt: 5, hubAt: 7, capAt: 10, wallAt: 19, tagAt: 22 },
     { ex: 'browser-extension-broad-host-permissions', key: 'generic/browser-extension/broad-host-permissions', top: 0, title: 'Browser extension', sub: 'broad host permissions',
@@ -130,7 +130,7 @@ window.RUV_STEPS = [{ t: 0, label: 'the box' }, { t: 5, label: 'where it reaches
     S.$('hlA').style.opacity = 1 - k(5, .6); S.$('hlB').style.opacity = k(5.6, .6)
     B.forEach(function (band, bi) {
       var bd = band.bd, mv = k(bd.boxAt, 1.6), x = S.lerp(BX0, BX, mv)
-      band.box.style.left = x + 'px'; band.box.style.opacity = k(.3 + bi * .6)
+      band.box.style.left = x + 'px'; band.box.style.opacity = t <= 0 ? 1 : k(0, .4)
       band.tag.style.opacity = k(bd.tagAt)
       band.groups.forEach(function (g, gi) {
         var a = bd.hubAt + gi * .9
