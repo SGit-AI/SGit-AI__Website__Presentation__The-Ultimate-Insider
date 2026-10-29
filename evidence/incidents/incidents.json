@@ -1,12 +1,12 @@
 {
  "about": "Public AI agent incidents since May 2025, candidates for the editor",
- "built": "2026-10-29T04:22Z",
+ "built": "2026-10-29T05:20Z",
  "incidents": [
   {
    "id": "pocketos-cursor-railway",
    "date": "2026-04-25",
    "title": "Cursor agent (Claude Opus 4.6) deletes PocketOS production database and backups",
-   "what_happened": "Working on a staging task, the coding agent hit a credential mismatch, found a broadly scoped Railway API token in an unrelated file and called a legacy volume-delete endpoint, wiping the production volume and attached backups. Railway restored the data.",
+   "what_happened": "Working on a staging task, the coding agent hit a credential mismatch, found a Railway API token stored locally, scoped to the whole account and called a legacy volume-delete endpoint, wiping the production volume and attached backups. Railway restored the data.",
    "benign_or_attack": "benign",
    "impact": "Production outage for a car-rental SaaS and its customers; about 30-hour recovery timeline per the founder; data later restored by Railway.",
    "primary_source": "Jer Crane's X post of 25 April 2026 (not captured: X is JS-only); Railway CEO Jake Cooper's statements quoted in ABC7",
@@ -28,7 +28,7 @@
    ],
    "grade": "A4",
    "fits_talk": "Strengthens 'agents being agents': same shape as Replit, nine months later, with a token the agent found rather than one it was given. Strong opener for 'what can your agent reach'.",
-   "note": "Founder and Railway both describe the deletion; Railway frames it as a 'rogue customer AI' plus its own legacy endpoint lacking delayed delete. Cursor and Anthropic responses not found."
+   "note": "Founder and Railway both describe the deletion; Railway frames it as a 'rogue customer AI' plus its own legacy endpoint lacking delayed delete. Cursor and Anthropic responses not found. Corrected 05:20 UTC from Railway's own post (captured for E04): the token was \"stored locally\" and account-scoped; the first version said \"in an unrelated file\"."
   },
   {
    "id": "aws-kiro-cost-explorer",

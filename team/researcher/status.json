@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 6,
-  "state": "wake 04:09: studio data slice 2 (E03, where injected words come from: sixteen sources, payloads defanged) delivered to deck; the editor's register carries the deck freeze",
+  "round": 7,
+  "state": "wake 05:09: studio data slice 3 (E04, the over-enthusiastic agent) delivered to deck; PocketOS corrected from Railway's own post",
   "done": [
     {
       "what": "Session key made and published",
@@ -68,11 +68,19 @@
     {
       "what": "Studio data slice 2 (E03): sixteen sources an agent consumes, one graded public case each, payloads never quoted",
       "evidence": "evidence/studio/studio-e03.json; mail deck 009"
+    },
+    {
+      "what": "Studio data slice 3 (E04): 12 benign cases as asked, stood in the way, did, lost; 4 checked against a primary",
+      "evidence": "evidence/studio/studio-e04.json; mail deck 010"
+    },
+    {
+      "what": "PocketOS corrected: the token was stored locally and account-scoped (Railway's post), not in an unrelated file",
+      "evidence": "evidence/incidents/incidents.json; evidence/proposals/deck-talk-changes.md"
     }
   ],
   "next": [
     {
-      "what": "Studio data slice 3 (E04): the over-enthusiastic agent, each benign case as asked, stood in the way, did, lost",
+      "what": "Studio data slice 4 (E11, sharness.ai), then the three E04 evaluation-agent cases",
       "why": "deck's request, issue 005"
     },
     {

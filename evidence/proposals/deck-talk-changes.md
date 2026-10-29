@@ -22,7 +22,7 @@ Deck has sent this to the editor, rightly: it is the line act one turns on. Echo
 **Option B: keep "three", swap EchoLeak for a 2026 case that was an agent being an agent.** This also answers "the last eighteen months" with something recent. Best sourced (A4, two independent parties each):
 
 - **OpenAI Codex, July 2026**: in full-access mode the model overrode `$HOME` for a temporary directory and a cleanup command deleted users' real home directories; OpenAI confirmed "a handful" of cases and shipped fixes. Sources: The Decoder, BankInfoSecurity (OpenAI's Thibault Sottiaux quoted). Claim `codex-gpt56-home-deletion` in `incidents/`.
-- **PocketOS, April 2026**: a Cursor agent on a staging task found a broadly scoped Railway token in an unrelated file and deleted the production volume and its backups; Railway restored the data. Sources: ABC7, OECD AI Incidents Monitor. `pocketos-cursor-railway`.
+- **PocketOS, April 2026**: a Cursor agent on a staging task found a locally stored Railway token, scoped to the whole account, and deleted the production volume and its backups; Railway restored the data. Sources: ABC7, OECD AI Incidents Monitor. `pocketos-cursor-railway`.
 
 | File | Now | Proposed (Codex) |
 |---|---|---|

@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T04:22Z",
- "count": 361,
+ "built": "2026-10-29T05:20Z",
+ "count": 372,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -3274,6 +3274,438 @@
    ],
    "capture": "full",
    "recorded_by": "act1"
+  },
+  {
+   "id": "e04-anthropic-alignment-assessment",
+   "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+   "final_url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+   "publisher": "Anthropic",
+   "title": "An alignment assessment of recent cybersecurity incidents",
+   "kind": "primary",
+   "published": "2026-09-09",
+   "captured_at": "2026-10-29T05:15:05Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "632a416c558ca65cc2664898b566ddac3c7fec15c00dede475813f65a238f193",
+     "bytes_as_fetched": 594139,
+     "redacted": 8,
+     "sha256": "3a1c4dcc491ace3316b3c0bab68e50f056fe031e74fb602f3f0bf1091d96f5eb",
+     "bytes": 594115
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "de043298900d0f6d1b70dd5bcfb78f25699f80158bdb7c6892712443c5b7c4f7",
+     "bytes_as_fetched": 104242,
+     "redacted": 2,
+     "sha256": "d110069c22cbc96c32bae20c140a14aee7f7083d6fbab17d03de9e6fb7c7b162",
+     "bytes": 104238
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "137f1de12030bce41a2f25b17ab646f107d301e2d9a9110dca82947a859ee60f",
+     "bytes_as_fetched": 76,
+     "sha256": "137f1de12030bce41a2f25b17ab646f107d301e2d9a9110dca82947a859ee60f",
+     "bytes": 76
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "02a27e8821582575f324a166fe63fdba0f3a25235d8cda35bc19c66834a1255b",
+     "bytes_as_fetched": 185,
+     "sha256": "02a27e8821582575f324a166fe63fdba0f3a25235d8cda35bc19c66834a1255b",
+     "bytes": 185
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-anthropic-evals-incidents",
+   "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+   "final_url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+   "publisher": "Anthropic",
+   "title": "Investigating three real-world incidents in our cybersecurity evaluations",
+   "kind": "primary",
+   "published": "2026-07-30",
+   "captured_at": "2026-10-29T05:15:05Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1327c71c02e35b43a0e74d352b4805c008583c6c28acf67fa872118937aa1b51",
+     "bytes_as_fetched": 226133,
+     "redacted": 2,
+     "sha256": "370c480e79a2537b4e5a54d53b98f1f1ada02a9ad64fac2f4f55a494d346acbd",
+     "bytes": 226127
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4d451f03d0ebdae6125f0d3b2362fa83cb1031ec0236b3623d9acf21dce56af9",
+     "bytes_as_fetched": 22067,
+     "sha256": "4d451f03d0ebdae6125f0d3b2362fa83cb1031ec0236b3623d9acf21dce56af9",
+     "bytes": 22067
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "117ec53eb4ca9e4ce66cf12451f0b233862295801b183a56bf7ed327322a799d",
+     "bytes_as_fetched": 76,
+     "sha256": "117ec53eb4ca9e4ce66cf12451f0b233862295801b183a56bf7ed327322a799d",
+     "bytes": 76
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "31bd5d6d75d947e6cec0d7d19f45fb763958395914821afcf704b9799edbd5d7",
+     "bytes_as_fetched": 175,
+     "sha256": "31bd5d6d75d947e6cec0d7d19f45fb763958395914821afcf704b9799edbd5d7",
+     "bytes": 175
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-cltr-scheming-in-the-wild",
+   "url": "https://www.longtermresilience.org/reports/scheming-in-the-wild/",
+   "final_url": "https://www.longtermresilience.org/reports/scheming-in-the-wild/",
+   "publisher": "Centre for Long-Term Resilience",
+   "title": "Scheming in the Wild",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T05:15:06Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ac4f780358ba4326a07c3a9bb83dff5a70cbb95a22be0f4c9385efe182cd722f",
+     "bytes_as_fetched": 75193,
+     "sha256": "ac4f780358ba4326a07c3a9bb83dff5a70cbb95a22be0f4c9385efe182cd722f",
+     "bytes": 75193
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9bff27d089a7b665d73c13b596bf7fe647c94bba28fa871cdf7181ed98bed521",
+     "bytes_as_fetched": 68,
+     "sha256": "9bff27d089a7b665d73c13b596bf7fe647c94bba28fa871cdf7181ed98bed521",
+     "bytes": 68
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "b8e9e3e8a8b6a9766801994de24c334597cd6601cc0b6cf7a6e8438de1f675ea",
+     "bytes_as_fetched": 76,
+     "sha256": "b8e9e3e8a8b6a9766801994de24c334597cd6601cc0b6cf7a6e8438de1f675ea",
+     "bytes": 76
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "3d922ec8257a4cbd725d3a10593e138c2df8f594d95ada0cb225e5a188bc89ce",
+     "bytes_as_fetched": 155,
+     "sha256": "3d922ec8257a4cbd725d3a10593e138c2df8f594d95ada0cb225e5a188bc89ce",
+     "bytes": 155
+    }
+   ],
+   "capture": "failed: HTTP 403 to curl and WebFetch",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-cltr-scheming-wayback",
+   "url": "https://web.archive.org/web/20260327162925/https://www.longtermresilience.org/reports/scheming-in-the-wild/",
+   "final_url": "https://web.archive.org/web/20260327162925/https://www.longtermresilience.org/reports/scheming-in-the-wild/",
+   "publisher": "Internet Archive",
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": null,
+   "http_status": null,
+   "files": [
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "5a8bd749f8e7e31d74e30dfd596fa92dde77c7707fe52f3c1a076f1a76ff6370",
+     "bytes_as_fetched": 388,
+     "sha256": "5a8bd749f8e7e31d74e30dfd596fa92dde77c7707fe52f3c1a076f1a76ff6370",
+     "bytes": 388
+    }
+   ],
+   "capture": "failed: web.archive.org connection reset through the proxy; WebFetch refuses the host",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-gh-gemini-cli-4586",
+   "url": "https://github.com/google-gemini/gemini-cli/issues/4586",
+   "final_url": null,
+   "publisher": "GitHub",
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": null,
+   "http_status": 403,
+   "files": [
+    {
+     "name": "err.txt",
+     "sha256_as_fetched": "7f1629b5448e73d41eb5183b161d4468af9997be156ede07fe6fb9eeb184eb8f",
+     "bytes_as_fetched": 294,
+     "sha256": "7f1629b5448e73d41eb5183b161d4468af9997be156ede07fe6fb9eeb184eb8f",
+     "bytes": 294
+    },
+    {
+     "name": "issue.json",
+     "sha256_as_fetched": "b3e03aaaff81d68730d67392a135ac3fdfdf022880c66632ab188d2fe084cda3",
+     "bytes_as_fetched": 378,
+     "sha256": "b3e03aaaff81d68730d67392a135ac3fdfdf022880c66632ab188d2fe084cda3",
+     "bytes": 378
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "b4d6bf371ece11dea9807ed8fcc453e82a9fcfc2d55e294668a9cdf047f442ea",
+     "bytes_as_fetched": 105,
+     "sha256": "b4d6bf371ece11dea9807ed8fcc453e82a9fcfc2d55e294668a9cdf047f442ea",
+     "bytes": 105
+    }
+   ],
+   "capture": "failed: GitHub API 403, repository not enabled for this session",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-gh-gemini-cli-4586-wayback",
+   "url": "https://web.archive.org/web/20261018033103/https://github.com/google-gemini/gemini-cli/issues/4586",
+   "final_url": "https://web.archive.org/web/20261018033103/https://github.com/google-gemini/gemini-cli/issues/4586",
+   "publisher": "Internet Archive",
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": null,
+   "http_status": null,
+   "files": [
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "99b837350d4fb3d1b968699b03d9d187c5026050173d412e8fa86c3b4c440cd4",
+     "bytes_as_fetched": 364,
+     "sha256": "99b837350d4fb3d1b968699b03d9d187c5026050173d412e8fa86c3b4c440cd4",
+     "bytes": 364
+    }
+   ],
+   "capture": "failed: web.archive.org connection reset through the proxy; WebFetch refuses the host",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-hf-agent-intrusion-timeline",
+   "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+   "final_url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+   "publisher": "Hugging Face",
+   "title": "Technical timeline of the July 2026 incident",
+   "kind": "primary",
+   "published": "2026-07-27",
+   "captured_at": "2026-10-29T05:15:04Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "77bf55f0383a981906e3893d2ed2d1aa60b2a3a94a1a18c7174044cb96f47bee",
+     "bytes_as_fetched": 733787,
+     "redacted": 3,
+     "sha256": "343d6b169ba12427b8f4e1af1815fbdbf54ab4815e649178261c4f6bfb625f4c",
+     "bytes": 733780
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c87f6826e92c71bafeb2b2966187a6a78aad0686fa965a53b735caf5b57a7f4f",
+     "bytes_as_fetched": 55982,
+     "redacted": 1,
+     "sha256": "2552b35c14f41f7b44d6e825bdc6295eb3f04117f67cdf6f8f98eae28238dcfb",
+     "bytes": 55975
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "43e6f406b567d7384b1d3c01654402b262a379ef2b5b2e9e5bc21a8d12cf7f0d",
+     "bytes_as_fetched": 76,
+     "sha256": "43e6f406b567d7384b1d3c01654402b262a379ef2b5b2e9e5bc21a8d12cf7f0d",
+     "bytes": 76
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "14520b3bc5a96540cac81cf3a3e31bd73ca2d4d8c4f5eff92b5a88280e6df9fd",
+     "bytes_as_fetched": 151,
+     "sha256": "14520b3bc5a96540cac81cf3a3e31bd73ca2d4d8c4f5eff92b5a88280e6df9fd",
+     "bytes": 151
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-hf-security-incident-july-2026",
+   "url": "https://huggingface.co/blog/security-incident-july-2026",
+   "final_url": "https://huggingface.co/blog/security-incident-july-2026",
+   "publisher": "Hugging Face",
+   "title": "Security incident disclosure, July 2026",
+   "kind": "primary",
+   "published": "2026-07-16",
+   "captured_at": "2026-10-29T05:15:04Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "efffb2f9eceb6909abef09ac33f27b9e06f942a51a0fe26bf4b5dbaa9b3f1b29",
+     "bytes_as_fetched": 566874,
+     "redacted": 3,
+     "sha256": "475f8aa8f54c591707dbd0751ea23a685f55a32fee6ef60d7f7423b5a1b2ccfc",
+     "bytes": 566867
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "7f1166ac3a5e49bc3258eadd16c811893177bae80b35ab5589e04dc085ec0625",
+     "bytes_as_fetched": 10006,
+     "redacted": 1,
+     "sha256": "a106a4ef7bed8d9b4a93af3a6a354855b3db4155f49da35f6fbacdf400a633fb",
+     "bytes": 9999
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e8ae07dade6ec3f8b27e5f10e5c02279798195828456c7a29495426d08da26ac",
+     "bytes_as_fetched": 76,
+     "sha256": "e8ae07dade6ec3f8b27e5f10e5c02279798195828456c7a29495426d08da26ac",
+     "bytes": 76
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "e87762da88f661cf0bf128caf52ef16ad930a192bf022e53b85355e338c56892",
+     "bytes_as_fetched": 137,
+     "sha256": "e87762da88f661cf0bf128caf52ef16ad930a192bf022e53b85355e338c56892",
+     "bytes": 137
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-openai-hf-incident",
+   "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+   "final_url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+   "publisher": "OpenAI",
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T05:15:03Z",
+   "http_status": 403,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1adc929549f75886cbae4db3a0aaba30d4ff4c84ecab0414f04ff243081d1fdd",
+     "bytes_as_fetched": 9980,
+     "sha256": "1adc929549f75886cbae4db3a0aaba30d4ff4c84ecab0414f04ff243081d1fdd",
+     "bytes": 9980
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+     "bytes_as_fetched": 1,
+     "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+     "bytes": 1
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "45242c4543f2825e31a8ddbdce26cc4078d26280cd8584337364bb30462f08c7",
+     "bytes_as_fetched": 76,
+     "sha256": "45242c4543f2825e31a8ddbdce26cc4078d26280cd8584337364bb30462f08c7",
+     "bytes": 76
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "65b61fe4fd68dd7c191af1555d5a46817db7ccc19655b50827c97b9de75c1b4d",
+     "bytes_as_fetched": 173,
+     "sha256": "65b61fe4fd68dd7c191af1555d5a46817db7ccc19655b50827c97b9de75c1b4d",
+     "bytes": 173
+    }
+   ],
+   "capture": "failed: HTTP 403 to curl and WebFetch",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-openai-hf-incident-wayback",
+   "url": "https://web.archive.org/web/20261023091653/https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+   "final_url": "https://web.archive.org/web/20261023091653/https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+   "publisher": "Internet Archive",
+   "title": null,
+   "kind": "primary",
+   "published": null,
+   "captured_at": null,
+   "http_status": null,
+   "files": [
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "3c3065f65dc6049818570c12480013132b09259b74991e955f14903b404c63b5",
+     "bytes_as_fetched": 406,
+     "sha256": "3c3065f65dc6049818570c12480013132b09259b74991e955f14903b404c63b5",
+     "bytes": 406
+    }
+   ],
+   "capture": "failed: web.archive.org connection reset through the proxy; WebFetch refuses the host",
+   "recorded_by": "studio-e04"
+  },
+  {
+   "id": "e04-railway-nuke-database",
+   "url": "https://blog.railway.com/p/your-ai-wants-to-nuke-your-database",
+   "final_url": "https://blog.railway.com/p/your-ai-wants-to-nuke-your-database",
+   "publisher": "Railway",
+   "title": "Your AI wants to nuke your database. Guardrails fix that.",
+   "kind": "primary",
+   "published": "2026-04-29",
+   "captured_at": "2026-10-29T05:15:05Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "39414f2c7b7cd3306349174ad76d57bac9ac0b79d32f2c35bbf3e7e8ee89e98e",
+     "bytes_as_fetched": 61621,
+     "redacted": 1,
+     "sha256": "18c1b8fddd8ba93e6340ae737e488ebfdf269f0451eea13acc30366191eba666",
+     "bytes": 61618
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8856f981e013a6da20058fb74f602d1faaf10d5f952d60c48ba12789c5d19994",
+     "bytes_as_fetched": 12361,
+     "sha256": "8856f981e013a6da20058fb74f602d1faaf10d5f952d60c48ba12789c5d19994",
+     "bytes": 12361
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f02758bcd03818dc9b7e4c1384be0584f22791670aa6ec19fac23d9713579bb7",
+     "bytes_as_fetched": 76,
+     "sha256": "f02758bcd03818dc9b7e4c1384be0584f22791670aa6ec19fac23d9713579bb7",
+     "bytes": 76
+    },
+    {
+     "name": "status.txt",
+     "sha256_as_fetched": "5e216262a93db8e717bab454afd1c528821b559f79237cbeef43b0700ae39ec0",
+     "bytes_as_fetched": 151,
+     "sha256": "5e216262a93db8e717bab454afd1c528821b559f79237cbeef43b0700ae39ec0",
+     "bytes": 151
+    }
+   ],
+   "capture": "full",
+   "recorded_by": "studio-e04"
   },
   {
    "id": "escudodigital-sharepoint-54",

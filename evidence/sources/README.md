@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T04:22Z. 361 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T05:20Z. 372 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -74,6 +74,17 @@ Built 2026-10-29T04:22Z. 361 sources; `manifest.json` has every file's SHA-256. 
 | [dtex-cost-insider-2025](https://www.dtex.ai/blog/2025-cost-insider-risks-takeaways/) | DTEX Systems | vendor-survey | 2026-10-29T01:50:21Z | 200 | full | 3 |
 | [dtex-ponemon-2025-itbrief](https://itbrief.com.au/story/insider-risk-costs-soar-as-ai-reshapes-workplace-data) | IT Brief (reporting DTEX/Ponemon) | news | 2026-10-29T01:55:42Z | 200 | full | 5 |
 | [dtex-press-2025-ponemon](https://www.dtex.ai/newsroom/press-releases/2025-ponemon-insider-threat-report-release/) | DTEX Systems | vendor-survey | 2026-10-29T01:55:34Z | 200 | full | 3 |
+| [e04-anthropic-alignment-assessment](https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents) | Anthropic | primary | 2026-10-29T05:15:05Z | 200 | full | 4 |
+| [e04-anthropic-evals-incidents](https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals) | Anthropic | primary | 2026-10-29T05:15:05Z | 200 | full | 4 |
+| [e04-cltr-scheming-in-the-wild](https://www.longtermresilience.org/reports/scheming-in-the-wild/) | Centre for Long-Term Resilience | primary | 2026-10-29T05:15:06Z | 403 | failed: HTTP 403 to curl and WebFetch | 4 |
+| [e04-cltr-scheming-wayback](https://web.archive.org/web/20260327162925/https://www.longtermresilience.org/reports/scheming-in-the-wild/) | Internet Archive | primary | None | None | failed: web.archive.org connection reset through the proxy; WebFetch refuses the host | 2 |
+| [e04-gh-gemini-cli-4586](https://github.com/google-gemini/gemini-cli/issues/4586) | GitHub | primary | None | 403 | failed: GitHub API 403, repository not enabled for this session | 3 |
+| [e04-gh-gemini-cli-4586-wayback](https://web.archive.org/web/20261018033103/https://github.com/google-gemini/gemini-cli/issues/4586) | Internet Archive | primary | None | None | failed: web.archive.org connection reset through the proxy; WebFetch refuses the host | 2 |
+| [e04-hf-agent-intrusion-timeline](https://huggingface.co/blog/agent-intrusion-technical-timeline) | Hugging Face | primary | 2026-10-29T05:15:04Z | 200 | full | 4 |
+| [e04-hf-security-incident-july-2026](https://huggingface.co/blog/security-incident-july-2026) | Hugging Face | primary | 2026-10-29T05:15:04Z | 200 | full | 4 |
+| [e04-openai-hf-incident](https://openai.com/index/hugging-face-model-evaluation-security-incident/) | OpenAI | primary | 2026-10-29T05:15:03Z | 403 | failed: HTTP 403 to curl and WebFetch | 4 |
+| [e04-openai-hf-incident-wayback](https://web.archive.org/web/20261023091653/https://openai.com/index/hugging-face-model-evaluation-security-incident/) | Internet Archive | primary | None | None | failed: web.archive.org connection reset through the proxy; WebFetch refuses the host | 2 |
+| [e04-railway-nuke-database](https://blog.railway.com/p/your-ai-wants-to-nuke-your-database) | Railway | primary | 2026-10-29T05:15:05Z | 200 | full | 4 |
 | [escudodigital-sharepoint-54](https://www.escudodigital.com/ciberseguridad/mas-de-50-gobiernos-y-empresas-comprometidos-por-la-vulnerabilidad-critica-en-sharepoint.html) | Escudo Digital | news | 2026-10-29T01:53:05Z | 200 | full | 3 |
 | [eth-e2ee-cloud-2024](https://eprint.iacr.org/2024/1616) | Albrecht, Backendal, Coppola, Paterson (IACR ePrint 2024/1616) | primary | 2026-10-29T01:55:01Z | 200 | full | 4 |
 | [eu-ai-act-art26](https://artificialintelligenceact.eu/article/26/) | artificialintelligenceact.eu (Future of Life Institute) | secondary | 2026-10-29T01:55:01Z | 200 | full | 4 |
