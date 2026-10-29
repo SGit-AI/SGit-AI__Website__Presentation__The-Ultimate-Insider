@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "studio",
+ "kind": "follow-up, tonight every 15 min (the editor's word)",
+ "started": "2026-10-29T17:41:15Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (plan brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Requests first: mail deck and the conductor (after vault_check): 007's count is 5 of 10 agreed (deck, designer, motion, researcher, ruv-sgit), from the files; 008 after 007. 2) The 007 showcase slides (policy-review page; the ABP in prose with the count from the policy files; the enforcement) in src/static/studio-ports/** and src/pages/studio-ports/**; build, gate, push dev before part 3's 20:00 lock. 3) The editor's 17:24 word on follow-ups in team/studio/policy.json; status, debrief, wake record.",
+   "at": "2026-10-29T17:42:00Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (pre_review brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside scope.writes; talk.json, part 1 (locked 18:30) and the engine untouched. Recording the editor's 17:24 word in policy.json is the member's own file and matches WAKE.md Tonight only. Conditions: vault_check before mail; shots cut in the image itself so no local path, session id, key or key QR shows; pull before push; gate; no em-dashes.",
+   "at": "2026-10-29T17:42:18Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
