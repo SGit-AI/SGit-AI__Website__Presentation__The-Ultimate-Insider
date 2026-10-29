@@ -30,6 +30,15 @@ Every wake, scheduled or from the editor's chat, runs five steps, each with its 
 8. **Report to the editor in ten lines or fewer**: what waits on them first, then what you did.
 9. **End banner, last, nothing after it.** `python3 admin/tools/banner.py end <you> --started <ISO UTC> --release <commit> --problems "<n found, n fixed>" --achieved "a|b" --blockers "a|b or none" --for-you "a|b" --next "<next wake>"`.
 
+## Tonight only: keep going between the hourly wakes (until 20:00 London, 29 October 2026)
+
+At the editor's word in the conductor's session, about 17:00 London: "let the agents ... keep themselves ... alive ... until the next schedule occurs ... and then we can stop it ... when there's no more work to be done, or ... we reach a good point ... of diminishing returns ... or we reach that sort of 8 o'clock for the last presentation". A recurring task cannot run more often than hourly, so:
+
+- At the end of each wake, a member with work still to do schedules **one** one-off follow-up into **its own session** (`send_later`, about 15 minutes ahead), and nothing else: no recurring task, no task in another session.
+- It **stops scheduling** when it has nothing left to do, when another wake would add little (diminishing returns), or at **20:00 London**, whichever comes first, and says so in its end banner.
+- Every follow-up is a full wake: `start.py`, the five steps, the gate, pull before push. A hold stops it like any other wake.
+- The talk's locks hold (`team/conductor/briefs/2026-10-29__editor/3-three-parts-and-locks-1700.md`): part 1 at 18:30, part 2 at 19:30, part 3 at 20:00; a locked part is never changed again.
+
 ## Stopping: when something is not right
 
 Any member may stop the schedule; nobody needs permission to stop, and only the editor restarts. Stop when:

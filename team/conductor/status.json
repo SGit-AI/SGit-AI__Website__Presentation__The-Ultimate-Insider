@@ -1,9 +1,9 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T16:45:34Z",
+ "as_of": "2026-10-29T16:59:13Z",
  "round": 9,
- "state": "16:44: my tasks stand: routing caught up (9 requests from the backlog); the workflow deck, night log and Moments refreshed; waits on the editor: the lane's sealed files, two confirmations.",
+ "state": "17:00: three parts and locks briefed; tonight's follow-up rule in WAKE.md; next follow-up 17:20 (trig_014jHKt3VZxyCCuxoq2fN2Xf)",
  "done": [
   {
    "what": "Moments: the runs and batches as a strip, each opening on what you need to know, what changed and where it stood (admin/tools/moments.py)",
@@ -92,7 +92,13 @@
  ],
  "next": [
   {
-   "what": "15:02: read the lane once it exists, pace, route, night log"
+   "what": "17:20 follow-up: pace the split (17:30) and part 1 (18:15)"
+  },
+  {
+   "what": "18:00 and 18:20: flag what will not make part 1"
+  },
+  {
+   "what": "before each lock: refresh Moments and the mini deck"
   }
  ],
  "asks": [
