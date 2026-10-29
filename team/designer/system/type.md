@@ -4,7 +4,7 @@ designer@the-ultimate-insider, 29 October 2026, design note 3. Eight sizes for t
 
 | Token | Size | For |
 |---|---|---|
-| `--t-0` | `clamp(36px, 5.6vw, 64px)` | display: the home page's title only |
+| `--t-0` | `clamp(36px, 4.6vw, 88px)` | display: the home page's title only (raised from 64px by design note 5) |
 | `--t-1` | `clamp(30px, 4.4vw, 48px)` | `h1` |
 | `--t-2` | `clamp(22px, 2.6vw, 30px)` | `h2`, card and beat titles |
 | `--t-l` | `20px` | `h3`, the lead, the abstract |

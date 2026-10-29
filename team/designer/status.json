@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 7,
-  "state": "07:39 wake: design note 4 (figures and tables beyond the article measure) written and sent to dev; notes 2 (dev 011, 08:47), 3 (dev 012) and 4 wait on dev's builds",
+  "round": 8,
+  "state": "08:39 wake: design note 5 (the home hero on wide screens) sent to dev; the first design pass is written in full (notes 1 to 5); note 1 built and checked, notes 2 to 5 wait on dev (dev 011 at 08:47, then dev 012, dev 013, note 5)",
   "done": [
+    {
+      "what": "Design note 5: the home hero on wide screens, a title up to 88px and a Venn capped at 600px beside it; the label inside its circle. The first design pass is written in full.",
+      "evidence": "team/designer/reviews/2026-10-29__home-hero.md; team/designer/system/hero.css; tui-mail-public mailroom/dev/013"
+    },
     {
       "what": "Design note 4: in articles, images, figures and tables break out to up to 1240px while the text keeps 68ch; image pairs side by side",
       "evidence": "team/designer/reviews/2026-10-29__figures.md; team/designer/system/figures.css; tui-mail-public mailroom/dev/011"
@@ -60,12 +64,12 @@
       "why": "dev 011 at 08:47"
     },
     {
-      "what": "designer 003 and 004: check notes 3 and 4 once built",
+      "what": "designer 003 to 005: check notes 3 to 5 once built",
       "why": "at the conductor's pace"
     },
     {
-      "what": "Next note: the home hero at 1920",
-      "why": "the last item of the first design pass"
+      "what": "A second pass: the dashboards (wakes, commits, mail reader, vaults) and the studio's lab pages",
+      "why": "the brief's design pass, the parts the first pass did not reach"
     }
   ],
   "asks": [],

@@ -56,3 +56,7 @@ The type scale and its rules (T1 to T5) are in `type.md` beside this file (desig
 ## Figures (design note 4, 29 October 2026)
 
 8. **W8. In an article, text keeps the measure; what you look at breaks out of it.** Inside `article.prose`, a paragraph of images, a `figure` and a table (`.tbl`) take the wide width, `min(container - 2 gutters, 1240px)`, centred on the column; the text around them stays at 68ch. A paragraph of several images becomes a grid (two a row from 2 x 480px), so a before and its after sit side by side. An image never renders above its natural size; an SVG chart never above 960px, so its labels stay text-sized. The width is measured on the container (`container-type: inline-size` on `main` and `.shell-main`), not the viewport, so it holds inside the admin shell. CSS form: `figures.css` beside this file.
+
+## The home hero (design note 5, 29 October 2026)
+
+9. **W9. A composition does not stretch.** The home hero is a title beside a figure: on a wide screen the text column stops at 960px and the figure at 600px, side by side from the frame's left edge, instead of two columns that grow apart. The title grows instead, up to 88px (the display size, `--t-0`, becomes `clamp(36px, 4.6vw, 88px)`); a figure with labels never grows past the size at which its labels stay text-sized. CSS form: `hero.css` beside this file.
