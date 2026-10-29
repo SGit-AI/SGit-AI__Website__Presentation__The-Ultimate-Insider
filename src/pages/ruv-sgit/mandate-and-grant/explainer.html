@@ -11,17 +11,17 @@
 <thead><tr><th>From</th><th>What is on screen</th></tr></thead>
 <tbody>
 <tr><td>0 s</td><td>The definition of an Agent Behaviour Policy, in RiskMandate's words, and the example: Claude Code on your own machine, confirmations on.</td></tr>
-<tr><td>2 s</td><td>The mandate, elicited: a ring at the centre, its four granted items numbered 1 to 4 and listed, and the fifth, asked and not granted (<code>send.endpoint.allowed</code>), as a dashed dot from 5 s.</td></tr>
+<tr><td>2 s</td><td>The mandate: a ring at the centre, its four granted items numbered 1 to 4 and listed. The model says a mandate is elicited; this one is the site's own first draft, not elicited from a deployer, and the line under the headline says so.</td></tr>
 <tr><td>12 s</td><td>The grant: two more rings, unstated and refused, and twelve more numbered dots, faint until the delta; the heading says the model measures the grant and this example derives it (0 of 22 rows measured), and the line under the headline gives what "host" means in this example.</td></tr>
-<tr><td>22 s</td><td>The delta, derived: the twelve outside the mandate light in the agent colour and are listed 5 to 16 in the source's words; excess 12, shortfall 1.</td></tr>
-<tr><td>32 s</td><td>The barrier on every row, one after another: abp.sgit.ai's shapes (filled for nothing, double circle for a rule in prose, half filled for a switch its own account can flip), the enforcer test in the source's words, and the count: 12 of 12 excess with no control. No row has a boundary.</td></tr>
+<tr><td>22 s</td><td>The delta, derived: the twelve outside the mandate light in the agent colour and are listed 5 to 16 in the source's words; excess 12, shortfall 1: the fifth mandate item, asked and not granted (<code>send.endpoint.allowed</code>), appears as a dashed dot, since the shortfall is part of the derived delta.</td></tr>
+<tr><td>32 s</td><td>The barrier on every row, one after another: abp.sgit.ai's shapes (filled for nothing, double circle for a rule in prose, half filled for a switch the agent's own account can flip, an empty circle for a boundary), with the key in the source's own meanings, the enforcer test in the source's words, and the count: 12 of 12 excess with no control. No row has a boundary, and the key says so.</td></tr>
 <tr><td>42 s</td><td>The chat example beside it, in one line: mandate 1, grant 1, excess 0. The line under the headline gives the no-rating rule and the caution about published drafts.</td></tr>
 </tbody></table></div>
 
 <h2>The sixteen rows, in the slide's numbering</h2>
-<p>Each label is the source's (capabilities.json); the slide drops a bracketed aside at the end of two labels ("(a cron, a service)", "(any branch it can reach)") for width. The reach is this example's own, where the file gives one.</p>
+<p>Each label is the source's (capabilities.json); the slide drops a bracketed aside at the end of two labels, rows 6 and 15 ("(any branch it can reach)", "(a cron, a service)"), for width. The reach is this example's own where the file gives one; for rows 1, 2, 4 and 16 the file gives none for this example, so the general meaning of the reach is shown.</p>
 <div class="tbl"><table>
-<thead><tr><th>#</th><th>Capability</th><th>Where it sits</th><th>Reach in this example</th><th>Barrier</th></tr></thead>
+<thead><tr><th>#</th><th>Capability</th><th>Where it sits</th><th>Reach (this example's, else general)</th><th>Barrier</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Change the project it is working on<br><code>write.file.project</code></td><td>mandate, granted</td><td>the working tree or workspace it was pointed at</td><td>none: nothing</td></tr>
 <tr><td>2</td><td>Commit to the repository it was pointed at<br><code>write.repository.project</code></td><td>mandate, granted</td><td>the working tree or workspace it was pointed at</td><td>none: nothing</td></tr>
@@ -44,10 +44,11 @@
 
 <h2>Where every word comes from</h2>
 <ul>
-<li><b>The definitions</b> are the data file's: the policy, the mandate, the grant and the delta as RiskMandate words them, the enforcer test and the no-rating rule as quoted. The slide adds only "Elicited: asked of the people who deployed it" as a plain gloss on the source's "Elicited".</li>
+<li><b>The definitions</b> are the data file's: the policy, the mandate, the grant and the delta as RiskMandate words them, the enforcer test and the no-rating rule as quoted. The slide adds one line of its own, from the data file's own caution: this mandate is the site's own first draft, not elicited from a deployer.</li>
 <li><b>The numbers</b> are the example's fields: mandate 5, aligned 4, grant 16, excess 12, shortfall 1, unbounded excess 12, 0 of 22 rows measured; chat 1, 1, 0. The barrier counts are counted from the rows.</li>
 <li><b>Measured in the model, derived here.</b> The source calls the grant measured; this example's rows are derived from what a CLI running as your account is. The slide says both, so nothing derived is shown as measured.</li>
-<li><b>The same id means different things per example.</b> The slide shows Claude Code's own reach ("host" is your machine, as your user account), as the researcher's caution asks.</li>
+<li><b>The same id means different things per example.</b> The slide shows Claude Code's own reach for "host" (your machine, as your user account), as the researcher's caution asks; the other reaches (your accounts, the internet) are in the table above, not on the slide, for space.</li>
+<li><b>0 of 22.</b> The count of rows measured is of tool-level rows (the 16 capabilities over the tools that reach them), which is why it is 22, not 16; the slide says "tool-level rows".</li>
 <li><b>No rating.</b> There is no score, colour of risk or traffic light; the agent colour marks only what is outside the mandate.</li>
 </ul>
 

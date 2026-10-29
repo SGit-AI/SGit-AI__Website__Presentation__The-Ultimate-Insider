@@ -12,17 +12,17 @@
 #q{position:absolute;left:40px;right:40px;top:106px;height:54px;font:20px/1.3 system-ui;color:var(--text)}
 #q b{color:var(--head)}
 #pic{position:absolute;left:20px;top:150px;width:620px;height:520px}
-#doc{position:absolute;left:636px;top:160px;width:632px}
-#doc .s{font:800 20px/26px system-ui;letter-spacing:.03em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
+#doc{position:absolute;left:636px;top:158px;width:632px}
+#doc .s{font:800 20px/24px system-ui;letter-spacing:.03em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
 #doc .s.on{color:var(--head)}
 #doc .s span{text-transform:none;letter-spacing:0;font-weight:600}
-#doc .r{display:flex;align-items:center;gap:8px;height:24px;font:20px/24px system-ui;color:var(--text);white-space:nowrap}
-#doc .r i{flex:none;width:28px;font:800 20px/24px system-ui;font-style:normal;text-align:right}
+#doc .r{display:flex;align-items:center;gap:8px;height:22px;font:20px/22px system-ui;color:var(--text);white-space:nowrap}
+#doc .r i{flex:none;width:28px;font:800 20px/22px system-ui;font-style:normal;text-align:right}
 #doc .r svg{flex:none;width:22px;height:22px}
 #doc .r.m i{color:var(--head)}
 #doc .r.x i{color:var(--agent)}
 #doc .r.sf{color:var(--dim)}
-#doc #key{color:var(--dim);gap:6px}
+#doc .key{color:var(--dim);gap:6px}
 #doc .r code{font:20px ui-monospace,SFMono-Regular,Menlo,monospace}
 #foot{position:absolute;left:40px;width:600px;bottom:14px;height:52px;font:20px/1.3 system-ui;color:var(--dim)}
 #foot svg{float:left;width:46px;height:46px;margin-right:10px}
@@ -54,7 +54,7 @@
   // the barrier kinds as abp.sgit.ai draws them: filled (none), double circle (a rule in prose), half filled (a switch its own account can flip)
   function glyph(p, kind, x, y, r, col) {
     var g = el('g', {}, p)
-    if (kind === 'expectation') { el('circle', { cx: x, cy: y, r: r - 1.5, fill: 'none', stroke: col, 'stroke-width': 3 }, g); el('circle', { cx: x, cy: y, r: r * .45, fill: col }, g) }
+    if (kind === 'expectation') { el('circle', { cx: x, cy: y, r: r - 1.5, fill: 'none', stroke: col, 'stroke-width': 3 }, g); el('circle', { cx: x, cy: y, r: r * .45, fill: 'none', stroke: col, 'stroke-width': 2.5 }, g) }
     else if (kind === 'setting') { el('circle', { cx: x, cy: y, r: r - 1.5, fill: 'none', stroke: col, 'stroke-width': 3 }, g); el('path', { d: 'M' + x + ' ' + (y - r + 1.5) + 'A' + (r - 1.5) + ' ' + (r - 1.5) + ' 0 0 0 ' + x + ' ' + (y + r - 1.5) + 'Z', fill: col }, g) }
     else if (kind === 'boundary') el('circle', { cx: x, cy: y, r: r - 1.5, fill: 'none', stroke: col, 'stroke-width': 3 }, g)
     else el('circle', { cx: x, cy: y, r: r, fill: col }, g)
@@ -72,7 +72,7 @@
       var t = el('text', { x: CX, y: CY - r + ly, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 800, fill: col, 'paint-order': 'stroke', stroke: 'var(--bg)', 'stroke-width': 6 }, rings); t.textContent = label
       return [c, t]
     }
-    var rM = ring(84, '', 'var(--head)', 4, 'the mandate', -12), rU = ring(150, '6 6', 'var(--line2)', 2, 'unstated', 7), rR = ring(215, '6 6', 'var(--line2)', 2, 'refused', 7)
+    var rM = ring(84, '', 'var(--head)', 4, 'the mandate', -12), rU = ring(150, '6 6', 'var(--dim)', 2, 'unstated', 7), rR = ring(215, '6 6', 'var(--dim)', 2, 'refused', 7)
     var pts = [], n = 0
     var place = function (list, rad, a0, cls) {
       list.forEach(function (r, i) { var a = a0 + 2 * Math.PI * i / list.length; pts.push({ r: r, n: ++n, cls: cls, x: CX + rad * Math.cos(a), y: CY + rad * Math.sin(a), a: a }) })
@@ -101,7 +101,10 @@
     h += pts.filter(function (p) { return p.cls === 'x' }).map(row).join('')
     var none = ex.rows.filter(function (r) { return r.mandate_stance !== 'authorised' && r.barrier_kind === 'none' }).length
     h += '<div class="s" id="s4">4 The barrier <span>· per row · ' + ex.unbounded_excess + ' of ' + ex.excess + ' excess with no control</span></div>'
-    h += '<div class="r" id="key">' + mini('none', 'var(--dim)') + 'nothing ' + mini('expectation', 'var(--dim)') + 'a rule in prose ' + mini('setting', 'var(--dim)') + 'a switch its account can flip</div>'
+    var bk = {}; A.barrier_kinds.forEach(function (b) { bk[b.kind] = b.definition })
+    h += '<div class="r key">' + mini('none', 'var(--dim)') + bk.none + ' ' + mini('expectation', 'var(--dim)') + bk.expectation + '</div>'
+    h += '<div class="r key">' + mini('setting', 'var(--dim)') + bk.setting + '</div>'
+    h += '<div class="r key">' + mini('boundary', 'var(--dim)') + bk.boundary + '; none here</div>'
     S.$('doc').innerHTML = h
     var reach = C.capabilities.filter(function (x) { return x.id === 'read.file.host' })[0].in_examples.filter(function (i) { return i.example === CC })[0].reach_in_this_example
     B = { ex: ex, chat: chat, pts: pts, sf: sf, rings: [rM, rU, rR], rows: [].slice.call(document.querySelectorAll('#doc .r')), gk: [].slice.call(document.querySelectorAll('#doc .gk')), reach: reach }
@@ -121,22 +124,22 @@
       var kinded = t >= P4 + (p.n - 1) * .12
       p.plain.style.display = kinded ? 'none' : ''; p.kind.style.display = kinded ? '' : 'none'
     })
-    B.sf.style.opacity = k(P1 + 3)
+    B.sf.style.opacity = k(P3)
     B.rows.forEach(function (r) {
       var n = +r.dataset.n || 0
-      if (r.id === 'key') { r.style.opacity = k(P4); return }
-      r.style.opacity = r.id === 'sfrow' ? k(P1 + 3) : n <= 4 ? k(P1 + .5 + (n - 1) * .5, .4) : k(P3 + (n - 5) * .3, .4)
+      if (r.classList.contains('key')) { r.style.opacity = k(P4); return }
+      r.style.opacity = r.id === 'sfrow' ? k(P3) : n <= 4 ? k(P1 + .5 + (n - 1) * .5, .4) : k(P3 + (n - 5) * .3, .4)
     })
     B.gk.forEach(function (g, i) { var on = t >= P4 + i * .12; if ((g.dataset.on === '1') !== on) { g.dataset.on = on ? '1' : ''; g.innerHTML = on ? mini(g.dataset.k, g.dataset.c) : '<svg viewBox="0 0 22 22"></svg>' } })
     ;['s1', 's2', 's3', 's4'].forEach(function (id, i) { var a = [P1, P2, P3, P4][i]; S.$(id).style.opacity = k(a); S.$(id).classList.toggle('on', t >= a && (i === 3 || t < [P2, P3, P4][i])) })
     S.$('foot').style.opacity = k(P5)
     var q = ''
-    if (t < P1) q = '<b>An Agent Behaviour Policy</b> is "' + M.agent_behaviour_policy.definition + '." (RiskMandate) One example: Claude Code on your own machine, confirmations on.'
-    else if (t < P2) q = '<b>The mandate:</b> "' + M.mandate.definition + '." Elicited: asked of the people who deployed it.'
-    else if (t < P3) q = '<b>The grant:</b> "' + M.grant.definition + '." Here derived, ' + B.ex.rows_measured.measured + ' of ' + B.ex.rows_measured.total + ' rows measured; "host" here is ' + B.reach + '.'
-    else if (t < P4) q = '<b>The delta:</b> "' + M.delta.definition + '."'
+    if (t < P1) q = '<b>An Agent Behaviour Policy</b> is "' + M.agent_behaviour_policy.definition + '" (RiskMandate). One example: Claude Code on your own machine, confirmations on.'
+    else if (t < P2) q = '<b>The mandate:</b> "' + M.mandate.definition + '". Here, the site\'s own first draft, not elicited from a deployer.'
+    else if (t < P3) q = '<b>The grant:</b> "' + M.grant.definition + '". Here derived, ' + B.ex.rows_measured.measured + ' of ' + B.ex.rows_measured.total + ' tool-level rows measured; "host" here is ' + B.reach + '.'
+    else if (t < P4) q = '<b>The delta:</b> "' + M.delta.definition + '".'
     else if (t < P5) q = '<b>The barrier,</b> per row. "' + M.enforcer_test.quote + '" Here, ' + (B.ex.rows.filter(function (r) { return r.barrier_kind === 'boundary' }).length || 'no') + ' row' + (B.ex.rows.filter(function (r) { return r.barrier_kind === 'boundary' }).length === 1 ? ' has' : 's have') + ' one.'
-    else q = '<b>No rating:</b> "' + M.no_score_rule.quote + '." Published drafts from one author\'s network: what a row means, not that it was measured.'
+    else q = '<b>No rating:</b> "' + M.no_score_rule.quote + '". Published drafts from one author\'s network: what a row means, not that it was measured.'
     if (S.$('q').innerHTML !== q) S.$('q').innerHTML = q
   }
 })()
