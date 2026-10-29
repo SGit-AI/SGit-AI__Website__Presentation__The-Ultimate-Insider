@@ -39,7 +39,11 @@ body.tui-pane-on #stage, body.tui-pane-on #touch, body.tui-pane-on #bar, body.tu
 body.tui-pane-on.presenter #stage, body.tui-pane-on.presenter #touch { right:calc(min(400px,100vw) + 36vw) } body.tui-pane-on #side { right:min(400px,100vw) }
 #fb.on, #ovb.on { border-color:var(--teal); color:var(--teal) }
 /* the overview: every slide at once, by section (W) */
-#count { display:none }   /* the per-slide countdown: a distraction (the editor, 18:05) */
+#count { display:none }
+#chg { position:fixed; inset:0 0 var(--barh) 0; z-index:45; background:var(--bg); display:none; flex-direction:column } body.chg #chg { display:flex }
+#chg .oh { display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; padding:10px 16px; border-bottom:1px solid var(--line) } #chg .oh b { font:600 18px Georgia,serif; color:var(--head) } #chg .oh span { margin-right:auto }
+#chglist { overflow:auto; padding:8px 16px 24px } #chglist h3 { font:600 16px system-ui; color:var(--teal); margin:16px 0 6px } #chglist li { margin:4px 0 } #chglist .k { display:inline-block; min-width:84px; font-weight:700 } #chglist a { color:inherit }
+#chb.on { border-color:var(--teal); color:var(--teal) }   /* the per-slide countdown: a distraction (the editor, 18:05) */
 #ov { position:fixed; inset:0 0 var(--barh) 0; z-index:44; background:var(--bg); display:none; flex-direction:column }
 body.ov #ov { display:flex } body.ov.tui-pane-on #ov { right:min(400px,100vw) }
 #ov .oh { display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; padding:10px 16px; border-bottom:1px solid var(--line) }
@@ -203,12 +207,13 @@ ul.bul { list-style:none; padding:0; font-size:3.4vh; margin:0 } ul.bul li { mar
 <div id="bar">
  <div class="row"><div class="ctl"><button data-k=" " id="pp" class="pp" aria-label="play or pause" title="play / pause (Space)">▶</button></div><span class="clock" id="clock">0:00</span><span class="dim" id="beatno"></span><div id="prog" title="click to seek"><b id="progb"></b></div><span class="dim" id="state">paused</span>
   <div class="ctl"><button class="nav" data-k="PageUp" aria-label="previous slide" title="previous slide (↑ or PageUp)">«<small>slide</small></button><button class="nav" data-k="ArrowLeft" aria-label="previous step" title="previous step (←)">‹<small>step</small></button><button class="nav" data-k="ArrowRight" aria-label="next step" title="next step (→, or tap the slide)">›<small>step</small></button><button class="nav" data-k="PageDown" aria-label="next slide" title="next slide (↓ or PageDown, or swipe)">»<small>slide</small></button><button data-k="s" id="sp" aria-label="speed" title="speed (S)">1×</button></div></div>
- <div class="row"><div class="ctl small"><button data-k="x" id="ex" aria-label="leave the presentation" title="leave (X)">✕</button><button data-k="g" id="go" aria-label="go to any slide" title="go to any slide or step (G)">☰ slides</button><button data-k="w" id="ovb" aria-label="overview: every slide by section" title="overview: every slide by section, each playable; show or skip (W)">overview</button><button data-k="e" id="fb" aria-label="feedback" title="your feedback pane: a note on this slide, to your lane (E)">feedback</button><button data-k="j" id="sk" aria-label="skip this slide in your order" title="skip this slide: out of your order, on to the next (J)">skip</button><button data-k="u" id="un" aria-label="undo the last skip" title="undo the last skip (U)" style="display:none">undo</button><button data-k="o" id="bm" aria-label="build: your running order" title="build: your running order, show or hide, a comment on each (O)">build</button><button data-k="v" id="rv" aria-label="review mode: everything at once, no animation" title="review (V)">review</button><button data-k="p" id="nb" aria-label="speaker notes" title="notes (P)">notes</button><button data-k="t" id="th" aria-label="next theme" title="theme (T)">◐</button><button data-k="f" aria-label="fullscreen" title="fullscreen (F)">⛶</button></div><div id="steps" title="this slide's steps: click to jump"></div><span id="cache"></span><span id="count"></span><div class="ctl small"><button data-k="h" id="hd" aria-label="auto-advance to the next slide" title="auto: move to the next slide when one ends (H); off: stop at the end of each slide">auto</button><button data-k="reset-timer" id="tr" aria-label="reset the talk timer" title="reset the whole clock: the timer to 0:00, the talk to its start">↺ reset</button><button data-k="have" id="hv" class="have" aria-label="how much time you have" title="the time you have: the countdown and the plan follow it (?have=40)">⏱ time</button><button data-k="z" id="tm" class="timer" aria-label="start or stop the talk timer" title="talk timer: start when you start speaking (Z); it keeps running whatever you click, until you stop it">▶ start talk</button></div></div>
+ <div class="row"><div class="ctl small"><button data-k="x" id="ex" aria-label="leave the presentation" title="leave (X)">✕</button><button data-k="g" id="go" aria-label="go to any slide" title="go to any slide or step (G)">☰ slides</button><button data-k="w" id="ovb" aria-label="overview: every slide by section" title="overview: every slide by section, each playable; show or skip (W)">overview</button><button data-k="e" id="fb" aria-label="feedback" title="your feedback pane: a note on this slide, to your lane (E)">feedback</button><button data-k="c" id="chb" aria-label="what changed" title="what changed since you last looked, part by part (C)">changes</button><button data-k="j" id="sk" aria-label="skip this slide in your order" title="skip this slide: out of your order, on to the next (J)">skip</button><button data-k="u" id="un" aria-label="undo the last skip" title="undo the last skip (U)" style="display:none">undo</button><button data-k="o" id="bm" aria-label="build: your running order" title="build: your running order, show or hide, a comment on each (O)">build</button><button data-k="v" id="rv" aria-label="review mode: everything at once, no animation" title="review (V)">review</button><button data-k="p" id="nb" aria-label="speaker notes" title="notes (P)">notes</button><button data-k="t" id="th" aria-label="next theme" title="theme (T)">◐</button><button data-k="f" aria-label="fullscreen" title="fullscreen (F)">⛶</button></div><div id="steps" title="this slide's steps: click to jump"></div><span id="cache"></span><span id="count"></span><div class="ctl small"><button data-k="h" id="hd" aria-label="auto-advance to the next slide" title="auto: move to the next slide when one ends (H); off: stop at the end of each slide">auto</button><button data-k="reset-timer" id="tr" aria-label="reset the talk timer" title="reset the whole clock: the timer to 0:00, the talk to its start">↺ reset</button><button data-k="have" id="hv" class="have" aria-label="how much time you have" title="the time you have: the countdown and the plan follow it (?have=40)">⏱ time</button><button data-k="z" id="tm" class="timer" aria-label="start or stop the talk timer" title="talk timer: start when you start speaking (Z); it keeps running whatever you click, until you stop it">▶ start talk</button></div></div>
 </div>
 <div id="intro"><div><h2 id="ttl">Talk player</h2><p id="sub"></p><p class="dim">site <a class="ver" href="../admin/versions.html#{{version}}" title="release history">{{version}}</a> · ported from <a href="https://ruv.sgit.ai/articles/the-talk-player.html">ruv.sgit.ai's player</a></p><p>Tap ▶ or press <kbd>Space</kbd> to start · tap the slide for the next step, swipe for the next slide · <b>‹ ›</b> steps, <b>« »</b> slides · <b>1×</b> speed · <b>auto</b> moves on when a slide ends (off: it stops) · <b>start talk</b> starts your timer · <b>☰ slides</b> jumps anywhere · <b>review</b> everything at once · <b>notes</b> the words · <kbd>?</kbd> all keys</p></div></div>
 <div id="black"></div>
 <div id="err"></div>
 <div id="pick"><div class="ph"><b>Go to a slide</b><span class="dim">click a slide, or one of its steps · <kbd>G</kbd> or <kbd>Esc</kbd> to close</span></div><div id="picklist"></div></div>
+<div id="chg" role="dialog" aria-label="What changed"><div class="oh"><b>What changed</b><span id="chgsince" class="dim"></span><button type="button" id="chgseen" title="take this as seen: the next changes are counted from now">mark all as seen</button><button type="button" id="chgx" title="back to the slide (C or Esc)">back to the slide</button></div><div id="chglist"></div></div>
 <div id="ov" role="dialog" aria-label="Overview: every slide by section"><div class="oh"><b>Every slide</b>
 <label>a row <select id="ovcols"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option></select></label>
 <label><input type="checkbox" id="ovpieces"> studio pieces too</label>
@@ -272,6 +277,7 @@ async function load() {
     talk = adapt(await withLocks(window.TALK || await (await fetch(src, { cache: 'no-cache' })).json()))
     ORIG = talk.beats.map(b => ({ ...b }))
     try { PIECES = (await (await fetch('pieces.json', { cache: 'no-cache' })).json()).pieces || [] } catch { PIECES = [] }
+    try { FP = (await (await fetch('fingerprints.json', { cache: 'no-cache' })).json()).beats || {} } catch { FP = {} }
     if (RUN.use && !qs.has('talk')) applyOrder()
     data = window.TALK_DATA || {}
     for (const [k, path] of Object.entries(talk.data || {})) if (!data[k]) data[k] = await (await fetch(LEDGER ? path.replace(/vaults\.json$/, `vaults-${LEDGER}.json`) : path)).json()
@@ -329,6 +335,7 @@ function adapt(T) {
 let ORIG = [], PIECES = [], RUN = { use: false, items: [] }
 try { RUN = JSON.parse(localStorage.getItem('tui-run.v1') || 'null') || RUN } catch {}
 addEventListener('DOMContentLoaded', () => { try { if (localStorage.getItem('tui-last-skip')) $('un').style.display = '' } catch {} })
+addEventListener('load', () => setTimeout(() => { try { if (!B.length) return; const c = changes(); if (!c) seenSave(); else if (c.out.length) $('chb').textContent = 'changes ' + c.out.length } catch (e) { console.error(e) } }, 3000))   // the first visit is the baseline
 const saveRun = () => { try { localStorage.setItem('tui-run.v1', JSON.stringify(RUN)) } catch {} }
 function universe() {
   return ORIG.map(b => ({ ref: 'beat:' + b.id, title: b.title, act: b.act || '', dur: b.dur, kind: 'slide' }))
@@ -443,6 +450,43 @@ function myChanges() {
     comments_not_sent: items.filter(x => (x.comment || '').trim() && !x.sent).map(x => ({ ref: x.ref, comment: x.comment })),
     order: shown }
 }
+// what changed (conductor 034): against what he last marked as seen (tui-seen.v1, this browser), part by part, slide by
+// slide: new, removed, moved, retitled, and changed content (talk/fingerprints.json, a hash of each slide's folder).
+// A locked part plays its frozen copy, so its slides never count as changed.
+let FP = {}
+function snapshot() { return { at: new Date().toISOString(), version: '{{version}}', beats: B.filter(b => !b.extra).map((b, i) => ({ id: b.id, title: b.title, part: b.part || '', i, fp: String(b.slide.src).startsWith('engine/locked/') ? 'locked' : FP[b.id] || '' })) } }
+function seenGet() { try { return JSON.parse(localStorage.getItem('tui-seen.v1') || 'null') } catch { return null } }
+function seenSave() { try { localStorage.setItem('tui-seen.v1', JSON.stringify(snapshot())) } catch {} }
+function changes() {
+  const seen = seenGet(); if (!seen) return null
+  const was = new Map(seen.beats.map(x => [x.id, x])), now = snapshot().beats, out = []
+  const order = now.filter(x => was.has(x.id)).map(x => x.id), wasOrder = seen.beats.filter(x => now.some(y => y.id === x.id)).map(x => x.id)
+  now.forEach(x => { const w = was.get(x.id)
+    if (!w) out.push({ k: 'new', x })
+    else { if (w.fp && x.fp && w.fp !== x.fp && x.fp !== 'locked') out.push({ k: 'changed', x }); if (w.title !== x.title) out.push({ k: 'retitled', x, from: w.title }); if (order.indexOf(x.id) !== wasOrder.indexOf(x.id)) out.push({ k: 'moved', x }) } })
+  seen.beats.forEach(w => { if (!now.some(y => y.id === w.id)) out.push({ k: 'removed', x: w }) })
+  return { seen, out }
+}
+function drawChanges() {
+  const L = $('chglist'), c = changes(); L.textContent = ''
+  if (!c) { seenSave(); $('chgsince').textContent = 'Nothing to compare yet: from now on, changes are counted.'; return }
+  $('chgsince').textContent = `since ${c.seen.at.slice(11, 16)} UTC (${c.seen.version}) · ${c.out.length} change${c.out.length === 1 ? '' : 's'}`
+  const parts = [...new Set(c.out.map(o => String(o.x.part || '')))].sort()
+  if (!c.out.length) { const p = document.createElement('p'); p.textContent = 'Nothing has changed.'; L.appendChild(p) }
+  parts.forEach(pt => {
+    const h = document.createElement('h3'); h.textContent = pt ? 'Part ' + pt + (LOCKS[pt] ? ' (locked ' + LOCKS[pt].locked_at.slice(11, 16) + ')' : '') : 'No part'; L.appendChild(h)
+    const ul = document.createElement('ul'); L.appendChild(ul)
+    c.out.filter(o => String(o.x.part || '') === pt).forEach(o => {
+      const li = document.createElement('li'), k = document.createElement('span'); k.className = 'k'; k.textContent = o.k; li.appendChild(k)
+      const i = B.findIndex(b => b.id === o.x.id)
+      if (i >= 0) { const a = document.createElement('a'); a.href = '#' + o.x.id; a.textContent = o.x.title; a.addEventListener('click', e => { e.preventDefault(); goBeat(i); playing = false; document.body.classList.remove('chg'); send() }); li.appendChild(a) }
+      else li.appendChild(document.createTextNode(o.x.title))
+      if (o.from) li.appendChild(document.createTextNode(' (was: ' + o.from + ')'))
+      ul.appendChild(li)
+    })
+  })
+}
+document.addEventListener('click', e => { const id = e.target && e.target.id; if (id === 'chgseen') { seenSave(); drawChanges() } else if (id === 'chgx') { document.body.classList.remove('chg') } })
 function present(mine) { RUN.use = mine; saveRun(); relaunch(B[beatAt(t)] && B[beatAt(t)].id) }   // stays on this slide when it is in the new order
 async function sendBuild() {
   if (!window.TuiLane) { buildStat('the lane is not loaded'); return }
@@ -762,6 +806,7 @@ function onKey(e) {
   else if (k === 'have') setHave()
   else if (k === 'w' || k === 'W') { document.body.classList.toggle('ov'); if (document.body.classList.contains('ov')) drawOv(); else ovStop() }
   else if (k === 'e' || k === 'E') { const tg = document.querySelector('.tui-pane-toggle'), x = document.querySelector('.tui-pane .tp-x'); if (document.body.classList.contains('tui-pane-on')) x?.click(); else tg?.click() }
+  else if (k === 'c' || k === 'C') { document.body.classList.toggle('chg'); if (document.body.classList.contains('chg')) drawChanges() }
   else if (k === 'j' || k === 'J') skipHere()
   else if (k === 'u' || k === 'U') undoSkip()
   else if (k === 'o' || k === 'O') { document.body.classList.toggle('build'); if (document.body.classList.contains('build')) drawBuild() }
@@ -776,7 +821,7 @@ function onKey(e) {
   else if (k === 'f' || k === 'F') { const d = document.documentElement; (d.requestFullscreen || d.webkitRequestFullscreen)?.call(d) }
   else if (k === 'b' || k === 'B' || k === '.') { black = !black; document.body.classList.toggle('black', black) }
   else if (k === '?') document.body.classList.toggle('help')
-  else if (k === 'Escape') { document.body.classList.remove('help', 'pick', 'build', 'ov'); ovStop(); if (document.body.classList.contains('tui-pane-on')) document.querySelector('.tui-pane .tp-x')?.click() }   // back to the slide itself
+  else if (k === 'Escape') { document.body.classList.remove('help', 'pick', 'build', 'ov', 'chg'); ovStop(); if (document.body.classList.contains('tui-pane-on')) document.querySelector('.tui-pane .tp-x')?.click() }   // back to the slide itself
   else if (k === 'x' || k === 'X') {   // leave: out of fullscreen first, then back to the talk page (or, embedded, open the player in its own window)
     if (document.fullscreenElement || document.webkitFullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document)
     else if (EMBED) { const u = new URL(location.href); u.searchParams.delete('embed'); u.searchParams.set('t', Math.floor(t)); window.open(u.href, '_blank') }
