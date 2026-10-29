@@ -95,6 +95,16 @@
     "src": "../studio-ports/lab/fork/index.html"
    },
    "say": "Showcase for the solution section (conductor 008)."
+  },
+  {
+   "id": "show-open-source",
+   "act": "Showcase: the way out",
+   "dur": 20,
+   "title": "Open source is a strategy. It is not a charity.",
+   "slide": {
+    "src": "../studio-ports/lab/open-source/index.html"
+   },
+   "say": "Showcase of open-source.sgit.ai (conductor 008)."
   }
  ]
 }

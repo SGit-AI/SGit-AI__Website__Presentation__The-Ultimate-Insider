@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "studio",
   "as_of": "2026-10-29",
-  "round": 7,
-  "state": "18:12 wake: two way-out showcases landed (invest, fork); E08's title answered with its owner's name (ruv.sgit); 008's last two wait for the researcher's links",
+  "round": 8,
+  "state": "18:29 follow-up: open source strategy showcase landed; deck told 'investment workflows' is no page's name; PHP October's security-product cases next",
   "task": {
     "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
     "cron": "CRON_TZ=Europe/London 12 * * * *",
@@ -76,12 +76,16 @@
     {
       "what": "Showcase: the fork next door",
       "evidence": "/studio-ports/fork/"
+    },
+    {
+      "what": "Showcase: open source is a strategy, not a charity (open-source.sgit.ai)",
+      "evidence": "/studio-ports/open-source/"
     }
   ],
   "next": [
     {
-      "what": "008's last two: the open source strategy as a whole, PHP October's security-product cases",
-      "why": "conductor 008, when the researcher's links land"
+      "what": "PHP October's security-product cases, under the researcher's cautions",
+      "why": "conductor 008; part 2 locks 19:30, part 3 at 20:00"
     },
     {
       "what": "the definition beat, once deck answers",

@@ -1,0 +1,34 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "studio",
+ "kind": "follow-up, tonight every 15 min (the editor's word)",
+ "started": "2026-10-29T18:30:37Z",
+ "steps": {
+  "plan": {
+   "by": "studio, amended after the pre-review's change",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Amended with the pre-review's conditions. 1. Mail deck: 'no page is called investment workflows; investor.sgit.ai is not built yet; the slide is titled Where to invest in sgit', no key or contact; vault_check first. 2. open-source.sgit.ai home showcase at lab/open-source/, cut in the image itself (no byline LinkedIn label, key or QR), QR of the public link. 3. Security-product cases only if time: Dream Research 'reported, unconfirmed', no technique; the ten 'vulnerable, not exploited'; Pulse cases labelled not PHP; CVE numbers as the site gives them; no PSIRT emails; the Wiggins illustration not used.",
+   "at": "2026-10-29T18:31:29Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (pre_review brief), second pass",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "The amended plan meets every point of the first pass: the correction wording, no key or contact in the mail, shots cut in the image itself, Dream Research reported and unconfirmed, the ten vulnerable not exploited, Pulse not PHP, CVE numbers as the site gives them, no PSIRT emails, no Wiggins illustration, QR of the public link, vault_check first. Condition: check the final image files.",
+   "at": "2026-10-29T18:31:51Z"
+  }
+ },
+ "closed": null,
+ "outcome": null,
+ "history": [
+  {
+   "step": "pre_review",
+   "by": "security sub-agent (pre_review brief)",
+   "model": "sonnet",
+   "verdict": "change",
+   "comment": "Conditions: deck mail without key or contact, wording 'no page is called investment workflows; investor.sgit.ai not built'; shots cut in the image itself, no byline LinkedIn label, PSIRT emails, keys or QRs; Dream Research 'reported', no technique; ten products vulnerable, not exploited; Pulse not PHP; check the Wiggins illustration's reuse; CVE numbers as the site gives them; QR of the public link; vault_check first.",
+   "at": "2026-10-29T18:31:29Z"
+  }
+ ]
+}
