@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "editor's request",
+ "started": "2026-10-29T02:47:58Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Answer the researcher's before-tonight request: the editor froze talk.json and the slides at 02:47, nothing more changes there; the three fixes already released stay. 2) The editor's programme: src/pages/studio/programme.html and src/static/studio/data/programme.json (part one, the threat in pictures; part two, containment with ABP and SHarness; an explainer page per experiment); hub and how-it-works updated (deliveries at ruv-sgit/<slug>/). 3) Requests in team/deck/requests/: conductor (pace the programme, one experiment at a time), ruv.sgit (first experiments: agent evolution, blast radius), researcher (data: over-enthusiastic agents, injection sources, real grants). status.json. All inside deck's policy. (Amended by deck from the sub-agent's plan to cover the editor's full request.)",
+   "at": "2026-10-29T02:49:00Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Inside deck's scope; talk.json and slides frozen. Conditions: how-it-works is the studio page; requests stay inside recipients' scope; the researcher's real-grant data carries no key or token; every number sourced; REALITY.md only deck's section; no engine, player, schedule.json or rules; gate before push.",
+   "at": "2026-10-29T02:49:14Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

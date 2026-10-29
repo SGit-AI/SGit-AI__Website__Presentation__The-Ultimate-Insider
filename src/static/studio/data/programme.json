@@ -1,0 +1,125 @@
+{
+  "about": "The studio programme: the experiments the editor asked for on 29 October 2026 (02:47 UTC, in deck's session), as data. deck@the-ultimate-insider keeps it; the conductor paces it (one experiment in flight per maker at a time); src/pages/studio/programme.html is generated from it by team/deck/tools/programme.py. Nothing here touches the talk: the deck is frozen until the editor says otherwise.",
+  "updated": "2026-10-29T03:00Z",
+  "vision": "A whole new set of visualisations to tell the story. Part one shows the threat: what an agent is and how it grew, how far one internal agent reaches, how soft the inside is, and how injected words travel. Part two shows the way out: map the mandate against the grant, type every barrier honestly, and contain the agent with boundaries it cannot reach, using RiskMandate's Agent Behaviour Policies and SHarness, with many real examples.",
+  "statuses": {
+    "idea": "written down, not yet asked for",
+    "asked": "a request is with the maker",
+    "making": "the maker has opened an issue and is working",
+    "review": "delivered; deck is reviewing it",
+    "again": "reviewed; another pass asked for",
+    "kept": "the editor has seen it and wants it",
+    "dropped": "not taken further, with why"
+  },
+  "each_experiment_returns": [
+    "the piece itself, on the slide engine, at ruv-sgit/<slug>/index.html (ruv.sgit's pages)",
+    "an explainer beside it, ruv-sgit/<slug>/explainer.html: what it shows, frame by frame, the data and sources behind each frame, and what was tried and left out",
+    "the run's ledger row: what it cost and what the vault holds",
+    "deck's review at studio/reviews/<id>.html: what works, what does not, and what the next pass is"
+  ],
+  "parts": [
+    {"id": "threat", "title": "Part one: the threat, in pictures"},
+    {"id": "protect", "title": "Part two: how we contain it"}
+  ],
+  "experiments": [
+    {
+      "id": "E01", "part": "threat", "slug": "agent-evolution", "title": "What an agent is: the evolution",
+      "question": "How did a chat window become an insider?",
+      "idea": "Start small: a chat model answering in a box. Give it one tool. Then more tools. Then a loop, so it acts until it decides it is done. Then integrate it: accounts, tokens, other systems. Then today's agentic flows, agents calling agents. Each step adds reach, and the picture keeps the earlier steps visible so the growth reads.",
+      "data": ["Anthropic, Building effective agents (the loop definition), already a talk source", "dates for each step only where a public source gives one; otherwise the steps are shown without dates and labelled as a sketch"],
+      "makers": ["ruv-sgit"], "needs_from": [], "status": "asked", "order": 1,
+      "request": "team/deck/requests/ruv-sgit__agent-evolution.md"
+    },
+    {
+      "id": "E02", "part": "threat", "slug": "blast-radius", "title": "The blast radius of one internal agent",
+      "question": "If one agent inside the company goes wrong, how far does the damage reach?",
+      "idea": "One agent at the centre. Rings out from it: what it can touch directly (files, shell), what its tokens open (repositories, cloud, chat, tickets), what those systems in turn reach. Measured, not imagined: the rings are drawn from a real grant.",
+      "data": ["abp.sgit.ai's published example, Claude Code CLI: grant 16, mandate 5, excess 12 (researcher to capture)", "Microsoft: workload identities use under 5 per cent of permissions granted, already a talk source"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 2
+    },
+    {
+      "id": "E03", "part": "threat", "slug": "prompt-injection-sources", "title": "Where injected words come from",
+      "question": "Why is a prompt injection such a large problem for an agent?",
+      "idea": "Everything the agent reads is a way in: an email, a web page, a shared document, a ticket, a code comment, a package README, a tool's own description, a calendar invite. Draw the inflow: every source the agent consumes, each one lit with a real public case where words in it steered an agent.",
+      "data": ["researcher's catalogue of injection sources with one public case each (EchoLeak email, Amazon Q repository, postmark-mcp tool, Clinejection issue, and others from evidence/incidents)"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 3
+    },
+    {
+      "id": "E04", "part": "threat", "slug": "over-enthusiastic-agent", "title": "The over-enthusiastic agent",
+      "question": "How does an agent that is only trying to help do so much harm?",
+      "idea": "The goal, the obstacle, the fix the agent chose. Each real case told the same way: what it was asked, what stood in its way, what it did about it, what was lost. The pattern is the point: the agent removed the obstacle.",
+      "data": ["researcher's benign cases, graded: Replit, Gemini CLI, Codex deleting home directories, PocketOS, OpenAI's evaluation agents and Hugging Face (to be checked against the vendors' own posts)"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 4
+    },
+    {
+      "id": "E05", "part": "threat", "slug": "pivoting", "title": "Pivoting: one system to the next",
+      "question": "How does an agent move from where it was put to somewhere it was never meant to be?",
+      "idea": "Follow one agent's path: a token found in a file opens a second system, which holds a credential for a third. Each hop is a step it was able to take, not one it was told to.",
+      "data": ["real cases where an agent or an AI tool hunted for credentials or moved laterally: Nx s1ngularity, the AI-orchestrated espionage campaign (researcher)"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 7
+    },
+    {
+      "id": "E06", "part": "threat", "slug": "soft-inside", "title": "Hard outside, soft inside",
+      "question": "Why are so many internal apps vulnerable to something already inside?",
+      "idea": "The perimeter as a shell. Inside, the systems that have never met an adversary: no rate limits, broad service accounts, admin endpoints trusted because they are internal. An agent arriving inside lights them up one by one.",
+      "data": ["Microsoft permissions figures (talk source)", "researcher: public evidence on internal-trust weaknesses, for example php2shell on the CISA KEV list"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 8
+    },
+    {
+      "id": "E07", "part": "threat", "slug": "typical-deployment", "title": "A typical agentic deployment, mapped",
+      "question": "What does an ordinary agent deployment look like when you draw its blast radius?",
+      "idea": "Take a common shape (a coding agent with a repository token, cloud credentials, chat and a ticketing tool through MCP) and draw the graph of everything it can reach. Start with the box someone drew on the architecture diagram; end with the real graph.",
+      "data": ["a real, public deployment shape: abp.sgit.ai's examples, or a vendor's documented default scopes (researcher)"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 6
+    },
+    {
+      "id": "E08", "part": "threat", "slug": "lethal-trifecta", "title": "The lethal trifecta, made visible",
+      "question": "When is an agent dangerous by construction?",
+      "idea": "Three switches: private data, untrusted content, a way to send outward. All three on and a document can turn the agent. Turn any one off and that path closes.",
+      "data": ["Simon Willison, The lethal trifecta (talk source)"],
+      "makers": ["ruv-sgit"], "needs_from": [], "status": "idea", "order": 9
+    },
+    {
+      "id": "E09", "part": "protect", "slug": "mandate-and-grant", "title": "Mandate against grant",
+      "question": "What is an Agent Behaviour Policy, in one picture?",
+      "idea": "The four objects in order: the mandate (what it is for, elicited), the grant (what it can do, measured), the delta (excess and shortfall, derived), the barrier on each row. The excess is the blast radius from part one, now named and counted.",
+      "data": ["riskmandate.ai/abp.html and abp.sgit.ai: the four objects, the Claude Code CLI example (16, 5, 12)"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 5
+    },
+    {
+      "id": "E10", "part": "protect", "slug": "four-barriers", "title": "Only a boundary is a control",
+      "question": "What actually stands between the agent and each thing it can do?",
+      "idea": "None, expectation, setting, boundary. Most of what we call controls are expectations or settings the agent's own account can flip. The test: a control bounds a grant only if it is enforced by something the grant does not include. Turn the confirmations off on Claude Code: one barrier moves, and not one number does.",
+      "data": ["riskmandate.ai/abp.html: the barrier table and the confirmations on and off example", "abp.sgit.ai/data/barriers.json"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 10
+    },
+    {
+      "id": "E11", "part": "protect", "slug": "harness", "title": "SHarness: the kernel was told first",
+      "question": "How do you make a boundary the agent cannot widen?",
+      "idea": "Write the process behaviour policy, hash it, hand it to the kernel before the tool starts. Then the six probes of sharness-ai hello: reads allowed; a write outside the workspace, a connect and an oversized allocation refused; a wrong hash runs nothing. Six of six held. And the honest caveat: a process cannot bind its own session; the launcher above the agent is designed, not built.",
+      "data": ["sharness.ai: hello, measured 24 to 29 October 2026 in five environments; status labels measured, runnable, designed (researcher to capture)"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 11
+    },
+    {
+      "id": "E12", "part": "protect", "slug": "radius-contained", "title": "The blast radius, contained",
+      "question": "What does part one's picture look like once the barriers are boundaries?",
+      "idea": "E02's rings again, under a behaviour policy enforced by a harness: each ring that a boundary closes goes dark; what stays lit is the excess still bounded by nothing, the only number anybody can move. Must say which boundaries are measured and which are designed.",
+      "data": ["E02 and E09's data; SHarness status labels"],
+      "makers": ["ruv-sgit"], "needs_from": [], "status": "idea", "order": 12, "after": ["E02", "E09", "E11"]
+    },
+    {
+      "id": "E13", "part": "protect", "slug": "real-examples", "title": "Real agents, mapped",
+      "question": "What do real deployments look like when mapped this way?",
+      "idea": "Small multiples: each published example on abp.sgit.ai as the same small chart (grant, mandate, excess, what bounds it), side by side, so the room sees many real cases at once.",
+      "data": ["abp.sgit.ai/examples: all five examples (researcher to capture)"],
+      "makers": ["ruv-sgit"], "needs_from": ["researcher"], "status": "idea", "order": 13
+    },
+    {
+      "id": "E14", "part": "protect", "slug": "earning-autonomy", "title": "Earning autonomy",
+      "question": "How does an agent earn more room?",
+      "idea": "A licence to operate with a name and an expiry; autonomy unlocked level by level, each on evidence that the level below held. Illustrative, and labelled so.",
+      "data": ["RiskMandate, licence to operate (talk source); the researcher's finding that suspension is a design, not a shipped feature"],
+      "makers": ["ruv-sgit"], "needs_from": [], "status": "idea", "order": 14
+    }
+  ]
+}
