@@ -6,6 +6,10 @@
   "state": "vault keys opened 29 October 03:55 UTC; both vaults cloned into the scratchpad; designer's board and mail folders in use; design note 1 accepted by dev as issue dev 010 for its 04:47 wake",
   "done": [
     {
+      "what": "policy.json agreed by the editor, as drafted",
+      "evidence": "team/designer/policy.json agreed_by; team/designer/debriefs/2026-10-29__policy-agreed.md"
+    },
+    {
       "what": "Opened both sealed vault keys (signed by the conductor's published key sha256:7047871c97407e2b), cloned tui-issues-public and tui-mail-public into the scratchpad, deleted the opened key files and the unpacked zip; never printed",
       "evidence": "team/designer/debriefs/2026-10-29__the-vault-keys.md"
     },
@@ -44,12 +48,7 @@
       "why": "W2 reaches the studio pages only once their prose is marked"
     }
   ],
-  "asks": [
-    {
-      "what": "Agree designer's policy.json (writes team/designer/** only; creates only its own :39 task)",
-      "from": "the editor"
-    }
-  ],
+  "asks": [],
   "tasks": {
     "designer": "trig_01UZsT53xtEVDtwWkkZDp5Qu"
   },
