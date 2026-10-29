@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "policy: lab/** and the b01 Versions append; run r2-b01-storyboard: storyboard and notes, editor's 1 must-fix and 6 should-fixes applied; vault kept, key sealed to the DC Vault Registry (zip for the editor); hand-back request to deck; status, debrief, REALITY",
    "at": "2026-10-29T02:59:42Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1) hand-back request done; 2) policy done, editor's go recorded, review page regenerated; 3) run done, vault kept; pre-review conditions kept. Unplanned: the keep command in ruvsgit.py, minor.",
+   "at": "2026-10-29T03:00:10Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "18 files: no key, token or private key; no zip or .enc tracked; all paths in writes or appends, the brief touched only in its Versions section; gate clean, 0 outside scope",
+   "at": "2026-10-29T03:00:17Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T03:00:17Z",
+ "outcome": "ok"
 }
