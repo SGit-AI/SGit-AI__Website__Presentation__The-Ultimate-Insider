@@ -1,0 +1,452 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T17:43:48Z",
+ "until": "2026-10-29T18:00:57Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T17:45:53Z",
+   "kind": "editor's chat",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T174553Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "At the editor's word: a 'how we keep it safe' section in the prelude: brief 10 with a claims table tied to the public record; motion 009 (M04), deck 073, researcher 033 to check the claims. Part 1 by 18:15, else part 2. Amended after the pre-review: claims corrected."
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T17:59:11Z",
+   "kind": "follow-up wake (tonight's rule)",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T175911Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "The 18:00 flag: part 1 final (22 beats, 29:30, M02 and M03 in), nothing misses it; route the storyteller's three-parts request (deck 074); deck 075 the sweep (two new SHarness pieces); pace flag incl. policies (editor agreed all at 17:40; studio and security not yet recorded); night log; one send_later at 18:18 under WAKE.md 'Tonight only'."
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T17:48:50Z",
+   "kind": "scheduled wake, 17:47",
+   "outcome": "open",
+   "record": "team/dev/wakes/20261029T174850Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "1) Record 042 in team/dev/policy.json (status agreed, agreed_by: the editor, the conductor's session, 17:40, his words). 2) 039: slide.js re-reads #cv data-end after SLIDE_INIT. 3) admin/build/lock.py copies part 1's built files into src/static/talk/engine/locked/part1/ with beats rewritten and locks.json; player.html substitutes locked beats; validate.py treats locked/ as standalone; lock at 18:3"
+  },
+  {
+   "agent": "storyteller",
+   "started": "2026-10-29T17:49:29Z",
+   "kind": "editor's request (answers routed by the conductor; ahead of the :54 slot)",
+   "outcome": "ok",
+   "record": "team/storyteller/wakes/20261029T174929Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) story/three-parts.md: deck's part 1 (29:30, locks 18:30) checked against the arc by 18:15, notes only; parts 2 and 3 placed: attacks, then solution, SHarness challenge near the close; six threads; prelude callback; attrition; facts with ids or researcher requests. 2) proposal to deck in requests/ (never talk.json); tree, maps README. 3) record the editor's agreement in policy.json (mail 016; qu"
+  },
+  {
+   "agent": "storyteller",
+   "started": "2026-10-29T17:55:13Z",
+   "kind": "scheduled, hourly at :54",
+   "outcome": "idle",
+   "record": "team/storyteller/wakes/20261029T175513Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "none",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Close idle: since 89fe3be only dev's lock tool and a merge; no To-storyteller notes or requests; the 18:09 follow-up covers part 2 before 19:30."
+  }
+ ],
+ "commits": [
+  {
+   "agent": "storyteller",
+   "sha": "9027af8",
+   "at": "2026-10-29T17:56:00+00:00",
+   "subject": "@storyteller: the 17:55 wake closed idle (nothing new since the 17:49 wake)",
+   "changed": 2
+  },
+  {
+   "agent": "storyteller",
+   "sha": "58af53a",
+   "at": "2026-10-29T17:52:19+00:00",
+   "subject": "@storyteller: close the 17:49 wake: post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "b1c9bab",
+   "at": "2026-10-29T17:52:15+00:00",
+   "subject": "@deck: part 1 final for its lock: meet the team opens the talk, it could have been much worse after the incidents; every other new piece into parts 2 and 3",
+   "changed": 1
+  },
+  {
+   "agent": "storyteller",
+   "sha": "14998b5",
+   "at": "2026-10-29T17:51:52+00:00",
+   "subject": "@storyteller: the arc in three parts for the locks: part 1 notes, parts 2 and 3 placed; the editor's agreement of the policy recorded",
+   "changed": 8
+  },
+  {
+   "agent": "conductor",
+   "sha": "31d3a9f",
+   "at": "2026-10-29T17:49:18+00:00",
+   "subject": "@conductor: wake closed: go, change adopted, done, clean, as-planned",
+   "changed": 2
+  },
+  {
+   "agent": "conductor",
+   "sha": "93f4191",
+   "at": "2026-10-29T17:48:46+00:00",
+   "subject": "@conductor: the editor, 17:45: how we keep it safe, a section in how this was made, every claim tied to the record",
+   "changed": 3
+  },
+  {
+   "agent": "designer",
+   "sha": "ec962a2",
+   "at": "2026-10-29T17:48:26+00:00",
+   "subject": "@designer: part 1 on a projector, checked before the 18:30 lock: ready",
+   "changed": 8
+  },
+  {
+   "agent": "studio",
+   "sha": "8f0c080",
+   "at": "2026-10-29T17:48:21+00:00",
+   "subject": "@studio: close the 17:40 follow-up wake (five steps; 007 one of three)",
+   "changed": 1
+  },
+  {
+   "agent": "studio",
+   "sha": "1a19bbe",
+   "at": "2026-10-29T17:47:28+00:00",
+   "subject": "@studio: wake record: the work step",
+   "changed": 1
+  },
+  {
+   "agent": "studio",
+   "sha": "bd3cdad",
+   "at": "2026-10-29T17:47:28+00:00",
+   "subject": "@studio: showcase of this team's own ABPs, 1 of 3: the policy review page; the editor's word on follow-ups recorded",
+   "changed": 12
+  },
+  {
+   "agent": "conductor",
+   "sha": "2e349d6",
+   "at": "2026-10-29T17:45:20+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "0f6e28f",
+   "at": "2026-10-29T17:44:20+00:00",
+   "subject": "@conductor: 17:42 pace: motion's two part-1 pieces flagged to deck before the lock; the team's numbers refreshed",
+   "changed": 10
+  }
+ ],
+ "made": [
+  {
+   "page": "studio-ports/abp-review/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/lab/abp-review/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "articles/moments.html",
+   "by": "conductor"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio-ports/lab/abp-review/index.html",
+   "img": "night-20261029T1800-1.png"
+  },
+  {
+   "page": "articles/moments.html",
+   "img": "night-20261029T1800-2.png"
+  },
+  {
+   "page": "studio-ports/abp-review/index.html",
+   "img": "night-20261029T1800-3.png"
+  },
+  {
+   "page": "studio-ports/index.html",
+   "img": "night-20261029T1800-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T17:46:22Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The editor, 17:45: how we keep it safe, in the prelude"
+  },
+  {
+   "at": "2026-10-29T17:46:22Z",
+   "sender": "conductor",
+   "to": "motion",
+   "kind": "request",
+   "subject": "The editor, 17:45: one more prelude piece, how we keep it safe"
+  },
+  {
+   "at": "2026-10-29T17:46:22Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "request",
+   "subject": "The editor, 17:45: please check the claims for how we keep it safe"
+  },
+  {
+   "at": "2026-10-29T17:50:00Z",
+   "sender": "motion",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: it could have been much worse (M02), and where meet the team (M03) goes"
+  },
+  {
+   "at": "2026-10-29T17:50:00Z",
+   "sender": "motion",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: The prelude: meet the team, delivered for part 1"
+  },
+  {
+   "at": "2026-10-29T17:52:00Z",
+   "sender": "designer",
+   "to": "deck",
+   "kind": "update",
+   "subject": "Part 1 on a projector: ready; one optional suggestion (incidents, card text 12.5px)"
+  },
+  {
+   "at": "2026-10-29T17:53:00Z",
+   "sender": "deck",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Urgent: part 1 is final from deck; the 18:30 lock needs the player"
+  },
+  {
+   "at": "2026-10-29T17:58:00Z",
+   "sender": "studio",
+   "to": "deck",
+   "kind": "update",
+   "subject": "Landed for part 3: the editor approves each agent's policy (showcase); two more of the conductor's 007 next"
+  },
+  {
+   "at": "2026-10-29T17:58:00Z",
+   "sender": "studio",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: 007 and 008: the policy review showcase landed; the rest in tonight's follow-ups"
+  },
+  {
+   "at": "2026-10-29T17:59:07Z",
+   "sender": "dev",
+   "to": "researcher",
+   "kind": "reply",
+   "subject": "Re: the catalogue and the public vaults: thank you"
+  },
+  {
+   "at": "2026-10-29T17:59:07Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: locks, parts 2 and 3, Linux tonight, the policy: where dev stands at 18:00"
+  },
+  {
+   "at": "2026-10-29T17:59:07Z",
+   "sender": "dev",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: skip and copy are in; part 1 locks at 18:30 by \"part\""
+  },
+  {
+   "at": "2026-10-29T17:59:29Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The 18:00 sweep: two new SHarness pieces for parts 2 and 3"
+  },
+  {
+   "at": "2026-10-29T17:59:35Z",
+   "sender": "dev",
+   "to": "studio",
+   "kind": "reply",
+   "subject": "Re: the showcase's end is read now"
+  },
+  {
+   "at": "2026-10-29T18:00:00Z",
+   "sender": "storyteller",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Three parts: part 1 notes before 18:15 (keep it); parts 2 and 3 placed, 30:10 and 27:30"
+  }
+ ],
+ "problems": [
+  {
+   "agent": "storyteller",
+   "started": "2026-10-29T17:55:13Z",
+   "outcome": "idle",
+   "verdicts": {
+    "work": "none"
+   },
+   "record": "team/storyteller/wakes/20261029T175513Z.json"
+  }
+ ],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or move the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
+    "from": "the editor"
+   },
+   {
+    "what": "Confirm 'newsroom.esquito.ai' = newsroom.sgit.ai and 'attrition' = commoditisation on the Wardley maps; 'Empower', 'the billing', which blast radius",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload the motion and studio vault-key zips into their sessions",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Skip or move studio pieces in the build mode; if the lane fails, paste the JSON of your changes in chat (dev is adding the copy button)",
+    "from": "the editor"
+   },
+   {
+    "what": "The talk is rewritten into your 15:00 order: 22 beats, 38:30, in the player now; check the words in the script",
+    "from": "the editor"
+   },
+   {
+    "what": "Placement of the studio pieces beyond those now in the talk (E04 v2 on limits, M01 on building): set it in the build mode or say",
+    "from": "the editor"
+   }
+  ],
+  "designer": [
+   {
+    "what": "Tonight's rule in WAKE.md asks each member to schedule one-off follow-ups with send_later; designer's standing wake prompt says never to create a scheduled task, and its policy allows only its own :39 task. Designer has not scheduled any. Say in this session if you want it to.",
+    "from": "the editor"
+   }
+  ],
+  "dev": [
+   {
+    "from": "dev",
+    "to": "the editor",
+    "what": "Give the conductor's session its two sealed files from the lane handover zip"
+   }
+  ],
+  "motion": [
+   {
+    "to": "dev",
+    "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+   },
+   {
+    "to": "conductor",
+    "what": "mark the motion row of schedule.json running with the task id"
+   },
+   {
+    "to": "deck",
+    "what": "review M02; say where M03 goes (before or after the building)"
+   },
+   {
+    "to": "editor",
+    "what": "say whether motion may schedule the tonight-only send_later follow-up into its own session"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E12, E08, E14, E05, E06 and the SHarness series",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Capture sharness.ai's animations and workflows, and the browser Linux page",
+    "from": "researcher@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r23",
+    "from": "the editor"
+   }
+  ],
+  "storyteller": [
+   {
+    "what": "seal the two vault keys to team/storyteller/key.json",
+    "from": "conductor"
+   }
+  ],
+  "studio": [
+   {
+    "what": "confirm in studio's session that studio's policy is agreed (the conductor relays 'So I agree with all those policies', 17:40)",
+    "from": "the editor"
+   },
+   {
+    "what": "which piece for the definition beat; where the showcases sit",
+    "from": "deck"
+   },
+   {
+    "what": "the showcase's \"end\" reaches the engine",
+    "from": "dev"
+   }
+  ]
+ }
+}

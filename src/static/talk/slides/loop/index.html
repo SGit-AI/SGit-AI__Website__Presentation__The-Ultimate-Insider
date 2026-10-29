@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A reasoning engine in a loop, with tools</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+#sv{position:absolute;left:40px;top:150px;width:640px;height:500px}
+.node{fill:var(--panel);stroke:var(--line2);stroke-width:2.5}
+.nt{font-size:24px;font-weight:800;fill:var(--head)}
+.ns{font-size:16px;fill:var(--dim)}
+#ring{fill:none;stroke:var(--accent);stroke-width:3;stroke-dasharray:6 8;opacity:.6}
+#dot{fill:var(--accent)}
+#tri{position:absolute;left:720px;top:160px;width:500px}
+#tri h3{font:800 16px system-ui;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:0 0 12px}
+.leg{display:flex;align-items:center;gap:14px;border:2px solid var(--line);border-radius:14px;background:var(--panel);padding:14px 18px;margin-bottom:12px;font-size:22px;font-weight:700;color:var(--dim);transition:all .3s}
+.leg i{width:22px;height:22px;border-radius:50%;border:3px solid var(--line2);flex:none}
+.leg.on{color:var(--head);border-color:var(--agent);background:var(--agent-t)}
+.leg.on i{background:var(--agent);border-color:var(--agent)}
+#warn{margin-top:16px;font:700 25px/1.3 Georgia,serif;color:var(--agent)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="12">
+  <p class="kk a">Act one · the insider</p>
+  <div class="hl" data-in="0">An agent is a <em>reasoning engine in a loop</em>, with tools.</div>
+  <svg id="sv" viewBox="0 0 640 500">
+    <circle id="ring" cx="320" cy="250" r="175" data-in=".4"/>
+    <g data-in=".3"><rect class="node" x="200" y="38" width="240" height="84" rx="16"/><text class="nt" x="320" y="78" text-anchor="middle">the model</text><text class="ns" x="320" y="104" text-anchor="middle">reasons, decides the next step</text></g>
+    <g data-in=".9"><rect class="node" x="420" y="210" width="210" height="84" rx="16"/><text class="nt" x="525" y="250" text-anchor="middle">a tool</text><text class="ns" x="525" y="276" text-anchor="middle">shell, API, browser, mail</text></g>
+    <g data-in="1.5"><rect class="node" x="200" y="380" width="240" height="84" rx="16"/><text class="nt" x="320" y="420" text-anchor="middle">what it sees</text><text class="ns" x="320" y="446" text-anchor="middle">results, files, web pages</text></g>
+    <g data-in="2.1"><rect class="node" x="10" y="210" width="210" height="84" rx="16"/><text class="nt" x="115" y="250" text-anchor="middle">again</text><text class="ns" x="115" y="276" text-anchor="middle">until it decides it is done</text></g>
+    <circle id="dot" r="11" cx="320" cy="75"/>
+  </svg>
+  <div id="tri">
+    <h3 data-in="4">The lethal trifecta</h3>
+    <div class="leg" data-in="4.2" data-on="5"><i></i>private data</div>
+    <div class="leg" data-in="4.2" data-on="6"><i></i>untrusted content</div>
+    <div class="leg" data-in="4.2" data-on="7"><i></i>a way to send outward</div>
+    <div id="warn" data-in="8">All three, and a document it reads can turn it against you.</div>
+  </div>
+  <div class="ft">Anthropic, Building effective agents (December 2024) · Simon Willison, The lethal trifecta for AI agents (June 2025)</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+window.SLIDE_RENDER = function (t, S) {        // the dot goes round the loop, faster each lap
+  var d = S.$('dot'), a = t < 2.5 ? -Math.PI / 2 : -Math.PI / 2 + (t - 2.5) * (1.6 + (t - 2.5) * .25)
+  d.setAttribute('cx', 320 + 175 * Math.cos(a)); d.setAttribute('cy', 250 + 175 * Math.sin(a)); d.style.opacity = S.seg(t, 2.3, 2.6)
+}
+</script>
+</body>
+</html>

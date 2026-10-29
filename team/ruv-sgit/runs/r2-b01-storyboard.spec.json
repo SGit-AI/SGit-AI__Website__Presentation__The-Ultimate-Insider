@@ -1,0 +1,14 @@
+{
+ "run": "r2-b01-storyboard",
+ "purpose": "r2-b01-storyboard: the storyboard for studio brief B01, One story, not three: one motif that carries the three problems from the opening, through each act, into the collision and the way out",
+ "request": {
+  "from": "deck@the-ultimate-insider (studio brief B01), with the editor's go in the session",
+  "date": "2026-10-29",
+  "text": "Studio brief B01, src/pages/studio/briefs/b01-one-story.html: make the audience feel, without being told twice, that the three problems are one story. Hand back a storyboard first: one frame per moment (arrival, the overlap named, act one, act two, act three, the collision, the way out, optional close), each a still with its time in the beat and the words over it. The editor, in the session, 29 October 2026: 'Go for it.'"
+ },
+ "ending": "keep: later passes make v1 and v2 on the same vault",
+ "workers": [
+  {"id": "storyboard", "role": "designer", "task": "the storyboard page src/static/studio/lab/b01/storyboard/index.html and notes.md", "out": "src/static/studio/lab/b01/"},
+  {"id": "editor", "role": "editor", "task": "check the storyboard against the brief, the script lines it quotes and the studio checklist; list must-fixes", "out": "team/ruv-sgit/runs/r2-b01-storyboard.editor.md"}
+ ]
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>82 machine identities for every human</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+#grid{position:absolute;left:60px;top:170px;width:620px;display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+#grid i{display:block;aspect-ratio:1;border-radius:50%;background:var(--line);transform:scale(0)}
+#grid i.h{background:var(--accent)}
+#grid i.p{background:var(--agent)}
+#nums{position:absolute;left:740px;top:160px;width:480px}
+.st{margin-bottom:22px}
+.st b{display:block;font:800 84px/1 ui-monospace,monospace;color:var(--head);letter-spacing:-.03em}
+.st span{font-size:21px;color:var(--text)}
+.st.r b{color:var(--agent)}
+.key{position:absolute;left:60px;top:640px;display:flex;gap:26px;font-size:17px;color:var(--dim)}
+.key i{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+</style>
+</head>
+<body>
+<div id="cv" data-end="10">
+  <p class="kk a">Act one · the scale</p>
+  <div class="hl" data-in="0" style="font-size:40px">Agents arrive into a population that is <em>already unmanaged.</em></div>
+  <div id="grid"></div>
+  <div id="nums">
+    <div class="st" data-in="1"><b data-count="82" data-at="1" data-dur="3.4">0</b><span>machine identities for every human</span></div>
+    <div class="st r" data-in="5"><b data-count="42" data-at="5" data-dur="1.4" data-suf="%">0%</b><span>of them with privileged access</span></div>
+    <div class="st" data-in="7.4"><b data-count="88" data-at="7.4" data-dur="1.2" data-suf="%">0%</b><span>of security leaders still define a privileged user as a human</span></div>
+  </div>
+  <div class="key" data-in="1"><span><i style="background:var(--accent)"></i>one human</span><span><i style="background:var(--line2)"></i>machine identity</span><span><i style="background:var(--agent)"></i>privileged (42%, shown to scale)</span></div>
+  <div class="ft">CyberArk, 2025 Identity Security Landscape (April 2025)</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+var DOTS = []
+window.SLIDE_INIT = function (S) {           // 1 human + 82 machines; 34 of the 82 (42%) privileged, scattered
+  var g = S.$('grid'), priv = {}, n = 0, seed = 7
+  while (n < 34) { seed = (seed * 9301 + 49297) % 233280; var k = 1 + Math.floor(seed / 233280 * 82); if (!priv[k]) { priv[k] = 1; n++ } }
+  for (var i = 0; i < 83; i++) { var d = document.createElement('i'); if (i === 0) d.className = 'h'; g.appendChild(d); DOTS.push({ el: d, p: !!priv[i] }) }
+}
+window.SLIDE_RENDER = function (t, S) {
+  DOTS.forEach(function (d, i) {
+    var a = i === 0 ? .3 : 1 + (i - 1) * (3.4 / 82)
+    d.el.style.transform = 'scale(' + S.ease(S.seg(t, a, a + .35)) + ')'
+    if (i) d.el.classList.toggle('p', d.p && t >= 5 + (i / 83) * 1.4)
+  })
+}
+</script>
+</body>
+</html>

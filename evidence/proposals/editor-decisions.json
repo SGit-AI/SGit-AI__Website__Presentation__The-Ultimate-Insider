@@ -1,0 +1,447 @@
+{
+ "schema": "the-ultimate-insider/editor-decisions/v0",
+ "about": "What waits on the editor, gathered by researcher@the-ultimate-insider from every member's status.json asks and the blocked issues on the board; first gathered 03:10 UTC, refreshed 04:12, 09:15, 11:25, 12:35 and 13:20 UTC on 29 October 2026. Each entry restates the members' asks in their own words, with the file; it decides nothing. A proposal: the conductor owns the register once it agrees.",
+ "gathered_from": [
+  "team/*/status.json asks",
+  "tui-issues-public */issues/blocked/"
+ ],
+ "kinds": {
+  "decide": "choose one of the options offered",
+  "approve": "agree, change or question a document, item by item",
+  "do": "an action only the editor can take",
+  "review": "look at work and keep, change or drop it"
+ },
+ "not_for_the_editor": [
+  {
+   "what": "Go or notes on the B01 storyboard",
+   "owner": "deck (ruv-sgit asked deck)"
+  },
+  {
+   "what": "Seal the team vault keys to ruv.sgit's key",
+   "owner": "conductor"
+  },
+  {
+   "what": "Pace the programme; record deck's task in schedule.json",
+   "owner": "conductor"
+  }
+ ],
+ "decisions": [
+  {
+   "id": "D01",
+   "kind": "decide",
+   "title": "Act one: \"three of those five were not attacks\"",
+   "question": "EchoLeak was a researcher showing what an attacker could do, so as worded only two of the five were agents being agents. Which fix?",
+   "why_now": "The talk is at 19:00 London tonight. You froze the deck at 02:47, so deck holds this and the remaining edits (item 5 and seventeen should-change rows, evidence/proposals/deck-talk-changes.md) as its issue deck-001, blocked on you, until you choose and lift the freeze.",
+   "options": [
+    {
+     "id": "A",
+     "label": "Keep the five, change the count: \"two of those five were agents being agents\"",
+     "consequence": "smallest edit; the tally on the slide becomes 2, 1, 2"
+    },
+    {
+     "id": "B",
+     "label": "Keep \"three\": swap EchoLeak for OpenAI Codex deleting home directories (July 2026)",
+     "consequence": "a 2026 case, confirmed by OpenAI (A4); EchoLeak moves to the loop beat as the trifecta example"
+    },
+    {
+     "id": "C",
+     "label": "Keep as it is",
+     "consequence": "the researcher marks the claim \"holds in part\" in the register"
+    },
+    {
+     "id": "D",
+     "label": "Lift the freeze for the evidence edits only",
+     "consequence": "deck applies item 5 and the should-change rows from the proposals file, row by row; item 4 still as you choose"
+    }
+   ],
+   "recommendation": {
+    "option": "B",
+    "by": "researcher",
+    "why": "keeps the thesis line, and answers \"the last eighteen months\" with a case from this summer"
+   },
+   "evidence": [
+    "evidence/proposals/deck-talk-changes.md#1-incidents-three-of-those-five-were-not-attacks-editor",
+    "evidence/claims/claims.json#three-of-five-not-attacks"
+   ],
+   "asked_by": [
+    "deck (issue deck-001)",
+    "researcher"
+   ],
+   "due": "2026-10-29T17:00:00Z",
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D02",
+   "kind": "decide",
+   "title": "What a decision you sign on this page means",
+   "question": "When you answer here, signed with your key, should the agents treat it as your decision (binding, within the options offered) or as material to weigh, like any message?",
+   "why_now": "The page cannot be built until this is settled; security set the conditions in its pre-review.",
+   "options": [
+    {
+     "id": "A",
+     "label": "Binding within the options offered; never a change to policy, scope, the rules or Stopping",
+     "consequence": "agents act on it; anything outside the offered options, or unsigned, is ignored and reported"
+    },
+    {
+     "id": "B",
+     "label": "Material to weigh, like a message: agents may decline with a reason",
+     "consequence": "safest; your decisions still need your words in each session to be binding"
+    },
+    {
+     "id": "C",
+     "label": "Binding only for kind \"decide\" and \"approve\"; everything free text is material",
+     "consequence": "a middle way: your free-text notes cannot steer"
+    }
+   ],
+   "recommendation": {
+    "option": "C",
+    "by": "researcher",
+    "why": "a chosen option is unambiguous and signed; free text is where steering would hide"
+   },
+   "evidence": [
+    "team/researcher/wakes/20261029T030550Z.json (pre_review)",
+    "evidence/proposals/editor-decisions-deck.md"
+   ],
+   "asked_by": [
+    "researcher",
+    "security (pre-review)"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D03",
+   "kind": "approve",
+   "title": "deck's policy.json",
+   "question": "Agree, change or question deck@'s draft policy, item by item.",
+   "why_now": "Marked draft in team/deck/policy.json (deck's ask: \"Agree or change the draft policy.json\"). ruv.sgit's and the designer's were agreed in their own sessions.",
+   "options": [
+    {
+     "id": "agree",
+     "label": "Agree as it is"
+    },
+    {
+     "id": "change",
+     "label": "Change (say what)"
+    },
+    {
+     "id": "later",
+     "label": "Later"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "team/deck/policy.json",
+    "/ruv-sgit/policy-review.html (the pattern)"
+   ],
+   "asked_by": [
+    "deck"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D04",
+   "kind": "approve",
+   "title": "dev's policy.json",
+   "question": "Agree, change or question dev@'s draft policy, item by item. And: is carrying members' branches into dev a standing duty of dev?",
+   "why_now": "Marked draft; ruv.sgit's was agreed on its review page, item by item, against the policy's hash.",
+   "options": [
+    {
+     "id": "agree",
+     "label": "Agree as it is"
+    },
+    {
+     "id": "change",
+     "label": "Change (say what)"
+    },
+    {
+     "id": "later",
+     "label": "Later"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "team/dev/policy.json",
+    "/ruv-sgit/policy-review.html (the pattern)"
+   ],
+   "asked_by": [
+    "dev"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D05",
+   "kind": "approve",
+   "title": "conductor's policy.json",
+   "question": "Agree, change or question conductor@'s draft policy, item by item.",
+   "why_now": "Marked draft; ruv.sgit's was agreed on its review page, item by item, against the policy's hash.",
+   "options": [
+    {
+     "id": "agree",
+     "label": "Agree as it is"
+    },
+    {
+     "id": "change",
+     "label": "Change (say what)"
+    },
+    {
+     "id": "later",
+     "label": "Later"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "team/conductor/policy.json",
+    "/ruv-sgit/policy-review.html (the pattern)"
+   ],
+   "asked_by": [
+    "conductor"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D06",
+   "kind": "decide",
+   "title": "security@: agree, change or drop the role",
+   "question": "security has a ROLE.md and a policy.json marked proposed, and no session. The five-step wake already runs a security sub-agent in every member's session.",
+   "why_now": "Blocked on your board since 01:10 (conductor 003).",
+   "options": [
+    {
+     "id": "agree",
+     "label": "Agree: a security session of its own, with an hourly slot"
+    },
+    {
+     "id": "sub-agent",
+     "label": "Keep it as the five-step sub-agent only, no session"
+    },
+    {
+     "id": "drop",
+     "label": "Drop the role"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "team/security/ROLE.md",
+    "team/conductor/WAKE.md (The five steps)"
+   ],
+   "asked_by": [
+    "conductor"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D07",
+   "kind": "decide",
+   "title": "The team's hours",
+   "question": "The schedule runs every hour round the clock \"to see how it works overnight\"; schedule.json says you may narrow it to 08:02 to 21:47 London.",
+   "why_now": "Each night hour is 5 wakes; the morning review is easier with a known window.",
+   "options": [
+    {
+     "id": "keep",
+     "label": "Keep round the clock"
+    },
+    {
+     "id": "narrow",
+     "label": "Narrow to 08:02 to 21:47 London from tomorrow"
+    },
+    {
+     "id": "after-talk",
+     "label": "Round the clock until the talk, then narrow"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "team/conductor/schedule.json (hours)"
+   ],
+   "asked_by": [
+    "conductor"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D08",
+   "kind": "do",
+   "title": "Store the handover zips",
+   "question": "Handover zips hold vault keys sealed to the vaults manager. As the members list them (their status.json asks): the researcher's, for tui-evidence-public; ruv.sgit's, \"r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10\". Store them and hand them to the vaults manager.",
+   "why_now": "Only you can do this.",
+   "options": [
+    {
+     "id": "done",
+     "label": "Done"
+    },
+    {
+     "id": "later",
+     "label": "Later"
+    },
+    {
+     "id": "no",
+     "label": "Not doing it (say why)"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "team/researcher/status.json (asks)",
+    "team/ruv-sgit/status.json (asks)"
+   ],
+   "asked_by": [
+    "researcher",
+    "ruv-sgit"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D09",
+   "kind": "do",
+   "title": "Upload the key zips into deck's and ruv.sgit's sessions",
+   "question": "The team vault keys sealed to each member reach a session only through you.",
+   "why_now": "Only you can do this.",
+   "options": [
+    {
+     "id": "done",
+     "label": "Done"
+    },
+    {
+     "id": "later",
+     "label": "Later"
+    },
+    {
+     "id": "no",
+     "label": "Not doing it (say why)"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "team/conductor/status.json"
+   ],
+   "asked_by": [
+    "conductor"
+   ],
+   "due": null,
+   "status": "done",
+   "answer": {
+    "by": "the members' own records",
+    "note": "deck (983782b), ruv.sgit (b5213de) and designer (f04c531) each opened their team vault keys in their own sessions; the conductor no longer asks it"
+   }
+  },
+  {
+   "id": "D10",
+   "kind": "do",
+   "title": "Rotate the SG/Send access token",
+   "question": "The token was pasted into the researcher's chat at 02:20 UTC, so it is in that session's transcript. The researcher passed it only on the command line, never wrote it to a file, a vault or a commit, and kept it out of every saved log. Rotating it, and putting the new one in the environment's settings, closes the transcript copy.",
+   "why_now": "Only you can do this.",
+   "options": [
+    {
+     "id": "done",
+     "label": "Done"
+    },
+    {
+     "id": "later",
+     "label": "Later"
+    },
+    {
+     "id": "no",
+     "label": "Not doing it (say why)"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "this session"
+   ],
+   "asked_by": [
+    "researcher"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D11",
+   "kind": "review",
+   "title": "The morning review",
+   "question": "As deck lists it (team/deck/status.json): \"/studio/reviews/ (ten reviews; B01 v2 and E04 v2 are the two closest to slides) and /studio/programme.html; pieces that load data need the site served\". And, as the conductor lists it: \"Read the overnight banners and records in the morning; lift any hold or narrow the hours\".",
+   "why_now": "The night's work is built for this review.",
+   "options": [
+    {
+     "id": "reviewed",
+     "label": "Reviewed (notes per piece)"
+    },
+    {
+     "id": "later",
+     "label": "Later"
+    }
+   ],
+   "recommendation": null,
+   "evidence": [
+    "/studio/reviews/",
+    "/studio/programme.html",
+    "team/deck/status.json (asks)",
+    "team/conductor/status.json (asks)"
+   ],
+   "asked_by": [
+    "deck",
+    "conductor"
+   ],
+   "due": "2026-10-29T09:00:00Z",
+   "status": "open",
+   "answer": null
+  },
+  {
+   "id": "D12",
+   "kind": "decide",
+   "title": "The evidence vault's history: keep it, or rotate the vault",
+   "question": "Commits pushed between 02:22 and 05:23 UTC carry anonymous cookie values, page tokens and anti-forgery form tokens that websites issued to the researcher's fetcher, and the two append tokens sgit.ai and riskmandate.ai publish on purpose. All are redacted now, but earlier commits stay readable with the read key.",
+   "why_now": "The conductor's morning review asked; the counts per commit are in evidence/updates/2026-10-29__the-vault-history-checked.md.",
+   "options": [
+    {
+     "id": "keep",
+     "label": "Keep the history",
+     "consequence": "nothing changes; none of the values is a credential to an account, and they expire or were public already"
+    },
+    {
+     "id": "rotate",
+     "label": "Move to a fresh vault without the history (sgit vault move)",
+     "consequence": "a new read key on the site and in vaults.json; the old vault deleted; the handover zip renewed; and the chance to split it: the register in a vault that opens in the browser in seconds, the raw captures in a second vault that is cloned (today the browser takes about three minutes, one request per source folder)"
+    }
+   ],
+   "recommendation": {
+    "option": "keep",
+    "by": "researcher",
+    "why": "nothing in it opens an account; a rotation costs a new read key everywhere it is published"
+   },
+   "evidence": [
+    "evidence/updates/2026-10-29__the-vault-history-checked.md",
+    "team/researcher/wakes/20261029T071113Z.json (pre_review)"
+   ],
+   "asked_by": [
+    "conductor (morning review)",
+    "researcher"
+   ],
+   "due": null,
+   "status": "open",
+   "answer": null
+  }
+ ],
+ "checked_members": [
+  "conductor",
+  "deck",
+  "dev",
+  "designer (policy agreed, no asks)",
+  "researcher",
+  "ruv-sgit",
+  "security (no session)"
+ ]
+}

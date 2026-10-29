@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47 (fired 16:03)",
+ "started": "2026-10-29T16:03:34Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Request 026 (deck): src/pages/index.html only, the lead becomes 'Together they make a perfect storm we are brewing...' and the iframe title 'three known problems, one perfect storm'; reply to deck. 2) Request 027 (studio): body{position:fixed;inset:0;overflow:hidden} in src/static/talk/engine/slide.css; build, gate, check the player still scales; reply to studio. 3) Request 029 (designer, note 7): the player left alone before 19:00 (the designer says it can wait; nothing is broken on a laptop or projector); filed for after the talk, reply to designer. Release 1 and 2.",
+   "at": "2026-10-29T16:04:19Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "All in dev's policy (engine in writes, index.html in holds); no secrets, no stop condition. Request 027 is the risk: slide.css is loaded by every slide and lab piece. Conditions: grep for body overrides in those pages; screenshot-compare title, three, collision, one studio lab piece and the player before and after; the gate; revert if any differ. Leaving the player alone before 19:00 is right.",
+   "at": "2026-10-29T16:04:45Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "026: index.html lead and frame title (deck's words), and the same line in dev's own article; 027: body{position:fixed;inset:0} in slide.css, the iPad fit proved, before/after screenshots pixel-identical for five slides and pieces, the player within noise; 029: design note 7 filed as dev 024 for after the talk.",
+   "at": "2026-10-29T16:06:50Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "6 files (index.html lead and frame title, one line in slide.css, dev's own article, debrief, status, wake record), all in dev's writes or holds; 0 outside scope; no secrets, personal detail or directive text; build and gate clean; both vaults pulled and vault_check clean; slide.css one line, as the pre-review asked.",
+   "at": "2026-10-29T16:08:13Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "026 done (index.html lead and frame title, the same line in dev's article; deck replied to). 027 done (slide.css one line; five before/after screenshots identical, the player within noise; studio replied to). 029 filed as dev 024 for after the talk, the player untouched; designer replied to. Conditions kept; no revert needed. The only extra, the article line, is related and one line.",
+   "at": "2026-10-29T16:08:40Z"
+  }
+ },
+ "closed": "2026-10-29T16:08:40Z",
+ "outcome": "ok"
+}

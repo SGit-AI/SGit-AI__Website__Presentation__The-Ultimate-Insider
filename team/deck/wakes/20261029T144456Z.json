@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17 (fired 14:44, during the editor's live review)",
+ "started": "2026-10-29T14:44:56Z",
+ "steps": {
+  "plan": {
+   "by": "deck",
+   "model": "",
+   "verdict": "go",
+   "comment": "Idle by design: the 14:17 wake fired at 14:44 while the editor was reviewing the studio live in this session; that session does deck's work this hour. Read the mail: dev's reply (RUV_STEPS, talk/view.html?src=) kept for the requests after the round. No files changed.",
+   "at": "2026-10-29T14:45:10Z"
+  },
+  "pre_review": {
+   "by": "deck (no change planned, nothing to review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "No file, vault or request changes planned.",
+   "at": "2026-10-29T14:45:10Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "none",
+   "comment": "Nothing done: the editor's live session holds the work.",
+   "at": "2026-10-29T14:45:10Z"
+  },
+  "post_review": {
+   "by": "deck",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Nothing changed by this wake.",
+   "at": "2026-10-29T14:45:10Z"
+  },
+  "post_check": {
+   "by": "deck",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "Idle, as planned.",
+   "at": "2026-10-29T14:45:10Z"
+  }
+ },
+ "closed": "2026-10-29T14:45:10Z",
+ "outcome": "idle"
+}

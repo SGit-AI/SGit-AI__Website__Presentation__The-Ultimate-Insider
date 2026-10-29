@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "studio",
+ "kind": "editor's request: the vault keys",
+ "started": "2026-10-29T16:29:02Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (plan brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Before the wake opened, at the editor's upload: keys opened into 0600 files, both vaults cloned from stdin, key files shredded; studio/ folders written, uncommitted. 1. Requests: none (mailroom/studio empty; dev's reply in studio/done/, no answer needed); commit both vaults after vault_check (tui-issues-public studio/ board, tui-mail-public studio/ folders and done/001); no repo files. 2. team/studio/status.json and a debrief. 3. Next port only if deck's sorting landed; else none.",
+   "at": "2026-10-29T16:29:32Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (pre_review brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Writes only studio/ in each vault; the move from mailroom/studio is the recipient's own; no repo files beyond status and debrief; no new mail to others. vault_check clean; no key or token in studio/; no .enc or opened key left in the scratchpad. Condition: vault_check before each commit, never sgit vault info.",
+   "at": "2026-10-29T16:29:55Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "done",
+   "comment": "1. Requests: none; dev's reply to studio/done/. Both vaults committed after vault_check and pushed with the environment's token (never printed): studio/ board (done 001, 002; blocked 003) and mail folders. A read-key clone shows them. 2. status.json and debrief. 3. deck's sorting not landed: no port.",
+   "at": "2026-10-29T16:31:40Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (post_review brief)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Repo diff: 3 studio files; agents.py 0 outside scope; gate clean; vault_check clean on both clones. Vault commits are @studio only: studio/ files and the mailroom/studio move. No keys, tokens or personal detail; no opened vault-key file in the scratchpad.",
+   "at": "2026-10-29T16:32:29Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (post_check brief)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1 vaults committed by @studio, studio/ board (done 001, 002; blocked 003) and mail folders, no mail to others. 2 status and debrief done. 3 no port: deck's sorting not landed. Conditions kept.",
+   "at": "2026-10-29T16:32:29Z"
+  }
+ },
+ "closed": "2026-10-29T16:32:29Z",
+ "outcome": "ok"
+}

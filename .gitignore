@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# build output (CI builds and deploys it; never committed)
+/_site
+!admin/build/

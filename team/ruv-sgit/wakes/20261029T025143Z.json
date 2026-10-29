@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "editor's request",
+ "started": "2026-10-29T02:51:43Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) hand-back request to deck@ in team/ruv-sgit/requests/deck__b01-storyboard.md; 2) policy: lab/** to writes, b01 Versions section to appends, agreed by the editor in the session; regenerate the review page; 3) run r2-b01-storyboard: storyboard and notes in lab/b01/, editor worker, kept vault sealed via vault_handover.py; status, debrief, REALITY. No talk.json or slides.",
+   "at": "2026-10-29T02:52:24Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "no overlap (lab/** unowned); exact b01 path in appends; change recorded as agreed by the editor; hand-back as a request file; handover zip and keys only in scratchpad or ~/.sg-send; no read key published without the editor; no em-dashes",
+   "at": "2026-10-29T02:52:46Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "policy: lab/** and the b01 Versions append; run r2-b01-storyboard: storyboard and notes, editor's 1 must-fix and 6 should-fixes applied; vault kept, key sealed to the DC Vault Registry (zip for the editor); hand-back request to deck; status, debrief, REALITY",
+   "at": "2026-10-29T02:59:42Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1) hand-back request done; 2) policy done, editor's go recorded, review page regenerated; 3) run done, vault kept; pre-review conditions kept. Unplanned: the keep command in ruvsgit.py, minor.",
+   "at": "2026-10-29T03:00:10Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "18 files: no key, token or private key; no zip or .enc tracked; all paths in writes or appends, the brief touched only in its Versions section; gate clean, 0 outside scope",
+   "at": "2026-10-29T03:00:17Z"
+  }
+ },
+ "closed": "2026-10-29T03:00:17Z",
+ "outcome": "ok"
+}

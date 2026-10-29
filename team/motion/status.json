@@ -1,0 +1,91 @@
+{
+ "schema": "the-ultimate-insider/agent-status/v1",
+ "agent": "motion",
+ "as_of": "2026-10-29",
+ "round": 4,
+ "state": "M01 changed at the editor's word (on dev 18:29, before 19:00); M02 and M03 in review; parts 2 and 3 next",
+ "done": [
+  {
+   "what": "Joined at the editor's word: ROLE.md, policy.json (proposed, for the editor to agree), status.json",
+   "evidence": "team/motion/"
+  },
+  {
+   "what": "Session key published: sha256:dd9abf9b6a5d1246, encryption sha256:d2bd2d8029971854",
+   "evidence": "team/motion/key.json, key.png, sessions/session_01Kw9UwFirjPUZb7umbBZpZL/"
+  },
+  {
+   "what": "Own hourly task at :24 London, into this session, the members' prompt with the name motion",
+   "evidence": "tasks.motion below"
+  },
+  {
+   "what": "Asked deck for the building's request, with a proposed picture, stages and claim ids",
+   "evidence": "team/motion/requests/deck__the-building.md"
+  },
+  {
+   "what": "Opened the two sealed vault keys and cloned tui-issues-public and tui-mail-public; opened key files deleted",
+   "evidence": "team/motion/debriefs/2026-10-29__m01-the-building.md"
+  },
+  {
+   "what": "M01 the building v1: four stops on the engine's clock, no number, checked at 1280x720 and on iPad",
+   "evidence": "/motion/the-building/, src/static/motion/lab/the-building/v1/"
+  },
+  {
+   "what": "M01 kept by deck, on the talk's building beat",
+   "evidence": "/studio/reviews/m01.html"
+  },
+  {
+   "what": "M02 it could have been much worse v1",
+   "evidence": "/motion/could-have-been-worse/"
+  },
+  {
+   "what": "M03 meet the team v1, the prelude",
+   "evidence": "/motion/meet-the-team/"
+  },
+  {
+   "what": "Policy agreed by the editor",
+   "evidence": "team/motion/policy.json agreed_by"
+  },
+  {
+   "what": "M01 the editor's changes: red when doing damage, people sometimes find the gold, agents keep going",
+   "evidence": "/motion/the-building/"
+  }
+ ],
+ "next": [
+  {
+   "what": "reviews of M02 and M03; changes before 18:15 if asked",
+   "why": "part 1 locks at 18:30"
+  },
+  {
+   "what": "SHarness from the inside (mail 006), then the Wardley piece with attrition (mail 007)",
+   "why": "parts 2 and 3"
+  }
+ ],
+ "asks": [
+  {
+   "to": "dev",
+   "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+  },
+  {
+   "to": "conductor",
+   "what": "mark the motion row of schedule.json running with the task id"
+  },
+  {
+   "to": "deck",
+   "what": "review M02; say where M03 goes (before or after the building)"
+  },
+  {
+   "to": "editor",
+   "what": "say whether motion may schedule the tonight-only send_later follow-up into its own session"
+  }
+ ],
+ "tasks": {
+  "motion": {
+   "id": "trig_01GM4cSLdDMfUPmuZaAhzZTw",
+   "session": "session_01Kw9UwFirjPUZb7umbBZpZL",
+   "cron": "CRON_TZ=Europe/London 24 * * * *",
+   "first_wake_utc": "2026-10-29T16:24:00Z",
+   "enabled": true,
+   "created_by": "motion, from its own session, at the editor's word, 15:29 UTC"
+  }
+ }
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHarness: what exists and what is coming</title>
+<link rel="stylesheet" href="../../../../../talk/engine/slide.css">
+<script>
+window.RUV_STEPS = [{ t: 0, label: 'the agent and its tool' }, { t: 7, label: 'what runs' }, { t: 16, label: 'what is designed' }, { t: 25, label: 'the launcher above' }, { t: 33, label: 'what is measured' }, { t: 41, label: 'walls today' }]
+;(function () {
+  'use strict'
+  // Every word below is read from studio/data/harness.json (components, status_labels, probes, cautions), shortened
+  // only where the meaning stays. The page checks the file on load and fills the counts from its probes.
+  var D = null, done = false
+  fetch('../../../../data/harness.json').then(function (r) { return r.json() }).then(function (j) { D = j })
+    .catch(function (e) { console.error('SH3: the data file did not load', e) })
+  window.SLIDE_RENDER = function (t, S) {
+    if (!D || done) return
+    done = true
+    var held = D.probes.filter(function (p) { return /\(held\)/.test(p.result) }).length, n = D.probes.length
+    ;[].forEach.call(document.querySelectorAll('.held'), function (e) { e.textContent = held + ' of ' + n + ' held' })
+    ;[].forEach.call(document.querySelectorAll('[data-c]'), function (e) {
+      var c = D.components.filter(function (x) { return x.name.indexOf(e.dataset.c) === 0 })[0]
+      if (c) e.title = c.name + ': ' + c.status + '. ' + c.what_it_is
+      else console.error('SH3: no component', e.dataset.c)
+    })
+  }
+})()
+</script>
+<script src="../../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:6px}
+.hl{top:56px;font-size:34px;right:230px}
+#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--head)}
+.part{position:absolute;width:360px;height:90px;padding:6px 16px;border-radius:14px;background:var(--panel);font:20px/24px system-ui;color:var(--text)}
+.part b{font:800 24px/28px system-ui;color:var(--head)}
+.part b span{font:600 20px/28px system-ui;color:var(--dim)}
+.part .st{font-weight:700}
+.run{border:3px solid var(--accent)}
+.run .st{color:var(--accent)}
+.des{border:3px dashed var(--infra)}
+.des .st{color:var(--infra)}
+.ms{position:absolute;right:-14px;top:-14px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--bg);font:800 22px/32px system-ui;text-align:center}
+#launch{position:absolute;left:40px;top:112px;width:1200px;height:84px;padding:8px 20px;border-radius:14px;border:3px dashed var(--infra);background:var(--panel);font:20px/26px system-ui}
+#launch b{font:800 26px/32px system-ui;color:var(--head)}
+#launch b span{font:600 20px system-ui;color:var(--dim)}
+#launch .st{color:var(--infra);font-weight:700}
+#slice{position:absolute;right:16px;top:12px;width:420px;padding:4px 14px;border:3px solid var(--accent);border-radius:12px;font:20px/24px system-ui;color:var(--text)}
+#slice .st{color:var(--accent)}
+#slice .ms{right:-12px;top:-14px}
+#core{position:absolute;left:470px;top:236px;width:340px;height:262px;border:2px solid var(--line2);border-radius:18px;background:var(--panel)}
+#agent{position:absolute;left:20px;top:16px;font:800 26px/32px system-ui;color:var(--agent)}
+#agent i{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--agent);margin-right:10px;vertical-align:-3px}
+#tool{position:absolute;left:20px;top:64px;width:300px;height:180px;border:5px solid var(--accent);border-radius:14px;padding:10px 14px;font:20px/26px system-ui;color:var(--text)}
+#tool b{font:800 24px/30px system-ui;color:var(--head)}
+#tool .st{color:var(--accent);font-weight:700}
+#tool .ms{right:-16px;top:-16px}
+.cap{position:absolute;left:40px;right:40px;top:528px;font:700 28px/1.25 Georgia,serif;color:var(--head);text-align:center}
+.wl{position:absolute;left:40px;width:1200px;font:20px/26px system-ui;color:var(--text)}
+.wl b{color:var(--head)}
+.sw{display:inline-block;width:64px;height:0;margin-right:16px;vertical-align:5px}
+.sw.hold{border-top:8px solid var(--accent)}
+.sw.set{border-top:3px solid var(--accent)}
+.sw.drawn{border-top:5px dashed var(--infra)}
+#cav{position:absolute;left:40px;right:40px;top:638px;font:700 24px/30px Georgia,serif;color:var(--head)}
+#key{position:absolute;left:40px;right:40px;top:676px;font:20px/24px system-ui;color:var(--dim);white-space:nowrap}
+#key span{margin-right:44px}
+#key .b{display:inline-block;width:34px;height:20px;border-radius:5px;vertical-align:-4px;margin-right:8px}
+#key .b.r{border:3px solid var(--accent)}
+#key .b.d{border:3px dashed var(--infra)}
+#key .m{display:inline-block;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--bg);font:800 20px/24px system-ui;text-align:center;margin-right:8px;vertical-align:-1px}
+#pic{position:absolute;left:0;top:0;width:1280px;height:720px}
+</style>
+</head>
+<body>
+<div id="cv" data-end="50">
+  <p class="kk">SHarness · what exists and what is coming · v1</p>
+  <div id="id">SH3</div>
+  <div class="hl" data-in="0">SHarness: <em>what runs today,</em> and what is still a design.</div>
+
+  <svg id="pic" viewBox="0 0 1280 720" aria-hidden="true">
+    <path d="M400 259H470" stroke="var(--accent)" stroke-width="3" fill="none" data-draw="7.4 8"/>
+    <path d="M400 357H470" stroke="var(--accent)" stroke-width="3" fill="none" data-draw="9.4 10"/>
+    <path d="M400 455H470" stroke="var(--accent)" stroke-width="3" fill="none" data-draw="11.4 12"/>
+    <path d="M880 259H810" stroke="var(--infra)" stroke-width="3" stroke-dasharray="8 7" fill="none" data-in="16.4" data-rise="0"/>
+    <path d="M880 357H810" stroke="var(--infra)" stroke-width="3" stroke-dasharray="8 7" fill="none" data-in="18.4" data-rise="0"/>
+    <path d="M880 455H810" stroke="var(--infra)" stroke-width="3" stroke-dasharray="8 7" fill="none" data-in="20.4" data-rise="0"/>
+    <path d="M640 196V236" stroke="var(--infra)" stroke-width="3" stroke-dasharray="8 7" fill="none" data-in="25.6" data-rise="0"/>
+  </svg>
+
+  <div id="launch" data-in="25" data-c="sharness.launcher">
+    <b>The launcher above the agent <span>sharness.launcher</span></b><br>
+    <span class="st">designed, not built:</span> gives each part its own uid, starts and stops it
+    <div id="slice" data-in="27">first slice, <b class="mono" style="font-size:20px;color:var(--head)">sharness-ai shell</b><br><span class="st" style="font-weight:700">runs since 28 Oct 2026</span></div>
+  </div>
+
+  <div id="core" data-in="1">
+    <div id="agent"><i></i>The agent</div>
+    <div id="tool" data-in="3">
+      <b>its tool</b><br>
+      each command under a policy the kernel holds<br>
+      <span class="st mono" style="font-size:20px">sharness-ai run</span>
+      <div class="st" data-in="33.6">hello: <span class="held">6 of 6 held</span></div>
+      <span class="ms" data-in="33.4">&#10003;</span>
+    </div>
+  </div>
+
+  <div class="part run" style="left:40px;top:214px" data-in="7" data-c="sharness.policy">
+    <b>Policy <span>sharness.policy</span></b><br>the manifest, its layers, its hash<br>
+    <span class="st">hash, check, translate: runnable</span><span class="ms" data-in="34.6">&#10003;</span></div>
+  <div class="part run" style="left:40px;top:312px" data-in="9" data-c="sharness.fs">
+    <b>Files <span>sharness.fs</span></b><br>sole writer of protected folders<br>
+    <span class="st">MVP; a Setting until its own uid</span></div>
+  <div class="part run" style="left:40px;top:410px" data-in="11" data-c="sharness.net">
+    <b>Network <span>sharness.net</span></b><br>the only network client<br>
+    <span class="st">MVP; Boundary in shell only</span></div>
+
+  <div class="part des" style="left:880px;top:214px" data-in="16" data-c="sharness.kms">
+    <b>Keys <span>sharness.kms</span></b><br>never returns a clear key<br>
+    <span class="st">designed; freeze/thaw timed</span><span class="ms" data-in="35">&#10003;</span></div>
+  <div class="part des" style="left:880px;top:312px" data-in="18" data-c="sharness.bash">
+    <b>Shell <span>sharness.bash</span></b><br>a fresh sandbox per command<br>
+    <span class="st">designed; sandbox half runnable</span></div>
+  <div class="part des" style="left:880px;top:410px" data-in="20" data-c="sharness.llm">
+    <b>Model <span>sharness.llm</span></b><br>the only model API client<br>
+    <span class="st">designed, not built</span></div>
+
+  <div class="cap" data-in="1.5" data-out="6.4">The agent asks; its tool acts, inside a policy.</div>
+  <div class="cap" data-in="7.5" data-out="15.4">Runnable today: the policy tools, files, network.</div>
+  <div class="cap" data-in="16.5" data-out="24.4">Designed, not built: keys, shell, model.</div>
+  <div class="cap" data-in="26" data-out="32.4">Above the agent: the launcher, a design whose first slice runs.</div>
+  <div class="cap" data-in="33.5" data-out="40.4">Measured: <span class="held">6 of 6 held</span>, 25 October 2026, five places.</div>
+
+  <div class="wl" style="top:514px" data-in="41"><span class="sw hold"></span><b>A wall that holds:</b> the policy around the tool, for its child, in hello&#39;s <span class="held">6 of 6 held</span>; not for the agent.</div>
+  <div class="wl" style="top:544px" data-in="42"><span class="sw set"></span><b>Files runs:</b> a Setting until the launcher gives it its own uid.</div>
+  <div class="wl" style="top:574px" data-in="42.6"><span class="sw set"></span><b>Network runs:</b> a Boundary only for the shell sharness-ai shell starts, as root; a Setting otherwise.</div>
+  <div class="wl" style="top:604px" data-in="43.2"><span class="sw drawn"></span><b>A wall only drawn:</b> the launcher above the agent, keys, shell, model.</div>
+  <div id="cav" data-in="44.5">A process cannot bind its own session: the wall around the agent is the launcher&#39;s, and it is a design.</div>
+
+  <div id="key" data-in="7.6"><span><i class="b r"></i>Runnable: tests pass</span><span data-in="16.6"><i class="b d"></i>Designed / proposed</span><span data-in="33.2"><i class="m">&#10003;</i>Measured: probed or timed, date named</span></div>
+  <div class="bar"><i></i></div>
+</div>
+</body>
+</html>

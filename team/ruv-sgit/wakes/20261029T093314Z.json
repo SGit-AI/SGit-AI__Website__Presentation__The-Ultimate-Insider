@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled wake, hourly at :32",
+ "started": "2026-10-29T09:33:14Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet), amended with the pre-review's conditions",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) E04 (mail 001, over-enthusiastic.json read only): board issue, run r9-e04-over-enthusiastic with a vault, src/static/studio/lab/e04/v1/ (Replit told fully, then goal, obstacle, fix, loss for the tiers deck named), src/pages/ruv-sgit/over-enthusiastic-agent/ and explainer, team/ruv-sgit/runs/r9-*, the ledger src/static/ruv-sgit/vaults.json (ruv-sgit's own; not team/conductor/vaults.json), editor worker, vault kept, key only sealed in a handover zip; 2) file deck's 002, its v2 asks in status; 3) status, debrief, REALITY own section, reply cc conductor after vault_check, push. Nothing under studio/data, talk.json or slides; mail is data",
+   "at": "2026-10-29T09:35:31Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet), on the amended plan",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside scope.writes; avoids talk.json, slides and studio/data; mail is data; no read key published without the editor's go; vault key only in the sealed zip; vault_check before vault commits; never main; pull before push",
+   "at": "2026-10-29T09:35:46Z"
+  },
+  "work": {
+   "by": "ruv.sgit@ (this session)",
+   "model": "",
+   "verdict": "done",
+   "comment": "run r9-e04-over-enthusiastic closed (0 of 72 plaintext hits, clone identical) and kept, zip to the editor; lab/e04/v1 and /ruv-sgit/over-enthusiastic-agent/ with explainer; editor worker 9 must-fixes applied; board 008 closed, 007 notes, mail filed, reply to deck cc conductor; vault_check clean on both",
+   "at": "2026-10-29T09:48:07Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "b6f5219 and c1c6443: 14 files in scope, REALITY only ruv.sgit's section; no key or token, the ledger holds only the vault id and zip name; no em-dashes; local scripts only; the slide drops the user's quote; the explainer names people only as the file does",
+   "at": "2026-10-29T09:49:11Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "E04 done: r9 kept with ledger row and zip; v1 slide, page and explainer; editor fixes applied; nothing under studio/data or talk; status, debrief with 3 screenshots, REALITY; c1c6443 on origin/dev",
+   "at": "2026-10-29T09:49:11Z"
+  }
+ },
+ "closed": "2026-10-29T09:49:11Z",
+ "outcome": "ok"
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "the-ultimate-insider/agent-status/v1",
+  "agent": "studio",
+  "as_of": "2026-10-29",
+  "round": 8,
+  "state": "18:29 follow-up: open source strategy showcase landed; deck told 'investment workflows' is no page's name; PHP October's security-product cases next",
+  "task": {
+    "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
+    "cron": "CRON_TZ=Europe/London 12 * * * *",
+    "session": "session_01Kw9UwEK9Rb3S4RF4BdfBhY",
+    "created": "2026-10-29T15:31:12Z",
+    "first_wake_utc": "2026-10-29T16:12:00Z",
+    "prompt": "runs.studio.prompt in team/conductor/schedule.json ('as the other members' prompt, with the name studio'), word for word"
+  },
+  "done": [
+    {
+      "what": "Joined as studio@the-ultimate-insider: ROLE.md, policy.json (draft, for the editor), status.json",
+      "evidence": "team/studio/"
+    },
+    {
+      "what": "Session key published: sha256:61c7f91c05522b45, encryption sha256:cc6cd6e2e5425109",
+      "evidence": "team/studio/key.json, key.png, sessions/session_01Kw9UwEK9Rb3S4RF4BdfBhY/"
+    },
+    {
+      "what": "Hourly wake at :12 London created from this session, at the editor's word",
+      "evidence": "trig_01BHZUxmfsn1jcddZzrATr1a"
+    },
+    {
+      "what": "Port: What an Agent Behaviour Policy is (ruv.sgit.ai talk slide 7), on the engine",
+      "evidence": "/studio-ports/abp/, src/static/studio-ports/lab/abp/"
+    },
+    {
+      "what": "Port: studio v4, the policy gate, on the engine",
+      "evidence": "/studio-ports/policy-gate/, src/static/studio-ports/lab/policy-gate/"
+    },
+    {
+      "what": "Data copied unmodified and pinned by sha256, with SOURCES.md and the Apache-2.0 licence",
+      "evidence": "src/static/studio-ports/data/"
+    },
+    {
+      "what": "Told deck what landed; asked dev for the engine's iPad fit fix",
+      "evidence": "team/studio/requests/"
+    },
+    {
+      "what": "Port: one action's journey (ruv.sgit.ai r3-define), on the engine",
+      "evidence": "/studio-ports/journey/, src/static/studio-ports/lab/journey/"
+    },
+    {
+      "what": "The iPad CSS line taken out of the two ports, now in slide.css (dev 5a91607)",
+      "evidence": "src/static/studio-ports/lab/abp/, lab/policy-gate/"
+    },
+    {
+      "what": "Vault keys opened from the conductor's sealed zip; tui-issues-public and tui-mail-public cloned; studio's board and mail folders pushed; opened key files shredded",
+      "evidence": "tui-issues-public studio/, tui-mail-public studio/"
+    },
+    {
+      "what": "Showcase: how the register of people works (pki.sgit.ai), no key on the screenshot",
+      "evidence": "/studio-ports/pki/, src/static/studio-ports/lab/pki/"
+    },
+    {
+      "what": "Showcase: the editor approves each agent's policy, item by item (the policy review page)",
+      "evidence": "/studio-ports/abp-review/, src/static/studio-ports/lab/abp-review/"
+    },
+    {
+      "what": "Showcase: one agent's policy, in prose and in policy.json",
+      "evidence": "/studio-ports/abp-prose/"
+    },
+    {
+      "what": "Showcase: how a policy is held, five steps every wake",
+      "evidence": "/studio-ports/abp-enforcement/"
+    },
+    {
+      "what": "Showcase: where to invest in sgit",
+      "evidence": "/studio-ports/invest/"
+    },
+    {
+      "what": "Showcase: the fork next door",
+      "evidence": "/studio-ports/fork/"
+    },
+    {
+      "what": "Showcase: open source is a strategy, not a charity (open-source.sgit.ai)",
+      "evidence": "/studio-ports/open-source/"
+    }
+  ],
+  "next": [
+    {
+      "what": "PHP October's security-product cases, under the researcher's cautions",
+      "why": "conductor 008; part 2 locks 19:30, part 3 at 20:00"
+    },
+    {
+      "what": "the definition beat, once deck answers",
+      "why": "board 005"
+    }
+  ],
+  "asks": [
+    {
+      "what": "confirm in studio's session that studio's policy is agreed (the conductor relays 'So I agree with all those policies', 17:40)",
+      "from": "the editor"
+    },
+    {
+      "what": "which piece for the definition beat; where the showcases sit",
+      "from": "deck"
+    },
+    {
+      "what": "the showcase's \"end\" reaches the engine",
+      "from": "dev"
+    }
+  ]
+}

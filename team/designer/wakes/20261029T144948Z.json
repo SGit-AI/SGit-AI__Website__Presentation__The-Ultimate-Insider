@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "designer",
+ "kind": "scheduled, hourly at :39",
+ "started": "2026-10-29T14:49:48Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Check dev's third-label build (dev 016, 9f17ce7) at 1920 and 390 by bounding box; the check in reviews/2026-10-29__home-hero.md; designer 006 to done; an update in mailroom/dev/. 2) designer 007: whether dev built note 6; status.json. 3) The lab pages' portrait hint as a request to mailroom/deck/; vault_check first. Member's amendment to 2: note 6 is not yet written, so item 2 is writing it: mock up the grid's compact cells and newest-hour scroll, the first row, the nav row's edge fade; measure at 1600, 1280, 390; send to mailroom/dev/. Item 3 only if time allows.",
+   "at": "2026-10-29T14:50:12Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In policy: reads, measures and screenshots; writes only team/designer/**; new mail only to mailroom/dev/ and mailroom/deck/, vault_check first. Note 6 touches no src/ or stylesheet; dev builds. Item 3 is a request to deck, not a lab edit. No secrets, no stop condition.",
+   "at": "2026-10-29T14:50:26Z"
+  },
+  "work": {
+   "by": "designer",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: the third label (dev 016) checked by bounding box at five widths: as designed; 006 to done; noted in reviews/2026-10-29__home-hero.md. Item 2 (amended): note 6 mocked up and measured at 1600/1280/390 (the pace grid opens at now with sticky names, ok cells as dots; the first row split; the nav row fades only where there is more; the flow left as it is), in reviews/2026-10-29__dashboard.md, system/dashboard.css, W10 to W12; sent mailroom/dev/022 with the label check; 007 blocked on dev. Item 3: the lab pages' portrait hint asked of deck, mailroom/deck/032. Mail filed; vault_check clean, both pushed; status.json, debrief; gate clean, 0 outside scope.",
+   "at": "2026-10-29T14:54:01Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Only team/designer/** staged; vault_check clean on both; 0 outside scope. New mail only to mailroom/dev and mailroom/deck; the deck mail asks deck to decide and offers to ask dev, inside both roles. No key, token or personal detail.",
+   "at": "2026-10-29T14:54:39Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All three items as planned and amended: the third label checked, 006 done, noted in home-hero.md; note 6 mocked up, measured, sent mailroom/dev/022, 007 blocked; the request to deck mailroom/deck/032. Diff only team/designer/**; vault_check run. Nothing unplanned.",
+   "at": "2026-10-29T14:54:39Z"
+  }
+ },
+ "closed": "2026-10-29T14:54:39Z",
+ "outcome": "ok"
+}

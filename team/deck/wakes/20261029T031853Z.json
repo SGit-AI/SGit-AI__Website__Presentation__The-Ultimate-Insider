@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T03:18:53Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Review ruv.sgit's B01 storyboard after looking at it: deck's review page src/pages/studio/reviews/b01-storyboard.html (go or notes; the three decisions as proposals for the editor, talk frozen); reply in mailroom/ruv-sgit/, copy in deck/outbox/; issue deck-007 updated. 2) The researcher's slice 1 (E02, E09, E13): acknowledge in mailroom/researcher/ (slice 2 already promised); copy what the pieces need into src/static/studio/data/ with claim ids; programme.json data status; deck-005 updated. 3) File mail, status.json, debrief; vault_check, gate, push to dev. No talk.json or slide edits.",
+   "at": "2026-10-29T03:19:27Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Inside policy; talk untouched; mail only to mailroom/ruv-sgit/ and mailroom/researcher/ with copies in deck/outbox/. Conditions: requests are material; every copied figure carries its claim id; no keys or contact details; vault_check before each vault commit; push only to dev.",
+   "at": "2026-10-29T03:19:43Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "B01 storyboard looked at and reviewed (keep, go to v1; page /studio/reviews/b01-storyboard.html and a reviews index); slice 1 copied to src/static/studio/data/abp-examples.json, programme.json E02/E09/E13; replies to ruv-sgit and researcher, board 005 and 007, mail filed, vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T03:21:45Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Gate clean; 0 outside scope since d660549; vault_check clean; abp-examples.json carries no key, token, email or phone; mail and issues plain replies, no directives.",
+   "at": "2026-10-29T03:22:21Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 done (review page, reviews index, reply to ruv-sgit, deck-007 done); 2 done (abp-examples.json, programme.json, ack to researcher, deck-005); 3 done. Conditions kept. Unplanned: the reviews index.",
+   "at": "2026-10-29T03:22:21Z"
+  }
+ },
+ "closed": "2026-10-29T03:22:21Z",
+ "outcome": "ok"
+}

@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17 (fired 16:31)",
+ "started": "2026-10-29T16:31:51Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the storyteller's sequence and the mail)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) The editor's 15:00 decisions into the talk, from the storyteller's sequence.md (19 beats, 38:30): talk.json rewritten in that order. Kept beats trimmed in place (definition and loop, identities and permissions, way-out and abp stay separate beats with the sequence's merged time); collision, outages and unreported leave the running order (their points in the new beats; slide files kept); new beats 3a limits (slide: E04 v2), no-worm-era and businesses (slide: outages'), the building (a plain slide until motion@'s piece lands), the outside in balance, integrity, this team, Wardley (the storyteller's Map 4), next-generation security companies (Map 5), brakes as the optimistic close. Words only from tree.md's register ids; a number on a slide only with its source; S1 to S5 unsourced items left out; nothing attack-shaped in 3c. 2) Answer motion@'s 049 in its request file (go on its picture, the two A6 claims, beat and ID). 3) The studio pages' remaining 'one story' wording (dev's 052). Gate, close, release.",
+   "at": "2026-10-29T16:33:07Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "In scope; nothing secret; 3c benign only. Conditions: numbers on slides only with a linked register source; keep the DBIR 64% integrity caveat if shown; 'in recent years' wording; no vault keys.",
+   "at": "2026-10-29T16:33:24Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "As planned: talk.json in the storyteller's 19-beat order as 22 beats (three pairs kept as separate beats at the merged times), 38:30, new slides (building, integrity, team, four maps), sources from the register only, S1 to S5 left out. Added: motion@'s M01 v1 arrived during the wake, reviewed (keep) and put on the building beat; M02 asked; studio@'s ports placed by mail; the studio's one-story wording and story map. The 90-minute re-time waits for the next wake.",
+   "at": "2026-10-29T16:39:41Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "Three deck commits in scope (0 outside); build and gate pass; no keys, contact details or em-dashes; no unsourced numbers on slides; mails and M02 request keep to the register's words, nothing attack-shaped; no numbers in subjects.",
+   "at": "2026-10-29T16:40:39Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "22 beats in sequence.md order, 2310 s; three pairs separate at merged times; new beats, slides, M01 on building, M02, ports, studio wording in ca59986, 950a53a, 90b3056; gate clean (251). 90-minute re-time deferred as declared.",
+   "at": "2026-10-29T16:40:39Z"
+  }
+ },
+ "closed": "2026-10-29T16:40:39Z",
+ "outcome": "ok"
+}

@@ -1,0 +1,440 @@
+{
+ "about": "Story tree facts R4 to R9 for the talk 'The ultimate insider' (Dinis Cruz), researched 2026-10-29 by a research agent for researcher@the-ultimate-insider. Captures in work/captures/story-* (plus reused fig-dbir-2026-pdf, verizon-dbir-2025, anthropic-espionage-news).",
+ "r4": {
+  "answer": "Mostly yes, with a near miss: GTIG (Sept 2026) says it 'has not yet observed' fully autonomous AI pipelines used against targets in the wild, and NCSC judges fully automated end-to-end attacks unlikely to 2027; but GTIG (May 2026) found a criminal AI-built zero-day 'planned' for a mass exploitation event that it may have prevented, and Anthropic (Nov 2025) reported a largely AI-run espionage campaign against about thirty targets. Say 'not yet observed at scale', not 'not happening'.",
+  "items": [
+   {
+    "id": "r4-gtig-not-yet-autonomous",
+    "what": "GTIG has not seen fully autonomous pipelines in the wild",
+    "quote": "While recent model security incident disclosures demonstrate that frontier models can autonomously identify zero-days and execute network intrusions, GTIG has not yet observed threat actors deploying fully autonomous pipelines against targets in the wild.",
+    "source_id": "story-gtig-prompting-autonomy",
+    "date": "2026-09-08",
+    "grade": "A2"
+   },
+   {
+    "id": "r4-gtig-scale-agentic",
+    "what": "Same report: agentic frameworks already used at scale for scanning and credential harvesting (counterweight)",
+    "quote": "Adversaries are deploying multi-agent frameworks that autonomously manage scanning pipelines, resolve operational errors, and execute credential harvesting at scale.",
+    "source_id": "story-gtig-prompting-autonomy",
+    "date": "2026-09-08",
+    "grade": "A2"
+   },
+   {
+    "id": "r4-gtig-ai-zero-day-mass",
+    "what": "First AI-developed zero-day seen; mass exploitation planned, possibly prevented (counter-evidence)",
+    "quote": "The criminal threat actor planned to use it in a mass exploitation event but our proactive counter discovery may have prevented its use.",
+    "source_id": "story-gtig-ai-vuln-exploitation",
+    "date": "2026-05-11",
+    "grade": "A2"
+   },
+   {
+    "id": "r4-ncsc-unlikely-2027",
+    "what": "NCSC: fully automated end-to-end attacks unlikely to 2027",
+    "quote": "The development of fully automated, end-to-end advanced cyber attacks is unlikely to 2027.",
+    "source_id": "story-ncsc-ai-2027",
+    "date": "2025-05-07",
+    "grade": "A2"
+   },
+   {
+    "id": "r4-dbir-ai-malware-known",
+    "what": "DBIR 2026: AI-assisted malware mostly reuses known techniques",
+    "quote": "Most AI-assisted development of malware and tooling was associated with well-known and defined attack techniques, with a median of 55 existing known malware examples performing the same functions.",
+    "source_id": "fig-dbir-2026-pdf",
+    "date": "2026",
+    "grade": "A2"
+   },
+   {
+    "id": "r4-anthropic-gtg1002",
+    "what": "Anthropic: AI ran 80-90% of an espionage campaign, about 30 targets (counter-evidence, targeted not mass)",
+    "quote": "Overall, the threat actor was able to use AI to perform 80-90% of the campaign, with human intervention required only sporadically",
+    "source_id": "anthropic-espionage-news",
+    "date": "2025-11-13",
+    "grade": "A2"
+   },
+   {
+    "id": "r4-gtig-2025-no-breakthrough",
+    "what": "GTIG Nov 2025: no breakthrough capabilities seen in IO use",
+    "quote": "For observed IO campaigns, we did not see evidence of successful automation or any breakthrough capabilities.",
+    "source_id": "story-gtig-ai-threat-tracker",
+    "date": "2025-11-05",
+    "grade": "A2"
+   }
+  ],
+  "not_found": "OpenAI threat reports, Anthropic 2026 threat reports and Microsoft Digital Defense Report 2025/2026 were not captured in the time box."
+ },
+ "r5": {
+  "answer": "The data found says the opposite on initial access: exploitation of vulnerabilities is rising, not falling, as an entry route (DBIR 20% to 31% of breaches; edge devices and VPNs 3% to 22% of exploitation targets; Mandiant: exploits top vector six years running at 32%). No Shodan or Censys multi-year exposure trend was captured, so 'smaller surface' is unsupported; 'more mature' is not what breach data shows.",
+  "items": [
+   {
+    "id": "r5-dbir26-31pct",
+    "what": "DBIR 2026: exploitation is now the top initial access vector, 31% up from 20%",
+    "quote": "The exploitation of vulnerabilities is the most prominent initial access vector in our dataset this year, reaching the height of 31%, up from 20% last year, which represents a 55% increase in this vector.",
+    "source_id": "fig-dbir-2026-pdf",
+    "date": "2026",
+    "grade": "A2"
+   },
+   {
+    "id": "r5-dbir25-edge-22",
+    "what": "DBIR 2025: edge devices and VPNs 22% of exploitation targets, up from 3%",
+    "quote": "The percentage of edge devices and VPNs as a target on our exploitation of vulnerabilities action was 22%, and it grew almost eight-fold12 from the 3% found in last year's report.",
+    "source_id": "verizon-dbir-2025",
+    "date": "2025-04-23",
+    "grade": "A2"
+   },
+   {
+    "id": "r5-dbir26-edge-29",
+    "what": "DBIR 2026: unpatched edge devices behind 29% of opportunistic victimisation (subset context)",
+    "quote": "unpatched vulnerabilities in edge devices (29%) that resulted in them being victimized",
+    "source_id": "fig-dbir-2026-pdf",
+    "date": "2026",
+    "grade": "A1"
+   },
+   {
+    "id": "r5-mtrends26-32",
+    "what": "M-Trends 2026: exploits top initial infection vector, sixth year, 32%",
+    "quote": "Exploits remained the most common initial infection vector for the sixth consecutive year, accounting for 32% of intrusions.",
+    "source_id": "story-mtrends-2026",
+    "date": "2026-03-23",
+    "grade": "A2"
+   }
+  ],
+  "not_found": "A multi-year Shodan or Censys count of exposed services (any direction) was not looked up in the time box; no source found supporting 'smaller and more mature'."
+ },
+ "r6": {
+  "answer": "GAO (July 2025) found 11 critical federal legacy systems 23 to 60 years old costing about $754 million a year, 8 of 11 in outdated languages and 7 with known vulnerabilities, with about 80% of $100B+ federal IT spend going to operations and maintenance. The '800 billion lines of COBOL' figure is a 2022 vendor-commissioned survey; the much repeated Reuters 2017 figures (220 billion lines, 43% of banking systems, 95% of ATM swipes) were not captured.",
+  "items": [
+   {
+    "id": "r6-gao-11-systems",
+    "what": "GAO: 11 critical legacy systems, age and cost",
+    "quote": "According to the agencies, these 11 systems ranged from about 23 to 60 years old and collectively cost approximately $754 million annually to operate and maintain.",
+    "source_id": "story-gao-25-107795",
+    "date": "2025-07-17",
+    "grade": "A6"
+   },
+   {
+    "id": "r6-gao-languages-vulns",
+    "what": "GAO: outdated languages, unsupported parts, known vulnerabilities",
+    "quote": "Eight of the 11 systems use outdated languages, four have unsupported hardware or software, and seven are operating with known cybersecurity vulnerabilities.",
+    "source_id": "story-gao-25-107795",
+    "date": "2025-07-17",
+    "grade": "A6"
+   },
+   {
+    "id": "r6-gao-treasury-cobol",
+    "what": "GAO: Treasury systems on COBOL and Assembly, dwindling skills",
+    "quote": "both of the Department of the Treasury's selected systems run on Common Business Oriented Language (COBOL) and Assembly Language Code, programming languages that have a dwindling number of people available with the skills needed to support them.",
+    "source_id": "story-gao-25-107795",
+    "date": "2025-07-17",
+    "grade": "A6"
+   },
+   {
+    "id": "r6-gao-80pct-om",
+    "what": "GAO: about 80% of federal IT spend on operations and maintenance",
+    "quote": "Of this amount, agencies have typically reported spending about 80 percent on operations and maintenance of existing IT.",
+    "source_id": "story-gao-25-107795",
+    "date": "2025-07-17",
+    "grade": "A6"
+   },
+   {
+    "id": "r6-cobol-800bn",
+    "what": "Micro Focus / Vanson Bourne survey: 775 to 850 billion lines of COBOL in daily use (vendor-commissioned estimate)",
+    "quote": "According to the global survey, the amount of COBOL code in daily use increased significantly to 775-850 billion lines.",
+    "source_id": "story-dbta-cobol-2022",
+    "date": "2022-02-22",
+    "grade": "A1"
+   }
+  ],
+  "not_found": "Reuters 2017 COBOL graphic is JS-rendered (capture partial, figures not carried). No regulator figure on share of transactions running on COBOL found; GAO quote describes systems maintained at cost, not 'unmaintained' code, so 'nobody maintains' is a stretch: say 'few can maintain'."
+ },
+ "r7": {
+  "answer": "ux.sgit.ai (v0.4.1, last checked 2026-10-25) documents, for the Claude iOS app, a permission prompt that asks for a security decision with only truncated raw code (UX-059, high), plus voice controls where one unlabelled X discards a recording (UX-060, high) and the 'send as is' button sits unlabelled next to 'stop and edit' (UX-061, medium). These are the author's own first-hand findings on one product.",
+  "items": [
+   {
+    "id": "r7-ux-059",
+    "what": "Claude app permission prompt: approve code it does not explain, cut off",
+    "quote": "The person is asked to make a security decision and given only code to make it with, partly hidden, on a phone. In practice the choice is to stop the work or to trust blindly, and every prompt like this teaches the habit of pressing Allow without reading",
+    "source_id": "story-ux-059",
+    "date": "2026-10-25",
+    "grade": "A2"
+   },
+   {
+    "id": "r7-ux-061",
+    "what": "Unlabelled 'send as is' next to 'stop and edit': uncorrected text sent to an agent that acts on it",
+    "quote": "a wrong tap either destroys the recording (UX-060) or sends a message full of transcription errors to an agent that will act on it.",
+    "source_id": "story-ux-061",
+    "date": "2026-10-25",
+    "grade": "A2"
+   },
+   {
+    "id": "r7-ux-060",
+    "what": "One unlabelled X discards a recording with no confirmation or undo",
+    "quote": "The X discards the recording and its transcript at once: no \"discard this recording?\", no undo, no copy kept.",
+    "source_id": "story-ux-060",
+    "date": "2026-10-25",
+    "grade": "A2"
+   }
+  ],
+  "not_found": "The register has no findings yet for other frontier tools (e.g. ChatGPT, Cursor, Claude Code CLI); the three are all one product (Claude app on iPhone/iPad), observed by the author."
+ },
+ "r8": {
+  "answer": "Vendor-reported, via secondary news: Lovable says users created more than 60 million projects since November 2024, with Lovable-built apps getting 900 million visits a month (Aug 2026); Replit reported over 50 million registered users at its March 2026 Series D. Neither figure separates non-developers; all are vendor claims relayed by press.",
+  "items": [
+   {
+    "id": "r8-lovable-60m",
+    "what": "Lovable: 60M+ projects since Nov 2024, 900M monthly visits (vendor-reported)",
+    "quote": "The company said users have created more than 60 million projects since its launch in November 2024, while Lovable-built applications receive more than 900 million visits each month.",
+    "source_id": "story-technode-lovable-2026",
+    "date": "2026-08-13",
+    "grade": "A2"
+   },
+   {
+    "id": "r8-replit-50m",
+    "what": "Replit: over 50 million registered users (vendor-reported)",
+    "quote": "The total number of registered users is over 50 million.",
+    "source_id": "story-trendingtopics-replit-2026",
+    "date": "2026-03",
+    "grade": "A1"
+   }
+  ],
+  "not_found": "No primary vendor post captured (Lovable and Replit blogs not found in the time box; replit.com/blog/series-d is 404). No figures captured for Bolt, Vercel v0 or Cursor, and no analyst count of apps built by non-developers. Search snippets (not captured) attribute ~100k new Lovable projects a day and 'most of 60 million Replit users are not professional programmers'; treat as unverified."
+ },
+ "r9": {
+  "answer": "Dinis Cruz uses the terms in a family of 'behaviour policies' (agents, decisions, workflows, skills, applications, processes). A process behaviour policy is derived from one traced run (every file, syscall, host) and enforced by the Linux kernel; a decision policy ('Agent Decision Policy') says at a branch point who chooses, on what evidence, within what limits, and who is called when out of bounds. The exact phrase 'decision behaviour policy' was not found: his term is 'decision policy'.",
+  "items": [
+   {
+    "id": "r9-family",
+    "what": "The behaviour policy family",
+    "quote": "The behaviour policy family has policies for agents, decisions, workflows, skills and applications. This one is for a process.",
+    "source_id": "story-newsroom-process-bp",
+    "date": "2026-10-24",
+    "grade": "A2"
+   },
+   {
+    "id": "r9-process-derived",
+    "what": "Process behaviour policy: derived from a traced run",
+    "quote": "A policy is derived from one traced run: every file the process reads, every system call it makes, every host it talks to. Then the kernel enforces it with seven walls",
+    "source_id": "story-newsroom-process-bp",
+    "date": "2026-10-24",
+    "grade": "A2"
+   },
+   {
+    "id": "r9-process-not-written",
+    "what": "The policy executes nothing; the kernel enforces it",
+    "quote": "The policy is derived, not written.** One traced run lists every file, system call and host the process needs. - **The kernel enforces it.** Seven walls, set from the policy; the policy itself executes nothing.",
+    "source_id": "story-newsroom-process-bp",
+    "date": "2026-10-24",
+    "grade": "A2"
+   },
+   {
+    "id": "r9-decision-policy",
+    "what": "Agent Decision Policy definition",
+    "quote": "An Agent Decision Policy says, at a branch point, who chooses, on what evidence, within what limits, and who to call when it is out of bounds.",
+    "source_id": "story-newsroom-three-policies",
+    "date": null,
+    "grade": "A2"
+   },
+   {
+    "id": "r9-decision-why-word",
+    "what": "Why 'decision'",
+    "quote": "The word \"decision\" matters because it is the one the business and the risk team already use.",
+    "source_id": "story-newsroom-three-policies",
+    "date": null,
+    "grade": "A2"
+   },
+   {
+    "id": "r9-application-decision",
+    "what": "Decision policy for an application",
+    "quote": "**The decision policy** says who decides what. Who may accept the blast radius of each row that stays open; who decides the site comes back",
+    "source_id": "story-newsroom-application-bp",
+    "date": null,
+    "grade": "A2"
+   }
+  ],
+  "not_found": "The exact phrase 'decision behaviour policy' does not occur in the captured llms.txt files of newsroom.sgit.ai, sgit.ai, riskmandate.ai, abp.sgit.ai or newsroom llms-full.txt; nothing found outside his own sites (not searched widely). Publication dates of three-policies and application-behaviour-policies not extracted."
+ },
+ "claims": [
+  {
+   "id": "story-r4-ai-mass-exploitation-not-yet",
+   "text": "AI-driven mass exploitation has not been observed yet",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "story-gtig-prompting-autonomy",
+     "quote": "While recent model security incident disclosures demonstrate that frontier models can autonomously identify zero-days and execute network intrusions, GTIG has not yet observed threat actors deploying fully autonomous pipelines against targets in the wild.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-ncsc-ai-2027",
+     "quote": "The development of fully automated, end-to-end advanced cyber attacks is unlikely to 2027.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-gtig-ai-vuln-exploitation",
+     "quote": "The criminal threat actor planned to use it in a mass exploitation event but our proactive counter discovery may have prevented its use.",
+     "supports": "against"
+    },
+    {
+     "source_id": "anthropic-espionage-news",
+     "quote": "Overall, the threat actor was able to use AI to perform 80-90% of the campaign, with human intervention required only sporadically",
+     "supports": "against"
+    },
+    {
+     "source_id": "story-gtig-prompting-autonomy",
+     "quote": "Adversaries are deploying multi-agent frameworks that autonomously manage scanning pipelines, resolve operational errors, and execute credential harvesting at scale.",
+     "supports": "against"
+    }
+   ],
+   "primary_source": null,
+   "note": "Disputed in detail, so capped at A2: GTIG says no fully autonomous pipelines seen in the wild, but it also caught an AI-built zero-day planned for mass exploitation (May 2026) and reports agentic credential harvesting at scale.",
+   "suggested_wording": "Threat intelligence has not yet seen fully autonomous AI attacks in the wild; the first AI-built zero-day meant for mass exploitation was caught in May 2026."
+  },
+  {
+   "id": "story-r5-surface-smaller-more-mature",
+   "text": "the internet-facing surface is smaller and more mature than it was",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "position",
+   "grade": "A0",
+   "holds": "does not hold",
+   "evidence": [
+    {
+     "source_id": "fig-dbir-2026-pdf",
+     "quote": "The exploitation of vulnerabilities is the most prominent initial access vector in our dataset this year, reaching the height of 31%, up from 20% last year, which represents a 55% increase in this vector.",
+     "supports": "against"
+    },
+    {
+     "source_id": "verizon-dbir-2025",
+     "quote": "The percentage of edge devices and VPNs as a target on our exploitation of vulnerabilities action was 22%, and it grew almost eight-fold12 from the 3% found in last year's report.",
+     "supports": "against"
+    },
+    {
+     "source_id": "story-mtrends-2026",
+     "quote": "Exploits remained the most common initial infection vector for the sixth consecutive year, accounting for 32% of intrusions.",
+     "supports": "against"
+    }
+   ],
+   "primary_source": null,
+   "note": "No exposure-trend source found for 'smaller'. Breach data shows exploitation of internet-facing systems, especially edge devices, rising as the way in.",
+   "suggested_wording": "Exploiting internet-facing systems is now the top way in (31% of breaches in DBIR 2026, up from 20%), so the old surface is not shrinking in the data, while the new insider surface grows beside it."
+  },
+  {
+   "id": "story-r6-legacy-code-unmaintained",
+   "text": "legacy code doing mission-critical work that nobody maintains",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "story-gao-25-107795",
+     "quote": "According to the agencies, these 11 systems ranged from about 23 to 60 years old and collectively cost approximately $754 million annually to operate and maintain.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-gao-25-107795",
+     "quote": "both of the Department of the Treasury's selected systems run on Common Business Oriented Language (COBOL) and Assembly Language Code, programming languages that have a dwindling number of people available with the skills needed to support them.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-dbta-cobol-2022",
+     "quote": "According to the global survey, the amount of COBOL code in daily use increased significantly to 775-850 billion lines.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://www.gao.gov/products/gao-25-107795",
+   "note": "GAO is the primary record for the federal systems (A6); they are maintained at high cost by a dwindling pool, not unmaintained. The 800 billion lines of COBOL is a 2022 vendor survey (A1).",
+   "suggested_wording": "Decades-old code that few people can still maintain: GAO's 11 most critical US federal legacy systems are 23 to 60 years old and cost $754 million a year to run."
+  },
+  {
+   "id": "story-r7-security-usability-frontier-tools",
+   "text": "bad security usability in frontier tools (ux.sgit.ai examples)",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "story-ux-059",
+     "quote": "The person is asked to make a security decision and given only code to make it with, partly hidden, on a phone. In practice the choice is to stop the work or to trust blindly, and every prompt like this teaches the habit of pressing Allow without reading",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-ux-061",
+     "quote": "a wrong tap either destroys the recording (UX-060) or sends a message full of transcription errors to an agent that will act on it.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-ux-060",
+     "quote": "The X discards the recording and its transcript at once: no \"discard this recording?\", no undo, no copy kept.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Author's own findings, one product (Claude app iOS), last checked 2026-10-25.",
+   "suggested_wording": null
+  },
+  {
+   "id": "story-r8-non-developer-app-volume",
+   "text": "volume of new applications built by non-developers with AI tools",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "story-technode-lovable-2026",
+     "quote": "The company said users have created more than 60 million projects since its launch in November 2024, while Lovable-built applications receive more than 900 million visits each month.",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-trendingtopics-replit-2026",
+     "quote": "The total number of registered users is over 50 million.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vendor-reported via press; counts projects and users, not non-developer apps in production.",
+   "suggested_wording": "Lovable alone reports more than 60 million projects since November 2024 (vendor figure)."
+  },
+  {
+   "id": "story-r9-process-and-decision-behaviour-policies",
+   "text": "process behaviour policies and decision behaviour policies",
+   "where": [
+    "story:tree"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "story-newsroom-process-bp",
+     "quote": "A policy is derived from one traced run: every file the process reads, every system call it makes, every host it talks to. Then the kernel enforces it with seven walls",
+     "supports": "for"
+    },
+    {
+     "source_id": "story-newsroom-three-policies",
+     "quote": "An Agent Decision Policy says, at a branch point, who chooses, on what evidence, within what limits, and who to call when it is out of bounds.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "His published term is 'decision policy' (Agent Decision Policy), part of the behaviour policy family; 'decision behaviour policy' not found verbatim.",
+   "suggested_wording": "process behaviour policies and decision policies"
+  }
+ ],
+ "cautions": [
+  "Quotes were checked against the captured text; where the page uses a curly apostrophe or a long dash, the quote here uses a straight apostrophe or a comma, so it matches the words, not every character."
+ ]
+}

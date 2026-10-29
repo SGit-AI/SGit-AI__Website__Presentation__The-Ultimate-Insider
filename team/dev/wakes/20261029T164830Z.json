@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled wake, 16:47",
+ "started": "2026-10-29T16:48:30Z",
+ "steps": {
+  "plan": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "go",
+   "comment": "Amended after the pre-review's change: 1) Requests first: issues on dev's board for mail 030 (open) and 033 (after the talk, joining 024) and replies, each through vault_check.py first; no code for 033. 2) Showcase slide template: new files only under src/static/talk/engine/** (showcase.css, showcase.js, a README with the rule: no key, no QR of a key, crop it out) and one example; inert until a slide uses it; no edit to player.html this wake. 3) Deferred to after the talk: the Linux demo in the player. status.json and debrief.",
+   "at": "2026-10-29T16:50:07Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Amended plan keeps all four conditions: no player.html edit; showcase files only under src/static/talk/engine/**, inert until a slide links them; vault replies through vault_check.py; no key or QR of a key. Conditions: touch no talk.json, slides, src/pages or index.html; build and gate before push; never main.",
+   "at": "2026-10-29T16:50:21Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "1) 030 and 033 answered: dev 027 (open) and 028 (after the talk) on the board, replies conductor 039 and designer 017, vault_check clean, both vaults pushed. 2) The showcase template: talk/engine/showcase.js, showcase.css, qrcode.js (MIT, vendored), showcase.md (the no-key rule), showcase-example/ (this site's front page, three stages); screenshots at 0.5, 4 and 11 s, no errors; RUV_STEPS from the stages. No edit to player.html. 3) Deferred to after the talk. Debrief, status, REALITY.",
+   "at": "2026-10-29T16:53:51Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "(1) Requests done: dev 027 and 028 on the board, replies conductor 039 and designer 017; no code for 033. (2) Showcase template done in bd32d97, only under talk/engine/**. (3) Linux demo deferred. Debrief, status, REALITY updated. Conditions kept: no player.html, talk.json, src/pages or index.html; no key or QR of a key. Unplanned but small: the vendored MIT qrcode.js (the QR the template needs) and the previous wake record closed.",
+   "at": "2026-10-29T16:54:32Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build and gate clean (254 html); 0 files outside dev scope since 6e0e183; vault_check clean on both vaults; player.html not edited; qrcode.js a verbatim vendor of pki-agent.mjs 38-2275 with a header and wrapper; shot.jpg and debrief images show only the public front page, its public-link QR and an empty notes pane; no key, token, personal detail or agent-directing text.",
+   "at": "2026-10-29T16:54:47Z"
+  }
+ },
+ "closed": "2026-10-29T16:54:47Z",
+ "outcome": "ok"
+}

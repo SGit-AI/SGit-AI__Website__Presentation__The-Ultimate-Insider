@@ -1,0 +1,16 @@
+{
+ "title": "Map 2: explorer coding swaps a commodity spreadsheet for a genesis app, many times over",
+ "components": [
+  {"id": "user", "label": "A person with a business problem", "vis": 0.97, "evo": 0.5},
+  {"id": "sheet", "label": "Spreadsheet as infrastructure", "vis": 0.78, "evo": 0.8},
+  {"id": "app", "label": "Explorer-coded application", "vis": 0.78, "evo": 0.12, "move": 0.45},
+  {"id": "agentdev", "label": "Coding agents", "vis": 0.58, "evo": 0.45, "move": 0.75},
+  {"id": "data", "label": "Business data, connectors", "vis": 0.4, "evo": 0.55},
+  {"id": "sec", "label": "Security for each new app", "vis": 0.22, "evo": 0.1, "inside": true, "move": 0.5},
+  {"id": "cloud", "label": "Hosting, compute", "vis": 0.08, "evo": 0.92}
+ ],
+ "links": [["user","sheet"],["user","app"],["app","agentdev"],["app","data"],["sheet","data"],["app","sec"],["agentdev","cloud"],["data","cloud"]],
+ "notes": [
+  {"text": "the opportunity: security at the scale of the software", "vis": 0.3, "evo": 0.16}
+ ]
+}

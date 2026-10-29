@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E07 v1: a typical deployment, mapped</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:52px;right:260px;font-size:40px;white-space:nowrap}
+#id{position:absolute;right:40px;top:12px;font:800 68px/1 system-ui;letter-spacing:-.02em;color:var(--dim)}
+#g{position:absolute;left:0;top:0;width:1280px;height:720px}
+.box{position:absolute;width:270px;height:92px;border:4px solid var(--agent);border-radius:14px;background:var(--panel);padding:10px 14px}
+.box b{display:block;font:800 24px/30px system-ui;color:var(--agent)}
+.box span{display:block;font:600 20px/24px system-ui;color:var(--text)}
+.tag{position:absolute;left:40px;width:270px;font:20px/24px system-ui;color:var(--dim)}
+.tag .n{display:block;margin-top:6px;color:var(--text)}
+.tag .m{color:var(--accent);font-weight:700}
+.tag .x{color:var(--infra);font-weight:700}
+.hub{position:absolute;left:340px;width:360px;padding:5px 12px;border:2px solid var(--line2);border-radius:10px;background:var(--panel);font:600 20px/24px system-ui;color:var(--head)}
+.hub i{font-style:normal;font-weight:400;color:var(--dim)}
+.cap{position:absolute;left:808px;width:460px;font:600 20px/24px system-ui;color:var(--head);white-space:nowrap}
+.cap i{display:block;font-style:normal;font-weight:400;color:var(--dim)}
+#foot{position:absolute;left:40px;right:40px;bottom:14px;font:20px/24px system-ui;color:var(--dim)}
+</style>
+<script>
+window.RUV_STEPS = [{ t: 0, label: 'the box' }, { t: 5, label: 'where it reaches' }, { t: 10, label: 'what it can do' }, { t: 19, label: 'the wall holds' }, { t: 26, label: 'a second box' }, { t: 40, label: 'the whole graph' }]
+</script>
+<script src="../../../../talk/engine/slide.js"></script>
+</head>
+<body>
+<div id="cv" data-end="46">
+  <p class="kk a">Studio experiment E07 · v1, driven</p>
+  <div class="hl" id="hlA">On the diagram, <em>it is one box.</em></div>
+  <div class="hl" id="hlB">One box, <em>and everything it reaches.</em></div>
+  <div id="id">E07</div>
+  <svg id="g" viewBox="0 0 1280 720" aria-label="Two published deployment shapes, a CI job and a browser extension, each drawn from one box to the places it reaches and what it can do there"></svg>
+  <div id="html"></div>
+  <div id="foot" data-in="40">From abp.sgit.ai's published examples: drafts from one author's network. Labels in the source's words. No score.</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // Two of abp.sgit.ai's five examples, read at load: the CI runner (measured) and the browser extension (derived).
+  // Box words are cut from each example's name; every other word on the slide is read from the two data files,
+  // except the two short wall captions and the CI project zone, whose words are quoted from the example's own notes.
+  var BANDS = [
+    { ex: 'github-actions-hosted-runner', key: 'github/actions-runner/ci', top: 130, title: 'CI job', sub: 'on a hosted runner',
+      zones: ['project', 'host', 'world'], zoneWords: { project: 'the checked-out tree at this ref' },   // from its project rows' notes
+      wall: { 'write.repository.project': 'boundary, holds: the token is contents:read' },                       // from the row's barrier text
+      tagWords: function (e) { return 'measured: ' + e.rows_measured.measured + ' of ' + e.rows_measured.total + ' rows, inside the runner' },
+      boxAt: 5, hubAt: 7, capAt: 10, wallAt: 19, tagAt: 22 },
+    { ex: 'browser-extension-broad-host-permissions', key: 'generic/browser-extension/broad-host-permissions', top: 0, title: 'Browser extension', sub: 'broad host permissions',
+      zones: ['host', 'tenant', 'world'], zoneWords: {}, wall: {},
+      tagWords: function (e) { return 'derived: ' + e.rows_measured.measured + ' of ' + e.rows_measured.total + ' rows measured' },
+      boxAt: 26, hubAt: 28, capAt: 30.5, wallAt: 33, tagAt: 37 }]
+  var NS = 'http://www.w3.org/2000/svg', A = null, C = null, B = null
+  var BX = 40, BW = 270, BH = 92, BX0 = 520, HX = 340, HW = 360, DX = 790, WX = 750
+  Promise.all([fetch('../../../data/abp-examples.json').then(function (r) { return r.json() }), fetch('../../../data/capabilities.json').then(function (r) { return r.json() })])
+    .then(function (j) { A = j[0]; C = j[1] }).catch(function (e) { console.error('E07: a data file did not load', e) })
+
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function div(cls, html, css, p) { var d = document.createElement('div'); d.className = cls; d.innerHTML = html; for (var k in css) d.style[k] = css[k]; p.appendChild(d); return d }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;') }
+  function cap(id) { return C.capabilities.filter(function (c) { return c.id === id })[0] }
+  function dash(p) { var l = p.getTotalLength(); p.setAttribute('stroke-dasharray', l + ' ' + l); p.setAttribute('stroke-dashoffset', l); return { p: p, l: l } }
+
+  function build(S) {
+    var svg = S.$('g'), host = S.$('html')
+    var next = 0
+    B = BANDS.map(function (bd) {
+      if (!bd.top) bd.top = next
+      var e = A.examples.filter(function (x) { return x.id === bd.ex })[0]
+      var rows = e.rows.map(function (r) {
+        var c = cap(r.capability), here = c.in_examples.filter(function (x) { return x.example === bd.key })[0] || {}
+        return { r: r, c: c, reach: c.reach, words: here.reach_in_this_example, label: c.label.replace(/\s*\([^)]*\)\s*$/, ''), ok: r.mandate_stance === 'authorised' }
+      })
+      var y = bd.top, caps = [], groups = []
+      bd.zones.forEach(function (z) {                                  // rows grouped by reach, what it is for first in each group
+        var g = rows.filter(function (x) { return x.reach === z }).sort(function (a, b) { return (b.ok - a.ok) || (!!bd.wall[a.r.capability] - !!bd.wall[b.r.capability]) })
+        if (!g.length) return
+        var y0 = y
+        g.forEach(function (x) { x.y = y; x.h = bd.wall[x.r.capability] || x.r.barrier_kind === 'setting' ? 54 : 32; y += x.h; caps.push(x) })
+        groups.push({ z: z, rows: g, y0: y0, y1: y, words: bd.zoneWords[z] || g.map(function (x) { return x.words }).filter(Boolean)[0] })
+        y += 10
+      })
+      var band = { bd: bd, e: e, caps: caps, groups: groups }
+      // the box, as drawn on an architecture diagram; it starts in the middle and moves left when the graph opens
+      band.box = div('box', '<b>' + esc(bd.title) + '</b><span>' + esc(bd.sub) + '</span>', { left: BX + 'px', top: bd.top + 'px' }, host)
+      band.tag = div('tag', esc(bd.tagWords(e)) + '<span class="n">it can do ' + e.grant + ': <span class="m">' + e.aligned + ' in its mandate</span>, <span class="x">' + e.excess + ' beyond it</span></span>', { top: (bd.top + BH + 14) + 'px' }, host)
+      // the places it reaches, in this example's own words, centred on their rows and kept apart
+      var prev = bd.top - 10
+      groups.forEach(function (g) {
+        g.hub = div('hub', esc(g.words) + ' <i>(' + g.z + ')</i>', { top: '0px' }, host)
+        var h = g.hub.offsetHeight, t = Math.max((g.y0 + g.y1) / 2 - h / 2, prev + 10)
+        g.hub.style.top = t + 'px'; g.cy = t + h / 2; prev = t + h
+      })
+      next = Math.max(y, prev + 10) + 8
+      var by = bd.top + BH / 2
+      groups.forEach(function (g) {
+        g.edge = dash(el('path', { d: 'M' + (BX + BW) + ' ' + by + 'C' + (BX + BW + 30) + ' ' + by + ' ' + (HX - 30) + ' ' + g.cy + ' ' + HX + ' ' + g.cy, fill: 'none', stroke: 'var(--dim)', 'stroke-width': 3 }, svg))
+        g.rows.forEach(function (x) {
+          var cy = x.y + 12, col = x.ok ? 'var(--accent)' : 'var(--infra)', kind = x.r.barrier_kind, walled = !!bd.wall[x.r.capability] || kind === 'setting'
+          var d1 = 'M' + (HX + HW) + ' ' + g.cy + 'C' + (HX + HW + 50) + ' ' + g.cy + ' ' + (WX - 60) + ' ' + cy + ' ' + (walled ? WX : DX) + ' ' + cy
+          x.g = el('g', { opacity: 0 }, svg)
+          x.p1 = dash(el('path', { d: d1, fill: 'none', stroke: walled ? 'var(--dim)' : col, 'stroke-width': 3, 'stroke-linecap': 'round' }, x.g))
+          if (walled) {
+            x.kind = kind
+            if (kind === 'setting') x.p2 = dash(el('path', { d: 'M' + WX + ' ' + cy + 'H' + DX, fill: 'none', stroke: col, 'stroke-width': 3, 'stroke-linecap': 'round' }, x.g))
+            x.w = el('g', {}, x.g)
+            x.top = el('rect', { x: WX - 5, y: cy - 18, width: 10, height: 18, rx: 2, fill: 'var(--head)' }, x.w)
+            x.bot = el('rect', { x: WX - 5, y: cy, width: 10, height: 18, rx: 2, fill: 'var(--head)' }, x.w)
+          }
+          x.dot = el('circle', { cx: DX, cy: cy, r: 8, fill: kind === 'boundary' ? 'var(--bg)' : col, stroke: col, 'stroke-width': 3 }, x.g)
+          var cap2 = bd.wall[x.r.capability] || (kind === 'setting' ? kind + ': ' + x.r.barrier : '')
+          x.lab = div('cap', esc(x.label) + (cap2 ? '<i>' + esc(cap2) + '</i>' : ''), { top: (x.y) + 'px' }, host)
+          if (cap2) x.capEl = x.lab.querySelector('i')
+        })
+      })
+      return band
+    })
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!A || !C) return
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .6))) }
+    var draw = function (o, a, b) { o.p.setAttribute('stroke-dashoffset', o.l * (1 - S.ease(S.seg(t, a, b)))) }
+    S.$('hlA').style.opacity = 1 - k(5, .6); S.$('hlB').style.opacity = k(5.6, .6)
+    B.forEach(function (band, bi) {
+      var bd = band.bd, mv = k(bd.boxAt, 1.6), x = S.lerp(BX0, BX, mv)
+      band.box.style.left = x + 'px'; band.box.style.opacity = t <= 0 ? 1 : k(0, .4)
+      band.tag.style.opacity = k(bd.tagAt)
+      band.groups.forEach(function (g, gi) {
+        var a = bd.hubAt + gi * .9
+        draw(g.edge, a, a + .8); g.hub.style.opacity = k(a + .5, .5)
+      })
+      var plain = band.caps.filter(function (x) { return !x.w }), i = 0
+      band.caps.forEach(function (x) {
+        if (x.w) {                                                     // the path meets a wall: it holds (boundary) or breaks (setting)
+          var a = bd.wallAt, br = S.ease(S.seg(t, a + 1.4, a + 2))
+          x.g.setAttribute('opacity', k(a - .6, .5)); draw(x.p1, a, a + 1.4)
+          if (x.kind === 'setting') {
+            x.top.setAttribute('transform', 'translate(' + (-8 * br) + ' 0) rotate(' + (-35 * br) + ' ' + WX + ' ' + (x.y + 3) + ')')
+            x.bot.setAttribute('transform', 'translate(' + (8 * br) + ' 0) rotate(' + (35 * br) + ' ' + WX + ' ' + (x.y + 21) + ')')
+            x.w.setAttribute('opacity', 1 - .5 * br); draw(x.p2, a + 2, a + 2.6)
+            x.dot.setAttribute('opacity', S.seg(t, a + 2.6, a + 2.61))
+          } else x.dot.setAttribute('opacity', k(a + 1.4, .4))
+          x.lab.style.opacity = k(a - .6, .5); x.capEl.style.opacity = k(a + 1.6, .5)
+        } else {
+          var b = bd.capAt + i * 1.1; i++
+          x.g.setAttribute('opacity', k(b, .2)); draw(x.p1, b, b + .9)
+          x.dot.setAttribute('opacity', S.seg(t, b + .9, b + .91)); x.lab.style.opacity = k(b + .6, .5)
+        }
+      })
+    })
+  }
+})()
+</script>
+</body>
+</html>

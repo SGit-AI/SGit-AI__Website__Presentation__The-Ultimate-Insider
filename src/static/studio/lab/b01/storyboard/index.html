@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B01 storyboard: the overlap fills in</title>
+<link rel="stylesheet" href="../../../../assets/tokens.css">
+<script>
+(function () { var t = new URLSearchParams(location.search).get('theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t) })()
+</script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1060px;margin:0 auto;padding:28px 16px 60px}
+a{color:var(--accent)}
+.kk{font:700 13px system-ui;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0}
+h1{font:700 34px/1.15 Georgia,serif;color:var(--head);margin:6px 0 10px}
+h2{font:700 22px/1.2 Georgia,serif;color:var(--head);margin:34px 0 8px}
+.lead{font-size:19px;color:var(--ink);max-width:62ch}
+.note{font-size:14.5px;color:var(--dim)}
+.idea{border-left:4px solid var(--accent);background:var(--accent-t);padding:12px 16px;border-radius:0 10px 10px 0;margin:18px 0;color:var(--ink)}
+.frames{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,480px),1fr));gap:18px;margin-top:14px}
+.fr{border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.fr svg{display:block;width:100%;height:auto;background:var(--panel2)}
+.fr .b{padding:12px 16px 16px}
+.fr .h{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.fr .n{font:800 18px system-ui;color:var(--head)}
+.fr .t{font:600 13px ui-monospace,Menlo,monospace;color:var(--dim)}
+.fr q{display:block;font:italic 16px/1.45 Georgia,serif;color:var(--ink);margin:8px 0}
+.fr q::before,.fr q::after{content:none}
+.fr .m{font-size:15px;margin:6px 0 0}
+.fr .c{font-size:13.5px;color:var(--dim);margin-top:6px}
+.tag{display:inline-block;font:700 11px system-ui;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line2);border-radius:999px;padding:2px 8px;color:var(--dim)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+td,th{border-top:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{color:var(--head)}
+.tbl{overflow-x:auto}
+</style>
+</head>
+<body>
+<main>
+<p class="kk">Studio · brief B01 · storyboard</p>
+<h1>One story, not three: the overlap fills in</h1>
+<p class="lead">Eight frames for <a href="../../../briefs/b01-one-story.html">brief B01</a>. The three circles keep their colours and their places from the opening to the close. What changes is the space where they overlap: named and empty at the start, filled one colour per act, full and spoken in the collision, then measured and fenced in the way out. The room watches the scenario accumulate instead of being told about it twice.</p>
+<div class="idea"><b>The idea in one sentence.</b> The scenario is the overlap, and every act adds its own colour to it, so by the collision the audience has watched it fill.</div>
+<p class="note">Made by ruv.sgit@the-ultimate-insider in run r2-b01-storyboard, 29 October 2026. Times are estimated from the script in <code>talk.json</code> at 150 words a minute, from the start of each beat, so the beats' own lengths are untouched. Stills only: motion is described under each frame and built from v2. Nothing on this page is a number from a source; there are no numbers in it.</p>
+
+<h2>The frames</h2>
+<div class="frames" id="frames"></div>
+
+<h2>What the act openers cost</h2>
+<div class="tbl"><table>
+<thead><tr><th>Frame</th><th>Beat</th><th>Time it needs</th><th>Where it lives</th></tr></thead>
+<tbody>
+<tr><td>3, 4, 5</td><td>definition, infrastructure, spreadsheets</td><td>3 s each, 9 s in all</td><td>Proposed: the first 3 s of each act's existing slide, in silence before the speaker starts. Those beats are 120, 150 and 150 s against roughly 36 to 55 s of script, so the 3 s fits inside each without lengthening it. The alternative, three short beats in <code>talk.json</code>, is deck's call (the brief's open question).</td></tr>
+<tr><td>1, 2</td><td>three</td><td>inside the beat</td><td>Replaces the current <code>three</code> slide; same words.</td></tr>
+<tr><td>6</td><td>collision</td><td>inside the beat</td><td>Replaces the current <code>collision</code> slide; same words.</td></tr>
+<tr><td>7</td><td>way-out</td><td>inside the beat</td><td>A new picture for <code>way-out</code>, or a strip above the current slide: deck's call.</td></tr>
+<tr><td>8</td><td>brakes</td><td>optional</td><td>Only if deck wants the motif to have the last word.</td></tr>
+</tbody></table></div>
+
+<h2>What this storyboard asks deck to decide</h2>
+<ol>
+<li>Go or notes on the motif: the overlap that fills, act by act.</li>
+<li>Act openers inside the first seconds of each act's slide (proposed), or separate short beats.</li>
+<li>Whether frame 7 replaces the way-out slide or sits above it, and whether frame 8 is wanted.</li>
+</ol>
+<p class="note">An alternative motif, three strands that braid, is in <a href="../notes.md">notes.md</a> for v3 if the circles lose in critique. v1 (stills as slides) and v2 (built on the engine) follow deck's go, on the same run vault.</p>
+</main>
+
+<script>
+(function () {
+  'use strict'
+  var FAR = [[110, 165], [320, 165], [530, 165]], NEAR = [[282, 150], [358, 150], [320, 215]], R = 90
+  var COL = ['var(--agent)', 'var(--infra)', 'var(--risk)'], NAME = ['the insider', 'the infrastructure', 'the decision']
+  var F = [
+    { n: 1, title: 'Arrival', beat: 'three', at: '0:06 to 0:28', pos: 'far', on: [1, 1, 1], arrows: true,
+      q: 'One: AI agents are the insider threat that never scaled before. Two: the infrastructure ... Three: the risk management ...',
+      m: 'Each circle arrives on its number, named, apart. On "Each one is a known problem" the three slide together until they overlap.',
+      c: 'Words: the current three slide, unchanged.' },
+    { n: 2, title: 'The overlap named', beat: 'three', at: '0:31 to end', pos: 'near', on: [1, 1, 1], lens: 'empty', label: 'the scenario',
+      q: 'Where they overlap is the scenario this talk is about.',
+      m: 'The overlap gets a bold outline and a name, and stays empty. Nothing explains it yet: that is what the three acts are for.',
+      c: 'The empty outline is the promise the acts keep.' },
+    { n: 3, title: 'Act one opens', beat: 'definition', at: 'first 3 s', pos: 'near', on: [1, .25, .25], lens: [0], label: 'act one: the insider',
+      q: '(before) Start with a definition, because the argument depends on it.',
+      m: 'The insider is in focus, the other two quiet. Its colour pours into one third of the overlap, and stays there.',
+      c: 'Costs 3 s, in silence, before the speaker\'s first word; the quote above is the line that follows it.' },
+    { n: 4, title: 'Act two opens', beat: 'infrastructure', at: 'first 3 s', pos: 'near', on: [.25, 1, .25], lens: [0, 1], label: 'act two: the infrastructure',
+      q: '(before) Act two. Our systems were built for code that stays where you put it.',
+      m: 'The same picture, the infrastructure in focus; amber fills the second third. Red is still there from act one.',
+      c: 'Costs 3 s, in silence, before the first word.' },
+    { n: 5, title: 'Act three opens', beat: 'spreadsheets', at: 'first 3 s', pos: 'near', on: [.25, .25, 1], lens: [0, 1, 2], label: 'act three: the decision',
+      q: '(before) Act three. Everything a business does is a risk decision, including doing nothing.',
+      m: 'The decision in focus; violet fills the last third. The overlap is now full, and nobody has said so.',
+      c: 'Costs 3 s, in silence, before the first word. The room has watched the scenario fill three times.' },
+    { n: 6, title: 'The collision', beat: 'collision', at: '0:04 to 0:30', pos: 'near', on: [1, 1, 1], lens: [0, 1, 2], big: true,
+      clauses: ['inside, at machine speed', 'cannot tell, stop or replay', 'could not see it, a spreadsheet row after'],
+      q: 'An entity inside the company ... Infrastructure that cannot tell you what it did ... And a decision process that could not see it coming ...',
+      m: 'The overlap grows to fill the centre. Each clause of the script lights its own third, one at a time, in the order spoken. On "None of this is hypothetical" the three thirds become one colour.',
+      c: 'The clauses on screen are short forms of the script, not new claims.' },
+    { n: 7, title: 'The way out', beat: 'way-out', at: '0:02 to 0:14', pos: 'near', on: [1, 1, 1], lens: 'one', fence: true,
+      moves: ['reach measured', 'gaps written down', 'licence, can be suspended', 'autonomy earned'],
+      q: 'Measure what the agent can actually reach. Write down what stands in the way. Give it a licence to operate that can be suspended. And let it earn its autonomy.',
+      m: 'Four moves act on the overlap, one per sentence: the overlap is outlined, standing for what the agent can actually reach, now measured; three marks name what stands in the way; a frame with a switch closes round it; the frame steps outward. The overlap stays: governed, not gone.',
+      c: 'Keeps the brief\'s limit: the moves reduce and govern the overlap; they do not erase it.' },
+    { n: 8, title: 'Close (optional)', beat: 'brakes', at: '0:26 to end', pos: 'near', on: [1, 1, 1], lens: 'one', fence: 'wide',
+      q: 'We put brakes in cars so that we can go faster.',
+      m: 'Once what the agent can do fits inside the appetite, the frame from frame 7 opens wide, and the overlap acts freely inside it.',
+      c: 'Only if deck wants the motif to have the last word.' }
+  ]
+  var uid = 0
+  function svg(f) {
+    var id = 'f' + (++uid), P = f.pos === 'far' ? FAR : NEAR, s = []
+    var scale = f.big ? 1.05 : 1, cx = 320, cy = 172
+    s.push('<svg viewBox="0 0 640 345" role="img" aria-label="Frame ' + f.n + ': ' + f.title + '"><defs>')
+    for (var i = 0; i < 3; i++) s.push('<clipPath id="' + id + 'c' + i + '"><circle cx="' + P[i][0] + '" cy="' + P[i][1] + '" r="' + R + '"/></clipPath>')
+    s.push('</defs><g transform="translate(' + cx + ' ' + cy + ') scale(' + scale + ') translate(' + (-cx) + ' ' + (-cy) + ')">')
+    for (i = 0; i < 3; i++) {
+      var o = f.on[i]
+      s.push('<circle cx="' + P[i][0] + '" cy="' + P[i][1] + '" r="' + R + '" fill="' + COL[i] + '" fill-opacity="' + (.13 * o) + '" stroke="' + COL[i] + '" stroke-width="' + (o === 1 ? 3.5 : 2) + '" stroke-opacity="' + Math.max(o, .35) + '"/>')
+    }
+    if (f.lens) {                                                   // the triple overlap: three nested clips
+      var inner
+      if (f.lens === 'empty') inner = ''
+      else if (f.lens === 'one') inner = '<rect x="0" y="0" width="640" height="330" fill="var(--head)" fill-opacity=".85"/>'
+      else inner = f.lens.map(function (k) {                       // one 120 degree sector per act, facing its own circle
+        var a0 = (-210 + 120 * k) * Math.PI / 180, a1 = (-90 + 120 * k) * Math.PI / 180, ox = 320, oy = 172, L = 200
+        return '<path d="M' + ox + ' ' + oy + 'L' + (ox + L * Math.cos(a0)) + ' ' + (oy + L * Math.sin(a0)) + 'A' + L + ' ' + L + ' 0 0 1 ' + (ox + L * Math.cos(a1)) + ' ' + (oy + L * Math.sin(a1)) + 'Z" fill="' + COL[k] + '" fill-opacity=".9"/>'
+      }).join('')
+      s.push('<g clip-path="url(#' + id + 'c0)"><g clip-path="url(#' + id + 'c1)"><g clip-path="url(#' + id + 'c2)">' + inner +
+        '<rect x="0" y="0" width="640" height="330" fill="none" stroke="var(--head)" stroke-width="6" stroke-dasharray="' + (f.lens === 'empty' ? '7 6' : '0') + '"/></g></g></g>')
+    }
+    if (f.fence) {
+      var w = f.fence === 'wide' ? 150 : 74
+      s.push('<rect x="' + (320 - w) + '" y="' + (172 - w * .82) + '" width="' + 2 * w + '" height="' + 1.64 * w + '" rx="10" fill="none" stroke="var(--head)" stroke-width="3"/>')
+      s.push('<rect x="' + (320 + w - 26) + '" y="' + (172 - w * .82 - 11) + '" width="30" height="16" rx="8" fill="var(--head)"/><circle cx="' + (320 + w - 11) + '" cy="' + (172 - w * .82 - 3) + '" r="5.5" fill="var(--bg)"/>')
+    }
+    s.push('</g>')
+    if (f.pos === 'far') for (i = 0; i < 3; i++) s.push('<text x="' + P[i][0] + '" y="' + (P[i][1] + 5) + '" text-anchor="middle" font-size="17" font-weight="800" fill="' + COL[i] + '">' + NAME[i] + '</text>')
+    if (f.arrows) s.push('<g stroke="var(--dim)" stroke-width="2" fill="none"><path d="M200 165h30m-9-7 9 7-9 7"/><path d="M440 165h-30m9-7-9 7 9 7"/></g>')
+    if (f.label) s.push('<text x="320" y="337" text-anchor="middle" font-size="18" font-weight="800" fill="var(--head)">' + f.label + '</text>')
+    if (f.clauses) {
+      var L = [[16, 26, 'start'], [624, 26, 'end'], [16, 336, 'start']]
+      for (i = 0; i < 3; i++) s.push('<text x="' + L[i][0] + '" y="' + L[i][1] + '" text-anchor="' + L[i][2] + '" font-size="17" font-weight="800" fill="' + COL[i] + '">' + f.clauses[i] + '</text>')
+    }
+    if (f.moves) f.moves.forEach(function (m, k) {
+      var C = [[16, 26, 'start'], [624, 26, 'end'], [16, 336, 'start'], [624, 336, 'end']][k]
+      s.push('<text x="' + C[0] + '" y="' + C[1] + '" text-anchor="' + C[2] + '" font-size="16" font-weight="700" fill="var(--head)">' + (k + 1) + '. ' + m + '</text>')
+    })
+    s.push('</svg>')
+    return s.join('')
+  }
+  var box = document.getElementById('frames')
+  F.forEach(function (f) {
+    var el = document.createElement('section')
+    el.className = 'fr'
+    el.innerHTML = svg(f) + '<div class="b"><div class="h"><span class="n">' + f.n + '. ' + f.title + '</span><span class="t">' + f.beat + ' · ' + f.at + '</span></div>' +
+      '<q>' + f.q + '</q><p class="m">' + f.m + '</p><p class="c">' + f.c + '</p></div>'
+    box.appendChild(el)
+  })
+})()
+</script>
+</body>
+</html>

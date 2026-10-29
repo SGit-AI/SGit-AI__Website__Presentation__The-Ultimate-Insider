@@ -1,0 +1,12 @@
+{
+ "agent": "deck@the-ultimate-insider",
+ "session": "session_01Kw9UwBB1wNV9hwXCcQAzKn",
+ "state": "current",
+ "from": "2026-10-29T02:18:24Z",
+ "until": null,
+ "supersedes": null,
+ "fingerprint": "sha256:ec0c8365ee704c7a",
+ "account": "the operator's Claude account (riskmandate.ai)",
+ "task": "trig_01XFzjV1p3aAVqnRhEizJKV5",
+ "note": "The first deck session. Key made with admin/tools/pki-agent.mjs keygen --session; private halves stay in the session's ~/.sg-send/keys; key.json built from the public k1. link only."
+}

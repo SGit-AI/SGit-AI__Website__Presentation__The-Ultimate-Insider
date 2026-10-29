@@ -1,0 +1,181 @@
+{
+  "schema": "the-ultimate-insider/agent-status/v1",
+  "agent": "researcher",
+  "as_of": "2026-10-29",
+  "round": 20,
+  "state": "wake 18:09: how we keep it safe checked (four corrections, to motion and deck by 18:15); open source, investors and security products hit in PHP October, for part 2",
+  "done": [
+    {
+      "what": "Session key made and published",
+      "evidence": "team/researcher/key.json, key.png, sessions/session_01Kw9UwDxA7opmQMZf3iqCjN/"
+    },
+    {
+      "what": "ROLE.md and policy.json updated for the role as accepted: the evidence vault, one hourly task of its own",
+      "evidence": "team/researcher/ROLE.md, policy.json"
+    },
+    {
+      "what": "In the schedule at :09 (the conductor's reply, 02:06)",
+      "evidence": "team/conductor/schedule.json"
+    },
+    {
+      "what": "Claims register, ideas map, incidents and sources manifest built; the register published in evidence/",
+      "evidence": "evidence/, tui-evidence-public (local)"
+    },
+    {
+      "what": "Before-tonight list for deck and the editor: 5 must-change, about 12 should-change",
+      "evidence": "evidence/BEFORE-TONIGHT.md, team/researcher/requests/deck__before-tonight.md"
+    },
+    {
+      "what": "Team vault keys opened from the conductor's zip; both vaults cloned with the key; key files shredded",
+      "evidence": "the board and mail committed locally, not pushed"
+    },
+    {
+      "what": "Hourly task created at :09 London",
+      "evidence": "trig_01TcGuBzBd5u2xKc3TKNEebt"
+    },
+    {
+      "what": "Handover zip for tui-evidence-public to the editor",
+      "evidence": "2026-10-29__researcher__vault-handover.zip, sent in the session"
+    },
+    {
+      "what": "CIRCIA re-checked in the Federal Register API on the day: no final rule",
+      "evidence": "evidence/claims/claims.json circia-status-oct-2026; capture federalregister-circia-2026-10-29T0212Z"
+    },
+    {
+      "what": "tui-evidence-public, tui-issues-public and tui-mail-public pushed; the evidence vault checked through its read key (1,221 files, read-only refused a write)",
+      "evidence": "team/researcher/evidence-vault.json"
+    },
+    {
+      "what": "Policy agreed by the editor",
+      "evidence": "team/researcher/policy.json agreed_by"
+    },
+    {
+      "what": "Exact edits proposed to deck for what is left of the before-tonight list: item 4 with two options for the editor, item 5, and 17 should-change edits; every 'now' string checked against the files",
+      "evidence": "evidence/proposals/deck-talk-changes.md; tui-mail-public mailroom/deck/003-proposed-edits-to-the-talk.eml"
+    },
+    {
+      "what": "The editor's decisions deck: design and a register of 11 things waiting on him; request to the conductor",
+      "evidence": "evidence/proposals/editor-decisions-deck.md, editor-decisions.json; mail conductor 006"
+    },
+    {
+      "what": "Studio data slice 1 (E02, E09, E13): the ABP model and five examples with grant rows",
+      "evidence": "evidence/studio/studio-e02-e09.json; mail deck 008"
+    },
+    {
+      "what": "Token-shaped values found in captured public pages, redacted; three were in the 02:22 push",
+      "evidence": "evidence/sources/manifest.json (redacted counts)"
+    },
+    {
+      "what": "Studio data slice 2 (E03): sixteen sources an agent consumes, one graded public case each, payloads never quoted",
+      "evidence": "evidence/studio/studio-e03.json; mail deck 009"
+    },
+    {
+      "what": "Studio data slice 3 (E04): 12 benign cases as asked, stood in the way, did, lost; 4 checked against a primary",
+      "evidence": "evidence/studio/studio-e04.json; mail deck 010"
+    },
+    {
+      "what": "PocketOS corrected: the token was stored locally and account-scoped (Railway's post), not in an unrelated file",
+      "evidence": "evidence/incidents/incidents.json; evidence/proposals/deck-talk-changes.md"
+    },
+    {
+      "what": "Studio data slice 4 (E11): six probes, five environments, labels, seven components; deck's numbers checked",
+      "evidence": "evidence/studio/studio-e11.json; mail deck 011"
+    },
+    {
+      "what": "E04 complete: the three evaluation cases from Hugging Face's and Anthropic's own posts",
+      "evidence": "evidence/studio/studio-e04.json"
+    },
+    {
+      "what": "The evidence vault's history checked per commit: what it still holds, counts only, each count with a control",
+      "evidence": "evidence/updates/2026-10-29__the-vault-history-checked.md; mail conductor 007, editor 005"
+    },
+    {
+      "what": "Issue 005 closed at deck's word: the studio data is enough",
+      "evidence": "tui-issues-public researcher/issues/done/005"
+    },
+    {
+      "what": "The evidence vault's browser link measured: opens in 2 min 48 s, 395 sequential tree reads; a split proposed under D12",
+      "evidence": "evidence/updates/2026-10-29__the-vault-in-the-browser.md"
+    },
+    {
+      "what": "The editor's register refreshed at 09:15 from every member's status.json asks",
+      "evidence": "evidence/proposals/editor-decisions.json"
+    },
+    {
+      "what": "A plain description for each of the 17 capability ids, from the primitives' own labels, with each example's reach wording",
+      "evidence": "evidence/studio/studio-e02-e09-capabilities.json; mail deck 013"
+    },
+    {
+      "what": "Gartner's 25 June 2025 release captured from a Gartner host; the 40 per cent claim graded A6",
+      "evidence": "evidence/claims/claims.json gartner-40pct-agentic-cancelled-2027; mail deck 014"
+    },
+    {
+      "what": "CIRCIA checked at 14:25 UTC after the day's Federal Register: no final rule, none on public inspection",
+      "evidence": "evidence/claims/claims.json circia-status-oct-2026"
+    },
+    {
+      "what": "The editor-decisions register passed to the conductor, as proposed",
+      "evidence": "mail conductor 008"
+    },
+    {
+      "what": "Facts for the story: the editor's three asks and R1 to R9, into the claims register",
+      "evidence": "evidence/story/story-r1-r3.json, story-r4-r9.json; mail conductor 009; team/researcher/requests/storyteller__facts-delivered.md"
+    },
+    {
+      "what": "Deck's six items: E05 pivoting, the Pilates agent (found, a gym class), E03 per source with outside or inside, E07 a deployment, E06 the soft inside, E02 no danger rating",
+      "evidence": "evidence/studio/studio-e05.json, studio-e03b.json, studio-e06-e07-e02b.json; mail deck 038 to 041"
+    },
+    {
+      "what": "Wake 16:09: S1 to S3 (19 claims: Slammer and Code Red, six operator-confirmed outages, insurer and Uptime comparisons), S4 (19 releases in 89 minutes), S5, the SHarness series (18 pieces)",
+      "evidence": "evidence/story/story-s1-s3.json, story-s4.json, story-s5.json, evidence/studio/studio-sharness-series.json; tui-mail-public mailroom/conductor/038, mailroom/ruv-sgit/023"
+    },
+    {
+      "what": "Wake 17:09: the editor's work section catalogue and parts 2 and 3 survey",
+      "evidence": "evidence/studio/studio-work-pki.json, studio-work-newsrooms.json, studio-work-sgit-sharness.json, studio-blast-radius.json, evidence/studio/img/"
+    },
+    {
+      "what": "Wake 18:09: the team's security claims checked against the record; open source strategy, investors, security products in PHP October",
+      "evidence": "evidence/studio/how-we-keep-it-safe-check.md, evidence/studio/studio-open-source-investors.json"
+    }
+  ],
+  "next": [
+    {
+      "what": "Re-capture SC Media and ThousandEyes when the Internet Archive answers again",
+      "why": "both publishers refuse the fetcher (403); not to be got around"
+    }
+  ],
+  "asks": [
+    {
+      "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+      "from": "the editor"
+    },
+    {
+      "what": "D12: keep the evidence vault's history, or rotate the vault",
+      "from": "the editor"
+    },
+    {
+      "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+      "from": "the editor"
+    },
+    {
+      "what": "Store the handover zip and give it to the vaults manager",
+      "from": "the editor"
+    },
+    {
+      "what": "Apply or answer the proposed edits before 19:00 London",
+      "from": "deck@the-ultimate-insider"
+    }
+  ],
+  "tasks": {
+    "researcher": "trig_01TcGuBzBd5u2xKc3TKNEebt"
+  },
+  "tokens": null,
+  "tokens_how": "the session does not show a token count to the agent",
+  "policy": {
+    "outside_scope": 0,
+    "out_of_scope_requests": 0,
+    "pushbacks": 0,
+    "overrides": 0,
+    "injection_seen": 0
+  }
+}

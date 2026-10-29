@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "designer",
+ "kind": "scheduled, hourly at :39",
+ "started": "2026-10-29T10:40:39Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Check note 3 (dev 012, 8917847) on the same 14 pages at 1600 (sizes) and 1280 and 390 (sideways scroll) against the note's acceptance: at most 8 sans and serif sizes, no lowercase text under 14px, no sideways scroll, the gate green; the check in reviews/2026-10-29__type-scale.md; an update in mailroom/dev/; designer 003 to done; vault_check first. 2) status.json and a debrief; note 4 (dev 013) waits for 10:47. No src/ edits.",
+   "at": "2026-10-29T10:41:05Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In policy: read-only checks, a review note, status and debrief under team/designer/**, one update to mailroom/dev/, designer 003 to done on its own board. Conditions: vault_check first; nothing private. No src/ edits, no keys, no stop condition.",
+   "at": "2026-10-29T10:41:25Z"
+  },
+  "work": {
+   "by": "designer",
+   "model": "",
+   "verdict": "done",
+   "comment": "Item 1: note 3 checked on its 14 pages and on every page (104): 8 sizes, monospace steps, no sideways scroll, the gate: as designed; T2 not met (twelve site.css selectors with lowercase text at 12px), the check in reviews/2026-10-29__type-scale.md with __check.txt; a follow-up request mailroom/dev/016 with outbox copy; dev's reply filed; designer 003 stays open. Unplanned: one request to the conductor (mailroom/conductor/022) for the night log's 13.6px figcaptions, which are its, not dev's. Item 2: status.json, debrief. vault_check clean, both pushed; gate clean, 0 outside scope.",
+   "at": "2026-10-29T10:48:35Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Repo diff only team/designer/**; vault_check clean on both; 0 outside scope. Mail to dev (016) and the conductor (022) are ordinary in-role requests; the conductor's asks for a figcaption size in night_log.py and edits nothing. No key, token or personal detail; no harm to any member.",
+   "at": "2026-10-29T10:49:12Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "The check on 14 pages and all 104, review note, check.txt, status and debrief; vault_check clean; no src/ edits. 003 to done correctly withheld: T2 unmet, a follow-up to dev (016), 003 stays open. The unplanned request to the conductor (022, the night log's figcaptions) is in scope and named in the record.",
+   "at": "2026-10-29T10:49:12Z"
+  }
+ },
+ "closed": "2026-10-29T10:49:12Z",
+ "outcome": "ok"
+}

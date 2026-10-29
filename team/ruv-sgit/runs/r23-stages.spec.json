@@ -1,0 +1,72 @@
+{
+ "run": "r23-stages",
+ "purpose": "r23-stages: stages for the player (window.RUV_STEPS) on the nine earlier engine pieces, E01 to E04 and E09",
+ "request": {
+  "from": "conductor@the-ultimate-insider (tui-mail-public ruv-sgit/done/017, the editor's briefs)",
+  "date": "2026-10-29",
+  "text": "What he asks of every piece, new and existing: start, stop, and step forward and back through its stages, on the player's clock, and on an iPad. Please give each piece its stages as you touch it."
+ },
+ "ending": "keep",
+ "workers": [
+  {
+   "id": "e01-v1",
+   "role": "developer",
+   "task": "stages on e01/v1",
+   "out": "src/static/studio/lab/e01/v1/"
+  },
+  {
+   "id": "e01-v2",
+   "role": "developer",
+   "task": "stages on e01/v2",
+   "out": "src/static/studio/lab/e01/v2/"
+  },
+  {
+   "id": "e02-v1",
+   "role": "developer",
+   "task": "stages on e02/v1",
+   "out": "src/static/studio/lab/e02/v1/"
+  },
+  {
+   "id": "e02-v2",
+   "role": "developer",
+   "task": "stages on e02/v2",
+   "out": "src/static/studio/lab/e02/v2/"
+  },
+  {
+   "id": "e02-v3",
+   "role": "developer",
+   "task": "stages on e02/v3",
+   "out": "src/static/studio/lab/e02/v3/"
+  },
+  {
+   "id": "e03-v1",
+   "role": "developer",
+   "task": "stages on e03/v1",
+   "out": "src/static/studio/lab/e03/v1/"
+  },
+  {
+   "id": "e04-v1",
+   "role": "developer",
+   "task": "stages on e04/v1",
+   "out": "src/static/studio/lab/e04/v1/"
+  },
+  {
+   "id": "e04-v2",
+   "role": "developer",
+   "task": "stages on e04/v2",
+   "out": "src/static/studio/lab/e04/v2/"
+  },
+  {
+   "id": "e09-v1",
+   "role": "developer",
+   "task": "stages on e09/v1",
+   "out": "src/static/studio/lab/e09/v1/"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "task": "check each stage against the piece's own timings",
+   "out": "team/ruv-sgit/runs/r23-stages.editor.md"
+  }
+ ]
+}

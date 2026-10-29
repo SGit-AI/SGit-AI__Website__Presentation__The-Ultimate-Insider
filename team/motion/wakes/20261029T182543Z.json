@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "motion",
+ "kind": "scheduled, hourly at :24",
+ "started": "2026-10-29T18:25:43Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. M01 the building v1 (src/static/motion/lab/the-building/v1/index.html), the editor's changes: a smaller gap between people/attackers and agents; now and then a person/attacker finds the gold and turns red; more agents, they keep going after a room, start white and turn red when doing damage, wander, several rooms, through walls. 2. Explainer src/pages/motion/the-building/index.html to match; build, gate, push to dev before 19:00 (part 1's new cut-off, the editor). 3. M02/M03 reviews if mail arrives (none new). All within motion's policy; no HOLD.",
+   "at": "2026-10-29T18:26:37Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Plan inside motion's scope.writes; no HOLD, secrets, other members' paths or rule changes. Conditions: the attackers/damage depiction stays a story metaphor, nothing operational; no on-screen number outside the register; talk.json, engine, ruv.sgit paths untouched; gate before the push; the 19:00 cut-off is the editor's stated word.",
+   "at": "2026-10-29T18:26:51Z"
+  },
+  "work": {
+   "by": "motion",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "1. M01 v1 changed in place at the editor's word (5d13d72): every figure white until it starts damage, then red; three people find the gold; 36 agents keep going (rooms, through walls, outer walls), most to the gold; 43 s, stops 0/5/23/37; checked 1280x720, light, iPad. 2. Explainer updated; gate clean; pushed to dev 18:29. 3. No new M02/M03 review mail.",
+   "at": "2026-10-29T18:29:59Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "5d13d72 touches only motion paths; agents.py check 0 outside scope; M01 stays a floor-plan story metaphor, nothing operational, no secrets or directing text; no statistic on screen; no vault change.",
+   "at": "2026-10-29T18:30:25Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done: figures white until damage then red; three people find the gold; 36 agents keep going room after room, through walls, outer walls, most to the gold; 43 s, stops 0/5/23/37; checked 1280, light, iPad. Item 2 done: explainer, gate, dev 18:29 before 19:00. Item 3 n/a. Nothing unplanned.",
+   "at": "2026-10-29T18:30:25Z"
+  }
+ },
+ "closed": "2026-10-29T18:30:25Z",
+ "outcome": "ok"
+}

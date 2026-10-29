@@ -1,0 +1,245 @@
+{
+ "about": "Story s5: the editor's agentic email workflow as described on newsroom.sgit.ai, as a source for act three's explorer coding example. Own-site, self-reported; no independent source checked.",
+ "s5": {
+  "answer": "The site describes a team of Claude agents on their own accounts that read and triage the agents' own mailbox, file replies into a CRM, research and write drafts, run four times a day under a conductor with security first and last, and never send: Dinis reads, edits and presses send (one security hold email excepted). The count grew from six roles (29 Sept) to ten (2 Oct), twelve (6 Oct) and about fifteen for the whole business. The pages say agents built the tools in a chat loop for one person, but they do not call the inbox explorer coding or Dinis a non-developer.",
+  "items": [
+   {
+    "id": "triage",
+    "what": "An inbox agent reads and triages incoming mail",
+    "quote": "@inbox | Everything coming in: triage, summaries, labels, filing replies into the CRM | send",
+    "source_id": "s5-the-agent-team-as-it-runs",
+    "grade": "A2"
+   },
+   {
+    "id": "drafts-only",
+    "what": "Agents draft, a person sends",
+    "quote": "Drafts only. No agent sends, replies or forwards email. The most an agent does is create a Gmail draft. One exception: the security role's single hold email.",
+    "source_id": "newsroom-the-mandate-stack",
+    "grade": "A2"
+   },
+   {
+    "id": "rule",
+    "what": "The one fixed rule of the walkthrough",
+    "quote": "The rule that never changes is the one that makes it work, the agent drafts and a person sends",
+    "source_id": "newsroom-replicating-the-agentic-inbox",
+    "grade": "A2"
+   },
+   {
+    "id": "human",
+    "what": "What the human does",
+    "quote": "Dinis makes decisions, amends mandates, and sends.",
+    "source_id": "newsroom-the-mandate-stack",
+    "grade": "A2"
+   },
+   {
+    "id": "human-phone",
+    "what": "How the person works with the agents",
+    "quote": "The person talks to the agents from a phone: voice notes, screenshots, chat, and decisions as one tap on a card.",
+    "source_id": "s5-the-agent-team-as-it-runs",
+    "grade": "A2"
+   },
+   {
+    "id": "count-6",
+    "what": "Agent count, 29 Sept: six roles",
+    "quote": "split the work across six roles: a scheduled reader of the inbox, a mailbox agent that drafts, an inbox agent that sends, a CRM agent, a dev team agent and a site editor",
+    "source_id": "newsroom-six-agents-one-inbox",
+    "grade": "A2"
+   },
+   {
+    "id": "count-10",
+    "what": "Agent count, 2 Oct: ten",
+    "quote": "Behind them is a team of ten agents with narrow jobs and one human who decides.",
+    "source_id": "newsroom-custom-uis-are-not-the-exception",
+    "grade": "A2"
+   },
+   {
+    "id": "count-12",
+    "what": "Agent count, 6 Oct: twelve",
+    "quote": "twelve Claude agents on dedicated accounts, each with one focus and a behaviour policy",
+    "source_id": "s5-the-agent-team-as-it-runs",
+    "grade": "A2"
+   },
+   {
+    "id": "count-15",
+    "what": "Agent count, 6 Oct (Mandate Stack, whole business): about fifteen",
+    "quote": "RiskMandate runs its business with about fifteen agents and one person, four times a day on a schedule",
+    "source_id": "newsroom-the-mandate-stack",
+    "grade": "A2"
+   },
+   {
+    "id": "schedule",
+    "what": "A conductor runs the team on a schedule",
+    "quote": "The conductor runs the team four times a day on weekdays. Security opens; then drafts, inbox, briefs, CRM, events, ABP and dev each get one step of up to twelve minutes; then security closes.",
+    "source_id": "s5-the-agent-team-as-it-runs",
+    "grade": "A2"
+   },
+   {
+    "id": "built-by-agents",
+    "what": "Who built the tools: agents, asked by one person",
+    "quote": "Ask for a view of it, in the same session, from the same files. The model builds the tool as HTML, sized to the one use case.",
+    "source_id": "newsroom-the-mandate-stack",
+    "grade": "A2"
+   },
+   {
+    "id": "eight-days",
+    "what": "Built in eight days by agents and the editor",
+    "quote": "In eight days, from 25 September to 2 October 2026, a small team of agents and I went from an empty vault to a working way of doing outreach",
+    "source_id": "newsroom-custom-uis-are-not-the-exception",
+    "grade": "A2"
+   },
+   {
+    "id": "explorer-def",
+    "what": "The site's definition of explorer coding",
+    "quote": "I would like to propose a better name for what is usually called vibe coding: explorer coding.",
+    "source_id": "s5-explorer-coding",
+    "grade": "A2"
+   },
+   {
+    "id": "not-in-line",
+    "what": "Explorer-coded software is a brief, not production",
+    "quote": "An explorer-coded app may look and feel like an application, but nobody has read the code or checked the architecture, and it is not ready to be in line",
+    "source_id": "s5-explorer-coding",
+    "grade": "A2"
+   }
+  ],
+  "explorer_coding": "Not stated for the inbox. explorer-coding (2026-10-16) defines the term ('a better name for what is usually called vibe coding') as building the tool you need with an agent, and says such apps are briefs 'not ready to be in line'. The inbox pages only link to it as related reading. The nearest words are The Mandate Stack's loop ('Ask for a view of it, in the same session, from the same files. The model builds the tool as HTML') and custom-uis' 'Each card started as a question in chat.' llms.txt does not index the inbox articles; its only email-workflow line is 'An agent drafts a list and the email; the person sends it' (the /for/ page)."
+ },
+ "claims": [
+  {
+   "id": "story-s5-no-agent-sends",
+   "text": "No agent sends. Agents create drafts; a person sends.",
+   "where": [
+    "newsroom:the-agent-team-as-it-runs",
+    "newsroom:the-mandate-stack",
+    "newsroom:replicating-the-agentic-inbox"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "s5-the-agent-team-as-it-runs",
+     "quote": "Agents create drafts; a person sends. The one exception: @security may send one email, to one address, to put the team on hold.",
+     "supports": "for"
+    },
+    {
+     "source_id": "newsroom-six-agents-one-inbox",
+     "quote": "an inbox agent that sends",
+     "supports": "against"
+    },
+    {
+     "source_id": "newsroom-custom-uis-are-not-the-exception",
+     "quote": "an inbox agent that drafts and another that sends only what I approve",
+     "supports": "against"
+    },
+    {
+     "source_id": "s5-the-agent-team-as-it-runs",
+     "quote": "The policy text and the agent's own judgement. Many rows, including \"no agent sends\", rely on it.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Self-reported by the operator. The rule hardened over a week: on 29 Sept and 2 Oct one agent sent approved drafts; by 2 to 6 Oct no agent sends, with one named exception (security's hold email). The site itself grades the rule as enforced only by policy text, since one grant covers draft and send.",
+   "suggested_wording": "Agents draft; the editor reads and presses send (since early October 2026; one security hold email excepted; enforced by policy, not by the platform)."
+  },
+  {
+   "id": "story-s5-agent-count",
+   "text": "The agentic inbox is run by a team of agents and one person",
+   "where": [
+    "newsroom:six-agents-one-inbox",
+    "newsroom:custom-uis-are-not-the-exception",
+    "newsroom:the-agent-team-as-it-runs",
+    "newsroom:the-mandate-stack"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "newsroom-six-agents-one-inbox",
+     "quote": "split the work across six roles",
+     "supports": "context"
+    },
+    {
+     "source_id": "newsroom-custom-uis-are-not-the-exception",
+     "quote": "a team of ten agents with narrow jobs and one human who decides",
+     "supports": "context"
+    },
+    {
+     "source_id": "s5-the-agent-team-as-it-runs",
+     "quote": "one person, twelve agents, encrypted vaults, and a mailbox nobody sends from",
+     "supports": "context"
+    },
+    {
+     "source_id": "newsroom-the-mandate-stack",
+     "quote": "about fifteen agents and one person",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The count grew: six roles (29 Sept), ten (2 Oct), twelve (6 Oct roster), about fifteen (Mandate Stack, same day, whole business). Only a few roles touch mail. Any number used on stage needs its date.",
+   "suggested_wording": "Six agents at the start, about a dozen within a week, and one person who sends."
+  },
+  {
+   "id": "story-s5-built-with-ai",
+   "text": "The inbox and its tools were built by the editor with agents, not by a development team",
+   "where": [
+    "newsroom:custom-uis-are-not-the-exception",
+    "newsroom:the-mandate-stack"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "newsroom-custom-uis-are-not-the-exception",
+     "quote": "a small team of agents and I went from an empty vault to a working way of doing outreach",
+     "supports": "for"
+    },
+    {
+     "source_id": "newsroom-the-mandate-stack",
+     "quote": "The model builds the tool as HTML, sized to the one use case.",
+     "supports": "for"
+    },
+    {
+     "source_id": "newsroom-the-mandate-stack",
+     "quote": "The loop is what makes it possible for one person",
+     "supports": "for"
+    },
+    {
+     "source_id": "s5-explorer-coding",
+     "quote": "My 2018 book for young developers",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The pages say agents (a @dev agent among them) built the tools at one person's request, with no human developers named. They do not call the editor a non-developer: he writes as a long-time developer (a 2018 book for young developers). Calling it a 'non-developer' example would not match the site.",
+   "suggested_wording": "One person and a team of agents built it in eight days; the agents wrote the tools."
+  },
+  {
+   "id": "story-s5-explorer-coding-link",
+   "text": "The agentic inbox is an example of explorer coding",
+   "where": [
+    "talk:act-three"
+   ],
+   "kind": "position",
+   "grade": "A1",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "s5-explorer-coding",
+     "quote": "That is exactly what someone does when they build the tool they need with an agent.",
+     "supports": "for"
+    },
+    {
+     "source_id": "newsroom-custom-uis-are-not-the-exception",
+     "quote": "Explorer coding: a better name for what people call vibe coding",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "No captured page says in so many words that the inbox is explorer-coded. The explorer-coding article (16 Oct) defines the term generally; the inbox articles only link to it in related reading. The link is the talk's inference, a fair one, but the explorer-coding article also says such tools are 'not ready to be in line' until villagers take them, while the inbox runs in production.",
+   "suggested_wording": "The inbox's interfaces were built the way the site calls explorer coding: ask in chat, an agent builds the page."
+  }
+ ]
+}

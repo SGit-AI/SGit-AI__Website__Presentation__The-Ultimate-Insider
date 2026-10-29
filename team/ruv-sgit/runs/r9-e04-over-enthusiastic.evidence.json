@@ -1,0 +1,446 @@
+{
+ "run": "r9-e04-over-enthusiastic",
+ "purpose": "r9-e04-over-enthusiastic: studio experiment E04, the over-enthusiastic agent: eleven cases, each as the goal, what stood in the way, the fix the agent chose, the loss",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/001-infographic-request-over-enthusiastic-agent-e04.eml)",
+  "date": "2026-10-29",
+  "text": "One sentence the audience must understand: an agent that is only trying to help does harm by removing whatever stands between it and the goal. The data: only src/static/studio/data/over-enthusiastic.json. Draw: Replit, PocketOS (Cursor and Railway), Gemini CLI, AWS Kiro (disputed: show both accounts). Draw only labelled 'reported, not checked against a primary': Antigravity, Codex home deletion, OpenClaw inbox, Meta's internal Sev 1. Evaluations, labelled as evaluations, not customer deployments: Hugging Face and OpenAI, and Anthropic's two. Do not draw: the deleted 48k-files post, the partial captures, the M365 DLP defect. The PocketOS correction: the token was stored locally and scoped to the whole account. What moves: the same four beats for every case (the goal, the obstacle, the fix the agent chose, the loss); start with Replit told fully, then the rest fall into the same four columns fast. 40 to 60 seconds; must read as a still. No blame of named people; no product logos; nothing beyond the tiers; the agent's own words only as quoted, marked as its account. Label things in the drawing, plain words first, text clear of the headline. Deliver ruv-sgit/over-enthusiastic-agent/index.html with its explainer beside it."
+ },
+ "pass_of": null,
+ "commits_before": null,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "8gtpj5qc",
+ "created_at": "2026-10-29T09:35:57+00:00",
+ "closed_at": "2026-10-29T09:46:13+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 3,
+  "tasks": 3,
+  "ruflo_calls": 15,
+  "ruflo_failed": 0,
+  "ruflo_ms": 7425
+ },
+ "branches": [
+  {
+   "name": "w-v1",
+   "role": "developer",
+   "files": 1,
+   "bytes": 8659,
+   "write_ms": 8178,
+   "merge_ms": 8394
+  },
+  {
+   "name": "w-explainer",
+   "role": "writer",
+   "files": 2,
+   "bytes": 14450,
+   "write_ms": 7558,
+   "merge_ms": 12851
+  },
+  {
+   "name": "w-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 4226,
+   "write_ms": 7867,
+   "merge_ms": 8578
+  },
+  {
+   "name": "w-v1-fixed",
+   "role": "developer",
+   "files": 1,
+   "bytes": 8794,
+   "write_ms": 7913,
+   "merge_ms": 8860
+  },
+  {
+   "name": "w-explainer-fixed",
+   "role": "writer",
+   "files": 2,
+   "bytes": 15242,
+   "write_ms": 7580,
+   "merge_ms": 8597
+  }
+ ],
+ "commits": 7,
+ "files": 9,
+ "bytes_plain": 54997,
+ "files_delivered": 7,
+ "bytes_delivered": 51371,
+ "store": {
+  "objects": 47,
+  "bytes": 75967,
+  "plaintext_hits": 0,
+  "probe": "72 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 4427,
+  "files": 9,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "create",
+   "ms": 2729,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 884,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 14582,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1660,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 855,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5661,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2305,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2017,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4071,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1590,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 833,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5135,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 6161,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1924,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4767,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1637,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 928,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5302,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2162,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1861,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4555,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1543,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 928,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5441,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2332,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1976,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4552,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1580,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 959,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5037,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2228,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1994,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4375,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 963,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 4427,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 1379
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p v1",
+   "rc": 0,
+   "ms": 488
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t writer -r specialist -p explainer",
+   "rc": 0,
+   "ms": 430
+  },
+  {
+   "seq": 4,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 424
+  },
+  {
+   "seq": 5,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d v1: E04 v1, driven, from over-enthusiastic.json -p high",
+   "rc": 0,
+   "ms": 423
+  },
+  {
+   "seq": 6,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d explainer: the page and explainer under /ruv-sgit/over-enthusiastic-agent/ -p high",
+   "rc": 0,
+   "ms": 449
+  },
+  {
+   "seq": 7,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check the slide and explainer against the request, the data, its cautions and the studio checklist -p high",
+   "rc": 0,
+   "ms": 452
+  },
+  {
+   "seq": 8,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r9-e04-over-enthusiastic: r9-e04-over-enthusiastic: studio experiment E04, the over-enthusiastic agent: eleven cases, each as the goal, what stood in the way, the fix the agent chose, the loss -f conductor",
+   "rc": 0,
+   "ms": 506
+  },
+  {
+   "seq": 9,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v1 sha256:70d8725e4917893c files:1 -f developer",
+   "rc": 0,
+   "ms": 406
+  },
+  {
+   "seq": 10,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer sha256:bd02fdc22b2f09ff files:2 -f writer",
+   "rc": 0,
+   "ms": 431
+  },
+  {
+   "seq": 11,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:bed79cb11e9bf0e9 files:1 -f editor",
+   "rc": 0,
+   "ms": 399
+  },
+  {
+   "seq": 12,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v1-fixed sha256:db7f61474d621dd0 files:1 -f developer",
+   "rc": 0,
+   "ms": 444
+  },
+  {
+   "seq": 13,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer-fixed sha256:0b2040408fcbd8d0 files:2 -f writer",
+   "rc": 0,
+   "ms": 410
+  },
+  {
+   "seq": 14,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 389
+  },
+  {
+   "seq": 15,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 395
+  }
+ ],
+ "history": [
+  {
+   "id": "6195e58cb6da",
+   "message": "init",
+   "time": "2026-10-29T09:36:03Z"
+  },
+  {
+   "id": "e0c13b0fbf74",
+   "message": "brief: run r9-e04-over-enthusiastic",
+   "time": "2026-10-29T09:36:05Z"
+  },
+  {
+   "id": "453029070498",
+   "message": "developer v1: delivered 1 files",
+   "time": "2026-10-29T09:40:00Z"
+  },
+  {
+   "id": "1cf6f037751b",
+   "message": "writer explainer: delivered 2 files",
+   "time": "2026-10-29T09:40:17Z"
+  },
+  {
+   "id": "036f55ae9ba0",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T09:45:18Z"
+  },
+  {
+   "id": "9f322752c6a3",
+   "message": "developer v1-fixed: delivered 1 files",
+   "time": "2026-10-29T09:45:35Z"
+  },
+  {
+   "id": "7767b369c40b",
+   "message": "writer explainer-fixed: delivered 2 files",
+   "time": "2026-10-29T09:45:52Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "v1",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "explainer",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 83261,
+   "tool_uses": 11,
+   "wall_s": 85,
+   "must_fix": 9,
+   "should_fix": 7
+  },
+  {
+   "id": "v1-fixed",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session), the editor's fixes applied",
+   "tokens": null
+  },
+  {
+   "id": "explainer-fixed",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session), the editor's fixes applied",
+   "tokens": null
+  }
+ ],
+ "kept_at": "2026-10-29T09:46:17+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__r9-e04__vault-handover.zip",
+  "sha256": "bdcfd8f42638a6a5",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}

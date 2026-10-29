@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>They turned left. Agents turn right.</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+.cols{position:absolute;left:60px;right:60px;top:180px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.col{border-radius:18px;padding:20px 24px;min-height:300px}
+.col h3{margin:0 0 6px;font:800 16px system-ui;letter-spacing:.12em;text-transform:uppercase}
+.col h4{margin:0 0 12px;font:700 30px Georgia,serif;color:var(--head)}
+.col p{font-size:21px;line-height:1.4;margin:10px 0 0}
+.n{font:800 54px/1 ui-monospace,monospace;color:var(--head)}
+.n small{font-size:20px;color:var(--dim);font-weight:600;margin-left:8px}
+.av{background:var(--accent-t);border:2px solid var(--accent)}.av h3{color:var(--accent)}
+.cy{background:var(--agent-t);border:2px solid var(--agent)}.cy h3{color:var(--agent)}
+#line{position:absolute;left:60px;right:60px;top:560px;text-align:center;font:700 32px/1.25 Georgia,serif;color:var(--head)}
+.map{position:absolute;left:50%;top:150px;transform:translateX(-50%);height:470px;border-radius:12px;background:#fff;padding:6px}
+</style>
+</head>
+<body>
+<div id="cv" data-end="9">
+  <p class="kk">Part one: the insider with no limits</p>
+  <div class="hl" data-in="0" style="font-size:42px">They turned left. <em>Agents turn right.</em></div>
+  <div class="cols">
+    <div class="col av" data-in=".8"><h3>SolarWinds, 2020</h3><h4>The door was open to thousands</h4>
+      <div class="n"><span data-count="18000" data-at="1.2" data-dur="1.4">0</span><small>downloaded the update</small></div>
+      <div class="n" style="margin-top:10px">~<span data-count="109" data-at="2.4" data-dur="1">0</span><small>compromised further</small></div></div>
+    <div class="col av" data-in="3.4"><h3>Storm-0558, 2023</h3><h4>A key that could forge tokens</h4>
+      <div class="n">~<span data-count="25" data-at="3.8" data-dur="1">0</span><small>organisations it was used against</small></div>
+      <p>The access was far wider than what was taken. An attacker chooses, and stops.</p></div>
+  </div>
+  <div id="line" data-in="6">An agent does not stop at the small rooms. It goes where the task points.</div>
+  <div class="ft">The White House press briefing, 17 February 2021 (Anne Neuberger) · Microsoft, Analysis of Storm-0558 techniques, 14 July 2023</div>
+  <div class="bar"><i></i></div>
+</div>
+</body>
+</html>

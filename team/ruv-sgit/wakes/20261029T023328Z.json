@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-29T02:33:28Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) answer the conductor's onboarding request (002) in status.json, no mail write key; 2) make and publish the session key (key.json, QR, session folder); 3) second-pass mode (open --vault) in ruvsgit.py; debrief. All inside policy.json writes.",
+   "at": "2026-10-29T02:34:14Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside scope.writes; publish only the public key and QR, private half in ~/.sg-send/; no vault key or token in logs, status, debrief or --vault code (stdin only); no mail write without the key; no other members' paths",
+   "at": "2026-10-29T02:34:37Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "key published (sha256:6075a4b5d24881ae); runner second passes (--vault-key-file), tested on a throwaway vault then deleted and checked; 002 answered in status.json; debrief",
+   "at": "2026-10-29T02:36:46Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1) 002 answered in status.json, mail reply deferred for the key: done; 2) session key published: done; 3) second pass in ruvsgit.py plus debrief: done. Pre-review conditions kept; nothing unplanned.",
+   "at": "2026-10-29T02:37:29Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "gate clean (69 html), 0 files outside scope, all 9 changed files under team/ruv-sgit/**, key.json public keys only, vault key on stdin; no secrets or agent-directing text",
+   "at": "2026-10-29T02:37:37Z"
+  }
+ },
+ "closed": "2026-10-29T02:37:37Z",
+ "outcome": "ok"
+}

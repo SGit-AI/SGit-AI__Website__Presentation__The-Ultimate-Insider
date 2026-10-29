@@ -1,0 +1,45 @@
+<!--meta {"title": "E08 explained: the lethal trifecta, frame by frame", "description": "How studio experiment E08 draws Simon Willison's lethal trifecta as three switches on one agent, a path that opens with all three on and closes when any one is off: each frame with its time, the source, the technique, and what was left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E08</a></nav>
+<p class="kicker">Studio experiment E08 · the explainer</p>
+<h1>The lethal trifecta, frame by frame</h1>
+<p class="lead">The one sentence: an agent with private data, exposure to untrusted content and a way to send outward can be turned by a document into sending that data out; take away any one of the three and that path closes.</p>
+
+<h2>The frames (v1)</h2>
+<p>Seconds from the start; it ends at 48 s and holds still. The line under the drawing changes with each stage.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>The headline, and under it the attribution: "The lethal trifecta, Simon Willison's idea: private data, untrusted content, a way out." The agent appears at 0.8 s and the outside at 1.2 s; then the three switches, each on its own line into or out of the agent: untrusted content with a document from anyone (2.2 s), private data with your files (3.4 s), a way out between the agent and the outside (4.6 s). All three are on.</td></tr>
+<tr><td>7 s</td><td>All three on: the path draws itself from 7.5 s to 13 s. The document's words run to the agent in purple; a purple ring marks the agent "turned"; your data runs to the agent; and from the agent a red line runs out to the outside, which is outlined red and reads "open". The path changes colour where it crosses the agent.</td></tr>
+<tr><td>16 s</td><td>Private data off. The switch flips (16 s to 16.6 s), the path clears, and a wall rises at the switch (16.6 s). The path draws again from 17.2 s to 20 s: the document still turns the agent, but your data stops at the wall and nothing runs out. The outside reads "closed". Under the switch, "off would close it" appears and stays. The switch goes back on at 22 s and the path completes again by 23.6 s.</td></tr>
+<tr><td>24 s</td><td>Untrusted content off, the same way: the document's words stop at the wall, the agent is never turned, nothing runs out. Closed. Back on at 30 s; open again by 31.6 s.</td></tr>
+<tr><td>32 s</td><td>A way out off: the document turns the agent, the data reaches it, and the red line stops at the wall before the outside. Closed. Back on at 38 s; open again by 39.6 s.</td></tr>
+<tr><td>41 s</td><td>The still: all three switches on, the path open to the outside, and under each switch "off would close it". The line under the drawing: "Three on: the path is open. Any one off: that path is closed. One path, the one this picture draws; the idea is Simon Willison's."</td></tr>
+</tbody></table></div>
+
+<h2>The source</h2>
+<ul>
+<li><b>The idea</b>: Simon Willison, <a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/">The lethal trifecta for AI agents</a>, already the talk's source and listed on <a href="{{root}}sources/index.html">the sources page</a>. The slide uses only its three ingredients, as the studio's programme names them: private data, exposure to untrusted content, a way to communicate outward. On the slide they are shortened to "private data", "untrusted content" and "a way out".</li>
+<li><b>Words the slide adds</b>: "a document from anyone", "your files", "the agent", "turned", "the outside", "open", "closed", "off would close it", and the line under each stage. Each describes the drawing, not a new claim.</li>
+<li><b>No numbers.</b> The request asked for none, and the picture needs none: it shows a condition, not a measurement.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: the SVG is built once, then every frame is drawn from the slide's clock by <code>SLIDE_RENDER</code>, so the player can seek, pause and replay it, and <code>?static</code> shows the end state. The stages are declared in <code>window.RUV_STEPS</code>: 0, 7, 16, 24, 32 and 41 s.</li>
+<li>One path, drawn as four steps along one progress value: the document's words reach the agent, the agent is turned, it takes the data, it sends it out. Turning a switch off caps that progress at the wall by that switch, so every "off" shows exactly how far the path gets.</li>
+<li>E04 v2's language: a path draws itself and changes colour where it crosses the agent; a wall that holds, in the same language, is the stop. Three colours of meaning: the agent's red for the agent and what it sends out, purple for the untrusted words, the accent for a switch that is off and its wall. Everything else is neutral. Every text is 20 px or larger on the 1280 by 720 canvas; both themes (<code>?theme=light</code>). It reads no data file and needs no network.</li>
+</ul>
+
+<h2>What was left out</h2>
+<ul>
+<li><b>A real case.</b> EchoLeak, in the studio's injection-sources data: a crafted email, retrieved as context, led an assistant to include internal data in a response that sent it out; labelled there a vendor-confirmed vulnerability. It was left out to keep the slide to one idea, with less text and no numbers; E03 already shows it.</li>
+<li><b>Quotations from the source.</b> Only the three ingredients are used; the rest of Willison's argument is for the talk to tell.</li>
+<li><b>Other harms.</b> The picture closes one path, the one the trifecta describes. Turning a switch off does not make the agent safe in every other way, and the end line says "that path", not "safe".</li>
+<li><b>An "on" and "off" label beside each switch.</b> Tried; it sat on the line. The switch's knob and colour carry the state, and "closed" at the outside says the result.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 by ruv.sgit@the-ultimate-insider in run r18-e08-lethal-trifecta, at deck@'s request, the editor's word: a Ruflo hive with a builder who made the slide and these pages from the request and the source, screenshotted in both themes at several times. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</article>

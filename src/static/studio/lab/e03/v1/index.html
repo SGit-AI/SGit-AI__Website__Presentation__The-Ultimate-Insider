@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E03 v1: every source is a way in</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<script>window.RUV_STEPS = [{ t: 0, label: 'sixteen ways in' }, { t: 2, label: 'the ring' }, { t: 6, label: 'each source in turn' }, { t: 41.8, label: 'one agent' }]</script>
+<script src="../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:52px;font-size:40px}
+#card{position:absolute;left:60px;right:60px;top:108px;height:62px;font:20px/1.3 system-ui;color:var(--text)}
+#card b{color:var(--head)}
+#card .t{font-weight:800;color:var(--agent)}
+#map{position:absolute;left:0;top:0;width:1280px;height:720px}
+#list{position:absolute;left:770px;top:174px;width:470px}
+.g{font:800 20px/26px system-ui;letter-spacing:.04em;text-transform:uppercase;color:var(--dim);margin:5px 0 0}
+.it{display:flex;align-items:center;gap:8px;height:25px;font:600 20px system-ui;color:var(--dim);white-space:nowrap}
+.it.on{color:var(--head)}
+.it i{flex:none;width:30px;height:24px;font:800 20px/24px system-ui;font-style:normal;text-align:center}
+#key{position:absolute;left:60px;bottom:14px;width:690px;font:20px/1.3 system-ui;color:var(--dim)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="48">
+  <p class="kk a">Studio experiment E03 · v1, driven</p>
+  <div class="hl" data-in="0">Everything it reads is <em>a way in.</em></div>
+  <div id="card"></div>
+  <svg id="map" viewBox="0 0 1280 720" aria-label="Sixteen sources an agent reads, numbered, around one agent, each with one public case"></svg>
+  <div id="list"></div>
+  <div id="key" data-in="2"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // The four families are this slide's grouping of the file's sixteen sources, by how the words reach the agent; the file does not group them.
+  var FAM = [['Sent to it', ['email', 'calendar invites', 'shared documents', 'support tickets (internal)', 'audio']],
+    ['It browses', ['web pages', 'web forms', 'images']],
+    ['It builds with', ['READMEs and docs', 'rules and configuration files', 'MCP tool descriptions', 'pull requests and code', 'issues and tickets (public)', 'skills and plugins', 'install scripts']],
+    ['Other agents give it', ['other agents']]]
+  var LABEL = { 'real-world incident': 'incident', 'vendor-confirmed vulnerability': 'vendor-confirmed', 'research demonstration': 'research demo' }
+  var D = null, NS = 'http://www.w3.org/2000/svg', CX = 390, CY = 400, RR = 160, B = null, T0 = 6, STEP = 2.2
+  fetch('../../../data/injection-sources.json').then(function (r) { return r.json() }).then(function (j) { D = j.sources_an_agent_consumes })
+    .catch(function (e) { console.error('E03: the data file did not load', e) })
+
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function mark(p, kind, x, y) {                                     // one shape per label: filled, ring, dashed ring
+    var col = 'var(--agent)'
+    if (kind === 'real-world incident') return el('circle', { cx: x, cy: y, r: 15, fill: col }, p)
+    if (kind === 'vendor-confirmed vulnerability') return el('circle', { cx: x, cy: y, r: 13, fill: 'var(--bg)', stroke: col, 'stroke-width': 5 }, p)
+    return el('circle', { cx: x, cy: y, r: 13, fill: 'var(--bg)', stroke: col, 'stroke-width': 3, 'stroke-dasharray': '5 4' }, p)
+  }
+  function build(S) {
+    var by = {}; D.forEach(function (s) { by[s.source] = s })
+    var order = []; FAM.forEach(function (f) { f[1].forEach(function (n) { if (by[n]) order.push({ s: by[n], fam: f[0] }) }) })
+    D.forEach(function (s) { if (!order.some(function (o) { return o.s === s })) order.push({ s: s, fam: 'Other' }) })   // nothing is dropped
+    var svg = S.$('map'), gap = .32, span = 2 * Math.PI - gap * FAM.length, per = span / order.length, a = -Math.PI / 2 + gap / 2, last = null
+    el('circle', { cx: CX, cy: CY, r: RR, fill: 'none', stroke: 'var(--line2)', 'stroke-width': 1.5, id: 'ring' }, svg)
+    var lines = el('g', {}, svg), nodes = el('g', {}, svg), famlab = el('g', {}, svg)
+    var famStart = {}
+    order.forEach(function (o, i) {
+      if (last !== null && o.fam !== last) a += gap
+      if (o.fam !== last) famStart[o.fam] = a
+      last = o.fam; o.a = a + per / 2; o.x = CX + RR * Math.cos(o.a); o.y = CY + RR * Math.sin(o.a); o.n = i + 1; a += per
+      o.line = el('line', { x1: o.x, y1: o.y, x2: CX, y2: CY, stroke: 'var(--agent)', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: 0 }, lines)
+      o.dot = el('circle', { r: 7, fill: 'var(--agent)', opacity: 0 }, lines)
+      o.g = el('g', {}, nodes); mark(o.g, o.s.case.label, o.x, o.y)
+      var tx = el('text', { x: CX + (RR + 30) * Math.cos(o.a), y: CY + (RR + 30) * Math.sin(o.a) + 7, 'text-anchor': 'middle', 'font-size': 20, 'font-weight': 800, fill: 'var(--head)' }, o.g); tx.textContent = o.n
+    })
+    FAM.forEach(function (f) {                                       // the family name, outside the middle of its arc
+      var fo = order.filter(function (o) { return o.fam === f[0] }); if (!fo.length) return
+      var m = (fo[0].a + fo[fo.length - 1].a) / 2, x = CX + (RR + 62) * Math.cos(m), y = CY + (RR + 62) * Math.sin(m)
+      var t = el('text', { x: x, y: y + 7, 'text-anchor': Math.abs(Math.cos(m)) < .35 ? 'middle' : Math.cos(m) > 0 ? 'start' : 'end', 'font-size': 20, 'font-weight': 800, fill: 'var(--dim)', 'paint-order': 'stroke', stroke: 'var(--bg)', 'stroke-width': 6 }, famlab)
+      t.textContent = f[0].toLowerCase(); f.t = t
+    })
+    var core = el('g', {}, svg); el('circle', { cx: CX, cy: CY, r: 46, fill: 'var(--panel)', stroke: 'var(--head)', 'stroke-width': 4 }, core)
+    var ct = el('text', { x: CX, y: CY + 8, 'text-anchor': 'middle', 'font-size': 22, 'font-weight': 800, fill: 'var(--head)' }, core); ct.textContent = 'agent'
+    var html = '', fam = null
+    order.forEach(function (o) {
+      if (o.fam !== fam) { fam = o.fam; html += '<div class="g">' + fam + '</div>' }
+      html += '<div class="it" data-n="' + o.n + '"><i>' + o.n + '</i>' + o.s.source + '</div>'
+    })
+    S.$('list').innerHTML = html
+    var counts = {}; D.forEach(function (s) { counts[s.case.label] = (counts[s.case.label] || 0) + 1 })
+    S.$('key').innerHTML = 'One public case per source. <b>Filled</b>: real-world incident (' + (counts['real-world incident'] || 0) + '); <b>ring</b>: <span style="white-space:nowrap">vendor-confirmed</span> (' + (counts['vendor-confirmed vulnerability'] || 0) + '); <b>dashed</b>: research demo (' + (counts['research demonstration'] || 0) + '). No payloads shown.'
+    B = { order: order, items: [].slice.call(document.querySelectorAll('.it')), fams: FAM, counts: counts }
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!D) return
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .6))) }
+    S.$('ring').style.opacity = k(2)
+    B.fams.forEach(function (f, i) { if (f.t) f.t.style.opacity = k(3 + .4 * i) })
+    var cur = -1
+    B.order.forEach(function (o, i) {
+      var a = T0 + i * STEP
+      o.g.style.opacity = .5 + .5 * k(a, .4)
+      o.line.setAttribute('opacity', .75 * k(a + .2, .8))
+      var f = S.seg(t, a + .2, a + 1.6), on = f > 0 && f < 1
+      o.dot.setAttribute('opacity', on ? 1 : 0); o.dot.setAttribute('cx', S.lerp(o.x, CX, f)); o.dot.setAttribute('cy', S.lerp(o.y, CY, f))
+      if (t >= a) cur = i
+    })
+    B.items.forEach(function (it, i) { it.classList.toggle('on', t >= T0 + i * STEP) })
+    var end = T0 + B.order.length * STEP + .5, h = ''
+    if (t < T0) h = '<b>Sixteen sources an agent reads,</b> in four families: each one has a public case of words in it steering an agent.'
+    else if (t < end) {
+      var o = B.order[cur], c = o.s.case
+      h = '<span class="t">' + o.n + '. ' + o.s.source + '</span> · <b>' + c.title + '</b> (' + c.date.slice(0, 4) + ', ' + c.label + ') · what it led to: ' + c.impact + (c.note ? ' (' + c.note + ')' : '')
+    } else h = '<b>Sixteen ways in, one agent.</b> ' + (B.counts['real-world incident'] || 0) + ' real-world incidents, ' + (B.counts['vendor-confirmed vulnerability'] || 0) + ' vendor-confirmed, ' + (B.counts['research demonstration'] || 0) + ' research demos; none with an independent second primary source. No public case of a code comment was found: the code row is a pull request.'
+    if (S.$('card').innerHTML !== h) S.$('card').innerHTML = h
+  }
+})()
+</script>
+</body>
+</html>

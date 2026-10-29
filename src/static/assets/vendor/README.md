@@ -1,0 +1,4 @@
+# Vendored, unmodified
+
+- `vault-embed.js`: sgit.ai's house vault reader (`SGVaultEmbed.Reader`), copied from https://sgit.ai/assets/vault-embed.js on 29 October 2026, as sgit.ai's brief "Reading a vault from a *.sgit.ai site page" asks: copy it, never fetch it across origins at runtime, never rewrite the derivations. Checksum in `vault-embed.js.sha256`; the gate refuses a copy that no longer matches it. To update: copy the new file, update the checksum, say so in the commit.
+- `vault-ui-embed.js`: sgit.ai's embed of the official SG/Vault interface, copied from https://sgit.ai/assets/vault-ui-embed.js on 29 October 2026 (dev 008). It frames `https://dev.vault.sgraph.ai` and hands it a published read key by `postMessage`, with the target origin pinned to that host. This site does not load it with the page: `assets/vault-here.js` adds it only when a reader presses "Open it here" on `/admin/vaults.html`. Checksum in `vault-ui-embed.js.sha256`.

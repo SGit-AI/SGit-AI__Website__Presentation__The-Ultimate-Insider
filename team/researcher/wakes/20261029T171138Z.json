@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T17:11:38Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Two requests, PKI first. (1) 010, the editor's work catalogue: pki.sgit.ai, newsroom.sgit.ai, php.oct.2026.newsroom.sgit.ai, sharness.ai, the CLI pages, ruv.sgit.ai, in parallel fetch passes; rows with title, link, one line, infographics and animations, showcase regions with capture date, no key, QR or read key in any region; into a new evidence/work/; PKI rows before 18:15 for part 1. (2) 030: public vaults whose owners published read keys, SGit architecture and features, SHarness capabilities; attacks' reach may carry to the next wake. Mail deck, dev, studio@, storyteller. The tonight-only follow-up rule is the editor's word in WAKE.md, the stored prompt's 'never' is for recurring tasks: judge at the close.",
+   "at": "2026-10-29T17:12:32Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Public GETs only, post nothing; writes in evidence/ and team/researcher/; no key, key QR, read key or private item in any row, screenshot or crop (crop pki.sgit.ai and vault pages or skip); clone only with owner-published read keys, key and clone paths out of tracked files and logs; vault_check on anything written; documented attacks from public sources only, no new technique; locked parts untouched; at most one send_later into its own session, noted in the end banner.",
+   "at": "2026-10-29T17:12:54Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "010 and 030 done: PKI catalogue on dev at 17:26 (before part 1's 18:15), then the newsrooms (840 rows), SGit, SHarness and ruv.sgit (23 rows), 20 public vaults, blast radius (29 rows); 67 crops checked for keys, 4 dropped or withdrawn. Mail to deck, dev, storyteller, conductor; studio@ via requests/. Issues 015, 016 done.",
+   "at": "2026-10-29T17:35:57Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff in evidence/ and team/researcher/: no read key, vault key, token or personal email; 64-hex strings are sha256 fields; no em-dashes; 8 PNGs viewed, none shows a key, QR or contact; no page instruction followed.",
+   "at": "2026-10-29T17:36:43Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "PKI on dev at 17:26, before part 1's 18:15; the rest at 17:35: newsrooms 840 rows, SGit, SHarness, ruv.sgit 23 rows, 20 public vaults, blast radius 29 rows, 67 crops; mail to deck, dev, storyteller, conductor, studio@ via requests; issues 015, 016 done. Output in evidence/studio/ rather than evidence/work/: the assembler's place for studio data.",
+   "at": "2026-10-29T17:36:43Z"
+  }
+ },
+ "closed": "2026-10-29T17:36:43Z",
+ "outcome": "ok"
+}

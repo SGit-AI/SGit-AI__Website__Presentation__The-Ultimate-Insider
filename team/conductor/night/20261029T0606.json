@@ -1,0 +1,377 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T05:05:51Z",
+ "until": "2026-10-29T06:06:50Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T06:05:18Z",
+   "kind": "scheduled, hourly at :02",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T060518Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Sub-agent plan: 1. Request (one only, ruv.sgit is free after E02): mail ruv.sgit to do B01 v2 with deck's three notes at the 06:32 slot (E03 stays queued, for 07:32 once deck asks), a .eml in tui-mail-public mailroom/ruv-sgit/, copy to deck; vault_check. 2. Update team/conductor/pace.json (E02 delivered, ruv-sgit in_flight B01 v2, dev 012 design note 3 slotted after dev 011 at 09:47). 3. Night log"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T05:18:37Z",
+   "kind": "scheduled, hourly at :17",
+   "outcome": "ok",
+   "record": "team/deck/wakes/20261029T051837Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Requests first: send the held E02 request (team/deck/drafts/ruv-sgit__blast-radius.md) as written into mailroom/ruv-sgit/, copy in deck/outbox/, draft moved to team/deck/requests/ as sent; the conductor named it at 05:04, ruv.sgit has nothing in flight. 2) Review B01 v1 after looking at its four stills: src/pages/studio/reviews/b01-v1.html, reviews index; reply to ruv-sgit. 3) The researcher's "
+  },
+  {
+   "agent": "designer",
+   "started": "2026-10-29T05:40:34Z",
+   "kind": "scheduled, hourly at :39",
+   "outcome": "ok",
+   "record": "team/designer/wakes/20261029T054034Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Sub-agent plan: 1) ack dev's reply (mailroom/designer/003, note 2 accepted as dev 011) in mailroom/dev/. 2) Design note 3, the type scale: team/designer/reviews/2026-10-29__type-scale.md and system/type.md, a request to mailroom/dev/, an issue on designer's board. 3) designer 001 and 002 stay blocked; status.json, debrief; vault_check before any vault commit. Member's amendment to 1: no ack mail ("
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T05:48:25Z",
+   "kind": "scheduled, hourly at :47",
+   "outcome": "ok",
+   "record": "team/dev/wakes/20261029T054825Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Requests first: designer's note 3 (type scale, mail 009) as dev 012 on the board, to be scheduled after dev 011; reply to designer; mail 008 and 009 filed; vault_check first. 2) dev 010, design note 1 (pace.json 05:47): the five tokens in src/static/assets/tokens.css; .wrap, .narrow, .lead, .prose, .cards, .tiles and the shell widths in site.css; the admin side navigation closed under 861px (ad"
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T05:11:08Z",
+   "kind": "scheduled, hourly at :09",
+   "outcome": "partial",
+   "record": "team/researcher/wakes/20261029T051108Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "partial"
+   },
+   "plan": "1) deck's request, issue 005 slice 3 (E04): the 13 benign cases in evidence/incidents/incidents.json and the talk's Replit and Gemini CLI claims, each as asked, stood in the way, did about it, lost, checked against the vendors' or users' own posts in the captures (fetch a primary where one is missing), into evidence/studio/studio-e04.json and the vault's studio/; reply to deck in its mailroom nami"
+  },
+  {
+   "agent": "ruv-sgit",
+   "started": "2026-10-29T05:33:37Z",
+   "kind": "scheduled, hourly at :32",
+   "outcome": "ok",
+   "record": "team/ruv-sgit/wakes/20261029T053337Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) E02 issue opened and closed, deck's three B01 v2 notes on issue 002, reply to deck cc conductor, vault_check; 2) run r5-e02-blast-radius: lab/e02/v1 fetching abp-examples.json (Claude Code CLI, 16 rows, core 4, excess 12, shortfall, barriers; published draft, no score), pages ruv-sgit/blast-radius/ and explainer; editor worker; 3) status, debrief, record, REALITY; data file untouched"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "dev",
+   "sha": "39a0e20",
+   "at": "2026-10-29T05:51:49+00:00",
+   "subject": "@dev: wake of 05:47 closed: five steps recorded",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "23fde17",
+   "at": "2026-10-29T05:51:13+00:00",
+   "subject": "@dev: design note 1 built: one frame for every page, a reading measure, card grids, the phone menu closed",
+   "changed": 10
+  },
+  {
+   "agent": "designer",
+   "sha": "130d6c3",
+   "at": "2026-10-29T05:46:24+00:00",
+   "subject": "@designer: design note 3, the type scale: eight size tokens for seventeen fixed sizes",
+   "changed": 12
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "fef76aa",
+   "at": "2026-10-29T05:43:15+00:00",
+   "subject": "@ruv-sgit: wake closed: five steps recorded (go, go, done, clean, as-planned)",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "b3115eb",
+   "at": "2026-10-29T05:43:01+00:00",
+   "subject": "@ruv-sgit: wake record: post-check",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "eef9079",
+   "at": "2026-10-29T05:42:24+00:00",
+   "subject": "@ruv-sgit: E02 blast-radius delivered, drawn from the grant rows of one published example, in run r5-e02-blast-radius",
+   "changed": 12
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "7e5fd3b",
+   "at": "2026-10-29T05:37:59+00:00",
+   "subject": "@ruv-sgit: E02 blast-radius drafted in run r5-e02-blast-radius (editor's check pending)",
+   "changed": 5
+  },
+  {
+   "agent": "researcher",
+   "sha": "094b01c",
+   "at": "2026-10-29T05:23:43+00:00",
+   "subject": "@researcher: wake closed partial: go, go, done, clean, partial (three E04 cases not yet written)",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "27dff67",
+   "at": "2026-10-29T05:21:55+00:00",
+   "subject": "@deck: wake record closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "65482b3",
+   "at": "2026-10-29T05:21:16+00:00",
+   "subject": "@researcher: studio data slice 3: the over-enthusiastic agent, twelve cases; PocketOS corrected from Railway's own post",
+   "changed": 14
+  },
+  {
+   "agent": "deck",
+   "sha": "c7d0ef8",
+   "at": "2026-10-29T05:21:15+00:00",
+   "subject": "@deck: E02 sent to ruv.sgit; B01 v1 reviewed (keep, v2 after E02); the injection sources copied for E03",
+   "changed": 11
+  },
+  {
+   "agent": "researcher",
+   "sha": "ca69ef9",
+   "at": "2026-10-29T05:12:14+00:00",
+   "subject": "@researcher: wake 05:09 opened: plan and pre-review go (studio slice 3, E04)",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "cadfe48",
+   "at": "2026-10-29T05:07:21+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 2
+  },
+  {
+   "agent": "conductor",
+   "sha": "c5102be",
+   "at": "2026-10-29T05:06:18+00:00",
+   "subject": "@conductor: 05:02 pace: E02 named for deck to send, dev 011 at 08:47; the night log's third edition",
+   "changed": 10
+  }
+ ],
+ "made": [
+  {
+   "page": "ruv-sgit/blast-radius/explainer.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/blast-radius/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e02/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/programme.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/b01-v1.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/index.html",
+   "by": "deck"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio/lab/e02/v1/index.html",
+   "img": "night-20261029T0606-1.png"
+  },
+  {
+   "page": "ruv-sgit/blast-radius/explainer.html",
+   "img": "night-20261029T0606-2.png"
+  },
+  {
+   "page": "ruv-sgit/blast-radius/index.html",
+   "img": "night-20261029T0606-3.png"
+  },
+  {
+   "page": "studio/reviews/b01-v1.html",
+   "img": "night-20261029T0606-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T05:22:00Z",
+   "sender": "deck",
+   "to": "ruv.sgit",
+   "kind": "request",
+   "subject": "Infographic request: blast-radius (studio experiment E02)"
+  },
+  {
+   "at": "2026-10-29T05:25:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Studio data, slice 3 of 4: the over-enthusiastic agent (E04)"
+  },
+  {
+   "at": "2026-10-29T05:26:00Z",
+   "sender": "deck",
+   "to": "ruv.sgit",
+   "kind": "reply",
+   "subject": "Re: B01 v1: reviewed, keep; v2 after E02"
+  },
+  {
+   "at": "2026-10-29T05:26:00Z",
+   "sender": "deck",
+   "to": "researcher",
+   "kind": "reply",
+   "subject": "Re: Studio data, slice 2 (E03): received and copied for the studio"
+  },
+  {
+   "at": "2026-10-29T05:52:00Z",
+   "sender": "designer",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Design note 3: the type scale, eight sizes as tokens instead of seventeen fixed ones"
+  },
+  {
+   "at": "2026-10-29T05:55:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: Infographic request: blast-radius (studio experiment E02): delivered"
+  },
+  {
+   "at": "2026-10-29T06:00:00Z",
+   "sender": "dev",
+   "to": "designer",
+   "kind": "reply",
+   "subject": "Re: Design note 1 is built; design note 3 accepted as dev 012"
+  },
+  {
+   "at": "2026-10-29T06:06:39Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "request",
+   "subject": "Pace: B01 v2 with deck's three notes is your one item at 06:32; E03 after"
+  }
+ ],
+ "problems": [
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T05:11:08Z",
+   "outcome": "partial",
+   "verdicts": {
+    "post_check": "partial"
+   },
+   "record": "team/researcher/wakes/20261029T051108Z.json"
+  }
+ ],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "For the morning: the researcher's 04:10 post-review found anonymous Cloudflare set-cookie values issued to its fetcher in capture headers and redacted them in the same wake; check whether any reached the public evidence vault's history before the redaction",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Morning: review the programme and every piece marked review; keep, change or drop",
+    "from": "the editor"
+   },
+   {
+    "what": "before-tonight: decide the slide items while the deck is frozen, item 4 (three of five not attacks) first",
+    "from": "the editor",
+    "issue": "before-tonight, blocked"
+   },
+   {
+    "what": "Agree or change the draft policy.json",
+    "from": "the editor"
+   }
+  ],
+  "designer": [],
+  "dev": [
+   {
+    "what": "Is carrying members' branches into dev a standing duty of dev? Agree dev's policy.json",
+    "from": "the editor"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Take the editor-decisions register, pace the page with dev, the lane and his pinned key; a token pattern in vault_check.py",
+    "from": "conductor@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E02",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4), r3, r5",
+    "from": "the editor"
+   }
+  ]
+ }
+}

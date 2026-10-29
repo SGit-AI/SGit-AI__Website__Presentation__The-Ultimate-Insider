@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T11:53:21Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. dev 014, design note 5 (designer request, slot 11:47): --t-0 raised to clamp(36px,4.6vw,88px) and a display lead token in tokens.css (the gate allows no px sizes in site.css); in site.css the 901px+ columns minmax(0,960px) minmax(0,600px) from the left, the Venn at most 600px; in src/pages/index.html (a dev hold) \"the infrastructure\" and its subtitle to x=300; check 2560/1920/1600/1280/390. 2. Close 014, reply to designer, file 017; debrief, status, REALITY.",
+   "at": "2026-10-29T11:54:09Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "First verdict change: it read src/pages/index.html as a hold dev may not edit. Shown CLAUDE.md (\"Write only your scope.writes and scope.holds\") and the holds note, it corrected to go. Conditions: edit only the hero the designer names; stop if an owner is now named for index.html; --t-0 is used only by .hero h1; the tokens.css change in the debrief; gate; five widths; no secrets.",
+   "at": "2026-10-29T11:54:45Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "done",
+   "comment": "dev 014 built: tokens.css (--t-0 to 88px, --t-lead), site.css (hero columns, Venn 600px), index.html (label x=300); measured at 2560/1920/1600/1280/390; issue closed, designer reply (010, renumbered from 009), 017 filed; debrief, status, REALITY.",
+   "at": "2026-10-29T11:56:45Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff touches REALITY.md, index.html (one hero label x=335 to 300, a dev hold, no other owner named), site.css, tokens.css (stated in the debrief), dev debrief, status, wake. 0 outside scope; build and gate clean; vault_check passes on both vaults; no keys, tokens, personal details or directing text.",
+   "at": "2026-10-29T11:57:19Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done (98fc10c): tokens.css --t-0 and --t-lead, site.css hero columns and Venn, index.html label x=300; measured at five widths, two screenshots. Item 2 done: issue 014 closed, designer reply (renumbered 010), 017 filed, debrief, status, REALITY. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T11:57:38Z"
+  }
+ },
+ "closed": "2026-10-29T11:57:38Z",
+ "outcome": "ok"
+}

@@ -1,0 +1,446 @@
+{
+ "run": "r8-e03-injection-sources",
+ "purpose": "r8-e03-injection-sources: studio experiment E03, where injected words come from: sixteen sources an agent reads, one public case each, flowing into one agent",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/002-infographic-request-injection-sources-e03.eml)",
+  "date": "2026-10-29",
+  "text": "One sentence the audience must understand: everything an agent reads is a way in, so a prompt injection can arrive from anywhere it looks. The data: only src/static/studio/data/injection-sources.json: sixteen sources an agent consumes, one public case each, with its label and grade. Keep the researcher's cautions: label each case (four real-world incidents, four vendor-confirmed vulnerabilities, eight research demonstrations); draw what the words made the agent do, never the words themselves; no case has an independent second primary source; the code row is a pull request. What moves: the agent at the centre, as in E01 and E02, and the sixteen sources around it, each lit in turn by its case: what it read, what it then did. The inflow is the point: many ways in, one agent. Group the sources so the eye sees a few families (what it is sent, what it browses, what it builds with, what other agents give it). Length: 40 to 60 seconds; must read as a still at the end. No payload text; no product logos; no claim that a case was exploited in the wild unless its label says so; no number that is not in the file. Number or label each thing in the drawing itself, plain words first, and keep the text clear of the headline in the end state. Deliver at ruv-sgit/injection-sources/index.html with its explainer beside it."
+ },
+ "pass_of": null,
+ "commits_before": null,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "jti3pwj0",
+ "created_at": "2026-10-29T08:34:54+00:00",
+ "closed_at": "2026-10-29T08:41:28+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 3,
+  "tasks": 3,
+  "ruflo_calls": 15,
+  "ruflo_failed": 0,
+  "ruflo_ms": 7325
+ },
+ "branches": [
+  {
+   "name": "w-v1",
+   "role": "developer",
+   "files": 1,
+   "bytes": 8290,
+   "write_ms": 17688,
+   "merge_ms": 8619
+  },
+  {
+   "name": "w-explainer",
+   "role": "writer",
+   "files": 2,
+   "bytes": 10422,
+   "write_ms": 8060,
+   "merge_ms": 9085
+  },
+  {
+   "name": "w-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 2730,
+   "write_ms": 8204,
+   "merge_ms": 8728
+  },
+  {
+   "name": "w-v1-fixed",
+   "role": "developer",
+   "files": 1,
+   "bytes": 8417,
+   "write_ms": 7548,
+   "merge_ms": 8976
+  },
+  {
+   "name": "w-explainer-fixed",
+   "role": "writer",
+   "files": 2,
+   "bytes": 11277,
+   "write_ms": 8053,
+   "merge_ms": 9035
+  }
+ ],
+ "commits": 7,
+ "files": 9,
+ "bytes_plain": 44901,
+ "files_delivered": 7,
+ "bytes_delivered": 41136,
+ "store": {
+  "objects": 47,
+  "bytes": 65871,
+  "plaintext_hits": 0,
+  "probe": "72 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 4512,
+  "files": 9,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "create",
+   "ms": 2476,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 966,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4429,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1594,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 869,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 15225,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2398,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2055,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4166,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1411,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 922,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5726,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2152,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2273,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4659,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1537,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 902,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5764,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2233,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1983,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4512,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1621,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 964,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4963,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2252,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2048,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4676,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1572,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 927,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5553,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2505,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 1939,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4590,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 923,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 4512,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 1267
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p v1",
+   "rc": 0,
+   "ms": 463
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t writer -r specialist -p explainer",
+   "rc": 0,
+   "ms": 434
+  },
+  {
+   "seq": 4,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 499
+  },
+  {
+   "seq": 5,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d v1: E03 v1, driven, from injection-sources.json -p high",
+   "rc": 0,
+   "ms": 456
+  },
+  {
+   "seq": 6,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d explainer: the page and explainer under /ruv-sgit/injection-sources/ -p high",
+   "rc": 0,
+   "ms": 445
+  },
+  {
+   "seq": 7,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check the slide and explainer against the request, the data, its cautions and the studio checklist -p high",
+   "rc": 0,
+   "ms": 362
+  },
+  {
+   "seq": 8,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r8-e03-injection-sources: r8-e03-injection-sources: studio experiment E03, where injected words come from: sixteen sources an agent reads, one public case each, flowing into one agent -f conductor",
+   "rc": 0,
+   "ms": 340
+  },
+  {
+   "seq": 9,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v1 sha256:64613702d8d2027b files:1 -f developer",
+   "rc": 0,
+   "ms": 441
+  },
+  {
+   "seq": 10,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer sha256:78608683018ede46 files:2 -f writer",
+   "rc": 0,
+   "ms": 473
+  },
+  {
+   "seq": 11,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:bb1943ba9434444f files:1 -f editor",
+   "rc": 0,
+   "ms": 493
+  },
+  {
+   "seq": 12,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v1-fixed sha256:7d7b4aef0a8bc578 files:1 -f developer",
+   "rc": 0,
+   "ms": 395
+  },
+  {
+   "seq": 13,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer-fixed sha256:8e5a68ab5e64e382 files:2 -f writer",
+   "rc": 0,
+   "ms": 403
+  },
+  {
+   "seq": 14,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 412
+  },
+  {
+   "seq": 15,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 442
+  }
+ ],
+ "history": [
+  {
+   "id": "1de9cbb3bd78",
+   "message": "init",
+   "time": "2026-10-29T08:34:59Z"
+  },
+  {
+   "id": "daa7a1a5d3d9",
+   "message": "brief: run r8-e03-injection-sources",
+   "time": "2026-10-29T08:35:02Z"
+  },
+  {
+   "id": "713b348f8cd0",
+   "message": "developer v1: delivered 1 files",
+   "time": "2026-10-29T08:38:29Z"
+  },
+  {
+   "id": "cbec4d9a9ab0",
+   "message": "writer explainer: delivered 2 files",
+   "time": "2026-10-29T08:38:55Z"
+  },
+  {
+   "id": "d7ed8f9c2498",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T08:40:27Z"
+  },
+  {
+   "id": "d797571bed2b",
+   "message": "developer v1-fixed: delivered 1 files",
+   "time": "2026-10-29T08:40:45Z"
+  },
+  {
+   "id": "ac7397dfd400",
+   "message": "writer explainer-fixed: delivered 2 files",
+   "time": "2026-10-29T08:41:01Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "v1",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "explainer",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 81557,
+   "tool_uses": 8,
+   "wall_s": 69,
+   "must_fix": 3,
+   "should_fix": 5
+  },
+  {
+   "id": "v1-fixed",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session), the editor's fixes applied",
+   "tokens": null
+  },
+  {
+   "id": "explainer-fixed",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session), the editor's fixes applied",
+   "tokens": null
+  }
+ ],
+ "kept_at": "2026-10-29T08:41:51+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__r8-e03__vault-handover.zip",
+  "sha256": "a7f5c1a2f247c260",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "ruv-sgit",
+ "kind": "scheduled, hourly at :32",
+ "started": "2026-10-29T06:33:14Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) reply to deck and conductor: B01 v2 now as paced at 06:06, E02 v2 next unless re-paced; open the E02 v2 issue; vault_check; 2) run r6-b01-v2 on r2's kept vault: lab/b01/v2 (three, opener ?act, collision, way-out, brakes, index), 150 wpm timing, notes applied, editor worker, Versions line; 3) gate, status, debrief, REALITY, file mail, push",
+   "at": "2026-10-29T06:33:57Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "inside policy; r2 key on stdin from the 0600 home, never printed; vault_check before vault commits; replies to deck and conductor only, E02 v2 next unless re-paced (the conductor's call), issue opened, no work on it; talk.json, slides, BRIEF, version untouched",
+   "at": "2026-10-29T06:34:20Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "B01 v2 in run r6 (third pass on r2's vault, kept): five slides in lab/b01/v2, deck's five notes, editor's must-fix fixed; Versions line; reply to deck and conductor (E02 v2 next unless re-paced); issue 006 opened, no work on it; vault_check clean; status, debrief, REALITY",
+   "at": "2026-10-29T06:44:35Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1) replies, E02 v2 issue (no work on it), vault_check: done; 2) r6-b01-v2: five slides, index, frames.js, run files, Versions line: done; 3) status, debrief, REALITY: done, push after the reviews; conditions kept, nothing unplanned",
+   "at": "2026-10-29T06:45:03Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "two ruv-sgit commits; gate clean, 0 outside scope, vault_check clean; the brief gained one Versions line; v2 loads only the local engine; no key, token or directive text",
+   "at": "2026-10-29T06:45:28Z"
+  }
+ },
+ "closed": "2026-10-29T06:45:28Z",
+ "outcome": "ok"
+}

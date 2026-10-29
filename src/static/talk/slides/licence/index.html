@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A licence to operate, that can be suspended</title>
+<link rel="stylesheet" href="../../engine/slide.css">
+<script src="../../engine/slide.js"></script>
+<style>
+#lic{position:absolute;left:60px;top:160px;width:600px;border:3px solid var(--accent);border-radius:18px;background:var(--panel);padding:20px 26px;transition:border-color .3s}
+#lic h3{margin:0 0 14px;font:800 17px system-ui;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);display:flex;justify-content:space-between}
+#lic .r{display:grid;grid-template-columns:150px 1fr;gap:12px;font-size:21px;padding:7px 0;border-bottom:1px solid var(--line)}
+#lic .r i{font-style:normal;color:var(--dim);font-size:17px}
+#lic .r b{font-family:ui-monospace,monospace;color:var(--head);font-size:19px}
+#st{display:inline-block;margin-top:16px;font:800 26px system-ui;letter-spacing:.1em;padding:6px 16px;border-radius:10px;background:var(--accent);color:var(--on-accent)}
+#lic.sus{border-color:var(--agent)}#lic.sus #st{background:var(--agent);color:#fff}
+#evt{position:absolute;left:60px;top:500px;width:600px;font-size:19px;color:var(--agent);font-weight:700}
+#lad{position:absolute;left:730px;top:160px;width:490px}
+#lad h4{margin:0 0 12px;font:800 15px system-ui;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.lv{display:flex;align-items:center;gap:14px;border:2px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:10px;font-size:20px;font-weight:700;color:var(--dim);background:var(--panel)}
+.lv i{font-style:normal;font:800 15px ui-monospace,monospace;width:30px}
+.lv.on{border-color:var(--accent);color:var(--head);background:var(--accent-t)}
+#ladn{font-size:15px;color:var(--dim);margin-top:4px}
+</style>
+</head>
+<body>
+<div id="cv" data-end="12">
+  <p class="kk w">The way out · the decision, made in advance</p>
+  <div class="hl" data-in="0" style="font-size:40px">A licence to operate, with <em>a name and a date</em> on it.</div>
+  <div id="lic" data-in=".6">
+    <h3><span>Licence to operate</span><span>example</span></h3>
+    <div class="r"><i>Authority</i><b>the risk owner, by name</b></div>
+    <div class="r"><i>Licensee</i><b>agent: inbox-triage</b></div>
+    <div class="r"><i>Instrument</i><b>Agent Behaviour Policy v1.3</b></div>
+    <div class="r"><i>Valid until</i><b>30 November 2026</b></div>
+    <div id="st">ACTIVE</div>
+  </div>
+  <div id="evt" data-in="4.6">&#9888; footprint left the mandate: a send to an address outside the allow-list</div>
+  <div id="lad" data-in="6.6">
+    <h4>Autonomy, earned</h4>
+    <div class="lv" data-on="7.2"><i>L1</i>observe and report</div>
+    <div class="lv" data-on="7.8"><i>L2</i>propose, a person decides</div>
+    <div class="lv" data-on="8.4"><i>L3</i>act, with approval</div>
+    <div class="lv" data-on="9"><i>L4</i>act inside the envelope</div>
+    <div class="lv" data-on="9.6"><i>L5</i>act, and report exceptions</div>
+    <p id="ladn" data-in="10">Each level unlocked by evidence that the one below held. Illustrative.</p>
+  </div>
+  <div class="ft">RiskMandate, licence to operate (riskmandate.ai/licence-to-operate.html) · the licence and the ladder on this slide are examples</div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+window.SLIDE_RENDER = function (t, S) { var s = t >= 5.2; S.$('lic').classList.toggle('sus', s); S.$('st').textContent = s ? 'SUSPENDED' : 'ACTIVE' }
+</script>
+</body>
+</html>

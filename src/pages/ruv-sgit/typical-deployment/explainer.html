@@ -1,0 +1,58 @@
+<!--meta {"title": "E07 explained: a typical deployment, frame by frame", "description": "How studio experiment E07 opens one box on an architecture diagram into its reach graph: each frame with its time, where every word and number comes from, the technique, and what was tried and left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E07</a></nav>
+<p class="kicker">Studio experiment E07 · the explainer</p>
+<h1>A typical deployment, frame by frame</h1>
+<p class="lead">The one sentence: on the architecture diagram a deployment is one box; drawn from its published rows, the box reaches further than the box suggests, and what "the machine" means changes from one deployment to the next. Made by ruv.sgit@the-ultimate-insider at deck@'s request, the editor's word.</p>
+
+<h2>The frames (v1)</h2>
+<p>Seconds from the start; it ends at 46 s and holds still, and <code>?static</code> shows the end. The stages the player can jump to: the box (0 s), where it reaches (5 s), what it can do (10 s), the wall holds (19 s), a second box (26 s), the whole graph (40 s).</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>"On the diagram, it is one box." Two boxes in the middle, as drawn on an architecture diagram: "CI job, on a hosted runner" and "Browser extension, broad host permissions". The boxes are the agent, and the only things in the agent red.</td></tr>
+<tr><td>5 s</td><td>The CI box moves to the left and the headline becomes "One box, and everything it reaches."</td></tr>
+<tr><td>7 s</td><td>Three paths leave the box for the places it reaches, one every 0.9 s, each in the example's own words with the grammar's reach after it: the checked-out tree at this ref (project), the runner, destroyed after the job; not your machine (host), the internet, unrestricted (world).</td></tr>
+<tr><td>10 s</td><td>Seven things it can do, one path every 1.1 s, each ending in a dot and the source's label: teal for the four in its mandate (change and read the project, run programs as the account, reach any host on the internet), amber for the three beyond it (delete, read and change any file the account can reach).</td></tr>
+<tr><td>19 s</td><td>The eighth path, to "Commit to the repository it was pointed at", meets a wall and stops there; the wall stays whole and the dot is hollow. From 20.6 s its caption: "boundary: the token is contents:read".</td></tr>
+<tr><td>22 s</td><td>Under the box: "measured: 8 of 8 rows, inside the runner" and "it can do 8: 4 in its mandate, 4 beyond it".</td></tr>
+<tr><td>26 s</td><td>The browser extension's box moves left; from 28 s its three places: your browser, every page, every logged-in site (host); the sites you are logged into, as you (tenant); the internet, from your browser (world).</td></tr>
+<tr><td>30.5 s</td><td>"Read every page you visit" (teal, its mandate) and "Reach any host on the internet" (amber).</td></tr>
+<tr><td>33 s</td><td>The path to "Act in accounts with the credentials it holds" meets a wall; at 34.4 s the wall breaks, at 35 s the path goes on past it in amber, and its caption reads "setting: the site's own session controls".</td></tr>
+<tr><td>37 s</td><td>Under the box: "derived: 0 of 3 rows measured" and "it can do 3: 1 in its mandate, 2 beyond it".</td></tr>
+<tr><td>40 s</td><td>The footer: "From abp.sgit.ai's published examples: drafts from one author's network. Labels in the source's words. No score." The end state, still.</td></tr>
+</tbody></table></div>
+
+<h2>Where every word comes from</h2>
+<p>Only from the researcher's two files for the studio, read by the slide when it loads, so a corrected file corrects the slide: <a href="{{root}}studio/data/abp-examples.json">abp-examples.json</a> and <a href="{{root}}studio/data/capabilities.json">capabilities.json</a>.</p>
+<ul>
+<li><b>The two deployments</b> are the examples <code>github-actions-hosted-runner</code> ("A CI job on a hosted runner, under a service account") and <code>browser-extension-broad-host-permissions</code> ("A browser extension with broad host permissions"). The box words are cut from each example's <code>name</code>.</li>
+<li><b>The things it can do</b> are each example's <code>rows</code>, one dot per row, labelled with the capability's <code>label</code> in <code>capabilities.json</code>. Teal or amber is the row's <code>mandate_stance</code>: authorised, or not.</li>
+<li><b>The places it reaches</b> group the rows by the capability's <code>reach</code> and are named with that example's own <code>reach_in_this_example</code>. The CI job's project rows have none, so that place is named from the example's own notes on those rows ("the checked-out tree at this ref is readable"), cut to "the checked-out tree at this ref". This is the file's own caution: the same reach means different things in different examples, so "host" is the runner, destroyed after the job, for one, and your browser, every page, every logged-in site, for the other.</li>
+<li><b>The walls</b> are the two rows whose <code>barrier_kind</code> is not "none". The CI job's <code>write.repository.project</code> is a boundary, "the checkout is writable, but the token is contents:read, so nothing written can leave", captioned on the slide as "boundary: the token is contents:read"; it is the only boundary in the five examples, which is why the CI job's unbounded excess is 3, not 4. The extension's <code>authenticate-as.credential.tenant</code> is a setting, "the site's own session controls", captioned in full. In the abp.sgit.ai reading quoted in the file, a setting is not a control, so the wall breaks.</li>
+<li><b>The counts</b> under each box are the example's <code>grant</code>, <code>aligned</code> and <code>excess</code>: 8, 4 and 4 for the CI job; 3, 1 and 2 for the extension.</li>
+<li><b>Measured or derived</b> is each example's <code>rows_measured</code> and note: the CI job's 8 of 8 rows were measured inside the runner (26 August, per the note); the extension's 3 rows are derived from the browser's documented permission model, 0 measured.</li>
+<li><b>A published draft.</b> The file's about and the capabilities file's cautions both say it: both sites are one author's network, with no independent corroboration, and the mandates are the site's own first drafts, not elicited from deployers. The slide says so in its footer and gives no score or rating.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: the SVG paths and the text are built once from the data, then every frame is drawn from the slide's clock by <code>SLIDE_RENDER</code>, so the player can seek, pause and replay it. The stages are declared in <code>window.RUV_STEPS</code>.</li>
+<li>A graph in three columns, the box, the places, the things it can do, so no path crosses any text: paths run only in the gaps between columns.</li>
+<li>Three colours of meaning: the agent red for the two boxes only, teal for what is in the mandate, amber for what lies beyond it. Walls, places and paths to places are neutral. The walls use E04 v2's language: a wall that holds stays whole and the path stops at it; a wall that does not hold breaks, and the path changes colour as it goes past.</li>
+<li>Every text is 20 px or larger on the 1280 by 720 canvas; the ID "E07" sits at the top right at 68 px; both themes (<code>?theme=light</code>).</li>
+</ul>
+
+<h2>What was tried and left out</h2>
+<ul>
+<li><b>The programme's sketch of a deployment</b> (a coding agent with a repository token, cloud credentials, chat and a ticketing tool through MCP). None of that is in the two data files, so none of it is drawn; the two examples the request named stand in for it.</li>
+<li><b>The CI job's shortfall.</b> Its mandate asks for one thing it is not granted, <code>write.repository.tenant</code> (push the tag when a release is cut). It is a story about the mandate, not reach, so it is left to E02 and E09's way of drawing it; the count "4 in its mandate" is the aligned 4 of 5.</li>
+<li><b>The other three examples</b> (Claude Code with confirmations on and off, and the chat window with nothing connected). Claude Code is E02's subject, and its 16 rows would not fit beside a second shape at 20 px; E13 is the comparison of all five.</li>
+<li><b>Undo class and evidence tier</b> for each row. Both are in the file; drawing them would put a third mark on every dot and break the three-colour limit.</li>
+<li><b>Considered and changed.</b> A layout with each capability next to its place and paths straight from the box was considered and dropped on paper: the paths would have run through the labels, so the places got a column of their own. Two-line box captions ran out of the box, so "under a service account" was cut from the CI box (it stays in the example's name, above).</li>
+<li><b>It runs only over HTTP.</b> The slide reads its data with <code>fetch</code> when it loads, so opened as a file from disk it shows the boxes' frame and nothing else; on the site, or any local web server, it works.</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 in ruv.sgit run r14-e07-typical-deployment, at deck@'s request and the editor's word: a builder wrote the slide, this page and the piece's page and checked them in screenshots at several times in both themes, for the run's editor to check against the request and the data. The run goes in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a> when it is recorded.</p>
+</article>

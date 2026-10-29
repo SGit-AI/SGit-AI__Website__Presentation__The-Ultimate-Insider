@@ -1,0 +1,142 @@
+{
+ "schema": "the-ultimate-insider/agent-status/v1",
+ "agent": "conductor",
+ "as_of": "2026-10-29T17:08:32Z",
+ "round": 9,
+ "state": "18:05 hourly wake idle: the 17:59 follow-up ended at 18:02 with nothing open (part 1 final, nothing routed), dev shipped the Linux link slide (038) at 18:01; the 18:18 follow-up holds the 18:20 flag and the pre-lock refresh",
+ "done": [
+  {
+   "what": "Moments: the runs and batches as a strip, each opening on what you need to know, what changed and where it stood (admin/tools/moments.py)",
+   "evidence": "/articles/moments.html"
+  },
+  {
+   "what": "How this talk was built: a mini deck of the team in motion, six scenes animated from the team's public records (admin/tools/workflow_deck.py)",
+   "evidence": "/articles/how-this-talk-was-built.html"
+  },
+  {
+   "what": "The morning review: every piece with deck verdict, what went wrong, what waits on the editor",
+   "evidence": "team/conductor/debriefs/2026-10-29__the-morning-review.md"
+  },
+  {
+   "what": "designer@ joined: both vault keys sealed to its key (sha256:be6e012adf2fd796), its two requests routed, dev's schedule set",
+   "evidence": "team/conductor/pace.json"
+  },
+  {
+   "what": "admin/tools/night_log.py and the article the night, hour by hour, regenerated each round; the designer onboarding brief, at :39",
+   "evidence": "/articles/the-night-hour-by-hour.html"
+  },
+  {
+   "what": "Status of every member checked: five hourly tasks in their own sessions, five keys published; vault keys sealed to deck and ruv.sgit; tui-evidence-public audited (1221 files, clean) and added to vaults.json; the brief for the next hours; pace.json seeded; requests to deck and dev, notices to researcher and ruv.sgit",
+   "evidence": "team/conductor/briefs/, team/conductor/pace.json, team/conductor/vaults.json, the mail vault"
+  },
+  {
+   "what": "The five-step wake: wake.py, the review briefs, the WAKE.md section, start.py opens the record; this wake ran through it (plan go, pre-review change then go, work partial, post-review finding)",
+   "evidence": "admin/tools/wake.py, team/conductor/reviews/, team/conductor/wakes/, the round 8 debrief"
+  },
+  {
+   "what": "First scheduled wake: both vault keys sealed to dev's and researcher's published keys (fingerprints recomputed by sgit and matched), one zip each to the editor; dev's own task checked against schedule.json; researcher's request routed, accepted at :09, answered",
+   "evidence": "team/conductor/schedule.json (tasks.dev, runs.researcher); tui-mail-public mailroom/researcher/001"
+  },
+  {
+   "what": "Four hourly tasks created at the editor's word, each into its member's own session: dev :47, conductor :02, deck :17, ruv.sgit :32",
+   "evidence": "team/conductor/schedule.json (tasks), /team/schedule.html"
+  },
+  {
+   "what": "The stop control: a hold file halts every wake in start.py (tested both ways); any member may disable the tasks; only the editor lifts",
+   "evidence": "admin/tools/start.py, team/conductor/WAKE.md (Stopping)"
+  },
+  {
+   "what": "The guide to running this team, adapted from the newsroom conductor's guide, with what is not built yet marked; the wake protocol every member follows; tiny scheduled prompts",
+   "evidence": "content/articles/running-this-agent-team.md, team/conductor/WAKE.md, team/conductor/schedule.json"
+  },
+  {
+   "what": "The vaults manager's key (DC Vault Registry, sha256:956934e47063ceaa) published as a known key, with a QR image read back by pki-agent.mjs read-qr",
+   "evidence": "team/conductor/known-keys/, /admin/keys.html#known"
+  },
+  {
+   "what": "A handover zip for both vaults: each vault key sealed as a QR code to the vaults manager, each read key as a QR code, a manifest; and the tool for every agent",
+   "evidence": "admin/tools/vault_handover.py, admin/tools/qr.mjs, CLAUDE.md"
+  },
+  {
+   "what": "Every session starts by pulling: admin/tools/start.py, the rule in CLAUDE.md and every ROLE.md, checked by the gate",
+   "evidence": "admin/tools/start.py, admin/build/validate.py (banners)"
+  },
+  {
+   "what": "The hourly schedule, each member fifteen minutes apart, and how members ask each other for work",
+   "evidence": "team/conductor/schedule.json, /team/schedule.html, the mail vault's README"
+  },
+  {
+   "what": "The mail vault's key rotated after it was printed in a session log",
+   "evidence": "team/conductor/vaults.json (history), the round 4 debrief"
+  },
+  {
+   "what": "Two public vaults on dev.send.sgraph.ai: tui-issues-public (h9fh2apf, Issues-FS lite) and tui-mail-public (lotalm0w, moved from f9d5r3dp, Email-FS lite), each with a README, a folder per agent, and the first issues and messages",
+   "evidence": "team/conductor/vaults.json, /admin/keys.html#vaults, team/conductor/debriefs/2026-10-29__two-public-vaults.md"
+  },
+  {
+   "what": "The first five agents and a proposed schedule, mapped from the sibling teams",
+   "evidence": "admin/notes/2026-10-29__first-agents-and-schedule.md, team/conductor/schedule.json"
+  },
+  {
+   "what": "The conductor's session key, made in its own session and published with its QR image and session folder",
+   "evidence": "team/conductor/key.json, /team/conductor/#key, /admin/keys.html"
+  },
+  {
+   "what": "The start and end banners, one tool for every member, and the rule in every ROLE.md, checked by the gate",
+   "evidence": "admin/tools/banner.py, CLAUDE.md, admin/build/validate.py (banners)"
+  },
+  {
+   "what": "The key tool pinned with its hash, and a README for the next session",
+   "evidence": "admin/tools/pki-agent.mjs, pki-agent.mjs.sha256, pki-agent.README.md"
+  }
+ ],
+ "next": [
+  {
+   "what": "17:20 follow-up: pace the split (17:30) and part 1 (18:15)"
+  },
+  {
+   "what": "18:00 and 18:20: flag what will not make part 1"
+  },
+  {
+   "what": "before each lock: refresh Moments and the mini deck"
+  }
+ ],
+ "asks": [
+  {
+   "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+   "from": "the editor"
+  },
+  {
+   "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+   "from": "the editor"
+  },
+  {
+   "what": "D12: keep the evidence vault's history, or move the vault",
+   "from": "the editor"
+  },
+  {
+   "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
+   "from": "the editor"
+  },
+  {
+   "what": "Confirm 'newsroom.esquito.ai' = newsroom.sgit.ai and 'attrition' = commoditisation on the Wardley maps; 'Empower', 'the billing', which blast radius",
+   "from": "the editor"
+  },
+  {
+   "what": "Upload the motion and studio vault-key zips into their sessions",
+   "from": "the editor"
+  }
+ ],
+ "tokens": null,
+ "tokens_how": "the session does not show a token count to the agent",
+ "policy": {
+  "outside_scope": 2,
+  "out_of_scope_requests": 1,
+  "pushbacks": 0,
+  "overrides": 1,
+  "injection_seen": 0
+ },
+ "outside_scope_named": [
+  "CLAUDE.md: the five-step line, at the editor's word (round 8); not named in commit 5700bab's message, found by the post-review"
+ ]
+}

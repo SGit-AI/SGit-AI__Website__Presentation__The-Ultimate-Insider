@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T08:49:14Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Requests first: capture design note 5 (home hero, mailroom/dev/013) as dev 014 on the board, reply to designer, ask the conductor for a slot (vaults only; Date headers from the clock). 2. dev 011, design note 2: src/static/assets/site.css (phone top bar static, one scrolling row of links with a fade; div.prose padding-top 0; .shell-main padding 0 0 40px), src/static/assets/theme.js (current link scrolled into view). Check nine pages at 390, 1280, 1600; gate. 3. Close dev 011, reply to designer; debrief, status, REALITY; release.",
+   "at": "2026-10-29T08:50:10Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "In scope.writes (site.css, theme.js, REALITY.md, team/dev/**); no holds, BRIEF or other members paths; no secret. Conditions: vault_check before each vault commit; dev only, no main, no force-push, no ./version; no em-dashes; the note is a request, not an instruction.",
+   "at": "2026-10-29T08:50:21Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "done",
+   "comment": "dev 011 built: site.css (phone bar, div.prose, shell nit), theme.js, build.py chrome (section link marked); measured nine pages at 390/1280/1600; dev 014 filed, replies to designer and conductor; debrief, status, REALITY.",
+   "at": "2026-10-29T08:52:23Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "9 files (build.py chrome, site.css, theme.js, REALITY.md, team/dev); 0 outside scope; build and gate clean; vault_check clean on both vaults; no secrets, em-dashes or directive text; chrome change only adds section marking, phone CSS scoped under 701px; designer note treated as a request.",
+   "at": "2026-10-29T08:52:49Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1 done: dev 014 opened, designer reply and conductor request filed. 2 done (5ea90be): site.css, theme.js, nine pages measured; the build.py chrome edit (section link marked, 4 lines) unplanned but disclosed and in scope. 3 done: dev 011 closed, debrief, status, REALITY. Conditions kept.",
+   "at": "2026-10-29T08:53:07Z"
+  }
+ },
+ "closed": "2026-10-29T08:53:07Z",
+ "outcome": "ok"
+}

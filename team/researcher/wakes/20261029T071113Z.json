@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T07:11:13Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) the morning review's question (conductor 3d94be9, for the editor): finish the read-only counts per evidence-vault commit (hex tokens, anti-forgery tokens, cookie lines, email-shaped strings after looking at them), counts only; answer in evidence/updates/ and a reply to the conductor and a notice to the editor in the mail vault; board issue 007. 2) the call: public page tokens served to every anonymous visitor are not secrets, so not a stop, unless a real credential or a personal email turns up (then a hold); the editor's choice, keep or rotate with sgit vault move, added to editor-decisions.json as D12; nothing rotated this wake. 3) status, debrief; vault_check before vault commits.",
+   "at": "2026-10-29T07:14:14Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Go, as a finding for the editor, not a stop: anonymous-page form and hex tokens are served to every visitor; the write-only append tokens are public by their owners' choice. A real credential, vault key, private key or personal email would be a stop and HOLD.md. Counts only: no value or fragment printed, quoted, committed or prompted. No rotating, moving or deleting a vault or rewriting history without the editor's word (D12). No posting with any token. vault_check before every vault commit; dev only.",
+   "at": "2026-10-29T07:14:28Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "Answered the morning review: per-commit counts in evidence/updates/2026-10-29__the-vault-history-checked.md (cookie values 23 files until 04:25, hex tokens 8 until 03:18, form tokens 11 until 06:23; publishers' role addresses in PDFs only); a first anchored cookie pattern gave false zeros, caught by a control and redone; D12 added to editor-decisions.json; mail conductor 007, editor 005; board 007 done; status, debrief. Nothing rotated.",
+   "at": "2026-10-29T07:17:59Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build, validate, agents check (0 outside scope) and vault_check on all three pass. No token, cookie or email value or fragment in the diff, the update, the mail or the issue: counts and commit ids only. No vault rotated, moved or deleted (D12 asks the editor); nothing posted; no agent-directed text; no writes outside policy.",
+   "at": "2026-10-29T07:18:58Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) counts per commit done (aa7a3eb, the update); reply conductor 007, notice editor 005, board 007 done. 2) the call and D12 done; nothing rotated; no hold needed. 3) status, debrief done; vault_check passed. Conditions kept. The counting before the plan was read-only, to inform it; every write came after the go.",
+   "at": "2026-10-29T07:19:20Z"
+  }
+ },
+ "closed": "2026-10-29T07:19:20Z",
+ "outcome": "ok"
+}

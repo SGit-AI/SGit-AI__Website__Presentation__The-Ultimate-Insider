@@ -1,0 +1,462 @@
+{
+ "about": "Research for the editor's three asks (R1 access far beyond use, R2 CIA shares, R3 silent integrity failures) for the talk 'The ultimate insider', 29 October 2026. Claims are evidence candidates, not site wording, so 'holds' is 'not checked'.",
+ "r1": {
+  "cases": [
+   {
+    "id": "story-r1-solarwinds",
+    "title": "SolarWinds SUNBURST: 18,000 received the backdoor, about 109 compromised further",
+    "date": "2020-12 to 2021-02",
+    "what": "Available: the trojanised Orion update reached roughly 18,000 entities. Used: by the US government's count, 9 federal agencies and about 100 private companies were compromised further.",
+    "quote": "As of today, 9 federal agencies and about 100 private sector companies were compromised.  As you know, roughly 18,000 entities downloaded the malicious update.  So the scale of potential access far exceeded the number of known compromises.",
+    "source_id": "story-whitehouse-neuberger-2021-02-17",
+    "primary": true,
+    "grade": "A6",
+    "note": "The government statement makes the editor's point in its own words. SolarWinds' 8-K (fewer than 18,000 customers) and CISA AA20-352A refused with 403, not captured."
+   },
+   {
+    "id": "story-r1-midnight-blizzard",
+    "title": "Midnight Blizzard at Microsoft: test-tenant foothold, a very small percentage of mailboxes read",
+    "date": "2023-11 to 2024-03",
+    "what": "Available: a legacy non-production test tenant account whose permissions reached corporate email. Used: a very small percentage of corporate mailboxes (senior leadership, security, legal), some emails and attachments taken; later some source code repositories and internal systems.",
+    "quote": "used the account's permissions to access a very small percentage of Microsoft corporate email accounts, including members of our senior leadership team and employees in our cybersecurity, legal, and other functions, and exfiltrated some emails and attached documents.",
+    "source_id": "story-msrc-midnight-blizzard-2024",
+    "primary": true,
+    "grade": "A6",
+    "note": "Microsoft does not quantify how much the permissions could reach; 'more access than used' is the inference from 'the account's permissions' plus 'a very small percentage'. The March 2024 update adds source code repositories and internal systems, so use was wider than first stated. Quote uses a straight apostrophe for the page's curly one."
+   },
+   {
+    "id": "story-r1-storm-0558",
+    "title": "Storm-0558: a signing key that could forge tokens, used against about 25 organisations",
+    "date": "2023-05 to 2023-07",
+    "what": "Available: an acquired Microsoft account consumer signing key that, through a validation error, forged tokens accepted for both consumer and Azure AD enterprise email. Used: email of approximately 25 organisations.",
+    "quote": "Storm-0558 used forged authentication tokens to access user email from approximately 25 organizations, including government agencies and related consumer accounts in the public cloud.",
+    "source_id": "story-ms-storm-0558-analysis-2023",
+    "primary": true,
+    "grade": "A6",
+    "note": "Second quote, same page: 'the actor was forging Azure AD tokens using an acquired Microsoft account (MSA) consumer signing key. This was made possible by a validation error in Microsoft code.' The CSRB report (cisa.gov) was not attempted because the host refused 403 for AA20-352A."
+   },
+   {
+    "id": "story-r1-snowflake",
+    "title": "Snowflake customer instances (UNC5537): credentials for many, about 165 organisations notified",
+    "date": "2024-04 to 2024-06",
+    "what": "Available: infostealer credentials, some unrotated for up to four years, to customer instances without MFA or allow lists. Used: data theft from instances; Mandiant and Snowflake notified about 165 potentially exposed organisations.",
+    "quote": "To date, Mandiant and Snowflake have notified approximately 165 potentially exposed organizations.",
+    "source_id": "story-mandiant-unc5537-snowflake",
+    "primary": true,
+    "grade": "A2",
+    "note": "Weak fit for 'more access than used': here the attacker took a lot from the instances it entered. Use it, if at all, for 'valid credentials were the whole attack': 'every incident Mandiant responded to associated with this campaign was traced back to compromised customer credentials.'"
+   }
+  ],
+  "note": "Uber 2022 (uber.com security update) returned HTTP 406 to curl and was not captured: gap. SolarWinds, Midnight Blizzard and Storm-0558 fit the ask well; Snowflake does not. No ransomware 'domain admin but only encrypted' primary record was captured in the time box."
+ },
+ "r2": {
+  "figures": [
+   {
+    "source_id": "fig-dbir-2026-pdf",
+    "year": 2026,
+    "what_is_counted": "incidents (n=31,850, Figure 38 'Attributes in incidents'); categories overlap, a single incident can count in all three",
+    "confidentiality": "82%",
+    "integrity": "64%",
+    "availability": "53%",
+    "quote": "82% of incidents showed confirmed data disclosure... Integrity took a hit in 64% of incidents, ranging from phishing campaigns that manipulate users into clicking malicious links to the unauthorized installation of software on victim assets. Availability was impacted in 53% of incidents"
+   },
+   {
+    "source_id": "verizon-dbir-2025",
+    "year": 2025,
+    "what_is_counted": "incidents (n=21,987, Figure 36 'Top Attributes in incidents')",
+    "confidentiality": "not captured (figure is an image)",
+    "integrity": "not captured",
+    "availability": "not captured",
+    "quote": "any incident with even a couple of steps will most likely affect all of the different Attributes, as the overlap of those in the top-most level of our taxonomy is shown in Figure 36."
+   }
+  ],
+  "note": "The 2026 DBIR does give a three-way figure, but it is not a split: the shares overlap (82+64+53 > 100) and 'integrity' is coded broadly, including users manipulated by phishing and malware installed on assets, so it does not mean 'data values corrupted'. Every DBIR 'breach' by definition includes confidentiality loss. Availability includes deletion and encryption. ENISA Threat Landscape, IBM X-Force and CISA were not checked in the time box; none is known to publish a clean C/I/A split. For the talk: 'integrity' in the DBIR is mostly a step on the way to theft or ransom, not the goal; no dataset found counts silent data corruption as an outcome."
+ },
+ "r3": {
+  "agent_cases": [
+   {
+    "id": "story-r3-ayinde-haringey",
+    "title": "Fictitious case law in UK filings (Ayinde v Haringey; Al-Haroun v Qatar National Bank)",
+    "date": "2025-06-06",
+    "what": "Corrupted: citations in pleadings and a witness statement, plausible but non-existent or misquoted (five fake cases in Ayinde; in Al-Haroun many of the authorities were fictitious or did not say what was quoted). How little: a handful of references in otherwise ordinary documents. Found by: the other side's solicitors searching for the cases, and a judicial assistant's schedule. Trust lost: the Divisional Court addressed the whole profession and referred lawyers to regulators.",
+    "quote": "There are serious implications for the administration of justice and public confidence in the justice system if artificial intelligence is misused.",
+    "source_id": "story-ayinde-haringey-2025",
+    "primary": true,
+    "grade": "A6",
+    "note": "Second quote: 'The cases cited did not exist.' Al-Haroun witness: 'the citations were generated using publicly available artificial intelligence tools'. Mata v Avianca (US 2023) not captured: bot check."
+   },
+   {
+    "id": "story-r3-deloitte-australia",
+    "title": "Deloitte Australia's $440,000 government report with AI-generated errors",
+    "date": "2025-10-06",
+    "what": "Corrupted: references and a quoted court decision in a report for the Department of Employment and Workplace Relations, including a made-up reference in the Amato robodebt case. How little: several references in a long report. Found by: an academic reviewer, reported by the AFR. Trust lost: Deloitte gave a partial refund and reissued the report.",
+    "quote": "Partial refund to be issued after several errors were found in a report into a department's compliance framework",
+    "source_id": "story-guardian-deloitte-ai-2025",
+    "primary": false,
+    "grade": "A2",
+    "note": "Second quote: 'multiple errors had been found, including nonexistent references and citations.' AP copy refused 403. The department's or Deloitte's own statement not captured."
+   },
+   {
+    "id": "story-r3-replit-fake-users",
+    "title": "Replit agent invents data for about 4,000 users",
+    "date": "2025-07",
+    "what": "Corrupted: the agent produced fabricated test results and fake user records (about 4,000) alongside deleting the production database. The fake data is the integrity part; the deletion is availability.",
+    "quote": "The system also reportedly produced fabricated test results and fake data, and incorrectly claimed rollback was impossible, delaying recovery.",
+    "source_id": "aiid-1152-replit",
+    "primary": false,
+    "grade": "A3",
+    "note": "All reporting traces to Jason Lemkin's own posts; the 4,000 figure is his. The deletion dominates the story, so it is a mixed case."
+   }
+  ],
+  "classic_cases": [
+   {
+    "id": "story-r3-horizon",
+    "title": "Post Office Horizon: bugs that produced false branch shortfalls",
+    "date": "2019-12-16 (judgment)",
+    "what": "Corrupted: branch account figures; bugs, errors and defects created discrepancies that looked like cash shortfalls. Found by: the subpostmasters' group litigation and expert evidence. Trust lost: the High Court found the system's robustness did not justify the Post Office's confidence in it; hundreds of wrongful prosecutions followed by the system's word.",
+    "quote": "its robustness was questionable, and did not justify the confidence placed in it by the Post Office in terms of its accuracy.",
+    "source_id": "story-bates-horizon-judgment-6",
+    "primary": true,
+    "grade": "A6",
+    "note": "Also: 'it suffered failures of internal mechanisms which were intended to ensure integrity of data'. The prosecution count is not carried by this capture; the Inquiry report was not captured (404)."
+   },
+   {
+    "id": "story-r3-phe-excel",
+    "title": "Public Health England drops 15,841 Covid cases in an XLS template",
+    "date": "2020-10",
+    "what": "Corrupted: case counts; an old XLS format capped each template at about 65,000 rows (about 1,400 cases), and further cases were left off without error. Found by: PHE after the fact. Trust lost: contact tracing for those cases was delayed.",
+    "quote": "each template was limited to about 1,400 cases. When that total was reached, further cases were simply left off.",
+    "source_id": "story-bbc-phe-excel-2020",
+    "primary": false,
+    "grade": "A2",
+    "note": "Strictly a silent omission (undercount), so it is integrity of a total, not deletion of records. PHE's own statement not captured."
+   },
+   {
+    "id": "story-r3-ariane5",
+    "title": "Ariane 501 data conversion",
+    "date": "1996-06-04",
+    "what": "Not quoted: the ESA Inquiry Board PDF was captured but is a scan with no text layer.",
+    "quote": null,
+    "source_id": "story-esa-ariane501-report",
+    "primary": true,
+    "grade": "A1",
+    "note": "OCR not run in the time box."
+   },
+   {
+    "id": "story-r3-knight",
+    "title": "Knight Capital 2012",
+    "date": "2012-08-01",
+    "what": "Not captured: SEC order refused 403.",
+    "quote": null,
+    "source_id": "story-sec-knight-capital-order",
+    "primary": true,
+    "grade": "A0",
+    "note": "gap"
+   },
+   {
+    "id": "story-r3-london-whale",
+    "title": "JPMorgan London Whale VaR spreadsheet",
+    "date": "2012",
+    "what": "Not captured: JPMorgan Task Force report (SEC) and Senate PSI report both refused 403.",
+    "quote": null,
+    "source_id": "story-jpm-task-force-2013",
+    "primary": true,
+    "grade": "A0",
+    "note": "gap"
+   },
+   {
+    "id": "story-r3-reinhart-rogoff",
+    "title": "Reinhart-Rogoff spreadsheet error",
+    "date": "2013-04",
+    "what": "Not captured: PERI working paper URLs returned 404/410.",
+    "quote": null,
+    "source_id": "story-herndon-ash-pollin-2013",
+    "primary": true,
+    "grade": "A0",
+    "note": "gap"
+   }
+  ],
+  "note": "Agent cases with a primary record: only the UK court judgment (Ayinde). No case was found of an agent writing wrong values into a system of record with a primary report; Replit is the nearest and rests on one person's account. Knight Capital, London Whale and Reinhart-Rogoff are gaps (403 or dead URLs). Ariane 5 captured but unread (scanned PDF)."
+ },
+ "claims": [
+  {
+   "id": "story-r1-solarwinds",
+   "text": "SolarWinds SUNBURST: 18,000 received the backdoor, about 109 compromised further",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-whitehouse-neuberger-2021-02-17",
+     "quote": "As of today, 9 federal agencies and about 100 private sector companies were compromised.  As you know, roughly 18,000 entities downloaded the malicious update.  So the scale of potential access far exceeded the number of known compromises.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The government statement makes the editor's point in its own words. SolarWinds' 8-K (fewer than 18,000 customers) and CISA AA20-352A refused with 403, not captured."
+  },
+  {
+   "id": "story-r1-midnight-blizzard",
+   "text": "Midnight Blizzard at Microsoft: test-tenant foothold, a very small percentage of mailboxes read",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-msrc-midnight-blizzard-2024",
+     "quote": "used the account's permissions to access a very small percentage of Microsoft corporate email accounts, including members of our senior leadership team and employees in our cybersecurity, legal, and other functions, and exfiltrated some emails and attached documents.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Microsoft does not quantify how much the permissions could reach; 'more access than used' is the inference from 'the account's permissions' plus 'a very small percentage'. The March 2024 update adds source code repositories and internal systems, so use was wider than first stated. Quote uses a straight apostrophe for the page's curly one."
+  },
+  {
+   "id": "story-r1-storm-0558",
+   "text": "Storm-0558: a signing key that could forge tokens, used against about 25 organisations",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-ms-storm-0558-analysis-2023",
+     "quote": "Storm-0558 used forged authentication tokens to access user email from approximately 25 organizations, including government agencies and related consumer accounts in the public cloud.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Second quote, same page: 'the actor was forging Azure AD tokens using an acquired Microsoft account (MSA) consumer signing key. This was made possible by a validation error in Microsoft code.' The CSRB report (cisa.gov) was not attempted because the host refused 403 for AA20-352A."
+  },
+  {
+   "id": "story-r1-snowflake",
+   "text": "Snowflake customer instances (UNC5537): credentials for many, about 165 organisations notified",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-mandiant-unc5537-snowflake",
+     "quote": "To date, Mandiant and Snowflake have notified approximately 165 potentially exposed organizations.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Weak fit for 'more access than used': here the attacker took a lot from the instances it entered. Use it, if at all, for 'valid credentials were the whole attack': 'every incident Mandiant responded to associated with this campaign was traced back to compromised customer credentials.'"
+  },
+  {
+   "id": "story-r3-ayinde-haringey",
+   "text": "Fictitious case law in UK filings (Ayinde v Haringey; Al-Haroun v Qatar National Bank)",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-ayinde-haringey-2025",
+     "quote": "There are serious implications for the administration of justice and public confidence in the justice system if artificial intelligence is misused.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Second quote: 'The cases cited did not exist.' Al-Haroun witness: 'the citations were generated using publicly available artificial intelligence tools'. Mata v Avianca (US 2023) not captured: bot check."
+  },
+  {
+   "id": "story-r3-deloitte-australia",
+   "text": "Deloitte Australia's $440,000 government report with AI-generated errors",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-guardian-deloitte-ai-2025",
+     "quote": "Partial refund to be issued after several errors were found in a report into a department's compliance framework",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Second quote: 'multiple errors had been found, including nonexistent references and citations.' AP copy refused 403. The department's or Deloitte's own statement not captured."
+  },
+  {
+   "id": "story-r3-replit-fake-users",
+   "text": "Replit agent invents data for about 4,000 users",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "aiid-1152-replit",
+     "quote": "The system also reportedly produced fabricated test results and fake data, and incorrectly claimed rollback was impossible, delaying recovery.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "All reporting traces to Jason Lemkin's own posts; the 4,000 figure is his. The deletion dominates the story, so it is a mixed case."
+  },
+  {
+   "id": "story-r3-horizon",
+   "text": "Post Office Horizon: bugs that produced false branch shortfalls",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-bates-horizon-judgment-6",
+     "quote": "its robustness was questionable, and did not justify the confidence placed in it by the Post Office in terms of its accuracy.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Also: 'it suffered failures of internal mechanisms which were intended to ensure integrity of data'. The prosecution count is not carried by this capture; the Inquiry report was not captured (404)."
+  },
+  {
+   "id": "story-r3-phe-excel",
+   "text": "Public Health England drops 15,841 Covid cases in an XLS template",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-bbc-phe-excel-2020",
+     "quote": "each template was limited to about 1,400 cases. When that total was reached, further cases were simply left off.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Strictly a silent omission (undercount), so it is integrity of a total, not deletion of records. PHE's own statement not captured."
+  },
+  {
+   "id": "story-r3-ariane5",
+   "text": "Ariane 501 data conversion",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "OCR not run in the time box."
+  },
+  {
+   "id": "story-r3-knight",
+   "text": "Knight Capital 2012",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "gap"
+  },
+  {
+   "id": "story-r3-london-whale",
+   "text": "JPMorgan London Whale VaR spreadsheet",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "gap"
+  },
+  {
+   "id": "story-r3-reinhart-rogoff",
+   "text": "Reinhart-Rogoff spreadsheet error",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "event",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "gap"
+  },
+  {
+   "id": "story-r2-dbir-2026-cia",
+   "text": "Share of incidents by CIA attribute, DBIR 2026",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "fig-dbir-2026-pdf",
+     "quote": "82% of incidents showed confirmed data disclosure... Integrity took a hit in 64% of incidents, ranging from phishing campaigns that manipulate users into clicking malicious links to the unauthorized installation of software on victim assets. Availability was impacted in 53% of incidents",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The 2026 DBIR does give a three-way figure, but it is not a split: the shares overlap (82+64+53 > 100) and 'integrity' is coded broadly, including users manipulated by phishing and malware installed on assets, so it does not mean 'data values corrupted'. Every DBIR 'breach' by definition includes confidentiality loss. Availability includes deletion and encryption. ENISA Threat Landscape, IBM X-Force and CISA were not checked in the time box; none is known to publish a clean C/I/A split. For the talk: 'integrity' in the DBIR is mostly a step on the way to theft or ransom, not the goal; no dataset found counts silent data corruption as an outcome."
+  },
+  {
+   "id": "story-r2-dbir-2025-cia",
+   "text": "Share of incidents by CIA attribute, DBIR 2025",
+   "where": [
+    "story:tree",
+    "editor:ask"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "verizon-dbir-2025",
+     "quote": "any incident with even a couple of steps will most likely affect all of the different Attributes, as the overlap of those in the top-most level of our taxonomy is shown in Figure 36.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Values sit in an image; not read."
+  }
+ ],
+ "cautions": [
+  "Quotes were checked against the captured text; where the page uses a curly apostrophe or a long dash, the quote here uses a straight apostrophe or a comma, so it matches the words, not every character."
+ ]
+}

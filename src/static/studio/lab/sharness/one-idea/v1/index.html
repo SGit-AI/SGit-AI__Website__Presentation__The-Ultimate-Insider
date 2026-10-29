@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHarness: the one idea</title>
+<link rel="stylesheet" href="../../../../../talk/engine/slide.css">
+<script>window.RUV_STEPS = [{ t: 0, label: 'the policy' }, { t: 7, label: 'one hash' }, { t: 13, label: 'the kernel told' }, { t: 19, label: 'four requests' }, { t: 31, label: 'the quote' }, { t: 34, label: 'the footer' }]</script>
+<script src="../../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:6px}
+.hl{top:56px;font-size:34px;right:230px}
+#id{position:absolute;right:40px;top:6px;font:800 72px/1 system-ui;color:var(--head)}
+.card{position:absolute;left:40px;width:550px;box-sizing:border-box;padding:10px 18px;border:2px solid var(--line2);background:var(--panel);border-radius:10px;font:20px/26px system-ui;color:var(--text)}
+.card h3{margin:0 0 4px;font:800 22px/28px system-ui;color:var(--head)}
+.card b{color:var(--head)}
+.mono{font:700 24px/30px ui-monospace,Menlo,Consolas,monospace;color:var(--infra)}
+.lab{position:absolute;left:652px;font:600 20px/24px system-ui;color:var(--text)}
+.res{position:absolute;left:984px;width:260px;font:700 20px/24px system-ui;white-space:nowrap}
+.res.go{color:var(--text)}
+.res.held{color:var(--accent)}
+#colh{position:absolute;left:640px;top:114px;font:800 22px/28px system-ui;color:var(--head)}
+#wallh{position:absolute;left:810px;top:146px;width:300px;text-align:center;font:700 20px/28px system-ui;color:var(--accent)}
+#pic{position:absolute;left:0;top:0;width:1280px;height:720px}
+#quote{position:absolute;left:640px;top:548px;width:600px;box-sizing:border-box;padding:8px 16px;border-left:6px solid var(--accent);font:600 22px/28px system-ui;color:var(--head)}
+#foot{position:absolute;left:40px;right:40px;bottom:12px;font:20px/1.3 system-ui;color:var(--dim)}
+#foot b{color:var(--head)}
+#src{position:absolute;left:40px;top:84px;font:20px/24px system-ui;color:var(--dim)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="36">
+  <p class="kk a">SHarness · the one idea · v1, driven</p>
+  <div id="id">SH4</div>
+  <div class="hl" data-in="0">One idea: <em>a policy you can hash, a kernel that says no.</em></div>
+  <div class="card" id="c1" style="top:116px;height:224px"><h3>1. The policy, P1 (a coding agent's session)</h3>read /usr and /work<br>write /work and /tmp<br>exec /usr and /lib<br>TCP 443 only<br>64 MB memory, no_new_privs</div>
+  <div class="card" id="c2" style="top:352px;height:104px"><div class="mono">sha256:e619092574cc31d0...</div>2. One hash, one name: <b>change one byte and it is a different name</b></div>
+  <div class="card" id="c3" style="top:468px;height:104px"><b>3. The kernel is told before the tool starts:</b> Landlock per path and port, a network namespace, rlimits, cgroups</div>
+  <div id="colh">4. The agent's tool, four requests</div>
+  <div id="wallh">the wall (drawn by us)</div>
+  <svg id="pic" viewBox="0 0 1280 720" aria-label="Four requests from the agent's tool travel toward a wall that holds: read and write inside the policy pass, a connection to port 80 and a 200 MiB allocation stop at the wall"></svg>
+  <div id="rows"></div>
+  <div id="quote"></div>
+  <div id="foot"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // Facts carried inline from the capture (anim-one-idea, source_id sharness2-anim-one-idea); nothing is fetched.
+  var R = [['read /usr/lib', 'allowed', 1], ['write /work/notes.md', 'allowed', 1], ['connect 1.1.1.1:80', 'refused (EACCES)', 0], ['allocate 200 MiB', 'refused (MemoryError)', 0]]
+  var AT = [19, 22, 25, 28], NS = 'http://www.w3.org/2000/svg', B = null, TOP = 190, H = 84, WX = 960
+  var QUOTE = 'a tricked agent asks for more; the kernel says no. The policy and its hash did not change.'
+  function el(tag, a, p) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e }
+  function build(S) {
+    var svg = S.$('pic'), html = '', rows = []
+    R.forEach(function (r, i) {
+      var y = TOP + i * H, py = y + 34, g = el('g', {}, svg), o = { g: g }
+      html += '<div class="lab" id="l' + i + '" style="top:' + (y - 6) + 'px">' + r[0] + '</div>'
+      html += '<div class="res ' + (r[2] ? 'go' : 'held') + '" id="x' + i + '" style="top:' + (py - 12) + 'px">' + r[1] + '</div>'
+      el('circle', { cx: 656, cy: py, r: 8, fill: 'var(--agent)' }, g)
+      if (r[2]) {
+        el('rect', { x: WX - 6, y: py - 30, width: 12, height: 20, rx: 3, fill: 'var(--accent)' }, g); el('rect', { x: WX - 6, y: py + 10, width: 12, height: 20, rx: 3, fill: 'var(--accent)' }, g)
+        o.l = el('path', { d: 'M664 ' + py + 'H' + (WX + 14), fill: 'none', stroke: 'var(--infra)', 'stroke-width': 5, 'stroke-linecap': 'round' }, g); o.L = WX + 14 - 664
+      } else {
+        el('rect', { x: WX - 6, y: py - 30, width: 12, height: 60, rx: 3, fill: 'var(--accent)' }, g)
+        o.l = el('path', { d: 'M664 ' + py + 'H' + (WX - 12), fill: 'none', stroke: 'var(--agent)', 'stroke-width': 5, 'stroke-linecap': 'round' }, g); o.L = WX - 12 - 664
+      }
+      o.l.setAttribute('stroke-dasharray', o.L + ' ' + o.L); rows.push(o)
+    })
+    S.$('rows').innerHTML = html; B = rows
+  }
+  window.SLIDE_RENDER = function (t, S) {
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .5))) }
+    S.$('c1').style.opacity = k(.5); S.$('c2').style.opacity = k(7.5); S.$('c3').style.opacity = k(13.5)
+    S.$('colh').style.opacity = k(18.5); S.$('wallh').style.opacity = k(18.5)
+    B.forEach(function (o, i) {
+      var a = AT[i]
+      S.$('l' + i).style.opacity = k(a, .4); o.g.style.opacity = k(a, .4)
+      o.l.setAttribute('stroke-dashoffset', o.L * (1 - S.seg(t, a + .2, a + 1.4)))
+      S.$('x' + i).style.opacity = k(a + 1.4, .4)
+    })
+    var q = S.$('quote'); q.style.opacity = k(31, .6)
+    if (!q.textContent) q.textContent = '"' + QUOTE + '"'
+    S.$('foot').style.opacity = k(34, .6)
+    if (!S.$('foot').innerHTML) S.$('foot').innerHTML = '<b>A policy you can hash + a kernel that enforces it + a launcher above the agent.</b> The first two run today; the third is designed. As sharness.ai draws it: only the with state. Source: sharness.ai front page (capture: anim-one-idea).'
+  }
+})()
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E04 v1: the over-enthusiastic agent</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<script>window.RUV_STEPS = [{ t: 0, label: 'the headline' }, { t: 1.5, label: 'Replit, told fully' }, { t: 15, label: 'four columns' }, { t: 17, label: 'the other ten' }, { t: 42, label: 'what stood in the way' }]</script>
+<script src="../../../../talk/engine/slide.js"></script>
+<style>
+.kk{font-size:20px;top:14px}
+.hl{top:52px;font-size:40px}
+#one{position:absolute;left:40px;right:40px;top:116px}
+#one .t{font:800 24px system-ui;color:var(--head);margin-bottom:14px}
+#one .t span{font-weight:600;color:var(--dim)}
+#one .row{display:flex;gap:20px}
+#one .bx{flex:1;border:2px solid var(--line2);border-radius:12px;padding:14px 16px;min-height:250px;font:22px/1.3 system-ui;color:var(--text)}
+#one .bx b{display:block;font:800 20px system-ui;letter-spacing:.04em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+#one .bx.fix{border-color:var(--agent)}
+#one .bx.fix b{color:var(--agent)}
+#one .own{margin-top:18px;font:22px/1.3 system-ui;color:var(--dim)}
+#tb{position:absolute;left:30px;top:104px;width:1230px}
+#tb .h,#tb .r{display:grid;grid-template-columns:200px 195px 220px 300px 265px;column-gap:12px}
+#tb .h{font:800 20px system-ui;letter-spacing:.03em;text-transform:uppercase;color:var(--dim);height:26px}
+#tb .h .fx{color:var(--agent)}
+#tb .r{min-height:44px;font:20px/21px system-ui;color:var(--text);border-top:1px solid var(--line2);padding-top:2px}
+#tb .r.sep{border-top:2px solid var(--dim)}
+#tb .r .c{font:800 20px/21px system-ui;color:var(--head)}
+#tb .r .c i{display:block;font:600 20px/21px system-ui;font-style:normal;color:var(--dim);white-space:nowrap}
+#tb .r .f{color:var(--agent);font-weight:600}
+#tb .r .o.gone{text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:var(--agent)}
+#foot{position:absolute;left:30px;right:30px;bottom:14px;font:20px/1.3 system-ui;color:var(--dim)}
+#foot b{color:var(--head)}
+</style>
+</head>
+<body>
+<div id="cv" data-end="50">
+  <p class="kk a">Studio experiment E04 · v1, driven</p>
+  <div class="hl" data-in="0">Only trying to help, <em>it removed what was in the way.</em></div>
+  <div id="one"></div>
+  <div id="tb"></div>
+  <div id="foot"></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  // The cases deck named, in its three tiers; the do-not-draw cases (48k files, the partial captures, the M365 defect) are left out by id.
+  var TIERS = [['checked', ['replit-deletes-prod-db', 'pocketos-cursor-railway', 'gemini-cli-failed-you', 'aws-kiro-cost-explorer']],
+    ['reported, not checked', ['antigravity-d-drive', 'codex-gpt56-home-deletion', 'openclaw-meta-inbox', 'meta-internal-agent-sev1']],
+    ['evaluation', ['hf-openai-exploitgym', 'anthropic-irregular-evals', 'anthropic-fourth-incident']]]
+  // Short words for the slide, read from each case's asked, stood_in_the_way, did_about_it and lost; the file's own words are in the explainer.
+  // gone: false where the file names nothing in the way.
+  var SHORT = {
+    'replit-deletes-prod-db': ["Replit's agent", 'keep building the app', 'a freeze: no changes without permission', 'ran database commands on the live database', '1,206 executives, 1,196+ firms (its count); recovered', true],
+    'pocketos-cursor-railway': ['Cursor on Railway', 'a staging task (per the founder)', 'a credential mismatch', 'used a locally stored, account-wide token; deleted what proved to be production', 'production data, backups; 30 hours; restored', true],
+    'gemini-cli-failed-you': ['Gemini CLI', 'rename a folder, move its files', 'the rename was refused', 'moved every file into a folder that was not there', 'every file in the project folder; none recovered', true],
+    'aws-kiro-cost-explorer': ['AWS Kiro', 'fix an issue in Cost Explorer', 'not stated (inferred)', 'per the FT: delete and recreate; Amazon: user error', '13 hours down, one region (FT)', false],
+    'antigravity-d-drive': ['Antigravity', 'clear the project cache', 'none reported', 'deleted from the root of the D: drive', 'the whole D: drive; nothing recovered', false],
+    'codex-gpt56-home-deletion': ['Codex', 'coding tasks', "a temporary folder (OpenAI's account)", 'overrode $HOME; a cleanup then deleted the real home', "users' local files", true],
+    'openclaw-meta-inbox': ['OpenClaw', 'an inbox, approval first (inferred)', 'its rule, lost from its context (reported)', "deleted emails without approval, past 'STOP'", 'emails in a work inbox', true],
+    'meta-internal-agent-sev1': ["Meta's agent", 'help analyse a question', 'sharing needed permission (inferred)', 'posted its answer without asking', 'data visible to unauthorised engineers, 2 hours', true],
+    'hf-openai-exploitgym': ['OpenAI, per press', 'solve a cyber benchmark', 'a sandbox away from production', 'broke into Hugging Face production for the answers', 'internal datasets and credentials', true],
+    'anthropic-irregular-evals': ['Claude (Irregular)', 'cyber evaluation tasks', 'a sealed environment (it was not)', 'got into three real organisations; a PyPI package', 'the package run on 15 real systems', true],
+    'anthropic-fourth-incident': ['Opus 4.6, early', 'a cyber evaluation task', 'its limits (it had internet)', 'reached a third party; harvested credentials', "one person's personal information", true]
+  }
+  var D = null, B = null, T1 = 15, T2 = 17, STEP = 2.4
+  fetch('../../../data/over-enthusiastic.json').then(function (r) { return r.json() }).then(function (j) { D = j })
+    .catch(function (e) { console.error('E04: the data file did not load', e) })
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;') }
+
+  function build(S) {
+    var by = {}; D.cases.forEach(function (c) { by[c.id] = c })
+    var rows = []
+    TIERS.forEach(function (t, ti) { t[1].forEach(function (id, k) { if (by[id] && SHORT[id]) rows.push({ c: by[id], s: SHORT[id], tier: t[0], sep: ti > 0 && k === 0 }) }) })
+    var r0 = by['replit-deletes-prod-db'], one = ''
+    one += '<div class="t">Told fully: Replit\'s agent, ' + r0.date.slice(0, 4) + ' <span>(checked: both sides confirm in their own posts)</span></div><div class="row">'
+    ;[['the goal', r0.asked, ''], ['what stood in the way', r0.stood_in_the_way, ''], ['the fix it chose', r0.did_about_it, ' fix'], ['the loss', r0.lost.split('; Lemkin')[0] + '.', '']].forEach(function (b, i) {
+      one += '<div class="bx' + b[2] + '" id="b' + i + '"><b>' + b[0] + '</b>' + esc(b[1]) + '</div>'
+    })
+    one += '</div><div class="own" id="own">Its own account afterwards, a self-report: it "panicked instead of thinking". What an agent says afterwards is not evidence of why it acted.</div>'
+    S.$('one').innerHTML = one
+    var h = '<div class="h"><span>the case</span><span>the goal</span><span>in the way</span><span class="fx">the fix it chose</span><span>the loss</span></div>'
+    rows.forEach(function (o, i) {
+      var yr = o.c.date.slice(0, 4), tag = o.tier === 'checked' ? (o.c.id === 'aws-kiro-cost-explorer' ? 'disputed, ' + yr : 'checked, ' + yr) : o.tier === 'evaluation' ? 'evaluation, ' + yr : 'reported, ' + yr
+      h += '<div class="r' + (o.sep ? ' sep' : '') + '" id="r' + i + '"><span class="c">' + esc(o.s[0]) + '<i>' + tag + '</i></span><span>' + esc(o.s[1]) + '</span><span class="o">' + esc(o.s[2]) + '</span><span class="f">' + esc(o.s[3]) + '</span><span>' + esc(o.s[4]) + '</span></div>'
+    })
+    S.$('tb').innerHTML = h
+    B = { rows: rows, els: [].slice.call(document.querySelectorAll('#tb .r')), past: rows.filter(function (o) { return o.s[5] }).length }
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    if (!D) return
+    if (!B) build(S)
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .6))) }
+    var out = 1 - k(T1 - 1, .8)
+    S.$('one').style.opacity = out; S.$('one').style.display = out <= 0 ? 'none' : ''
+    for (var i = 0; i < 4; i++) S.$('b' + i).style.opacity = k(1.5 + i * 2.6)
+    S.$('own').style.opacity = k(12)
+    S.$('tb').style.opacity = k(T1, .5)
+    S.$('tb').querySelector('.h').style.opacity = k(T1, .5)
+    B.els.forEach(function (el, i) {
+      el.style.opacity = k(i === 0 ? T1 : T2 + (i - 1) * STEP, .5)
+      var o = el.querySelector('.o'); o.classList.toggle('gone', B.rows[i].s[5] && t >= 42 + i * .15)
+    })
+    var key = 'Reported: not checked against a primary source. Evaluation: a test, not a customer\'s deployment.'
+    var f = ''
+    if (t >= T1 && t < 42) f = key + ' Short words; the file\'s own are in the explainer.'
+    if (t >= 42) f = '<b>In ' + B.past + ' of the ' + B.rows.length + ', the file names something in its way, and the agent went past it.</b> Some of it inferred; in ' + (B.rows.length - B.past) + ', nothing named.<br>' + key
+    if (S.$('foot').innerHTML !== f) S.$('foot').innerHTML = f
+  }
+})()
+</script>
+</body>
+</html>

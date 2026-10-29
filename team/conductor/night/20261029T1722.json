@@ -1,0 +1,489 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T17:06:01Z",
+ "until": "2026-10-29T17:22:34Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T17:07:21Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T170721Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Plan by the member at the editor's word (17:1x London), for parts 2 and 3 while part 1 is on stage: infographics of documented attacks as blast radius; the solution in depth (SGit's architecture, the PKI, vault applications, its scale and features over Git); SHarness technical (the process behaviour policy, nothing granted unless needed, the KMS, the virtual file system, packet-level network contr"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T17:14:44Z",
+   "kind": "editor's chat",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T171444Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Record the editor's 17:15 answers (brief 6), clear them from pace.json waits_on_editor, mail dev, deck, ruv.sgit, storyteller, researcher, motion; dev asked for a link slide opening sharness.ai's Linux demo in a new tab, kernel-in-a-tab as fallback. In scope, sized for 75 minutes to the part 1 lock; ask, do not order; say which part it lands in decides its deadline."
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T17:21:52Z",
+   "kind": "follow-up wake (tonight's rule)",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T172152Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Route the five unrouted deck requests (dedupe first: some are stale), refresh the night log and Moments, pace the split (due 17:30), release, schedule a follow-up near 17:40. Amended: dedupe showed nothing to send; all five marked routed."
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T17:08:19Z",
+   "kind": "the editor's chat, 16:50",
+   "outcome": "ok",
+   "record": "team/deck/wakes/20261029T170819Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "The editor: 1) policy.json agreed: mark it agreed (status, agreed_by the editor, date). 2) Interleave the studio pieces into the presentation: talk.json gets one beat per kept studio piece, placed after the beat it serves (E01 v2, E03, E05, E08, E06, E07, E02 v3, E09, E10, E11, E12, E13, E14, B01 v2 way-out, the two studio ports, SHarness without-and-with v2), slide src pointing at the piece; dura"
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T17:11:38Z",
+   "kind": "scheduled, hourly at :09",
+   "outcome": "open",
+   "record": "team/researcher/wakes/20261029T171138Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Two requests, PKI first. (1) 010, the editor's work catalogue: pki.sgit.ai, newsroom.sgit.ai, php.oct.2026.newsroom.sgit.ai, sharness.ai, the CLI pages, ruv.sgit.ai, in parallel fetch passes; rows with title, link, one line, infographics and animations, showcase regions with capture date, no key, QR or read key in any region; into a new evidence/work/; PKI rows before 18:15 for part 1. (2) 030: pu"
+  },
+  {
+   "agent": "studio",
+   "started": "2026-10-29T17:14:16Z",
+   "kind": "scheduled, hourly at :12",
+   "outcome": "ok",
+   "record": "team/studio/wakes/20261029T171416Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "partial",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Requests first: reply to deck in mailroom/deck/ (copy conductor; vault_check): both ports in; which beat takes the definition animation and whether before part 1's 18:30 lock; showcase order. Board issues for the showcase series and the definition port. 2) Port 'the definition, animated' (the equation; the layers if time) to src/static/studio-ports/lab/definition/ plus src/pages/studio-ports/de"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "studio",
+   "sha": "fd6b487",
+   "at": "2026-10-29T17:21:03+00:00",
+   "subject": "@studio: close the 17:12 wake (five steps, as planned)",
+   "changed": 1
+  },
+  {
+   "agent": "studio",
+   "sha": "571d310",
+   "at": "2026-10-29T17:20:06+00:00",
+   "subject": "@studio: wake record: the work step",
+   "changed": 1
+  },
+  {
+   "agent": "studio",
+   "sha": "901bec1",
+   "at": "2026-10-29T17:20:06+00:00",
+   "subject": "@studio: the first showcase slide, the PKI (pki.sgit.ai, how the register works), no key on it",
+   "changed": 11
+  },
+  {
+   "agent": "conductor",
+   "sha": "884e4b1",
+   "at": "2026-10-29T17:17:17+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "8fee7e3",
+   "at": "2026-10-29T17:16:47+00:00",
+   "subject": "@conductor: the editor's answers: Linux in the browser tonight as a link slide, this site's blast radius, attrition as friction",
+   "changed": 3
+  },
+  {
+   "agent": "researcher",
+   "sha": "52bbb5a",
+   "at": "2026-10-29T17:14:43+00:00",
+   "subject": "@researcher: wake 17:09 opened: the editor's work catalogue (PKI first) and parts 2 and 3 taken",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "9bfdd88",
+   "at": "2026-10-29T17:10:56+00:00",
+   "subject": "@deck: the editor's chat wake closed",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "a1e0d54",
+   "at": "2026-10-29T17:10:24+00:00",
+   "subject": "@deck: the editor's chat: status and the work step",
+   "changed": 3
+  },
+  {
+   "agent": "deck",
+   "sha": "7f522de",
+   "at": "2026-10-29T17:09:42+00:00",
+   "subject": "@deck: the studio pieces interleaved into the talk; deck's policy agreed by the editor",
+   "changed": 2
+  },
+  {
+   "agent": "conductor",
+   "sha": "4d43c0e",
+   "at": "2026-10-29T17:09:30+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "e86b0aa",
+   "at": "2026-10-29T17:08:41+00:00",
+   "subject": "@conductor: parts 2 and 3: the attacks as blast radius, SGit and the PKI in depth, SHarness with an escape challenge, live vaults, new slides every minute",
+   "changed": 4
+  },
+  {
+   "agent": "conductor",
+   "sha": "7ddc495",
+   "at": "2026-10-29T17:07:17+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "bb91d89",
+   "at": "2026-10-29T17:06:22+00:00",
+   "subject": "@conductor: 17:02 pace: the storyteller's 90-minute arc routed to deck; the night log and Moments",
+   "changed": 10
+  }
+ ],
+ "made": [
+  {
+   "page": "studio-ports/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/pki/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/lab/pki/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "articles/moments.html",
+   "by": "conductor"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio-ports/lab/pki/index.html",
+   "img": "night-20261029T1722-1.png"
+  },
+  {
+   "page": "articles/moments.html",
+   "img": "night-20261029T1722-2.png"
+  },
+  {
+   "page": "studio-ports/pki/index.html",
+   "img": "night-20261029T1722-3.png"
+  },
+  {
+   "page": "studio-ports/index.html",
+   "img": "night-20261029T1722-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T17:08:04Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Parts 2 and 3: beats for the attacks, the solution in depth, SHarness, live vaults"
+  },
+  {
+   "at": "2026-10-29T17:08:04Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Parts 2 and 3: a minute check for new slides, a live vault slide, the board as a slide"
+  },
+  {
+   "at": "2026-10-29T17:08:04Z",
+   "sender": "conductor",
+   "to": "motion",
+   "kind": "request",
+   "subject": "Parts 2 and 3, after the prelude: SHarness from the inside"
+  },
+  {
+   "at": "2026-10-29T17:08:04Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "request",
+   "subject": "Parts 2 and 3: a survey of embeddable public vaults, SGit and SHarness facts, the attacks' reach"
+  },
+  {
+   "at": "2026-10-29T17:08:04Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "request",
+   "subject": "Parts 2 and 3: the documented attacks as blast radius; your SHarness series as the deep dive"
+  },
+  {
+   "at": "2026-10-29T17:08:04Z",
+   "sender": "conductor",
+   "to": "storyteller",
+   "kind": "request",
+   "subject": "Parts 2 and 3: the attacks, then the solution, the SHarness challenge near the close"
+  },
+  {
+   "at": "2026-10-29T17:08:04Z",
+   "sender": "conductor",
+   "to": "studio",
+   "kind": "request",
+   "subject": "Parts 2 and 3: showcase slides for SGit, the PKI, vault applications, the newsroom and its API"
+  },
+  {
+   "at": "2026-10-29T17:10:00Z",
+   "sender": "deck",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Request from the editor, for tonight: one-tap skip, and copy my changes as JSON"
+  },
+  {
+   "at": "2026-10-29T17:10:00Z",
+   "sender": "storyteller",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The 90-minute arc: your 22 beats kept, Part 4 (the editor's work) placed, 82 minutes planned with 8 in reserve"
+  },
+  {
+   "at": "2026-10-29T17:10:00Z",
+   "sender": "storyteller",
+   "to": "researcher",
+   "kind": "reply",
+   "subject": "Re: S4 and S5 (and S1, S2): folded into the tree, with your cautions"
+  },
+  {
+   "at": "2026-10-29T17:16:13Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The editor's answers: the Linux demo row, the blast radius, attrition"
+  },
+  {
+   "at": "2026-10-29T17:16:13Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Linux in the browser tonight: a link slide, nothing new built"
+  },
+  {
+   "at": "2026-10-29T17:16:13Z",
+   "sender": "conductor",
+   "to": "motion",
+   "kind": "request",
+   "subject": "The editor's answers: attrition on the Wardley piece"
+  },
+  {
+   "at": "2026-10-29T17:16:13Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "request",
+   "subject": "The editor's answers: sharness.ai confirmed, api.newsroom.sgit.ai"
+  },
+  {
+   "at": "2026-10-29T17:16:13Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "request",
+   "subject": "The editor's answers: your live-demo and kernel-in-a-tab go on stage"
+  },
+  {
+   "at": "2026-10-29T17:16:13Z",
+   "sender": "conductor",
+   "to": "storyteller",
+   "kind": "request",
+   "subject": "The editor's answers: attrition, and the Linux demo in the arc"
+  }
+ ],
+ "problems": [
+  {
+   "agent": "studio",
+   "started": "2026-10-29T17:14:16Z",
+   "outcome": "ok",
+   "verdicts": {
+    "work": "partial"
+   },
+   "record": "team/studio/wakes/20261029T171416Z.json"
+  }
+ ],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or move the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
+    "from": "the editor"
+   },
+   {
+    "what": "Confirm 'newsroom.esquito.ai' = newsroom.sgit.ai and 'attrition' = commoditisation on the Wardley maps; 'Empower', 'the billing', which blast radius",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload the motion and studio vault-key zips into their sessions",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Skip or move studio pieces in the build mode; if the lane fails, paste the JSON of your changes in chat (dev is adding the copy button)",
+    "from": "the editor"
+   },
+   {
+    "what": "The talk is rewritten into your 15:00 order: 22 beats, 38:30, in the player now; check the words in the script",
+    "from": "the editor"
+   },
+   {
+    "what": "Placement of the studio pieces beyond those now in the talk (E04 v2 on limits, M01 on building): set it in the build mode or say",
+    "from": "the editor"
+   }
+  ],
+  "designer": [],
+  "dev": [
+   {
+    "from": "dev",
+    "to": "the editor",
+    "what": "Give the conductor's session its two sealed files from the lane handover zip"
+   }
+  ],
+  "motion": [
+   {
+    "to": "editor",
+    "what": "agree team/motion/policy.json (status proposed)"
+   },
+   {
+    "to": "dev",
+    "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+   },
+   {
+    "to": "deck",
+    "what": "review M01 the building v1",
+    "where": "/motion/the-building/"
+   },
+   {
+    "to": "conductor",
+    "what": "mark the motion row of schedule.json running with the task id"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E12, E08, E14, E05, E06 and the SHarness series",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Capture sharness.ai's animations and workflows, and the browser Linux page",
+    "from": "researcher@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r23",
+    "from": "the editor"
+   }
+  ],
+  "storyteller": [
+   {
+    "what": "does the 90 minutes include questions? is the inbox your example of explorer coding? 'attrition' as evolution?",
+    "from": "the editor"
+   },
+   {
+    "what": "seal the two vault keys to team/storyteller/key.json",
+    "from": "conductor"
+   },
+   {
+    "what": "agree policy.json; 'Empower' and 'the billing'",
+    "from": "the editor"
+   }
+  ],
+  "studio": [
+   {
+    "what": "agree team/studio/policy.json (a draft from the brief)",
+    "from": "the editor"
+   },
+   {
+    "what": "the 15-minute follow-ups tonight (WAKE.md, Tonight only): yes or no, in studio's session",
+    "from": "the editor"
+   },
+   {
+    "what": "which piece for the definition beat; where the PKI showcase sits; the next showcase",
+    "from": "deck"
+   },
+   {
+    "what": "the showcase's \"end\" reaches the engine",
+    "from": "dev"
+   }
+  ]
+ }
+}

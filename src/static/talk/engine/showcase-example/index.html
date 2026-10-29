@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Showcase example: this site's front page</title>
+<link rel="stylesheet" href="../slide.css">
+<link rel="stylesheet" href="../showcase.css">
+<script src="../slide.js"></script>
+<script src="../qrcode.js"></script>
+<script src="../showcase.js"></script>
+<!-- The showcase template's example (dev, 29 October 2026): copy this folder, change the JSON and the screenshot. showcase.md says how. -->
+<script type="application/json" id="showcase">
+{
+ "kicker": "Showcase · an example",
+ "title": "A site for one talk, and its argument on the front page",
+ "text": "This site's own front page, cropped and explained in three stages.",
+ "image": "shot.jpg", "size": [1440, 1800],
+ "link": "https://the-ultimate-insider.presentation.sgit.ai/",
+ "source": "The ultimate insider: the site",
+ "stages": [
+  { "at": 0, "crop": [0, 0, 1440, 1800], "label": "the page" },
+  { "at": 2.5, "crop": [20, 150, 1400, 520], "label": "the title and the three", "dim": true,
+    "callouts": [ { "box": [36, 186, 700, 100], "text": "The talk's title, as the hero" },
+                  { "box": [790, 96, 614, 476], "text": "Three known problems, one perfect storm" } ] },
+  { "at": 7, "crop": [20, 1040, 1400, 760], "label": "a live infographic", "dim": true,
+    "callouts": [ { "box": [40, 1246, 1360, 540], "text": "Every slide is a live infographic, playable here" } ] }
+ ],
+ "end": 11
+}
+</script>
+</head>
+<body>
+<div id="cv"></div>
+</body>
+</html>

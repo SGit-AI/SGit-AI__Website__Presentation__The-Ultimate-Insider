@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "storyteller",
+ "kind": "scheduled, hourly at :54",
+ "started": "2026-10-29T17:55:13Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Close idle: since 89fe3be only dev's lock tool and a merge; no To-storyteller notes or requests; the 18:09 follow-up covers part 2 before 19:30.",
+   "at": "2026-10-29T17:55:30Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Idle close consistent with policy; no hold; nothing changed.",
+   "at": "2026-10-29T17:55:48Z"
+  },
+  "work": {
+   "by": "storyteller",
+   "model": "",
+   "verdict": "none",
+   "comment": "Idle: nothing new since the 17:49 wake; part 2 is checked by the 18:09 follow-up.",
+   "at": "2026-10-29T17:55:48Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Only the wake record changed.",
+   "at": "2026-10-29T17:56:00Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Closed idle as planned; no storyteller commit since 89fe3be.",
+   "at": "2026-10-29T17:56:00Z"
+  }
+ },
+ "closed": "2026-10-29T17:56:00Z",
+ "outcome": "idle"
+}

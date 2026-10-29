@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17 (fired 15:38)",
+ "started": "2026-10-29T15:39:25Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail and the editor's 14:00 and 15:00 decisions)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) The opening, at the editor's word (freeze lifted for beat three): talk.json beats title and three reworded around 'the perfect storm we are brewing', which wraps the three known problems; 'nobody is presenting them as one story' and 'one story' dropped; the three slide's headline to match; a note to dev with the home page's words (dev's hold). 2) One request to motion@ (no key yet: team/deck/requests/motion__the-building.md): the building, first of the story animations. 3) The four new pieces (E11, E07, E10, E13) looked at and reviewed in one page; the lab page regenerated with dev's viewer links; the researcher's new data (e03b, e05, e06-e07-e02b) checked and copied. Mail filed, status, debrief, vault_check, gate, push dev. Act three's reorder and beats 3a to 3g wait for the storyteller's sequence.",
+   "at": "2026-10-29T15:39:58Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Policy fits; home page by note to dev; motion@ request key-less per the conductor. The editor's word covers beat three, the script and the one-story line: reword title only where it carries that line. Act three and 3a to 3g wait. No unsourced numbers; vault_check; no keys.",
+   "at": "2026-10-29T15:40:17Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "Done as planned: talk.json title and three recast (the perfect storm we are brewing), the three slide's headline; home page words to dev (mail 026); the building to motion@ (request file); E07, E10, E11, E13 reviewed, keep (four short pages, not one: each piece links its own review); lab with viewer links; researcher data copied (injection-sources-b, pivoting, deployments-and-inside); vaults filed and pushed; times in mail corrected to the clock.",
+   "at": "2026-10-29T15:47:27Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "go: all 20 changed files inside scope.writes (0 outside). Gate clean. No em-dashes, keys, contact details or version write; no numbers in subjects. Wording-only talk changes. Mail and motion request public-safe, nothing attack-shaped.",
+   "at": "2026-10-29T15:48:20Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "go: all three planned items done (e1190dc, 69b12a5). One deviation: four review pages, not one. Validate clean (203 files).",
+   "at": "2026-10-29T15:48:20Z"
+  }
+ },
+ "closed": "2026-10-29T15:48:20Z",
+ "outcome": "ok"
+}

@@ -1,0 +1,64 @@
+<!--meta {"title": "E02 explained: the blast radius, frame by frame", "description": "How studio experiment E02 turns one example agent's reach into its grant rows: each frame with its time, the data behind every number, the technique, and what was tried and left out."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="index.html">E02</a></nav>
+<p class="kicker">Studio experiment E02 · the explainer</p>
+<h1>The blast radius, frame by frame</h1>
+<p class="lead">The one sentence: if one agent inside the company goes wrong, the damage reaches everything its grant reaches, and the grant is far larger than what it is for. E01 ended on a shaded reach; E02 turns that shading into the rows it is made of.</p>
+
+<h2>The frames (v1)</h2>
+<p>v1, seconds from the start; it ends at 54 s and holds still. v2 keeps the same order a second later in places: dots from 5 s, the mandate at 13 s, the excess groups from 19 s, the shortfall (a dashed dot with a cross) at 28 s, the glyphs at 35 s, the end at 56 s. The summary line at the top left changes with each step; the rows on the right keep everything that came before.</p>
+<div class="tbl"><table>
+<thead><tr><th>From</th><th>What is on screen</th></tr></thead>
+<tbody>
+<tr><td>0 s</td><td>The reach, as E01 left it: one shaded disc round the model.</td></tr>
+<tr><td>5 s</td><td>The disc breaks into one dot per grant row, 16 in all, placed by how far each is from what the agent is for: the mandate close in, what the mandate leaves unstated further out, what it refuses furthest out.</td></tr>
+<tr><td>13 s</td><td>The mandate lights up as a small core: the 4 mandate items that are granted, listed on the right.</td></tr>
+<tr><td>19 s</td><td>The excess: 16 granted minus 4 = 12, listed as 2 unstated and 10 refused. This is the blast radius.</td></tr>
+<tr><td>27 s</td><td>The shortfall: one thing the mandate asks for and the grant does not give, <code>send.endpoint.allowed</code>, shown as an empty dashed dot on the core, labelled "asked, not granted", and struck through in the list. From 34 s the summary keeps the arithmetic (16 minus 4 = 12) beside the barrier line, so the still carries both.</td></tr>
+<tr><td>34 s</td><td>The barrier kind on every row (none, expectation, setting, boundary, with abp.sgit.ai's glyphs): 12 of the 12 excess rows have no control in the way, which sets up part two.</td></tr>
+</tbody></table></div>
+
+<h2>Where every number comes from</h2>
+<p>Only from <a href="{{root}}studio/data/abp-examples.json">abp-examples.json</a>, the researcher's capture for the studio, read by the slide when it loads, so a corrected file corrects the slide. The example is abp.sgit.ai's "a coding agent on your own machine, confirmations on" (the Claude Code CLI): <code>grant</code> 16, <code>mandate</code> 5, <code>aligned</code> 4, <code>excess</code> 12, <code>unbounded_excess</code> 12, <code>shortfall_capabilities</code> one. The dots and rows are the file's 16 <code>rows</code>, placed by each row's <code>mandate_stance</code> (authorised, unstated, refused) and marked with its <code>barrier_kind</code>.</p>
+<ul>
+<li><b>Why 16 minus 4, not 16 minus 5.</b> One of the mandate's five items is not in the grant (the shortfall), so only four are granted, and the excess is 16 minus 4. The data file says so in its note on this example.</li>
+<li><b>A published draft, not a measurement.</b> Every row is derived from what a CLI running as your account is; abp.sgit.ai records 0 of 22 tool-level rows measured, and its mandate is the site's own first draft. The slide says so on screen.</li>
+<li><b>A description, not a judgement.</b> The policy describes what the agent can do, what it is for and what stands in the way; it gives no risk score, and neither does the slide.</li>
+<li><b>The model's definitions</b> (grant, mandate, delta, the four barrier kinds) are RiskMandate's Agent Behaviour Policy and abp.sgit.ai's, as quoted in the data file.</li>
+</ul>
+
+<h2>Technique</h2>
+<ul>
+<li>One slide on the engine, driven: SVG built once from the data, then every frame drawn from the slide's clock by <code>SLIDE_RENDER</code>, so the player can seek, pause and replay it, and <code>?static</code> shows the whole picture.</li>
+<li>Colour carries one meaning: the agent red for the excess, the heading colour for the mandate core. Every text is 20 px or larger on the 1280 by 720 canvas.</li>
+</ul>
+
+<h2>What was tried and left out</h2>
+<ul>
+<li><b>Names on the dots</b> (v1). Sixteen capability names round a circle at a readable size do not fit, so v1 kept them in the list; v2 numbers the dots instead and leads each line with the same number.</li>
+<li><b>The other four examples</b> in the file (confirmations off, a chat window with nothing connected, a browser extension, a CI runner). Left for a comparison piece: with confirmations off the same 16 rows move only one barrier, which is a story of its own.</li>
+<li><b>A two-line headline</b> ran into the summary; the headline was cut to one line.</li>
+</ul>
+
+<h2>v2, after deck's review</h2>
+<p>deck kept the data treatment and asked for five changes; v2 makes all five, and keeps v1's timings within a second.</p>
+<ul>
+<li><b>Numbered dots.</b> Each of the 16 dots carries a number, and the same number leads its line in the list, so a dot and its row are tied without a line across the slide.</li>
+<li><b>Plain words first, the id beneath.</b> The data file gives each capability as an id (<code>verb.object.reach</code>) and no description, so the plain words are a reading of that grammar written for this slide (for example <code>read.credential.host</code> as "read credentials on the machine"), and the slide says so. The gap is reported to deck in the reply for this run, so a description can be added to the file.</li>
+<li><b>Grouped by what it touches.</b> The 12 excess rows in five groups by the id's noun: files and disk (3), credentials (4), network and world (2: the two rows whose reach is the world), records and repositories (2), schedule (1). Each row is in one group only.</li>
+<li><b>Two distances.</b> The rings are labelled: the mandate (4 granted), unstated (2), refused (10).</li>
+<li><b>The glyph on each dot</b>, from 35 s: abp.sgit.ai's filled circle for nothing in the way, double circle for a rule in prose, half filled for a switch the agent's own account can flip. In this example that marks one rule in prose and two switches (one of them on a mandate row); the other 13 rows have nothing in the way. The last summary line carries the key to the shapes.</li>
+<li><b>It runs only over HTTP.</b> The slide reads its data with <code>fetch</code> when it loads, so opened as a file from disk it shows the frame and no rows; on the site, or any local web server, it works.</li>
+</ul>
+<h2>v3, after deck's review of v2</h2>
+<p>v3 keeps v2's timings and its numbering, and makes deck's two changes, now that the researcher has added a description for each capability.</p>
+<ul>
+<li><b>The source's labels.</b> Each line is the capability's label from <code>capabilities.json</code>, in the source's own words (for example <code>read.credential.host</code> is "Read credentials stored where it runs"); v2's readings of each id are gone. Two labels lose a trailing bracketed aside for width: "Push to a code host (any branch it can reach)" and "Create something that outlives the turn where it runs (a cron, a service)". The ids are in the data file and on v2's slide.</li>
+<li><b>Grouped by sector on the ring.</b> The twelve excess dots sit in five arcs, one per group, in the same groups as the list, named on the ring in short form: credentials (4), files ("Files and disk", 3), the world ("Network and world", 2), records ("Records and repos", 2), schedule (1). The groups go by the id's object, except that both rows whose reach is the world sit in "Network and world", which is why it holds <code>create.record.world</code>, "Publish packages, images or pages under the name it holds". Each dot keeps its distance: unstated (2) on the inner ring, refused (10) on the outer. The four credential dots, in four places in v2, are now together at the top.</li>
+<li><b>The summary clear of the list.</b> The columns start below the two-line summary in the end state; the ring is smaller to make room for the sector names.</li>
+<li><b>The shortfall</b>, <code>send.endpoint.allowed</code>, has no label in the capabilities file; it stays "asked for, not granted".</li>
+</ul>
+
+<h2>How it was made</h2>
+<p>v1 in ruv.sgit run r5-e02-blast-radius, v2 in run r7-e02-v2 and v3 in run r12-e02-v3, later passes on the same vault: a Ruflo hive with a builder and an editor who checked the slide and this page against the request and the data, and one sgit vault holding the request, each worker's branch and the history. Its row is in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</article>

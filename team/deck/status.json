@@ -1,0 +1,184 @@
+{
+ "schema": "the-ultimate-insider/agent-status/v1",
+ "agent": "deck",
+ "as_of": "2026-10-29",
+ "round": 19,
+ "state": "17:17 wake: part 1 complete and timed (20 beats, 29:30) for its 18:30 lock; every beat carries its part; live slides (SHarness Linux, a vault, sgit.ai demos) in part 3; studio pieces interleaved; policy agreed",
+ "task": {
+  "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
+  "cron": "CRON_TZ=Europe/London 17 * * * *",
+  "session": "session_01Kw9UwBB1wNV9hwXCcQAzKn",
+  "created": "2026-10-29T02:13:54Z",
+  "prompt": "runs.deck.prompt in team/conductor/schedule.json, word for word"
+ },
+ "done": [
+  {
+   "what": "Joined as deck@the-ultimate-insider; the role split with dev agreed by the editor",
+   "evidence": "team/deck/ROLE.md, team/dev/ROLE.md"
+  },
+  {
+   "what": "The studio: hub, how it works, techniques, the briefs shelf",
+   "evidence": "/studio/"
+  },
+  {
+   "what": "Briefs B01 One story, not three and B02 The distance is a prompt, with the incidents data",
+   "evidence": "/studio/briefs/, src/static/studio/data/incidents.json"
+  },
+  {
+   "what": "Hourly wake at :17 London created from this session",
+   "evidence": "trig_01XFzjV1p3aAVqnRhEizJKV5"
+  },
+  {
+   "what": "deck's session key, published",
+   "evidence": "team/deck/key.json, team/deck/sessions/session_01Kw9UwBB1wNV9hwXCcQAzKn/"
+  },
+  {
+   "what": "before-tonight 1 to 3: unreported (ASRS 121,128 in 2025, over 2.3 million; CIRCIA at the White House since 1 October) and licence (should be suspended)",
+   "evidence": "src/static/talk/slides/unreported/index.html, src/static/talk/talk.json"
+  },
+  {
+   "what": "The studio programme: 14 experiments in two parts, as data and a generated page",
+   "evidence": "src/static/studio/data/programme.json, /studio/programme.html, team/deck/tools/programme.py"
+  },
+  {
+   "what": "Requests: conductor (pace the programme), ruv.sgit (E01 agent-evolution), researcher (data for E02, E03, E04, E09 to E11, E13)",
+   "evidence": "team/deck/requests/"
+  },
+  {
+   "what": "Studio pages point at ruv.sgit's real delivery path, ruv-sgit/<slug>/, with an explainer beside each piece",
+   "evidence": "src/pages/studio/how-it-works.html, src/pages/studio/index.html"
+  },
+  {
+   "what": "Vault keys opened, both vaults cloned; board opened with seven issues; replies to the conductor and the researcher; mail filed",
+   "evidence": "tui-issues-public deck/issues/, tui-mail-public deck/outbox/"
+  },
+  {
+   "what": "B01 storyboard reviewed: keep, five notes, three decisions proposed to the editor",
+   "evidence": "/studio/reviews/b01-storyboard.html, tui-issues-public deck/issues/done/007"
+  },
+  {
+   "what": "Studio data slice 1 (E02, E09, E13) copied for the studio",
+   "evidence": "src/static/studio/data/abp-examples.json"
+  },
+  {
+   "what": "E01 agent-evolution reviewed: keep, v2 leads, four notes for a merged v3",
+   "evidence": "/studio/reviews/e01.html"
+  },
+  {
+   "what": "Studio pages: prose in .prose, markup only (designer's request)",
+   "evidence": "src/pages/studio/index.html, techniques.html, team/deck/tools/programme.py"
+  },
+  {
+   "what": "E02 blast-radius request sent to ruv.sgit",
+   "evidence": "tui-mail-public mailroom/ruv-sgit/003; team/deck/requests/ruv-sgit__blast-radius.md"
+  },
+  {
+   "what": "B01 v1 reviewed: keep, three notes for v2",
+   "evidence": "/studio/reviews/b01-v1.html"
+  },
+  {
+   "what": "Studio data slice 2 (E03) copied for the studio",
+   "evidence": "src/static/studio/data/injection-sources.json"
+  },
+  {
+   "what": "E02 blast radius reviewed: again, five notes for v2",
+   "evidence": "/studio/reviews/e02.html"
+  },
+  {
+   "what": "Studio data slice 3 (E04) copied with the researcher's draw, label and do-not-draw tiers",
+   "evidence": "src/static/studio/data/over-enthusiastic.json"
+  },
+  {
+   "what": "B01 v2 reviewed: keep, ready for the editor",
+   "evidence": "/studio/reviews/b01-v2.html"
+  },
+  {
+   "what": "Studio data complete: E11 (SHarness) copied, E04 refreshed; E11 wording corrected",
+   "evidence": "src/static/studio/data/harness.json, programme.json"
+  },
+  {
+   "what": "E02 v2 reviewed: keep, two things for v3",
+   "evidence": "/studio/reviews/e02-v2.html"
+  },
+  {
+   "what": "E03 injection-sources request sent to ruv.sgit",
+   "evidence": "tui-mail-public mailroom/ruv-sgit/002; team/deck/requests/ruv-sgit__injection-sources.md"
+  },
+  {
+   "what": "E03 injection sources reviewed: keep, with a finding for its last line",
+   "evidence": "/studio/reviews/e03.html"
+  },
+  {
+   "what": "E04 sent to ruv.sgit; grant descriptions asked of the researcher",
+   "evidence": "tui-mail-public deck/outbox/019, 020"
+  },
+  {
+   "what": "E04 reviewed: again, keep the content, redo the picture",
+   "evidence": "/studio/reviews/e04.html"
+  },
+  {
+   "what": "E09 sent to ruv.sgit; capability descriptions copied",
+   "evidence": "src/static/studio/data/capabilities.json; deck/outbox/022"
+  },
+  {
+   "what": "E09 mandate against grant reviewed: keep, one wording to fix",
+   "evidence": "/studio/reviews/e09.html"
+  },
+  {
+   "what": "E04 v2 reviewed: keep, ready for the editor",
+   "evidence": "/studio/reviews/e04-v2.html"
+  },
+  {
+   "what": "E02 v3 reviewed: keep, ready for the editor; E09 wording checked",
+   "evidence": "/studio/reviews/e02-v3.html"
+  },
+  {
+   "what": "E11 harness request sent to ruv.sgit",
+   "evidence": "deck/outbox/027"
+  }
+ ],
+ "next": [
+  {
+   "what": "Swap the prelude's slide for motion@'s meet-the-team if it lands by 18:15",
+   "why": "part 1 locks 18:30",
+   "issue": "prelude"
+  },
+  {
+   "what": "Part 2 by 19:30: W1 SGit, W2 the PKI, with studio@'s showcase slides",
+   "why": "the locks brief",
+   "issue": "parts"
+  },
+  {
+   "what": "Part 3 by 20:00: W3 the newsroom and PHP October, W5 this team",
+   "why": "the locks brief",
+   "issue": "parts"
+  }
+ ],
+ "asks": [
+  {
+   "what": "Skip or move studio pieces in the build mode; if the lane fails, paste the JSON of your changes in chat (dev is adding the copy button)",
+   "from": "the editor"
+  },
+  {
+   "what": "The talk is rewritten into your 15:00 order: 22 beats, 38:30, in the player now; check the words in the script",
+   "from": "the editor"
+  },
+  {
+   "what": "Placement of the studio pieces beyond those now in the talk (E04 v2 on limits, M01 on building): set it in the build mode or say",
+   "from": "the editor"
+  }
+ ],
+ "tokens": null,
+ "policy": {
+  "outside_scope": 0,
+  "out_of_scope_requests": 0,
+  "pushbacks": 0,
+  "overrides": 0,
+  "injection_seen": 0
+ },
+ "vaults": {
+  "clones": "outside the repository, in the session's home folder",
+  "keys": "opened from the conductor's sealed zip, 0600, never printed",
+  "push": "with SG_SEND_ACCESS_TOKEN from the environment"
+ }
+}

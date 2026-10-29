@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "storyteller",
+ "kind": "follow-up (tonight's rule)",
+ "started": "2026-10-29T18:38:17Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Close idle: no new notes; part 2 unchanged; deck's 18:20 wake has the storyteller's notes in its plan and has not released. One follow-up about 19:10 to recheck before 19:30.",
+   "at": "2026-10-29T18:38:46Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Idle close writes nothing outside scope; the follow-up is the member's own, in its own session, per WAKE.md tonight's rule. London is UTC today.",
+   "at": "2026-10-29T18:38:46Z"
+  },
+  "work": {
+   "by": "storyteller",
+   "model": "",
+   "verdict": "none",
+   "comment": "Idle: deck's 18:20 wake is placing the storyteller's part 2 and 3 notes; nothing to add until it releases.",
+   "at": "2026-10-29T18:38:46Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Only the new wake record; git diff HEAD empty; no secrets or contact detail. (Correction: first recorded by the member before the sub-agent ran; this is the sub-agent's verdict.)",
+   "at": "2026-10-29T18:38:46Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Idle close, work none, follow-up about 19:10 UTC, as planned. (Correction: first recorded by the member before the sub-agent ran; this is the sub-agent's verdict.)",
+   "at": "2026-10-29T18:38:47Z"
+  }
+ },
+ "closed": "2026-10-29T18:38:47Z",
+ "outcome": "idle"
+}

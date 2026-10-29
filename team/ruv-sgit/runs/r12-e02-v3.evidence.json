@@ -1,0 +1,617 @@
+{
+ "run": "r12-e02-v3",
+ "purpose": "r12-e02-v3: studio experiment E02 v3, a third pass on r5's vault: the source's labels from capabilities.json, the excess grouped by sector on the ring, the summary clear of the list; and E09's mandate heading reworded",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public ruv-sgit/done/007-re-e02-v2-reviewed-keep.eml and ruv-sgit/done/013-re-e09-reviewed-keep.eml)",
+  "date": "2026-10-29",
+  "text": "E02 v2 review: two things for a v3: in the end state the two-line summary runs into 'The mandate, granted (4)'; and group the dots on the ring by sector (the four credential dots are in four places), so the picture alone says what is at risk. v3 waits for a description per row. E09 review: the list heading 'The mandate \u00b7 elicited' reads as a fact about this example, but this mandate is the site's own draft. Say 'elicited (here, the site's own draft)'; it can ride on E02 v3's run."
+ },
+ "pass_of": "21mmw3tm",
+ "commits_before": 9,
+ "server": "https://dev.send.sgraph.ai",
+ "vault_id": "21mmw3tm",
+ "created_at": "2026-10-29T12:42:25+00:00",
+ "closed_at": "2026-10-29T12:51:45+00:00",
+ "ending": "kept",
+ "hive": {
+  "workers": 4,
+  "tasks": 4,
+  "ruflo_calls": 19,
+  "ruflo_failed": 0,
+  "ruflo_ms": 18542
+ },
+ "branches": [
+  {
+   "name": "w-r12-e02-v3-v3",
+   "role": "developer",
+   "files": 1,
+   "bytes": 12012,
+   "write_ms": 8889,
+   "merge_ms": 10562
+  },
+  {
+   "name": "w-r12-e02-v3-e09-wording",
+   "role": "developer",
+   "files": 1,
+   "bytes": 11944,
+   "write_ms": 9074,
+   "merge_ms": 9722
+  },
+  {
+   "name": "w-r12-e02-v3-e09-explainer",
+   "role": "writer",
+   "files": 2,
+   "bytes": 12666,
+   "write_ms": 8054,
+   "merge_ms": 10531
+  },
+  {
+   "name": "w-r12-e02-v3-explainer",
+   "role": "writer",
+   "files": 2,
+   "bytes": 12568,
+   "write_ms": 9541,
+   "merge_ms": 10829
+  },
+  {
+   "name": "w-r12-e02-v3-editor",
+   "role": "editor",
+   "files": 1,
+   "bytes": 2407,
+   "write_ms": 9369,
+   "merge_ms": 11382
+  },
+  {
+   "name": "w-r12-e02-v3-v3-fixed",
+   "role": "developer",
+   "files": 1,
+   "bytes": 11910,
+   "write_ms": 9159,
+   "merge_ms": 10859
+  },
+  {
+   "name": "w-r12-e02-v3-explainer-fixed",
+   "role": "writer",
+   "files": 2,
+   "bytes": 12853,
+   "write_ms": 9166,
+   "merge_ms": 11619
+  }
+ ],
+ "commits": 17,
+ "files": 24,
+ "bytes_plain": 134627,
+ "files_delivered": 10,
+ "bytes_delivered": 76360,
+ "store": {
+  "objects": 134,
+  "bytes": 204381,
+  "plaintext_hits": 0,
+  "probe": "190 text fragments from the vault's files, searched for in every byte of the encrypted store"
+ },
+ "clone": {
+  "ms": 8780,
+  "files": 24,
+  "identical": true,
+  "store_identical": false
+ },
+ "ops": [
+  {
+   "op": "clone",
+   "ms": 5975,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 823,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 848,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6618,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1618,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 844,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6426,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2585,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2252,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5726,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1510,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 862,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6701,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2624,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2275,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 4824,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1526,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 913,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5615,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2591,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2242,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5698,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1585,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 887,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 7069,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2864,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2427,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5538,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1514,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 901,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6950,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2828,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2233,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6320,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1572,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 863,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6722,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2901,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2379,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 5580,
+   "rc": 0
+  },
+  {
+   "op": "branch-new",
+   "ms": 1751,
+   "rc": 0
+  },
+  {
+   "op": "commit",
+   "ms": 887,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6525,
+   "rc": 0
+  },
+  {
+   "op": "branch-switch",
+   "ms": 2527,
+   "rc": 0
+  },
+  {
+   "op": "merge",
+   "ms": 2563,
+   "rc": 0
+  },
+  {
+   "op": "push",
+   "ms": 6530,
+   "rc": 0
+  },
+  {
+   "op": "history",
+   "ms": 962,
+   "rc": 0
+  },
+  {
+   "op": "clone",
+   "ms": 8780,
+   "rc": 0
+  }
+ ],
+ "ruflo": [
+  {
+   "seq": 1,
+   "actor": "queen",
+   "cmd": "hive-mind init -t hierarchical-mesh -c byzantine -m 12",
+   "rc": 0,
+   "ms": 10859
+  },
+  {
+   "seq": 2,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p v3",
+   "rc": 0,
+   "ms": 483
+  },
+  {
+   "seq": 3,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t developer -r specialist -p e09-wording",
+   "rc": 0,
+   "ms": 515
+  },
+  {
+   "seq": 4,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t writer -r specialist -p explainer",
+   "rc": 0,
+   "ms": 397
+  },
+  {
+   "seq": 5,
+   "actor": "queen",
+   "cmd": "hive-mind spawn -n 1 -t editor -r specialist -p editor",
+   "rc": 0,
+   "ms": 396
+  },
+  {
+   "seq": 6,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d v3: E02 v3, driven, from abp-examples.json and capabilities.json -p high",
+   "rc": 0,
+   "ms": 381
+  },
+  {
+   "seq": 7,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d e09-wording: E09's mandate heading reworded -p high",
+   "rc": 0,
+   "ms": 442
+  },
+  {
+   "seq": 8,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d explainer: the E02 page and explainer updated for v3 -p high",
+   "rc": 0,
+   "ms": 410
+  },
+  {
+   "seq": 9,
+   "actor": "conductor",
+   "cmd": "hive-mind task -d editor: check v3, the E09 wording and the pages against the reviews and the data -p high",
+   "rc": 0,
+   "ms": 396
+  },
+  {
+   "seq": 10,
+   "actor": "conductor",
+   "cmd": "hive-mind broadcast -m run r12-e02-v3: r12-e02-v3: studio experiment E02 v3, a third pass on r5's vault: the source's labels from capabilities.json, the excess grouped by sector on the ring, the summary clear of the list; and E09's mandate heading reworded -f conductor",
+   "rc": 0,
+   "ms": 430
+  },
+  {
+   "seq": 11,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v3 sha256:f77fd20065b2f5c1 files:1 -f developer",
+   "rc": 0,
+   "ms": 365
+  },
+  {
+   "seq": 12,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered e09-wording sha256:4aa945351049c7a7 files:1 -f developer",
+   "rc": 0,
+   "ms": 416
+  },
+  {
+   "seq": 13,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered e09-explainer sha256:9d111164efba4c56 files:2 -f writer",
+   "rc": 0,
+   "ms": 411
+  },
+  {
+   "seq": 14,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer sha256:3d056e6d1090bb1b files:2 -f writer",
+   "rc": 0,
+   "ms": 425
+  },
+  {
+   "seq": 15,
+   "actor": "editor",
+   "cmd": "hive-mind broadcast -m delivered editor sha256:0ba7539b204f55c8 files:1 -f editor",
+   "rc": 0,
+   "ms": 443
+  },
+  {
+   "seq": 16,
+   "actor": "developer",
+   "cmd": "hive-mind broadcast -m delivered v3-fixed sha256:2db5e7005f89ac44 files:1 -f developer",
+   "rc": 0,
+   "ms": 404
+  },
+  {
+   "seq": 17,
+   "actor": "writer",
+   "cmd": "hive-mind broadcast -m delivered explainer-fixed sha256:49eac4a116ba3562 files:2 -f writer",
+   "rc": 0,
+   "ms": 457
+  },
+  {
+   "seq": 18,
+   "actor": "queen",
+   "cmd": "hive-mind status",
+   "rc": 0,
+   "ms": 443
+  },
+  {
+   "seq": 19,
+   "actor": "queen",
+   "cmd": "daemon stop",
+   "rc": 0,
+   "ms": 469
+  }
+ ],
+ "history": [
+  {
+   "id": "6462efdd287c",
+   "message": "init",
+   "time": "2026-10-29T05:37:10Z"
+  },
+  {
+   "id": "5df758165bdc",
+   "message": "brief: run r5-e02-blast-radius",
+   "time": "2026-10-29T05:37:12Z"
+  },
+  {
+   "id": "2f6d4dca7f16",
+   "message": "developer v1: delivered 1 files",
+   "time": "2026-10-29T05:40:19Z"
+  },
+  {
+   "id": "10720be8bdc5",
+   "message": "writer explainer: delivered 2 files",
+   "time": "2026-10-29T05:40:38Z"
+  },
+  {
+   "id": "bf9917b81ff5",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T05:40:55Z"
+  },
+  {
+   "id": "13a01970708f",
+   "message": "pass: run r7-e02-v2",
+   "time": "2026-10-29T07:35:08Z"
+  },
+  {
+   "id": "e5922a2a3fb1",
+   "message": "developer v2: delivered 1 files",
+   "time": "2026-10-29T07:41:22Z"
+  },
+  {
+   "id": "519fedcc6405",
+   "message": "writer explainer: delivered 2 files",
+   "time": "2026-10-29T07:41:49Z"
+  },
+  {
+   "id": "4681a45ff4f7",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T07:42:07Z"
+  },
+  {
+   "id": "c69ef16f0fa8",
+   "message": "pass: run r12-e02-v3",
+   "time": "2026-10-29T12:42:47Z"
+  },
+  {
+   "id": "5b39dee056f2",
+   "message": "developer v3: delivered 1 files",
+   "time": "2026-10-29T12:46:31Z"
+  },
+  {
+   "id": "d3fda3113983",
+   "message": "developer e09-wording: delivered 1 files",
+   "time": "2026-10-29T12:46:51Z"
+  },
+  {
+   "id": "ad28a60d990b",
+   "message": "writer e09-explainer: delivered 2 files",
+   "time": "2026-10-29T12:47:11Z"
+  },
+  {
+   "id": "6acd810fa3cf",
+   "message": "writer explainer: delivered 2 files",
+   "time": "2026-10-29T12:47:30Z"
+  },
+  {
+   "id": "1b8680b44d59",
+   "message": "editor editor: delivered 1 files",
+   "time": "2026-10-29T12:50:33Z"
+  },
+  {
+   "id": "2fbbe7a813ca",
+   "message": "developer v3-fixed: delivered 1 files",
+   "time": "2026-10-29T12:50:54Z"
+  },
+  {
+   "id": "8c7a782d1255",
+   "message": "writer explainer-fixed: delivered 2 files",
+   "time": "2026-10-29T12:51:15Z"
+  }
+ ],
+ "workers": [
+  {
+   "id": "v3",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "e09-wording",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "e09-explainer",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "explainer",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session)",
+   "tokens": null
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "who": "a Claude Code subagent of this session (Sonnet)",
+   "tokens": 84310,
+   "tool_uses": 13,
+   "wall_s": 88,
+   "must_fix": 0,
+   "should_fix": 4
+  },
+  {
+   "id": "v3-fixed",
+   "role": "developer",
+   "who": "the conductor (this Claude Code session), the editor's fixes applied",
+   "tokens": null
+  },
+  {
+   "id": "explainer-fixed",
+   "role": "writer",
+   "who": "the conductor (this Claude Code session), the editor's fixes applied",
+   "tokens": null
+  }
+ ],
+ "kept_at": "2026-10-29T12:51:45+00:00",
+ "handover": {
+  "zip": "2026-10-29__ruv-sgit__r5-e02__vault-handover.zip",
+  "sha256": "36ac5aa7cc5f6fb8",
+  "sealed_to": "the DC Vault Registry (team/conductor/known-keys/dc-vault-registry.json)",
+  "given_to": "the editor"
+ }
+}

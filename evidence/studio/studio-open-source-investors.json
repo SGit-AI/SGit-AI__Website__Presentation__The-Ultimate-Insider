@@ -1,0 +1,1091 @@
+{
+ "about": "Research pass for part 2 and part 3 of the talk (the editor's 17:37 request). (a) The open source strategy lives on its own site, open-source.sgit.ai ('Open source is a strategy. It is not a charity.'), with the position, founder guidance, funding and survivability pages; the business model shows on sgit.ai/investors (the code is free, the running service is sold) and in newsroom.sgit.ai articles on what open source is, who pays, the maintenance deficit and the fork. (b) No page is titled 'investment workflows'; the closest match is the newsroom brief investor.sgit.ai (deal rooms as vaults, contracts as graphs, funding models, an evaluation framework for GenAI security startups), with where-to-invest-in-sgit, sell-don't-issue and the-fork-next-door as the investment models; investor.sgit.ai itself is not built. (c) On the PHP October site: one reported (unconfirmed) case of firewalls rooted through php2shell, ten security products marked vulnerable, two security vendors' compromise claims withdrawn, and in its Pulse section six security products on the KEV list this month (BeyondTrust, SiteGuard WAF, PAN-OS, Fortinet, Ivanti VPN, Cisco email gateway). Gaps: sharness.ai, pki.sgit.ai and the blog were not searched further (covered by other catalogues); open-source.sgit.ai pages have no infographics; charts on open-source-is-not-free were lazy-loaded and not captured.",
+ "cautions": [
+  "No page on newsroom.sgit.ai is called 'investment workflows'; investor-sgit-ai.html is offered as the match. Confirm with the editor before a slide calls it that.",
+  "investor.sgit.ai did not resolve at capture (proxy 502); the brief says none of it is built yet. Do not show it as a live site.",
+  "The Dream Research case is one vendor's unconfirmed account; the newsroom says no victim, firewall vendor, agency or CISA has confirmed it. Say 'reported', never 'happened'.",
+  "The 'ten security products' are vulnerable, not exploited. Keep the two apart on a slide.",
+  "The Pulse cases (BeyondTrust, SiteGuard, PAN-OS, Fortinet, Ivanti, Cisco) are not PHP: Pulse is a separate section about this month's KEV additions. They answer 'security products are being attacked', not 'PHP hit security products'.",
+  "The CVE numbers on the PHP site are as the site gives them; not checked against NVD.",
+  "The Dream Research article narrates the attack in some detail (targeting, chain); use only the headline and the framing, no technique.",
+  "Pulse pages show vendor PSIRT email addresses in their measurement lines; none is quoted or cropped here.",
+  "The open-source.sgit.ai crop shows the byline with a 'LinkedIn' link label; no URL or contact detail is visible. Crop it out if the editor prefers.",
+  "PHP site pages have moved to subdomains (updates. and refs.php.oct.2026.newsroom.sgit.ai); old URLs redirect. Use the final_url.",
+  "The maintenance-deficit crop is Dion Wiggins' illustration; check reuse before it goes on a slide.",
+  "The Dream Research article page shows a live data notice (site data moved on since it was written)."
+ ],
+ "pieces": [
+  {
+   "id": "wos-p-os-home",
+   "site": "open-source.sgit.ai",
+   "page_url": "https://open-source.sgit.ai/index.html",
+   "title": "Open source is a strategy. It is not a charity.",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The editor's open source strategy site: open source is not generosity but strategy; technology stops being the moat, you are free to delete your own code, sovereignty becomes possible, and what is sold is trust.",
+   "infographics_and_animations": [],
+   "showcase_regions": [
+    {
+     "slug": "title",
+     "selector_or_where": "h1 and the standfirst under it, top of the page",
+     "what_it_shows": "The headline \"Open source is a strategy. It is not a charity.\" with the thesis and the byline",
+     "why_a_slide": "The single best slide for the open source strategy beat: one line, the editor's own site; QR to open-source.sgit.ai",
+     "png": "region-title.png",
+     "captured_at": "2026-10-29T18:18:19Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-os-home",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-os-position",
+   "site": "open-source.sgit.ai",
+   "page_url": "https://open-source.sgit.ai/views/index.html",
+   "title": "The position: open source is a strategy, not a charity",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The full position with counter-cases: technology is not the moat; lock-in relocates to quality, certification and maintainability; open source frees you to cannibalise your own code; \"We are selling trust.\"",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-os-position",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-os-founders",
+   "site": "open-source.sgit.ai",
+   "page_url": "https://open-source.sgit.ai/founders/index.html",
+   "title": "Owning the code, or opening it: guidance for founders",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Field notes for a solo founder: what copying your code would really cost an incumbent, four instincts and their counter-arguments, explorers, villagers and town planners, and eight steps in order.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-os-founders",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-os-funding",
+   "site": "open-source.sgit.ai",
+   "page_url": "https://open-source.sgit.ai/funding/index.html",
+   "title": "Funding: three proposals, compared for the first time, and a position",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Three ways to fund open source (market forces and supply-chain labelling, a maintainer platform, sovereignty bounties) side by side, with a position on how they fit.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-os-funding",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-os-survivability",
+   "site": "open-source.sgit.ai",
+   "page_url": "https://open-source.sgit.ai/survivability/index.html",
+   "title": "Survivability is not a property of the licence file",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Every relicensing from 2018 to 2024 followed one pattern: a single corporate copyright holder used a CLA to change terms; distributed copyright could not be moved that way.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-os-survivability",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-os-villagers",
+   "site": "open-source.sgit.ai",
+   "page_url": "https://open-source.sgit.ai/views/villagers.html",
+   "title": "Somebody has to be the villagers: maintenance as a market",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Maintaining the non-functional requirements (security, backups, reliability) of software others wrote is a market, and reading and repairing code is an appreciating scarce asset.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-os-villagers",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-sg-network",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/network/index.html",
+   "title": "The sgit.ai network",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Index of the focused *.sgit.ai sites; lists open-source.sgit.ai as \"open source is a strategy, not a charity\" beside pki, graphs, issues-fs and sg-compute.",
+   "infographics_and_animations": [
+    "18 screenshots of the network sites, one per card"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-sg-network",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-sg-investors",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/investors/index.html",
+   "title": "sgit.ai, for investors",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The investor pitch in the open: the problem, what sgit is, the open-source zero-knowledge architecture, computed traction, and the business model: the code is free, the running service is sold.",
+   "infographics_and_animations": [],
+   "showcase_regions": [
+    {
+     "slug": "title",
+     "selector_or_where": "h1 \"sgit.ai, for investors\" and the first two sections",
+     "what_it_shows": "The pitch published in the open, the problem in one sentence and what sgit is",
+     "why_a_slide": "Shows the open source business model applied to his own company, in public; QR to sgit.ai/investors",
+     "png": "region-title.png",
+     "captured_at": "2026-10-29T18:16:56Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-sg-investors",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-what-open-source-is",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/what-open-source-is-and-is-not.html",
+   "title": "What open source is, and what it is not",
+   "kind": "article",
+   "published": "2026-10-12",
+   "what_it_says": "Open source is a copyright licence, not a free-for-all: six misconceptions corrected, and the point is that nobody can lock you in.",
+   "infographics_and_animations": [
+    "Table: six misconceptions about open source and what is true"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "hero",
+     "selector_or_where": "first figure in the article",
+     "what_it_shows": "Six misconceptions about open source against what is true (control is real, somebody always pays, security depends on paid review time)",
+     "why_a_slide": "A ready-made explainer slide for the open source beat",
+     "png": "region-hero.png",
+     "captured_at": "2026-10-29T18:16:50Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-nr-what-open-source-is",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-open-source-not-free",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/open-source-is-not-free.html",
+   "title": "Open source is not free: who pays to keep the long tail working?",
+   "kind": "article",
+   "published": "2026-10-10",
+   "what_it_says": "The long tail of old versions nobody is paid to support, measured from Homebrew and PyPI data, and five ways to pay for it, simulated.",
+   "infographics_and_animations": [
+    "Several charts of the long tail (lazy-loaded; not captured)"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "where-the-money-flows",
+     "selector_or_where": "section \"Where the money flows\"",
+     "what_it_shows": "Text: open source demand-side value of $8.8 trillion against about $7.7 billion a year invested",
+     "why_a_slide": "The value-versus-funding gap in two numbers",
+     "png": "region-where-the-money-flows.png",
+     "captured_at": "2026-10-29T18:16:52Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-nr-open-source-not-free",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-maintenance-deficit",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/the-maintenance-deficit-with-evidence.html",
+   "title": "The maintenance deficit, with evidence",
+   "kind": "article",
+   "published": "2026-10-23",
+   "what_it_says": "Following Dion Wiggins: Germany spends about 27 million euros a year on a PHP-based platform and gave about 112,000 euros to PHP security, a 241 to 1 deficit; open source's business model pays the wrong layer.",
+   "infographics_and_animations": [
+    "Illustration \"Built on volunteers\": a Digital Sovereignty building on a cracked column of volunteer software, PHP at the base"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "hero",
+     "selector_or_where": "first figure (illustration credited to Dion Wiggins)",
+     "what_it_shows": "Building labelled Digital Sovereignty resting on cracked open source libraries with PHP at the base",
+     "why_a_slide": "Bridges the PHP attacks (part 2) to the open source business model (part 3); check reuse rights, it is Dion Wiggins' illustration",
+     "png": "region-hero.png",
+     "captured_at": "2026-10-29T18:16:54Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-nr-maintenance-deficit",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-nr-eyeballs-get-cheap",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/the-eyeballs-get-cheap.html",
+   "title": "The eyeballs get cheap",
+   "kind": "article",
+   "published": "2026-10-14",
+   "what_it_says": "Cheap, deep AI security review gives open source the eyeballs it never had; secure, sovereign and paid-for all point at the least code in production.",
+   "infographics_and_animations": [
+    "One figure"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-nr-eyeballs-get-cheap",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-value-of-constraints",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/the-value-of-constraints.html",
+   "title": "The value of constraints",
+   "kind": "article",
+   "published": "2026-10-16",
+   "what_it_says": "Client-side encryption and open source matter to sgit as constraints: no private code removes the temptation to lock customers in.",
+   "infographics_and_animations": [
+    "Two figures"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-nr-value-of-constraints",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-open-source-keep-it",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/open-source-so-you-keep-it.html",
+   "title": "Open source what you build, even while you are employed",
+   "kind": "article",
+   "published": "2026-10-19",
+   "what_it_says": "Nobody copies your open source ideas; the real advantage is that you keep using your own work from job to job.",
+   "infographics_and_animations": [
+    "One figure"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-nr-open-source-keep-it",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-investor-sgit-ai",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/investor-sgit-ai.html",
+   "title": "investor.sgit.ai: a brief for a website where investors and founders use our tools",
+   "kind": "article",
+   "published": "2026-10-28",
+   "what_it_says": "The investor map: a proposed site for investors and founders (angel to Series A) with investor news as a graph, contracts as graphs, deal rooms as vaults, keys for investors, every funding model from open source to proprietary, and an evaluation framework for GenAI security startups that scores inline risk and open source.",
+   "infographics_and_animations": [
+    "Card diagram: investor.sgit.ai, what it would hold (eight sections plus how it is run)"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "hero",
+     "selector_or_where": "first figure \"investor.sgit.ai: what it would hold\"",
+     "what_it_shows": "Eight cards: the news, contracts as graphs, for founders, an evaluation framework, deal rooms as vaults, keys for investors, sgit as the case study, RiskMandate at work",
+     "why_a_slide": "The closest thing to the \"investment workflows\" the editor described; one slide for the investor close. Labelled a proposal: none of it is built yet",
+     "png": "region-hero.png",
+     "captured_at": "2026-10-29T18:16:47Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-nr-investor-sgit-ai",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-where-to-invest",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/where-to-invest-in-sgit.html",
+   "title": "Where to invest in sgit",
+   "kind": "article",
+   "published": "2026-10-28",
+   "what_it_says": "Where money into sgit should go: the tool, a hub for vaults (SGitHub) or open core; recommends funding the hub, keeping the format open and selling self-host support as the bridge.",
+   "infographics_and_animations": [
+    "Three-column figure: the tool, the hub, open core, with who went each way (Git, GitHub, GitLab)"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "hero",
+     "selector_or_where": "first figure \"Where the value sits\"",
+     "what_it_shows": "Three ways to build a company on sgit and the companies that went each way before",
+     "why_a_slide": "The open source business model as an investment choice, in one picture",
+     "png": "region-hero.png",
+     "captured_at": "2026-10-29T18:16:48Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-nr-where-to-invest",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-sell-dont-issue",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/sell-dont-issue.html",
+   "title": "Sell, don't issue",
+   "kind": "article",
+   "published": "2026-10-16",
+   "what_it_says": "A funding model for founders who have already won: the investor buys the founder's shares, the founder lends the company what it needs, and open source (the fork) protects the investor instead of control rights.",
+   "infographics_and_animations": [
+    "Flow diagram: the two-part model, with the fork as the investor's protection"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "hero",
+     "selector_or_where": "first figure \"Sell, don't issue: the two-part model\"",
+     "what_it_shows": "Investor buys founder shares, founder loan to the company, protection by the fork not the board",
+     "why_a_slide": "An investment workflow that only works because the code is open",
+     "png": "region-hero.png",
+     "captured_at": "2026-10-29T18:16:53Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-nr-sell-dont-issue",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-fork-next-door",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/the-fork-next-door.html",
+   "title": "The fork next door",
+   "kind": "article",
+   "published": "2026-10-16",
+   "what_it_says": "Founders, customers and investors are each protected from the others because anyone can fork; forks take hold only when someone stops executing.",
+   "infographics_and_animations": [
+    "Triangle diagram: founders, customers, investors around the open code, one exit each"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "hero",
+     "selector_or_where": "first figure \"three corners, one exit each\"",
+     "what_it_shows": "Founders, customers and investors around the open code, each with an exit and its condition",
+     "why_a_slide": "Why investors in open source companies are protected: the strongest single diagram for the investor beat",
+     "png": "region-hero.png",
+     "captured_at": "2026-10-29T18:16:49Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-nr-fork-next-door",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-fund-it-with-time",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/articles/fund-it-with-time.html",
+   "title": "Fund it with time",
+   "kind": "article",
+   "published": "2026-10-19",
+   "what_it_says": "How to fund a startup: with time first; start while employed, because the constraint makes you focus.",
+   "infographics_and_animations": [
+    "One figure"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-nr-fund-it-with-time",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-desk-strategy",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/desks/strategy.html",
+   "title": "Strategy & startups: the desk",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "The newsroom desk for founders and investors: pricing, early access, Wardley maps and who pays for open source.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-nr-desk-strategy",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-nr-seed-companies",
+   "site": "newsroom.sgit.ai",
+   "page_url": "https://newsroom.sgit.ai/mvps/seed-companies.html",
+   "title": "The seed companies",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Seven Creative Commons business templates published for someone else to build, including an evidence-research company for journalists and investigators.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-nr-seed-companies",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-sg-summit-investors",
+   "site": "sgit.ai",
+   "page_url": "https://sgit.ai/summit/investors.md",
+   "title": "Investors: how does your firm share data with its portfolio?",
+   "kind": "page",
+   "published": "2026-09",
+   "what_it_says": "The startup-summit handout for investors: deal data in vaults the host cannot read, a write-only link for founders, and a licence to operate for each agent a portfolio company runs.",
+   "infographics_and_animations": [
+    "Capability table; PDF handout"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-sg-summit-investors",
+   "part_fit": "part 3"
+  },
+  {
+   "id": "wos-p-php-dream-research",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://php.oct.2026.newsroom.sgit.ai/articles/dream-research-rooted-25-servers/",
+   "title": "A vendor says a campaign rooted 25 servers, two days before we saw it",
+   "kind": "case",
+   "published": "2026-10-29",
+   "what_it_says": "Dream Research reported on 26 October that a php2shell chain took over 24 firewalls of one unnamed vendor and pivoted into a US government-affiliated network; the newsroom carries it as reported, not confirmed.",
+   "infographics_and_animations": [],
+   "showcase_regions": [
+    {
+     "slug": "title",
+     "selector_or_where": "h1, standfirst and first paragraph",
+     "what_it_shows": "The headline and the newsroom's framing: one vendor's account, no victim and no firewall vendor named",
+     "why_a_slide": "The clearest case of a security product (the firewall) as the way in, framed honestly as unconfirmed",
+     "png": "region-title.png",
+     "captured_at": "2026-10-29T18:17:05Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-php-dream-research",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-state-v1",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v1/",
+   "title": "The state of affairs on 23 October: firewalls in the blast radius",
+   "kind": "case",
+   "published": "2026-10-23",
+   "what_it_says": "Ten products from security and network vendors marked vulnerable in the NCSC-NL inventory: PAN-OS and Panorama, Check Point firewall web interfaces, NetScaler, F5 BIG-IP, Cisco Expressway and URWB, Sophos MyUTM.",
+   "infographics_and_animations": [
+    "Measure card: security and network vendors' products confirmed vulnerable, 10 vulnerable, 26 not, 16 under investigation"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "security-products",
+     "selector_or_where": "paragraph beginning \"Ten products from security and network vendors\"",
+     "what_it_shows": "The list of security products made vulnerable by PHP inside them",
+     "why_a_slide": "Names the products: the security layer itself runs PHP",
+     "png": "region-security-products.png",
+     "captured_at": "2026-10-29T18:17:02Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-php-state-v1",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-state-v3",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v3/",
+   "title": "The state of affairs on 24 October: a vendor withdraws the first claim of a break-in",
+   "kind": "case",
+   "published": "2026-10-24",
+   "what_it_says": "Sophos withdrew its claim of a successful compromise: its data showed scanning and a few failed attempts.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-php-state-v3",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-state-v5",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v5/",
+   "title": "The state of affairs on 27 October: both vendor claims of a break-in withdrawn",
+   "kind": "case",
+   "published": "2026-10-27",
+   "what_it_says": "Both security vendors that claimed a php2shell compromise withdrew it: Sophos on 22 October and Palo Alto Networks' Unit 42 on 25 October.",
+   "infographics_and_animations": [
+    "Measure card: security vendors' claims of a successful compromise, 2 made and withdrawn"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "vendor-claims",
+     "selector_or_where": "section \"Vendor claims of a break-in: two made, two withdrawn\"",
+     "what_it_shows": "The two security vendors' claims and their withdrawals",
+     "why_a_slide": "Caution for the deck: the security vendors themselves overclaimed; a good beat on evidence",
+     "png": "region-vendor-claims.png",
+     "captured_at": "2026-10-29T18:17:00Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-php-state-v5",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-src-paloalto-psirt",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/paloalto-psirt-cve-2026-109618/",
+   "title": "Source: Palo Alto Networks PSIRT on CVE-2026-109618",
+   "kind": "case",
+   "published": null,
+   "what_it_says": "Captured vendor advisory: PAN-OS 10.2 to 12.2 affected, PHP inside firewalls.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-php-src-paloalto-psirt",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-src-securitynl",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/security-nl-palo-alto-firewalls/",
+   "title": "Source: Security.NL, Palo Alto firewalls vulnerable to PHP2Shell",
+   "kind": "case",
+   "published": "2026-10-22",
+   "what_it_says": "Security.NL: PAN-OS, the operating system of Palo Alto firewalls, vulnerable; risk highest where the management interface is reachable from the internet; Fortinet and Cisco checking.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-php-src-securitynl",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-src-sonicwall",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/sonicwall-php-product-notice/",
+   "title": "Source: SonicWall product notice on the PHP flaws",
+   "kind": "case",
+   "published": "2026-10-22",
+   "what_it_says": "SonicWall's PSIRT found no use of PHP in the listed products (a counter-example: not every security product is affected).",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-php-src-sonicwall",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-src-cypro",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/cypro-php2shell-exploit-roots-firewalls/",
+   "title": "Source: CyPro, PHP2Shell exploit roots firewalls",
+   "kind": "case",
+   "published": "2026-10-28",
+   "what_it_says": "A rewrite of Dream Research's report, not original reporting; notes unresolved discrepancies.",
+   "infographics_and_animations": [],
+   "showcase_regions": [],
+   "source_id": "wos-php-src-cypro",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-pulse",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/",
+   "title": "What else is going on: Pulse",
+   "kind": "page",
+   "published": null,
+   "what_it_says": "Pulse: 26 vulnerabilities in the news this month, each with its evidence of exploitation as eight dated rungs beside the attention it gets; several are security products.",
+   "infographics_and_animations": [
+    "Ladder of eight rungs per CVE"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-php-pulse",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-pulse-fortinet",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2025-61624/",
+   "title": "Pulse: Fortinet multiple products",
+   "kind": "case",
+   "published": null,
+   "what_it_says": "Fortinet's advisory marks the path traversal flaw as known exploited; KEV listed 16 October 2026.",
+   "infographics_and_animations": [
+    "Eight-rung ladder of evidence of exploitation"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-php-pulse-fortinet",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-pulse-panos",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-0322/",
+   "title": "Pulse: Palo Alto Networks PAN-OS",
+   "kind": "case",
+   "published": null,
+   "what_it_says": "Palo Alto reports very limited exploitation of the management interface; KEV listed 14 October 2026.",
+   "infographics_and_animations": [
+    "Eight-rung ladder of evidence of exploitation"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-php-pulse-panos",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-pulse-ivanti",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-104935/",
+   "title": "Pulse: Ivanti Connect Secure (VPN)",
+   "kind": "case",
+   "published": null,
+   "what_it_says": "Authentication bypass in a VPN; KEV listed 13 October 2026; no named party reporting attempts yet.",
+   "infographics_and_animations": [
+    "Eight-rung ladder of evidence of exploitation"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-php-pulse-ivanti",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-pulse-beyondtrust",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-102764/",
+   "title": "Pulse: BeyondTrust Remote Support",
+   "kind": "case",
+   "published": null,
+   "what_it_says": "BeyondTrust and Mandiant: a suspected China-nexus espionage actor exploited a zero-day against two Remote Support instances; KEV listed 16 October 2026.",
+   "infographics_and_animations": [
+    "Eight-rung ladder of evidence of exploitation"
+   ],
+   "showcase_regions": [
+    {
+     "slug": "title",
+     "selector_or_where": "h1 and the first four rungs",
+     "what_it_shows": "The CVE, the product and the ladder of evidence of exploitation",
+     "why_a_slide": "Shows a security product with its exploitation evidence graded, not asserted",
+     "png": "region-title.png",
+     "captured_at": "2026-10-29T18:17:07Z",
+     "no_keys_checked": true
+    }
+   ],
+   "source_id": "wos-php-pulse-beyondtrust",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-pulse-siteguard",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-106931/",
+   "title": "Pulse: EG Secure Solutions SiteGuard Server Edition (WAF)",
+   "kind": "case",
+   "published": null,
+   "what_it_says": "The vendor says exploitation of an OS command injection flaw is already confirmed; KEV listed 20 October 2026.",
+   "infographics_and_animations": [
+    "Eight-rung ladder of evidence of exploitation"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-php-pulse-siteguard",
+   "part_fit": "part 2"
+  },
+  {
+   "id": "wos-p-php-pulse-cisco-seg",
+   "site": "php.oct.2026.newsroom.sgit.ai",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-76519/",
+   "title": "Pulse: Cisco Secure Email Gateway",
+   "kind": "case",
+   "published": null,
+   "what_it_says": "Path traversal in an email security gateway; KEV listed 14 October 2026.",
+   "infographics_and_animations": [
+    "Eight-rung ladder of evidence of exploitation"
+   ],
+   "showcase_regions": [],
+   "source_id": "wos-php-pulse-cisco-seg",
+   "part_fit": "part 2"
+  }
+ ],
+ "security_products_hit": [
+  {
+   "case": "php2shell campaign said to root 24 firewalls",
+   "product": "firewall (vendor not named)",
+   "vendor": "not named by the report",
+   "date": "2026-10-26",
+   "what_the_page_says": "Dream Research said a chain of the two php2shell flaws and a Linux kernel flaw took over 24 firewalls of one vendor and pivoted into a US government-affiliated network; no victim, vendor or agency has confirmed it; carried as reported, not confirmed.",
+   "page_url": "https://php.oct.2026.newsroom.sgit.ai/articles/dream-research-rooted-25-servers/",
+   "source_id": "wos-php-dream-research"
+  },
+  {
+   "case": "Security products running vulnerable PHP",
+   "product": "PAN-OS and Panorama; Check Point firewall web interfaces; NetScaler ADC and Gateway; F5 BIG-IP; Cisco Expressway and URWB; Sophos MyUTM",
+   "vendor": "Palo Alto Networks, Check Point, Citrix (NetScaler), F5, Cisco, Sophos",
+   "date": "2026-10-23",
+   "what_the_page_says": "Ten products from security and network vendors marked vulnerable in the NCSC-NL inventory; Palo Alto confirms PAN-OS 10.2 to 12.2 affected through the management interface, no exploitation known to it. Vulnerable, not exploited.",
+   "page_url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v1/",
+   "source_id": "wos-php-state-v1"
+  },
+  {
+   "case": "PAN-OS firewalls vulnerable to php2shell",
+   "product": "PAN-OS (firewall operating system)",
+   "vendor": "Palo Alto Networks",
+   "date": "2026-10-22",
+   "what_the_page_says": "Palo Alto says PAN-OS 10.2 to 12.2 is vulnerable; risk highest when the management interface is reachable from the internet. Vulnerable, not exploited.",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/security-nl-palo-alto-firewalls/",
+   "source_id": "wos-php-src-securitynl"
+  },
+  {
+   "case": "Security vendors' compromise claims withdrawn",
+   "product": "(claims by security vendors, not a product hit)",
+   "vendor": "Sophos; Palo Alto Networks Unit 42",
+   "date": "2026-10-22 and 2026-10-25",
+   "what_the_page_says": "Both security vendors that said php2shell had been used in a successful attack withdrew it.",
+   "page_url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v5/",
+   "source_id": "wos-php-state-v5"
+  },
+  {
+   "case": "CVE-2026-102764",
+   "product": "BeyondTrust Remote Support",
+   "vendor": "BeyondTrust",
+   "date": "2026-10-15",
+   "what_the_page_says": "Vendor and Mandiant: a suspected China-nexus espionage actor exploited a zero-day against one BeyondTrust-hosted and one self-hosted Remote Support instance; KEV 2026-10-16.",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-102764/",
+   "source_id": "wos-php-pulse-beyondtrust"
+  },
+  {
+   "case": "CVE-2026-106931",
+   "product": "SiteGuard Server Edition (web application firewall)",
+   "vendor": "EG Secure Solutions",
+   "date": "2026-10-14",
+   "what_the_page_says": "The vendor states exploitation has already been confirmed; no victim named; KEV 2026-10-20.",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-106931/",
+   "source_id": "wos-php-pulse-siteguard"
+  },
+  {
+   "case": "CVE-2026-0322",
+   "product": "PAN-OS (firewall)",
+   "vendor": "Palo Alto Networks",
+   "date": "2026-10-14",
+   "what_the_page_says": "Vendor reports very limited exploitation targeting the management interface; no victim named; KEV 2026-10-14.",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-0322/",
+   "source_id": "wos-php-pulse-panos"
+  },
+  {
+   "case": "CVE-2025-61624",
+   "product": "Fortinet multiple products (edge devices)",
+   "vendor": "Fortinet",
+   "date": "2026-10-16",
+   "what_the_page_says": "Vendor advisory marks the flaw as known exploited; KEV 2026-10-16.",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2025-61624/",
+   "source_id": "wos-php-pulse-fortinet"
+  },
+  {
+   "case": "CVE-2026-104935",
+   "product": "Ivanti Connect Secure (VPN)",
+   "vendor": "Ivanti",
+   "date": "2026-10-13",
+   "what_the_page_says": "Authentication bypass in a VPN, on the KEV list from 2026-10-13; no named party reporting attempts at Pulse's check.",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-104935/",
+   "source_id": "wos-php-pulse-ivanti"
+  },
+  {
+   "case": "CVE-2026-76519",
+   "product": "Cisco Secure Email Gateway",
+   "vendor": "Cisco",
+   "date": "2026-10-14",
+   "what_the_page_says": "Path traversal in a mail security gateway, on the KEV list from 2026-10-14; no named party reporting attempts at Pulse's check.",
+   "page_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-76519/",
+   "source_id": "wos-php-pulse-cisco-seg"
+  }
+ ],
+ "claims": [
+  {
+   "id": "wos-c01",
+   "text": "The editor's open source site states that what is sold is trust.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-os-home",
+     "quote": "We play the game of empowering the user and being the reputable source of trust. We are selling trust.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wos-c02",
+   "text": "The editor argues technology is not the moat.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-os-home",
+     "quote": "Technology is not the moat.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wos-c03",
+   "text": "sgit's business model: the code is free; the running service is sold.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-sg-investors",
+     "quote": "The code is free. What is sold is the running service, and the trust that comes with running it well.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wos-c04",
+   "text": "Anyone can fork, and that protects founders, customers and investors from each other.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-nr-fork-next-door",
+     "quote": "Each corner is protected from the others by the same thing: anyone can fork.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wos-c05",
+   "text": "Germany's PHP platform spend against its contribution to PHP security is a 241 to 1 maintenance deficit (Dion Wiggins' figure, as reported).",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-nr-maintenance-deficit",
+     "quote": "a maintenance deficit ratio of 241 to 1",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Figure is Dion Wiggins'; not checked against the German budget"
+  },
+  {
+   "id": "wos-c06",
+   "text": "The recommendation for investment in sgit is to fund the hub, keep the format open and sell self-host support.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-nr-where-to-invest",
+     "quote": "My answer: fund the hub (SGitHub), keep the format open, sell self-host support as the bridge.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wos-c07",
+   "text": "investor.sgit.ai is a proposal for investors and founders with deal rooms as vaults.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-nr-investor-sgit-ai",
+     "quote": "Deal rooms as vaults.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A brief; the site is not built (investor.sgit.ai did not resolve at capture)"
+  },
+  {
+   "id": "wos-c08",
+   "text": "The evaluation framework for GenAI security startups scores inline risk and open source among seven criteria.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-nr-investor-sgit-ai",
+     "quote": "inline risk, business context, model survivability, open source and deployment sovereignty",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wos-c09",
+   "text": "Ten security and network products were marked vulnerable to php2shell in the NCSC-NL inventory as of 23 October.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-state-v1",
+     "quote": "Ten security and network products are confirmed vulnerable.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vulnerable, not exploited; inventory is NCSC-NL's, not re-checked"
+  },
+  {
+   "id": "wos-c10",
+   "text": "Dream Research reports 24 firewalls taken in a php2shell chain; unconfirmed.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-dream-research",
+     "quote": "It reports 24 firewalls taken.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "One vendor's account; the page itself says nobody has confirmed it"
+  },
+  {
+   "id": "wos-c11",
+   "text": "Nobody has confirmed the Dream Research account.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-php-dream-research",
+     "quote": "No victim, firewall vendor, US agency, CISA or PHP team has confirmed any of it.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wos-c12",
+   "text": "Both security vendors that claimed a php2shell compromise withdrew the claim.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-php-state-v5",
+     "quote": "Both security vendors that said php2shell had been used in a successful attack have withdrawn it",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  },
+  {
+   "id": "wos-c13",
+   "text": "Palo Alto PAN-OS 10.2 to 12.2 is affected by the PHP flaws.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-php-src-paloalto-psirt",
+     "quote": "PAN-OS 10.2 to 12.2 affected: PHP inside firewalls (primary)",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The page is the newsroom's copy of the vendor advisory"
+  },
+  {
+   "id": "wos-c14",
+   "text": "BeyondTrust Remote Support was exploited as a zero-day by a suspected China-nexus actor, per the vendor.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-pulse-beyondtrust",
+     "quote": "A suspected China-nexus espionage actor exploited a zero-day vulnerability",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vendor statement quoted by Pulse; not checked against the vendor page"
+  },
+  {
+   "id": "wos-c15",
+   "text": "EG Secure Solutions says exploitation of SiteGuard Server Edition is confirmed.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-pulse-siteguard",
+     "quote": "The vendor stating exploitation has already been confirmed",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Pulse's reading of the vendor's Japanese alert"
+  },
+  {
+   "id": "wos-c16",
+   "text": "Palo Alto reports very limited exploitation of the PAN-OS management interface flaw (CVE-2026-0322).",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-pulse-panos",
+     "quote": "Very limited exploitation has been observed targeting the Palo Alto Networks management interface.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vendor text as recorded by Pulse"
+  },
+  {
+   "id": "wos-c17",
+   "text": "SonicWall found no use of PHP in its listed products.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-php-src-sonicwall",
+     "quote": "found no use of PHP in the following products",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": ""
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+# CI owns the version (https://newsroom.sgit.ai/articles/ci-owns-the-version.html).
+#
+# Any push: build with the version "pending" and run the gate.
+# A push to dev or main, after the gate: ONE release job at a time reads the newest tag, picks the next number
+# (dev bumps the last number, main the middle one), writes ./version, commits as GitHub Actions with the subject
+# "site vX.Y.Z: <the pushed subject>", tags that commit, pushes, then builds THAT commit and deploys it to Pages.
+# The push uses the workflow's own token, which starts no second run. Nobody else writes ./version: a guard fails
+# the run if any other author changed it. Pages source must be "GitHub Actions" (Settings, Pages).
+name: release
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0, persist-credentials: false }
+      - name: guard, nobody but CI writes the version
+        env: { BEFORE: "${{ github.event.before }}" }
+        run: |
+          if [ -n "$BEFORE" ] && ! echo "$BEFORE" | grep -q '^0*$' && git cat-file -e "$BEFORE" 2>/dev/null; then
+            if git log --format=%an "$BEFORE..HEAD" -- version | grep -qv '^GitHub Actions$'; then
+              echo "::error::./version was edited by someone other than CI"; exit 1; fi
+          fi
+      - name: build (pending) and gate
+        run: python3 admin/build/build.py --version pending && python3 admin/build/validate.py
+
+  release:
+    needs: gate
+    if: github.event_name == 'push' && (github.ref_name == 'dev' || github.ref_name == 'main')
+    runs-on: ubuntu-latest
+    concurrency: { group: release, cancel-in-progress: false }
+    permissions: { contents: write }
+    outputs: { version: "${{ steps.number.outputs.version }}" }
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0, ref: "${{ github.ref_name }}" }
+      - id: number
+        env: { BRANCH: "${{ github.ref_name }}" }
+        run: |
+          set -euo pipefail
+          git config user.name "GitHub Actions"; git config user.email "actions@github.com"
+          for try in 1 2 3; do
+            git fetch --quiet --tags origin "$BRANCH"
+            git reset -q --hard "origin/$BRANCH"                 # a push that landed meanwhile rides this release
+            if [ "$(git log -1 --format=%an)" = "GitHub Actions" ] && [ -f version ]; then
+              NEW=$(cat version); echo "head is already release $NEW"; break; fi
+            LAST=$(git tag --list 'v*' | sort -V | tail -1)
+            if [ -z "$LAST" ]; then NEW=v0.1.0
+            else IFS=. read -r A B C <<< "${LAST#v}"
+              if [ "$BRANCH" = main ]; then NEW="v$A.$((B + 1)).0"; else NEW="v$A.$B.$((C + 1))"; fi; fi
+            SUBJECT=$(git log -1 --format=%s)
+            printf '%s\n' "$NEW" > version
+            git add version; git commit -q -m "site $NEW: $SUBJECT"; git tag "$NEW"
+            if git push origin "HEAD:$BRANCH"; then git push origin "refs/tags/$NEW"; echo "released $NEW"; break; fi
+            git tag -d "$NEW"; echo "$BRANCH moved; taking it in (attempt $try)"
+            [ "$try" = 3 ] && { echo "::error::$BRANCH kept moving; nothing released"; exit 1; }
+          done
+          echo "version=$NEW" >> "$GITHUB_OUTPUT"
+      - name: build the release commit and gate it again
+        run: python3 admin/build/build.py && python3 admin/build/validate.py && grep -qx "${{ steps.number.outputs.version }}" _site/version.txt
+      - uses: actions/configure-pages@v5
+        with: { enablement: true }
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: _site }
+
+  deploy:
+    needs: release
+    runs-on: ubuntu-latest
+    concurrency: { group: pages, cancel-in-progress: false }
+    permissions: { pages: write, id-token: write }
+    environment: { name: github-pages, url: "${{ steps.deployment.outputs.page_url }}" }
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+      - name: verify the live site serves the new version
+        env: { V: "${{ needs.release.outputs.version }}", URL: "${{ steps.deployment.outputs.page_url }}" }
+        run: |
+          for i in $(seq 1 20); do
+            if curl -fsS "${URL%/}/version.txt" | grep -qx "$V"; then echo "live: $V"; exit 0; fi; sleep 15; done
+          echo "::warning::live site did not show $V within 5 minutes (custom domain or CDN cache?)"

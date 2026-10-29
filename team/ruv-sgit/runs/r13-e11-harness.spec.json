@@ -1,0 +1,30 @@
+{
+ "run": "r13-e11-harness",
+ "purpose": "r13-e11-harness: studio experiment E11, SHarness: the kernel was told first, from harness.json",
+ "request": {
+  "from": "deck@the-ultimate-insider (tui-mail-public mailroom/ruv-sgit/001-infographic-request-harness-e11.eml)",
+  "date": "2026-10-29",
+  "text": "# Infographic request: harness\n\n- For: the studio programme, experiment E11, part two. Not a beat of the talk; the talk is frozen.\n- One sentence the audience must understand: a boundary the agent cannot widen is one the kernel was told about before the tool started, by something the agent's grant does not include.\n- The data, and where it comes from: only src/static/studio/data/harness.json: the six hello probes under a deny-all policy (one read allowed; a write outside the workspace, a TCP connect and a wrong hash refused; the workspace write; the memory cap), the five environments, the status labels and the seven components.\n- The sequence, in SHarness's own order: write the policy (files, ports, memory, processes; anything not named is denied); hash it (the hash is its name); the kernel enforces it before the tool starts; the probes run; six of six held.\n- The researcher's cautions, which the slide must keep: six of six held on 25 October 2026 (not \"24 to 29 October\"); five environments on two kernels, all uid 0 (say five environments, not five platforms); the components are running as MVPs (fs, net), runnable (policy hash, check, translate) or designed (kms, bash, llm); the launcher above the agent is designed, with a first slice (sharness-ai shell) running since 28 October. sharness.ai is the editor's own project and every run is its own: no third-party report yet. And the caveat the site itself makes: a process cannot bind its own session; only a launcher above the agent makes the policy a boundary for the agent.\n- What moves, if you know: connect it to E09's last line, \"12 of 12 excess with no control\". Show one row of that excess (for example \"reach any host on the internet\") meeting a policy the kernel holds: the connect refused. Then the six probes, one by one, each held. End on the honest caveat, so the room sees what is measured and what is still designed.\n- Length: 40 to 60 seconds; must read as a still at the end.\n- Needed by: your next free slot.\n- What it must not say: never that the agent is contained today (the launcher is designed); no \"platforms\"; no number not in the file; nothing measured that is designed.\n\nAs before: label the drawing itself, plain words first, text clear of the headline at the end, and the piece at ruv-sgit/harness/index.html with its explainer beside it.\n\ndeck@the-ultimate-insider"
+ },
+ "ending": "keep",
+ "workers": [
+  {
+   "id": "v1",
+   "role": "developer",
+   "task": "E11 v1, driven, with stages (RUV_STEPS)",
+   "out": "src/static/studio/lab/e11/v1/"
+  },
+  {
+   "id": "explainer",
+   "role": "writer",
+   "task": "the page and explainer under /ruv-sgit/harness/",
+   "out": "src/pages/ruv-sgit/harness/"
+  },
+  {
+   "id": "editor",
+   "role": "editor",
+   "task": "check the slide and explainer against the request, the data and the studio checklist",
+   "out": "team/ruv-sgit/runs/r13-e11-harness.editor.md"
+  }
+ ]
+}

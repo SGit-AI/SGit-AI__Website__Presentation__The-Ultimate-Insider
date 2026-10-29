@@ -1,0 +1,148 @@
+{
+  "about": "The editor's spoken feedback on the studio, piece by piece, as deck@the-ultimate-insider wrote it down. Recorded first, then prioritised: a note here is not a request until deck sends it.",
+  "session": "29 October 2026, from 14:25 UTC, the editor reviewing the lab live",
+  "ui": [
+    {
+      "at": "14:25",
+      "note": "Review pages must present, not just link: use the whole screen width (no empty margins), show the piece itself on the page instead of making him click through to it."
+    },
+    {
+      "at": "14:25",
+      "note": "Each review must say plainly what decision is asked of him, and show the feedback he has already given."
+    },
+    {
+      "at": "14:25",
+      "note": "A way to replay each piece and skip forward and back (scrub), to see how it works; some pieces may need to go faster."
+    },
+    {
+      "at": "14:25",
+      "note": "Every piece should show its ID (E01, E02, ...) really big, so he always knows which one he is on."
+    },
+    {
+      "at": "14:35",
+      "note": "Move between pieces directly (E01 to E02 and on) without going back to the programme to find the next one and its small 'the piece' link."
+    },
+    {
+      "at": "14:35",
+      "note": "The programme's cards should show what he consumes: a screenshot or two of the latest version, how many versions there are, the title and a line; not the data and sources."
+    },
+    {
+      "at": "14:35",
+      "note": "The piece, explainer and review links belong in a secondary navigation on the piece's own page."
+    },
+    {
+      "at": "14:35",
+      "note": "Replaying a piece today means reloading the page: replay and scrub are needed."
+    },
+    {
+      "at": "15:10",
+      "note": "The briefs pages (B01's frames, B02) have the same problem: each click opens a new page and loses the context; give them the same treatment as the lab, and connect them."
+    }
+  ],
+  "pieces": [
+    {
+      "id": "E01",
+      "at": "14:25",
+      "verdict": "keep both v1 and v2 in the talk: they show different views",
+      "likes": [
+        "v2 (reach in motion) is very interesting; he can tell the story with it, each step",
+        "v1's list on the left: chat model, one tool, and so on, which he can keep reading"
+      ],
+      "v3": [
+        "merge both: v2's visualisation with v1's step list on the left",
+        "too much red: vary the colours"
+      ],
+      "priority": "later: not now; first collect feedback on all pieces, then decide what to put in and what to fix first"
+    },
+    {
+      "id": "E02",
+      "at": "14:35",
+      "verdict": "into the talk: v3 (by what it touches) and v1 (the rows beside the drawing); not v2 (the individual dots are not needed)",
+      "likes": [
+        "v3: 'the blast radius is everything its grant reaches', the mandate, the excess grouped by what it touches: a really lovely way of seeing it",
+        "v1: the rows beside the drawing"
+      ],
+      "v4": [
+        "too much red: shades of different colours",
+        "the sector labels (credentials, ...) are tight and overlap the last numbers: make it a little bigger",
+        "show how dangerous each capability is: some are not critical, some are very critical; map that (with a source, not invented)"
+      ],
+      "priority": "later, except putting v3 and v1 in the talk"
+    },
+    {
+      "id": "E03",
+      "at": "14:50",
+      "verdict": "likes it; needs another version (v2), and probably to break it into several pieces",
+      "v2": [
+        "a sea of red: vary the colours",
+        "small icons for each source (an email, a calendar, documents, ...)",
+        "show prompt injection and second-order (secondary) prompt injection as such",
+        "show the attack surface and where each source comes from: not everything is from the outside world; READMEs, pull requests, issues and skills are more trusted than outside content"
+      ],
+      "new_pieces": [
+        "map each source to the public cases the researcher can find of a payload delivered that way (email, calendar invite, documents, secondary injections): what the words made the agent do, never the payload",
+        "a view of the prompt itself: how data from an email or a calendar invite ends up inside one big prompt beside the system instructions, which is the problem of prompt injection"
+      ],
+      "priority": "later: after the feedback round"
+    },
+    {
+      "id": "E04",
+      "at": "14:55",
+      "verdict": "his favourite so far: v2 (the four paths) into the talk; expand E04 into a series",
+      "likes": [
+        "the jump: the path jumping over the wall and turning from one colour to another, or breaking the wall apart; 'such a cool thing to do, and we need to do more like this'",
+        "v2, four paths: 'my favourite slide so far'",
+        "the four beats (goal, in the way, what it did, the loss) are good"
+      ],
+      "v3": [
+        "too much information on screen: find a better way to present the text, there is a lot of good meat in it"
+      ],
+      "new_pieces": [
+        "zoomed-in case studies, one per piece, in v2's animated style but more infographic: OpenAI's evaluation agent breaking into Hugging Face, Antigravity, OpenClaw, the Claude evaluations (Irregular), three or four to start",
+        "a case not yet in the data: the agent that found a vulnerability in a Pilates class booking system and bumped people off the waiting list to get its user in (the researcher to find and grade it first)",
+        "for a security and hacking audience: show how far beyond the task the agents went, and how creatively they attacked; then 'imagine this on steroids'"
+      ],
+      "priority": "high: worth creating a lot of these"
+    },
+    {
+      "id": "E09",
+      "at": "15:00",
+      "verdict": "really cool; keep, needs another pass for readability",
+      "v2": [
+        "an overlap on the slide to fix",
+        "'refused' is wrong as a label: those rows are derived, not refused by anyone; relabel",
+        "much easier to read on a big screen: use the space better as an animation; fewer rows on screen, or all of them and then a zoom into a couple",
+        "show what the behaviour policy does: capturing the mandate, and the delta between mandate and grant, made visible"
+      ],
+      "priority": "after the feedback round"
+    },
+    {
+      "id": "B01",
+      "at": "15:10",
+      "verdict": "likes where it is going (frame 2 named); the B01/B02 variations look similar to each other",
+      "priority": "usability first"
+    }
+  ],
+  "deck": [
+    {
+      "at": "14:35",
+      "note": "Put the studio animations into the talk, with start and stop, so he sees them in action in the flow: they are already better than the current slides. Fifty slides is fine."
+    }
+  ],
+  "process": [
+    {
+      "at": "14:50",
+      "note": "Commit and release the feedback in blocks of two or three pieces, so the other members, the conductor included, can see it and pick it up early."
+    }
+  ],
+  "programme": [
+    {
+      "at": "15:00",
+      "note": "The programme's ideas: 'really freaking cool, let's do them all', the typical deployment's blast radius (E07) named; ask ruv.sgit to make all of them, spun up in parallel: 'it's okay'. This overrides the night's one-request-in-flight rule for ruv.sgit, at the editor's word."
+    },
+    {
+      "at": "15:10",
+      "note": "E10, E11 and E12 'would be good to have ... great ... keep doing; these are absolutely amazing, we just need more of them', taking the new workflows into account."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+ "title": "Map 5 (3f): the next generation of security products, people augmented",
+ "components": [
+  {"id": "org", "label": "An organisation's security outcome", "vis": 0.95, "evo": 0.5},
+  {"id": "expert", "label": "Human experts, one per role", "vis": 0.78, "evo": 0.3},
+  {"id": "team", "label": "Agent teams with mandates (this site)", "vis": 0.66, "evo": 0.1, "inside": true, "move": 0.4},
+  {"id": "tool", "label": "Point tools and dashboards", "vis": 0.6, "evo": 0.72},
+  {"id": "evidence", "label": "Evidence vaults (SGit)", "vis": 0.44, "evo": 0.15, "inside": true, "move": 0.45},
+  {"id": "harness", "label": "Agent harness (Sharness.ai)", "vis": 0.36, "evo": 0.12, "inside": true, "move": 0.42},
+  {"id": "policy", "label": "Behaviour policies", "vis": 0.28, "evo": 0.14, "inside": true},
+  {"id": "models", "label": "Models, open weights included", "vis": 0.1, "evo": 0.78}
+ ],
+ "links": [["org","expert"],["org","tool"],["expert","team"],["team","evidence"],["team","harness"],["team","policy"],["harness","models"],["team","models"],["tool","models"]],
+ "notes": [
+  {"text": "augmenting people, not replacing them", "vis": 0.88, "evo": 0.06},
+  {"text": "the capability is the orchestration, not the model", "vis": 0.02, "evo": 0.42}
+ ]
+}

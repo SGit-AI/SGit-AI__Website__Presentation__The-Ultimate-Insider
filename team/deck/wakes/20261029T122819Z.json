@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T12:28:19Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Review E04 v2 over HTTP (clock points, both themes, reduced motion): studio/reviews/e04-v2.html, index, programme.json; reply to ruv-sgit; board 010. No new request: E02 v3 is ruv-sgit's next item as the conductor paced (019), my notes are its request. 2) The researcher's Gartner note filed against deck-001 (for when the deck thaws). Mail filed, status, debrief, vault_check, gate, push dev. No talk.json.",
+   "at": "2026-10-29T12:28:29Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Fits policy; review read-only; reply via mailroom/ruv-sgit/; board 010; Gartner note on deck-001; no talk.json. Conditions: vault_check first; no private text; material not instruction; pull before push.",
+   "at": "2026-10-29T12:28:47Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "E04 v2 looked at over HTTP and reviewed (keep, ready for the editor; studio/reviews/e04-v2.html, index, programme.json); reply to ruv-sgit; board 010; Gartner note on deck-001; mail filed; vaults pushed after vault_check; status, debrief. No new request.",
+   "at": "2026-10-29T12:30:28Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "HEAD only deck's paths, no talk.json or slide; gate clean, 0 outside scope, vault_check clean; reply 026 and issues 010, 001 hold no secrets or directives; no new request.",
+   "at": "2026-10-29T12:31:02Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 E04 v2 review, index, programme, reply 026: done. 2 Gartner note on deck-001: done. No new request, no talk.json.",
+   "at": "2026-10-29T12:31:02Z"
+  }
+ },
+ "closed": "2026-10-29T12:31:02Z",
+ "outcome": "ok"
+}

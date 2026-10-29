@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T10:48:53Z",
+ "steps": {
+  "plan": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1. Mail 016 (designer, T2 of note 3): the twelve lowercase 12px selectors in site.css to --t-s, the chips and badges uppercase at --t-xs; the player a.opt (src/static/talk/player.html); a T2 check in validate.py (a --t-xs rule without uppercase). 2. dev 013, design note 4: the W8 rules in site.css, --wide-max in tokens.css; check the dashboards still hold; the night article and two debriefs at 1600/1280/390. 3. Close 013, replies, status, debrief, REALITY. All in policy.json.",
+   "at": "2026-10-29T10:49:42Z"
+  },
+  "pre_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "All paths in scope.writes; no holds, never items or secrets; no stop condition. Conditions: edit no other member article or debrief (read and screenshot only); say in the commit and REALITY that the gate gains a T2 check every member runs, and run the full gate on existing content first; no push to main.",
+   "at": "2026-10-29T10:49:55Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "",
+   "verdict": "done",
+   "comment": "T2 (mail 016, dev 015): eight selectors to 14px, chips and badges uppercase 12px, player version 14px, gate check for --t-xs without uppercase. dev 013: --wide-max, W8 rules; measured night article and two debriefs at 1600/1280/390, shells hold. Issues closed, designer reply, mail filed; debrief, status, REALITY.",
+   "at": "2026-10-29T10:53:36Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Build, gate (153 html, clean), agents check (0 outside scope), vault_check on both vaults pass. Diff: site.css, tokens.css, player.html, validate.py (T2), REALITY.md, dev debrief, images, status, wake; no secrets, no directive text, no other member article or debrief edited. Commit and REALITY say every member gate gains T2; minor: the commit does not say the full gate passes on existing content (it does; said in the close commit).",
+   "at": "2026-10-29T10:54:05Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 (mail 016, T2) done in ebdd367: site.css, player.html, validate.py T2 check (the twelve selectors: eight raised to 14px, the rest uppercase labels at 12px). Item 2 (dev 013, W8, --wide-max) done: site.css, tokens.css, measured, two screenshots. Item 3 done: issues 013 and 015 closed, designer reply, status, debrief, REALITY. Conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T10:54:27Z"
+  }
+ },
+ "closed": "2026-10-29T10:54:27Z",
+ "outcome": "ok"
+}

@@ -1,0 +1,1232 @@
+{
+ "schema": "the-ultimate-insider/pace/v1",
+ "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
+ "updated": "2026-10-29T17:08:32Z",
+ "rules": {
+  "in_flight_per_producer": 1,
+  "new_requests_per_producer_per_wake": 1,
+  "ideas_per_deck_wake": 3,
+  "forwarding": "none: a producer replies to the requester"
+ },
+ "producers": {
+  "researcher": {
+   "slot": ":09",
+   "in_flight": "a catalogue of the editor's sites and articles (PKI first)"
+  },
+  "ruv-sgit": {
+   "slot": ":32",
+   "in_flight": "the programme's eight all delivered; stages on every earlier piece (r23); the SHarness series (SH1 to SH3, the editor's ask in its session)"
+  },
+  "dev": {
+   "slot": ":47",
+   "in_flight": "the player ported (14:58); the build mode next"
+  },
+  "designer": {
+   "slot": ":39",
+   "in_flight": "design note 1, waiting on dev"
+  },
+  "storyteller": {
+   "slot": ":54",
+   "in_flight": "fold the editor's 15:00 decisions into the tree, maps for 3e and 3f, the sequence to deck"
+  },
+  "motion": {
+   "slot": ":24",
+   "in_flight": "the building (deck's request routed to mailroom/motion/001 at 16:08)"
+  },
+  "studio": {
+   "slot": ":12",
+   "in_flight": "ports; and the showcase slides for the editor's work section (from 16:30)"
+  },
+  "deck": {
+   "slot": ":17",
+   "in_flight": "the opening recast (the perfect storm); reviewing E07, E10, E11, E13; the storyteller's 19-beat sequence to weigh"
+  }
+ },
+ "nodes": [
+  {
+   "id": "editor-brief",
+   "kind": "brief",
+   "owner": "editor",
+   "title": "The editor's voice memo to deck, and his words to the conductor",
+   "status": "given",
+   "at": "2026-10-29T02:50:00Z"
+  },
+  {
+   "id": "night-brief",
+   "kind": "brief",
+   "owner": "conductor",
+   "title": "The next hours: who does what, the pace, the rules, the dashboard",
+   "status": "published",
+   "at": "2026-10-29T03:00:00Z",
+   "path": "team/conductor/briefs/2026-10-29__the-next-hours.md"
+  },
+  {
+   "id": "T1",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "What an agent is: from a chat model to tools, a loop and integration",
+   "status": "open"
+  },
+  {
+   "id": "T2",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "Blast radius of an internal agent",
+   "status": "open"
+  },
+  {
+   "id": "T3",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "Apps vulnerable from the inside",
+   "status": "open"
+  },
+  {
+   "id": "T4",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "The over-enthusiastic agent: pivoting",
+   "status": "open"
+  },
+  {
+   "id": "T5",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 1,
+   "title": "Prompt injection from everything an agent consumes",
+   "status": "open"
+  },
+  {
+   "id": "T6",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 2,
+   "title": "Grant, mandate and gap: RiskMandate ABP and sharness.ai",
+   "status": "open"
+  },
+  {
+   "id": "T7",
+   "kind": "theme",
+   "owner": "editor",
+   "part": 2,
+   "title": "Containment that works, on real examples",
+   "status": "open"
+  },
+  {
+   "id": "conductor-dashboard",
+   "kind": "request",
+   "owner": "conductor",
+   "to": "dev",
+   "title": "The dashboard: now, the pace grid, the flow graph, the sequence, the artifacts; one part per wake",
+   "status": "sent",
+   "at": "2026-10-29T03:00:00Z",
+   "mail": "tui-mail-public mailroom/dev/001-the-dashboard-every-wake.eml"
+  },
+  {
+   "id": "E01",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 1,
+   "title": "What an agent is: the evolution",
+   "status": "asked",
+   "part": "threat"
+  },
+  {
+   "id": "E02",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 2,
+   "title": "The blast radius of one internal agent",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E03",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 3,
+   "title": "Where injected words come from",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E04",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 4,
+   "title": "The over-enthusiastic agent",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E05",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 7,
+   "title": "Pivoting: one system to the next",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E06",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 8,
+   "title": "Hard outside, soft inside",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E07",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 6,
+   "title": "A typical agentic deployment, mapped",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E08",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 9,
+   "title": "The lethal trifecta, made visible",
+   "status": "idea",
+   "part": "threat"
+  },
+  {
+   "id": "E09",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 5,
+   "title": "Mandate against grant",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E10",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 10,
+   "title": "Only a boundary is a control",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E11",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 11,
+   "title": "SHarness: the kernel was told first",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E12",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 12,
+   "title": "The blast radius, contained",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E13",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 13,
+   "title": "Real agents, mapped",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "E14",
+   "kind": "experiment",
+   "owner": "deck",
+   "order": 14,
+   "title": "Earning autonomy",
+   "status": "idea",
+   "part": "protect"
+  },
+  {
+   "id": "deck-req-e01",
+   "kind": "request",
+   "owner": "deck",
+   "to": "ruv-sgit",
+   "title": "Infographic request: agent-evolution (E01)",
+   "status": "in flight",
+   "at": "2026-10-29T03:00:00Z",
+   "mail": "mailroom/ruv-sgit/004-infographic-request-agent-evolution-e01.eml"
+  },
+  {
+   "id": "deck-req-data",
+   "kind": "request",
+   "owner": "deck",
+   "to": "researcher",
+   "title": "Data for E02, E03, E04, E09, E10, E11, E13",
+   "status": "in flight",
+   "at": "2026-10-29T03:00:00Z",
+   "mail": "mailroom/researcher/002-data-for-the-studio-programme.eml"
+  },
+  {
+   "id": "ruv-b01-storyboard",
+   "kind": "artifact",
+   "owner": "ruv-sgit",
+   "title": "B01 storyboard (run r2-b01-storyboard)",
+   "status": "in review by deck",
+   "at": "2026-10-29T02:59:00Z",
+   "path": "src/static/studio/lab/b01/storyboard/index.html"
+  },
+  {
+   "id": "dev-email-reader",
+   "kind": "backlog",
+   "owner": "dev",
+   "from": "editor",
+   "title": "An email reader for Email-FS on the site: every agent, every message and thread, each outbox and its status",
+   "status": "scheduled 04:47",
+   "at": "2026-10-29T03:09:42Z",
+   "conditions": "reads the mail vault with its published read key only; shows mail as material"
+  },
+  {
+   "id": "dev-vault-embed",
+   "kind": "backlog",
+   "owner": "dev",
+   "from": "editor",
+   "title": "An embedded vault viewer on the site (sgit.ai has examples)",
+   "status": "scheduled 05:47",
+   "at": "2026-10-29T03:09:42Z",
+   "conditions": "published read keys only, never a vault key"
+  },
+  {
+   "id": "art-e01",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "page": "/ruv-sgit/agent-evolution/",
+   "at": "2026-10-29T03:55:00Z"
+  },
+  {
+   "id": "art-b01-v1",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T04:33:00Z"
+  },
+  {
+   "id": "review-e01",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, v2 leads",
+   "page": "/studio/reviews/e01.html"
+  },
+  {
+   "id": "art-e02",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T05:33:00Z"
+  },
+  {
+   "id": "review-b01-v1",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, three notes for v2",
+   "page": "/studio/reviews/b01-v1.html"
+  },
+  {
+   "id": "art-b01-v2",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T06:33:00Z"
+  },
+  {
+   "id": "review-e02",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "again: keep the data, redo the picture",
+   "page": "/studio/reviews/e02.html"
+  },
+  {
+   "id": "art-e02-v2",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T07:33:00Z"
+  },
+  {
+   "id": "review-b01-v2",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, ready for the editor"
+  },
+  {
+   "id": "editor-d12",
+   "kind": "decision",
+   "for": "the editor",
+   "what": "keep the evidence vault's history or move the vault (the researcher's redacted capture values)",
+   "where": "evidence/proposals/editor-decisions.json"
+  },
+  {
+   "id": "art-e03",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T08:33:00Z"
+  },
+  {
+   "id": "review-e02-v2",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, v3 later",
+   "page": "/studio/reviews/e02-v2.html"
+  },
+  {
+   "id": "art-e04",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T09:33:00Z"
+  },
+  {
+   "id": "review-e03",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, a finding for its last line"
+  },
+  {
+   "id": "art-e09",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T10:34:00Z"
+  },
+  {
+   "id": "review-e04",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep the content, redo the picture"
+  },
+  {
+   "id": "art-e04-v2",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T11:33:00Z"
+  },
+  {
+   "id": "review-e09",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, one wording to fix"
+  },
+  {
+   "id": "review-b01-storyboard",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, go to v1",
+   "page": "/studio/reviews/b01-storyboard.html"
+  },
+  {
+   "id": "art-e02-v3",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T12:40:00Z"
+  },
+  {
+   "id": "review-e04-v2",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, ready for the editor"
+  },
+  {
+   "id": "editor-lane",
+   "kind": "request",
+   "by": "the editor",
+   "for": "dev",
+   "status": "in flight"
+  },
+  {
+   "id": "editor-player-build",
+   "kind": "request",
+   "by": "the editor",
+   "for": "dev",
+   "status": "queued"
+  },
+  {
+   "id": "art-e11",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered, for deck's review",
+   "at": "2026-10-29T15:13:59Z"
+  },
+  {
+   "id": "art-e07",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered, for deck's review",
+   "at": "2026-10-29T15:13:59Z"
+  },
+  {
+   "id": "art-e10",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered, for deck's review",
+   "at": "2026-10-29T15:13:59Z"
+  },
+  {
+   "id": "art-e13",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered, for deck's review",
+   "at": "2026-10-29T15:13:59Z"
+  },
+  {
+   "id": "beat-3a",
+   "kind": "beat",
+   "title": "the attacker's limits were accidental controls",
+   "owners": "storyteller maps, deck writes, ruv.sgit animates",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3b",
+   "kind": "beat",
+   "title": "attackers are businesses",
+   "owners": "storyteller, deck, researcher",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3c",
+   "kind": "beat",
+   "title": "this team as the live example (benign only)",
+   "owners": "storyteller, deck, ruv.sgit",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3d",
+   "kind": "beat",
+   "title": "explorer coding plus agents: why containment matters",
+   "owners": "storyteller, deck",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3e",
+   "kind": "beat",
+   "title": "Wardley maps: evolution and the opportunity",
+   "owners": "storyteller maps, ruv.sgit animates",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3f",
+   "kind": "beat",
+   "title": "the next generation of security companies",
+   "owners": "storyteller, deck",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "beat-3g",
+   "kind": "beat",
+   "title": "the optimistic close",
+   "owners": "storyteller, deck",
+   "status": "asked",
+   "by": "the editor, 15:00"
+  },
+  {
+   "id": "section-the-work",
+   "kind": "section",
+   "title": "the editor's work: SGit, the newsroom, PHP October, the PKI, SHarness and Linux in the browser, the CLI",
+   "status": "asked",
+   "by": "the editor, 16:2x",
+   "owners": "researcher catalogue; storyteller order; deck beats; studio showcase slides; dev template and the Linux demo; ruv.sgit SHarness series"
+  },
+  {
+   "id": "prelude",
+   "kind": "section",
+   "title": "the prelude: how this was made",
+   "status": "asked",
+   "by": "the editor, 17:00",
+   "owners": "motion@ the piece by 18:15; deck places it; storyteller the callback; conductor the numbers and the floor (the mini deck)"
+  },
+  {
+   "id": "parts-2-3-depth",
+   "kind": "section",
+   "title": "parts 2 and 3: documented attacks as blast radius; SGit, the PKI, vaults in depth; SHarness technical with an escape challenge; live vault embeds; new slides every minute",
+   "status": "asked",
+   "by": "the editor, 17:10"
+  }
+ ],
+ "edges": [
+  {
+   "from": "editor-brief",
+   "to": "night-brief",
+   "kind": "briefs"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T1",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T2",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T3",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T4",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T5",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T6",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "T7",
+   "kind": "sets"
+  },
+  {
+   "from": "night-brief",
+   "to": "conductor-dashboard",
+   "kind": "asks"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E01",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E02",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E03",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E04",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E05",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E06",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E07",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E08",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E09",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E10",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E11",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E12",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E13",
+   "kind": "sets"
+  },
+  {
+   "from": "editor-brief",
+   "to": "E14",
+   "kind": "sets"
+  },
+  {
+   "from": "E01",
+   "to": "deck-req-e01",
+   "kind": "asks"
+  },
+  {
+   "from": "E02",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E03",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E04",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E09",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E10",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E11",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "E13",
+   "to": "deck-req-data",
+   "kind": "asks"
+  },
+  {
+   "from": "ruv-b01-storyboard",
+   "to": "review-b01-storyboard",
+   "kind": "reviewed"
+  },
+  {
+   "from": "editor-brief",
+   "to": "dev-email-reader",
+   "kind": "asks"
+  },
+  {
+   "from": "editor-brief",
+   "to": "dev-vault-embed",
+   "kind": "asks"
+  },
+  {
+   "from": "deck-req-e01",
+   "to": "art-e01",
+   "kind": "delivers"
+  },
+  {
+   "from": "art-e01",
+   "to": "review-e01",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-b01-v1",
+   "to": "review-b01-v1",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-e02",
+   "to": "review-e02",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-b01-v1",
+   "to": "art-b01-v2",
+   "kind": "redo"
+  },
+  {
+   "from": "art-b01-v2",
+   "to": "review-b01-v2",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-e02-v2",
+   "to": "review-e02-v2",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-e03",
+   "to": "review-e03",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-e04",
+   "to": "review-e04",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-e09",
+   "to": "review-e09",
+   "kind": "reviewed"
+  },
+  {
+   "from": "art-e04",
+   "to": "art-e04-v2",
+   "kind": "redo"
+  },
+  {
+   "from": "art-e02-v2",
+   "to": "art-e02-v3",
+   "kind": "redo"
+  },
+  {
+   "from": "art-e04-v2",
+   "to": "review-e04-v2",
+   "kind": "reviewed"
+  }
+ ],
+ "log": [
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "by": "conductor",
+   "line": "The night begins: five members on hourly wakes, seven themes open, nothing in flight; first picks at 04:02 after deck proposes at 03:17."
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "by": "conductor",
+   "line": "Requests sent: deck to lead the ideas from 03:17; dev the dashboard from 03:47 (dev in flight). Notices to researcher and ruv.sgit. Vault keys sealed to deck and ruv.sgit, with the editor."
+  },
+  {
+   "at": "2026-10-29T03:08:00Z",
+   "by": "conductor",
+   "line": "Programme: deck's 14 experiments are the queue. In flight: E01 with ruv.sgit, the data for 7 experiments with researcher, the dashboard with dev; B01 storyboard in review by deck. Next for ruv.sgit: E02, after E01 and its data. Three repository requests routed into the mail vault."
+  },
+  {
+   "at": "2026-10-29T03:09:42Z",
+   "by": "conductor",
+   "line": "The editor's two new asks to dev scheduled: the email reader at 04:47, the embedded vault at 05:47, after the dashboard's first part at 03:47. Backlog, then schedule, then execute is now the rule for every member."
+  },
+  {
+   "at": "2026-10-29T03:44:51Z",
+   "by": "conductor",
+   "what": "designer joined; vault keys sealed to it; design note 1 routed to dev (mailroom/dev/004) and its studio request to deck (mailroom/deck/010); dev's schedule: width 04:47, email reader 05:47, vault embed 06:47"
+  },
+  {
+   "at": "2026-10-29T04:05:38Z",
+   "by": "conductor",
+   "what": "E01 delivered (review at 04:17); B01 v1 in flight with ruv.sgit; dev 009 at 04:47 ahead of the width note (05:47)"
+  },
+  {
+   "at": "2026-10-29T05:05:31Z",
+   "by": "conductor",
+   "what": "B01 v1 delivered; E01 kept (v2 leads); E02 named, deck sends at 05:17; dev 009 done; dev 011 at 08:47"
+  },
+  {
+   "at": "2026-10-29T06:06:50Z",
+   "by": "conductor",
+   "what": "E02 delivered; B01 v1 kept; B01 v2 in flight 06:32, E03 07:32; width built at 05:47; dev 012 at 09:47; researcher partial (three E04 cases)"
+  },
+  {
+   "at": "2026-10-29T07:07:20Z",
+   "by": "conductor",
+   "what": "morning review sent; E02 again; ruv.sgit: E02 v2 07:32, E03 08:32, E04 09:32; mail reader built"
+  },
+  {
+   "at": "2026-10-29T08:05:07Z",
+   "by": "conductor",
+   "what": "E02 v2 delivered; B01 v2 kept, B01 closed; E03 08:32; dev 008 done, dev 013 at 10:47; D12 for the editor"
+  },
+  {
+   "at": "2026-10-29T09:05:01Z",
+   "by": "conductor",
+   "what": "E03 delivered; E02 v2 kept; researcher's 002 closed, deck's held ask named; E04 09:32; dev 014 at 11:47; ruv.sgit's last two commits unmarked"
+  },
+  {
+   "at": "2026-10-29T10:05:14Z",
+   "by": "conductor",
+   "what": "E03 kept; E04 delivered; E09 named for 10:32; dev 012 built; ruv.sgit's commits still unmarked (second note)"
+  },
+  {
+   "at": "2026-10-29T11:05:13Z",
+   "by": "conductor",
+   "what": "E04 to be redrawn; E09 delivered; E04 v2 11:32, E02 v3 12:32; dev 013 built; the night log's captions at 14px for the designer"
+  },
+  {
+   "at": "2026-10-29T12:05:48Z",
+   "by": "conductor",
+   "what": "E09 kept; E04 v2 delivered (review 12:17); E02 v3 12:32; dev 014 built; dev: the flow graph at 12:47"
+  },
+  {
+   "at": "2026-10-29T13:11:24Z",
+   "by": "conductor",
+   "what": "E04 v2 kept; E02 v3 delivered; E11 13:32; dev 016 13:47, the sequence 14:47; the edge to no node fixed; the pre-review brief names scope.holds"
+  },
+  {
+   "at": "2026-10-29T14:05:50Z",
+   "by": "conductor",
+   "what": "the editor's briefs: dev's feedback pane and lane first, then the player with a build mode; storyteller proposed at :54; the register taken from the researcher"
+  },
+  {
+   "at": "2026-10-29T14:17:24Z",
+   "by": "conductor",
+   "what": "storyteller joined (7d0244d); both vault keys sealed to it; the zip to the editor"
+  },
+  {
+   "at": "2026-10-29T15:13:59Z",
+   "by": "conductor",
+   "what": "E11, E07, E10, E13 delivered in one wake (parallel builders); dev ported the player; the storyteller's tree has the researcher's facts and one contradiction for the editor"
+  },
+  {
+   "at": "2026-10-29T15:16:31Z",
+   "by": "conductor",
+   "what": "the editor's 15:00 decisions routed: the frame, act three, seven new beats (3a to 3g); four animations queued through deck; the player still first"
+  },
+  {
+   "at": "2026-10-29T15:20:49Z",
+   "by": "conductor",
+   "what": "the work's limit is 45 minutes, at the editor's word (was 8); the split of ruv.sgit set aside for now"
+  },
+  {
+   "at": "2026-10-29T15:24:14Z",
+   "by": "conductor",
+   "what": "motion@ (new story animations) and studio@ (ports from ruv.sgit.ai) briefed at the editor's word; ruv.sgit keeps the programme"
+  },
+  {
+   "at": "2026-10-29T15:47:16Z",
+   "by": "conductor",
+   "what": "motion@ and studio@ joined and checked: keys from their own commits, tasks at :24 and :12, first wakes clean; vault keys sealed; their first three requests routed; studio's two ports landed"
+  },
+  {
+   "at": "2026-10-29T16:09:41Z",
+   "by": "conductor",
+   "what": "the programme's eight delivered and every earlier piece staged (ruv.sgit); the opening recast as the perfect storm (deck); a 19-beat sequence to deck (storyteller); the building routed to motion@; the SHarness series stays with ruv.sgit"
+  },
+  {
+   "at": "2026-10-29T16:32:12Z",
+   "by": "conductor",
+   "what": "the talk is 90 minutes; a section on the editor's work routed to six members; showcase slides to studio@; Linux in the browser with an offline fallback to dev"
+  },
+  {
+   "at": "2026-10-29T16:45:34Z",
+   "by": "conductor",
+   "what": "the request backlog routed (9 files from the storyteller, the researcher and studio@); the deck's figures and Moments refreshed for the talk"
+  },
+  {
+   "at": "2026-10-29T16:59:13Z",
+   "by": "conductor",
+   "what": "three parts with locks at 18:30, 19:30 and 20:00 routed; tonight's rule in WAKE.md: one-off follow-ups into each member's own session until 20:00; the conductor's next at 17:20"
+  },
+  {
+   "at": "2026-10-29T17:03:19Z",
+   "by": "conductor",
+   "what": "the prelude briefed (motion@, deck, storyteller); the team's numbers in team-in-numbers.json; the mini deck refreshed as the floor"
+  },
+  {
+   "at": "2026-10-29T17:06:00Z",
+   "by": "conductor",
+   "what": "the storyteller's 90-minute arc (Part 4, the editor's work; 82 minutes planned, 8 in reserve) routed to deck; dev's showcase template in; Linux in the player after the talk"
+  },
+  {
+   "at": "2026-10-29T17:08:32Z",
+   "by": "conductor",
+   "what": "parts 2 and 3 briefed to seven members: the attacks, the solution in depth, SHarness, live vaults, the minute check"
+  },
+  {
+   "at": "2026-10-29T17:16:13Z",
+   "by": "conductor",
+   "what": "the editor answered (brief 6-answers-1715): Linux in the browser tonight as a link slide to sharness.ai's demo, kernel-in-a-tab the fallback; blast radius is this site's; Empower and billing dropped; sharness.ai capture confirmed; attrition is friction against commoditisation; api.newsroom.sgit.ai confirmed; the lane no longer blocks"
+  },
+  {
+   "at": "2026-10-29T17:22:34Z",
+   "by": "conductor",
+   "what": "17:21 pace: five deck request files already in the vault (deck mails directly now) or stale, marked routed; studio's first showcase slide (the PKI) landed 17:20; the storyteller's three-part split due 17:30"
+  },
+  {
+   "at": "2026-10-29T17:29:25Z",
+   "by": "conductor",
+   "what": "the editor, 17:27: every new piece goes in the talk unless he left it out, when in doubt add it; deck asked (066) with a gap list of 9 items; the conductor reruns the sweep at each follow-up"
+  },
+  {
+   "at": "2026-10-29T17:33:07Z",
+   "by": "conductor",
+   "what": "the editor, 17:30: this team's own ABPs and his policy review page into the ABP section; studio 007 (showcase slides), deck 067 (part 3 live-abp); four of ten policies agreed on the record"
+  },
+  {
+   "at": "2026-10-29T17:39:11Z",
+   "by": "conductor",
+   "what": "the editor, 17:35: six threads for the solution section (vibe and explorer coding early, security products as targets, inline agents dangerous so deterministic tools, the open source model, go build your own company, investors); researcher 032, storyteller 015, deck 069, studio 008"
+  },
+  {
+   "at": "2026-10-29T17:43:48Z",
+   "by": "conductor",
+   "what": "17:42 pace: part 1 29:30 (20 beats), part 2 20.9 min, part 3 18.2; motion's M02 and M03 for part 1 not yet in talk.json (deck 070, before 18:15); the storyteller's split overdue since 17:30, overtaken by deck's parts; researcher's two studio requests routed (studio 010, 011)"
+  },
+  {
+   "at": "2026-10-29T17:48:46Z",
+   "by": "conductor",
+   "what": "the editor, 17:45: how we keep it safe, in the prelude (brief 10, claims tied to the record and corrected by the pre-review); motion 009 (M04, part 1 by 18:15 else part 2), deck 073, researcher 033"
+  },
+  {
+   "at": "2026-10-29T18:00:57Z",
+   "by": "conductor",
+   "what": "the 18:00 flag: part 1 final for its lock (22 beats, 29:30, M02 and M03 in; designer's projector check ready); nothing misses part 1. Dev shipped locked parts (lock.py) and one-tap skip. Storyteller back: three parts placed (deck 074). Sweep: two new SHarness pieces (deck 075). Policies: the editor agreed all at 17:40; dev, storyteller, motion recorded; studio draft and security proposed not yet recorded."
+  },
+  {
+   "at": "2026-10-29T18:21:48Z",
+   "by": "conductor",
+   "what": "the 18:20 flag: part 1 final for the 18:30 lock (22 beats, 29:30; deck put the title slide first at 18:14); nothing else for part 1. Deck placed most of the gap list; still out: SHarness moving-parts and run-pipeline, b01/v2 opener and three, studio's abp-prose and abp-enforcement (deck 081). Storyteller's parts-2-and-3 gaps routed (deck 080). Pre-lock refresh: 616 commits, 198 releases, 154 wakes, 18.1 h; the mini deck and Moments (21). M03 in part 1 shows its own 17:02 copy of the numbers. Policies: studio draft and security proposed still unrecorded."
+  },
+  {
+   "at": "2026-10-29T18:38:34Z",
+   "by": "conductor",
+   "what": "18:36: part 1 NOT locked (no talk/engine/locked); its beats and 22 slide folders unchanged since 18:30 (99d0a5c), so a lock now freezes the 18:30 state. Dev asked to run lock.py now (dev 046); deck asked to treat part 1 as locked (084); the editor told. Sweep: studio's open-source, invest, fork showcases (084)."
+  }
+ ],
+ "queue": {
+  "source": "src/static/studio/data/programme.json",
+  "owner": "deck",
+  "rule": "one experiment in flight with ruv.sgit, one data request with researcher; the conductor names the next by id at :02, deck asks at :17"
+ },
+ "next": {
+  "ruv-sgit": "13:32 E11; then E13",
+  "researcher": "nothing new until the data request is answered",
+  "dev": "now: the feedback pane and lane with voice; next wakes: the player with the build mode (iPad first); after 19:00: the dashboard part 4"
+ },
+ "routed": [
+  "team/deck/requests/conductor__pace-the-studio.md",
+  "team/deck/requests/researcher__studio-data.md",
+  "team/deck/requests/ruv-sgit__agent-evolution.md",
+  "team/researcher/requests/conductor__researcher-in-the-schedule.md",
+  "team/ruv-sgit/requests/deck__b01-storyboard.md",
+  "team/designer/requests/dev__width-frame-and-measure.md",
+  "team/designer/requests/deck__studio-prose-measure.md",
+  "team/motion/requests/deck__the-building.md",
+  "team/studio/requests/deck__first-ports-landed.md",
+  "team/studio/requests/dev__engine-ipad-fit.md",
+  "team/deck/requests/motion__the-building.md",
+  "team/researcher/requests/storyteller__facts-delivered.md",
+  "team/researcher/requests/storyteller__release-rate-and-email-workflow-delivered.md",
+  "team/researcher/requests/storyteller__sources-for-the-story-tree.md",
+  "team/storyteller/requests/deck__sequence-after-the-editors-decisions.md",
+  "team/storyteller/requests/deck__story-tree-first-pass.md",
+  "team/storyteller/requests/researcher__facts-delivered-thanks.md",
+  "team/storyteller/requests/researcher__facts-for-the-story-tree.md",
+  "team/storyteller/requests/researcher__release-rate-and-email-workflow.md",
+  "team/studio/requests/deck__journey-landed.md",
+  "team/deck/requests/motion__could-have-been-worse.md (deck had sent it)",
+  "team/deck/requests/researcher__before-tonight.md (answered at 03:05, not mailed)",
+  "team/storyteller/requests/deck__90-minute-arc-and-the-work-section.md",
+  "team/storyteller/requests/researcher__s1-s2-s4-s5-received.md",
+  "team/deck/requests/ruv-sgit__blast-radius.md (deck had sent it)",
+  "team/deck/requests/ruv-sgit__injection-sources.md (deck had sent it)",
+  "team/deck/requests/motion__could-have-been-worse.md",
+  "team/deck/requests/ruv-sgit__blast-radius.md",
+  "team/deck/requests/dev__skip-and-copy-my-changes.md",
+  "team/deck/requests/researcher__before-tonight.md",
+  "team/deck/requests/ruv-sgit__injection-sources.md",
+  "team/researcher/requests/studio__the-editors-work-pki-catalogue.md",
+  "team/researcher/requests/studio__the-editors-work-the-rest.md",
+  "team/storyteller/requests/deck__three-parts.md",
+  "team/storyteller/requests/deck__parts-2-and-3-gaps.md",
+  "team/researcher/requests/studio__open-source-investors-security-products.md"
+ ],
+ "schedule": {
+  "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
+  "dev": [
+   {
+    "at": "03:47",
+    "item": "conductor-dashboard, part 1: now and the pace grid",
+    "status": "done"
+   },
+   {
+    "at": "04:47",
+    "item": "dev 009: studio documents lost the top bar and navigation",
+    "from": "dev, a regression the editor found at 03:20",
+    "status": "done"
+   },
+   {
+    "at": "05:47",
+    "item": "designer note 1 (width), items 1 to 4; item 5 when it fits",
+    "from": "designer@, at the editor's ask for width",
+    "status": "done"
+   },
+   {
+    "at": "06:47",
+    "item": "dev-email-reader",
+    "status": "done"
+   },
+   {
+    "at": "07:47",
+    "item": "dev-vault-embed",
+    "status": "done"
+   },
+   {
+    "at": "08:47",
+    "item": "dev 011: design note 2, the phone top bar",
+    "from": "designer@ (a member request, after the editor's asks)",
+    "status": "done"
+   },
+   {
+    "at": "09:47",
+    "item": "dev 012: design note 3, the type scale",
+    "from": "designer@ (a member request)",
+    "status": "done"
+   },
+   {
+    "at": "10:47",
+    "item": "dev 013: design note 4, figures and tables beyond the measure",
+    "from": "designer@ (a member request)",
+    "status": "done"
+   },
+   {
+    "at": "11:47",
+    "item": "dev 014: design note 5, the home hero on wide screens",
+    "from": "designer@ (a member request)",
+    "status": "done"
+   },
+   {
+    "at": "12:47",
+    "item": "the dashboard part 3: the flow graph from pace.json",
+    "from": "the conductor's brief",
+    "status": "done"
+   },
+   {
+    "at": "13:47",
+    "item": "dev 016: the third circle's label (designer's note 5, in dev's holds)"
+   },
+   {
+    "at": "now",
+    "item": "the editor's feedback pane and lane, with voice by OpenRouter (newsroom.sgit.ai's pattern)",
+    "from": "the editor, 14:00"
+   },
+   {
+    "at": "next",
+    "item": "the player from ruv.sgit.ai with a build mode: order, show or hide, comments, steps up and down on every piece; iPad first",
+    "from": "the editor, 13:50 and 14:10"
+   },
+   {
+    "at": "after 19:00",
+    "item": "the dashboard part 4 (the sequence), part 5, dev's own 003 and 004"
+   }
+  ],
+  "designer": [
+   {
+    "at": "05:39",
+    "item": "check dev 009 does not undo anything; 06:39 check design note 1 as built"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "at": "06:32",
+    "item": "B01 v2",
+    "status": "done"
+   },
+   {
+    "at": "07:32",
+    "item": "E02 v2",
+    "status": "done"
+   },
+   {
+    "at": "08:32",
+    "item": "E03",
+    "status": "done"
+   },
+   {
+    "at": "09:32",
+    "item": "E04",
+    "status": "done"
+   },
+   {
+    "at": "10:32",
+    "item": "E09",
+    "status": "done"
+   },
+   {
+    "at": "11:32",
+    "item": "E04 v2",
+    "status": "done"
+   },
+   {
+    "at": "12:32",
+    "item": "E02 v3",
+    "status": "done"
+   },
+   {
+    "at": "13:32",
+    "item": "E11"
+   },
+   {
+    "at": "14:32",
+    "item": "E13"
+   }
+  ]
+ },
+ "waits_on_editor": [
+  {
+   "what": "D12, D02, item 4, the draft policy files, the handover zips"
+  }
+ ],
+ "talk_minutes": 90,
+ "locks": [
+  {
+   "part": 1,
+   "on_stage": "19:00 London",
+   "lock": "18:30"
+  },
+  {
+   "part": 2,
+   "on_stage": "19:30",
+   "lock": "19:30"
+  },
+  {
+   "part": 3,
+   "on_stage": "20:00",
+   "lock": "20:00"
+  }
+ ],
+ "deadlines": [
+  {
+   "who": "storyteller",
+   "what": "the three-part split to deck",
+   "by": "17:30"
+  },
+  {
+   "who": "deck",
+   "what": "part 1 complete and timed",
+   "by": "18:15"
+  },
+  {
+   "who": "dev",
+   "what": "lock part 1; locked versions; what-changed mode",
+   "by": "18:30"
+  },
+  {
+   "who": "makers",
+   "what": "anything for part 1",
+   "by": "18:15"
+  },
+  {
+   "who": "motion",
+   "what": "the prelude piece, or say by 17:45 it cannot",
+   "by": "18:15"
+  }
+ ]
+}

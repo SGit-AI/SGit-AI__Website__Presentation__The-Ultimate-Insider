@@ -1,0 +1,977 @@
+<!doctype html>
+<html lang="en-GB" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The ultimate insider: the talk</title>
+<meta name="site-version" content="{{version}}">
+<!-- The talk player, ported on 29 October 2026 by dev@the-ultimate-insider from ruv.sgit.ai's player
+     (talk/player.html and assets/clock.js, github.com/SGit-AI/SGit-AI__Website__Ruv), Apache-2.0, which this file keeps.
+     What changed here: this site's talk.json (beats in order, acts as sections), its two themes, the time the presenter
+     has (a countdown and a plan scaled to it), acts in the picker, the build mode, and the site's own offline cache (../sw.js). team/dev/briefs/2026-10-29__the-player.md -->
+<link rel="icon" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/pane.css">
+<script src="../assets/pane.js" defer></script>
+<script>
+// the site's two themes in the shape the player expects (ruv.sgit.ai has five): dark by default for a projector
+window.RuvTheme = (function () {
+  var THEMES = { dark: ['Dark'], light: ['Light'] }, K = 'tui-player-theme', cur = 'dark'
+  try { cur = localStorage.getItem(K) === 'light' ? 'light' : 'dark' } catch (e) {}
+  document.documentElement.setAttribute('data-theme', cur)
+  return { THEMES: THEMES, current: function () { return cur },
+    set: function (k) { cur = THEMES[k] ? k : 'dark'; document.documentElement.setAttribute('data-theme', cur); try { localStorage.setItem(K, cur) } catch (e) {} window.dispatchEvent(new CustomEvent('ruv-theme', { detail: cur })) } }
+})()
+</script>
+<style>
+/* colours come from the site's theme (the five newsroom themes, assets/themes.css): the slides, the site and the live app change together */
+:root { --fg:var(--text); --warm:var(--infra); --red:var(--risk); --tint-solid:var(--accent-t); --danger-bg:var(--risk); --danger-ink:#fff;
+        --teal:var(--accent); --amber:var(--warm); --card:var(--panel); --barh:90px }
+#prog .act { position:absolute; top:-7px; width:3px; height:22px; border-radius:2px; background:var(--accent); z-index:4; cursor:help }
+#picklist .actrow { grid-column:1/-1; margin:8px 2px 0; font:700 12px ui-sans-serif,system-ui; letter-spacing:.08em; text-transform:uppercase; color:var(--accent) }
+#intro a.ver { font:600 13px ui-monospace,monospace; color:var(--dim); border:1px solid var(--line); border-radius:999px; padding:1px 8px; text-decoration:none } #intro a { color:var(--accent) }
+.ctl button.have { min-width:5.5em }
+@media (max-width:1100px) { .ctl button.have { min-width:0; padding:0 8px } #count { min-width:6.5em; font-size:15px } #count .n { font-size:19px } #bar #steps { min-width:90px } }
+@media (max-width:1300px) { #cache { display:none } }
+/* the feedback pane, docked on the right: the stage and the bar make room (the editor, 16:28) */
+.tui-pane-toggle { display:none !important }
+body.tui-pane-on #stage, body.tui-pane-on #touch, body.tui-pane-on #bar, body.tui-pane-on #intro { right:min(400px,100vw) }
+body.tui-pane-on.presenter #stage, body.tui-pane-on.presenter #touch { right:calc(min(400px,100vw) + 36vw) } body.tui-pane-on #side { right:min(400px,100vw) }
+#fb.on, #ovb.on { border-color:var(--teal); color:var(--teal) }
+/* the overview: every slide at once, by section (W) */
+#count { display:none }
+#ver { flex:none; font:600 13px ui-monospace,monospace; color:var(--dim); text-decoration:none; padding:0 8px; white-space:nowrap }   /* the release, so he can see he has the latest (the editor, 18:15) */
+#chg { position:fixed; inset:0 0 var(--barh) 0; z-index:45; background:var(--bg); display:none; flex-direction:column } body.chg #chg { display:flex }
+#chg .oh { display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; padding:10px 16px; border-bottom:1px solid var(--line) } #chg .oh b { font:600 18px Georgia,serif; color:var(--head) } #chg .oh span { margin-right:auto }
+#chglist { overflow:auto; padding:8px 16px 24px } #chglist h3 { font:600 16px system-ui; color:var(--teal); margin:16px 0 6px } #chglist li { margin:4px 0 } #chglist .k { display:inline-block; min-width:84px; font-weight:700 } #chglist a { color:inherit }
+#chb.on { border-color:var(--teal); color:var(--teal) }   /* the per-slide countdown: a distraction (the editor, 18:05) */
+#ov { position:fixed; inset:0 0 var(--barh) 0; z-index:44; background:var(--bg); display:none; flex-direction:column }
+body.ov #ov { display:flex } body.ov.tui-pane-on #ov { right:min(400px,100vw) }
+#ov .oh { display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; padding:10px 16px; border-bottom:1px solid var(--line) }
+#ov .oh b { font:600 18px Georgia,serif; color:var(--head); margin-right:auto }
+#ov .oh label { font-size:14px; color:var(--dim); display:flex; align-items:center; gap:6px }
+#ov .oh button, #ov .oh select, #ovgrid button { height:34px; border:1px solid var(--line); background:var(--card); color:var(--fg); border-radius:9px; font:600 14px ui-sans-serif,system-ui; padding:0 10px; cursor:pointer }
+#ovstat { width:100%; font-size:14px; color:var(--dim) }
+#ovgrid { overflow:auto; -webkit-overflow-scrolling:touch; overscroll-behavior:contain; padding:10px 16px 30px }
+#ovgrid .sec { margin:14px 0 8px; font:700 13px ui-sans-serif,system-ui; letter-spacing:.08em; text-transform:uppercase; color:var(--accent) }
+#ovgrid .tiles { display:grid; grid-template-columns:repeat(var(--cols,4),minmax(0,1fr)); gap:12px }
+#ovgrid .tile { border:1px solid var(--line); border-radius:12px; background:var(--panel); overflow:hidden; display:flex; flex-direction:column }
+#ovgrid .tile.cur { border-color:var(--teal); box-shadow:0 0 0 1px var(--teal) } #ovgrid .tile.off { opacity:.45 } #ovgrid .tile.off .pv { filter:grayscale(1) }
+#ovgrid .pv { position:relative; aspect-ratio:16/9; background:#000; cursor:pointer }
+#ovgrid .pv iframe { position:absolute; inset:0; width:100%; height:100%; border:0; pointer-events:none }
+#ovgrid .pv .hint { position:absolute; right:8px; bottom:8px; background:rgba(0,0,0,.6); color:#fff; border-radius:999px; padding:2px 9px; font:600 13px ui-sans-serif,system-ui }
+#ovgrid .meta { display:flex; align-items:center; gap:6px; padding:8px 10px }
+#ovgrid .meta .n { font:700 13px ui-monospace,monospace; color:var(--dim) } #ovgrid .meta .tt { flex:1; min-width:0; font:600 14px/1.25 Georgia,serif; color:var(--head); overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+#ovgrid .meta button { height:30px; padding:0 8px; font-size:13px }
+@media (max-width:700px) { #ovgrid .tiles { grid-template-columns:repeat(min(var(--cols,4),2),minmax(0,1fr)) } }
+/* the build mode: the editor's running order (O) */
+#build { position:fixed; inset:3vh 3vw calc(var(--barh) + 1.5vh); background:var(--panel); border:1px solid var(--line); border-radius:14px; z-index:46; display:none; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,.3) }
+body.build #build { display:flex }
+#build .bh { display:flex; flex-wrap:wrap; gap:8px 12px; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line) }
+#build .bh b { font:600 18px Georgia,serif; color:var(--head); margin-right:auto }
+#build .bh button, #build .row button { height:36px; min-width:36px; border:1px solid var(--line); background:var(--card); color:var(--fg); border-radius:9px; font:600 14px ui-sans-serif,system-ui; padding:0 10px; cursor:pointer; touch-action:manipulation }
+#build .bh button.on { border-color:var(--teal); color:var(--teal) } #build .bh button.go { background:var(--teal); border-color:var(--teal); color:var(--on-accent) }
+#build .bstat { width:100%; font-size:14px; color:var(--dim); min-height:1.2em }
+#blist { overflow:auto; -webkit-overflow-scrolling:touch; overscroll-behavior:contain; padding:8px 12px 20px }
+#blist .row { display:grid; grid-template-columns:34px 28px minmax(0,1fr) 78px auto; gap:8px; align-items:center; padding:6px 8px; border:1px solid var(--line); border-radius:10px; margin:0 0 6px; background:var(--bg) }
+#blist .row.off { opacity:.5 } #blist .row.drag { box-shadow:0 6px 18px rgba(0,0,0,.35); border-color:var(--teal); position:relative; z-index:2 }
+#blist .hd { cursor:grab; touch-action:none; font-size:20px; color:var(--dim); text-align:center; user-select:none }
+#blist input[type=checkbox] { width:22px; height:22px; accent-color:var(--teal) }
+#blist .tt { min-width:0 } #blist .tt b { display:block; font:600 15px/1.25 Georgia,serif; color:var(--head); overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+#blist .tt span { font-size:12px; color:var(--dim); text-transform:uppercase; letter-spacing:.05em }
+#blist input.dur { width:78px; height:34px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); font:600 14px ui-monospace,monospace; padding:0 6px }
+#blist .acts { display:flex; gap:4px } #blist a.vw { display:inline-flex; align-items:center; height:36px; padding:0 10px; border:1px solid var(--line); border-radius:9px; color:var(--teal); text-decoration:none; font:600 14px ui-sans-serif,system-ui } #blist .row button.has { border-color:var(--amber); color:var(--amber) }
+#blist textarea { grid-column:2 / -1; width:100%; min-height:64px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--fg); font:15px/1.4 ui-sans-serif,system-ui; padding:8px }
+#blist .act { margin:12px 4px 6px; font:700 12px ui-sans-serif,system-ui; letter-spacing:.08em; text-transform:uppercase; color:var(--accent) }
+@media (max-width:700px) { #blist .row { grid-template-columns:30px 26px minmax(0,1fr) 64px } #blist .acts { grid-column:3 / -1 } #blist input.dur { width:64px } }
+@media (max-width:780px) { .ctl button.have { display:none } }
+@media (max-width:1400px) and (orientation:landscape) { .ctl.small button { padding:0 7px; min-width:30px; font-size:13px } #bar .row + .row { gap:6px } .ctl.small { gap:4px } #ver { padding:0 4px; font-size:12px } #bar #steps { min-width:80px } #th { display:none } }   /* an iPad on its side: every button and a step track on one row */
+@media (orientation:portrait) and (min-width:600px) {   /* an upright iPad: the step track on a line of its own, wide enough for a finger */
+  :root { --barh:128px } #bar .row + .row { flex-wrap:wrap; align-content:center; row-gap:6px; padding-top:4px; padding-bottom:4px } #bar #steps { order:10; flex:1 1 100%; height:30px } }
+* { box-sizing:border-box }
+html,body { margin:0; height:100%; background:var(--bg); color:var(--fg); font:18px/1.4 ui-sans-serif,system-ui,sans-serif; overflow:hidden }
+#stage { position:absolute; inset:0 0 var(--barh) 0; display:flex; flex-direction:column; overflow:hidden; touch-action:pan-y pinch-zoom }
+/* the frame every slide shares, so nothing moves between slides: a brand strip, then the title, always top left */
+.sbrand { flex:none; display:flex; justify-content:space-between; align-items:center; gap:2vw; padding:1.2vh 3vw 0; font-size:1.45vh; letter-spacing:.1em; text-transform:uppercase; color:var(--dim); white-space:nowrap; overflow:hidden }
+.sbrand .logo { display:inline-flex; align-items:center; gap:.8em; color:var(--head); font-weight:700; letter-spacing:.06em }
+.sbrand .logo i { font:700 1.8vh/1 Georgia,serif; font-style:normal; width:2.8vh; height:2.8vh; border-radius:.6vh; background:var(--accent); color:var(--on-accent); display:inline-flex; align-items:center; justify-content:center; letter-spacing:0; text-transform:none }
+.sbrand .logo b { color:var(--accent); font-weight:700 }
+.sbrand > span { min-width:0; overflow:hidden; text-overflow:ellipsis } .sbrand > span:first-child, .sbrand > span:last-child { flex:none }
+.sbrand .gh { text-transform:none; letter-spacing:.02em; font-family:ui-monospace,monospace } @media (max-width:1150px) { .sbrand .ev { display:none } } @media (max-width:760px) { .sbrand .gh { display:none } }
+.shead { flex:none; padding:1.1vh 3vw 0 }
+.shead h2 { margin:0; font:600 3.9vh/1.12 Georgia,serif; color:var(--head) } .shead h2.big { font-size:7.2vh }
+.shead h2::after { content:""; display:block; width:6vh; height:.45vh; border-radius:.3vh; background:var(--accent); margin-top:.9vh }
+.shead .sub { color:var(--dim); font-size:1.85vh; margin-top:.7vh; min-height:2.2vh; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.sbody { flex:1; min-height:0; display:flex; padding:1.4vh 3vw 1.4vh; overflow:auto; -webkit-overflow-scrolling:touch }
+.sbody > .slide { margin:auto 0 }   /* left edge fixed under the title; vertically centred when it fits, scrolls when it does not */
+body.presenter #stage, body.presenter #touch { inset:0 36vw var(--barh) 0 }
+body.audience #stage, body.audience #touch { inset:0 }
+body.audience #bar, body.audience #side { display:none !important }
+#black { position:fixed; inset:0; background:#000; display:none; z-index:50 } body.black #black { display:block }
+#side { display:none; position:absolute; top:0; right:0; bottom:var(--barh); width:36vw; border-left:1px solid var(--line); padding:20px 22px; overflow:auto; background:var(--panel2) }
+body.presenter #side { display:block }
+#bar { position:absolute; left:0; right:0; bottom:0; height:var(--barh); display:flex; flex-direction:column; border-top:1px solid var(--line); font-variant-numeric:tabular-nums; background:var(--bg) }
+#bar .row { flex:1; display:flex; align-items:center; gap:12px; padding:0 10px; min-width:0 }
+#bar .row + .row { border-top:1px solid var(--line); gap:10px }
+#steps { flex:1; min-width:0; height:30px; position:relative; display:flex; gap:3px; cursor:pointer }
+#steps .st { flex:1; min-width:0; position:relative; background:var(--line); border-radius:6px; overflow:hidden }
+#steps .st b { position:absolute; left:0; top:0; bottom:0; width:0; background:var(--tint-solid); border-right:2px solid var(--teal) }
+#steps .st.done b { width:100%; border-right:0 }
+#steps .st span { position:absolute; inset:0; padding:0 8px; display:flex; align-items:center; font:600 12.5px ui-sans-serif,system-ui; color:var(--dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+#steps .st.cur span { color:var(--fg) }
+#count { min-width:9.5em; text-align:right; white-space:nowrap; font:700 17px ui-sans-serif,system-ui; color:var(--teal) }
+#count.soon { color:var(--amber) } #count.now { color:var(--red) } #count .n { font-size:24px }
+#count .ring { display:inline-block; width:20px; height:20px; border-radius:50%; vertical-align:-4px; margin-right:6px; background:conic-gradient(currentColor var(--p,0%), var(--line) 0) }
+#touch { position:absolute; inset:0 0 var(--barh) 0; z-index:5; touch-action:pan-y pinch-zoom; -webkit-tap-highlight-color:transparent }
+body.interactive #touch { display:none }
+#loading { position:absolute; display:none; align-items:center; justify-content:center; gap:12px; color:var(--dim); font:600 2.4vh ui-sans-serif,system-ui; background:var(--bg); border-radius:12px; z-index:3 }
+#loading.on { display:flex } #loading i { width:3vh; height:3vh; border-radius:50%; border:.45vh solid var(--line); border-top-color:var(--teal); animation:spin .8s linear infinite } @keyframes spin { to { transform:rotate(360deg) } }
+#cache { font-size:12px; color:var(--dim); white-space:nowrap }
+.ctl button.timer { min-width:9.5em; font-variant-numeric:tabular-nums; font-weight:700 }
+.ctl button.timer.run { background:var(--panel2); border-color:var(--teal); color:var(--teal) }
+.ctl button.timer.ahead { border-color:var(--teal); color:var(--teal) } .ctl button.timer.late { border-color:var(--amber); color:var(--amber) } .ctl button.timer.behind { border-color:var(--red); color:var(--red); background:var(--panel2) }
+.ctl button.timer small { display:inline; font-size:11px; text-transform:none; letter-spacing:0; margin:0 0 0 .4em; opacity:.85 }
+#pick { position:fixed; inset:4vh 4vw calc(var(--barh) + 2vh); background:var(--panel); border:1px solid var(--line); border-radius:14px; z-index:45; display:none; flex-direction:column; box-shadow:0 10px 40px rgba(0,0,0,.25) }
+body.pick #pick { display:flex } #pick .ph { display:flex; gap:16px; align-items:baseline; padding:14px 18px; border-bottom:1px solid var(--line); font-size:16px }
+#picklist { overflow:auto; padding:12px; display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:10px; align-content:start }
+#picklist .pc { border:1px solid var(--line); border-radius:10px; padding:10px 12px; background:var(--bg); cursor:pointer }
+#picklist .pc:hover { border-color:var(--teal) } #picklist .pc.cur { border-color:var(--teal); box-shadow:inset 0 0 0 1px var(--teal) } #picklist .pc.ex { border-style:dashed }
+#picklist .pc .n { font:700 12px ui-monospace,monospace; color:var(--dim) } #picklist .pc h4 { margin:3px 0 6px; font:600 15px/1.25 Georgia,serif; color:var(--head) }
+#picklist .pc .sts { display:flex; flex-wrap:wrap; gap:4px } #picklist .pc .sts a { font-size:11.5px; padding:2px 7px; border-radius:999px; background:var(--panel2); color:var(--text); text-decoration:none; border:1px solid var(--line) } #picklist .pc .sts a:hover { border-color:var(--teal); color:var(--teal) }
+#bar .clock { font-size:22px; font-weight:700; min-width:6.4em; white-space:nowrap } .dim { color:var(--dim) }
+#beatno { min-width:3.2em; text-align:right; white-space:nowrap } #state { min-width:8.5em; text-align:right; white-space:nowrap }
+body.review .b, body.review tr.row, body.review ul.bul li, body.review .term .out { transition:none !important } body.review .cursor { display:none }
+#prog { flex:1; height:8px; background:var(--line); border-radius:4px; position:relative; cursor:pointer }
+#prog i { position:absolute; top:-4px; width:2px; height:16px; background:var(--dim) }
+#prog b { position:absolute; left:0; top:0; bottom:0; background:var(--teal); border-radius:4px; z-index:1 }
+#prog u.xseg { position:absolute; top:0; bottom:0; background:var(--warm); opacity:.35; border-radius:4px }
+#prog s.gap { position:absolute; top:-2px; bottom:-2px; background:var(--bg); z-index:2 }
+#prog i { z-index:3 }
+.slide { width:100%; max-width:1400px }
+.statement h1 { font:600 5.6vh/1.18 Georgia,serif; margin:0 0 3.4vh; color:var(--head) }
+.title .sub { font-size:3.4vh; color:var(--text) } .title .who { font-size:2.8vh; margin-top:5vh; color:var(--dim) }
+.b { font-size:4vh; margin:1.4vh 0; opacity:0; transform:translateY(1vh); transition:all .5s }
+.b.on { opacity:1; transform:none }
+.big { font:600 5vh/1.2 ui-monospace,monospace; color:var(--teal); word-break:break-all }
+/* a terminal is dark in every theme (the newsroom's one exception), so its colours are its own */
+.term { background:#05070a; color:#e6e8ec; border:1px solid #2a303a; border-radius:12px; padding:3vh 3vw; font:2.5vh/1.5 ui-monospace,monospace; white-space:pre-wrap; word-break:break-all }
+.term.small { font-size:2vh } .term .cap { color:var(--dim); font:2vh ui-sans-serif,system-ui; margin-bottom:1.5vh }
+.term .p { color:#2dd4bf } .term .out { color:#f0b45a; margin-top:2vh; opacity:0; transition:opacity .4s } .term .out.on { opacity:1 }
+.term .out .hl { color:#ff7b72; font-weight:700 }
+.cursor { display:inline-block; width:.6em; background:#e6e8ec; animation:blink 1s steps(1) infinite } @keyframes blink { 50% { opacity:0 } }
+table { border-collapse:collapse; font-size:2.1vh; width:100%; color:var(--text) }
+th,td { text-align:left; padding:.8vh 1vw; border-bottom:1px solid var(--line); vertical-align:top } th { color:var(--dim); font-weight:600 }
+tr.row { opacity:.08; transition:opacity .4s } tr.row.on { opacity:1 }
+.allowed,.yes { color:var(--teal) } .denied,.no { color:var(--red) } .approval_required,.approval { color:var(--amber) }
+.foot { color:var(--dim); margin-top:2vh; font-size:2vh }
+ul.bul { list-style:none; padding:0; font-size:3.4vh; margin:0 } ul.bul li { margin:2.2vh 0; opacity:0; transition:opacity .5s } ul.bul li.on { opacity:1 } ul.bul li:before { content:"→ "; color:var(--teal) }
+.image img { display:block; max-width:100%; max-height:calc(100vh - var(--barh) - 22vh); border-radius:12px; border:1px solid var(--line) }
+.image .imgwrap { position:relative; display:inline-block; max-width:100% }
+.image .b.punch { position:absolute; right:-2vw; bottom:-3vh; margin:0; white-space:nowrap; font:600 4.6vh/1.2 Georgia,serif; color:var(--head); background:var(--panel); border:2px solid var(--accent); border-radius:14px; padding:2.2vh 2.4vw; box-shadow:0 12px 40px rgba(0,0,0,.28); transform:translateY(2vh) rotate(-1.5deg) scale(.96) }
+.image .b.punch.on { transform:rotate(-1.5deg) }
+.quote blockquote { font:500 4.6vh/1.3 Georgia,serif; margin:0 0 3vh; border-left:6px solid var(--teal); padding-left:3vw }
+.quote blockquote .b { font-size:inherit; margin:0 0 2vh }
+.quote cite { color:var(--dim); font-size:2.3vh; font-style:normal }
+.sbody > .slide.iframe { margin:0; height:100%; max-width:none } .iframe iframe { display:block; width:100%; height:100%; border:1px solid var(--line); border-radius:12px; background:var(--bg) }
+#side h3 { margin:.2em 0; font:600 22px Georgia,serif } #side .say { font-size:23px; line-height:1.5; margin:14px 0 22px }
+#side .left { font:700 40px ui-sans-serif,system-ui; font-variant-numeric:tabular-nums } #side .left.behind { color:var(--red) } #side .left.ok { color:var(--teal) }
+#side .next { color:var(--dim); border-top:1px solid var(--line); padding-top:12px; font-size:16px }
+#side .next b { color:var(--fg) } #side .cue { color:var(--amber); font-size:15px; margin:-8px 0 16px }
+#side .meta { color:var(--dim); font-size:14px; display:flex; justify-content:space-between }
+.ctl { display:flex; gap:6px; flex:none } .ctl button { min-width:42px; height:40px; border:1px solid var(--line); background:var(--card); color:var(--fg); border-radius:10px; font:600 16px ui-sans-serif,system-ui; cursor:pointer; touch-action:manipulation; padding:0 10px }
+.ctl button:active { background:var(--tint-solid) } .ctl button.on { border-color:var(--teal); color:var(--teal) }
+.ctl button.nav { font-size:15px; min-width:58px } .ctl button.pp { min-width:64px; font-size:20px; background:var(--teal); color:var(--on-accent); border-color:var(--teal) }
+.ctl.small button { height:32px; min-width:38px; font-size:14px; border-radius:8px }
+.ctl button small { display:block; font:600 9px ui-sans-serif,system-ui; letter-spacing:.06em; text-transform:uppercase; opacity:.7; margin-top:-2px }
+@media (max-width:1100px) { #state, #cache, #beatno { display:none } .ctl button.timer { min-width:7.5em } #bar .clock { font-size:17px; min-width:5.4em } .ctl button.nav { min-width:46px } }
+@media (max-width:780px) {   /* a phone or a small embed: the essentials only (play, clock, slide and step, slides, timer hidden) */
+  .ctl.small button:not(#ex):not(#go), #hd, #tm, #tr, #sp, #state, #beatno, #cache { display:none }
+  .ctl button.nav small { display:none } .ctl button.nav { min-width:36px; font-size:18px } .ctl button.pp { min-width:48px }
+  #bar .row { gap:6px; padding:0 6px } #bar .clock { font-size:13px; min-width:0 } #prog { min-width:30px }
+  #intro h2 { font-size:4vh } #intro p { font-size:12px } }
+@media (max-width:700px) { #steps .st span { font-size:0 } #count { min-width:6em; font-size:14px } #count .n { font-size:18px } }
+@media (orientation:portrait) {   /* iPad upright: the words go under the slide, not beside it */
+  body.presenter #stage, body.presenter #touch { inset:0 0 calc(42vh + var(--barh)) 0 }
+  body.presenter #side { top:auto; bottom:var(--barh); left:0; width:auto; height:42vh; border-left:0; border-top:1px solid var(--line) }
+  .statement h1 { font-size:4.4vh } .shead h2 { font-size:3.6vh } .shead h2.big { font-size:5.4vh } table { font-size:1.7vh } }
+#intro { position:absolute; inset:0 0 var(--barh) 0; overflow:hidden; cursor:pointer; display:flex; align-items:center; justify-content:center; text-align:center; color:var(--dim); background:var(--bg); z-index:10; padding:20px }
+#intro h2 { color:var(--fg); font:600 5vh Georgia,serif; margin:0 0 1vh } #intro kbd, #help kbd { border:1px solid var(--line); border-radius:4px; padding:1px 6px; color:var(--fg); font:14px ui-monospace,monospace }
+#help { position:fixed; inset:10vh 20vw; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px 30px; display:none; z-index:40; overflow:auto } body.help #help { display:block }
+#help td { font-size:16px; padding:6px 10px }
+#err { position:fixed; top:10px; left:10px; right:10px; background:var(--danger-bg); color:var(--danger-ink); padding:10px 14px; border-radius:8px; display:none; z-index:60 }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<aside id="side"></aside>
+<div id="touch" aria-hidden="true"></div>
+<div id="loading"><i></i>loading the live page…</div>
+<div id="bar">
+ <div class="row"><div class="ctl"><button data-k=" " id="pp" class="pp" aria-label="play or pause" title="play / pause (Space)">▶</button></div><span class="clock" id="clock">0:00</span><span class="dim" id="beatno"></span><div id="prog" title="click to seek"><b id="progb"></b></div><span class="dim" id="state">paused</span>
+  <div class="ctl"><button class="nav" data-k="PageUp" aria-label="previous slide" title="previous slide (↑ or PageUp)">«<small>slide</small></button><button class="nav" data-k="ArrowLeft" aria-label="previous step" title="previous step (←)">‹<small>step</small></button><button class="nav" data-k="ArrowRight" aria-label="next step" title="next step (→, or tap the slide)">›<small>step</small></button><button class="nav" data-k="PageDown" aria-label="next slide" title="next slide (↓ or PageDown, or swipe)">»<small>slide</small></button><button data-k="s" id="sp" aria-label="speed" title="speed (S)">1×</button></div></div>
+ <div class="row"><div class="ctl small"><button data-k="x" id="ex" aria-label="leave the presentation" title="leave (X)">✕</button><button data-k="g" id="go" aria-label="go to any slide" title="go to any slide or step (G)">☰ slides</button><button data-k="w" id="ovb" aria-label="overview: every slide by section" title="overview: every slide by section, each playable; show or skip (W)">overview</button><button data-k="e" id="fb" aria-label="feedback" title="your feedback pane: a note on this slide, to your lane (E)">feedback</button><button data-k="c" id="chb" aria-label="what changed" title="what changed since you last looked, part by part (C)">changes</button><button data-k="j" id="sk" aria-label="skip this slide in your order" title="skip this slide: out of your order, on to the next (J)">skip</button><button data-k="u" id="un" aria-label="undo the last skip" title="undo the last skip (U)" style="display:none">undo</button><button data-k="o" id="bm" aria-label="build: your running order" title="build: your running order, show or hide, a comment on each (O)">build</button><button data-k="v" id="rv" aria-label="review mode: everything at once, no animation" title="review (V)">review</button><button data-k="p" id="nb" aria-label="speaker notes" title="notes (P)">notes</button><button data-k="t" id="th" aria-label="next theme" title="theme (T)">◐</button><button data-k="f" aria-label="fullscreen" title="fullscreen (F)">⛶</button></div><div id="steps" title="this slide's steps: click to jump"></div><a id="ver" href="../admin/versions.html#{{version}}" target="_blank" rel="noopener" title="this player's release: reload until it shows the latest">{{version}}</a><span id="cache"></span><span id="count"></span><div class="ctl small"><button data-k="h" id="hd" aria-label="auto-advance to the next slide" title="auto: move to the next slide when one ends (H); off: stop at the end of each slide">auto</button><button data-k="reset-timer" id="tr" aria-label="reset the talk timer" title="reset the whole clock: the timer to 0:00, the talk to its start">↺ reset</button><button data-k="have" id="hv" class="have" aria-label="how much time you have" title="the time you have: the countdown and the plan follow it (?have=40)">⏱ time</button><button data-k="z" id="tm" class="timer" aria-label="start or stop the talk timer" title="talk timer: start when you start speaking (Z); it keeps running whatever you click, until you stop it">▶ start talk</button></div></div>
+</div>
+<div id="intro"><div><h2 id="ttl">Talk player</h2><p id="sub"></p><p class="dim">site <a class="ver" href="../admin/versions.html#{{version}}" title="release history">{{version}}</a> · ported from <a href="https://ruv.sgit.ai/articles/the-talk-player.html">ruv.sgit.ai's player</a></p><p>Tap ▶ or press <kbd>Space</kbd> to start · tap the slide for the next step, swipe for the next slide · <b>‹ ›</b> steps, <b>« »</b> slides · <b>1×</b> speed · <b>auto</b> moves on when a slide ends (off: it stops) · <b>start talk</b> starts your timer · <b>☰ slides</b> jumps anywhere · <b>review</b> everything at once · <b>notes</b> the words · <kbd>?</kbd> all keys</p></div></div>
+<div id="black"></div>
+<div id="err"></div>
+<div id="pick"><div class="ph"><b>Go to a slide</b><span class="dim">click a slide, or one of its steps · <kbd>G</kbd> or <kbd>Esc</kbd> to close</span></div><div id="picklist"></div></div>
+<div id="chg" role="dialog" aria-label="What changed"><div class="oh"><b>What changed</b><span id="chgsince" class="dim"></span><button type="button" id="chgseen" title="take this as seen: the next changes are counted from now">mark all as seen</button><button type="button" id="chgx" title="back to the slide (C or Esc)">back to the slide</button></div><div id="chglist"></div></div>
+<div id="ov" role="dialog" aria-label="Overview: every slide by section"><div class="oh"><b>Every slide</b>
+<label>a row <select id="ovcols"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option></select></label>
+<label><input type="checkbox" id="ovpieces"> studio pieces too</label>
+<button type="button" id="ovmine" title="present your order, with what you skipped taken out">present my order</button><button type="button" id="ovx" title="back to the slide (W or Esc)">back to the slide</button>
+<div id="ovstat"></div></div><div id="ovgrid"></div></div>
+<div id="build" role="dialog" aria-label="Build: your running order"><div class="bh"><b>Your running order</b>
+<button type="button" id="b-mine" title="present this order">present my order</button><button type="button" id="b-talk" title="present talk.json as deck keeps it">present the talk</button>
+<button type="button" id="b-reset" title="start again from the talk's order">reset</button><button type="button" id="b-send" class="go" title="send your comments and this order to your lane">send to the lane</button><button type="button" id="b-copy" title="copy what differs from the talk's order, as JSON, for deck">copy my changes</button><button type="button" id="b-x" title="close (O or Esc)">close</button>
+<div class="bstat" id="bstat"></div><textarea id="b-json" readonly aria-label="your changes as JSON" style="display:none;width:100%;min-height:120px;font:13px/1.35 ui-monospace,monospace;margin-top:8px"></textarea></div><div id="blist"></div></div>
+<div id="help"><h3 style="margin-top:0;font-family:Georgia,serif">Keys</h3><table>
+<tr><td><kbd>Space</kbd> <kbd>K</kbd></td><td>play / pause (the live pages pause too)</td></tr>
+<tr><td><kbd>→</kbd> <kbd>←</kbd> · tap</td><td>next / previous stop: each step has a start (plays on) and an end (fully built, paused); the steps are under the timeline</td></tr>
+<tr><td><kbd>↓</kbd> <kbd>↑</kbd> · <kbd>PageDown</kbd> <kbd>PageUp</kbd> <kbd>N</kbd> · swipe</td><td>next / previous slide (clickers send PageDown); <kbd>→</kbd> past a slide's last step goes on to the next slide</td></tr>
+<tr><td><kbd>S</kbd> or <b>1×</b></td><td>speed: 0.75×, 1×, 1.25×, 1.5×, 2× (the live pages follow)</td></tr>
+<tr><td><kbd>H</kbd> or <b>auto</b></td><td>auto on: the next slide starts when one ends. Off (the default): each slide stops at its end until you press » or tap</td></tr>
+<tr><td><kbd>Z</kbd> or <b>start talk</b></td><td>the talk timer: starts when you start speaking and keeps running whatever you click, until you stop it. Teal: ahead of the plan for the slide on screen; amber: a little late; red: behind</td></tr>
+<tr><td><kbd>]</kbd> <kbd>[</kbd></td><td>next / previous section (the talk's acts, marked on the timeline)</td></tr>
+<tr><td><b>⏱ time</b> or <code>?have=40</code></td><td>the time you have: the talk timer counts it down, and ahead or behind is measured against it</td></tr>
+<tr><td><kbd>J</kbd> or <b>skip</b>, <kbd>U</kbd> or <b>undo</b></td><td>take this slide out of your order and go on to the next (your order is presented from then on); undo puts the last one back</td></tr>
+<tr><td><kbd>W</kbd> or <b>overview</b></td><td>every slide at once, by section, as many a row as you choose; tap a tile to play it there; show or skip it in your order; go to it</td></tr>
+<tr><td><kbd>E</kbd> or <b>feedback</b></td><td>your feedback pane on the right: a note on this slide (and the phrase you select), by voice or typed, to your lane</td></tr>
+<tr><td><kbd>O</kbd> or <b>build</b></td><td>your running order: every slide and every studio piece; drag (or ↑ ↓) to order, tick to show, a length and a comment on each; present it at once; send your comments and the order to your lane</td></tr>
+<tr><td><kbd>G</kbd> or <b>☰ slides</b></td><td>go to any slide, or straight to one of its steps (for questions at the end)</td></tr>
+<tr><td><kbd>P</kbd></td><td>presenter view: the words, seconds left, what comes next</td></tr>
+<tr><td><kbd>A</kbd></td><td>open the audience window (drag it to the projector, press F there); both stay in sync</td></tr>
+<tr><td><kbd>F</kbd></td><td>fullscreen</td></tr>
+<tr><td><kbd>B</kbd> <kbd>.</kbd></td><td>black screen (also on the audience window)</td></tr>
+<tr><td><kbd>T</kbd> or <b>◐</b></td><td>next theme: dark or light, shared with the audience window and the slides</td></tr>
+<tr><td><kbd>V</kbd> or <b>review</b></td><td>review mode: every slide as it looks at its end, no animation, the clock stopped; move with the slide buttons or swipe (or open player.html?review)</td></tr>
+<tr><td><kbd>R</kbd></td><td>rehearsal: records when each beat actually started; press again to save rehearsal.json</td></tr>
+<tr><td><kbd>0</kbd> <kbd>Home</kbd></td><td>back to 0:00</td></tr>
+<tr><td><kbd>X</kbd> or <b>✕</b></td><td>leave the presentation (out of fullscreen first, then back to the talk page); embedded in a page, ⤢ opens it in its own window</td></tr>
+<tr><td><kbd>Esc</kbd></td><td>give the keyboard back to the player after typing in a live page</td></tr>
+</table></div>
+<script>
+// Talk player for ruv.sgit.ai. A talk is a JSON timeline of beats; each beat has a start, a duration, a slide and the words to say.
+// The clock drives everything: builds, table rows, typing, and the live pages inside the slides (they load assets/clock.js, so
+// the player pauses them, sets their speed and moves them step by step). Extras (talk.extras) follow the timed talk, untimed.
+// Based on the prototype in newsroom.sgit.ai/articles/the-scripted-talk; Apache-2.0.
+const fmt = s => { const neg = s < 0; s = Math.abs(Math.floor(s)); return `${neg ? '-' : ''}${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}` }
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+const $ = id => document.getElementById(id)
+const qs = new URLSearchParams(location.search)
+const VIEW = qs.get('view') || 'main', ME = Math.random().toString(36).slice(2)
+const EMBED = qs.has('embed') || window.top !== window.self   // inside the talk page: ✕ becomes 'open full window'
+const RATES = [0.75, 1, 1.25, 1.5, 2]
+const LEDGER = /^[\w-]+$/.test(qs.get('ruvledger') || '') ? qs.get('ruvledger') : ''   // ?ruvledger=NAME: the deck reads data/vaults-NAME.json (a pinned snapshot)
+let talk, data = {}, B = [], MAIN = 0, TOTAL = 0, t = 0, playing = false, last = 0, beatIx = -1, rehearse = false, log = [], wall0 = 0, leader = VIEW !== 'audience', lastSend = 0, black = false, review = qs.has('review')
+const KS = {}   // steps the live pages have published, by page, for the slide picker
+let rate = +(qs.get('rate') || 1), hold = !qs.has('auto'), held = false, timer = null, frameReady = false, stepCache = null
+const chan = 'BroadcastChannel' in window && !qs.has('solo') ? new BroadcastChannel('tui-talk:' + (qs.get('talk') || 'talk.json') + (window.TALK ? ':offline' : '')) : null   // one channel per timeline
+if (VIEW === 'audience') document.body.classList.add('audience')
+if (qs.has('review')) document.body.classList.add('review')
+if (EMBED) { document.addEventListener('DOMContentLoaded', () => { const b = document.getElementById('ex'); if (b) { b.textContent = '⤢'; b.title = 'open in its own window'; b.setAttribute('aria-label', 'open in its own window') } }) }
+
+function fail(msg) { $('err').textContent = msg; $('err').style.display = 'block' }
+
+async function load() {
+  const src = qs.get('talk') || 'talk.json'
+  try {
+    talk = adapt(await withLocks(window.TALK || await (await fetch(src, { cache: 'no-cache' })).json()))
+    ORIG = talk.beats.map(b => ({ ...b }))
+    try { PIECES = (await (await fetch('pieces.json', { cache: 'no-cache' })).json()).pieces || [] } catch { PIECES = [] }
+    try { FP = (await (await fetch('fingerprints.json', { cache: 'no-cache' })).json()).beats || {} } catch { FP = {} }
+    if (RUN.use && !qs.has('talk')) applyOrder()
+    data = window.TALK_DATA || {}
+    for (const [k, path] of Object.entries(talk.data || {})) if (!data[k]) data[k] = await (await fetch(LEDGER ? path.replace(/vaults\.json$/, `vaults-${LEDGER}.json`) : path)).json()
+  } catch (e) { fail(`Could not load ${src} or its data (${e}). Serve the site (npm run site:serve) or use the offline file.`); return }
+  document.title = talk.title
+  MAIN = talk.duration_s
+  B = talk.beats.slice(); let at = MAIN
+  for (const x of talk.extras || []) { B.push({ ...x, at, extra: true }); at += x.dur }
+  TOTAL = at
+  $('ttl').textContent = talk.title
+  $('sub').textContent = `${talk.event} · ${fmt(MAIN)} · ${talk.beats.length} slides` + (talk.extras?.length ? ` + ${talk.extras.length} extras` : '')
+  if (TOTAL > MAIN) { const x = document.createElement('u'); x.className = 'xseg'; x.style.left = pos(MAIN) + GAP + '%'; x.style.right = '0'; x.title = 'extras: after the talk, untimed'; $('prog').appendChild(x); const g = document.createElement('s'); g.className = 'gap'; g.style.left = pos(MAIN) + '%'; g.style.width = GAP + '%'; $('prog').appendChild(g) }
+  B.forEach(b => { const i = document.createElement('i'); i.style.left = pos(b.at + (b.extra ? 0.001 : 0)) + '%'; if (b.extra) i.style.background = 'var(--warm)'; $('prog').appendChild(i) })
+  let lastAct = null
+  talk.beats.forEach(b => { if (b.act && b.act !== lastAct) { lastAct = b.act; const a = document.createElement('span'); a.className = 'act'; a.style.left = pos(b.at) + '%'; a.title = 'section: ' + b.act; $('prog').appendChild(a) } })
+  check()
+  if (qs.has('t')) t = +qs.get('t')
+  else if (location.hash.length <= 1 && B[0] && B[0].slide.layout === 'iframe') t = START()   // the first slide opens built, not on its blank first frame (the editor, 18:25)
+  else if (location.hash.length > 1) { const i = B.findIndex(b => b.id === decodeURIComponent(location.hash.slice(1))); if (i >= 0) t = i === 0 ? START() : B[i].at }   // a link to a slide opens on it
+  if (VIEW === 'audience' || qs.has('t')) $('intro').style.display = 'none'
+  if (qs.has('presenter')) document.body.classList.add('presenter')
+  requestAnimationFrame(tick)
+  warm()
+}
+
+// this site's talk.json: beats in order, each with dur; at is the sum of the beats before it; a slide is a live page (layout
+// iframe); act names the section a beat belongs to
+// locked parts (conductor 034): a part locked before it goes on stage plays from its frozen copy (engine/locked/, written by
+// admin/build/lock.py), exactly as locked, whatever talk.json says of it now; the rest is the latest. ?nolocks plays talk.json as it is.
+let LOCKS = {}
+async function withLocks(T) {
+  if (qs.has('talk') || qs.has('nolocks')) return T
+  try {
+    const r = await fetch('engine/locked/locks.json', { cache: 'no-cache' }); if (!r.ok) return T
+    LOCKS = (await r.json()).parts || {}
+    for (const n of Object.keys(LOCKS).sort((a, b) => a - b)) {
+      const lb = (await (await fetch(LOCKS[n].beats, { cache: 'no-cache' })).json()).beats || [], beats = T.beats || []
+      let at = beats.findIndex(b => b.part == n); if (at < 0) at = beats.findIndex(b => +b.part > +n); if (at < 0) at = beats.length
+      const rest = beats.filter(b => b.part != n), before = beats.slice(0, at).filter(b => b.part != n).length
+      T.beats = [...rest.slice(0, before), ...lb, ...rest.slice(before)]
+    }
+  } catch (e) { console.error('locks', e) }
+  return T
+}
+function adapt(T) {
+  let at = 0
+  T.beats = (T.beats || []).map(b => { const x = { ...b, slide: { layout: 'iframe', ...(b.slide || {}) } }; if (x.at == null) x.at = at; at = x.at + (+x.dur || 0); return x })
+  if (!T.duration_s) T.duration_s = at
+  if (!T.event) T.event = 'hack::soho'
+  return T
+}
+
+// the build mode: the editor's running order, kept in this browser (tui-run.v1): every beat of the talk and every studio
+// piece, each shown or not, with its length and his comment. 'present my order' plays it; the talk's own order stays deck's.
+// Everything here is written with textContent; comments and the order go to his lane through assets/pane.js (TuiLane).
+let ORIG = [], PIECES = [], RUN = { use: false, items: [] }
+try { RUN = JSON.parse(localStorage.getItem('tui-run.v1') || 'null') || RUN } catch {}
+addEventListener('DOMContentLoaded', () => { try { if (localStorage.getItem('tui-last-skip')) $('un').style.display = '' } catch {} })
+addEventListener('load', () => setTimeout(() => { try { if (!B.length) return; const c = changes(); if (!c) seenSave(); else if (c.out.length) $('chb').textContent = 'changes ' + c.out.length } catch (e) { console.error(e) } }, 3000))   // the first visit is the baseline
+const saveRun = () => { try { localStorage.setItem('tui-run.v1', JSON.stringify(RUN)) } catch {} }
+function universe() {
+  return ORIG.map(b => ({ ref: 'beat:' + b.id, title: b.title, act: b.act || '', dur: b.dur, kind: 'slide' }))
+    .concat(PIECES.map(p => ({ ref: 'piece:' + p.id, title: p.title, act: 'Studio', dur: Math.max(5, Math.round(p.end || 30)), kind: p.engine ? 'piece' : 'page', src: p.src })))
+}
+function runItems() {
+  const all = universe(), byRef = new Map(all.map(x => [x.ref, x])), seen = new Set(), out = []
+  for (const it of RUN.items || []) { const u = byRef.get(it.ref); if (u && !seen.has(it.ref)) { seen.add(it.ref); out.push({ ...u, ...it, title: u.title, act: u.act, kind: u.kind, src: u.src }) } }
+  for (const u of all) if (!seen.has(u.ref)) out.push({ ...u, show: u.kind === 'slide', comment: '' })
+  return out
+}
+function applyOrder() {
+  const items = runItems().filter(x => x.show)
+  if (!items.length) return
+  let at = 0
+  talk.beats = items.map(x => {
+    const b = x.ref.startsWith('beat:') ? { ...ORIG.find(o => 'beat:' + o.id === x.ref) } : { id: 'piece-' + x.ref.slice(6).replace(/[^\w-]/g, '-'), act: 'Studio', title: x.title, slide: { layout: 'iframe', src: x.src }, say: x.comment || '', cue: 'From the studio: ' + x.ref.slice(6) }
+    b.dur = Math.max(1, +x.dur || b.dur || 30); b.at = at; at += b.dur; return b
+  })
+  talk.duration_s = at
+  talk.event = (talk.event || '') + ' · your order'
+}
+document.addEventListener('click', e => { if (e.target && e.target.id === 'b-copy') { const j = JSON.stringify(myChanges(), null, 1), ta = $('b-json'); ta.value = j; ta.style.display = 'block'; ta.focus(); ta.select(); (navigator.clipboard ? navigator.clipboard.writeText(j) : Promise.reject()).then(() => { $('bstat').textContent = 'Copied: paste it to deck, or send it to your lane.' }, () => { $('bstat').textContent = 'Select the text below and copy it.' }) } })
+function drawBuild() {
+  const L = $('blist'); L.textContent = ''
+  const items = runItems()
+  RUN.items = items.map(x => ({ ref: x.ref, show: !!x.show, dur: x.dur, comment: x.comment || '', sent: x.sent || '' }))
+  let act = null
+  items.forEach((x, i) => {
+    if (x.act !== act) { act = x.act; const h = document.createElement('div'); h.className = 'act'; h.textContent = act || 'No section'; L.appendChild(h) }
+    const r = document.createElement('div'); r.className = 'row' + (x.show ? '' : ' off'); r.dataset.ref = x.ref
+    const hd = document.createElement('div'); hd.className = 'hd'; hd.textContent = '≡'; hd.title = 'drag to move'
+    const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = !!x.show; cb.title = 'show this in my order'
+    const tt = document.createElement('div'); tt.className = 'tt'; const b = document.createElement('b'); b.textContent = x.title; const m = document.createElement('span'); m.textContent = (x.kind === 'slide' ? 'slide' : x.kind === 'piece' ? 'studio piece' : 'studio page, no clock') + ' · ' + x.ref.split(':')[1]; tt.appendChild(b); tt.appendChild(m)
+    const du = document.createElement('input'); du.className = 'dur'; du.type = 'number'; du.min = '1'; du.inputMode = 'numeric'; du.value = x.dur; du.title = 'seconds on screen'
+    const ac = document.createElement('div'); ac.className = 'acts'
+    const up = document.createElement('button'); up.type = 'button'; up.textContent = '↑'; up.title = 'move up'
+    const dn = document.createElement('button'); dn.type = 'button'; dn.textContent = '↓'; dn.title = 'move down'
+    const cm = document.createElement('button'); cm.type = 'button'; cm.textContent = '✎'; cm.title = 'a comment on this'; if (x.comment) cm.className = 'has'
+    ac.appendChild(up); ac.appendChild(dn); ac.appendChild(cm)
+    if (x.ref.startsWith('piece:')) { const vw = document.createElement('a'); vw.className = 'vw'; vw.textContent = 'view'; vw.href = 'engine/view.html?id=' + encodeURIComponent(x.ref.slice(6)); vw.title = 'open it in the viewer'; ac.appendChild(vw) }
+    r.appendChild(hd); r.appendChild(cb); r.appendChild(tt); r.appendChild(du); r.appendChild(ac)
+    const it = RUN.items[i]
+    cb.addEventListener('change', () => { it.show = cb.checked; r.classList.toggle('off', !cb.checked); saveRun(); buildStat() })
+    du.addEventListener('change', () => { it.dur = Math.max(1, +du.value || x.dur); saveRun(); buildStat() })
+    up.addEventListener('click', () => moveItem(i, -1)); dn.addEventListener('click', () => moveItem(i, 1))
+    cm.addEventListener('click', () => {
+      let ta = r.querySelector('textarea')
+      if (ta) { ta.remove(); return }
+      ta = document.createElement('textarea'); ta.value = it.comment || ''; ta.placeholder = 'Your comment on this, for deck and the conductor'
+      ta.addEventListener('input', () => { it.comment = ta.value; cm.className = ta.value ? 'has' : ''; saveRun(); buildStat() })
+      r.appendChild(ta); ta.focus()
+    })
+    dragRow(hd, r)
+    L.appendChild(r)
+  })
+  saveRun(); buildStat()
+}
+function moveItem(i, d) { const j = i + d; if (j < 0 || j >= RUN.items.length) return; const [x] = RUN.items.splice(i, 1); RUN.items.splice(j, 0, x); saveRun(); drawBuild() }
+function dragRow(handle, row) {   // drag by the handle, with a finger or a mouse: the row follows, the others make room
+  handle.addEventListener('pointerdown', e => {
+    e.preventDefault(); row.classList.add('drag')
+    const L = $('blist')
+    const move = ev => {   // the row goes where the finger is: before or after the row under it
+      for (const x of L.querySelectorAll('.row')) {
+        if (x === row) continue
+        const r = x.getBoundingClientRect()
+        if (ev.clientY >= r.top && ev.clientY <= r.bottom) { L.insertBefore(row, ev.clientY < r.top + r.height / 2 ? x : x.nextSibling); break }
+      }
+    }
+    const up = () => {
+      removeEventListener('pointermove', move); removeEventListener('pointerup', up); removeEventListener('pointercancel', up)
+      row.classList.remove('drag')
+      const order = [...$('blist').querySelectorAll('.row')].map(x => x.dataset.ref), by = new Map(RUN.items.map(x => [x.ref, x]))
+      RUN.items = order.map(r => by.get(r)); saveRun(); drawBuild()
+    }
+    addEventListener('pointermove', move); addEventListener('pointerup', up); addEventListener('pointercancel', up)   // the window follows the drag
+  })
+}
+function buildStat(msg) {
+  const shown = RUN.items.filter(x => x.show), secs = shown.reduce((a, x) => a + (+x.dur || 0), 0), com = RUN.items.filter(x => x.comment && x.comment !== x.sent).length
+  $('bstat').textContent = (msg ? msg + ' · ' : '') + `${shown.length} shown, ${fmt(secs)}` + (HAVE ? ` against your ${Math.round(HAVE / 60)} min` : '') + ` · ${com} comment${com === 1 ? '' : 's'} not sent · presenting ${RUN.use ? 'your order' : 'the talk'}`
+  $('b-mine').classList.toggle('on', !!RUN.use); $('b-talk').classList.toggle('on', !RUN.use)
+}
+// one-tap skip while presenting (deck 037, the editor's words): this slide out of his running order, his order presented
+// from then on, and on to the next slide; undo puts the last skip back. A reload, so the order is rebuilt cleanly; the
+// talk timer is kept in this browser and survives it.
+function relaunch(id) { const u = new URL(location.href); u.searchParams.delete('t'); u.hash = id ? '#' + id : ''; history.replaceState(null, '', u.href); location.reload() }   // a hash change alone would not reload
+function setShow(ref, show) { if (!RUN.items || !RUN.items.length) RUN.items = runItems().map(y => ({ ref: y.ref, show: !!y.show, dur: y.dur, comment: y.comment || '', sent: y.sent || '' })); const it = RUN.items.find(y => y.ref === ref); if (it) it.show = show; else RUN.items.push({ ref, show, dur: 30, comment: '', sent: '' }) }
+function skipHere() {
+  const i = beatAt(t), b = B[i]; if (!b || B.length < 2) return
+  const ref = b.id.startsWith('piece-') ? (runItems().find(x => !x.ref.startsWith('beat:') && 'piece-' + x.ref.slice(6).replace(/[^\w-]/g, '-') === b.id) || {}).ref : 'beat:' + b.id
+  if (!ref) return
+  setShow(ref, false); RUN.use = true; saveRun()
+  try { localStorage.setItem('tui-last-skip', JSON.stringify({ ref, id: b.id })) } catch {}
+  relaunch((B[i + 1] || B[i - 1]).id)
+}
+function undoSkip() {
+  let last = null; try { last = JSON.parse(localStorage.getItem('tui-last-skip') || 'null') } catch {}
+  if (!last) return
+  setShow(last.ref, true); saveRun(); try { localStorage.removeItem('tui-last-skip') } catch {}
+  relaunch(last.id)
+}
+// copy my changes (deck 037): what differs from the talk's order, as JSON, for deck to fold into talk.json
+function myChanges() {
+  const items = runItems(), orig = ORIG.map(o => 'beat:' + o.id), shown = items.filter(x => x.show).map(x => x.ref)
+  const keptOrig = orig.filter(r => shown.includes(r)), keptMine = shown.filter(r => orig.includes(r))
+  return { schema: 'the-ultimate-insider/run-changes/v1', from: 'the editor\'s player', at: new Date().toISOString(), talk_version: '{{version}}',
+    skipped: items.filter(x => x.kind === 'slide' && !x.show).map(x => x.ref),
+    moved: keptMine.map((r, i) => ({ ref: r, position: shown.indexOf(r) + 1, was: orig.indexOf(r) + 1 })).filter((x, i) => keptOrig[i] !== x.ref),
+    added: items.filter(x => x.kind !== 'slide' && x.show).map(x => ({ ref: x.ref, position: shown.indexOf(x.ref) + 1 })),
+    comments_not_sent: items.filter(x => (x.comment || '').trim() && !x.sent).map(x => ({ ref: x.ref, comment: x.comment })),
+    order: shown }
+}
+// what changed (conductor 034): against what he last marked as seen (tui-seen.v1, this browser), part by part, slide by
+// slide: new, removed, moved, retitled, and changed content (talk/fingerprints.json, a hash of each slide's folder).
+// A locked part plays its frozen copy, so its slides never count as changed.
+let FP = {}
+function snapshot() { return { at: new Date().toISOString(), version: '{{version}}', beats: B.filter(b => !b.extra).map((b, i) => ({ id: b.id, title: b.title, part: b.part || '', i, fp: String(b.slide.src).startsWith('engine/locked/') ? 'locked' : FP[b.id] || '' })) } }
+function seenGet() { try { return JSON.parse(localStorage.getItem('tui-seen.v1') || 'null') } catch { return null } }
+function seenSave() { try { localStorage.setItem('tui-seen.v1', JSON.stringify(snapshot())) } catch {} }
+function changes() {
+  const seen = seenGet(); if (!seen) return null
+  const was = new Map(seen.beats.map(x => [x.id, x])), now = snapshot().beats, out = []
+  const order = now.filter(x => was.has(x.id)).map(x => x.id), wasOrder = seen.beats.filter(x => now.some(y => y.id === x.id)).map(x => x.id)
+  now.forEach(x => { const w = was.get(x.id)
+    if (!w) out.push({ k: 'new', x })
+    else { if (w.fp && x.fp && w.fp !== x.fp && x.fp !== 'locked') out.push({ k: 'changed', x }); if (w.title !== x.title) out.push({ k: 'retitled', x, from: w.title }); if (order.indexOf(x.id) !== wasOrder.indexOf(x.id)) out.push({ k: 'moved', x }) } })
+  seen.beats.forEach(w => { if (!now.some(y => y.id === w.id)) out.push({ k: 'removed', x: w }) })
+  return { seen, out }
+}
+function drawChanges() {
+  const L = $('chglist'), c = changes(); L.textContent = ''
+  if (!c) { seenSave(); $('chgsince').textContent = 'Nothing to compare yet: from now on, changes are counted.'; return }
+  $('chgsince').textContent = `since ${c.seen.at.slice(11, 16)} UTC (${c.seen.version}) · ${c.out.length} change${c.out.length === 1 ? '' : 's'}`
+  const parts = [...new Set(c.out.map(o => String(o.x.part || '')))].sort()
+  if (!c.out.length) { const p = document.createElement('p'); p.textContent = 'Nothing has changed.'; L.appendChild(p) }
+  parts.forEach(pt => {
+    const h = document.createElement('h3'); h.textContent = pt ? 'Part ' + pt + (LOCKS[pt] ? ' (locked ' + LOCKS[pt].locked_at.slice(11, 16) + ')' : '') : 'No part'; L.appendChild(h)
+    const ul = document.createElement('ul'); L.appendChild(ul)
+    c.out.filter(o => String(o.x.part || '') === pt).forEach(o => {
+      const li = document.createElement('li'), k = document.createElement('span'); k.className = 'k'; k.textContent = o.k; li.appendChild(k)
+      const i = B.findIndex(b => b.id === o.x.id)
+      if (i >= 0) { const a = document.createElement('a'); a.href = '#' + o.x.id; a.textContent = o.x.title; a.addEventListener('click', e => { e.preventDefault(); goBeat(i); playing = false; document.body.classList.remove('chg'); send() }); li.appendChild(a) }
+      else li.appendChild(document.createTextNode(o.x.title))
+      if (o.from) li.appendChild(document.createTextNode(' (was: ' + o.from + ')'))
+      ul.appendChild(li)
+    })
+  })
+}
+document.addEventListener('click', e => { const id = e.target && e.target.id; if (id === 'chgseen') { seenSave(); drawChanges() } else if (id === 'chgx') { document.body.classList.remove('chg') } })
+function present(mine) { RUN.use = mine; saveRun(); relaunch(B[beatAt(t)] && B[beatAt(t)].id) }   // stays on this slide when it is in the new order
+async function sendBuild() {
+  if (!window.TuiLane) { buildStat('the lane is not loaded'); return }
+  let n = 0
+  for (const x of RUN.items) if (x.comment && x.comment !== x.sent) { TuiLane.keep({ kind: 'comment', page: 'talk/player.html#' + x.ref, title: x.title, text: x.comment }); x.sent = x.comment; n++ }
+  const shown = RUN.items.filter(x => x.show)
+  TuiLane.keep({ kind: 'running order', page: 'talk/player.html', title: 'The editor\'s running order', text: shown.map((x, i) => `${i + 1}. ${x.ref} (${x.dur} s): ${universe().find(u => u.ref === x.ref)?.title || ''}`).join('\n') })
+  saveRun()
+  if (!TuiLane.ready()) { buildStat(`${n} comment${n === 1 ? '' : 's'} and the order kept in this browser; open your lane (Notes, on any page of the site, your four words) and they go with the next send`); return }
+  buildStat('sending…'); const r = await TuiLane.send()
+  buildStat(r.left ? `sent ${r.sent}, ${r.left} kept to retry` : `sent ${r.sent} to your lane`)
+}
+$('b-mine').addEventListener('click', () => present(true)); $('b-talk').addEventListener('click', () => present(false))
+$('b-reset').addEventListener('click', () => { if (confirm('Start again from the talk\'s order? Your comments are kept.')) { const c = new Map(RUN.items.map(x => [x.ref, x.comment])); RUN.items = []; drawBuild(); RUN.items.forEach(x => { x.comment = c.get(x.ref) || '' }); saveRun(); drawBuild() } })
+$('b-send').addEventListener('click', sendBuild); $('b-x').addEventListener('click', () => document.body.classList.remove('build'))
+
+// the overview (W): every slide of the running order (or of the talk), by section, as many a row as he chooses; a tile shows
+// the slide built; a tap plays it in the tile; show or skip writes his running order (the build mode); go jumps the player
+// there. Previews load as they scroll into view, one plays at a time. textContent only.
+let ovIO = null, ovPlaying = null
+try { $('ovcols').value = localStorage.getItem('tui-ov-cols') || '4' } catch {}
+function ovStop() { if (ovPlaying) { const f = ovPlaying.querySelector('iframe'); if (f) f.src = f.dataset.src + '&static'; ovPlaying.querySelector('.hint').textContent = '▶ play'; ovPlaying = null } }
+function drawOv() {
+  const G = $('ovgrid'); G.textContent = ''; G.style.setProperty('--cols', $('ovcols').value); ovPlaying = null
+  if (ovIO) ovIO.disconnect()
+  ovIO = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const f = e.target.querySelector('iframe'); if (f && !f.src) f.src = f.dataset.src + '&static'; ovIO.unobserve(e.target) } }), { root: G, rootMargin: '200px' }) : null
+  const pieces = $('ovpieces').checked, items = runItems().filter(x => x.kind === 'slide' || x.show || pieces), cur = B[beatAt(t)]
+  let sec = null, grid = null, n = 0
+  items.forEach(x => {
+    if (x.act !== sec) { sec = x.act; const h = document.createElement('div'); h.className = 'sec'; h.textContent = sec || 'No section'; G.appendChild(h); grid = document.createElement('div'); grid.className = 'tiles'; G.appendChild(grid) }
+    const beat = x.ref.startsWith('beat:') ? ORIG.find(o => 'beat:' + o.id === x.ref) : null
+    const src = beat ? beat.slide.src : x.src, id = beat ? beat.id : 'piece-' + x.ref.slice(6).replace(/[^\w-]/g, '-')
+    const tile = document.createElement('div'); tile.className = 'tile' + (x.show ? '' : ' off') + (cur && cur.id === id ? ' cur' : '')
+    const pv = document.createElement('div'); pv.className = 'pv'; pv.title = 'tap to play it here; tap again to stop'
+    const f = document.createElement('iframe'); f.tabIndex = -1; f.setAttribute('loading', 'lazy'); f.title = x.title; f.dataset.src = src + (src.includes('?') ? '&' : '?') + 'theme=' + (window.RuvTheme ? RuvTheme.current() : 'dark')
+    if (!ovIO) f.src = f.dataset.src + '&static'
+    const hint = document.createElement('span'); hint.className = 'hint'; hint.textContent = '▶ play'
+    pv.appendChild(f); pv.appendChild(hint)
+    pv.addEventListener('click', () => { if (ovPlaying === tile) { ovStop(); return } ovStop(); f.src = f.dataset.src + '&ruvt=0'; hint.textContent = '■ stop'; ovPlaying = tile })
+    const m = document.createElement('div'); m.className = 'meta'
+    const no = document.createElement('span'); no.className = 'n'; no.textContent = x.show ? String(++n) : 'skip'
+    const tt = document.createElement('span'); tt.className = 'tt'; tt.textContent = x.title; tt.title = x.title + ' (' + x.dur + ' s)'
+    const sk = document.createElement('button'); sk.type = 'button'; sk.textContent = x.show ? 'skip' : 'show'; sk.title = x.show ? 'skip it in your order' : 'show it in your order'
+    sk.addEventListener('click', () => { const it = RUN.items.find(y => y.ref === x.ref); if (it) { it.show = !it.show } else { RUN.items = runItems().map(y => ({ ref: y.ref, show: y.ref === x.ref ? !y.show : !!y.show, dur: y.dur, comment: y.comment || '', sent: y.sent || '' })) } saveRun(); drawOv() })
+    const go = document.createElement('button'); go.type = 'button'; go.textContent = 'go'; go.title = 'go to this slide'
+    go.addEventListener('click', () => { const i = B.findIndex(bb => bb.id === id); if (i < 0) { ovStat('Not in what is playing now: show it and present your order.'); return } goBeat(i); playing = false; document.body.classList.remove('ov'); ovStop(); send() })
+    m.appendChild(no); m.appendChild(tt); m.appendChild(sk); m.appendChild(go)
+    tile.appendChild(pv); tile.appendChild(m); grid.appendChild(tile)
+    if (ovIO) ovIO.observe(tile)
+  })
+  ovStat()
+}
+function ovStat(msg) { const all = runItems(), sh = all.filter(x => x.show), secs = sh.reduce((a, x) => a + (+x.dur || 0), 0); $('ovstat').textContent = (msg ? msg + ' · ' : '') + `${sh.length} shown, ${all.filter(x => x.kind === 'slide' && !x.show).length} slides skipped, ${fmt(secs)}` + (HAVE ? ` of your ${Math.round(HAVE / 60)} min` : '') + ` · presenting ${RUN.use ? 'your order' : 'the talk'}; skips apply when you present your order` }
+$('ovcols').addEventListener('change', () => { try { localStorage.setItem('tui-ov-cols', $('ovcols').value) } catch {} $('ovgrid').style.setProperty('--cols', $('ovcols').value) })
+$('ovpieces').addEventListener('change', drawOv)
+$('ovx').addEventListener('click', () => { document.body.classList.remove('ov'); ovStop() })
+$('ovmine').addEventListener('click', () => present(true))
+
+// beats must tile the talk: each starts where the previous ended, the last ends at duration_s
+function check() {
+  const bad = []
+  talk.beats.forEach((b, i) => { const end = i + 1 < talk.beats.length ? talk.beats[i + 1].at : talk.duration_s; if (b.at + b.dur !== end) bad.push(`${b.id}: ${b.at}+${b.dur}≠${end}`) })
+  if (bad.length) fail('Timeline does not add up: ' + bad.join(', '))
+}
+
+// the timeline bar: the timed talk, a small gap, then the extras (shaded) after it
+const GAP = 2.5
+function pos(s) { if (TOTAL <= MAIN) return 100 * s / MAIN; const mw = (100 - GAP) * MAIN / TOTAL; return s <= MAIN ? mw * s / MAIN : mw + GAP + (100 - mw - GAP) * (s - MAIN) / (TOTAL - MAIN) }
+function unpos(p) { if (TOTAL <= MAIN) return MAIN * p / 100; const mw = (100 - GAP) * MAIN / TOTAL; return p <= mw ? MAIN * p / mw : p < mw + GAP ? MAIN : MAIN + (TOTAL - MAIN) * (p - mw - GAP) / (100 - mw - GAP) }
+function beatAt(s) { let ix = 0; B.forEach((b, i) => { if (s >= b.at) ix = i }); return ix }
+
+// table rows from the site's data, so the slide shows what the run produced
+function rowsFrom(spec) {
+  const short = s => s.split(' (')[0]
+  if (spec === 'report') return data.report.rows.map(r => [r.who, r.action, r.resource || '', short(r.legacy), short(r.abp)])
+  if (spec.startsWith('abp:')) { const role = data.abp.roles.find(r => r.id === spec.slice(4)); return role.rows.map(r => [r.capability, r.mandate, r.why, r.barrier || '']) }
+  return []
+}
+function tableFoot(spec, foot) {
+  if (spec === 'report') { const L = data.report.ledger; return `Ledger valid: ${L.abp.valid && L.legacy.valid} · ${L.abp.length} hash-chained receipts each side · ABP gaps: ${data.report.gaps.length} · source: data/report.json` }
+  if (spec?.startsWith('abp:')) return `owner ${esc(data.abp.owner)} · valid until ${esc(data.abp.valid_until)} · source: data/abp.json`
+  return foot || ''
+}
+const cellClass = c => ['allowed', 'denied', 'approval_required', 'yes', 'no', 'approval'].includes(c) ? c : ''
+const frameEl = () => document.querySelector('#stage iframe')
+const clockOf = () => { try { const f = frameEl(); return frameReady && f?.contentWindow?.RuvClock || null } catch { return null } }
+
+function render(b) {
+  const s = b.slide, st = $('stage'), n = B.indexOf(b) + 1
+  frameReady = false; stepCache = null; $('loading').classList.remove('on')
+  document.body.classList.toggle('interactive', !!b.interactive)
+  // the frame: brand strip, then the title top left (the beat's title, or the big title on a title slide), then a subtitle line
+  const head = s.layout === 'title' ? s.text : (s.heading || b.title)
+  const sub = s.layout === 'title' ? (s.kicker || '') : (s.sub || s.caption || s.kicker || '')
+  const no = b.extra ? `extra ${n - talk.beats.length} / ${B.length - talk.beats.length}` : `${n} / ${talk.beats.length}`
+  st.innerHTML = `<div class="sbrand"><span class="logo"><i>u</i>the ultimate insider <b>·</b> ${esc(talk.event || '')}</span><span class="ev">${esc(b.act || '')}</span><span class="gh">the-ultimate-insider.presentation.sgit.ai</span><span>${no}</span></div>` +
+    (s.layout === 'iframe' && !s.heading ? '' : `<div class="shead"><h2${s.layout === 'title' ? ' class="big"' : ''}>${head}</h2><div class="sub">${sub}</div></div>`) + '<div class="sbody"></div>'   // this site's slides carry their own heading
+  const el = document.createElement('div'); el.className = 'slide ' + s.layout; st.querySelector('.sbody').appendChild(el)
+  const builds = (s.builds || []).map(x => `<div class="b" data-at="${x.at}">${x.text}</div>`).join('')
+  if (s.layout === 'title') {
+    el.innerHTML = `<div class="sub">${s.sub || ''}</div><div class="who">${s.who || ''}</div>${builds}`
+  } else if (s.layout === 'statement') {
+    el.innerHTML = `<h1>${s.text}</h1>` + builds
+  } else if (s.layout === 'terminal') {
+    el.innerHTML = `<div class="term${s.small ? ' small' : ''}"><span class="p">$ </span><span class="cmd"></span><span class="cursor">&nbsp;</span><div class="out">${(s.output || '').split('\n').map(l => esc(l)).join('\n').replace(/«(.+?)»/g, '<span class="hl">$1</span>')}</div></div>`
+  } else if (s.layout === 'table') {
+    const rows = s.rows_from ? rowsFrom(s.rows_from) : s.rows
+    el.innerHTML = `<table><tr>${s.columns.map(c => `<th>${esc(c)}</th>`).join('')}</tr>` +
+      rows.map((r, i) => `<tr class="row" data-at="${(s.reveal_from || 0) + i * (s.reveal_every || 0)}">${r.map(c => `<td class="${cellClass(c)}">${esc(c).replace('_', ' ')}</td>`).join('')}</tr>`).join('') +
+      `</table><div class="foot">${tableFoot(s.rows_from, s.footer)}</div>` + builds
+  } else if (s.layout === 'bullets') {
+    el.innerHTML = `<ul class="bul">${s.items.map((x, i) => `<li data-at="${i * (s.reveal_every || 0)}">${x}</li>`).join('')}</ul>`
+  } else if (s.layout === 'quote') {
+    el.innerHTML = `<blockquote>${s.lines.map((x, i) => `<div class="b" data-at="${i * (s.reveal_every || 0)}">${x}</div>`).join('')}</blockquote><cite>${s.cite || ''}</cite>`
+  } else if (s.layout === 'image') {
+    const src = window.TALK_IMAGES?.[s.src] || s.src
+    el.innerHTML = `<div class="imgwrap"><img src="${src}" alt="${esc(s.alt || s.caption || '')}">${(s.builds || []).map(x => `<div class="b punch" data-at="${x.at}">${x.text}</div>`).join('')}</div>`   // builds on an image: a punchline over it
+  } else if (s.layout === 'iframe') {
+    if (location.protocol === 'file:' && s.fallback) {   // a live page cannot load its WASM from file://; show the recorded screenshot
+      const src = window.TALK_IMAGES?.[s.fallback] || s.fallback
+      el.className = 'slide image'; el.innerHTML = `<img src="${src}" alt="${esc(s.caption || '')}">`; (st.querySelector('.shead .sub') || {}).textContent += ' (screenshot: the offline file cannot run the live page)'
+    } else {
+      // once: a looping page plays once and holds; ruvt: start it where the talk is (it fast-forwards); ruvpaused: paused if the talk is
+      const local = Math.max(0, t - b.at) * (s.speed || 1)   // slide.speed: the live page runs faster than the talk, to fit a shorter beat
+      const q = `theme=${window.RuvTheme ? RuvTheme.current() : ''}${LEDGER ? '&ruvledger=' + LEDGER : ''}&once${review ? '&review' : `&ruvt=${local.toFixed(2)}${playing ? '' : '&ruvpaused'}`}`
+      el.innerHTML = `<iframe src="${s.src}${s.src.includes('?') ? '&' : '?'}${q}" tabindex="-1"></iframe>`   // the live app wears the slides' theme
+      const f = el.querySelector('iframe')
+      requestAnimationFrame(() => { if (frameReady || frameEl() !== f) return; const r = f.getBoundingClientRect(), L = $('loading'); Object.assign(L.style, { left: r.left + 'px', top: r.top + 'px', width: r.width + 'px', height: r.height + 'px' }); L.classList.add('on') })
+      f.addEventListener('load', () => {
+        $('loading').classList.remove('on'); frameReady = true; stepCache = null
+        try { f.contentDocument.activeElement?.blur(); f.blur(); f.contentWindow.addEventListener('keydown', e => { if (['PageDown', 'PageUp', 'Escape', 'ArrowUp', 'ArrowDown'].includes(e.key) || (['ArrowRight', 'ArrowLeft', ' '].includes(e.key) && e.target.tagName !== 'INPUT')) { e.preventDefault(); window.focus(); onKey(e) } }) } catch {}
+        window.focus()
+      })
+    }
+  } else if (s.layout === 'video') {
+    el.innerHTML = `<video src="${s.src}" muted playsinline style="max-width:100%;max-height:80vh"></video>`
+  }
+  const nx = B[B.indexOf(b) + 1]
+  $('side').innerHTML = `<div class="meta"><span>${no} · ${b.extra ? 'extra, untimed' : `${fmt(b.at)} to ${fmt(b.at + b.dur)}`} · ${b.dur} s</span><span id="wall"></span></div><h3>${b.title}</h3>` +
+    `<div class="left" id="left"></div>${b.cue ? `<div class="cue">${b.cue}</div>` : ''}<div class="say">${b.say || ''}</div>` +
+    (nx ? `<p class="next">Next${nx.extra ? ' (extra)' : ''} at ${fmt(nx.at)}: <b>${nx.title}</b><br>${((nx.say || '').match(/^[\s\S]*?[.!?](?=\s|$)/) || [nx.say || ''])[0]}</p>` : '<p class="next">Last slide.</p>')
+  drawSteps(b)
+}
+
+// the steps of a slide: from the timeline (beat.steps), from the live page (window.RUV_STEPS), or from its builds
+function stepsOf(b) {
+  if (stepCache) return stepCache
+  const end = Math.max(0.5, b.dur - 0.4), s = b.slide
+  let st = null
+  if (b.steps) st = b.steps.map(x => typeof x === 'number' ? { t: x } : x)
+  else if (s.layout === 'iframe') { try { const w = frameEl()?.contentWindow; if (frameReady && Array.isArray(w?.RUV_STEPS) && w.RUV_STEPS.length) { st = w.RUV_STEPS.map(x => ({ t: +x.t / (s.speed || 1), label: x.label })); var fromPage = true } } catch {} }
+  if (!st) {
+    const ats = new Set([0])
+    document.querySelectorAll('#stage [data-at]').forEach(e => ats.add(+e.dataset.at))
+    if (s.layout === 'terminal') { ats.add(s.output_at || 0) }
+    if (s.layout === 'iframe' && s.type) ats.add(s.type.at)
+    st = [...ats].sort((x, y) => x - y).map(x => ({ t: x }))
+    const lastAt = st[st.length - 1].t
+    if (s.layout === 'iframe') st.push({ t: end, label: 'the end of the slide' })
+    else if (lastAt + 0.8 < end) st.push({ t: Math.min(end, lastAt + 0.8), label: 'all shown' })
+  }
+  st = st.filter(x => x.t >= 0 && x.t <= b.dur).sort((x, y) => x.t - y.t)
+  if (!st.length || st[0].t > 0.05) st.unshift({ t: 0, label: 'start' })
+  st.forEach((x, i) => { x.label = x.label || (i === 0 ? 'start' : `step ${i + 1}`) })
+  if (fromPage) KS[s.src] = st.map(x => ({ t: x.t * (s.speed || 1), label: x.label }))   // kept in page seconds
+  if (s.layout !== 'iframe' || b.steps || fromPage) stepCache = st
+  return st
+}
+let stepsKey = ''
+function drawSteps(b) {
+  const st = stepsOf(b), key = b.id + ':' + st.map(x => x.t).join(',')
+  if (key === stepsKey) return; stepsKey = key
+  const end = b.dur
+  $('steps').innerHTML = st.map((x, i) => { const w = ((i + 1 < st.length ? st[i + 1].t : end) - x.t) / end * 100; return `<div class="st" data-i="${i}" style="flex:${Math.max(w, 4).toFixed(2)}" title="${esc(x.label)}"><b></b><span>${i + 1}. ${esc(x.label)}</span></div>` }).join('')
+}
+function paintSteps(b, local) {
+  const st = stepsOf(b); drawSteps(b)
+  const els = $('steps').children
+  st.forEach((x, i) => {
+    const e = els[i]; if (!e) return
+    const nxt = i + 1 < st.length ? st[i + 1].t : b.dur, done = local >= nxt, cur = local >= x.t && !done
+    e.classList.toggle('done', done); e.classList.toggle('cur', cur)
+    e.firstChild.style.width = cur ? (100 * (local - x.t) / Math.max(0.01, nxt - x.t)).toFixed(1) + '%' : ''
+  })
+}
+
+// builds, rows and typing follow the clock inside the beat
+function update(b, local) {
+  const s = b.slide
+  if (review) local = 1e6   // review mode: the beat as it looks at its end
+  document.querySelectorAll('#stage [data-at]').forEach(e => e.classList.toggle('on', local >= +e.dataset.at))
+  if (s.layout === 'terminal') {
+    const n = Math.min(s.command.length, Math.max(0, Math.floor((local - (s.type_from || 0.5)) * 1000 / (s.type_ms || 30))))
+    document.querySelector('.cmd').textContent = s.command.slice(0, n)
+    document.querySelector('.out').classList.toggle('on', local >= (s.output_at || 0))
+  }
+  if (s.layout === 'iframe' && s.type) {   // type a question into the live page, like the terminal types a command
+    try {
+      const doc = frameEl().contentDocument, inp = doc?.querySelector(s.type.selector)
+      const n = Math.min(s.type.text.length, Math.max(0, Math.floor((local - s.type.at) * 1000 / (s.type.ms || 70))))
+      if (inp && inp.value !== s.type.text.slice(0, n) && local >= s.type.at) { inp.value = s.type.text.slice(0, n); inp.dispatchEvent(new Event('input')) }
+    } catch {}
+  }
+  const v = document.querySelector('#stage video'); if (v) { v.playbackRate = rate; if (playing && v.paused) v.play(); if (!playing && !v.paused) v.pause() }
+  // the live page follows the talk's clock: paused with it, at its speed, and moved when the talk is moved
+  const C = !review && clockOf()
+  if (C) {
+    try {
+      const k = s.speed || 1, pl = local * k
+      if (C.rate !== rate * k) C.setRate(rate * k)
+      const d = pl - C.elapsed()
+      if (held && playing) { if (C.paused) C.play(); return }   // holding: let the animation finish, it stops on its own final frame
+      const ahead = d < -0.3 && d > -3   // the page is a little ahead (it started while loading): let the talk catch up
+      if (playing && !held && !ahead && C.paused) C.play(); else if ((!playing || held || ahead) && !C.paused) C.pause()
+      if (d > 0.6) C.seek(pl)
+      else if (d <= -3) { C.seek(Math.max(0, pl)); frameReady = false }   // moved back: the page reloads at that time
+    } catch {}
+  }
+}
+
+function tick(now) {
+  const dt = (now - last) / 1000; last = now
+  if (resumeAt && performance.now() >= resumeAt) { resumeAt = 0; playing = true }
+  post(now)
+  if (playing && !held) {
+    const ix0 = beatAt(t), b0 = B[ix0], end = b0.at + b0.dur
+    let nt = t + dt * rate
+    if (!b0.extra && nt >= MAIN - 0.05) { nt = MAIN - 0.05; playing = false; held = false }   // the end of the deck: stop, in any mode; extras only with » or →
+    else if (hold && nt >= end - 0.05 && t < end - 0.05) { nt = end - 0.05; held = true }    // hold at the end of the slide
+    if (b0.extra && nt >= end) { nt = end - 0.05; held = true }                          // extras always hold
+    if (typeof stopAt === 'number' && (stopAt < t - 0.01 || beatAt(stopAt) !== ix0)) stopAt = null   // a seek or a slide change elsewhere: no stale hold
+    if (stopAt === 'first' && (frameReady || b0.slide.layout !== 'iframe') && beatAt(nt) === ix0) { const st = stepsOf(b0); stopAt = b0.at + (st[1] ? st[1].t - 0.05 : b0.dur - 0.4) }
+    if (typeof stopAt === 'number' && nt >= stopAt) { nt = stopAt; playing = false; stopAt = null }   // a step played from its start holds on its built frame
+    t = Math.min(TOTAL, nt)
+  }
+  const ix = beatAt(t), b = B[ix]
+  if (ix !== beatIx) { beatIx = ix; held = false; render(b); try { history.replaceState(null, '', '#' + b.id); document.title = b.title + ' · ' + talk.title } catch {} if (rehearse) log.push({ beat: b.id, planned_s: b.at, actual_s: +((performance.now() - wall0) / 1000).toFixed(1) }) }
+  const local = t - b.at
+  update(b, local)
+  paintSteps(b, review ? b.dur : local)
+  $('clock').textContent = b.extra ? `extra · ${fmt(MAIN)}` : `${fmt(t * SC())} / ${fmt(HAVE || MAIN)}`   // the plan, scaled to the time he has
+  $('beatno').textContent = b.extra ? `+${ix + 1 - talk.beats.length}` : `${ix + 1}/${talk.beats.length}`
+  $('progb').style.width = pos(t) + '%'
+  $('state').textContent = (review ? 'review' : held ? 'holding' : playing ? 'playing' : 'paused') + (rate !== 1 ? ` · ${rate}×` : '') + (rehearse ? ' · rehearsing' : '') + (VIEW === 'audience' ? ' · audience' : '')
+  $('pp').textContent = playing && !held ? '❚❚' : '▶'; $('bm').classList.toggle('on', document.body.classList.contains('build') || !!RUN.use); $('ovb').classList.toggle('on', document.body.classList.contains('ov')); $('fb').classList.toggle('on', document.body.classList.contains('tui-pane-on')); $('nb').classList.toggle('on', document.body.classList.contains('presenter')); $('rv').classList.toggle('on', review); $('hd').classList.toggle('on', !hold); $('hd').textContent = hold ? 'auto off' : 'auto ▸▸'; $('go').classList.toggle('on', document.body.classList.contains('pick')); paintTimer(b); $('sp').textContent = rate + '×'
+  // how long until the next slide, in talk seconds and at the current speed
+  const left = b.at + b.dur - t, secs = left / rate, c = $('count')
+  if (review) { c.className = ''; c.textContent = 'review' }
+  else if (held) { c.className = 'now'; c.innerHTML = 'holding · <b>»</b> for next' }
+  else if (!playing) { c.className = ''; c.innerHTML = `<span class="n">${Math.ceil(secs)}</span> s left` }
+  else { c.className = secs < 5 ? 'now' : secs < 10 ? 'soon' : ''; c.style.setProperty('--p', (100 * (1 - left / b.dur)).toFixed(1) + '%'); c.innerHTML = `<span class="ring"></span>${hold && !b.extra ? 'ends in' : 'next in'} <span class="n">${Math.ceil(secs)}</span> s` }
+  const L = $('left')
+  if (L) { L.textContent = `${Math.ceil(secs)} s left`; L.className = 'left ' + (secs < 5 ? 'behind' : 'ok') }
+  const w = $('wall'); if (w) w.textContent = new Date().toTimeString().slice(0, 5) + (rehearse ? ` · rehearsal ${fmt((performance.now() - wall0) / 1000)}` : '')
+  if (leader && chan && now - lastSend > 400) { lastSend = now; send() }
+  requestAnimationFrame(tick)
+}
+
+// two windows (presenter laptop + projector) share one clock; whoever was last pressed leads
+function send() { chan?.postMessage({ from: ME, t, playing, black, rate, held }) }
+chan && (chan.onmessage = e => { const m = e.data; if (m.from === ME) return; if (m.hello) { if (leader) send(); return } leader = false; t = m.t; playing = m.playing; black = m.black; rate = m.rate || 1; held = !!m.held; document.body.classList.toggle('black', black); $('intro').style.display = 'none' })
+chan?.postMessage({ from: ME, hello: true })
+
+// embedded in a page that follows the talk (talk/narration.html shows text under it): tell that page the clock ten times a
+// second, and take play, pause and seek from it. Same origin only.
+const PARENT = window.parent !== window ? window.parent : null
+let lastPost = 0
+function post(now) { if (!PARENT || !talk || now - lastPost < 100) return; lastPost = now; try { PARENT.postMessage({ ruvTalk: { t, playing: playing && !held, rate, beat: B[beatAt(t)]?.id } }, location.origin === 'null' ? '*' : location.origin) } catch {} }
+addEventListener('message', e => {
+  const c = e.data?.ruvTalkCmd
+  if (!c || !talk || e.source !== PARENT || (location.origin !== 'null' && e.origin !== location.origin)) return
+  $('intro').style.display = 'none'; leader = true
+  if (c === 'play') { held = false; if (t >= MAIN - 0.1) t = 0; playing = true }
+  else if (c === 'pause') playing = false
+  else if (c === 'seek') { t = Math.max(0, Math.min(MAIN - 0.05, +e.data.t || 0)); held = false; if (e.data.play != null) playing = !!e.data.play }
+  else if (c === 'rate') rate = +e.data.rate || 1
+  send()
+})
+
+function goBeat(ix) { ix = Math.max(0, Math.min(B.length - 1, ix)); t = B[ix].at; held = false; stopAt = null; if (ix !== beatIx) beatIx = -1 }
+// every step has two stops: its start, and its end (just before the next step starts, so its part is fully built).
+// Moving to an end pauses there, so you can talk over the finished picture. Going back always pauses. Nothing here starts
+// playback: only ▶ or Space does.
+function stops(b) {
+  const st = stepsOf(b), out = []
+  st.forEach((x, i) => {
+    const nxt = i + 1 < st.length ? st[i + 1].t : b.dur, end = Math.max(x.t, nxt - (b.slide.layout === 'iframe' && i + 1 < st.length ? Math.min(1.0, (nxt - x.t) * 0.25) : 0.25))   // just before the next part starts (at most a second early, before a part fades out)
+    // on a live page a step's start is the moment before its part is drawn (a blank frame), so there › goes to ends only
+    if (b.slide.layout !== 'iframe' || i === 0) out.push({ t: x.t, end: false })
+    if (end - x.t > 0.1) out.push({ t: end, end: true })
+  })
+  return out
+}
+// → plays the next step from its start, so its animation shows, and holds on its built frame; pressed again it goes
+// straight to the next one, so no gap is waited out. Playing, it stays playing (the editor, 18:10)
+let stopAt = null, resumeAt = 0
+function START() { return B[0] ? Math.min(Math.max(0, B[0].dur - 0.4), 3) : 0 }   // a few seconds into the first slide: its reveals done
+function step(dir) {
+  const ix = beatAt(t), b = B[ix], local = t - b.at, sp = stops(b)
+  if (review) { goBeat(ix + dir); return }
+  if (dir > 0 && b.slide.layout === 'iframe') {
+    const st = stepsOf(b), i = st.findIndex(x => x.t > local + 0.05)
+    if (i >= 0) { t = b.at + st[i].t; held = false; if (!playing || stopAt != null) { playing = true; stopAt = b.at + (st[i + 1] ? st[i + 1].t - 0.05 : b.dur - 0.4) } return }
+    const was = playing && stopAt == null; goBeat(ix + 1); if (!was) { playing = true; stopAt = 'first' } return
+  }
+  stopAt = null
+  if (dir < 0 && (playing || resumeAt)) { playing = false; resumeAt = performance.now() + 1000 }   // back while playing: wait a second before playing on, so a second ← can go back again (the editor, 18:25)
+  let to = null
+  if (dir > 0) to = sp.find(x => x.t > local + 0.05)
+  else to = [...sp].reverse().find(x => x.t < local - 0.15)
+  if (to) { t = b.at + to.t; held = false; return }   // a step never stops the play (the editor, 18:10): playing goes on playing
+  if (dir > 0) goBeat(ix + 1)
+  else if (ix > 0) { const pb = B[ix - 1]; beatIx = -1; t = pb.at + Math.max(0, pb.dur - 0.4); held = false }   // the previous slide's built end: its steps are not loaded yet, and stops() would read this slide's (the editor, 18:05: back did not always work)
+}
+function onKey(e) {
+  if (!talk) return
+  const k = e.key; let handled = true
+  $('intro').style.display = 'none'; leader = true
+  if (k !== 'ArrowLeft') resumeAt = 0   // any other key decides for itself
+  if (k === ' ' || k === 'k' || k === 'K') { if (held) { held = false; step(1); playing = true } else if (!playing && !B[beatAt(t)].extra && t >= MAIN - 0.1) { /* the end of the deck: Space does not run on into the extras */ } else playing = !playing }
+  else if (k === 'ArrowRight' || k === 'tap') step(1)
+  else if (k === 'ArrowLeft') step(-1)
+  else if (k === 'PageDown' || k === 'ArrowDown' || k === 'n' || k === 'N' || k === 'swipe-next') goBeat(beatAt(t) + 1)
+  else if (k === 'ArrowUp') { goBeat(beatAt(t) - 1); playing = false }   // up: the previous slide, always (the editor, 16:20)
+  else if (k === 'PageUp' || k === 'swipe-back') { const ix = beatAt(t); goBeat(t - B[ix].at < 2 ? ix - 1 : ix); playing = false }   // going back pauses
+  else if (k === ']' || k === '[') {   // the next or previous section (act)
+    const ix = beatAt(t), a = B[ix].act, d = k === ']' ? 1 : -1
+    let j = ix
+    if (d > 0) { while (j < B.length - 1 && B[j].act === a) j++ }
+    else { while (j > 0 && B[j].act === a) j--; const pa = B[j].act; while (j > 0 && B[j - 1].act === pa) j-- ; if (B[ix].act === B[0].act) j = 0 }
+    if (j !== ix) { goBeat(j); playing = false }
+  }
+  else if (k === 'have') setHave()
+  else if (k === 'w' || k === 'W') { document.body.classList.toggle('ov'); if (document.body.classList.contains('ov')) drawOv(); else ovStop() }
+  else if (k === 'e' || k === 'E') { const tg = document.querySelector('.tui-pane-toggle'), x = document.querySelector('.tui-pane .tp-x'); if (document.body.classList.contains('tui-pane-on')) x?.click(); else tg?.click() }
+  else if (k === 'c' || k === 'C') { document.body.classList.toggle('chg'); if (document.body.classList.contains('chg')) drawChanges() }
+  else if (k === 'j' || k === 'J') skipHere()
+  else if (k === 'u' || k === 'U') undoSkip()
+  else if (k === 'o' || k === 'O') { document.body.classList.toggle('build'); if (document.body.classList.contains('build')) drawBuild() }
+  else if (k === 's' || k === 'S') rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length] || 1
+  else if (k === 'h' || k === 'H') { hold = !hold; if (!hold && held) { held = false; step(1) } }
+  else if (k === 'z' || k === 'Z') toggleTimer()
+  else if (k === 'reset-timer') { if (!confirm('Reset the talk clock: the timer to 0:00 and the talk to its first slide?')) return; timer = null; saveTimer(); t = START(); beatIx = -1; playing = false; held = false }
+  else if (k === 'g' || k === 'G') { document.body.classList.toggle('pick'); if (document.body.classList.contains('pick')) drawPick() }
+  else if (k === '0' || k === 'Home') { t = 0; beatIx = -1; playing = false; held = false }
+  else if (k === 'p' || k === 'P') document.body.classList.toggle('presenter')
+  else if (k === 'a' || k === 'A') { const u = new URL(location.href); u.searchParams.set('view', 'audience'); u.searchParams.delete('presenter'); window.open(u.href, 'tui-talk-audience', 'width=1280,height=720'); document.body.classList.add('presenter') }
+  else if (k === 'f' || k === 'F') { const d = document.documentElement; (d.requestFullscreen || d.webkitRequestFullscreen)?.call(d) }
+  else if (k === 'b' || k === 'B' || k === '.') { black = !black; document.body.classList.toggle('black', black) }
+  else if (k === '?') document.body.classList.toggle('help')
+  else if (k === 'Escape') { document.body.classList.remove('help', 'pick', 'build', 'ov', 'chg'); ovStop(); if (document.body.classList.contains('tui-pane-on')) document.querySelector('.tui-pane .tp-x')?.click() }   // back to the slide itself
+  else if (k === 'x' || k === 'X') {   // leave: out of fullscreen first, then back to the talk page (or, embedded, open the player in its own window)
+    if (document.fullscreenElement || document.webkitFullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document)
+    else if (EMBED) { const u = new URL(location.href); u.searchParams.delete('embed'); u.searchParams.set('t', Math.floor(t)); window.open(u.href, '_blank') }
+    else location.href = 'index.html'
+  }
+  else if (k === 't' || k === 'T') { if (window.RuvTheme) { const ks = Object.keys(RuvTheme.THEMES); RuvTheme.set(ks[(ks.indexOf(RuvTheme.current()) + 1) % ks.length]); $('th').title = 'theme: ' + RuvTheme.THEMES[RuvTheme.current()][0] } }
+  else if (k === 'v' || k === 'V') { review = !review; playing = false; document.body.classList.toggle('review', review); beatIx = -1 }
+  else if (k === 'r' || k === 'R') {
+    rehearse = !rehearse
+    if (rehearse) { wall0 = performance.now(); log = []; beatIx = -1 }
+    else if (log.length) {
+      const out = { talk: talk.title, recorded_at: new Date().toISOString(), duration_s: talk.duration_s, total_actual_s: +((performance.now() - wall0) / 1000).toFixed(1), beats: log }
+      try { localStorage.setItem('tui-talk-last-rehearsal', JSON.stringify(out)) } catch {}
+      const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 1)], { type: 'application/json' })); a.download = 'rehearsal.json'; a.click()
+    }
+  } else handled = false
+  if (handled) { e.preventDefault?.(); send() }
+}
+addEventListener('keydown', e => { if (e.target && e.target.closest && e.target.closest('input, textarea, select, [contenteditable]')) return; onKey(e) })   // typing in the build panel is typing, not a shortcut
+window.addEventListener('ruv-theme', e => { try { frameEl()?.contentDocument.documentElement.setAttribute('data-theme', e.detail) } catch {} })
+// touch: on-screen buttons; on the slide, a tap is the next step and a swipe the next (or previous) slide
+document.querySelectorAll('.ctl button').forEach(b => b.addEventListener('click', e => { e.stopPropagation(); onKey({ key: b.dataset.k }); b.blur() }))
+$('intro').addEventListener('click', () => { $('intro').style.display = 'none'; if (EMBED && !playing) playing = true })   // embedded in a page: a tap on the intro starts the talk
+let sw = null
+const T = $('touch')
+T.addEventListener('pointerdown', e => { sw = { x: e.clientX, y: e.clientY, t: performance.now() } })
+T.addEventListener('pointercancel', () => { sw = null })
+T.addEventListener('pointerup', e => {
+  if (!sw) return; const dx = e.clientX - sw.x, dy = e.clientY - sw.y, ms = performance.now() - sw.t; sw = null
+  if (ms < 900 && Math.abs(dx) > 50 && Math.abs(dx) > 1.5 * Math.abs(dy)) onKey({ key: dx < 0 ? 'swipe-next' : 'swipe-back' })
+  else if (Math.abs(dx) < 12 && Math.abs(dy) < 12 && ms < 600) onKey({ key: 'tap' })
+})
+$('prog').addEventListener('click', e => { const r = $('prog').getBoundingClientRect(); t = unpos(100 * (e.clientX - r.left) / r.width); held = false; leader = true; send() })
+$('steps').addEventListener('click', e => { const d = e.target.closest('.st'); if (!d) return; const b = B[beatAt(t)]; t = b.at + stepsOf(b)[+d.dataset.i].t; held = false; leader = true; send() })
+
+// ready for a room with bad wifi: a service worker keeps every file the talk has used, and the player loads each live
+// slide once, quietly, in the background, so the next time they come from this machine
+function warm() {
+  if (location.protocol === 'file:' || VIEW === 'audience') return
+  const sw = navigator.serviceWorker
+  const reg = !sw || qs.has('nosw') ? Promise.resolve(false) : fetch('../sw.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : {}).catch(() => ({})).then(j => {   // the kill switch first
+    if (j && j.enabled === false) { sw.getRegistrations().then(rs => rs.forEach(r => r.unregister())); caches?.keys().then(ks => ks.forEach(k => k.startsWith('tui-') && caches.delete(k))); return false }
+    return sw.register('../sw.js', { scope: '../', updateViaCache: 'none' }).then(() => sw.ready).then(() => true)
+  }).catch(() => false)
+  reg.then(async offline => {
+    if (offline) {   // the player's own files were fetched before the worker took over: fetch them again through it, so it keeps them
+      if (!sw.controller) await new Promise(res => { sw.addEventListener('controllerchange', res, { once: true }); setTimeout(res, 5000) })
+      const own = [location.href.split('#')[0], new URL(qs.get('talk') || 'talk.json', location.href).href, new URL('pieces.json', location.href).href, new URL('../', location.href).href,
+        ...Object.values(talk.data || {}).map(u => new URL(u, location.href).href),
+        ...performance.getEntriesByType('resource').map(e => e.name).filter(u => u.startsWith(location.origin))]
+      await Promise.all([...new Set(own)].map(u => fetch(u, { cache: 'no-cache' }).catch(() => {})))
+    }
+    const pages = [...new Set(B.filter(b => b.slide.layout === 'iframe').map(b => b.slide.src))], imgs = B.flatMap(b => [b.slide.layout === 'image' && b.slide.src, b.slide.fallback]).filter(Boolean)
+    for (const u of imgs) fetch(u).catch(() => {})
+    let n = 0
+    for (const src of pages) {
+      await new Promise(res => {
+        const f = document.createElement('iframe'); f.setAttribute('aria-hidden', 'true'); f.tabIndex = -1
+        Object.assign(f.style, { position: 'fixed', left: '-2000px', top: '0', width: '1280px', height: '600px', visibility: 'hidden' })
+        f.src = src + (src.includes('?') ? '&' : '?') + 'review&once&ruvpaused' + (LEDGER ? '&ruvledger=' + LEDGER : '')
+        const done = () => { setTimeout(() => { try { const r = f.contentWindow.RUV_STEPS; if (r?.length) KS[src] = r.map(x => ({ t: +x.t, label: x.label })) } catch {} f.remove(); res() }, 1500) }
+        f.onload = done; setTimeout(done, 15000); document.body.appendChild(f)
+      })
+      $('cache').textContent = `${offline ? 'cached' : 'warmed'} ${++n}/${pages.length} live slides`
+    }
+    $('cache').textContent = offline ? `✓ ready offline: all ${pages.length} slides` : `warmed: ${pages.length} live slides`; if (!offline) setTimeout(() => { $('cache').textContent = '' }, 6000)   // ready offline stays, so he can check it at a glance
+  }).catch(() => {})
+}
+// the talk timer: wall-clock time since you started speaking. It is yours: no slide button changes it. It is kept in this
+// browser (a reload does not lose it). Its colour compares it with the plan for the slide on screen.
+try { timer = JSON.parse(localStorage.getItem('tui-talk-timer') || 'null') } catch {}
+const saveTimer = () => { try { localStorage.setItem('tui-talk-timer', JSON.stringify(timer)) } catch {} }
+// the time the presenter has, in minutes (?have=40, or ⏱; kept in this browser): the timer counts down what is left of it,
+// and the plan for each slide is scaled to it, so ahead and behind are against his time, not the talk's planned length
+let HAVE = 0
+try { HAVE = +(qs.get('have') || localStorage.getItem('tui-talk-have') || 90) * 60 } catch {}   // the talk is 90 minutes (the editor, 16:20 and 18:05)
+const SC = () => HAVE && MAIN ? HAVE / MAIN : 1
+function setHave() {
+  const v = prompt('How many minutes do you have? (0: the planned ' + fmt(MAIN) + ')', HAVE ? String(Math.round(HAVE / 60)) : '')
+  if (v == null) return
+  HAVE = Math.max(0, +v || 0) * 60
+  try { localStorage.setItem('tui-talk-have', String(HAVE / 60)) } catch {}
+}
+const timerS = () => !timer ? 0 : (timer.stopped_ms ?? (Date.now() - timer.start)) / 1000
+function toggleTimer() {
+  if (timer && timer.stopped_ms == null) { timer.stopped_ms = Date.now() - timer.start }      // stop
+  else if (timer && timer.stopped_ms != null && confirmReset()) timer = null                    // stopped: a second press resets
+  else if (timer) { timer.start = Date.now() - timer.stopped_ms; delete timer.stopped_ms }     // or resume
+  else { timer = { start: Date.now() }; if (!playing) playing = true; $('intro').style.display = 'none' }
+  saveTimer()
+}
+let resetAsk = -1e9
+function confirmReset() { const n = performance.now(); if (n - resetAsk < 2500) return true; resetAsk = n; return false }   // press twice within 2.5 s to reset
+function paintTimer(b) {
+  const el = $('tm'), s = timerS(); $('tr').style.display = ''
+  $('hv').textContent = HAVE ? '⏱ ' + Math.round(HAVE / 60) + (innerWidth > 1100 ? ' min' : '') : (innerWidth > 1100 ? '⏱ time' : '⏱')
+  if (!timer) { el.className = 'timer'; el.innerHTML = '▶ start talk' + (HAVE ? `<small>${fmt(HAVE)}</small>` : ''); return }
+  const stopped = timer.stopped_ms != null
+  let cls = 'timer run', note = ''
+  if (!b.extra && !review) {
+    const early = b.at * SC() - s, late = s - (b.at + b.dur) * SC()
+    if (late > 20) { cls += ' behind'; note = `${fmt(late)} behind` } else if (late > 0) { cls += ' late'; note = `${fmt(late)} late` }
+    else if (early > 10) { cls += ' ahead'; note = `${fmt(early)} ahead` } else note = 'on time'
+  }
+  el.className = cls
+  const shown = HAVE ? fmt(HAVE - s) + ' left' : fmt(s)
+  el.innerHTML = `${stopped ? (performance.now() - resetAsk < 2500 ? 'press again: reset' : '▶ ' + shown) : '■ ' + shown}${note && !stopped ? `<small>${note}</small>` : ''}`
+  if (HAVE && !stopped && s > HAVE) el.className = 'timer run behind'
+  el.title = stopped ? 'timer stopped: press to resume, press twice quickly to reset' : 'talk timer running: press to stop'
+}
+// go to any slide or step: for questions at the end
+function drawPick() {
+  const cur = beatAt(t)
+  let pa = null
+  $('picklist').innerHTML = B.map((b, i) => {
+    const head = b.act && b.act !== pa ? `<div class="actrow">${esc(b.act)}</div>` : ''; pa = b.act || pa
+    let st = []; try { st = i === cur ? stepsOf(b) : b.steps ? b.steps.map(x => typeof x === 'number' ? { t: x } : x) : (KS[b.slide.src] || []).map(x => ({ t: x.t / (b.slide.speed || 1), label: x.label })) } catch {}
+    return head + `<div class="pc${i === cur ? ' cur' : ''}${b.extra ? ' ex' : ''}" data-i="${i}"><div class="n">${b.extra ? 'extra ' + (i + 1 - talk.beats.length) : i + 1} · ${b.extra ? 'untimed' : fmt(b.at)} · ${b.dur} s</div><h4>${esc(b.title)}</h4>` +
+      (st.length > 1 ? `<div class="sts">${st.map((x, j) => `<a href="#" data-i="${i}" data-t="${x.t}">${j + 1}. ${esc(x.label || '')}</a>`).join('')}</div>` : '') + '</div>'
+  }).join('')
+}
+$('picklist').addEventListener('click', e => {
+  e.preventDefault(); const a = e.target.closest('a[data-t]'), c = e.target.closest('.pc'); if (!c) return
+  const i = +c.dataset.i, b = B[i]
+  if (i !== beatAt(t)) beatIx = -1
+  t = b.at + (a ? +a.dataset.t : 0); held = false; leader = true
+  document.body.classList.remove('pick'); send()
+})
+window.__state = () => ({ t, beat: B[beatIx]?.id, playing, held, rate, log, leader, steps: B[beatIx] && stepsOf(B[beatIx]) })
+window.__seek = s => { t = s }
+load()
+</script>
+</body>
+</html>

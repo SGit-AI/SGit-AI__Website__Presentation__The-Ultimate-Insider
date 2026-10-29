@@ -1,0 +1,1063 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T01:40:00Z",
+ "until": "2026-10-29T03:27:14Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T02:14:16Z",
+   "kind": "editor's request: build the five-step wake",
+   "outcome": "partial",
+   "record": "team/conductor/wakes/20261029T021416Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "partial",
+    "post_review": "finding",
+    "post_check": "partial"
+   },
+   "plan": "Amended after the pre-review's change, all five conditions adopted: 0) the five-step wake: WAKE.md section (the conductor's file), sub-agent briefs in team/conductor/reviews/, `wake.py check` in admin/tools/ for wake records from now on (dev asked by request to call it from the gate), one CLAUDE.md line at the editor's word, named outside scope, every member told by To- trailers; 1) onboarding: ON"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T02:52:05Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T025205Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Sub-agent plan, AMENDED by the member (marked): 1) the brief for the next hours, team/conductor/briefs/2026-10-29__next-hours.md: deck leads (ideas on its board, requests to researcher, ruv.sgit, dev, reviews every pass, never edits the talk), the conductor paces (picks deck's ideas one at a time, one request in flight per producer), dev improves the dashboard every round (where we are, what was d"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T03:03:04Z",
+   "kind": "scheduled, hourly at :02",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T030304Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Sub-agent plan: 1) reply to deck in mailroom/deck adopting programme.json as the queue (E01 with ruv.sgit; data for E02-E04, E09-E11, E13 with researcher), stall flag after two maker slots, one programme clause in the hourly line; deck's request filed in conductor/done; 2) correction note above the brief's idea-on-the-board step, pointing to programme.json; pace.json mirrors the programme (E01 ask"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T03:08:34Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T030834Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Sub-agent plan: 1) the two new dev tasks (Email-FS reader: all agents, messages, threads, outboxes and status; embedded vault viewer, sgit.ai examples) scheduled within one in flight, reflected in pace.json; 2) backlog-then-schedule-then-execute as the rule, in a brief addendum quoting the editor; the WAKE.md line proposed to the editor, not edited; 3) dev told by mail request. AMENDED by the memb"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T03:21:33Z",
+   "kind": "editor's request",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T032133Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Sub-agent plan: 1) a new article (path added to the conductor's policy, the editor's word in this session) with debrief, screenshots, collage and messages, images in team/conductor/debriefs/img/ (copied to the site by the build); 2) admin/tools/ tool counting agents, wakes, outcomes, verdicts and problems from team/*/wakes/*.json and status.json, emitting numbers and an inline SVG as raw HTML bloc"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T02:47:58Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/deck/wakes/20261029T024758Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Answer the researcher's before-tonight request: the editor froze talk.json and the slides at 02:47, nothing more changes there; the three fixes already released stay. 2) The editor's programme: src/pages/studio/programme.html and src/static/studio/data/programme.json (part one, the threat in pictures; part two, containment with ABP and SHarness; an explainer page per experiment); hub and how-it"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T03:03:11Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/deck/wakes/20261029T030311Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Requests first: reply to the conductor (mailroom/conductor/, copy in deck/outbox/): the 03:00 direct repository asks to ruv-sgit (E01) and the researcher are withdrawn into its picking; reply to the researcher naming issue before-tonight (blocked on the editor, the deck frozen); move the five deck mails to deck/inbox or deck/done; issues on deck's board for each. 2) At most three ideas as issue"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T03:18:53Z",
+   "kind": "scheduled, hourly at :17",
+   "outcome": "ok",
+   "record": "team/deck/wakes/20261029T031853Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Review ruv.sgit's B01 storyboard after looking at it: deck's review page src/pages/studio/reviews/b01-storyboard.html (go or notes; the three decisions as proposals for the editor, talk frozen); reply in mailroom/ruv-sgit/, copy in deck/outbox/; issue deck-007 updated. 2) The researcher's slice 1 (E02, E09, E13): acknowledge in mailroom/researcher/ (slice 2 already promised); copy what the piec"
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T02:48:49Z",
+   "kind": "scheduled, hourly at :47",
+   "outcome": "partial",
+   "record": "team/dev/wakes/20261029T024849Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "partial"
+   },
+   "plan": "1) conductor's request (mail 001): an issue on dev's board; call wake.py check from admin/build/validate.py; reply and file the mail. Files: admin/build/validate.py, team/dev/status.json. 2) If time allows: render each member's wake records (five verdicts and comments) on /team/<id>/ and /admin/ via admin/build/build.py. All inside policy.json; deck's To-dev note on the sources page is left for a "
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T03:07:41Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/dev/wakes/20261029T030741Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Sub-agent plan: 1) the conductor's dashboard request (mailroom/dev/001, due 03:47): start one part now in src/pages/admin/** and admin/build/**. 2) Capture the editor's two asks as open issues on dev's board (A: an email-like reader for tui-mail-public; B: an embedded vault via vault-ui-embed.js), build neither now. 3) status.json next, debrief, agents.py check, release. Member's amendment to 1: o"
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T02:49:09Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/researcher/wakes/20261029T024909Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) team/researcher/policy.json: agreed_by the editor (his words in the session, 02:48 UTC). 2) evidence/proposals/deck-talk-changes.md: exact old and new text from the current talk.json and slides for what deck has not done yet (deck replied 02:35: items 1 to 3 done; 4 to the editor; 5 next): item 4 with two wordings for the editor's choice, item 5, then the should-change list; mailed to deck in t"
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T03:05:50Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/researcher/wakes/20261029T030550Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "finding",
+    "post_check": "as-planned"
+   },
+   "plan": "1) deck's request (mailroom/researcher/002, studio data): issue 005 on the board and a reply; slice 1 this wake (E02/E09: riskmandate.ai/abp.html and abp.sgit.ai captured, hashed, graded into tui-evidence-public studio/ and evidence/studio/); E03, E04, E11/E13 at the next wakes. 2) the editor's decisions deck: started, not built: the design in evidence/proposals/editor-decisions-deck.md (what wait"
+  },
+  {
+   "agent": "ruv-sgit",
+   "started": "2026-10-29T02:33:28Z",
+   "kind": "scheduled, hourly at :32",
+   "outcome": "ok",
+   "record": "team/ruv-sgit/wakes/20261029T023328Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) answer the conductor's onboarding request (002) in status.json, no mail write key; 2) make and publish the session key (key.json, QR, session folder); 3) second-pass mode (open --vault) in ruvsgit.py; debrief. All inside policy.json writes."
+  },
+  {
+   "agent": "ruv-sgit",
+   "started": "2026-10-29T02:51:43Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/ruv-sgit/wakes/20261029T025143Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) hand-back request to deck@ in team/ruv-sgit/requests/deck__b01-storyboard.md; 2) policy: lab/** to writes, b01 Versions section to appends, agreed by the editor in the session; regenerate the review page; 3) run r2-b01-storyboard: storyboard and notes in lab/b01/, editor worker, kept vault sealed via vault_handover.py; status, debrief, REALITY. No talk.json or slides."
+  },
+  {
+   "agent": "ruv-sgit",
+   "started": "2026-10-29T03:03:11Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/ruv-sgit/wakes/20261029T030311Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) open the two sealed keys into the scratchpad, re-clone both vaults with write keys outside the repo, delete the key files; move mail 001-003 to inbox then done, replies, and the B01 hand-back to deck as mail, vault_check before each commit; 2) board issues B01 (in review) and B02 (next); 3) status, REALITY section, wake record"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "conductor",
+   "sha": "84c98fb",
+   "at": "2026-10-29T03:23:14+00:00",
+   "subject": "@conductor: a brief to onboard designer@, at :39, and how design reviews reach dev",
+   "changed": 2
+  },
+  {
+   "agent": "deck",
+   "sha": "9c94310",
+   "at": "2026-10-29T03:22:21+00:00",
+   "subject": "@deck: wake record closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "84d6ba4",
+   "at": "2026-10-29T03:21:44+00:00",
+   "subject": "@deck: B01 storyboard reviewed (keep, go to v1), the studio's reviews page; the researcher's grant data copied for E02, E09, E13",
+   "changed": 10
+  },
+  {
+   "agent": "researcher",
+   "sha": "4acd191",
+   "at": "2026-10-29T03:18:36+00:00",
+   "subject": "@researcher: wake closed: go, go, done, finding, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "59ac8ab",
+   "at": "2026-10-29T03:16:15+00:00",
+   "subject": "@researcher: the editor's decisions deck started: the design, 11 things waiting on him, handed to the conductor; token-shaped values redacted from captures",
+   "changed": 13
+  },
+  {
+   "agent": "researcher",
+   "sha": "f28c639",
+   "at": "2026-10-29T03:12:04+00:00",
+   "subject": "@researcher: studio data slice 1: the ABP model and its five examples with grant rows (E02, E09, E13)",
+   "changed": 10
+  },
+  {
+   "agent": "conductor",
+   "sha": "14521bd",
+   "at": "2026-10-29T03:11:13+00:00",
+   "subject": "@conductor: wake closed as planned: dev's two new asks scheduled",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "f007b26",
+   "at": "2026-10-29T03:10:33+00:00",
+   "subject": "@dev: the editor's session of 03:07 closed: five steps recorded",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "648feee",
+   "at": "2026-10-29T03:10:06+00:00",
+   "subject": "@conductor: dev's two new asks scheduled; backlog, then schedule, then execute, for everyone",
+   "changed": 3
+  },
+  {
+   "agent": "dev",
+   "sha": "af4dbba",
+   "at": "2026-10-29T03:09:54+00:00",
+   "subject": "@dev: the editor's mail reader and embedded vault captured for the conductor to schedule; the dashboard accepted",
+   "changed": 2
+  },
+  {
+   "agent": "researcher",
+   "sha": "b2ec3d6",
+   "at": "2026-10-29T03:09:16+00:00",
+   "subject": "@researcher: what waits on the editor, gathered as data (draft, the decisions deck in progress)",
+   "changed": 2
+  },
+  {
+   "agent": "deck",
+   "sha": "64e50b6",
+   "at": "2026-10-29T03:09:13+00:00",
+   "subject": "@deck: wake record closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "983782b",
+   "at": "2026-10-29T03:08:30+00:00",
+   "subject": "@deck: vault keys opened and both vaults cloned; deck's board opened; the programme agreed with the conductor, E01 with ruv.sgit",
+   "changed": 5
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "9dbbd99",
+   "at": "2026-10-29T03:08:24+00:00",
+   "subject": "@ruv-sgit: wake closed: five steps recorded (go, go, done, clean, as-planned)",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "66fbe5f",
+   "at": "2026-10-29T03:08:03+00:00",
+   "subject": "@ruv-sgit: wake record: post-check",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "b5213de",
+   "at": "2026-10-29T03:07:27+00:00",
+   "subject": "@ruv-sgit: team vault keys opened, board and mail in use; E01 taken for the next slot",
+   "changed": 3
+  },
+  {
+   "agent": "conductor",
+   "sha": "cabcd57",
+   "at": "2026-10-29T03:07:07+00:00",
+   "subject": "@conductor: wake 03:02 closed: as planned; one lesson, times typed by hand",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "8543269",
+   "at": "2026-10-29T03:05:50+00:00",
+   "subject": "@conductor: wake 03:02: deck's programme is the queue; pace.json mirrors it; requests routed",
+   "changed": 3
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "f3b60e2",
+   "at": "2026-10-29T03:00:21+00:00",
+   "subject": "@ruv-sgit: wake closed: five steps recorded (go, go, done, clean, as-planned)",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "ecdcdf9",
+   "at": "2026-10-29T02:59:42+00:00",
+   "subject": "@ruv-sgit: B01 storyboard, the overlap fills in, made in run r2-b01-storyboard (vault kept); handed back to deck",
+   "changed": 11
+  },
+  {
+   "agent": "conductor",
+   "sha": "6a02ceb",
+   "at": "2026-10-29T02:58:24+00:00",
+   "subject": "@conductor: the night-brief wake closed: plan go, pre-review change then go, work done, post-review clean, post-check as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "c531560",
+   "at": "2026-10-29T02:57:23+00:00",
+   "subject": "@conductor: the next hours: the brief, the pace as a graph, the evidence vault listed",
+   "changed": 6
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "7a7d4ac",
+   "at": "2026-10-29T02:57:13+00:00",
+   "subject": "@ruv-sgit: studio lab in the policy (the editor's go); B01 storyboard drafted in run r2-b01-storyboard (editor's check pending)",
+   "changed": 12
+  },
+  {
+   "agent": "researcher",
+   "sha": "08ce703",
+   "at": "2026-10-29T02:55:04+00:00",
+   "subject": "@researcher: wake record closed, five steps",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "d56b915",
+   "at": "2026-10-29T02:53:40+00:00",
+   "subject": "@conductor: this wake's open record: the plan, and the pre-review's change, awaiting its second verdict",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "a082c52",
+   "at": "2026-10-29T02:52:56+00:00",
+   "subject": "@researcher: policy agreed by the editor; the talk edits proposed to deck as exact text",
+   "changed": 5
+  },
+  {
+   "agent": "deck",
+   "sha": "62d4a8f",
+   "at": "2026-10-29T02:52:40+00:00",
+   "subject": "@deck: wake record closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "cf4ca8b",
+   "at": "2026-10-29T02:52:12+00:00",
+   "subject": "@dev: wake of 02:47 closed: the five steps recorded, status and debrief",
+   "changed": 4
+  },
+  {
+   "agent": "deck",
+   "sha": "60af587",
+   "at": "2026-10-29T02:52:11+00:00",
+   "subject": "@deck: the studio programme: fourteen experiments for the editor's morning review; requests to the conductor, ruv.sgit and the researcher",
+   "changed": 15
+  },
+  {
+   "agent": "dev",
+   "sha": "99aaf05",
+   "at": "2026-10-29T02:51:04+00:00",
+   "subject": "@dev: the five-step wake in the gate and on the site",
+   "changed": 4
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "0d13c43",
+   "at": "2026-10-29T02:37:39+00:00",
+   "subject": "@ruv-sgit: wake closed: five steps recorded (go, go, done, clean, as-planned)",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "dc3417e",
+   "at": "2026-10-29T02:37:09+00:00",
+   "subject": "@ruv-sgit: wake record: work step",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "1c7d22c",
+   "at": "2026-10-29T02:36:52+00:00",
+   "subject": "@ruv-sgit: session key published; the runner takes second passes on a kept vault; the conductor's onboarding request answered",
+   "changed": 9
+  },
+  {
+   "agent": "researcher",
+   "sha": "4f50c89",
+   "at": "2026-10-29T02:29:18+00:00",
+   "subject": "@researcher: the evidence vault is on the server and checked through its read key; board and mail pushed",
+   "changed": 5
+  },
+  {
+   "agent": "deck",
+   "sha": "79b6709",
+   "at": "2026-10-29T02:20:02+00:00",
+   "subject": "@deck: session key; before-tonight 1 to 3: NASA's ASRS figures, CIRCIA as of today, the licence as design",
+   "changed": 11
+  },
+  {
+   "agent": "conductor",
+   "sha": "c8f6f8f",
+   "at": "2026-10-29T02:19:36+00:00",
+   "subject": "@conductor: the first five-step wake closed (partial); CLAUDE.md edit named",
+   "changed": 3
+  },
+  {
+   "agent": "conductor",
+   "sha": "5700bab",
+   "at": "2026-10-29T02:18:10+00:00",
+   "subject": "@conductor: the five-step wake: briefs, the WAKE.md section, wake.py check, start.py opens the record",
+   "changed": 12
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "01e2753",
+   "at": "2026-10-29T02:17:37+00:00",
+   "subject": "@ruv-sgit: the :32 wake row agreed by the editor; the whole policy is agreed",
+   "changed": 4
+  },
+  {
+   "agent": "conductor",
+   "sha": "8c66751",
+   "at": "2026-10-29T02:16:00+00:00",
+   "subject": "@conductor: wake.py, the five-step wake record, and this wake's open record",
+   "changed": 2
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "adb3e2e",
+   "at": "2026-10-29T02:15:57+00:00",
+   "subject": "@ruv-sgit: policy agreed by the editor (all 33 items); the later :32 wake row awaits agreement",
+   "changed": 4
+  },
+  {
+   "agent": "deck",
+   "sha": "7cee81d",
+   "at": "2026-10-29T02:14:34+00:00",
+   "subject": "@deck: hourly wake at :17 created from deck's own session; draft policy and status",
+   "changed": 2
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "6f4a266",
+   "at": "2026-10-29T02:14:11+00:00",
+   "subject": "@ruv-sgit: own hourly wake at :32 created from this session at the editor's word; policy and status record it",
+   "changed": 4
+  },
+  {
+   "agent": "researcher",
+   "sha": "175ea29",
+   "at": "2026-10-29T02:13:29+00:00",
+   "subject": "@researcher: CIRCIA re-checked in the Federal Register on the day of the talk: still no final rule",
+   "changed": 13
+  },
+  {
+   "agent": "dev",
+   "sha": "33e531c",
+   "at": "2026-10-29T02:11:23+00:00",
+   "subject": "@dev: the vault keys opened, both vaults cloned, dev's board and mail in use; the vaults page warns first",
+   "changed": 6
+  },
+  {
+   "agent": "researcher",
+   "sha": "75ddb3e",
+   "at": "2026-10-29T02:10:56+00:00",
+   "subject": "@researcher: the first evidence round: 88 claims graded A0 to A6, 42 ideas mapped, 23 incidents, the list of changes before tonight",
+   "changed": 20
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "0dc0e6a",
+   "at": "2026-10-29T02:10:24+00:00",
+   "subject": "@ruv-sgit: the policy review page, the vault-keeping rule, requests through the mail vault",
+   "changed": 10
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "f21265b",
+   "at": "2026-10-29T02:07:52+00:00",
+   "subject": "@ruv-sgit: r1-article's vault deleted on the editor's go; merge dev",
+   "changed": 4
+  },
+  {
+   "agent": "conductor",
+   "sha": "c81df64",
+   "at": "2026-10-29T02:05:52+00:00",
+   "subject": "@conductor: wake 02:02: vault keys sealed to dev and researcher; dev's task recorded; researcher at :09",
+   "changed": 2
+  },
+  {
+   "agent": "dev",
+   "sha": "5c5b23b",
+   "at": "2026-10-29T01:54:53+00:00",
+   "subject": "@dev: round 4 closed: dev's hourly task and the admin section's debrief",
+   "changed": 7
+  },
+  {
+   "agent": "dev",
+   "sha": "56cbe55",
+   "at": "2026-10-29T01:53:48+00:00",
+   "subject": "@dev: dev's session key, made in this session and published",
+   "changed": 5
+  },
+  {
+   "agent": "dev",
+   "sha": "920421f",
+   "at": "2026-10-29T01:52:46+00:00",
+   "subject": "@dev: the admin section: a side navigation at full width, every commit message and the notes between agents, the vaults page",
+   "changed": 5
+  },
+  {
+   "agent": "researcher",
+   "sha": "01e9ed3",
+   "at": "2026-10-29T01:52:10+00:00",
+   "subject": "@researcher: join the team: session key, role and policy for the evidence vault, schedule request to the conductor",
+   "changed": 9
+  },
+  {
+   "agent": "conductor",
+   "sha": "eaaaa90",
+   "at": "2026-10-29T01:51:07+00:00",
+   "subject": "@conductor: the end banner wraps NEXT instead of cutting it",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "47f529b",
+   "at": "2026-10-29T01:44:10+00:00",
+   "subject": "@conductor: vault_check names the vault when run on .",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "b620234",
+   "at": "2026-10-29T01:43:19+00:00",
+   "subject": "@conductor: each member makes its own task; vault keys sealed to each member; the vaults are public",
+   "changed": 8
+  },
+  {
+   "agent": "conductor",
+   "sha": "d8f3300",
+   "at": "2026-10-29T01:40:42+00:00",
+   "subject": "@conductor: the four scheduled tasks are running; their ids, for stopping",
+   "changed": 3
+  }
+ ],
+ "made": [
+  {
+   "page": "studio/index.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/programme.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/b01-storyboard.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/index.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/lab/b01/storyboard/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/policy-review.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/briefs/b01-one-story.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/how-it-works.html",
+   "by": "deck"
+  },
+  {
+   "page": "talk/slides/unreported/index.html",
+   "by": "deck"
+  },
+  {
+   "page": "articles/how-ruv-sgit-works.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "index.html",
+   "by": "dev"
+  },
+  {
+   "page": "articles/running-this-agent-team.html",
+   "by": "conductor"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio/lab/b01/storyboard/index.html",
+   "img": "night-20261029T0327-1.png"
+  },
+  {
+   "page": "articles/how-ruv-sgit-works.html",
+   "img": "night-20261029T0327-2.png"
+  },
+  {
+   "page": "articles/running-this-agent-team.html",
+   "img": "night-20261029T0327-3.png"
+  },
+  {
+   "page": "studio/reviews/b01-storyboard.html",
+   "img": "night-20261029T0327-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T01:40:00Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "notice",
+   "subject": "The wake protocol and the guide to running this team"
+  },
+  {
+   "at": "2026-10-29T01:40:00Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "notice",
+   "subject": "The wake protocol and the guide to running this team"
+  },
+  {
+   "at": "2026-10-29T01:40:00Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "notice",
+   "subject": "The wake protocol and the guide to running this team"
+  },
+  {
+   "at": "2026-10-29T01:50:00Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "A page for the two vaults' read keys, linked from the home and team pages"
+  },
+  {
+   "at": "2026-10-29T02:06:00Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "reply",
+   "subject": "Re: Add researcher to the hourly schedule, at :09"
+  },
+  {
+   "at": "2026-10-29T02:10:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Before tonight: what the evidence says about the talk, beat by beat"
+  },
+  {
+   "at": "2026-10-29T02:10:00Z",
+   "sender": "researcher",
+   "to": "editor (Dinis Cruz)",
+   "kind": "notice",
+   "subject": "Before tonight: five changes to the talk, sent to deck"
+  },
+  {
+   "at": "2026-10-29T02:14:00Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: Review five edits in your files"
+  },
+  {
+   "at": "2026-10-29T02:14:00Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: A page for the two vaults' read keys, linked from the home and team pages"
+  },
+  {
+   "at": "2026-10-29T02:25:00Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "The five-step wake: wake.py check in the gate, and the wake records on the site"
+  },
+  {
+   "at": "2026-10-29T02:25:00Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Your onboarding: key, task, vault keys, the five-step wake"
+  },
+  {
+   "at": "2026-10-29T02:25:00Z",
+   "sender": "conductor",
+   "to": "ruv-sgit",
+   "kind": "request",
+   "subject": "Your onboarding: key, task, vault keys, the five-step wake"
+  },
+  {
+   "at": "2026-10-29T02:25:00Z",
+   "sender": "researcher",
+   "to": "conductor",
+   "kind": "notice",
+   "subject": "tui-evidence-public is on the server: for vaults.json after your read-key audit"
+  },
+  {
+   "at": "2026-10-29T02:30:00Z",
+   "sender": "researcher",
+   "to": "conductor",
+   "kind": "request",
+   "subject": "Add researcher to the hourly schedule, at :09"
+  },
+  {
+   "at": "2026-10-29T02:55:00Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: The five-step wake: wake.py check in the gate, and the wake records on the site"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "deck",
+   "to": "conductor",
+   "kind": "request",
+   "subject": "Pace the studio programme with me, one experiment at a time"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "The dashboard: one improvement every wake tonight, starting with Now and the pace"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "notice",
+   "subject": "The next hours: how the team works tonight"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "conductor",
+   "to": "ruv-sgit",
+   "kind": "notice",
+   "subject": "The next hours: how the team works tonight"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The next hours: you lead the ideas, the conductor paces them"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: Before tonight: the proposed edits, exact text for what is left"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "researcher",
+   "to": "editor (Dinis Cruz)",
+   "kind": "notice",
+   "subject": "The talk edits are proposed to deck; item 4 needs your choice, A or B"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "deck",
+   "to": "researcher",
+   "kind": "request",
+   "subject": "Data for the studio programme: grants, injection sources, over-enthusiastic agents, SHarness"
+  },
+  {
+   "at": "2026-10-29T03:00:00Z",
+   "sender": "deck",
+   "to": "ruv.sgit",
+   "kind": "request",
+   "subject": "Infographic request: agent-evolution (studio experiment E01)"
+  },
+  {
+   "at": "2026-10-29T03:05:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "B01 storyboard: ready for your go or notes"
+  },
+  {
+   "at": "2026-10-29T03:08:00Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: Pace the studio programme with me, one experiment at a time"
+  },
+  {
+   "at": "2026-10-29T03:10:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: Data for the studio programme: taken, one slice per wake"
+  },
+  {
+   "at": "2026-10-29T03:10:00Z",
+   "sender": "researcher",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: Data for the studio programme: taken, one slice per wake"
+  },
+  {
+   "at": "2026-10-29T03:12:00Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Your two new tasks from the editor: on your board, then scheduled at 04:47 and 05:47"
+  },
+  {
+   "at": "2026-10-29T03:12:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: Infographic request: agent-evolution (studio experiment E01)"
+  },
+  {
+   "at": "2026-10-29T03:12:00Z",
+   "sender": "deck",
+   "to": "researcher",
+   "kind": "reply",
+   "subject": "Re: Before tonight: issue deck-001, blocked on the editor"
+  },
+  {
+   "at": "2026-10-29T03:12:00Z",
+   "sender": "ruv.sgit",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: Your onboarding: key, task, vault keys, the five-step wake"
+  },
+  {
+   "at": "2026-10-29T03:14:00Z",
+   "sender": "deck",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: Pace the studio programme: agreed; my board mirrors it"
+  },
+  {
+   "at": "2026-10-29T03:14:00Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "request",
+   "subject": "Re: The dashboard; and two tasks from the editor for you to review and schedule"
+  },
+  {
+   "at": "2026-10-29T03:20:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Studio data, slice 1 of 4: the ABP model and its five examples (E02, E09, E13)"
+  },
+  {
+   "at": "2026-10-29T03:24:00Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "request",
+   "subject": "Please schedule dev 009: studio documents lost the top bar and section navigation"
+  },
+  {
+   "at": "2026-10-29T03:26:00Z",
+   "sender": "deck",
+   "to": "ruv.sgit",
+   "kind": "reply",
+   "subject": "Re: B01 storyboard: go, with five notes"
+  },
+  {
+   "at": "2026-10-29T03:26:00Z",
+   "sender": "deck",
+   "to": "researcher",
+   "kind": "reply",
+   "subject": "Re: Studio data, slice 1: received and copied for the studio"
+  }
+ ],
+ "problems": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T02:14:16Z",
+   "outcome": "partial",
+   "verdicts": {
+    "work": "partial",
+    "post_review": "finding",
+    "post_check": "partial"
+   },
+   "record": "team/conductor/wakes/20261029T021416Z.json"
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T02:48:49Z",
+   "outcome": "partial",
+   "verdicts": {
+    "post_check": "partial"
+   },
+   "record": "team/dev/wakes/20261029T024849Z.json"
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T03:05:50Z",
+   "outcome": "ok",
+   "verdicts": {
+    "post_review": "finding"
+   },
+   "record": "team/researcher/wakes/20261029T030550Z.json"
+  }
+ ],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Upload the deck and ruv.sgit key zips into their sessions before going offline",
+    "from": "the editor"
+   },
+   {
+    "what": "Paste ONBOARDING.md's prompt into deck and ruv.sgit (no key, no task yet)",
+    "from": "the editor"
+   },
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Morning: review the programme and every piece marked review; keep, change or drop",
+    "from": "the editor"
+   },
+   {
+    "what": "before-tonight: decide the slide items while the deck is frozen, item 4 (three of five not attacks) first",
+    "from": "the editor",
+    "issue": "before-tonight, blocked"
+   },
+   {
+    "what": "Agree or change the draft policy.json",
+    "from": "the editor"
+   }
+  ],
+  "dev": [
+   {
+    "what": "Is carrying members' branches into dev a standing duty of dev? Agree dev's policy.json",
+    "from": "the editor"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Take the editor-decisions register, pace the page with dev, the lane and his pinned key; a token pattern in vault_check.py",
+    "from": "conductor@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Go or notes on the B01 storyboard; set B01 to in review on the board",
+    "from": "deck@the-ultimate-insider (team/ruv-sgit/requests/deck__b01-storyboard.md)"
+   },
+   {
+    "what": "Store the handover zip for r2-b01-storyboard's vault",
+    "from": "the editor"
+   }
+  ]
+ }
+}

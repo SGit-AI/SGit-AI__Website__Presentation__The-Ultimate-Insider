@@ -1,0 +1,17 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17 (fired 18:19)",
+ "started": "2026-10-29T18:20:09Z",
+ "steps": {
+  "plan": {
+   "by": "deck (the mail and the editor live in chat)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Parts 2 and 3 only (part 1 locks 18:30, never touched after): the editor's M01 fixes sent to motion@ (its file; mail 003, cc dev on the lock); then the storyteller's three-part notes for parts 2 and 3 (integrity opens part 2, the attacks first; part 3 the brakes built), the new SHarness pieces, dev's Linux link slide, the showcases. Gate, release.",
+   "at": "2026-10-29T18:21:18Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

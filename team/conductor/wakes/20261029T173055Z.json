@@ -1,0 +1,51 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's chat",
+ "started": "2026-10-29T17:30:55Z",
+ "steps": {
+  "plan": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "At the editor's word: studio@ makes showcase slides of this team's own ABPs (the review page, ruv.sgit's prose policy and policy.json, agents.py check and a wake's verdicts), deck places them at part 3 live-abp. Brief 8, studio 007 (new mailroom folder), deck 067. Amended: four of ten agreed, shown as such; ruv.sgit's agreed policy is the example.",
+   "at": "2026-10-29T17:32:23Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Re-review: brief and studio 007 meet all three conditions; deck 067 reworded to four of ten agreed, as asked. Nothing touches a locked part.",
+   "at": "2026-10-29T17:33:07Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "opus",
+   "verdict": "done",
+   "comment": "Brief 8 (four of ten agreed, ruv.sgit the example); studio 007 and deck 067 sent, vault_check clean; pace log; build and gate clean.",
+   "at": "2026-10-29T17:33:07Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "No key, contact, session id or path; four of ten matches policy.json; no draft shown as approved; nothing touches a locked part. (02:15 is the commit time; policy.json's own stamp reads 02:14.)",
+   "at": "2026-10-29T17:33:40Z"
+  },
+  "post_check": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Brief 8, studio 007, deck 067, pace log; pre-review conditions kept.",
+   "at": "2026-10-29T17:33:40Z"
+  }
+ },
+ "closed": "2026-10-29T17:33:40Z",
+ "outcome": "ok",
+ "history": [
+  {
+   "at": "17:32Z",
+   "what": "pre-review said change: adopted. Brief and studio 007 now say four of ten agreed on the record, use ruv.sgit's agreed policy, and bar local paths and session ids from shots."
+  }
+ ]
+}

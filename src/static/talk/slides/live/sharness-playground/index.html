@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The SHarness playground</title>
+<link rel="stylesheet" href="../../../engine/slide.css">
+<script src="../../../engine/slide.js"></script>
+<style>
+#live{position:absolute;left:24px;right:24px;top:96px;bottom:44px;border:2px solid var(--accent);border-radius:12px;overflow:hidden;background:#fff}
+#live iframe{width:100%;height:100%;border:0;display:block}
+#still{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#0e1a1f;color:#e8f6f3;font:700 34px Georgia,serif;text-align:center;padding:20px}
+#still small{font:600 18px system-ui;color:#9fb8b3}
+.tag{position:absolute;right:24px;top:28px;font:800 15px system-ui;letter-spacing:.14em;color:#fff;background:var(--agent);padding:6px 12px;border-radius:999px}
+.ft a{color:inherit}
+</style>
+</head>
+<body>
+<div id="cv" data-end="1">
+  <p class="kk">SHarness, live</p>
+  <div class="hl" style="font-size:34px">Type the commands yourself: <em>the playground.</em></div>
+  <span class="tag">LIVE</span>
+  <div id="live"><div id="still">The SHarness playground<small>sharness.ai: live on stage, loaded when this slide is shown</small></div></div>
+  <div class="ft">Live: <a href="https://sharness.ai/code/playground/index.html" target="_blank" rel="noopener">https://sharness.ai/code/playground/index.html</a> · if the network fails, open it in a new tab or use the recorded fallback</div>
+</div>
+<script>
+(function () {
+  var q = location.search
+  if (/static|[?&]t=/.test(q)) return                 // a thumbnail or a still: never load the live page
+  var f = document.createElement('iframe')
+  f.src = 'https://sharness.ai/code/playground/index.html'; f.title = 'The SHarness playground'
+  f.allow = 'cross-origin-isolated; clipboard-read; clipboard-write; fullscreen'
+  f.referrerPolicy = 'no-referrer'
+  var box = document.getElementById('live'); box.textContent = ''; box.appendChild(f)
+})()
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!--meta {"title": "SHarness: a storyline, without and with", "description": "A storyline for the SHarness part of the talk, for the editor: one agent without and with a harness, sharness.ai's own animations recreated from the researcher's capture, the live Linux in the browser with a replay to fall back on, and the honest caveat. A draft by ruv.sgit@, for deck@ to brief."} -->
+<style>
+.ev-frame{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--bg);margin:10px 0 6px}
+.ev-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+ol.story>li{margin:0 0 14px}
+</style>
+<section class="wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}studio/index.html">Studio</a> / <a href="harness/index.html">E11</a></nav>
+<p class="kicker">A draft for the editor · SHarness</p>
+<h1>SHarness: a storyline, without and with</h1>
+<p class="lead">The editor asked for SHarness told in full: the same agent without a harness and with one, sharness.ai's own animations recreated, and the Linux in the browser opened live in the room. The researcher has now captured sharness.ai (29 October 2026, site v0.6.35), so this second draft is built on that capture: five new pieces, a measured without and with, and a replay to fall back on if the live demo is slow.</p>
+<p class="note">A draft by ruv.sgit@the-ultimate-insider, 29 October 2026, at the editor's word; for deck@, the researcher and the conductor. Facts from the researcher's capture of sharness.ai and from <a href="{{root}}studio/data/harness.json">harness.json</a>. sharness.ai is the editor's own project, one author: every measurement on it is the project's own and none is graded above A2. Each move says whether it is sharness.ai's or our own framing.</p>
+
+<h2>The storyline, in six moves</h2>
+<ol class="story">
+<li><b>Without: one agent and its grant.</b> <i>Our framing, not sharness.ai's.</i> E02's ring: everything its grant reaches, sorted by what it touches; and E09's last line, twelve of twelve excess with no control. <a href="blast-radius/index.html">E02</a> · <a href="mandate-and-grant/index.html">E09</a></li>
+<li><b>Without, then with, measured.</b> <i>Our framing around sharness.ai's one measured contrast.</i> In the playground, with no policy the guest's wget fetches the file; under P1 (port 443 only) the kernel refuses the connect before a packet leaves, and the DNS query still gets out. SH1 v2, below.</li>
+<li><b>The one idea.</b> <i>sharness.ai's front-page animation.</i> Write the policy, hash it to one name, tell the kernel before the tool starts; a tricked agent asks for more and the kernel says no. SH4, below; then the OS of one process, SH7 (its verdicts are the design's; fs and net are runnable MVPs; only the kernel half is measured).</li>
+<li><b>With, live: the Linux in the browser.</b> <i>sharness.ai's page, run in the room.</i> An emulated Alpine Linux boots in a tab and runs hello: six probes, one allowed, five refused, six of six held. One run in the editor's Chrome reached hello's result at 28.5 s (reported by the project; browser and machine not recorded); cloud runs took 58 to 96 s and the page itself warns of a minute or two of boot, so <b>plan for up to 90 s on stage</b>, with SH2 as the cue card. <b>If the network or the boot fails, play SH5, the replay, instead.</b></li>
+<li><b>The side by side.</b> <i>Our framing.</i> The same session without and with: the paths that went through now stop at walls that hold (E04 v2's language). SH1 v1 draws it from harness.json; its "without" is drawn, not measured.</li>
+<li><b>The honest caveat, and the last metre.</b> <i>sharness.ai's own labels.</i> What is measured today is the kernel half, applied by a process to its own child: a boundary for the child, a setting for the process. The launcher above the agent is designed, its first slice running since 28 October (SH3). And the last metre: today a vault key lands in the clear where the agent can read it (observed, 24 October, in the comic's panel 3 only); a key service that holds it so the agent never does is designed, not built (SH6).</li>
+</ol>
+
+<h2>SH1 v2: without and with, measured</h2>
+<p>Move 2. sharness.ai's playground is the one place it measures the same request with no policy and under one: four paths, the file fetched, the page's allowlist refusing, the kernel refusing under P1 with DNS still leaking, and the file again under P5.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/without-with/v2/index.html" title="SH1 v2: without and with, measured" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/without-with/v2/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/without-with/v2/index.html?static">the end state</a></p>
+
+<h2>SH4: the one idea</h2>
+<p>Move 3. sharness.ai's front-page animation, recreated: the policy, its hash, the kernel told first, four requests and their verdicts. As on the site, only the "with" state is drawn.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/one-idea/v1/index.html" title="SH4: the one idea" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/one-idea/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/one-idea/v1/index.html?static">the end state</a></p>
+
+<h2>SH7: the OS of one process</h2>
+<p>Move 3, continued. sharness.ai's second animation: the walls the kernel puts around one process, each with its status.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/os-of-one-process/v1/index.html" title="SH7: the OS of one process" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/os-of-one-process/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/os-of-one-process/v1/index.html?static">the end state</a></p>
+
+<h2>SH2: the live demo, stage by stage</h2>
+<p>Move 4. A cue card that sits beside the Linux in the browser: one stop per stage on the player's clock, so the presenter can pause while the browser runs.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/live-demo/v1/index.html" title="SH2: the live demo, stage by stage" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/live-demo/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/live-demo/v1/index.html?static">the end state</a></p>
+
+<h2>SH5: the kernel in a tab, the replay</h2>
+<p>Move 4's fallback. The stages the room would see on the live page, and hello's six probes, replayed without a network or a boot: play it if the live demo is slow or fails.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/kernel-in-a-tab/v1/index.html" title="SH5: the kernel in a tab, a replay" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/kernel-in-a-tab/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/kernel-in-a-tab/v1/index.html?static">the end state</a></p>
+
+<h2>SH1 v1: the side by side, drawn</h2>
+<p>Move 5. The same six actions as hello's probes, on the left with no policy (drawn, not measured) and on the right under hello's deny-all policy.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/without-with/v1/index.html" title="SH1: without and with" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/without-with/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/without-with/v1/index.html?static">the end state</a></p>
+
+<h2>SH3: what runs today, and what is still a design</h2>
+<p>Move 6, as a map: each part with its status in sharness.ai's words, and the launcher above the agent drawn as a design with its first slice running.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/components/v1/index.html" title="SH3: what runs today, and what is still a design" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/components/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/components/v1/index.html?static">the end state</a></p>
+
+<h2>SH6: the last metre</h2>
+<p>Move 6, ending. Without is observed: the key arrives in the clear where the agent's process can read it. With is designed, not built: one place holds the key and the agent never does. The key is never drawn, only a redaction.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/last-metre/v1/index.html" title="SH6: the last metre" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/last-metre/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/last-metre/v1/index.html?static">the end state</a></p>
+
+<h2>The deep dive, for parts 2 and 3</h2>
+<p>The editor asked for SHarness told technically to this room (conductor's mail, 29 October, 17:08): the process behaviour policy, a new process that gets nothing it does not need, the KMS, the file system and the network as the agent sees them. Two pieces, from the same capture. Digital twins, running distributed, and the invitation to try to escape the harness are not in the capture yet, so they are not drawn here: the researcher reads them from the project's own pages first.</p>
+
+<h3>SH8: a new process gets nothing it does not need</h3>
+<p>What the policy does, step by step: without it, the probe shows the grant is everything (observed); with it, the parent checks the policy's hash and the child is closed in, wall by wall, before it starts; then what held, and what was not covered.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/run-pipeline/v1/index.html" title="SH8: a new process gets nothing it does not need" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/run-pipeline/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/run-pipeline/v1/index.html?static">the end state</a></p>
+
+<h3>SH9: the moving parts, and one request through them</h3>
+<p>The design: the launcher, the components and the KMS, then one request end to end, a vault cloned without the agent ever holding its key. Designed, not built.</p>
+<div class="ev-frame"><iframe src="{{root}}studio/lab/sharness/moving-parts/v1/index.html" title="SH9: the moving parts, and one request through them" loading="lazy"></iframe></div>
+<p class="note"><a href="{{root}}studio/lab/sharness/moving-parts/v1/index.html">Open it on its own</a> · <a href="{{root}}studio/lab/sharness/moving-parts/v1/index.html?static">the end state</a></p>
+
+<h2>Notes for deck@</h2>
+<ul>
+<li>Moves 1, 2 and 5 are our framing; sharness.ai draws only the "with" state. The researcher's capture says so, and the pieces say which is which.</li>
+<li>The live demo: plan for up to 90 s; SH5 is the offline fallback.</li>
+<li>One of sharness.ai's comics scripts a prompt injection as its story. These pieces describe the threat in words and never reproduce it or any command.</li>
+</ul>
+<p class="note">SH1 v1, SH2 and SH3 were made in ruv.sgit run r22-sharness-series; SH1 v2 and SH4 to SH7 in run r24-sharness-capture, SH8 and SH9 in run r25-sharness-deep-dive, with an editor worker checking each against the capture. Their rows are in <a href="{{root}}ruv-sgit/vaults.json">the ledger</a>.</p>
+</section>

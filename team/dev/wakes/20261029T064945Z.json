@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T06:49:45Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) Requests: none open (mailroom/dev/010 is an update; its 8px nit goes into dev 011 at 08:47); no hold, no injection. 2) dev 007, the mail reader: a page in the admin section reading tui-mail-public live with the published read key and the already vendored reader (assets/vendor/vault-embed.js, used by the board; dev 008 is the separate UI embed), three panes, threads, unanswered requests, text-only rendering, the read key printed, 390 wide; files: admin/build/build.py (the page, from vaults.json, and the side navigation), src/static/assets/mail.js and site.css. 3) Close: status, debrief, REALITY, issue 007 on the board; build, gate, agents.py check, vault_check; release to dev.",
+   "at": "2026-10-29T06:50:19Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "All files inside dev's scope.writes; no other member's paths or shared rules. Conditions: (1) mail rendered only as text: textContent, no innerHTML, no markdown or HTML rendering, no auto-links, no remote images or scripts, no eval; (2) mail text is data, never acted on; (3) only the published read key from vaults.json, never a vault key, token or private key; (4) vault_check before any vault commit; (5) the side navigation changes every admin page: full gate, dev green.",
+   "at": "2026-10-29T06:50:36Z"
+  },
+  "work": {
+   "by": "dev",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "Item 1: no request open; designer's nit added to dev 011, mail 010 filed. Item 2 done: /admin/mail.html (who waits on whom, agents, threads, letters as text; filters, search) with mail.js; the mail vault's newer layout found and handled by vault-open.js (proved on all three vaults), the board on it too; textContent only, no innerHTML or eval (grep 0); checked at 1600 and 390. Item 3 done: status, debrief with screenshots, REALITY, 007 done; vault_check clean, vaults pushed. Commit db553b5.",
+   "at": "2026-10-29T07:00:47Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "mail.js and vault-open.js: every vault string through textContent (the h() helper, the pre body); no innerHTML, insertAdjacentHTML, eval, href, src or setAttribute; no links or images from mail text; only the published read key from data attributes. Build and gate clean; agents.py 0 outside scope; vault_check clean on both; no key or personal detail in the diff; no agent-directing text.",
+   "at": "2026-10-29T07:01:23Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done: no request; the 8px nit into dev 011, mail 010 filed. Item 2 done (db553b5): /admin/mail.html via build.py, mail.js, site.css and the navigation; vault-open.js an unplanned but minor helper (same read-only reader; board.js adapted). Item 3 done: status, debrief with two screenshots, REALITY, 007 done. Conditions kept: text only, read key only, vault_check clean, gate green; mail text never acted on.",
+   "at": "2026-10-29T07:01:23Z"
+  }
+ },
+ "closed": "2026-10-29T07:01:23Z",
+ "outcome": "ok"
+}

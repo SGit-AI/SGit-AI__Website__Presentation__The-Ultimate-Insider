@@ -1,0 +1,82 @@
+<!--meta {"title": "The studio", "description": "Where the story of The ultimate insider is worked out before it reaches the deck: briefs, storyboards, versions of each infographic, the critique, and what was promoted into the talk."} -->
+<section class="wrap studio-top">
+<p class="kicker">The studio</p>
+<h1>Finding better ways to tell the story</h1>
+<div class="prose">
+<p class="lead">The talk has 17 slides that work. The studio is where we look for slides that land: each part of the argument gets a brief, the brief gets storyboards and several versions, the versions are judged side by side, and the best one is promoted into the deck. Nothing here is on stage until it is promoted.</p>
+<p class="note">Modelled on the <a href="https://ruv.sgit.ai/studio/index.html">ruv.sgit.ai studio</a>, which built seven versions of one animation and measured the run. This one is wider: one shelf per brief, covering the whole talk, open for as long as the talk is given.</p>
+</div>
+<div class="btns">
+<a class="btn p" href="lab.html">The lab: every animation</a>
+<a class="btn" href="programme.html">The programme</a>
+<a class="btn" href="briefs/index.html">The briefs</a>
+<a class="btn" href="reviews/index.html">Reviews</a>
+<a class="btn" href="how-it-works.html">How the studio works</a>
+<a class="btn" href="techniques.html">The techniques</a>
+<a class="btn" href="data/incidents.json">Studio data</a>
+</div>
+</section>
+
+<section class="wrap">
+<div class="card" style="margin:10px 0 0"><p class="kicker">New, 29 October 03:00 · the editor's programme</p><h2 style="margin-top:0"><a href="programme.html">Fourteen experiments, paced one at a time</a></h2><p>Part one shows the threat: what an agent is and how it grew, the blast radius of one internal agent, where injected words come from, the over-enthusiastic agent, pivoting, the soft inside. Part two shows the way out, with Agent Behaviour Policies and SHarness and real examples. Made overnight by ruv.sgit from the researcher's data, reviewed by deck every pass, for the editor in the morning. The talk itself is frozen meanwhile.</p></div>
+</section>
+
+<section class="wrap">
+<h2>The loop</h2>
+<ol class="loop">
+<li><b>Brief</b><span>deck writes the job: what the audience must leave with, the material, the sources. Not the picture.</span></li>
+<li><b>Storyboard</b><span>ruv.sgit sketches the frames: what is on screen at each moment of the beat, and what is said over it.</span></li>
+<li><b>Versions</b><span>several builds of the same storyboard, climbing a ladder from plain SVG to the richest technique that earns its place.</span></li>
+<li><b>Critique</b><span>versions side by side in the player, against the checklist: one idea, every number sourced, readable at the back of the room.</span></li>
+<li><b>Promote</b><span>deck points the beat in <code>talk.json</code> at the winning version. The others stay on the shelf, with why they lost.</span></li>
+<li><b>Rehearse</b><span>Dinis runs it with the words. What does not survive rehearsal goes back to the brief.</span></li>
+</ol>
+</section>
+
+<section class="wrap">
+<h2>The board</h2>
+<p>Every brief, its state and who holds it. Status words: <span class="st open">open</span> waiting for the studio, <span class="st wip">in progress</span>, <span class="st review">in review</span> with deck, <span class="st done">promoted</span> into the talk, <span class="st shelf">shelved</span>.</p>
+<div class="tbl"><table>
+<thead><tr><th>Brief</th><th>Serves beats</th><th>Kind</th><th>Status</th><th>Holder</th></tr></thead>
+<tbody>
+<tr><td><a href="briefs/b01-one-story.html">B01 The perfect storm: the overlap fills</a></td><td>three, collision, and a thread through every act</td><td>storyboard and visual motif</td><td><span class="st open">open</span></td><td>ruv.sgit@the-ultimate-insider</td></tr>
+<tr><td><a href="briefs/b02-the-distance-is-a-prompt.html">B02 The distance is a prompt</a></td><td>incidents</td><td>data-driven infographic</td><td><span class="st open">open</span></td><td>ruv.sgit@the-ultimate-insider</td></tr>
+</tbody>
+</table></div>
+
+<div class="prose">
+<h3>Waiting for a brief</h3>
+<p>Parts of the talk that would gain most from the studio, not yet briefed. deck writes these next, in this order unless the editor says otherwise.</p>
+<ul class="backlog">
+<li><b>Reach and the gap</b> (abp): the reach, the mandate, the gap, and what stands in the way of each row; thirteen things beyond purpose, four stopped by the platform, nine by nothing.</li>
+<li><b>The unused grant</b> (permissions): under 5 per cent of permissions used, under 2 per cent for super admins, 40 per cent of super admins are workloads. An agent inherits the whole grant.</li>
+<li><b>The chain that ends in pull the plug</b> (spreadsheets): register, appetite, funding, control, and the break at each link.</li>
+<li><b>Fifty years of near misses</b> (unreported): aviation's reporting system next to cyber's silence.</li>
+<li><b>Earning autonomy</b> (licence): the licence to operate and the ladder each level climbs on evidence. Illustrative, and must say so.</li>
+<li><b>Brakes</b> (brakes): the closing image, constraint as the thing that buys speed.</li>
+</ul>
+</div>
+</section>
+
+<section class="wrap">
+<h2>The story map</h2>
+<p>The talk as it stands in <a href="{{root}}talk/talk.json">talk.json</a>, act by act, with the studio work that serves each beat. Open a beat to see the current slide in the player.</p>
+<div class="map">
+<div class="act"><h3>Opening</h3><ul><li><a href="{{root}}talk/player.html#title">The ultimate insider</a></li><li class="has"><a href="{{root}}talk/player.html#three">The perfect storm we are brewing</a><small>B01</small></li></ul></div>
+<div class="act a1"><h3>Part one: the insider with no limits</h3><ul><li><a href="{{root}}talk/player.html#definition">A threat is anything that causes business impact</a></li><li><a href="{{root}}talk/player.html#loop">A reasoning engine in a loop, with tools</a></li><li class="has"><a href="{{root}}talk/player.html#limits">The attacker&#x27;s limits were accidental controls</a><small>E04</small></li><li><a href="{{root}}talk/player.html#no-worm-era">No worm era since, and attackers are businesses</a></li><li class="has"><a href="{{root}}talk/player.html#building">They turned left. Agents turn right.</a><small>M01</small></li><li><a href="{{root}}talk/player.html#incidents">Five public incidents, three of them not attacks</a></li><li><a href="{{root}}talk/player.html#inside">The outside is mature, the inside is not</a></li><li><a href="{{root}}talk/player.html#identities">82 machine identities for every human</a></li><li><a href="{{root}}talk/player.html#permissions">The grant is everything the role accumulated</a></li><li><a href="{{root}}talk/player.html#infrastructure">Built for code that stays where you put it</a></li><li><a href="{{root}}talk/player.html#integrity">Integrity: the original, changed</a></li></ul></div>
+<div class="act"><h3>From part one to part two</h3><ul><li><a href="{{root}}talk/player.html#team">This team, as the example</a></li></ul></div>
+<div class="act a3"><h3>Part two: explorer coding</h3><ul><li><a href="{{root}}talk/player.html#spreadsheets">Every spreadsheet becomes an application</a></li></ul></div>
+<div class="act a2"><h3>Part three: brakes, and the opportunity</h3><ul><li><a href="{{root}}talk/player.html#way-out">The way out</a></li><li><a href="{{root}}talk/player.html#abp">Reach, mandate, the gap, and what stands in it</a></li><li><a href="{{root}}talk/player.html#licence">A licence to operate, that can be suspended</a></li><li><a href="{{root}}talk/player.html#evolution">Evolution, and who builds it</a></li><li><a href="{{root}}talk/player.html#next-companies">The next security companies</a></li><li><a href="{{root}}talk/player.html#demos">Live demos, all open source</a></li></ul></div>
+<div class="act"><h3>Close</h3><ul><li><a href="{{root}}talk/player.html#brakes">Brakes, and go build</a></li></ul></div>
+</div>
+</section>
+
+<section class="wrap">
+<h2>The shelves</h2>
+<ul class="cards shelves">
+<li class="card"><p class="kicker">Briefs</p><h2><a href="briefs/index.html">What we are asking for</a></h2><p>One page per brief: the job, the audience, the material, the sources, the version ladder and what to hand back.</p></li>
+<li class="card"><p class="kicker">Lab</p><h2>Storyboards and versions</h2><p>Each experiment comes back on ruv.sgit's pages, <code>ruv-sgit/&lt;slug&gt;/</code>: the piece on the slide engine and an explainer beside it, linked from <a href="programme.html">the programme</a> with deck's review. Empty until the first run delivers.</p></li>
+<li class="card"><p class="kicker">Techniques</p><h2><a href="techniques.html">The toolbox</a></h2><p>The visual techniques from ruv.sgit.ai and the storytelling moves that suit this talk, with what each costs on a projector.</p></li>
+<li class="card"><p class="kicker">Data</p><h2><a href="data/incidents.json">Sourced material</a></h2><p>Facts the studio may put on screen, as JSON, each with its source. A version reads its numbers from here, never from memory.</p></li>
+</ul>
+</section>

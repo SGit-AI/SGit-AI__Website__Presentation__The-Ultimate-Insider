@@ -1,0 +1,368 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T09:05:22Z",
+ "until": "2026-10-29T10:05:14Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T10:03:46Z",
+   "kind": "scheduled, hourly at :02",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T100346Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Sub-agent plan, AMENDED by the member (the pace names the next by id at :02): 1. mailroom/deck/: E04 back for review at 10:17; ruv.sgit's next named, E09 (mandate against grant, its data is in), sent by deck at 10:17 for 10:32, unless deck's order puts another with data in first. vault_check. 2. team/conductor/pace.json (E03 kept, E04 delivered, E09 next, dev 013 10:47) and the night log edition 8"
+  },
+  {
+   "agent": "deck",
+   "started": "2026-10-29T09:18:30Z",
+   "kind": "scheduled, hourly at :17",
+   "outcome": "ok",
+   "record": "team/deck/wakes/20261029T091830Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Requests, both named by the conductor (015), one per producer, both free: the held grant-descriptions ask (team/deck/drafts/) to mailroom/researcher/; E04 (the over-enthusiastic agent, data in src/static/studio/data/over-enthusiastic.json with the researcher's three tiers) to mailroom/ruv-sgit/. Copies in deck/outbox/, requests in team/deck/requests/, board issues. 2) Review E03 over HTTP (cloc"
+  },
+  {
+   "agent": "designer",
+   "started": "2026-10-29T09:40:31Z",
+   "kind": "scheduled, hourly at :39",
+   "outcome": "ok",
+   "record": "team/designer/wakes/20261029T094031Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) Check dev's build of note 2 (dev 011, 5ea90be) against its acceptance at 390 on nine pages and at 1280 and 1600, plus the two nits; the check in reviews/2026-10-29__phone-top-bar.md and a debrief; an update in mailroom/dev/; designer 002 to done. 2) status.json; vault_check before each vault commit. 3) If time allows, notes 3 to 5 or the second pass. Member's amendments: no REALITY-facing notes"
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T09:48:36Z",
+   "kind": "scheduled, hourly at :47",
+   "outcome": "ok",
+   "record": "team/dev/wakes/20261029T094836Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1. dev 012, design note 3 (type scale): the eight tokens plus --t-figure in src/static/assets/tokens.css (--t-0 at 64px max until note 5); every font-size and font: shorthand in site.css to a token (ties up, monospace in px at --t-s/--t-xs, lowercase 14px or more); a validate.py check for px font sizes outside tokens.css; check 14 pages at 1600/1280/390. 2. Close dev 012, reply to designer, file m"
+  },
+  {
+   "agent": "researcher",
+   "started": "2026-10-29T09:11:21Z",
+   "kind": "scheduled, hourly at :09",
+   "outcome": "ok",
+   "record": "team/researcher/wakes/20261029T091121Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) refresh evidence/proposals/editor-decisions.json against every team/*/status.json ask (designer new; deck's /studio/reviews/ with B01 v2 the first talk candidate and /studio/programme.html; ruv.sgit's four handover zips r2, r3, r5, r8), marking what is newly open and what is not the editor's. 2) status.json (board issues 002, 004, 006 still open) and a short debrief line. All in scope.writes; n"
+  },
+  {
+   "agent": "ruv-sgit",
+   "started": "2026-10-29T09:33:14Z",
+   "kind": "scheduled wake, hourly at :32",
+   "outcome": "ok",
+   "record": "team/ruv-sgit/wakes/20261029T093314Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1) E04 (mail 001, over-enthusiastic.json read only): board issue, run r9-e04-over-enthusiastic with a vault, src/static/studio/lab/e04/v1/ (Replit told fully, then goal, obstacle, fix, loss for the tiers deck named), src/pages/ruv-sgit/over-enthusiastic-agent/ and explainer, team/ruv-sgit/runs/r9-*, the ledger src/static/ruv-sgit/vaults.json (ruv-sgit's own; not team/conductor/vaults.json), editor"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "dev",
+   "sha": "401010d",
+   "at": "2026-10-29T09:54:53+00:00",
+   "subject": "@dev: close the 09:47 wake record (five steps, as planned)",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "8917847",
+   "at": "2026-10-29T09:54:08+00:00",
+   "subject": "@dev: design note 3: eight type sizes, and a gate that keeps them (dev 012)",
+   "changed": 10
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "5344486",
+   "at": "2026-10-29T09:49:11+00:00",
+   "subject": "ruv-sgit: wake closed, post-review clean, post-check as planned",
+   "changed": 1
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "c1c6443",
+   "at": "2026-10-29T09:48:08+00:00",
+   "subject": "ruv-sgit: E04 over-enthusiastic agent v1, run r9 kept, page and explainer",
+   "changed": 12
+  },
+  {
+   "agent": "designer",
+   "sha": "7ef1eae",
+   "at": "2026-10-29T09:44:28+00:00",
+   "subject": "@designer: design note 2 checked: as designed",
+   "changed": 10
+  },
+  {
+   "agent": "ruv-sgit",
+   "sha": "b6f5219",
+   "at": "2026-10-29T09:41:12+00:00",
+   "subject": "ruv-sgit: E04 over-enthusiastic agent v1 in work, run r9 open",
+   "changed": 5
+  },
+  {
+   "agent": "deck",
+   "sha": "80c10b5",
+   "at": "2026-10-29T09:22:07+00:00",
+   "subject": "@deck: wake record closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "deck",
+   "sha": "6b55cff",
+   "at": "2026-10-29T09:21:26+00:00",
+   "subject": "@deck: E03 reviewed (keep, a finding for its last line); E04 sent to ruv.sgit; grant descriptions asked of the researcher",
+   "changed": 10
+  },
+  {
+   "agent": "researcher",
+   "sha": "184346c",
+   "at": "2026-10-29T09:15:17+00:00",
+   "subject": "@researcher: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "25af36c",
+   "at": "2026-10-29T09:14:17+00:00",
+   "subject": "@researcher: D08 lists only the zips members still ask about",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "6af2051",
+   "at": "2026-10-29T09:13:32+00:00",
+   "subject": "@researcher: D09 done in the register: every member opened its own vault keys",
+   "changed": 2
+  },
+  {
+   "agent": "researcher",
+   "sha": "66d0fa5",
+   "at": "2026-10-29T09:13:03+00:00",
+   "subject": "@researcher: the editor's register refreshed from every member's asks, in their own words",
+   "changed": 4
+  },
+  {
+   "agent": "conductor",
+   "sha": "6b78fae",
+   "at": "2026-10-29T09:06:41+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 2
+  },
+  {
+   "agent": "conductor",
+   "sha": "cf7d742",
+   "at": "2026-10-29T09:05:46+00:00",
+   "subject": "@conductor: 09:02 pace: the researcher free for deck's ask, E04 next, dev 014 at 11:47; the night log's seventh edition",
+   "changed": 10
+  }
+ ],
+ "made": [
+  {
+   "page": "ruv-sgit/over-enthusiastic-agent/explainer.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/lab/e04/v1/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "ruv-sgit/over-enthusiastic-agent/index.html",
+   "by": "ruv-sgit"
+  },
+  {
+   "page": "studio/programme.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/e03.html",
+   "by": "deck"
+  },
+  {
+   "page": "studio/reviews/index.html",
+   "by": "deck"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio/lab/e04/v1/index.html",
+   "img": "night-20261029T1005-1.png"
+  },
+  {
+   "page": "ruv-sgit/over-enthusiastic-agent/explainer.html",
+   "img": "night-20261029T1005-2.png"
+  },
+  {
+   "page": "ruv-sgit/over-enthusiastic-agent/index.html",
+   "img": "night-20261029T1005-3.png"
+  },
+  {
+   "page": "studio/reviews/e03.html",
+   "img": "night-20261029T1005-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T09:22:00Z",
+   "sender": "deck",
+   "to": "researcher",
+   "kind": "request",
+   "subject": "Request: a plain description per capability in the grant rows (for E02 v3 and E09)"
+  },
+  {
+   "at": "2026-10-29T09:22:00Z",
+   "sender": "deck",
+   "to": "ruv.sgit",
+   "kind": "request",
+   "subject": "Infographic request: over-enthusiastic-agent (studio experiment E04)"
+  },
+  {
+   "at": "2026-10-29T09:32:00Z",
+   "sender": "deck",
+   "to": "ruv.sgit",
+   "kind": "reply",
+   "subject": "Re: E03 injection-sources: reviewed, keep"
+  },
+  {
+   "at": "2026-10-29T09:46:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: E04 over-enthusiastic-agent: v1 delivered; E03 v2 notes filed"
+  },
+  {
+   "at": "2026-10-29T09:48:00Z",
+   "sender": "designer",
+   "to": "dev",
+   "kind": "update",
+   "subject": "Design note 2 checked: as designed, both nits fixed"
+  },
+  {
+   "at": "2026-10-29T09:53:20Z",
+   "sender": "dev",
+   "to": "designer",
+   "kind": "reply",
+   "subject": "Re: Design note 3 is built: the type scale"
+  },
+  {
+   "at": "2026-10-29T10:04:55Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Pace: E04 is back for your review; E09 named for ruv.sgit at 10:32"
+  }
+ ],
+ "problems": [],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "D12 (evidence/proposals/editor-decisions.json): the evidence vault's history holds the researcher's redacted capture values (anonymous cookies, sites' anti-forgery tokens; no team credential); keep the history, or move the vault to a new read key",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Morning: /studio/reviews/ (five reviews; B01 v2 is the first candidate for the talk) and /studio/programme.html; pieces that load data need the site served",
+    "from": "the editor"
+   },
+   {
+    "what": "before-tonight: decide the slide items while the deck is frozen, item 4 (three of five not attacks) first",
+    "from": "the editor",
+    "issue": "before-tonight, blocked"
+   },
+   {
+    "what": "Agree or change the draft policy.json",
+    "from": "the editor"
+   }
+  ],
+  "designer": [],
+  "dev": [
+   {
+    "what": "Is carrying members' branches into dev a standing duty of dev? Agree dev's policy.json",
+    "from": "the editor"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Take the editor-decisions register, pace the page with dev, the lane and his pinned key; a token pattern in vault_check.py",
+    "from": "conductor@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E04 v1",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "A description per capability row in abp-examples.json, so the plain words come from the file",
+    "from": "researcher@ (via deck)"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7), r8, r9",
+    "from": "the editor"
+   }
+  ]
+ }
+}

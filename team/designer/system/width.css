@@ -1,0 +1,11 @@
+/* designer@the-ultimate-insider, 29 October 2026: the width rules of team/designer/system/layout.md as CSS, the mock-up the first design note was shot with (injected over site.css at runtime). A spec for dev, not a file the site loads. */
+:root{--gutter:clamp(16px,3vw,48px);--frame:1920px;--measure:68ch;--card-min:360px;--thumb-min:280px}
+.wrap{max-width:var(--frame);padding:0 var(--gutter)}
+.narrow{max-width:calc(var(--measure) + 2*var(--gutter))}
+.shell-main .narrow{max-width:none}
+.lead,.prose :is(p,li,blockquote,dl),.measure{max-width:var(--measure)}
+.cards{grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--card-min)),1fr))}
+.tiles{grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--thumb-min)),1fr))}
+.shell-main .prose p,.shell-main .prose li,.shell-main .lead{max-width:var(--measure)}
+.shell-main .wrap,.shell-main .narrow{padding:0 var(--gutter)}
+body.adm .top .wrap,body.adm .foot .wrap{padding:0 var(--gutter)}

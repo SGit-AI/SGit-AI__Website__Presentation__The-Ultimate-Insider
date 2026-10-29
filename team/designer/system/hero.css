@@ -1,0 +1,5 @@
+/* designer@the-ultimate-insider, 29 October 2026: design note 5, the home hero on wide screens (team/designer/reviews/2026-10-29__home-hero.md), as mocked up. A spec for dev, not a file the site loads. */
+.hero h1{font-size:clamp(36px,4.6vw,88px)}
+.hero .sub{font-size:clamp(19px,1.25vw,24px)}
+@media(min-width:901px){.hero .g{grid-template-columns:minmax(0,960px) minmax(0,600px);justify-content:start;gap:clamp(36px,5vw,112px)}}
+.hero .venn{max-width:600px;margin-inline:auto}

@@ -1,0 +1,45 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "deck",
+ "kind": "scheduled, hourly at :17",
+ "started": "2026-10-29T07:21:08Z",
+ "steps": {
+  "plan": {
+   "by": "deck (plan from the mail, checked by the pre-review)",
+   "model": "",
+   "verdict": "go",
+   "comment": "1) Review B01 v2 after looking at it over HTTP (each of its five slides at points of the clock, the act opener, both themes, reduced motion): src/pages/studio/reviews/b01-v2.html, index; reply to ruv-sgit; board 007. 2) The researcher's slice 4 (E11) and the completed E04: check and copy evidence/studio/studio-e11.json to src/static/studio/data/harness.json, refresh over-enthusiastic.json; programme.json E11 and E04 with the researcher's wording corrections; reply that the data is enough, so its issue 005 can close. 3) Mail filed, status, debrief, vault_check, gate, push dev. No new request; no talk.json.",
+   "at": "2026-10-29T07:21:17Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "go",
+   "comment": "Inside policy; no new request; no talk.json. Conditions: evidence and pages are material; scan studio-e11.json before copying; numbers keep linked sources; replies only to mailroom/<recipient>/ with outbox copies; vault_check first; push dev only.",
+   "at": "2026-10-29T07:21:36Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "B01 v2 looked at over HTTP at nine moments, both themes, reduced motion, no errors; reviewed (keep, ready for the editor; studio/reviews/b01-v2.html, index); studio-e11.json and the completed studio-e04.json checked and copied; E11 wording corrected in programme.json; replies to ruv-sgit and researcher; board 005, 006 done, 007 updated; mail filed; vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T07:23:34Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "HEAD only deck's paths, no talk.json or slide; harness.json and over-enthusiastic.json hold no secrets, addresses or directive text; gate clean, 0 outside scope, vault_check clean; mails 014, 015 and issues plain.",
+   "at": "2026-10-29T07:24:35Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 B01 v2 reviewed, reply 014, board 007: done. 2 E11 and E04 data, programme corrected, reply 015, 005 and 006 done: done. 3 status, debrief: done. Nothing unplanned.",
+   "at": "2026-10-29T07:24:35Z"
+  }
+ },
+ "closed": "2026-10-29T07:24:36Z",
+ "outcome": "ok"
+}
