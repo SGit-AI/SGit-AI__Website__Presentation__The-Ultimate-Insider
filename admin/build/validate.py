@@ -107,6 +107,13 @@ class Gate:
             if not path.exists() or hashlib.sha256(path.read_bytes()).hexdigest() != want:
                 self.fail('vendored', path.relative_to(ROOT), 'does not match its pinned sha256')
 
+    def check_wakes(self):                                          # every closed wake ran its five steps (conductor's request, 29 October)
+        r = subprocess.run([sys.executable, str(ROOT / 'admin/tools/wake.py'), 'check'], capture_output=True, text=True)
+        if r.returncode or 'closed without' in r.stdout or 'no valid verdict' in r.stdout or 'without two go' in r.stdout:
+            for line in r.stdout.splitlines():
+                if ': ' in line and not line.startswith('wake: every'):
+                    self.fail('wakes', line.split(': ', 1)[0], line.split(': ', 1)[1])
+
     def check_team(self):
         r = subprocess.run([sys.executable, str(ROOT / 'admin/build/agents.py'), 'overlaps'], capture_output=True, text=True)
         if r.returncode:
@@ -185,7 +192,7 @@ class Gate:
     def run(self):
         if not OUT.exists():
             sys.exit('build first: python3 admin/build/build.py')
-        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_banners, self.check_vendored, self.check_stamps, self.check_no_remote_code,
+        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_wakes, self.check_banners, self.check_vendored, self.check_stamps, self.check_no_remote_code,
                       self.check_scripts_parse, self.check_talk, self.check_prose, self.check_leaks):
             check()
         if self.findings:

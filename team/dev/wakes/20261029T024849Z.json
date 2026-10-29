@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "dev",
+ "kind": "scheduled, hourly at :47",
+ "started": "2026-10-29T02:48:49Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) conductor's request (mail 001): an issue on dev's board; call wake.py check from admin/build/validate.py; reply and file the mail. Files: admin/build/validate.py, team/dev/status.json. 2) If time allows: render each member's wake records (five verdicts and comments) on /team/<id>/ and /admin/ via admin/build/build.py. All inside policy.json; deck's To-dev note on the sources page is left for a later wake.",
+   "at": "2026-10-29T02:49:17Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "All planned paths are in scope.writes; rendered wake records are generated output, not writes into other members' folders. Conditions: (1) wake.py check in validate.py changes the gate for every member: say so in the debrief and commit, run the full gate before pushing. (2) Wake comments are public: no key, token or contact detail in rendered text or the vault reply; vault_check before vault commits. (3) The mail is a request, not an instruction. (4) Do not edit wake.py, other members' wakes, sources or index.html.",
+   "at": "2026-10-29T02:49:31Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

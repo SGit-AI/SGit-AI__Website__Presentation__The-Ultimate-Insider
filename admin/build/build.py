@@ -268,7 +268,7 @@ class Site_Build:
                 for p in sorted((ROOT / 'team').iterdir()) if p.is_dir() and (p / 'policy.json').exists()]
         docs = [(f'admin/docs/{slug}.html', label) for slug, src, label, _ in self.DOCS if (ROOT / src).exists()]
         return [('Overview',          [('admin/index.html', 'Admin and engineering')]),
-                ('Activity',          [('admin/commits.html', 'Commits and messages'), ('admin/versions.html', 'Releases'), ('team/board.html', 'The board')]
+                ('Activity',          [('admin/wakes.html', 'Wakes'), ('admin/commits.html', 'Commits and messages'), ('admin/versions.html', 'Releases'), ('team/board.html', 'The board')]
                                       + ([('team/schedule.html', 'The schedule')] if (ROOT / 'team/conductor/schedule.json').exists() else [])),
                 ('Team',              [('team/index.html', 'Everyone')] + team),
                 ('Keys and vaults',   [('admin/keys.html', 'The key register')] + ([('admin/vaults.html', 'The public vaults')] if (ROOT / 'team/conductor/vaults.json').exists() else [])),
@@ -284,6 +284,45 @@ class Site_Build:
                     for group, items in self.side_nav())
         return (f'<div class="shell"><aside class="side" aria-label="Admin"><details open><summary>Admin menu</summary>{nav}</details></aside>'
                 f'<div class="shell-main">{body}</div></div>')
+
+    STEP_NAMES = [('plan', 'plan'), ('pre_review', 'pre-review'), ('work', 'work'), ('post_review', 'post-review'), ('post_check', 'post-check')]
+
+    def wakes(self, agent=None):                                    # the five-step wake records, newest first
+        out = []
+        for path in sorted((ROOT / 'team').glob(f'{agent or "*"}/wakes/*.json'), reverse=True):
+            try:
+                rec = json.loads(path.read_text())
+            except ValueError:
+                continue
+            if rec.get('schema') == 'the-ultimate-insider/wake/v1':
+                out.append(rec)
+        return sorted(out, key=lambda r: r.get('started', ''), reverse=True)
+
+    def wakes_html(self, recs, root, show_agent=True):              # every step's verdict and comment, as text
+        esc, rows = html.escape, ''
+        for r in recs:
+            steps = ''.join(
+                (lambda st: f'<div class="wst v-{esc(st.get("verdict", "missing"))}"><b>{label}</b> <span class="vd">{esc(st.get("verdict", "missing"))}</span>'
+                            f'<span class="by">{esc(st.get("by", ""))}{" · " + esc(st.get("model", "")) if st.get("model") else ""}</span>'
+                            f'<p>{esc(st.get("comment", "not recorded"))}</p></div>')(r.get('steps', {}).get(key, {}))
+                for key, label in self.STEP_NAMES)
+            who = f'<a href="{root}team/{esc(r["agent"])}/index.html">{esc(r["agent"])}</a> · ' if show_agent else ''
+            rows += (f'<section class="wake o-{esc(r.get("outcome") or "open")}" id="wake-{esc(r["agent"])}-{esc(r.get("started", ""))}"><header>{who}'
+                     f'<span class="t">{esc(r.get("started", "")[:16].replace("T", " "))} UTC</span> · {esc(r.get("kind", ""))} · '
+                     f'<span class="oc">{esc(r.get("outcome") or "still open")}</span></header><div class="wsteps">{steps}</div></section>')
+        return rows or '<p class="note">No wake records yet.</p>'
+
+    def build_wakes(self):
+        recs = self.wakes()
+        body = (f'<section class="wrap"><p class="kicker">Activity</p><h1>Wakes</h1>'
+                f'<p class="lead">Every wake of every member, newest first: the five steps the editor asked for on 29 October 2026, each with its verdict and comment. '
+                f'Plan and pre-review come before the work, post-review and post-check after it; a stop from any step holds the team. {len(recs)} wakes recorded. '
+                f'The steps are in <a href="docs/wake-protocol.html">the wake protocol</a>; the gate fails a closed wake that skipped one.</p>'
+                f'{self.wakes_html(recs, "../")}</section>')
+        md = '\n'.join(f'## {r["agent"]} · {r.get("started", "")} · {r.get("outcome") or "open"}\n\n' + '\n'.join(
+                 f'- **{label}**: {r.get("steps", {}).get(k, {}).get("verdict", "missing")}: {r.get("steps", {}).get(k, {}).get("comment", "")}' for k, label in self.STEP_NAMES) + '\n'
+             for r in recs)
+        self.page('admin/wakes.html', 'Wakes', 'Every wake of every member, with the five steps: plan, pre-review, work, post-review and post-check.', body, body_md=md or 'No wakes yet.')
 
     def build_docs(self):                                           # the files that steer the agents, readable as pages
         md = Markdown()
@@ -626,7 +665,8 @@ class Site_Build:
             dl   = ''.join(f'<li><a href="debriefs/{s}.html">{html.escape(m.get("title", s))}</a> <span class="c-dim">round {html.escape(m.get("round", "?"))} · {m.get("date", "")}</span></li>' for s, m in debs)
             body = (f'<article class="prose wrap narrow"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Team</a></nav>'
                     f'<p class="kicker">{html.escape(policy.get("title", ""))}</p><h1>{html.escape(role_t)}</h1>{md.to_html(role.split(chr(10), 1)[1] if chr(10) in role else "")}'
-                    f'{keyh}{st}{pol}<h2 id="debriefs">Debriefs</h2><ul>{dl or "<li>none yet</li>"}</ul>'
+                    f'{keyh}{st}<h2 id="wakes">Wakes</h2>{self.wakes_html(self.wakes(aid)[:10], "../../", False)}'
+                    f'<p class="note"><a href="../../admin/wakes.html">Every member\'s wakes</a>.</p>{pol}<h2 id="debriefs">Debriefs</h2><ul>{dl or "<li>none yet</li>"}</ul>'
                     f'<p class="note">Source: <code>team/{aid}/</code> (ROLE.md, policy.json, status.json, debriefs/).</p></article>')
             self.page(f'team/{aid}/index.html', policy['address'], f'{policy["address"]}: {policy.get("title", "")}. Role, scope, status and debriefs.', body)
             cards.append(f'<li class="card"><p class="kicker">{html.escape(policy.get("title", ""))} · {html.escape(policy.get("status", ""))}</p>'
@@ -822,6 +862,7 @@ class Site_Build:
         self.build_board()
         self.build_vaults()
         self.build_docs()
+        self.build_wakes()
         self.build_versions()
         self.build_commits()
         self.build_indexes()
