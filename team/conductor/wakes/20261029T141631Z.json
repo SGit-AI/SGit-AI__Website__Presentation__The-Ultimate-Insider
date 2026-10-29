@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Storyteller key.json came from its own commit 7d0244d, so sealing to it is sound. Fits ROLE item 5 and scope. Conditions: zip only in the scratchpad outside the repo; never print or commit a vault key; vault_check before any vault commit; no pushes to main.",
    "at": "2026-10-29T14:17:05Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) Both vault keys sealed to the storyteller (sha256:836a0e9ddaf99144) with vault_handover.py --to-member storyteller; zip in the scratchpad only, given to the editor; nothing printed. 2) schedule.json: the storyteller's run running (trig_013ML9DZ6k9VCinyhKF7peGA, :54); pace.json; status.json. 3) Night log edition (14:17). Gate clean, vault_check clean, no zip or .enc tracked. Commit df2fa22.",
+   "at": "2026-10-29T14:17:53Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "10 files changed, all within conductor scope (agents.py 0 outside). No new zip, enc or vault-key file tracked. No key-like strings. Screenshots show pages only, no key or QR. Build and validate clean.",
+   "at": "2026-10-29T14:18:28Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "All three items done (sealing to the storyteller's key from its own commit 7d0244d; schedule.json running at :54; pace, status, night log). Conditions kept: zip in the scratchpad only, no key printed, vault_check clean, nothing tracked. Nothing unplanned.",
+   "at": "2026-10-29T14:18:28Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T14:18:28Z",
+ "outcome": "ok"
 }
