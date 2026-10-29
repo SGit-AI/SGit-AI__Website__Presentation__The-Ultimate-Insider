@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "run r10-e09-mandate-and-grant closed (0 of 72 plaintext hits, clone identical) and kept, zip to the editor; lab/e09/v1 and /ruv-sgit/mandate-and-grant/ with explainer; editor worker 3 must-fixes applied; board 010 closed, 009 E04 v2 opened, mail filed, reply to deck cc conductor; vault_check clean on both",
    "at": "2026-10-29T10:47:01Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "a31bd6f and 57d24d3: no key or token, only a vault id; all files in scope, REALITY one E09 line; no rating; no em-dashes; local scripts only",
+   "at": "2026-10-29T10:47:45Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "E09 done: r10 kept with zip; lab/e09/v1, page and explainer; editor 3 must-fixes, 4 of 7 should-fixes, the rest reported; status, debrief, REALITY; E04 v2 opened for the next wake as allowed; 57d24d3 on origin/dev",
+   "at": "2026-10-29T10:47:45Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T10:47:45Z",
+ "outcome": "ok"
 }
