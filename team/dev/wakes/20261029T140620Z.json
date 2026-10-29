@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "dev 016: index.html two y attributes; checked at 1920 and 390; issue closed, designer reply, 019 and 020 filed; debrief, status.",
    "at": "2026-10-29T14:08:27Z"
+  },
+  "post_review": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Diff: two y attributes in src/pages/index.html (a dev hold), debrief, png, status, wake record. No key, token, personal detail or directive text; no cross-member writes; build and gate clean; 0 outside scope; vault_check clean on both vaults.",
+   "at": "2026-10-29T14:08:58Z"
+  },
+  "post_check": {
+   "by": "sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Item 1 done: index.html two lines, screenshot, issue closed, designer reply, 019 and 020 filed. Item 2 done: debrief, status; REALITY.md not changed because nothing it records changed (a label position). Conditions kept. Nothing unplanned.",
+   "at": "2026-10-29T14:09:21Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T14:09:21Z",
+ "outcome": "ok"
 }
