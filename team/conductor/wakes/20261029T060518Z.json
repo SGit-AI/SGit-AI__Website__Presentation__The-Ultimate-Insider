@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Plan stays inside conductor scope.writes; mail to mailroom/ruv-sgit with a copy to deck is mail, not a write in deck's paths. One request to ruv.sgit within the convention. Conditions: vault_check before the vault commit; no keys, contact details or vault keys in the .eml, pace.json or the log; X-Kind: request; no schedule creation; no BRIEF.md or ./version edits; push to dev only after the gate.",
    "at": "2026-10-29T06:06:19Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "done",
+   "comment": "1) B01 v2 named for ruv.sgit at 06:32 (mailroom/ruv-sgit/005, Cc deck), E03 at 07:32; vault_check clean, pushed; 2) pace.json: E02 delivered, B01 v1 reviewed, dev 012 at 09:47; status.json; 3) night log edition 4 (05:05 to 06:06: 6 wakes, 14 commits, 8 messages, the researcher's partial; screenshots: E02 v1, its explainer and page, deck's B01 v1 review). Gate clean. Commit a79f647.",
+   "at": "2026-10-29T06:07:22Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Checked de944e3..HEAD (9 files, all under team/conductor and the night-log article, within scope; agents.py 0 outside scope). The four PNGs show no key or QR code. The new .eml is a plain pace request; vault_check clean. Build and validate pass (111 html). No token, key or directive text.",
+   "at": "2026-10-29T06:07:55Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1) B01 v2 request to ruv.sgit at 06:32 (mailroom/ruv-sgit/005, Cc deck), E03 queued 07:32, vault_check clean: done. 2) pace.json: E02 delivered, ruv-sgit in_flight B01 v2, dev 012 at 09:47: done. 3) night log edition 4 plus status.json: done. Pre-review conditions kept; post_review clean. Unplanned: none beyond the log's usual screenshots.",
+   "at": "2026-10-29T06:08:12Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T06:08:12Z",
+ "outcome": "ok"
 }
