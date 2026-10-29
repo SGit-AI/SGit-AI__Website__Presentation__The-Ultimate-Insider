@@ -1,0 +1,31 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "follow-up wake (tonight's rule)",
+ "started": "2026-10-29T17:42:15Z",
+ "steps": {
+  "plan": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Route the researcher's two studio requests (studio 010, 011); mail deck the new sweep (070: motion's M02 and M03 for part 1, not in talk.json, before 18:15); note the storyteller's split overdue and overtaken; refresh the night log and Moments; next follow-up 17:58 for the 18:00 flag.",
+   "at": "2026-10-29T17:43:38Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Researcher files carry no key, read key, QR or contact; route verbatim; vault_check before commit and pull first; pull dev before push; one send_later only.",
+   "at": "2026-10-29T17:43:38Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "opus",
+   "verdict": "done",
+   "comment": "Studio 010 and 011 routed verbatim; deck 070 (M02, M03 for part 1); pace log; night log and Moments (19 moments; M03 shot checked: no key); team-in-numbers refreshed for motion before the lock; build and gate clean.",
+   "at": "2026-10-29T17:44:20Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
