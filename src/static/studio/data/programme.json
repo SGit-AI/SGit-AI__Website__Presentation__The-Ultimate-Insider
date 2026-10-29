@@ -1,6 +1,6 @@
 {
   "about": "The studio programme: the experiments the editor asked for on 29 October 2026 (02:47 UTC, in deck's session), as data. deck@the-ultimate-insider keeps it; the conductor paces it (one experiment in flight per maker at a time); src/pages/studio/programme.html is generated from it by team/deck/tools/programme.py. Nothing here touches the talk: the deck is frozen until the editor says otherwise.",
-  "updated": "2026-10-29T12:35Z",
+  "updated": "2026-10-29T13:55Z",
   "vision": "A whole new set of visualisations to tell the story. Part one shows the threat: what an agent is and how it grew, how far one internal agent reaches, how soft the inside is, and how injected words travel. Part two shows the way out: map the mandate against the grant, type every barrier honestly, and contain the agent with boundaries it cannot reach, using RiskMandate's Agent Behaviour Policies and SHarness, with many real examples.",
   "statuses": {
     "idea": "written down, not yet asked for",
@@ -67,11 +67,11 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "asked",
+      "status": "review",
       "order": 2,
       "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09) Capability descriptions delivered 10:20: src/static/studio/data/capabilities.json (the source's own words; reach differs per example).",
       "request": "v3 is ruv.sgit's next item as the conductor paced (my v2 notes and the capability descriptions are its request), with E09's wording fix",
-      "review": "deck, 08:25: v2 keep (studio/reviews/e02-v2.html); v3 after the researcher's per-row descriptions: fix one overlap, group the dots on the ring"
+      "review": "deck, 13:55: v3 keep, ready for the editor (studio/reviews/e02-v3.html); one note with E09: the same numbering in both"
     },
     {
       "id": "E03",
@@ -212,7 +212,7 @@
       "order": 5,
       "data_status": "delivered 03:20 by the researcher: src/static/studio/data/abp-examples.json (a copy of evidence/studio/studio-e02-e09.json, claims register studio-e02-e09) Capability descriptions delivered 10:20: src/static/studio/data/capabilities.json (the source's own words; reach differs per example).",
       "request": "sent 10:24 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/), with capabilities.json",
-      "review": "deck, 11:30: keep (studio/reviews/e09.html); fix the mandate heading (a draft, not elicited); later: the end line bigger, the list grouped, the chat example to E13"
+      "review": "deck, 11:30: keep (studio/reviews/e09.html); fix the mandate heading (a draft, not elicited); later: the end line bigger, the list grouped, the chat example to E13; wording fixed on E02 v3's run (13:55)"
     },
     {
       "id": "E10",
@@ -251,10 +251,11 @@
       "needs_from": [
         "researcher"
       ],
-      "status": "idea",
+      "status": "asked",
       "order": 11,
       "data_status": "delivered 06:30 by the researcher: src/static/studio/data/harness.json (a copy of evidence/studio/studio-e11.json, claim ids e11-*)",
-      "wording": "Say: six of six held, 25 October 2026 (not 24 to 29); five environments on two kernels (not five platforms); components are running as MVPs (fs, net), runnable (policy hash, check, translate) or designed (kms, bash, llm); the launcher is designed, and a first slice (sharness-ai shell) runs since 28 October. Nothing on sharness.ai is independently corroborated: one author's network."
+      "wording": "Say: six of six held, 25 October 2026 (not 24 to 29); five environments on two kernels (not five platforms); components are running as MVPs (fs, net), runnable (policy hash, check, translate) or designed (kms, bash, llm); the launcher is designed, and a first slice (sharness-ai shell) runs since 28 October. Nothing on sharness.ai is independently corroborated: one author's network.",
+      "request": "sent 13:50 to ruv.sgit (tui-mail-public mailroom/ruv-sgit/), with the researcher's corrections"
     },
     {
       "id": "E12",
