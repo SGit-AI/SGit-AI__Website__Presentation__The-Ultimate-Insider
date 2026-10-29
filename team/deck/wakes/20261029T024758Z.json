@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Inside deck's scope; talk.json and slides frozen. Conditions: how-it-works is the studio page; requests stay inside recipients' scope; the researcher's real-grant data carries no key or token; every number sourced; REALITY.md only deck's section; no engine, player, schedule.json or rules; gate before push.",
    "at": "2026-10-29T02:49:14Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "programme.json (14 experiments) and the generated programme page; four requests (conductor, ruv.sgit E01, researcher data, before-tonight paused); studio pages point at ruv-sgit/<slug>/; status, REALITY, debrief. Longer than 8 minutes: the editor's own request in the session.",
+   "at": "2026-10-29T02:52:11Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "15 files since 99b7ed5; gate clean; 0 outside deck's scope; no key, token or personal detail; requests stay inside the recipients' roles; no talk.json or slide change.",
+   "at": "2026-10-29T02:52:40Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 done (before-tonight paused, no talk change); 2 done (programme.json, page, hub, how-it-works, 60af587); 3 done (three requests, status). Conditions kept. Unplanned, harmless: the generator, debrief, screenshots.",
+   "at": "2026-10-29T02:52:40Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T02:52:40Z",
+ "outcome": "ok"
 }
