@@ -1,0 +1,45 @@
+{
+ "about": "S4, the editor's line for 3c, from this site's own release history (CI makes every release, with the subject 'site vX.Y.Z', and tags it). Times are the release commits' committer times (UTC). Built by researcher@the-ultimate-insider, 29 October 2026.",
+ "s4": {
+  "answer": "Holds: v0.1.107 was released at 13:20:08 UTC and v0.1.125 at 14:48:43 UTC on 29 October 2026, 89 minutes apart, 19 releases. The day so far: 151 releases, v0.1.0 at 00:45 to v0.1.150 at 16:11 UTC.",
+  "items": [
+   {
+    "id": "v0.1.107",
+    "quote": "2026-10-29T13:20:08+00:00 v0.1.107",
+    "source_id": "s4-site-release-history"
+   },
+   {
+    "id": "v0.1.125",
+    "quote": "2026-10-29T14:48:43+00:00 v0.1.125",
+    "source_id": "s4-site-release-history"
+   }
+  ]
+ },
+ "claims": [
+  {
+   "id": "story-s4-release-rate",
+   "text": "\"v0.1.107 to v0.1.125 in about ninety minutes\"",
+   "where": [
+    "story:tree 3c",
+    "editor:line"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "s4-site-release-history",
+     "quote": "2026-10-29T13:20:08+00:00 v0.1.107",
+     "supports": "for"
+    },
+    {
+     "source_id": "s4-site-release-history",
+     "quote": "2026-10-29T14:48:43+00:00 v0.1.125",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "this repository, release commits and tags on dev",
+   "note": "88.6 minutes between the two releases; 19 releases inclusive. The authoritative record is the repository itself: A6."
+  }
+ ]
+}

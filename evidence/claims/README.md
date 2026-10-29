@@ -1,22 +1,22 @@
 # The claims register
 
-Built 2026-10-29T15:21Z. 192 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
+Built 2026-10-29T16:27Z. 220 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
 
 | Grade | Claims |
 |---|---|
 | A0 | 13 |
-| A1 | 22 |
-| A2 | 70 |
-| A3 | 30 |
+| A1 | 23 |
+| A2 | 82 |
+| A3 | 31 |
 | A4 | 11 |
-| A5 | 10 |
-| A6 | 36 |
+| A5 | 12 |
+| A6 | 48 |
 
 | Holds | Claims |
 |---|---|
 | does not hold | 3 |
-| holds | 104 |
-| holds in part | 36 |
+| holds | 126 |
+| holds in part | 42 |
 | not checked | 49 |
 
 ## The talk: opening and act one
@@ -188,4 +188,43 @@ Built 2026-10-29T15:21Z. 192 claims. Grades A0 to A6 as in `../METHOD.md`; "hold
 | **story-r7-security-usability-frontier-tools**: bad security usability in frontier tools (ux.sgit.ai examples) | story:tree | observation | A2 | holds | Author's own findings, one product (Claude app iOS), last checked 2026-10-25. |
 | **story-r8-non-developer-app-volume**: volume of new applications built by non-developers with AI tools | story:tree | measured | A2 | holds in part | Vendor-reported via press; counts projects and users, not non-developer apps in production. **Suggested:** Lovable alone reports more than 60 million projects since November 2024 (vendor figure). |
 | **story-r9-process-and-decision-behaviour-policies**: process behaviour policies and decision behaviour policies | story:tree | position | A2 | holds in part | His published term is 'decision policy' (Agent Decision Policy), part of the behaviour policy family; 'decision behaviour policy' not found verbatim. **Suggested:** process behaviour policies and decision policies |
+
+## The story tree: S1-S3
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **story-s1-slammer-90pct-10min**: Slammer infected more than 90 percent of vulnerable hosts within 10 minutes (25 January 2003) | editor:ask-s1 | measured | A5 | holds | Both CAIDA's page and the IEEE article (July/August 2003) say it, same authors, so A5 rather than independent corroboration in the strict sense. |
+| **story-s1-slammer-doubling-8-5s**: Slammer doubled its infected population every 8.5 (plus or minus 1) seconds in the first minute | editor:ask-s1 | measured | A6 | holds | The 8.5 seconds figure is in CAIDA's paper page; the text extraction of the IEEE S&P article does not carry the number (it may sit in a figure). Doubling held only in the first minute, before bandwidth saturated. Most slides say "about ten minutes"; the source says "more than 90 percent of vulnerable hosts within 10 minutes". |
+| **story-s1-slammer-75000-hosts**: Slammer infected at least 75,000 hosts | editor:ask-s1 | measured | A5 | holds | Taken from the primary CAIDA or IEEE record. |
+| **story-s1-slammer-full-scan-3min**: Slammer reached its full scanning rate, over 55 million scans per second, after about three minutes | editor:ask-s1 | measured | A6 | holds | Taken from the primary CAIDA or IEEE record. |
+| **story-s1-codered-359000-14h**: Code Red v2 infected more than 359,000 computers in less than 14 hours on 19 July 2001 | editor:ask-s1 | measured | A6 | holds | CAIDA also gives 359,104 hosts in about 13 hours and, on its overview page, "just fourteen hours". Use "more than 359,000 in under 14 hours". |
+| **story-s1-codered-2000-per-minute**: At its peak Code Red v2 infected more than 2,000 new hosts each minute | editor:ask-s1 | measured | A6 | holds | Taken from the primary CAIDA or IEEE record. |
+| **story-s1-slammer-vs-codered**: Slammer was two orders of magnitude faster than Code Red, whose population doubled every 37 minutes | editor:ask-s1 | measured | A6 | holds | Taken from the primary CAIDA or IEEE record. |
+| **story-s2-crowdstrike-2024-07-19**: CrowdStrike (Falcon sensor, Windows), 2024-07-19: A Rapid Response Content update (Channel File 291) passed validation because of a bug in the Content Validator; it supplied 21 input fields where the sensor provided 20, causing an out-of-bounds read and a Windows crash. Not an attack. | editor:ask-s2 | event | A6 | holds | 8.5 million is Microsoft's estimate ("We currently estimate"), dated 20 July 2024, never revised in the capture. The House hearing (24 September 2024, witness Adam Meyers) is captured through the committee's own recap; the full transcript was not captured. No UK government statement captured. |
+| **story-s2-aws-us-east-1-2025-10-20**: Amazon Web Services (us-east-1), 2025-10-19/20: A latent race condition in DynamoDB's automated DNS management left an empty DNS record for the regional endpoint that the automation failed to repair; needed manual operator intervention. | editor:ask-s2 | event | A6 | holds | The operator's summary gives duration and services, not a customer count. Third-party scale figures (Downdetector, ThousandEyes) not used here; a ThousandEyes capture exists as thousandeyes-aws-outage-2025-10-20. |
+| **story-s2-azure-afd-2025-10-29**: Microsoft Azure (Azure Front Door and CDN), 2025-10-29: A sequence of valid, non-malicious customer configuration changes across two control plane build versions produced incompatible configuration metadata that crashed the data plane. | editor:ask-s2 | event | A6 | holds | Microsoft says the triggering customer changes were "valid and non-malicious"; an earlier AFD incident on 9 October 2025 (QNBQ-5W8) is referenced in the same PIR. |
+| **story-s2-cloudflare-2025-11-18**: Cloudflare, 2025-11-18: A database permissions change made a query emit duplicate rows into the Bot Management feature file, doubling its size past a limit in the proxy software. Cloudflare first wrongly suspected a hyper-scale DDoS attack. | editor:ask-s2 | event | A6 | holds | A useful beat: the operator first thought it was an attack. It was its own change. |
+| **story-s2-gcp-2025-06-12**: Google Cloud, 2025-06-12: A new Service Control quota check shipped on 29 May 2025 without error handling or a feature flag; a policy change with blank fields, replicated globally within seconds, hit a null pointer and crash-looped the binary in every region. | editor:ask-s2 | event | A6 | holds |  |
+| **story-s2-github-actions-2026-10-05**: GitHub (Actions and Hosted Runners), 2026-10-05: A partial networking failure between an on-premises datacenter region and cloud-hosted regional database and storage services. | editor:ask-s2 | event | A2 | holds | Captured only through a third-party mirror (Pulsetic) of githubstatus.com, so A2. A degradation, not an outage on the scale of the others; cause is a network failure, not a stated human change. |
+| **story-s2-azure-networking-2026-09-30**: Microsoft Azure (networking gateways control plane), 2026-09-30/10-01: An expired deployment restriction let a large batch of paused gateway OS updates resume at once, while an earlier performance change had lengthened control plane processing; together they overwhelmed the control plane. | editor:ask-s2 | event | A6 | holds | Found on the Azure history page while looking for the October 2025 AFD PIR; within the last year, an accident (update rollout plus earlier performance change). Not on the editor's list. |
+| **story-s2-guycarp-insured-300m-1b**: CrowdStrike insured losses likely $300 million to $1 billion; less than 1% of companies with cyber insurance affected; some cyber catastrophe models only examine malicious events | editor:ask-s2-comparison | measured | A2 | holds |  |
+| **story-s2-guycarp-models-malicious-only**: The insurance models were built for attacks: accidental mass outages were a gap | editor:ask-s2-comparison | measured | A2 | holds | A reported search summary said Guy Carpenter put a malicious version of the event at $600 million to $2 billion; that line is NOT in the captured Insurance Journal text, so it is not used. |
+| **story-s2-cybercube-insured-400m-1-5b**: Global insured losses $400 million to $1.5 billion | editor:ask-s2-comparison | measured | A2 | holds |  |
+| **story-s2-parametrix-5-4b-fortune500**: Direct financial loss to the US Fortune 500 (excluding Microsoft) $5.4 billion; insured $540 million to $1.08 billion (Reuters) | editor:ask-s2-comparison | measured | A3 | holds | $5.4 billion is Parametrix's own landing page; the insured range is from Reuters in Business Insurance; Fortune/Bloomberg carries the $5.4 billion and that most damage went uninsured. The full report was behind a form and not captured. The gap between $5.4bn direct and about $1bn insured is the point: most of the accidental loss was uninsured. |
+| **story-s2-uptime-2025-causes**: Of major network-related outages, configuration/change management failure 50%, malicious cyberattack 17%; change management is 62% of major IT system/software outage causes | editor:ask-s2-comparison | measured | A2 | holds | Uptime's own pages returned 403 (bot wall), not got round, so this rests on Network World's reading of the report: A2. The 17% is for major network-related outages only, not all outages. No source captured that directly compares total losses from accidental outages with those from attacks across years. |
+
+## The story tree: S4
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **story-s4-release-rate**: "v0.1.107 to v0.1.125 in about ninety minutes" | story:tree 3c, editor:line | measured | A6 | holds | 88.6 minutes between the two releases; 19 releases inclusive. The authoritative record is the repository itself: A6. |
+
+## The story tree: S5
+
+| Claim | Where | Kind | Grade | Holds | Note |
+|---|---|---|---|---|---|
+| **story-s5-no-agent-sends**: No agent sends. Agents create drafts; a person sends. | newsroom:the-agent-team-as-it-runs, newsroom:the-mandate-stack, newsroom:replicating-the-agentic-inbox | observation | A2 | holds in part | Self-reported by the operator. The rule hardened over a week: on 29 Sept and 2 Oct one agent sent approved drafts; by 2 to 6 Oct no agent sends, with one named exception (security's hold email). The site itself grades the rule as enforced only by policy text, since one grant covers draft and send. **Suggested:** Agents draft; the editor reads and presses send (since early October 2026; one security hold email excepted; enforced by policy, not by the platform). |
+| **story-s5-agent-count**: The agentic inbox is run by a team of agents and one person | newsroom:six-agents-one-inbox, newsroom:custom-uis-are-not-the-exception, newsroom:the-agent-team-as-it-runs, newsroom:the-mandate-stack | measured | A2 | holds in part | The count grew: six roles (29 Sept), ten (2 Oct), twelve (6 Oct roster), about fifteen (Mandate Stack, same day, whole business). Only a few roles touch mail. Any number used on stage needs its date. **Suggested:** Six agents at the start, about a dozen within a week, and one person who sends. |
+| **story-s5-built-with-ai**: The inbox and its tools were built by the editor with agents, not by a development team | newsroom:custom-uis-are-not-the-exception, newsroom:the-mandate-stack | observation | A2 | holds in part | The pages say agents (a @dev agent among them) built the tools at one person's request, with no human developers named. They do not call the editor a non-developer: he writes as a long-time developer (a 2018 book for young developers). Calling it a 'non-developer' example would not match the site. **Suggested:** One person and a team of agents built it in eight days; the agents wrote the tools. |
+| **story-s5-explorer-coding-link**: The agentic inbox is an example of explorer coding | talk:act-three | position | A1 | holds in part | No captured page says in so many words that the inbox is explorer-coded. The explorer-coding article (16 Oct) defines the term generally; the inbox articles only link to it in related reading. The link is the talk's inference, a fair one, but the explorer-coding article also says such tools are 'not ready to be in line' until villagers take them, while the inbox runs in production. **Suggested:** The inbox's interfaces were built the way the site calls explorer coding: ask in chat, an agent builds the page. |
 

@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T16:09:41Z",
+ "updated": "2026-10-29T16:32:12Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -11,7 +11,7 @@
  "producers": {
   "researcher": {
    "slot": ":09",
-   "in_flight": "deck's grant-descriptions ask (sent at 09:17)"
+   "in_flight": "a catalogue of the editor's sites and articles (PKI first)"
   },
   "ruv-sgit": {
    "slot": ":32",
@@ -35,7 +35,7 @@
   },
   "studio": {
    "slot": ":12",
-   "in_flight": "the ABP slide and studio v4 landed; waiting for deck's sorting"
+   "in_flight": "ports; and the showcase slides for the editor's work section (from 16:30)"
   },
   "deck": {
    "slot": ":17",
@@ -541,6 +541,14 @@
    "owners": "storyteller, deck",
    "status": "asked",
    "by": "the editor, 15:00"
+  },
+  {
+   "id": "section-the-work",
+   "kind": "section",
+   "title": "the editor's work: SGit, the newsroom, PHP October, the PKI, SHarness and Linux in the browser, the CLI",
+   "status": "asked",
+   "by": "the editor, 16:2x",
+   "owners": "researcher catalogue; storyteller order; deck beats; studio showcase slides; dev template and the Linux demo; ruv.sgit SHarness series"
   }
  ],
  "edges": [
@@ -895,6 +903,11 @@
    "at": "2026-10-29T16:09:41Z",
    "by": "conductor",
    "what": "the programme's eight delivered and every earlier piece staged (ruv.sgit); the opening recast as the perfect storm (deck); a 19-beat sequence to deck (storyteller); the building routed to motion@; the SHarness series stays with ruv.sgit"
+  },
+  {
+   "at": "2026-10-29T16:32:12Z",
+   "by": "conductor",
+   "what": "the talk is 90 minutes; a section on the editor's work routed to six members; showcase slides to studio@; Linux in the browser with an offline fallback to dev"
   }
  ],
  "queue": {
@@ -1070,5 +1083,6 @@
   {
    "what": "confirm 'newsroom.esquito.ai' as newsroom.sgit.ai, and 'attrition' on the Wardley maps as commoditisation"
   }
- ]
+ ],
+ "talk_minutes": 90
 }
