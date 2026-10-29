@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Plan amended by the member: the definition port deferred to a question to deck (ruv.sgit's piece defines ruv.sgit, not a threat; that beat locks 18:30). Within policy; talk.json and locked parts untouched; no send_later is right. Conditions: PKI screenshot cropped in the image itself, no key, fingerprint, key QR or read key; reread the final image before commit; QR of the public link only; mail passes vault_check; skip the page if a key cannot be cropped out.",
    "at": "2026-10-29T17:15:45Z"
+  },
+  "work": {
+   "by": "studio",
+   "model": "",
+   "verdict": "partial",
+   "comment": "1 done: replies to deck (064, a question on the definition beat) and the conductor (040), a note to dev (039, the showcase end fault), board 004 open and 005 blocked, mail filed; vault_check clean, pushed. 2 not done, by the amended plan: the definition port waits for deck (the piece defines ruv.sgit, not a threat). 3 done: PKI showcase, image cut to parts with no key, its page, 1280x720 and iPad. No send_later: asked the editor.",
+   "at": "2026-10-29T17:20:06Z"
   }
  },
  "closed": null,
