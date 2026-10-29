@@ -1,0 +1,33 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's request",
+ "started": "2026-10-29T16:30:25Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan by the member at the editor's word in this session, 16:2x: the talk is 90 minutes; a whole section on his work (SGit, the newsroom, PHP October, SHarness and booting Linux in the browser, the PKI and how agents communicate, the CLI), built from his existing content: screenshots of pages cropped and explained, with the title and the link, as ruv.sgit did; the researcher reads newsroom.sgit.ai, pki.sgit.ai, sharness.ai and the CLI's articles. 1) team/conductor/briefs/2026-10-29__editor/2-the-work-section-1630.md (his words, the section, who does what) and a short section in __onboarding-studio.md (studio@ takes the showcase slides). 2) Requests in mailroom/researcher, storyteller, deck, studio, dev; a notice to ruv-sgit (its SHarness series feeds the demo); vault_check first. 3) pace.json (the section, its owners, 90 minutes), status.json. AMENDED after the pre-review's change: both conditions go into the brief and every request: (1) no screenshot captures a key, a key's QR, a read key or anything private (pki.sgit.ai and the vault pages show keys: crop them out or skip them); (2) the Linux-in-the-browser demo has an offline fallback (a recorded clip or stills) for when the room's network fails.",
+   "at": "2026-10-29T16:30:36Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Second pass: the amended plan adopts both conditions (no screenshot of a key, key QR, read key or anything private; an offline fallback for the Linux-in-the-browser demo), in the brief and every request.",
+   "at": "2026-10-29T16:31:16Z"
+  }
+ },
+ "closed": null,
+ "outcome": null,
+ "history": [
+  {
+   "step": "pre_review",
+   "verdict": "change",
+   "by": "security",
+   "model": "sonnet",
+   "comment": "In scope. Add to the briefs and requests: (1) screenshots must never capture a key, a key QR, a read key or anything private (pki.sgit.ai pages show keys: crop or skip them); (2) the Linux-in-browser demo request must require an offline fallback (recorded clip or stills)."
+  }
+ ]
+}
