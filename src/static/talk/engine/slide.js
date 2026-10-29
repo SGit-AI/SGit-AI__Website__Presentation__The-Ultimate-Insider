@@ -9,6 +9,12 @@
 //   data-draw="1 2.5"    an SVG stroke draws itself between 1 and 2.5
 //   window.SLIDE_RENDER = function (t, S) { ... }    anything else, every frame, with the helpers in S
 //   ?t=4.5 freezes at 4.5 s · ?static freezes at the end · reduced motion shows the end · ?theme=light
+//   The talk player's clock contract (ruv.sgit.ai's assets/clock.js, which the player was ported from), answered by this
+//   engine's own clock, so the player pauses, speeds up, seeks and steps every slide and every studio piece:
+//   window.RuvClock: pause() play() setRate(r) seek(s) elapsed() paused rate · ?ruvt=12.5 starts 12.5 s in · ?ruvpaused
+//   starts paused · ?review shows the end · ?once (a slide already plays once) · window.RUV_STEPS = [{ t, label }], the
+//   slide's stops in seconds: its own if it sets them, else data-stops="2 12 30" on #cv, else the beginning and the middle
+//   (the player adds the end). team/dev/briefs/2026-10-29__the-player.md
 (function () {
   'use strict'
   var Q = new URLSearchParams(location.search)
@@ -54,6 +60,14 @@
     requestAnimationFrame(frame)
   }
   function seek(t) { vBase = Math.max(0, +t || 0); anchor = performance.now(); freeze = null }
+  window.RuvClock = {
+    get paused() { return paused }, get rate() { return rate },
+    pause: function () { if (!paused) { vBase = now(); paused = true } },
+    play: function () { if (paused) { anchor = performance.now(); paused = false } },
+    setRate: function (r) { vBase = now(); anchor = performance.now(); rate = +r || 1 },
+    seek: function (t) { seek(t) },
+    elapsed: function () { return freeze != null ? freeze : now() }
+  }
   addEventListener('message', function (e) {
     var m = e.data && e.data.slide; if (!m) return
     if (m === 'seek') seek(e.data.t)
@@ -72,7 +86,14 @@
     collect(); fit(); addEventListener('resize', fit)
     var rm = false; try { rm = matchMedia('(prefers-reduced-motion: reduce)').matches } catch (e) {}
     if (Q.has('t')) freeze = clamp(+Q.get('t') || 0, 0, END)
-    else if (Q.has('static') || rm) freeze = END
+    else if (Q.has('static') || Q.has('review') || rm) freeze = END
+    if (Q.has('ruvt')) { vBase = Math.max(0, +Q.get('ruvt') || 0); anchor = performance.now() }
+    if (Q.has('ruvpaused')) { vBase = now(); paused = true }
+    if (!Array.isArray(window.RUV_STEPS)) {
+      var st = (cv.dataset.stops || '').trim()
+      window.RUV_STEPS = st ? st.split(/\s+/).map(Number).filter(function (x) { return x >= 0 }).map(function (x, i) { return { t: x, label: 'stop ' + (i + 1) } })
+                            : [{ t: 0, label: 'the beginning' }, { t: END / 2, label: 'the middle' }]
+    }
     requestAnimationFrame(frame)
   })
 })()
