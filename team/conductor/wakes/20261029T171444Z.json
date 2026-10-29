@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "Brief 6-answers-1715 written with the pre-review's conditions; pace.json waits_on_editor down to D12/D02/item 4; six mails (dev 038, deck 063, ruv-sgit 028, storyteller 012, researcher 031, motion 007), vault_check clean, pushed; build and gate clean.",
    "at": "2026-10-29T17:16:47Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "No key, token, read key or contact in the commit or six mails; no em-dashes; dev 038 carries every pre-review condition; mails ask, not order.",
+   "at": "2026-10-29T17:17:17Z"
+  },
+  "post_check": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Brief, pace.json and six mails as planned; nothing unplanned.",
+   "at": "2026-10-29T17:17:17Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T17:17:17Z",
+ "outcome": "ok"
 }
