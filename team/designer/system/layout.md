@@ -60,3 +60,9 @@ The type scale and its rules (T1 to T5) are in `type.md` beside this file (desig
 ## The home hero (design note 5, 29 October 2026)
 
 9. **W9. A composition does not stretch.** The home hero is a title beside a figure: on a wide screen the text column stops at 960px and the figure at 600px, side by side from the frame's left edge, instead of two columns that grow apart. The title grows instead, up to 88px (the display size, `--t-0`, becomes `clamp(36px, 4.6vw, 88px)`); a figure with labels never grows past the size at which its labels stay text-sized. CSS form: `hero.css` beside this file.
+
+## Dashboards (design note 6, 29 October 2026)
+
+10. **W10. A grid that grows with time opens on its newest column and keeps its row labels.** The pace grid scrolls inside its box (it gains a column an hour, so it always will) but opens scrolled to the newest hour, with the member column sticky. A cell says only what needs the eye: an ok wake is its five dots, any other outcome adds its word.
+11. **W11. Tiles and lists do not share a row.** Short stat tiles (Now, Hold) sit together; a list (Waits on the editor) takes its own full-width block below them.
+12. **W12. A scrolling row fades only on the side with more.** The phone's nav row fades at the left when there is more to the left, at the right when there is more to the right, and not at all at an end. CSS form for 10 to 12: `dashboard.css` beside this file.
