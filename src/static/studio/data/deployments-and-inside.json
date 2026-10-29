@@ -1,0 +1,481 @@
+{
+ "about": "Studio research for E07 (a typical deployment's documented reach), E06 (the soft inside: systems trust what is already inside) and E02's next version (does any source rate danger per capability). Fetched and read only, 2026-10-29, researcher@the-ultimate-insider.",
+ "cautions": [
+  "CISA AA23-059A (red team lateral movement findings) returned 403 at cisa.gov; not got round, no quote used. A CISA or NCSC lateral-movement advisory remains a gap for E06.",
+  "OWASP Top 10 for Agentic Applications 2026: only the landing page was captured; the document itself was not read.",
+  "The DBIR 2026 capture (fig-dbir-2026-pdf) mentions lateral movement only in fragments of its layout text; no clean quote taken.",
+  "GitHub has renamed Copilot coding agent to Copilot cloud agent; quotes use the current docs' name.",
+  "Vendor docs change without notice: the quotes are as captured on 2026-10-29.",
+  "The php newsroom threat model moved to team.php.oct.2026.newsroom.sgit.ai; both the stub and the page are kept.",
+  "E02b is an absence finding bounded by what was searched; nothing has been invented to fill it."
+ ],
+ "e07": {
+  "deployments": [
+   {
+    "id": "e07-github-copilot-cloud-agent",
+    "vendor": "GitHub",
+    "product": "Copilot cloud agent (formerly Copilot coding agent)",
+    "capabilities": [
+     {
+      "name": "Read the repository's code and other sensitive information",
+      "reaches": "the repository it is assigned to, and what the repository holds",
+      "quote": "Copilot cloud agent has access to code and other sensitive information, and could leak it, either accidentally or due to malicious user input.",
+      "source_id": "e07-gh-copilot-agent-risks"
+     },
+     {
+      "name": "Push code to one branch",
+      "reaches": "a single branch of the repository (a new copilot/ branch, or the pull request's branch)",
+      "quote": "Copilot cloud agent only has the ability to push to a single branch.",
+      "source_id": "e07-gh-copilot-agent-risks"
+     },
+     {
+      "name": "Run CI workflows, after a human approves",
+      "reaches": "the repository's GitHub Actions workflows",
+      "quote": "By default, workflows are not triggered until Copilot cloud agent's code is reviewed and a user with write access to the repository clicks the Approve and run workflows button.",
+      "source_id": "e07-gh-copilot-agent-risks"
+     },
+     {
+      "name": "Reach the internet through a firewall with a default allowlist",
+      "reaches": "GitHub hosts plus package repositories, container registries, language package registries and certificate authorities",
+      "quote": "The firewall always allows access to a number of hosts that Copilot uses to interact with GitHub. By default, a recommended allowlist is also enabled to allow the agent to download dependencies.",
+      "source_id": "e07-gh-copilot-agent-firewall"
+     },
+     {
+      "name": "MCP servers and setup steps outside the firewall",
+      "reaches": "whatever network the configured MCP servers and setup steps reach",
+      "quote": "It does not apply directly to Model Context Protocol (MCP) server processes or processes started in configured Copilot setup steps.",
+      "source_id": "e07-gh-copilot-agent-firewall"
+     },
+     {
+      "name": "The firewall's own stated limit",
+      "reaches": "n/a: the vendor's caveat on the egress control",
+      "quote": "These limitations mean that the firewall provides protection for common scenarios, but should not be considered a comprehensive security solution.",
+      "source_id": "e07-gh-copilot-agent-firewall"
+     }
+    ],
+    "note": "GitHub documents the reach and the controls together: read the repository, push one branch, CI gated on a human click, internet through an allowlisted firewall that the vendor says is not comprehensive and does not cover MCP servers. Drawable as: repository (read) + one branch (write) + allowlisted world (send)."
+   },
+   {
+    "id": "e07-microsoft-365-copilot",
+    "vendor": "Microsoft",
+    "product": "Microsoft 365 Copilot",
+    "capabilities": [
+     {
+      "name": "Read the user's Microsoft Graph content",
+      "reaches": "emails, chats and documents the user has permission to access",
+      "quote": "Content in Microsoft Graph, such as emails, chats, and documents that you have permission to access.",
+      "source_id": "e07-m365-copilot-privacy"
+     },
+     {
+      "name": "Ground on organizational data",
+      "reaches": "documents, emails, calendar, chats, meetings and contacts",
+      "quote": "It can generate responses anchored in your organizational data, such as user documents, emails, calendar, chats, meetings, and contacts.",
+      "source_id": "e07-m365-copilot-privacy"
+     },
+     {
+      "name": "Inherit the user's permissions, including those given across tenants",
+      "reaches": "everything the user can at least view, so oversharing is inherited",
+      "quote": "Microsoft Copilot only surfaces organizational data to which individual users have at least view permissions.",
+      "source_id": "e07-m365-copilot-privacy"
+     },
+     {
+      "name": "Send search queries to the web",
+      "reaches": "Bing Search",
+      "quote": "Copilot generates a search query that it sends to the Bing Search service.",
+      "source_id": "e07-m365-copilot-privacy"
+     },
+     {
+      "name": "Call agents and Graph connectors on the user's behalf",
+      "reaches": "third-party tools and services an admin allows",
+      "quote": "If an agent is needed, Microsoft Copilot generates a search query to send to the agent on the user's behalf. The query is based on the user's prompt, Copilot activity history, and data the user has access to in Microsoft 365.",
+      "source_id": "e07-m365-copilot-privacy"
+     }
+    ],
+    "note": "The deployment's reach is the user's own reach in the tenant: Microsoft states the boundary is the user's permissions, which is the E06 point in vendor words (whatever is already shared inside is reachable)."
+   },
+   {
+    "id": "e07-claude-code",
+    "vendor": "Anthropic",
+    "product": "Claude Code (local CLI, Manual mode default)",
+    "capabilities": [
+     {
+      "name": "Read-only by default; edits and commands ask first",
+      "reaches": "the working directory",
+      "quote": "Manual mode: Claude Code starts with read-only permissions. When it needs to edit files, run tests, or execute commands, it asks you first",
+      "source_id": "e07-claude-code-security"
+     },
+     {
+      "name": "An approved Bash command runs as the user",
+      "reaches": "anything the user's account can write",
+      "quote": "The boundary is a permission prompt, so a Bash command you approve can still write anywhere your user account can",
+      "source_id": "e07-claude-code-security"
+     },
+     {
+      "name": "Network fetches prompt by default",
+      "reaches": "the internet, after approval or an allow rule",
+      "quote": "Commands that fetch content from the web such as curl and wget are not auto-approved by default.",
+      "source_id": "e07-claude-code-security"
+     },
+     {
+      "name": "Cloud sessions: limited network by default",
+      "reaches": "allowed domains only, when configured",
+      "quote": "Network access is limited by default and can be configured to be disabled or allow only specific domains",
+      "source_id": "e07-claude-code-security"
+     }
+    ],
+    "note": "A secondary example. The local default is a prompt, not a boundary, per the vendor's own words; the OS-level boundary is the opt-in sandbox (already captured as claude-code-sandboxing-docs)."
+   }
+  ]
+ },
+ "e06": {
+  "items": [
+   {
+    "id": "e06-nist-implicit-trust",
+    "what": "NIST's definition of zero trust names the implicit trust it replaces: trust from network location",
+    "quote": "Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).",
+    "source_id": "nist-sp800-207",
+    "grade": "A6"
+   },
+   {
+    "id": "e06-nist-lateral-unhindered",
+    "what": "NIST: once past the perimeter, lateral movement is unhindered",
+    "quote": "Perimeter-based network security has also been shown to be insufficient since once attackers breach the perimeter, further lateral movement is unhindered.",
+    "source_id": "nist-sp800-207",
+    "grade": "A6"
+   },
+   {
+    "id": "e06-midnight-blizzard-oauth",
+    "what": "Midnight Blizzard: a legacy test tenant account without MFA, then a legacy test OAuth app with elevated access to the corporate environment, used to grant mailbox access",
+    "quote": "Midnight Blizzard leveraged their initial access to identify and compromise a legacy test OAuth application that had elevated access to the Microsoft corporate environment.",
+    "source_id": "e06-msti-midnight-blizzard-guidance",
+    "grade": "A5"
+   },
+   {
+    "id": "e06-mtrends-dwell",
+    "what": "M-Trends 2026: attackers stay inside for weeks (median) and, for espionage, months",
+    "quote": "Global Median Dwell Time: Global median dwell time rose to 14 days from 11 days.",
+    "source_id": "story-mtrends-2026",
+    "grade": "A2"
+   },
+   {
+    "id": "e06-php2shell-shared-memory",
+    "what": "php2shell: one unauthenticated request can read memory holding other requests' secrets, because workers share process memory",
+    "quote": "That memory may contain passwords, authentication tokens, API keys and certificates belonging to other requests or the",
+    "source_id": "wiz-php2shell",
+    "grade": "A2"
+   },
+   {
+    "id": "e06-php-newsroom-settings-not-boundaries",
+    "what": "This team's PHP newsroom, on its own agents: every agent can push, and what stands between a push and the live site is settings, not boundaries",
+    "quote": "Every agent can push. What stands between a push and the live site today is a script the agent runs and a gate inside the commit it pushes: settings, not boundaries (SA-2026-023).",
+    "source_id": "e06-php-threat-model",
+    "grade": "A2"
+   }
+  ]
+ },
+ "e02b": {
+  "answer": "No source found rates danger or severity per capability. Two partial proxies exist, both in this estate: (1) what-can-it-do's primitives carry 'reversible' (yes / with-effort / no) and an ordered reach (self, project, host, tenant, world) on each of 23 capabilities; (2) its ceiling.json carries an authored 'level' (distance from a consequence, 1 = the capability is the consequence) on 17 above-the-ceiling capabilities only, while levels for the held capabilities are derived by the game engine and are not in the published data. abp.sgit.ai republishes reversibility as 'undo class' and states explicitly that it is not a severity and that the pack has no score; riskmandate.ai argues danger belongs to the deployment, not the capability. Outside: OWASP LLM06 names 'high-impact actions' without a per-capability rating; Microsoft Graph documents privilege qualitatively (application permissions 'highly privileged', 'least privileged' vs 'higher privileged', admin consent) but gives no danger score.",
+  "sources": [
+   {
+    "id": "e02b-wcid-reversible",
+    "what_it_rates": "reversibility per capability (proxy, not danger)",
+    "quote": "Reversibility sits on the primitive, not the instance, because it decides whether a gap is a nuisance or a loss",
+    "source_id": "wcid-data-primitives"
+   },
+   {
+    "id": "e02b-wcid-ceiling-level",
+    "what_it_rates": "authored 'level' (distance from a consequence) for 17 capabilities above the ceiling; 8 at level 1",
+    "quote": "each carries its level (distance from a consequence, by the same rule as the derived levels: 1 = the capability is the consequence) as a stated judgement",
+    "source_id": "e02b-wcid-ceiling"
+   },
+   {
+    "id": "e02b-wcid-reductions-tier",
+    "what_it_rates": "the control tier a capability reaches after a reduction (e.g. 'boundary'), not danger",
+    "quote": "the tier the control reaches afterwards",
+    "source_id": "e02b-wcid-reductions"
+   },
+   {
+    "id": "e02b-abp-no-score",
+    "what_it_rates": "nothing: states there is no score, rating or severity",
+    "quote": "There is no score, rating, traffic light, risk level or severity in this pack or anywhere on this site.",
+    "source_id": "abp-sgit-data-index-md"
+   },
+   {
+    "id": "e02b-abp-undo-not-severity",
+    "what_it_rates": "undo class as an ordering, explicitly not a severity",
+    "quote": "Irreversible first on every rendering. Stated as a property of the action, never as severity.",
+    "source_id": "e02b-abp-undo-classes"
+   },
+   {
+    "id": "e02b-riskmandate-deployment",
+    "what_it_rates": "nothing per capability: places danger in the deployment",
+    "quote": "A policy cannot be dangerous. A deployment can.",
+    "source_id": "rm-abp"
+   },
+   {
+    "id": "e02b-owasp-llm06",
+    "what_it_rates": "no rating; names 'high-impact actions' as a class needing human approval",
+    "quote": "Utilise human-in-the-loop control to require a human to approve high-impact actions before they are taken.",
+    "source_id": "e02b-owasp-llm06-excessive-agency"
+   },
+   {
+    "id": "e02b-ms-graph-privilege",
+    "what_it_rates": "a qualitative privilege class (delegated vs application; least vs higher privileged; admin consent), not a danger score",
+    "quote": "Application permissions are highly privileged because they allow applications to access and modify resources without requiring a signed-in user.",
+    "source_id": "e02b-ms-graph-permissions-overview"
+   }
+  ],
+  "none_found_for": "A published per-capability danger, severity, risk or blast-radius score: none in what-can-it-do (no such field in primitives, ceiling, reductions or the mesh), abp.sgit.ai (says so explicitly), riskmandate.ai, OWASP LLM06, or Microsoft Graph's permissions overview. Not checked in the time box: the OWASP Agentic Top 10 document itself (landing page only), MITRE ATLAS, GitHub's fine-grained token permission docs."
+ },
+ "claims": [
+  {
+   "id": "e07-github-copilot-cloud-agent",
+   "text": "A typical deployment: GitHub Copilot cloud agent (formerly Copilot coding agent) reaches what its vendor documents (proposed beat, not yet on the site)",
+   "where": [
+    "talk:e07 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e07-gh-copilot-agent-risks",
+     "quote": "Copilot cloud agent has access to code and other sensitive information, and could leak it, either accidentally or due to malicious user input.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-gh-copilot-agent-risks",
+     "quote": "Copilot cloud agent only has the ability to push to a single branch.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-gh-copilot-agent-risks",
+     "quote": "By default, workflows are not triggered until Copilot cloud agent's code is reviewed and a user with write access to the repository clicks the Approve and run workflows button.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "GitHub documents the reach and the controls together: read the repository, push one branch, CI gated on a human click, internet through an allowlisted firewall that the vendor says is not comprehensive and does not cover MCP servers. Drawable as: repository (read) + one branch (write) + allowlisted world (send)."
+  },
+  {
+   "id": "e07-microsoft-365-copilot",
+   "text": "A typical deployment: Microsoft Microsoft 365 Copilot reaches what its vendor documents (proposed beat, not yet on the site)",
+   "where": [
+    "talk:e07 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e07-m365-copilot-privacy",
+     "quote": "Content in Microsoft Graph, such as emails, chats, and documents that you have permission to access.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-m365-copilot-privacy",
+     "quote": "It can generate responses anchored in your organizational data, such as user documents, emails, calendar, chats, meetings, and contacts.",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-m365-copilot-privacy",
+     "quote": "Microsoft Copilot only surfaces organizational data to which individual users have at least view permissions.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The deployment's reach is the user's own reach in the tenant: Microsoft states the boundary is the user's permissions, which is the E06 point in vendor words (whatever is already shared inside is reachable)."
+  },
+  {
+   "id": "e07-claude-code",
+   "text": "A typical deployment: Anthropic Claude Code (local CLI, Manual mode default) reaches what its vendor documents (proposed beat, not yet on the site)",
+   "where": [
+    "talk:e07 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e07-claude-code-security",
+     "quote": "Manual mode: Claude Code starts with read-only permissions. When it needs to edit files, run tests, or execute commands, it asks you first",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-claude-code-security",
+     "quote": "The boundary is a permission prompt, so a Bash command you approve can still write anywhere your user account can",
+     "supports": "for"
+    },
+    {
+     "source_id": "e07-claude-code-security",
+     "quote": "Commands that fetch content from the web such as curl and wget are not auto-approved by default.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A secondary example. The local default is a prompt, not a boundary, per the vendor's own words; the OS-level boundary is the opt-in sandbox (already captured as claude-code-sandboxing-docs)."
+  },
+  {
+   "id": "e06-nist-implicit-trust",
+   "text": "NIST's definition of zero trust names the implicit trust it replaces: trust from network location (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "nist-sp800-207",
+     "quote": "Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet) or based on asset ownership (enterprise or personally owned).",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "NIST is the authoritative primary record for the definition; it is a standard, not an incident measurement."
+  },
+  {
+   "id": "e06-nist-lateral-unhindered",
+   "text": "NIST: once past the perimeter, lateral movement is unhindered (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "nist-sp800-207",
+     "quote": "Perimeter-based network security has also been shown to be insufficient since once attackers breach the perimeter, further lateral movement is unhindered.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A statement of the problem in the standard's background, not a measured rate."
+  },
+  {
+   "id": "e06-midnight-blizzard-oauth",
+   "text": "Midnight Blizzard: a legacy test tenant account without MFA, then a legacy test OAuth app with elevated access to the corporate environment, used to grant mailbox access (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e06-msti-midnight-blizzard-guidance",
+     "quote": "Midnight Blizzard leveraged their initial access to identify and compromise a legacy test OAuth application that had elevated access to the Microsoft corporate environment.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Two Microsoft primary records (MSRC 19 Jan 2024 and Microsoft Threat Intelligence 25 Jan 2024), same party; independent corroboration not checked here, so A5 rests on two Microsoft documents and could be read as A4."
+  },
+  {
+   "id": "e06-mtrends-dwell",
+   "text": "M-Trends 2026: attackers stay inside for weeks (median) and, for espionage, months (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "story-mtrends-2026",
+     "quote": "Global Median Dwell Time: Global median dwell time rose to 14 days from 11 days.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "One vendor's incident-response caseload, not the whole population; espionage and North Korean IT worker median was 122 days."
+  },
+  {
+   "id": "e06-php2shell-shared-memory",
+   "text": "php2shell: one unauthenticated request can read memory holding other requests' secrets, because workers share process memory (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "wiz-php2shell",
+     "quote": "That memory may contain passwords, authentication tokens, API keys and certificates belonging to other requests or the",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Researcher's own demonstration (Wiz); the point is shared process memory, an inside trust, not a network. No exploitation detail reproduced."
+  },
+  {
+   "id": "e06-php-newsroom-settings-not-boundaries",
+   "text": "This team's PHP newsroom, on its own agents: every agent can push, and what stands between a push and the live site is settings, not boundaries (proposed evidence for E06, not yet worded on the site)",
+   "where": [
+    "talk:e06 (proposed)"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "e06-php-threat-model",
+     "quote": "Every agent can push. What stands between a push and the live site today is a script the agent runs and a gate inside the commit it pushes: settings, not boundaries (SA-2026-023).",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Own-site first-hand account; it is this team's admission about its own agents and is strong as an observation, weak as a general statistic."
+  },
+  {
+   "id": "e02b-no-per-capability-danger",
+   "text": "No published source rates danger per capability; reversibility and reach are the nearest proxies",
+   "where": [
+    "talk:e02 (next version)"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "abp-sgit-data-index-md",
+     "quote": "There is no score, rating, traffic light, risk level or severity in this pack or anywhere on this site.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wcid-data-primitives",
+     "quote": "Reversibility sits on the primitive, not the instance, because it decides whether a gap is a nuisance or a loss",
+     "supports": "for"
+    },
+    {
+     "source_id": "e02b-wcid-ceiling",
+     "quote": "each carries its level (distance from a consequence, by the same rule as the derived levels: 1 = the capability is the consequence) as a stated judgement",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "An absence finding, bounded by what was searched. The wcid 'level' is the closest thing to a danger rating, but it is published only for the 17 ceiling capabilities; the held capabilities' levels are computed in the game, not in the data. If E02 shows a danger column, it is new authorship and should say so."
+  },
+  {
+   "id": "e02b-reversible-read-oddity",
+   "text": "read.file.project is marked reversible 'yes' while the vocabulary says a record read cannot be unread",
+   "where": [
+    "talk:e02 (next version)"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "wcid-data-primitives",
+     "quote": "a record read is exposure that cannot be unread",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "In primitives.json, read.file.project is 'yes' but read.file.host, read.credential.host and read.message.tenant are 'no'. Worth confirming with the data owner before using reversibility as a danger proxy on a slide."
+  }
+ ]
+}
