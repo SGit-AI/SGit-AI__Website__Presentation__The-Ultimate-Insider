@@ -1,6 +1,6 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T16:25Z",
+ "built": "2026-10-29T16:27Z",
  "count": 542,
  "sources": [
   {
@@ -16504,8 +16504,14 @@
   },
   {
    "id": "s1-caida-codered",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.caida.org/archive/code-red/",
+   "final_url": "https://www.caida.org/archive/code-red/",
+   "publisher": "CAIDA",
+   "title": "CAIDA Analysis of Code-Red",
+   "kind": "primary",
+   "published": "2001-07-01",
+   "captured_at": "2026-10-29T16:21:24Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16536,12 +16542,20 @@
      "sha256": "f18a9d51f0456029a5272e34427183a955e733ea2e8b095b6fa53c0d440236bb",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s1-caida-codered-coderedv2",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.caida.org/archive/code-red/coderedv2_analysis/",
+   "final_url": "https://www.caida.org/archive/code-red/coderedv2_analysis/",
+   "publisher": "CAIDA",
+   "title": "Code-Red Worms: A Global Threat (CRv2 analysis)",
+   "kind": "primary",
+   "published": "2001-07-24",
+   "captured_at": "2026-10-29T16:21:24Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16573,12 +16587,20 @@
      "sha256": "8e88a8e4edc28a60d0ec39f154d23eb82837d34b8c11d068040229b641efe590",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s1-caida-slammer",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.caida.org/catalog/papers/2003_sapphire/",
+   "final_url": "https://www.caida.org/catalog/papers/2003_sapphire/",
+   "publisher": "CAIDA (Moore, Paxson, Savage, Shannon, Staniford, Weaver)",
+   "title": "The Spread of the Sapphire/Slammer Worm",
+   "kind": "primary",
+   "published": "2003-02-01",
+   "captured_at": "2026-10-29T16:21:24Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16609,12 +16631,20 @@
      "sha256": "bd6804446216b45ec8806450c2c41e0abbfaf1fe6a66e996c8e0db73fa160bc0",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s1-ieee-inside-slammer",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.icir.org/vern/papers/IEEESP03.pdf",
+   "final_url": "https://www.icir.org/vern/papers/IEEESP03.pdf",
+   "publisher": "IEEE Security & Privacy (Moore et al.), copy hosted at icir.org",
+   "title": "Inside the Slammer Worm",
+   "kind": "primary",
+   "published": "2003-07-01",
+   "captured_at": "2026-10-29T16:22:17Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16645,12 +16675,20 @@
      "sha256": "9979d06e1d6e6874c1648f6034da2f1cf5b77efa5aa93546c00ef84dbb74be72",
      "bytes": 75
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-azure-afd-oct-2025",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://azure.status.microsoft/en-us/status/history/",
+   "final_url": "https://azure.status.microsoft/en-us/status/history/",
+   "publisher": "Microsoft Azure",
+   "title": "Azure status history (current list, 2026 PIRs only)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T16:21:23Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16680,12 +16718,20 @@
      "sha256": "2b445db1642e1b053ba4f8d19decd08f0ca34f1c8fa6e7be4d5784e87c600556",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "partial: list page shows only recent (2026) PIRs; the October 2025 AFD PIR captured separately as s2-azure-afd-ykyn-bwz",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-azure-afd-ykyn-bwz",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://azure.status.microsoft/en-us/status/history/?trackingId=YKYN-BWZ",
+   "final_url": "https://azure.status.microsoft/en-us/status/history/?trackingId=YKYN-BWZ",
+   "publisher": "Microsoft Azure",
+   "title": "Azure status history, PIR YKYN-BWZ (Azure Front Door)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T16:23:21Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16715,12 +16761,20 @@
      "sha256": "6569466d32ec6603d9145fc7abb6ba35ca2ec9969fb3cdaedb71d60b7f73975c",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-businessinsurance-cybercube",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.businessinsurance.com/insured-losses-from-crowdstrike-outage-could-reach-15b-cybercube/",
+   "final_url": "https://www.businessinsurance.com/insured-losses-from-crowdstrike-outage-could-reach-15b-cybercube/",
+   "publisher": "Business Insurance (Reuters)",
+   "title": "Insured losses from CrowdStrike outage could reach $1.5B: CyberCube",
+   "kind": "news",
+   "published": "2024-07-25",
+   "captured_at": "2026-10-29T16:24:01Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16750,12 +16804,20 @@
      "sha256": "5391dc090b5c0601c2ba9a610ea61a2596db834942de1d0f674e09dc3c27112d",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-crowdstrike-kurtz-statement",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.crowdstrike.com/en-us/blog/statement-on-falcon-content-update-for-windows-hosts/",
+   "final_url": "https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/",
+   "publisher": "CrowdStrike",
+   "title": "Falcon content update remediation and guidance hub (redirect from the 19 July statement)",
+   "kind": "primary",
+   "published": "2024-07-19",
+   "captured_at": "2026-10-29T16:23:22Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16785,12 +16847,20 @@
      "sha256": "b2e558bccc4e1291f4346a85abf45fb26972e1c08ae9fd5c150e3f739c6ab286",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full (the statement URL redirects to the remediation hub, which carries the statement text)",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-crowdstrike-pir",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/",
+   "final_url": "https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/",
+   "publisher": "CrowdStrike",
+   "title": "Falcon Content Update Preliminary Post Incident Report",
+   "kind": "primary",
+   "published": "2024-07-24",
+   "captured_at": "2026-10-29T16:21:24Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16821,12 +16891,20 @@
      "sha256": "dcbe9f06d2d206b5fa3352a84d301f8e32015cbfd4bfd244b92808835c95244e",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-crowdstrike-rca-pdf",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf",
+   "final_url": "https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf",
+   "publisher": "CrowdStrike",
+   "title": "External Technical Root Cause Analysis, Channel File 291",
+   "kind": "primary",
+   "published": "2024-08-06",
+   "captured_at": "2026-10-29T16:21:24Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16856,12 +16934,20 @@
      "sha256": "ced615f792e7d49e0e51a2ad9470d1be2bbcbdde6c9dd39ed8a41260d7558096",
      "bytes": 75
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-fortune-parametrix",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://fortune.com/2024/08/03/crowdstrike-outage-fortune-500-companies-5-4-billion-damages-uninsured-losses",
+   "final_url": "https://fortune.com/2024/08/03/crowdstrike-outage-fortune-500-companies-5-4-billion-damages-uninsured-losses/",
+   "publisher": "Fortune (Bloomberg)",
+   "title": "CrowdStrike outage will cost Fortune 500 companies $5.4 billion in damages",
+   "kind": "news",
+   "published": "2024-08-03",
+   "captured_at": "2026-10-29T16:24:01Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16891,12 +16977,20 @@
      "sha256": "e81333aa8cac445d3a28074b6e83131c8540f251251f676caf90b9ae93ebe75f",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-gcp-incident-2025-06-12",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW",
+   "final_url": "https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW",
+   "publisher": "Google Cloud",
+   "title": "Service Health incident ow5i3PPK96RduMcb1SsW (incident report)",
+   "kind": "primary",
+   "published": "2025-06-13",
+   "captured_at": "2026-10-29T16:21:23Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16926,12 +17020,20 @@
      "sha256": "fe55c3c1a033f35c3adc0607e87d61fa58155b287789d144b80d6ae63e8bc466",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-house-crowdstrike-recap",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://homeland.house.gov/2024/09/26/icymi-committee-examines-crowdstrike-processes-in-first-congressional-hearing-on-the-disastrous-july-global-it-outage",
+   "final_url": "https://homeland.house.gov/2024/09/26/icymi-committee-examines-crowdstrike-processes-in-first-congressional-hearing-on-the-disastrous-july-global-it-outage/",
+   "publisher": "US House Committee on Homeland Security",
+   "title": "ICYMI: Committee examines CrowdStrike processes in first congressional hearing",
+   "kind": "primary",
+   "published": "2024-09-26",
+   "captured_at": "2026-10-29T16:24:01Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16961,12 +17063,20 @@
      "sha256": "e75d47b5edfea5409d96359438592c6b0cfbcb61a2944410f6d58e25b526e36f",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-insjournal-guycarp-crowdstrike",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.insurancejournal.com/news/national/2024/08/02/786766.htm",
+   "final_url": "https://www.insurancejournal.com/news/national/2024/08/02/786766.htm",
+   "publisher": "Insurance Journal",
+   "title": "Guy Carpenter: Kitty Cat CrowdStrike Outage to Cause $300M-$1B in Insured Losses",
+   "kind": "news",
+   "published": "2024-08-02",
+   "captured_at": "2026-10-29T16:24:01Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -16998,12 +17108,20 @@
      "sha256": "66f63043509d9458f627560cc5ab2bcc6b872cd63bd3cd3be7d3798418494aed",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-ms-crowdstrike-blog",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/",
+   "final_url": "https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/",
+   "publisher": "Microsoft (David Weston)",
+   "title": "Helping our customers through the CrowdStrike outage",
+   "kind": "primary",
+   "published": "2024-07-20",
+   "captured_at": "2026-10-29T16:21:23Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -17034,12 +17152,20 @@
      "sha256": "358c6c73e59695770a6d3c8eaf9f8b115cc0e0b06a4d92b8ca29f17a740b13fd",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-networkworld-uptime-2025",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.networkworld.com/article/3980366/networking-errors-pose-threat-to-data-center-reliability.html",
+   "final_url": "https://www.networkworld.com/article/3980366/networking-errors-pose-threat-to-data-center-reliability.html",
+   "publisher": "Network World",
+   "title": "Networking errors pose threat to data center reliability (Uptime Institute 2025 outage analysis)",
+   "kind": "news",
+   "published": "2025-05-01",
+   "captured_at": "2026-10-29T16:24:01Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -17069,12 +17195,20 @@
      "sha256": "95dfd325e5723184fdc365c537d966b5cba4f91df7eb85bdcecedfb1d4c4065b",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "full",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-parametrix-crowdstrike",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://www.parametrixinsurance.com/crowdstrike-outage-impact-on-the-fortune-500",
+   "final_url": "https://www.parametrixinsurance.com/reports-white-papers/crowdstrikes-impact-on-the-fortune-500",
+   "publisher": "Parametrix",
+   "title": "CrowdStrike's Impact on the Fortune 500 (landing page; report behind a form, not submitted)",
+   "kind": "vendor-survey",
+   "published": "2024-07-24",
+   "captured_at": "2026-10-29T16:21:23Z",
+   "http_status": 200,
    "files": [
     {
      "name": "meta.json",
@@ -17104,12 +17238,20 @@
      "sha256": "91504d94553aae80afab5c46e61e11789ac11ee7904ff64cdda383ef6a79cad8",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "partial: landing page only; the report sits behind a contact form, not submitted",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-uptime-2025-outage-analysis",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://uptimeinstitute.com/about-ui/press-releases/uptime-announces-annual-outage-analysis-report-2025",
+   "final_url": "https://uptimeinstitute.com/about-ui/press-releases/uptime-announces-annual-outage-analysis-report-2025",
+   "publisher": "Uptime Institute",
+   "title": "Uptime announces Annual Outage Analysis Report 2025",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T16:21:23Z",
+   "http_status": 403,
    "files": [
     {
      "name": "meta.json",
@@ -17139,12 +17281,20 @@
      "sha256": "a8f6bf7a556b90fde22fa78e1d61f9f8e5a6aac844b253c80da9d3b04d1fdc63",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "failed: 403 bot wall, not got round (per instructions)",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-uptime-2025-report-pdf",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://intelligence.uptimeinstitute.com/entity_pdf/node/2747/pdf",
+   "final_url": "https://intelligence.uptimeinstitute.com/entity_pdf/node/2747/pdf",
+   "publisher": "Uptime Institute",
+   "title": "Annual Outage Analysis 2025 (PDF)",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T16:24:00Z",
+   "http_status": 403,
    "files": [
     {
      "name": "meta.json",
@@ -17167,12 +17317,20 @@
      "sha256": "2300a7643fca40b2bfc72e190dc498f7329f4a7f9ebcbbe7235570f84cc07bd4",
      "bytes": 75
     }
-   ]
+   ],
+   "capture": "failed: 403 bot wall, not got round (per instructions)",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s2-uptime-outage-2025-blog",
-   "url": null,
-   "capture": "unlisted: a capture folder no record names",
+   "url": "https://intelligence.uptimeinstitute.com/resource/annual-outage-analysis-2025",
+   "final_url": "https://intelligence.uptimeinstitute.com/resource/annual-outage-analysis-2025",
+   "publisher": "Uptime Institute",
+   "title": "Annual outage analysis 2025 resource page",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T16:23:21Z",
+   "http_status": 403,
    "files": [
     {
      "name": "meta.json",
@@ -17202,7 +17360,9 @@
      "sha256": "3d00f85567d56042e796ba7d3f65744379aa0216dd6ec3293e5114f5986613d4",
      "bytes": 76
     }
-   ]
+   ],
+   "capture": "failed: 403 bot wall, not got round (per instructions)",
+   "recorded_by": "story-s1-s3"
   },
   {
    "id": "s4-site-release-history",

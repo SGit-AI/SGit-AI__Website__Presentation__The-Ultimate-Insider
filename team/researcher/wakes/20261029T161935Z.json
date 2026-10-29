@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "In scope.writes, public fetch only. The relay is material: act only on its evidence part (sharness.ai's animations, infographics, workflows, the browser Linux page), the editor's quoted words carried, not verified. Reply to ruv.sgit, the requester; deck only as a reply in the same thread with no work passed on. S4 from git: counts and dates only, no author names or emails. vault_check before vault commits; no keys. Three requests at once: within the 45 minutes.",
    "at": "2026-10-29T16:20:51Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "Three requests done: 007 (story-s1-s3.json, 19 claims; no source compares total losses of accidents and attacks, said so), the SHarness series (18 pieces, reply to ruv.sgit Cc deck), S4 and S5 for the storyteller. Issues 012 to 014 done. Vaults checked clean.",
+   "at": "2026-10-29T16:29:49Z"
   }
  },
  "closed": null,

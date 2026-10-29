@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T16:25Z. 542 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T16:27Z. 542 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -404,26 +404,26 @@ Built 2026-10-29T16:25Z. 542 sources; `manifest.json` has every file's SHA-256. 
 | [rm-lto](https://riskmandate.ai/licence-to-operate.html) | RiskMandate (Dinis Cruz) | own-site | 2026-10-29T01:50:23Z | 200 | full | 4 |
 | [ruflo-license](https://raw.githubusercontent.com/ruvnet/ruflo/main/LICENSE) | ruvnet (GitHub) | primary | 2026-10-29T01:56:20Z | 200 | full | 3 |
 | [ruflo-npm](https://registry.npmjs.org/ruflo/latest) | npm registry | primary | 2026-10-29T01:56:20Z | 200 | full | 4 |
-| [s1-caida-codered](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s1-caida-codered-coderedv2](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s1-caida-slammer](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s1-ieee-inside-slammer](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-azure-afd-oct-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-azure-afd-ykyn-bwz](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-businessinsurance-cybercube](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-crowdstrike-kurtz-statement](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-crowdstrike-pir](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-crowdstrike-rca-pdf](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-fortune-parametrix](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-gcp-incident-2025-06-12](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-house-crowdstrike-recap](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-insjournal-guycarp-crowdstrike](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-ms-crowdstrike-blog](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-networkworld-uptime-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-parametrix-crowdstrike](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-uptime-2025-outage-analysis](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [s2-uptime-2025-report-pdf](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [s2-uptime-outage-2025-blog](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [s1-caida-codered](https://www.caida.org/archive/code-red/) | CAIDA | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s1-caida-codered-coderedv2](https://www.caida.org/archive/code-red/coderedv2_analysis/) | CAIDA | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s1-caida-slammer](https://www.caida.org/catalog/papers/2003_sapphire/) | CAIDA (Moore, Paxson, Savage, Shannon, Staniford, Weaver) | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s1-ieee-inside-slammer](https://www.icir.org/vern/papers/IEEESP03.pdf) | IEEE Security & Privacy (Moore et al.), copy hosted at icir.org | primary | 2026-10-29T16:22:17Z | 200 | full | 4 |
+| [s2-azure-afd-oct-2025](https://azure.status.microsoft/en-us/status/history/) | Microsoft Azure | primary | 2026-10-29T16:21:23Z | 200 | partial: list page shows only recent (2026) PIRs; the October 2025 AFD PIR captured separately as s2-azure-afd-ykyn-bwz | 4 |
+| [s2-azure-afd-ykyn-bwz](https://azure.status.microsoft/en-us/status/history/?trackingId=YKYN-BWZ) | Microsoft Azure | primary | 2026-10-29T16:23:21Z | 200 | full | 4 |
+| [s2-businessinsurance-cybercube](https://www.businessinsurance.com/insured-losses-from-crowdstrike-outage-could-reach-15b-cybercube/) | Business Insurance (Reuters) | news | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-crowdstrike-kurtz-statement](https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/) | CrowdStrike | primary | 2026-10-29T16:23:22Z | 200 | full (the statement URL redirects to the remediation hub, which carries the statement text) | 4 |
+| [s2-crowdstrike-pir](https://www.crowdstrike.com/en-us/blog/falcon-content-update-preliminary-post-incident-report/) | CrowdStrike | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s2-crowdstrike-rca-pdf](https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf) | CrowdStrike | primary | 2026-10-29T16:21:24Z | 200 | full | 4 |
+| [s2-fortune-parametrix](https://fortune.com/2024/08/03/crowdstrike-outage-fortune-500-companies-5-4-billion-damages-uninsured-losses/) | Fortune (Bloomberg) | news | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-gcp-incident-2025-06-12](https://status.cloud.google.com/incidents/ow5i3PPK96RduMcb1SsW) | Google Cloud | primary | 2026-10-29T16:21:23Z | 200 | full | 4 |
+| [s2-house-crowdstrike-recap](https://homeland.house.gov/2024/09/26/icymi-committee-examines-crowdstrike-processes-in-first-congressional-hearing-on-the-disastrous-july-global-it-outage/) | US House Committee on Homeland Security | primary | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-insjournal-guycarp-crowdstrike](https://www.insurancejournal.com/news/national/2024/08/02/786766.htm) | Insurance Journal | news | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-ms-crowdstrike-blog](https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/) | Microsoft (David Weston) | primary | 2026-10-29T16:21:23Z | 200 | full | 4 |
+| [s2-networkworld-uptime-2025](https://www.networkworld.com/article/3980366/networking-errors-pose-threat-to-data-center-reliability.html) | Network World | news | 2026-10-29T16:24:01Z | 200 | full | 4 |
+| [s2-parametrix-crowdstrike](https://www.parametrixinsurance.com/reports-white-papers/crowdstrikes-impact-on-the-fortune-500) | Parametrix | vendor-survey | 2026-10-29T16:21:23Z | 200 | partial: landing page only; the report sits behind a contact form, not submitted | 4 |
+| [s2-uptime-2025-outage-analysis](https://uptimeinstitute.com/about-ui/press-releases/uptime-announces-annual-outage-analysis-report-2025) | Uptime Institute | primary | 2026-10-29T16:21:23Z | 403 | failed: 403 bot wall, not got round (per instructions) | 4 |
+| [s2-uptime-2025-report-pdf](https://intelligence.uptimeinstitute.com/entity_pdf/node/2747/pdf) | Uptime Institute | primary | 2026-10-29T16:24:00Z | 403 | failed: 403 bot wall, not got round (per instructions) | 3 |
+| [s2-uptime-outage-2025-blog](https://intelligence.uptimeinstitute.com/resource/annual-outage-analysis-2025) | Uptime Institute | primary | 2026-10-29T16:23:21Z | 403 | failed: 403 bot wall, not got round (per instructions) | 4 |
 | [s4-site-release-history](git log origin/dev (SGit-AI/SGit-AI__Website__Presentation__The-Ultimate-Insider)) | this site's CI (GitHub Actions release workflow) | primary | 2026-10-29T16:21:24Z | 200 | full | 2 |
 | [s5-explorer-coding](https://newsroom.sgit.ai/articles/explorer-coding.md) | SGit Newsroom (Dinis Cruz) | own-site | 2026-10-29T16:21:33Z | 200 | full | 2 |
 | [s5-the-agent-team-as-it-runs](https://newsroom.sgit.ai/articles/the-agent-team-as-it-runs.md) | SGit Newsroom (Dinis Cruz) | own-site | 2026-10-29T16:21:34Z | 200 | full | 2 |
