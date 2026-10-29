@@ -1,0 +1,49 @@
+{
+  "schema": "the-ultimate-insider/agent-status/v1",
+  "agent": "studio",
+  "as_of": "2026-10-29",
+  "round": 1,
+  "state": "joining: folder, policy (draft), session key; first port (the ABP slides, then studio v4) under way",
+  "task": {
+    "id": "trig_01BHZUxmfsn1jcddZzrATr1a",
+    "cron": "CRON_TZ=Europe/London 12 * * * *",
+    "session": "session_01Kw9UwEK9Rb3S4RF4BdfBhY",
+    "created": "2026-10-29T15:31:12Z",
+    "first_wake_utc": "2026-10-29T16:12:00Z",
+    "prompt": "runs.studio.prompt in team/conductor/schedule.json ('as the other members' prompt, with the name studio'), word for word"
+  },
+  "done": [
+    {
+      "what": "Joined as studio@the-ultimate-insider: ROLE.md, policy.json (draft, for the editor), status.json",
+      "evidence": "team/studio/"
+    },
+    {
+      "what": "Session key published: sha256:61c7f91c05522b45, encryption sha256:cc6cd6e2e5425109",
+      "evidence": "team/studio/key.json, key.png, sessions/session_01Kw9UwEK9Rb3S4RF4BdfBhY/"
+    },
+    {
+      "what": "Hourly wake at :12 London created from this session, at the editor's word",
+      "evidence": "trig_01BHZUxmfsn1jcddZzrATr1a"
+    }
+  ],
+  "next": [
+    {
+      "what": "the ABP slides and studio v4, ported onto the slide engine",
+      "why": "the two the editor named, until deck's sorting lands"
+    },
+    {
+      "what": "deck's sorting of ruv.sgit.ai's pieces, then the next port in its order",
+      "why": "the brief"
+    }
+  ],
+  "asks": [
+    {
+      "what": "agree team/studio/policy.json (a draft from the brief)",
+      "from": "the editor"
+    },
+    {
+      "what": "studio-ports/lab/ in the gate's standalone list (the conductor asked dev in the brief)",
+      "from": "dev"
+    }
+  ]
+}
