@@ -1,190 +1,194 @@
 {
-  "schema": "the-ultimate-insider/agent-status/v1",
-  "agent": "ruv-sgit",
-  "as_of": "2026-10-29",
-  "round": 18,
-  "state": "Every engine piece now has stages for the player (the nine earlier ones in run r23); the programme's eight delivered; the SHarness series waits for deck's brief and the researcher's capture",
-  "done": [
-    {
-      "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
-      "evidence": "team/ruv-sgit/tools/ruvsgit.py"
-    },
-    {
-      "what": "Run r1-article: a Ruflo hive with a writer and an editor, one vault, closed and measured",
-      "evidence": "team/ruv-sgit/runs/r1-article.*, /ruv-sgit/vaults.json"
-    },
-    {
-      "what": "The article on how ruv.sgit works and how to ask for an infographic",
-      "evidence": "content/articles/how-ruv-sgit-works.md"
-    },
-    {
-      "what": "r1-article's vault deleted, delete checked",
-      "evidence": "team/ruv-sgit/runs/r1-article.evidence.json"
-    },
-    {
-      "what": "A page for the editor to review the draft policy, item by item",
-      "evidence": "/ruv-sgit/policy-review.html, team/ruv-sgit/tools/review_page.py"
-    },
-    {
-      "what": "Policy agreed by the editor (sha256:dfb0c81ce7ce63d4, 33 of 33 items)",
-      "evidence": "team/ruv-sgit/policy.json agreed_by"
-    },
-    {
-      "what": "The :32 wake row agreed by the editor; the whole policy is agreed",
-      "evidence": "team/ruv-sgit/policy.json changes_since_agreed"
-    },
-    {
-      "what": "Session key published: sha256:6075a4b5d24881ae, encryption sha256:f65a27535e3f110f",
-      "evidence": "team/ruv-sgit/key.json, key.png, sessions/session_01Kw9UwDSQxFGP7NZd4MEJ4v/"
-    },
-    {
-      "what": "Runner: open --vault-key-file F takes another pass on a kept vault (own passes/<run>/ brief; pass_of and commits_before in the ledger); tested on a throwaway vault, then deleted and checked",
-      "evidence": "team/ruv-sgit/tools/ruvsgit.py"
-    },
-    {
-      "what": "Answered the conductor's request 002 (onboarding): key published, own :32 task running, ready for the sealed vault keys",
-      "evidence": "this status; the mail vault reply waits for the mail vault key"
-    },
-    {
-      "what": "The studio lab in the policy, on the editor's go",
-      "evidence": "team/ruv-sgit/policy.json changes_since_agreed"
-    },
-    {
-      "what": "B01 storyboard: eight SVG stills, motif 'the overlap fills in', with notes; editor worker's 1 must-fix and 6 should-fixes applied",
-      "evidence": "/studio/lab/b01/storyboard/, team/ruv-sgit/runs/r2-b01-storyboard.*"
-    },
-    {
-      "what": "Run r2-b01-storyboard's vault kept for later passes; its key sealed to the DC Vault Registry in a handover zip for the editor",
-      "evidence": "team/ruv-sgit/runs/r2-b01-storyboard.evidence.json (ending kept)"
-    },
-    {
-      "what": "Team vault keys opened from the conductor's zip (vault ids matched vaults.json), both vaults cloned with write access, key files shredded; mail 001 to 003 filed, 004 taken; board issues 001 to 004; replies to the conductor and deck",
-      "evidence": "tui-issues-public ruv-sgit/issues/, tui-mail-public ruv-sgit/outbox/"
-    },
-    {
-      "what": "E01 agent-evolution: v1 (rings of reach) and v2 (reach in motion), a page and an explainer; editor's 4 must-fixes and 6 should-fixes applied",
-      "evidence": "/ruv-sgit/agent-evolution/, /studio/lab/e01/, team/ruv-sgit/runs/r3-e01-agent-evolution.*"
-    },
-    {
-      "what": "B01 v1: frames 2, 6, 7, 8 as end-state slides, deck's notes 1, 3, 4 applied; the runner's second pass used for real, and fixed so a pass never collides with an earlier pass's branches",
-      "evidence": "/studio/lab/b01/v1/, team/ruv-sgit/runs/r4-b01-v1.*, team/ruv-sgit/tools/ruvsgit.py"
-    },
-    {
-      "what": "E02 blast-radius: one driven slide from abp-examples.json (16 grant rows, core 4, excess 12, shortfall, barriers), a page and an explainer; editor's 2 must-fixes and 4 of 6 should-fixes applied",
-      "evidence": "/ruv-sgit/blast-radius/, /studio/lab/e02/v1/, team/ruv-sgit/runs/r5-e02-blast-radius.*"
-    },
-    {
-      "what": "B01 v2: five slides built on the engine and timed to the script (three, act opener, collision, way-out, brakes); deck's five notes applied; editor's must-fix fixed",
-      "evidence": "/studio/lab/b01/v2/, team/ruv-sgit/runs/r6-b01-v2.*"
-    },
-    {
-      "what": "E02 v2: deck's five notes (numbered dots, plain words with ids, grouped by noun, two distances, glyphs); editor's 5 must-fixes applied",
-      "evidence": "/studio/lab/e02/v2/, /ruv-sgit/blast-radius/, team/ruv-sgit/runs/r7-e02-v2.*"
-    },
-    {
-      "what": "B01 closed: storyboard, v1 and v2 kept; v2 put to the editor as the first candidate for the talk",
-      "evidence": "tui-issues-public ruv-sgit/issues/done/002-*"
-    },
-    {
-      "what": "E03 injection-sources v1: sixteen numbered sources round one agent, each lit with its case; labels by shape; cautions on screen; editor worker's 3 must-fixes applied",
-      "evidence": "/ruv-sgit/injection-sources/, /studio/lab/e03/v1/, team/ruv-sgit/runs/r8-e03-injection-sources.*"
-    },
-    {
-      "what": "Run r8-e03-injection-sources's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
-      "evidence": "team/ruv-sgit/runs/r8-e03-injection-sources.evidence.json (ending kept)"
-    },
-    {
-      "what": "E04 over-enthusiastic agent v1: Replit told fully, then eleven cases in four beats in deck's tiers; the file's own words in the explainer; editor worker's 9 must-fixes applied",
-      "evidence": "/ruv-sgit/over-enthusiastic-agent/, /studio/lab/e04/v1/, team/ruv-sgit/runs/r9-e04-over-enthusiastic.*"
-    },
-    {
-      "what": "Run r9-e04-over-enthusiastic's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
-      "evidence": "team/ruv-sgit/runs/r9-e04-over-enthusiastic.evidence.json (ending kept)"
-    },
-    {
-      "what": "E09 mandate and grant v1: Claude Code's behaviour policy built as mandate, grant, delta, barrier from abp-examples.json and capabilities.json, the source's labels, the chat example beside it; editor worker's 3 must-fixes applied",
-      "evidence": "/ruv-sgit/mandate-and-grant/, /studio/lab/e09/v1/, team/ruv-sgit/runs/r10-e09-mandate-and-grant.*"
-    },
-    {
-      "what": "Run r10-e09-mandate-and-grant's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
-      "evidence": "team/ruv-sgit/runs/r10-e09-mandate-and-grant.evidence.json (ending kept)"
-    },
-    {
-      "what": "E04 v2: the four checked cases as paths through the file's guardrail (breaks, dashed, gone round), the seven as tags by tier, evaluations apart, a shorter end line; editor worker's 3 must-fixes applied",
-      "evidence": "/studio/lab/e04/v2/, /ruv-sgit/over-enthusiastic-agent/, team/ruv-sgit/runs/r11-e04-v2.*"
-    },
-    {
-      "what": "E02 v3: the source's labels from capabilities.json, the excess grouped by sector on the ring, the summary clear of the list; E09's heading reworded on the same run; editor worker: no must-fix, 4 should-fixes applied",
-      "evidence": "/studio/lab/e02/v3/, /ruv-sgit/blast-radius/, team/ruv-sgit/runs/r12-e02-v3.*"
-    },
-    {
-      "what": "E11 harness v1: one row of E09's excess meets a policy the kernel holds; SHarness's order; the six hello probes, each held; the honest caveat; stages declared",
-      "evidence": "/ruv-sgit/harness/, /studio/lab/e11/v1/, team/ruv-sgit/runs/r13-e11-harness.*"
-    },
-    {
-      "what": "E07, E10 and E13 v1, built in parallel by builder workers, each checked by an editor worker, stages declared",
-      "evidence": "/ruv-sgit/typical-deployment/, /ruv-sgit/four-barriers/, /ruv-sgit/real-examples/, team/ruv-sgit/runs/r14-*, r15-*, r16-*"
-    },
-    {
-      "what": "E12, E08, E14, E05 and E06 v1, built in parallel by five builder workers with the time limit lifted, each checked by an editor worker, every must-fix applied",
-      "evidence": "/ruv-sgit/radius-contained/, /ruv-sgit/lethal-trifecta/, /ruv-sgit/earning-autonomy/, /ruv-sgit/pivoting/, /ruv-sgit/soft-inside/; team/ruv-sgit/runs/r17-* to r21-*"
-    },
-    {
-      "what": "The SHarness series at the editor's word: a draft storyline and SH1 without and with, SH2 the live demo stage by stage, SH3 what runs and what is a design; the editor's words relayed to deck, the researcher and the storyteller",
-      "evidence": "/ruv-sgit/sharness-storyline.html; team/ruv-sgit/runs/r22-sharness-series.*"
-    },
-    {
-      "what": "Stages (RUV_STEPS) on the nine earlier engine pieces, E01 v1 and v2, E02 v1 to v3, E03, E04 v1 and v2, E09; editor worker: no must-fix, one should-fix applied",
-      "evidence": "team/ruv-sgit/runs/r23-stages.*"
-    }
-  ],
-  "next": [
-    {
-      "what": "the SHarness series' next versions, from deck's brief and the researcher's capture of sharness.ai's animations and the browser page",
-      "why": "the editor's ask"
-    },
-    {
-      "what": "deck's reviews of the programme pieces; stages on the earlier pieces as they are touched; E09's numbering by E02's sectors",
-      "why": "as paced"
-    }
-  ],
-  "asks": [
-    {
-      "what": "Review E12, E08, E14, E05, E06 and the SHarness series",
-      "from": "deck@the-ultimate-insider"
-    },
-    {
-      "what": "Capture sharness.ai's animations and workflows, and the browser Linux page",
-      "from": "researcher@the-ultimate-insider"
-    },
-    {
-      "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r23",
-      "from": "the editor"
-    }
-  ],
-  "tokens": null,
-  "tokens_how": "the session does not show its own token count; workers' tokens are in the ledger",
-  "policy": {
-    "outside_scope": 0,
-    "out_of_scope_requests": 0,
-    "pushbacks": 0,
-    "overrides": 0,
-    "injection_seen": 0
+ "schema": "the-ultimate-insider/agent-status/v1",
+ "agent": "ruv-sgit",
+ "as_of": "2026-10-29",
+ "round": 19,
+ "state": "The SHarness series rebuilt on the researcher's capture (run r24): SH1 v2 and SH4 to SH7 and the storyline; waiting for deck to place it in the editor's work section",
+ "done": [
+  {
+   "what": "The ruv.sgit runner, adapted to create every run's vault on dev.send.sgraph.ai",
+   "evidence": "team/ruv-sgit/tools/ruvsgit.py"
   },
-  "schedule": {
-    "task": "trig_01WgnTaJ8v2DSo2p23ZqBihu",
-    "cron": "CRON_TZ=Europe/London 32 * * * *",
-    "created": "2026-10-29T02:13:51Z",
-    "by": "ruv.sgit@ in its own session, at the editor's word",
-    "first_wake": "2026-10-29T02:32:00Z",
-    "replaces": "trig_013utuSwa4DHdTzAheFR1Zzz (made by the conductor's session, disabled, never fired)"
+  {
+   "what": "Run r1-article: a Ruflo hive with a writer and an editor, one vault, closed and measured",
+   "evidence": "team/ruv-sgit/runs/r1-article.*, /ruv-sgit/vaults.json"
   },
-  "vaults": {
-    "clones": "/root/.ruv-sgit-insider/vaults (outside the repository)",
-    "write": [
-      "tui-issues-public",
-      "tui-mail-public"
-    ],
-    "opened": "2026-10-29T03:08Z from the conductor's zip, sealed to sha256:f65a27535e3f110f"
+  {
+   "what": "The article on how ruv.sgit works and how to ask for an infographic",
+   "evidence": "content/articles/how-ruv-sgit-works.md"
+  },
+  {
+   "what": "r1-article's vault deleted, delete checked",
+   "evidence": "team/ruv-sgit/runs/r1-article.evidence.json"
+  },
+  {
+   "what": "A page for the editor to review the draft policy, item by item",
+   "evidence": "/ruv-sgit/policy-review.html, team/ruv-sgit/tools/review_page.py"
+  },
+  {
+   "what": "Policy agreed by the editor (sha256:dfb0c81ce7ce63d4, 33 of 33 items)",
+   "evidence": "team/ruv-sgit/policy.json agreed_by"
+  },
+  {
+   "what": "The :32 wake row agreed by the editor; the whole policy is agreed",
+   "evidence": "team/ruv-sgit/policy.json changes_since_agreed"
+  },
+  {
+   "what": "Session key published: sha256:6075a4b5d24881ae, encryption sha256:f65a27535e3f110f",
+   "evidence": "team/ruv-sgit/key.json, key.png, sessions/session_01Kw9UwDSQxFGP7NZd4MEJ4v/"
+  },
+  {
+   "what": "Runner: open --vault-key-file F takes another pass on a kept vault (own passes/<run>/ brief; pass_of and commits_before in the ledger); tested on a throwaway vault, then deleted and checked",
+   "evidence": "team/ruv-sgit/tools/ruvsgit.py"
+  },
+  {
+   "what": "Answered the conductor's request 002 (onboarding): key published, own :32 task running, ready for the sealed vault keys",
+   "evidence": "this status; the mail vault reply waits for the mail vault key"
+  },
+  {
+   "what": "The studio lab in the policy, on the editor's go",
+   "evidence": "team/ruv-sgit/policy.json changes_since_agreed"
+  },
+  {
+   "what": "B01 storyboard: eight SVG stills, motif 'the overlap fills in', with notes; editor worker's 1 must-fix and 6 should-fixes applied",
+   "evidence": "/studio/lab/b01/storyboard/, team/ruv-sgit/runs/r2-b01-storyboard.*"
+  },
+  {
+   "what": "Run r2-b01-storyboard's vault kept for later passes; its key sealed to the DC Vault Registry in a handover zip for the editor",
+   "evidence": "team/ruv-sgit/runs/r2-b01-storyboard.evidence.json (ending kept)"
+  },
+  {
+   "what": "Team vault keys opened from the conductor's zip (vault ids matched vaults.json), both vaults cloned with write access, key files shredded; mail 001 to 003 filed, 004 taken; board issues 001 to 004; replies to the conductor and deck",
+   "evidence": "tui-issues-public ruv-sgit/issues/, tui-mail-public ruv-sgit/outbox/"
+  },
+  {
+   "what": "E01 agent-evolution: v1 (rings of reach) and v2 (reach in motion), a page and an explainer; editor's 4 must-fixes and 6 should-fixes applied",
+   "evidence": "/ruv-sgit/agent-evolution/, /studio/lab/e01/, team/ruv-sgit/runs/r3-e01-agent-evolution.*"
+  },
+  {
+   "what": "B01 v1: frames 2, 6, 7, 8 as end-state slides, deck's notes 1, 3, 4 applied; the runner's second pass used for real, and fixed so a pass never collides with an earlier pass's branches",
+   "evidence": "/studio/lab/b01/v1/, team/ruv-sgit/runs/r4-b01-v1.*, team/ruv-sgit/tools/ruvsgit.py"
+  },
+  {
+   "what": "E02 blast-radius: one driven slide from abp-examples.json (16 grant rows, core 4, excess 12, shortfall, barriers), a page and an explainer; editor's 2 must-fixes and 4 of 6 should-fixes applied",
+   "evidence": "/ruv-sgit/blast-radius/, /studio/lab/e02/v1/, team/ruv-sgit/runs/r5-e02-blast-radius.*"
+  },
+  {
+   "what": "B01 v2: five slides built on the engine and timed to the script (three, act opener, collision, way-out, brakes); deck's five notes applied; editor's must-fix fixed",
+   "evidence": "/studio/lab/b01/v2/, team/ruv-sgit/runs/r6-b01-v2.*"
+  },
+  {
+   "what": "E02 v2: deck's five notes (numbered dots, plain words with ids, grouped by noun, two distances, glyphs); editor's 5 must-fixes applied",
+   "evidence": "/studio/lab/e02/v2/, /ruv-sgit/blast-radius/, team/ruv-sgit/runs/r7-e02-v2.*"
+  },
+  {
+   "what": "B01 closed: storyboard, v1 and v2 kept; v2 put to the editor as the first candidate for the talk",
+   "evidence": "tui-issues-public ruv-sgit/issues/done/002-*"
+  },
+  {
+   "what": "E03 injection-sources v1: sixteen numbered sources round one agent, each lit with its case; labels by shape; cautions on screen; editor worker's 3 must-fixes applied",
+   "evidence": "/ruv-sgit/injection-sources/, /studio/lab/e03/v1/, team/ruv-sgit/runs/r8-e03-injection-sources.*"
+  },
+  {
+   "what": "Run r8-e03-injection-sources's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
+   "evidence": "team/ruv-sgit/runs/r8-e03-injection-sources.evidence.json (ending kept)"
+  },
+  {
+   "what": "E04 over-enthusiastic agent v1: Replit told fully, then eleven cases in four beats in deck's tiers; the file's own words in the explainer; editor worker's 9 must-fixes applied",
+   "evidence": "/ruv-sgit/over-enthusiastic-agent/, /studio/lab/e04/v1/, team/ruv-sgit/runs/r9-e04-over-enthusiastic.*"
+  },
+  {
+   "what": "Run r9-e04-over-enthusiastic's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
+   "evidence": "team/ruv-sgit/runs/r9-e04-over-enthusiastic.evidence.json (ending kept)"
+  },
+  {
+   "what": "E09 mandate and grant v1: Claude Code's behaviour policy built as mandate, grant, delta, barrier from abp-examples.json and capabilities.json, the source's labels, the chat example beside it; editor worker's 3 must-fixes applied",
+   "evidence": "/ruv-sgit/mandate-and-grant/, /studio/lab/e09/v1/, team/ruv-sgit/runs/r10-e09-mandate-and-grant.*"
+  },
+  {
+   "what": "Run r10-e09-mandate-and-grant's vault kept; its key sealed to the DC Vault Registry in a handover zip for the editor",
+   "evidence": "team/ruv-sgit/runs/r10-e09-mandate-and-grant.evidence.json (ending kept)"
+  },
+  {
+   "what": "E04 v2: the four checked cases as paths through the file's guardrail (breaks, dashed, gone round), the seven as tags by tier, evaluations apart, a shorter end line; editor worker's 3 must-fixes applied",
+   "evidence": "/studio/lab/e04/v2/, /ruv-sgit/over-enthusiastic-agent/, team/ruv-sgit/runs/r11-e04-v2.*"
+  },
+  {
+   "what": "E02 v3: the source's labels from capabilities.json, the excess grouped by sector on the ring, the summary clear of the list; E09's heading reworded on the same run; editor worker: no must-fix, 4 should-fixes applied",
+   "evidence": "/studio/lab/e02/v3/, /ruv-sgit/blast-radius/, team/ruv-sgit/runs/r12-e02-v3.*"
+  },
+  {
+   "what": "E11 harness v1: one row of E09's excess meets a policy the kernel holds; SHarness's order; the six hello probes, each held; the honest caveat; stages declared",
+   "evidence": "/ruv-sgit/harness/, /studio/lab/e11/v1/, team/ruv-sgit/runs/r13-e11-harness.*"
+  },
+  {
+   "what": "E07, E10 and E13 v1, built in parallel by builder workers, each checked by an editor worker, stages declared",
+   "evidence": "/ruv-sgit/typical-deployment/, /ruv-sgit/four-barriers/, /ruv-sgit/real-examples/, team/ruv-sgit/runs/r14-*, r15-*, r16-*"
+  },
+  {
+   "what": "E12, E08, E14, E05 and E06 v1, built in parallel by five builder workers with the time limit lifted, each checked by an editor worker, every must-fix applied",
+   "evidence": "/ruv-sgit/radius-contained/, /ruv-sgit/lethal-trifecta/, /ruv-sgit/earning-autonomy/, /ruv-sgit/pivoting/, /ruv-sgit/soft-inside/; team/ruv-sgit/runs/r17-* to r21-*"
+  },
+  {
+   "what": "The SHarness series at the editor's word: a draft storyline and SH1 without and with, SH2 the live demo stage by stage, SH3 what runs and what is a design; the editor's words relayed to deck, the researcher and the storyteller",
+   "evidence": "/ruv-sgit/sharness-storyline.html; team/ruv-sgit/runs/r22-sharness-series.*"
+  },
+  {
+   "what": "Stages (RUV_STEPS) on the nine earlier engine pieces, E01 v1 and v2, E02 v1 to v3, E03, E04 v1 and v2, E09; editor worker: no must-fix, one should-fix applied",
+   "evidence": "team/ruv-sgit/runs/r23-stages.*"
+  },
+  {
+   "what": "Run r24-sharness-capture: SH1 v2 (the playground's measured without and with), SH4 the one idea, SH5 the kernel in a tab (the live demo's offline fallback), SH6 the last metre (key redacted), SH7 the OS of one process, and the storyline rebuilt; an editor worker's 4 must-fix and 19 should-fix applied; vault kept, handover zip to the editor",
+   "evidence": "team/ruv-sgit/runs/r24-sharness-capture.*, /ruv-sgit/sharness-storyline.html, /studio/lab/sharness/"
   }
+ ],
+ "next": [
+  {
+   "what": "deck's placement of the SHarness series in the editor's work section (SH5 is the live demo's offline fallback)",
+   "why": "the editor's ask; conductor's notice 024"
+  },
+  {
+   "what": "deck's reviews of the programme pieces; E09's numbering by E02's sectors",
+   "why": "as paced"
+  }
+ ],
+ "asks": [
+  {
+   "what": "Review E12, E08, E14, E05, E06 and the SHarness series",
+   "from": "deck@the-ultimate-insider"
+  },
+  {
+   "what": "Capture sharness.ai's animations and workflows, and the browser Linux page",
+   "from": "researcher@the-ultimate-insider"
+  },
+  {
+   "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13 to r23",
+   "from": "the editor"
+  }
+ ],
+ "tokens": null,
+ "tokens_how": "the session does not show its own token count; workers' tokens are in the ledger",
+ "policy": {
+  "outside_scope": 0,
+  "out_of_scope_requests": 0,
+  "pushbacks": 0,
+  "overrides": 0,
+  "injection_seen": 0
+ },
+ "schedule": {
+  "task": "trig_01WgnTaJ8v2DSo2p23ZqBihu",
+  "cron": "CRON_TZ=Europe/London 32 * * * *",
+  "created": "2026-10-29T02:13:51Z",
+  "by": "ruv.sgit@ in its own session, at the editor's word",
+  "first_wake": "2026-10-29T02:32:00Z",
+  "replaces": "trig_013utuSwa4DHdTzAheFR1Zzz (made by the conductor's session, disabled, never fired)"
+ },
+ "vaults": {
+  "clones": "/root/.ruv-sgit-insider/vaults (outside the repository)",
+  "write": [
+   "tui-issues-public",
+   "tui-mail-public"
+  ],
+  "opened": "2026-10-29T03:08Z from the conductor's zip, sealed to sha256:f65a27535e3f110f"
+ }
 }

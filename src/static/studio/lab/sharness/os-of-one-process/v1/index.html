@@ -49,9 +49,9 @@
   function T(x, y, s, fill, size, w, anchor) { return el('text', { x: x, y: y, fill: fill, 'font-size': size || 20, 'font-weight': w || 600, 'text-anchor': anchor || 'start', 'font-family': 'system-ui' }, null, s) }
   // path points for each request
   var PATH = [
-    [[300, 190], [730, 190]], [[300, 190], [496, 190]],
-    [[300, 260], [1040, 260]], [[300, 260], [496, 260]],
-    [[300, 330], [730, 330]], [[730, 285], [800, 325]],
+    [[300, 190], [496, 190]], [[300, 190], [496, 190]],
+    [[300, 260], [496, 260]], [[300, 260], [496, 260]],
+    [[300, 330], [496, 330]], [[730, 285], [945, 325]],
     [[200, 295], [326, 295]] ]
   function along(p, f) { var a = p[0], b = p[1]; return [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f] }
 
@@ -65,7 +65,7 @@
     var segs = [[150, 176], [204, 246], [274, 316], [344, 386], [414, 450]], d = 'M330 150H40V450H330'
     el('path', { d: d, fill: 'none', stroke: 'var(--accent)', 'stroke-width': 8, 'stroke-linejoin': 'round' }, wall)
     segs.forEach(function (q) { el('line', { x1: 330, y1: q[0], x2: 330, y2: q[1], stroke: 'var(--accent)', 'stroke-width': 8 }, wall) })
-    B.wallLab = T(40, 134, 'the kernel locks: measured', 'var(--accent)', 22, 800)
+    B.wallLab = T(40, 134, 'the kernel locks: measured, applied to a child', 'var(--accent)', 22, 800)
     B.pt = T(60, 190, "agent's tool", 'var(--agent)', 22, 800)
     B.lk = el('g', {}); B.lk.appendChild(T(60, 222, 'under the harness it has:', 'var(--dim)', 20, 600))
     F.lacks.forEach(function (x, i) { B.lk.appendChild(T(60, 252 + i * 28, x, 'var(--text)', 20, 600)) })
@@ -80,10 +80,10 @@
       B.doors.push(dg)
     })
     var kg = el('g', {})
-    el('rect', { x: 800, y: 310, width: 220, height: 60, rx: 8, fill: 'var(--panel)', stroke: 'var(--infra)', 'stroke-width': 3 }, kg)
-    kg.appendChild(T(815, 336, 'sharness.kms', 'var(--head)', 22, 800)); kg.appendChild(T(815, 360, 'designed', 'var(--dim)', 20, 600))
-    el('line', { x1: 730, y1: 285, x2: 800, y2: 325, stroke: 'var(--line2)', 'stroke-width': 3 }, kg)
-    el('line', { x1: 730, y1: 345, x2: 800, y2: 345, stroke: 'var(--line2)', 'stroke-width': 3 }, kg)
+    el('rect', { x: 960, y: 300, width: 220, height: 60, rx: 8, fill: 'var(--panel)', stroke: 'var(--infra)', 'stroke-width': 3 }, kg)
+    kg.appendChild(T(975, 326, 'sharness.kms', 'var(--head)', 22, 800)); kg.appendChild(T(975, 350, 'designed', 'var(--dim)', 20, 600))
+    el('line', { x1: 730, y1: 285, x2: 960, y2: 320, stroke: 'var(--line2)', 'stroke-width': 3 }, kg)
+    el('line', { x1: 730, y1: 345, x2: 960, y2: 345, stroke: 'var(--line2)', 'stroke-width': 3 }, kg)
     B.kms = kg
     var og = el('g', {})
     el('rect', { x: 1040, y: 230, width: 200, height: 60, rx: 8, fill: 'none', stroke: 'var(--line2)', 'stroke-width': 3, 'stroke-dasharray': '8 6' }, og)
@@ -93,18 +93,18 @@
     var lg = el('g', {})
     el('rect', { x: 500, y: 460, width: 230, height: 60, rx: 8, fill: 'none', stroke: 'var(--line2)', 'stroke-width': 3, 'stroke-dasharray': '8 6' }, lg)
     lg.appendChild(T(515, 486, 'the launcher', 'var(--head)', 22, 800)); lg.appendChild(T(515, 510, 'designed', 'var(--dim)', 20, 600))
-    B.launch = lg
+    lg.appendChild(T(760, 496, 'ring: passed a door, bar: stopped', 'var(--dim)', 20, 600)); B.launch = lg
     // request layers
     B.rq = PATH.map(function (p, i) {
       var st = F.steps[i], o = {}, gg = el('g', {})
       o.dot = el('circle', { r: 10, fill: i === 5 ? 'var(--infra)' : 'var(--agent)' }, gg)
       var e = p[1]
-      if (st.end === 'pass') { o.mark = el('circle', { cx: e[0], cy: e[1], r: 14, fill: 'none', stroke: 'var(--infra)', 'stroke-width': 4 }, gg) }
+      if (st.end === 'pass') { var rp = { 0: [730, 190], 2: [1040, 260], 4: [730, 330] }[i] || e; o.mark = el('circle', { cx: rp[0], cy: rp[1], r: 14, fill: 'none', stroke: 'var(--infra)', 'stroke-width': 4 }, gg) }
       else if (st.end === 'stop') { o.mark = el('rect', { x: e[0] - 3, y: e[1] - 22, width: 10, height: 44, rx: 3, fill: 'var(--accent)' }, gg) }
-      else { o.mark = el('g', {}, gg); o.mark.appendChild(el('rect', { x: 322, y: 276, width: 16, height: 38, rx: 3, fill: 'var(--accent)' })); T(344, 292, 'EACCES', 'var(--accent)', 20, 800); o.mark.appendChild(s.lastChild) }
+      else { o.mark = el('g', {}, gg); o.mark.appendChild(el('rect', { x: 322, y: 276, width: 16, height: 38, rx: 3, fill: 'var(--accent)' })); o.mark.appendChild(el('line', { x1: 330, y1: 318, x2: 330, y2: 432, stroke: 'var(--accent)', 'stroke-width': 2, 'stroke-dasharray': '6 5' })); T(344, 452, 'EACCES: connect(1.1.1.1:443) direct', 'var(--accent)', 20, 800); o.mark.appendChild(s.lastChild) }
       if (st.end !== 'wall') { var lx = i === 5 ? 810 : (i === 2 ? 760 : (st.end === 'stop' ? 500 : 740)), ly = i === 5 ? 300 : e[1] - 26 }
-      var lab = { 0: [740, 184, '201'], 1: [440, 198, '403'], 2: [900, 250, '200'], 3: [440, 268, '403'], 4: [738, 378, '200'] }[i]
-      if (lab) { o.lab = T(lab[0], lab[1], lab[2], st.end === 'stop' ? 'var(--accent)' : 'var(--infra)', 22, 800); gg.appendChild(o.lab) }
+      var lab = { 0: [756, 184, '201 PUT files/src/main.py'], 1: [756, 212, '403 PUT files/.sg_vault/key'], 2: [760, 250, '200 GET api.github.com'], 3: [756, 284, '403 GET pastebin.com/raw'], 4: [740, 382, '200 POST /v1/messages'], 5: [975, 412, 'sealed: unwrap(op=read)'] }[i]
+      if (lab) { o.lab = T(lab[0], lab[1], lab[2], st.end === 'stop' ? 'var(--accent)' : 'var(--infra)', 20, 800); gg.appendChild(o.lab) }
       o.g = gg; o.p = p; return o
     })
   }
@@ -137,7 +137,7 @@
       html = '<span class="rq">' + (cur + 1) + ' of 7: ' + st.q + ' <span style="color:' + (st.end === 'pass' ? 'var(--infra)' : 'var(--accent)') + '">' + st.v + '</span></span>' +
         st.w + '<br><span class="st">' + st.tag + '</span>'
     } else if (t >= 2.5) html = '<span class="rq">Four doors, kms behind net and llm, the launcher below</span><span class="st">Every request leaves the process through a door, or not at all.</span>'
-    else html = '<span class="rq">A process with its kernel locks around it</span><span class="st">Without the harness it has nothing to reach: no filesystem to write, no network stack, no key, no shell, no model API.</span>'
+    else html = '<span class="rq">A process with its kernel locks around it</span><span class="st">Under the harness it has no filesystem to write, no network stack, no key, no shell, no model API of its own. (The page lists these; the without is not drawn.)</span>'
     if (S.$('log').innerHTML !== html) S.$('log').innerHTML = html
   }
 })()

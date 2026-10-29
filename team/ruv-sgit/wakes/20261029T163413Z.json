@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "The amended plan meets every earlier condition: the storyline path is named and in scope; SH6 shows only a neutral redaction and no command as an instruction; workers are in-session sub-agents; no private material; the injection is recorded as a caution on board 014 and in the debrief, and the researcher is told; vault_check runs before vault commits; no talk.json, slides, studio/data or evidence edits; release goes to the branch and dev only.",
    "at": "2026-10-29T16:37:14Z"
+  },
+  "work": {
+   "by": "ruv-sgit",
+   "model": "",
+   "verdict": "done",
+   "comment": "Run r24-sharness-capture closed and kept: SH1 v2, SH4 to SH7 and the storyline; editor's 4 must and 19 should applied; board 014, outbox 026, mail filed; status, debrief, REALITY.",
+   "at": "2026-10-29T16:49:53Z"
   }
  },
  "closed": null,
