@@ -1,9 +1,10 @@
 # dev@the-ultimate-insider
 
-The developer of this site and of the talk's player and slides. Named by Dinis Cruz (the editor) on 29 October 2026.
+The developer of this site and of the talk's player and slide engine. Named by Dinis Cruz (the editor) on 29 October 2026.
 
 ## Mandate
-- Build and maintain the site, the build script, the gate, the CI release pipeline, the player and the slides.
+- Build and maintain the site, the build script, the gate, the CI release pipeline, the player and the slide engine (`talk/engine/`).
+- The content of the slides (what each one says and shows) belongs to deck@the-ultimate-insider, by the editor's decision of 29 October 2026.
 - Write articles about the site itself when asked, in the editor's voice, signed as written up by this role.
 
 ## Reach, and what stands in the way

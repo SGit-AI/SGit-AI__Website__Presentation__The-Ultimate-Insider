@@ -1,0 +1,68 @@
+<!--meta {"title": "How the studio works", "description": "The studio's protocol: who does what, the stages from brief to promotion, where files go, the version ladder, the review checklist and how work is handed back."} -->
+<article class="prose wrap narrow">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="{{root}}index.html">Home</a> / <a href="index.html">Studio</a></nav>
+<p class="kicker">The studio</p>
+<h1>How the studio works</h1>
+<p class="lead">The protocol every agent in the studio follows. It is short on purpose: the brief says what to make, this page says how work moves and when it is done.</p>
+
+<h2>Who does what</h2>
+<div class="tbl"><table>
+<thead><tr><th>Role</th><th>In the studio</th></tr></thead>
+<tbody>
+<tr><td>Dinis Cruz, the editor</td><td>Gives the talk. Decides the argument, settles open questions, and has the last word on what goes on stage.</td></tr>
+<tr><td>deck@the-ultimate-insider</td><td>Writes the briefs and keeps the board. Reviews what comes back, promotes the winner into <code>talk.json</code>, and keeps the script in step with the new slide.</td></tr>
+<tr><td>ruv.sgit@the-ultimate-insider</td><td>Builds: storyboards and versions, using the techniques of ruv.sgit.ai. Updates its brief's page as work lands. Asks rather than improvises when the material is thin.</td></tr>
+<tr><td>dev@the-ultimate-insider</td><td>Owns the slide engine, the player, the build and the gate. A version that needs the engine to do something new asks dev, and does not patch the engine itself.</td></tr>
+</tbody>
+</table></div>
+
+<h2>The stages, and when each is done</h2>
+<ol>
+<li><b>Brief</b> (deck). Done when the brief page states the job, the material with sources, the constraints, the ladder and the hand-back, and the board lists it as open.</li>
+<li><b>Storyboard</b> (ruv.sgit). A single page of frames at <code>studio/lab/&lt;brief&gt;/storyboard/index.html</code>: each frame a still with its time in the beat and the words spoken over it. Done when deck has read it and either said go or sent notes. Cheap to change, so change it here, not in a version.</li>
+<li><b>Versions</b> (ruv.sgit). At least two, at <code>studio/lab/&lt;brief&gt;/v1/index.html</code>, <code>v2</code> and on. Each is a complete slide that runs in the player. Done when each passes the checklist below.</li>
+<li><b>Critique</b> (deck, with the editor when it matters). The versions side by side. The outcome is written on the brief page: which version, and why the others lost.</li>
+<li><b>Promote</b> (deck). The beat's <code>slide.src</code> in <code>talk.json</code> points at the winner, the script's words and cue are adjusted to match, and the board says promoted.</li>
+</ol>
+
+<h2>Where files go</h2>
+<pre><code>src/pages/studio/                 these pages (deck)
+src/pages/studio/briefs/          one page per brief (deck writes, ruv.sgit appends its Versions section)
+src/static/studio/data/           sourced material as JSON (deck)
+src/static/studio/lab/b01/        the work for brief B01 (ruv.sgit)
+    storyboard/index.html
+    v1/index.html, v2/index.html, ...
+    notes.md                      what was tried, what the builder would do next</code></pre>
+<p>Lab pages are standalone: no site chrome and no markdown twin, like the slides, and the gate knows it. A version loads the engine from <code>../../../../talk/engine/slide.js</code> and <code>slide.css</code> and draws on the 1280 by 720 canvas the engine scales. It reads its data with a relative <code>fetch</code> of <code>../../../data/&lt;file&gt;.json</code>.</p>
+
+<h2>The version ladder</h2>
+<p>As at ruv.sgit.ai, versions climb from simple to rich, and a richer one has to beat the simpler one to be promoted. A simple slide that lands beats a rich one that distracts.</p>
+<ol>
+<li><b>Static.</b> SVG and type, the end state only. If the idea does not work still, motion will not save it.</li>
+<li><b>Built.</b> The same picture, revealed in the order the words arrive, with the engine's <code>data-in</code>, <code>data-draw</code> and <code>data-count</code>.</li>
+<li><b>Driven.</b> Drawn from the data file by script in <code>SLIDE_RENDER</code>, so a corrected number corrects the slide.</li>
+<li><b>Rich.</b> Canvas particles, 2.5D, or WebGL, only where the movement itself carries meaning (scale, speed, flow). Any library is copied into the lab folder, since the gate refuses scripts from another host.</li>
+</ol>
+
+<h2>The checklist</h2>
+<p>A version is ready for critique when all of these hold.</p>
+<ul>
+<li>One idea. Say it in a sentence on the brief page; if it takes two, it is two slides.</li>
+<li>Every number on screen comes from a studio data file or a source the brief lists, and matches it exactly. A prediction, a survey or a preliminary figure says so on screen.</li>
+<li>Anything invented for illustration is labelled illustrative on screen.</li>
+<li>Readable from the back of the room: nothing under 20 px on the 1280 by 720 canvas, high contrast, three colours of meaning at most (the agent red, the infrastructure amber, the risk violet from <code>tokens.css</code>).</li>
+<li>Runs in the player: seek, pause and replay work; <code>?static</code> shows a complete end state; <code>?t=</code> freezes cleanly at any second.</li>
+<li>With reduced motion the end state is shown and still makes the point.</li>
+<li>Works in both themes (<code>?theme=light</code>); the stage default is dark.</li>
+<li>No console errors, no scripts or styles from another host, no em-dashes in any text.</li>
+<li>Its length (<code>data-end</code>) fits the beat's time in <code>talk.json</code>, or the brief page says how much time it needs.</li>
+</ul>
+
+<h2>Handing work back</h2>
+<ul>
+<li>Add a Versions section to the brief's page, one line per version: link, technique, the idea in a sentence, and the frames it changed from the storyboard.</li>
+<li>Set the brief's status on the <a href="index.html">board</a> to in review.</li>
+<li>Build and gate before every push: <code>./run-website-locally.sh</code>. Commit subjects start with the role, for example <code>@ruv.sgit: B01 storyboard</code>, and never carry a number.</li>
+<li>If the material is wrong or thin, write it down in the brief's open questions and stop that line of work; do not fill the gap.</li>
+</ul>
+</article>

@@ -27,7 +27,7 @@ class Gate:
              ('OpenAI-style key',  re.compile(r'\bsk-[A-Za-z0-9]{40,}')),
              ('Slack token',       re.compile(r'\bxox[abpr]-[A-Za-z0-9-]{20,}')),
              ('sgit vault key',    re.compile(r'\b[a-z0-9]{24}:[a-z0-9]{8}\b'))]
-    STANDALONE = ('talk/player.html', 'talk/slides/', '404.html')    # pages with no chrome and no twin, by design
+    STANDALONE = ('talk/player.html', 'talk/slides/', 'studio/lab/', '404.html')    # pages with no chrome and no twin, by design
 
     def __init__(self):
         self.findings = []
