@@ -122,6 +122,12 @@ class Gate:
                 if '<main' in text.split('<header class="top"')[0] and '<header class="top"' not in text and not re.search(r'id="cv"|engine/slide\.(js|css)', text):
                     self.fail('chrome', rel, 'a document without the top bar (studio/lab documents go through the build: admin/build/build.py, build_lab_documents)')
 
+    def check_type_scale(self):                                     # every size in site.css is a token from tokens.css (designer@, design note 3); site.css only: other members own their own styles
+        css = ROOT / 'src' / 'static' / 'assets' / 'site.css'
+        for n, line in enumerate(css.read_text().splitlines(), 1) if css.exists() else []:
+            for m in re.finditer(r'font(?:-size)?:[^;}]*?(\d+(?:\.\d+)?px)', line):
+                self.fail('type scale', f'src/static/assets/site.css:{n}', f'{m.group(1)} is not on the scale: use a --t-* token from tokens.css')
+
     def check_team(self):
         r = subprocess.run([sys.executable, str(ROOT / 'admin/build/agents.py'), 'overlaps'], capture_output=True, text=True)
         if r.returncode:
@@ -200,7 +206,7 @@ class Gate:
     def run(self):
         if not OUT.exists():
             sys.exit('build first: python3 admin/build/build.py')
-        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_lab_documents, self.check_wakes, self.check_banners, self.check_vendored, self.check_stamps, self.check_no_remote_code,
+        for check in (self.check_links, self.check_reachable, self.check_twins_and_index, self.check_chrome, self.check_team, self.check_type_scale, self.check_lab_documents, self.check_wakes, self.check_banners, self.check_vendored, self.check_stamps, self.check_no_remote_code,
                       self.check_scripts_parse, self.check_talk, self.check_prose, self.check_leaks):
             check()
         if self.findings:

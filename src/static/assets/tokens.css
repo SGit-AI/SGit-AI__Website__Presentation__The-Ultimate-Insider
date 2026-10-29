@@ -2,6 +2,8 @@
    (a projector in a dark room); the site follows the reader's system. */
 /* the width rules (designer@, design note 1, 29 October 2026): one frame for every page, a reading measure for prose */
 :root{--gutter:clamp(16px,3vw,48px);--frame:1920px;--measure:68ch;--card-min:360px;--thumb-min:280px}
+/* the type scale (designer@, design note 3): eight sizes, no others; 12px only for uppercase labels; --t-figure for the dashboard's big numbers */
+:root{--t-xs:12px;--t-s:14px;--t-ui:15px;--t-body:17px;--t-l:20px;--t-2:clamp(22px,2.6vw,30px);--t-1:clamp(30px,4.4vw,48px);--t-0:clamp(36px,5.6vw,64px);--t-figure:34px}
 :root{
   --bg:#f7f6f2; --bg2:#efede6; --card:#ffffff; --panel:#ffffff; --panel2:#f3f1ea;
   --ink:#151821; --head:#0d1017; --text:#262a33; --dim:#5d6270; --line:#dcd8cc; --line2:#c4bfb0;

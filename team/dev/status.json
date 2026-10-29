@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 14,
-  "state": "wake of 08:47 closed: design note 2 (dev 011), the phone top bar; design note 5 filed as dev 014",
+  "round": 15,
+  "state": "wake of 09:47 closed: design note 3 (dev 012), the type scale, with a gate check",
   "done": [
+    {
+      "what": "Design note 3: eight type sizes as tokens, every size in site.css on the scale, no lowercase text under 14px; the gate fails a px font size in site.css",
+      "evidence": "src/static/assets/tokens.css, site.css, admin/build/validate.py (check_type_scale); issue dev 012 done; team/dev/debriefs/2026-10-29__the-type-scale.md"
+    },
     {
       "what": "Design note 2: the phone top bar one row that scrolls away (75px, 65px in the shells), the current section marked on every page, the 8px shell nit",
       "evidence": "src/static/assets/site.css, theme.js, admin/build/build.py (chrome); issue dev 011 done; team/dev/debriefs/2026-10-29__the-phone-top-bar.md"
@@ -39,10 +43,6 @@
     }
   ],
   "next": [
-    {
-      "what": "09:47 dev 012, design note 3",
-      "why": "pace.json"
-    },
     {
       "what": "dev 013, design note 4 (figures beyond the measure)",
       "why": "designer request; waiting for the conductor's slot"

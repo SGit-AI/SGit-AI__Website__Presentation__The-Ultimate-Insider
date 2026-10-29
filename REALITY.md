@@ -10,6 +10,7 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 - Every page has a `.md` twin and JSON-LD; `llms.txt`, `sitemap.xml`, `robots.txt` and `version.txt` are generated.
 - The version is in every top bar and in the player, linked to its entry in the release history; `pending` unless the build is CI's release commit.
 - The top bar marks the current section's link on every page under it. On a phone (under 701px) it is not sticky: the brand on one line, the links one row that scrolls, the current one scrolled into view (design note 2).
+- Type: eight sizes, as tokens in `tokens.css` (design note 3, the rules in `team/designer/system/type.md`); every size in `site.css` is one of them, and the gate fails a px font size there.
 - Release history generated from git: `/admin/versions.html`, `admin/versions/index.json`, one JSON per release.
 - Pages: also `/admin/` (admin and engineering) and `/team/`, `/team/<id>/`, debriefs.
 
