@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "studio",
+ "kind": "editor's request: the vault keys",
+ "started": "2026-10-29T16:29:02Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent (plan brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Before the wake opened, at the editor's upload: keys opened into 0600 files, both vaults cloned from stdin, key files shredded; studio/ folders written, uncommitted. 1. Requests: none (mailroom/studio empty; dev's reply in studio/done/, no answer needed); commit both vaults after vault_check (tui-issues-public studio/ board, tui-mail-public studio/ folders and done/001); no repo files. 2. team/studio/status.json and a debrief. 3. Next port only if deck's sorting landed; else none.",
+   "at": "2026-10-29T16:29:32Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent (pre_review brief)",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Writes only studio/ in each vault; the move from mailroom/studio is the recipient's own; no repo files beyond status and debrief; no new mail to others. vault_check clean; no key or token in studio/; no .enc or opened key left in the scratchpad. Condition: vault_check before each commit, never sgit vault info.",
+   "at": "2026-10-29T16:29:55Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
