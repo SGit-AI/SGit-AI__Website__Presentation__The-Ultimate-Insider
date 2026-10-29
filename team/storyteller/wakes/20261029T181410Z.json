@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "story/part-check-1814.md; request to deck (blast-radius piece not in talk.json; part 2 and 3 gaps); status. talk.json untouched.",
    "at": "2026-10-29T18:15:31Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "4 files in team/storyteller/**; talk.json untouched; no keys or directive text.",
+   "at": "2026-10-29T18:15:48Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Three items shipped in e8c0fbb; only team/storyteller; talk.json untouched.",
+   "at": "2026-10-29T18:15:53Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T18:15:53Z",
+ "outcome": "ok"
 }
