@@ -17,10 +17,31 @@
    "verdict": "go",
    "comment": "The amended plan adopts all five conditions and stays inside policy scope.writes: ONBOARDING.md stays in team/conductor/, the gate check lives in admin/tools/ and applies only to new wake records, only the tui-evidence-public READ key goes into vaults.json after vault_check.py, schedule.json is the only file touched for researcher, no task is created. Keep the CLAUDE.md line named outside scope, run vault_check before any vault commit, ask dev by request to call wake.py check from the gate.",
    "at": "2026-10-29T02:16:07Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "opus",
+   "verdict": "partial",
+   "comment": "Commit 5700bab: five-step section in WAKE.md, briefs in team/conductor/reviews/, wake.py check (negative control failed a record that skipped steps), start.py opens the wake record, CLAUDE.md line (outside scope, at the editor's word), onboarding linked from WAKE.md and ROLE.md, researcher's task id in schedule.json. Mail vault: onboarding requests to deck and ruv-sgit, the gate and site request to dev. Not done: tui-evidence-public's read key, because the vault is not on the server yet and could not be audited (pre-review condition 2 kept).",
+   "at": "2026-10-29T02:18:19Z"
+  },
+  "post_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "finding",
+   "comment": "Build, gate, wake.py check and vault_check are clean; no key, token or personal detail in the diff or the three mail requests (trigger and session ids are identifiers, not secrets). agents.py flags CLAUDE.md as outside conductor scope; the editor allowed it, but the commit message never names it and the pre-review made naming it a condition. Name it in the debrief or record. Everything else is within policy.",
+   "at": "2026-10-29T02:19:05Z"
+  },
+  "post_check": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "partial",
+   "comment": "Item 0 done (WAKE.md, reviews/*, admin/tools/wake.py, start.py, CLAUDE.md line). Item 1 done (ROLE.md and WAKE.md links; mail requests). Item 2 not done: the evidence vault was not on the server, so no key went into vaults.json (the audit condition held). Item 3 done (schedule.json only; nothing in team/researcher/). All pre-review conditions kept. The post-review finding answered in the debrief; the commit message lacked the CLAUDE.md note (named in the closing commit). Nothing unplanned.",
+   "at": "2026-10-29T02:19:34Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-29T02:19:34Z",
+ "outcome": "partial",
  "history": [
   {
    "pre_review": {
