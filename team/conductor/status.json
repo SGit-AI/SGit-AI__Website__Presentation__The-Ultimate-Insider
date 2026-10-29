@@ -1,109 +1,110 @@
 {
-  "schema": "the-ultimate-insider/agent-status/v1",
-  "agent": "conductor",
-  "as_of": "2026-10-29",
-  "round": 9,
-  "state": "round 9: the night is briefed (team/conductor/briefs/2026-10-29__the-next-hours.md); deck leads, the conductor paces from 04:02, dev builds the dashboard from 03:47",
-  "done": [
-    {
-      "what": "Status of every member checked: five hourly tasks in their own sessions, five keys published; vault keys sealed to deck and ruv.sgit; tui-evidence-public audited (1221 files, clean) and added to vaults.json; the brief for the next hours; pace.json seeded; requests to deck and dev, notices to researcher and ruv.sgit",
-      "evidence": "team/conductor/briefs/, team/conductor/pace.json, team/conductor/vaults.json, the mail vault"
-    },
-    {
-      "what": "The five-step wake: wake.py, the review briefs, the WAKE.md section, start.py opens the record; this wake ran through it (plan go, pre-review change then go, work partial, post-review finding)",
-      "evidence": "admin/tools/wake.py, team/conductor/reviews/, team/conductor/wakes/, the round 8 debrief"
-    },
-    {
-      "what": "First scheduled wake: both vault keys sealed to dev's and researcher's published keys (fingerprints recomputed by sgit and matched), one zip each to the editor; dev's own task checked against schedule.json; researcher's request routed, accepted at :09, answered",
-      "evidence": "team/conductor/schedule.json (tasks.dev, runs.researcher); tui-mail-public mailroom/researcher/001"
-    },
-    {
-      "what": "Four hourly tasks created at the editor's word, each into its member's own session: dev :47, conductor :02, deck :17, ruv.sgit :32",
-      "evidence": "team/conductor/schedule.json (tasks), /team/schedule.html"
-    },
-    {
-      "what": "The stop control: a hold file halts every wake in start.py (tested both ways); any member may disable the tasks; only the editor lifts",
-      "evidence": "admin/tools/start.py, team/conductor/WAKE.md (Stopping)"
-    },
-    {
-      "what": "The guide to running this team, adapted from the newsroom conductor's guide, with what is not built yet marked; the wake protocol every member follows; tiny scheduled prompts",
-      "evidence": "content/articles/running-this-agent-team.md, team/conductor/WAKE.md, team/conductor/schedule.json"
-    },
-    {
-      "what": "The vaults manager's key (DC Vault Registry, sha256:956934e47063ceaa) published as a known key, with a QR image read back by pki-agent.mjs read-qr",
-      "evidence": "team/conductor/known-keys/, /admin/keys.html#known"
-    },
-    {
-      "what": "A handover zip for both vaults: each vault key sealed as a QR code to the vaults manager, each read key as a QR code, a manifest; and the tool for every agent",
-      "evidence": "admin/tools/vault_handover.py, admin/tools/qr.mjs, CLAUDE.md"
-    },
-    {
-      "what": "Every session starts by pulling: admin/tools/start.py, the rule in CLAUDE.md and every ROLE.md, checked by the gate",
-      "evidence": "admin/tools/start.py, admin/build/validate.py (banners)"
-    },
-    {
-      "what": "The hourly schedule, each member fifteen minutes apart, and how members ask each other for work",
-      "evidence": "team/conductor/schedule.json, /team/schedule.html, the mail vault's README"
-    },
-    {
-      "what": "The mail vault's key rotated after it was printed in a session log",
-      "evidence": "team/conductor/vaults.json (history), the round 4 debrief"
-    },
-    {
-      "what": "Two public vaults on dev.send.sgraph.ai: tui-issues-public (h9fh2apf, Issues-FS lite) and tui-mail-public (lotalm0w, moved from f9d5r3dp, Email-FS lite), each with a README, a folder per agent, and the first issues and messages",
-      "evidence": "team/conductor/vaults.json, /admin/keys.html#vaults, team/conductor/debriefs/2026-10-29__two-public-vaults.md"
-    },
-    {
-      "what": "The first five agents and a proposed schedule, mapped from the sibling teams",
-      "evidence": "admin/notes/2026-10-29__first-agents-and-schedule.md, team/conductor/schedule.json"
-    },
-    {
-      "what": "The conductor's session key, made in its own session and published with its QR image and session folder",
-      "evidence": "team/conductor/key.json, /team/conductor/#key, /admin/keys.html"
-    },
-    {
-      "what": "The start and end banners, one tool for every member, and the rule in every ROLE.md, checked by the gate",
-      "evidence": "admin/tools/banner.py, CLAUDE.md, admin/build/validate.py (banners)"
-    },
-    {
-      "what": "The key tool pinned with its hash, and a README for the next session",
-      "evidence": "admin/tools/pki-agent.mjs, pki-agent.mjs.sha256, pki-agent.README.md"
-    }
-  ],
-  "next": [
-    {
-      "what": "04:02: pick deck's first ideas, one per free producer; keep pace.json; flag stalls",
-      "why": "the editor: the conductor controls the pace"
-    },
-    {
-      "what": "07:02: the morning review for the editor",
-      "why": "the brief"
-    }
-  ],
-  "asks": [
-    {
-      "what": "Upload the deck and ruv.sgit key zips into their sessions before going offline",
-      "from": "the editor"
-    },
-    {
-      "what": "Paste ONBOARDING.md's prompt into deck and ruv.sgit (no key, no task yet)",
-      "from": "the editor"
-    },
-    {
-      "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
-      "from": "the editor"
-    }
-  ],
-  "tokens": null,
-  "tokens_how": "the session does not show a token count to the agent",
-  "policy": {
-    "outside_scope": 2,
-    "out_of_scope_requests": 1,
-    "pushbacks": 0,
-    "overrides": 1,
-    "injection_seen": 0
+ "schema": "the-ultimate-insider/agent-status/v1",
+ "agent": "conductor",
+ "as_of": "2026-10-29T03:33:00Z",
+ "round": 9,
+ "state": "The night log is live (/articles/the-night-hour-by-hour.html, first edition 01:40 to 03:27); the designer brief is ready for the editor to paste.",
+ "done": [
+  {
+   "what": "admin/tools/night_log.py and the article the night, hour by hour, regenerated each round; the designer onboarding brief, at :39",
+   "evidence": "/articles/the-night-hour-by-hour.html"
   },
-  "outside_scope_named": [
-    "CLAUDE.md: the five-step line, at the editor's word (round 8); not named in commit 5700bab's message, found by the post-review"
-  ]
+  {
+   "what": "Status of every member checked: five hourly tasks in their own sessions, five keys published; vault keys sealed to deck and ruv.sgit; tui-evidence-public audited (1221 files, clean) and added to vaults.json; the brief for the next hours; pace.json seeded; requests to deck and dev, notices to researcher and ruv.sgit",
+   "evidence": "team/conductor/briefs/, team/conductor/pace.json, team/conductor/vaults.json, the mail vault"
+  },
+  {
+   "what": "The five-step wake: wake.py, the review briefs, the WAKE.md section, start.py opens the record; this wake ran through it (plan go, pre-review change then go, work partial, post-review finding)",
+   "evidence": "admin/tools/wake.py, team/conductor/reviews/, team/conductor/wakes/, the round 8 debrief"
+  },
+  {
+   "what": "First scheduled wake: both vault keys sealed to dev's and researcher's published keys (fingerprints recomputed by sgit and matched), one zip each to the editor; dev's own task checked against schedule.json; researcher's request routed, accepted at :09, answered",
+   "evidence": "team/conductor/schedule.json (tasks.dev, runs.researcher); tui-mail-public mailroom/researcher/001"
+  },
+  {
+   "what": "Four hourly tasks created at the editor's word, each into its member's own session: dev :47, conductor :02, deck :17, ruv.sgit :32",
+   "evidence": "team/conductor/schedule.json (tasks), /team/schedule.html"
+  },
+  {
+   "what": "The stop control: a hold file halts every wake in start.py (tested both ways); any member may disable the tasks; only the editor lifts",
+   "evidence": "admin/tools/start.py, team/conductor/WAKE.md (Stopping)"
+  },
+  {
+   "what": "The guide to running this team, adapted from the newsroom conductor's guide, with what is not built yet marked; the wake protocol every member follows; tiny scheduled prompts",
+   "evidence": "content/articles/running-this-agent-team.md, team/conductor/WAKE.md, team/conductor/schedule.json"
+  },
+  {
+   "what": "The vaults manager's key (DC Vault Registry, sha256:956934e47063ceaa) published as a known key, with a QR image read back by pki-agent.mjs read-qr",
+   "evidence": "team/conductor/known-keys/, /admin/keys.html#known"
+  },
+  {
+   "what": "A handover zip for both vaults: each vault key sealed as a QR code to the vaults manager, each read key as a QR code, a manifest; and the tool for every agent",
+   "evidence": "admin/tools/vault_handover.py, admin/tools/qr.mjs, CLAUDE.md"
+  },
+  {
+   "what": "Every session starts by pulling: admin/tools/start.py, the rule in CLAUDE.md and every ROLE.md, checked by the gate",
+   "evidence": "admin/tools/start.py, admin/build/validate.py (banners)"
+  },
+  {
+   "what": "The hourly schedule, each member fifteen minutes apart, and how members ask each other for work",
+   "evidence": "team/conductor/schedule.json, /team/schedule.html, the mail vault's README"
+  },
+  {
+   "what": "The mail vault's key rotated after it was printed in a session log",
+   "evidence": "team/conductor/vaults.json (history), the round 4 debrief"
+  },
+  {
+   "what": "Two public vaults on dev.send.sgraph.ai: tui-issues-public (h9fh2apf, Issues-FS lite) and tui-mail-public (lotalm0w, moved from f9d5r3dp, Email-FS lite), each with a README, a folder per agent, and the first issues and messages",
+   "evidence": "team/conductor/vaults.json, /admin/keys.html#vaults, team/conductor/debriefs/2026-10-29__two-public-vaults.md"
+  },
+  {
+   "what": "The first five agents and a proposed schedule, mapped from the sibling teams",
+   "evidence": "admin/notes/2026-10-29__first-agents-and-schedule.md, team/conductor/schedule.json"
+  },
+  {
+   "what": "The conductor's session key, made in its own session and published with its QR image and session folder",
+   "evidence": "team/conductor/key.json, /team/conductor/#key, /admin/keys.html"
+  },
+  {
+   "what": "The start and end banners, one tool for every member, and the rule in every ROLE.md, checked by the gate",
+   "evidence": "admin/tools/banner.py, CLAUDE.md, admin/build/validate.py (banners)"
+  },
+  {
+   "what": "The key tool pinned with its hash, and a README for the next session",
+   "evidence": "admin/tools/pki-agent.mjs, pki-agent.mjs.sha256, pki-agent.README.md"
+  }
+ ],
+ "next": [
+  {
+   "what": "04:02: pace programme.json, route requests, regenerate the night log"
+  },
+  {
+   "what": "07:02: the morning review for the editor"
+  },
+  {
+   "what": "schedule backlog 005, the mail helper"
+  }
+ ],
+ "asks": [
+  {
+   "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+   "from": "the editor"
+  },
+  {
+   "what": "Paste the designer prompt (team/conductor/briefs/2026-10-29__onboarding-a-designer.md) into a new session when you want the designer",
+   "from": "the editor"
+  }
+ ],
+ "tokens": null,
+ "tokens_how": "the session does not show a token count to the agent",
+ "policy": {
+  "outside_scope": 2,
+  "out_of_scope_requests": 1,
+  "pushbacks": 0,
+  "overrides": 1,
+  "injection_seen": 0
+ },
+ "outside_scope_named": [
+  "CLAUDE.md: the five-step line, at the editor's word (round 8); not named in commit 5700bab's message, found by the post-review"
+ ]
 }
