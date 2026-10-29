@@ -145,7 +145,13 @@ def snapshot(args):
                 made[u] = c['agent']
                 pages.append(u)
     rank  = lambda u: (0 if '/lab/' in u else 1 if u.startswith('articles/') else 2 if u.count('/') > 1 else 3)
-    shots = [] if args.no_shots else shoot(sorted(pages, key=rank)[:4], tag)
+    picked, per = [], {}
+    for u in sorted(pages, key=rank):                              # at most two from any one gallery, so every member's work shows
+        g = '/'.join(u.split('/')[:3])
+        if per.get(g, 0) < 2 and len(picked) < 4:
+            picked.append(u)
+            per[g] = per.get(g, 0) + 1
+    shots = [] if args.no_shots else shoot(picked, tag)
     problems = []
     for w in ws:
         bad = {k: v for k, v in w['verdicts'].items() if v in BAD}

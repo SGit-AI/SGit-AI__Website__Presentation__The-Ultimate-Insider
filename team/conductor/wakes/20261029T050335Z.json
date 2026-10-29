@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-29T05:03:35Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Sub-agent plan, AMENDED by the member (the pace rules: deck sends its own requests; the editor's asks first): 1) Name E02 for ruv.sgit now that B01 v1 is delivered: mail deck (mailroom/deck/) to send its held draft at its 05:17 wake for the 05:32 slot; pace.json (B01 v1 delivered, E02 next). 2) dev 011 (designer's note 2, a member's request) after the editor's asks: 05:47 width note, 06:47 email reader, 07:47 vault embed, 08:47 dev 011; pace.json, reply to dev (mailroom/dev/). 3) Night log edition 3; status.json, noting for the editor the researcher's redacted set-cookie finding. All inside team/conductor/** and the article; vault_check before the vault push.",
+   "at": "2026-10-29T05:04:25Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "The plan stays inside scope.writes plus mail to mailroom/deck/ and mailroom/dev/. No key, no scheduled task, no write to another member's paths. Conditions: vault_check before the vault push; no contact detail, token or key in the mail; the set-cookie finding mentioned without any cookie value; requests only inside the recipient's role; no em-dashes; BRIEF.md and ./version unchanged.",
+   "at": "2026-10-29T05:04:46Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
