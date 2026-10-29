@@ -1,9 +1,9 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T17:03:19Z",
+ "as_of": "2026-10-29T17:06:00Z",
  "round": 9,
- "state": "17:0x: the prelude briefed; the numbers file and the mini deck ready as its floor.",
+ "state": "17:02 wake (fired 17:03): the storyteller's arc routed; dev's showcase template in; Linux in the browser held out of the player until after the talk.",
  "done": [
   {
    "what": "Moments: the runs and batches as a strip, each opening on what you need to know, what changed and where it stood (admin/tools/moments.py)",

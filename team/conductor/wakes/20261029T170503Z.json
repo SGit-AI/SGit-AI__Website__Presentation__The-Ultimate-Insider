@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "scheduled, hourly at :02",
+ "started": "2026-10-29T17:05:03Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "",
+   "verdict": "go",
+   "comment": "Plan by the member (the hour's pacing was done at 17:00 at the editor's word; this is the scheduled 17:02, fired 17:03): 1) route the storyteller's two new requests verbatim (deck__90-minute-arc-and-the-work-section.md, researcher__s1-s2-s4-s5-received.md); record deck's two earlier ruv-sgit requests as already in the vault; vault_check first. 2) Flag to the editor: dev holds Linux in the browser out of the player until after the talk (its pre-review), so for tonight the demo is sharness.ai in a browser tab; dev's showcase template is in (talk/engine/showcase.js) for studio@. 3) pace.json, status.json; night log and Moments.",
+   "at": "2026-10-29T17:05:20Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Routes two plain request files verbatim; no key, QR, personal detail or directive beyond their asks. In scope. vault_check before commit.",
+   "at": "2026-10-29T17:05:50Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

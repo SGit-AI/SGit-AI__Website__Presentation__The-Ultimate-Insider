@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T17:03:19Z",
+ "updated": "2026-10-29T17:06:00Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -931,6 +931,11 @@
    "at": "2026-10-29T17:03:19Z",
    "by": "conductor",
    "what": "the prelude briefed (motion@, deck, storyteller); the team's numbers in team-in-numbers.json; the mini deck refreshed as the floor"
+  },
+  {
+   "at": "2026-10-29T17:06:00Z",
+   "by": "conductor",
+   "what": "the storyteller's 90-minute arc (Part 4, the editor's work; 82 minutes planned, 8 in reserve) routed to deck; dev's showcase template in; Linux in the player after the talk"
   }
  ],
  "queue": {
@@ -965,7 +970,11 @@
   "team/storyteller/requests/researcher__release-rate-and-email-workflow.md",
   "team/studio/requests/deck__journey-landed.md",
   "team/deck/requests/motion__could-have-been-worse.md (deck had sent it)",
-  "team/deck/requests/researcher__before-tonight.md (answered at 03:05, not mailed)"
+  "team/deck/requests/researcher__before-tonight.md (answered at 03:05, not mailed)",
+  "team/storyteller/requests/deck__90-minute-arc-and-the-work-section.md",
+  "team/storyteller/requests/researcher__s1-s2-s4-s5-received.md",
+  "team/deck/requests/ruv-sgit__blast-radius.md (deck had sent it)",
+  "team/deck/requests/ruv-sgit__injection-sources.md (deck had sent it)"
  ],
  "schedule": {
   "rule": "one item in flight per member; the editor's asks first, then other members' requests, then the member's own ideas",
@@ -1116,6 +1125,9 @@
   },
   {
    "what": "confirm 'newsroom.esquito.ai' as newsroom.sgit.ai, and 'attrition' on the Wardley maps as commoditisation"
+  },
+  {
+   "what": "Linux in the browser: dev holds it out of the player until after the talk (its pre-review); for tonight, show sharness.ai in a browser tab, or give dev the word to add it to the player"
   }
  ],
  "talk_minutes": 90,
