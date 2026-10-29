@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T16:23Z. 542 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T16:25Z. 542 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -452,32 +452,32 @@ Built 2026-10-29T16:23Z. 542 sources; `manifest.json` has every file's SHA-256. 
 | [sharness-linux-in-a-tab](https://sharness.ai/articles/linux-in-a-tab.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full: captured for context, not quoted | 2 |
 | [sharness-machines](https://sharness.ai/evidence/machines/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
 | [sharness-status](https://sharness.ai/evidence/status/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
-| [sharness2-anim-hello-replay](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-anim-kernel-in-a-tab](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-anim-one-idea](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-anim-os-of-one-process](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-browser](None) |  | None | None | None | unlisted: a capture folder no record names | 1 |
-| [sharness2-demo](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-design-brief](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [sharness2-design-svg-moving-parts](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-design-svg-one-request](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-design-svg-spectrum](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-design-svg-surface](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-home](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
-| [sharness2-linux-in-a-tab](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
-| [sharness2-lit-svg-interpreter](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-lit-svg-run-pipeline](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-lit-svg-stack](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-lit-svg-three-hashes](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-lit-svg-what-held](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-llms-full](None) |  | None | None | None | unlisted: a capture folder no record names | 1 |
-| [sharness2-mockup-edges](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-mockup-policy-hash](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-playground](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-sb-hello-world-inside](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-sb-its-one-job](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-sb-the-last-metre](None) |  | None | None | None | unlisted: a capture folder no record names | 2 |
-| [sharness2-storyboards](None) |  | None | None | None | unlisted: a capture folder no record names | 1 |
+| [sharness2-anim-hello-replay](https://sharness.ai/assets/anim/hello-replay.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-anim-kernel-in-a-tab](https://sharness.ai/assets/anim/kernel-in-a-tab.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-anim-one-idea](https://sharness.ai/assets/anim/one-idea.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-anim-os-of-one-process](https://sharness.ai/assets/anim/os-of-one-process.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-browser](https://sharness.ai/code/browser/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 1 |
+| [sharness2-demo](https://sharness.ai/code/browser/demo/index.html) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | partial: HTML and its inline script captured; the 25 MB of guest files (libv86.mjs, v86.wasm, kernel, initramfs) not fetched and the page not run | 2 |
+| [sharness2-design-brief](https://sharness.ai/design/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 3 |
+| [sharness2-design-svg-moving-parts](https://sharness.ai/assets/images/design/moving-parts.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-design-svg-one-request](https://sharness.ai/assets/images/design/one-request.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-design-svg-spectrum](https://sharness.ai/assets/images/design/spectrum.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-design-svg-surface](https://sharness.ai/assets/images/design/surface.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-home](https://sharness.ai/) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 4 |
+| [sharness2-linux-in-a-tab](https://sharness.ai/articles/linux-in-a-tab.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 3 |
+| [sharness2-lit-svg-interpreter](https://sharness.ai/articles/images/linux-in-a-tab/interpreter.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-lit-svg-run-pipeline](https://sharness.ai/articles/images/linux-in-a-tab/run-pipeline.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-lit-svg-stack](https://sharness.ai/articles/images/linux-in-a-tab/stack.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-lit-svg-three-hashes](https://sharness.ai/articles/images/linux-in-a-tab/three-hashes.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-lit-svg-what-held](https://sharness.ai/articles/images/linux-in-a-tab/what-held.svg) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-llms-full](https://sharness.ai/llms-full.txt) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 1 |
+| [sharness2-mockup-edges](https://sharness.ai/explain/mockups/edges.html) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | partial: HTML only; not run | 2 |
+| [sharness2-mockup-policy-hash](https://sharness.ai/explain/mockups/policy-hash.html) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | partial: HTML only; not run | 2 |
+| [sharness2-playground](https://sharness.ai/code/playground/index.html) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | partial: HTML only; not run | 2 |
+| [sharness2-sb-hello-world-inside](https://sharness.ai/explain/storyboards/hello-world-inside/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-sb-its-one-job](https://sharness.ai/explain/storyboards/its-one-job/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-sb-the-last-metre](https://sharness.ai/explain/storyboards/the-last-metre/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 2 |
+| [sharness2-storyboards](https://sharness.ai/explain/storyboards/index.md) | sharness.ai (Dinis Cruz's SHarness project) | own-site | 2026-10-29T16:25:06Z | 200 | full | 1 |
 | [silicon-cyberark-2025-press](https://www.silicon.co.uk/press-release/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security) | Silicon UK (BusinessWire syndication of CyberArk release) | vendor-survey | 2026-10-29T01:55:11Z | 200 | full | 3 |
 | [spiffe-overview](https://spiffe.io/docs/latest/spiffe-about/overview/) | SPIFFE project (CNCF) | primary | 2026-10-29T01:50:50Z | 200 | full | 4 |
 | [story-abp-llms](https://abp.sgit.ai/llms.txt) | abp.sgit.ai | own-site | 2026-10-29T14:25:43Z | 200 | full | 4 |

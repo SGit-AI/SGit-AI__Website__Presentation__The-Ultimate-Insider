@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T16:23Z",
- "count": 197,
+ "built": "2026-10-29T16:25Z",
+ "count": 201,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T16:23Z"
+   "adjudicated": "researcher, 2026-10-29T16:25Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1726,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T16:23Z"
+   "adjudicated": "researcher, 2026-10-29T16:25Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -4430,6 +4430,98 @@
    "note": "True of the launcher above the agent and its manifest. Since 28 Oct 2026 a first slice (sharness-ai shell) runs on the CLI's dev and is in v0.2.0 on PyPI per the status page, and the one-process form (sharness-ai run) is runnable. A security review on 29 Oct found and fixed a background process outliving the shell (SR-30).",
    "suggested_wording": "the launcher above the agent is designed, not built (a first slice for one shell runs since 28 October 2026)",
    "register": "studio-e11"
+  },
+  {
+   "id": "sh-e09-28-5s",
+   "text": "the editor's run took 28.5 s in his Chrome",
+   "where": [
+    "member note relayed by ruv.sgit"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "sharness2-linux-in-a-tab",
+     "quote": "Dinis's Chrome, live on sharness.ai | the guest's, emulated | 28.5 s | 32.2 s",
+     "supports": "for"
+    },
+    {
+     "source_id": "sharness-evidence",
+     "quote": "`hello` exit at 28.5 s, guest done at 32.2 s",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "28.5 s is to hello's exit (6 of 6), not the full run: the guest finished at 32.2 s. One run, browser and machine not recorded; self-reported by the project. Other runs: 58 to 96 s.",
+   "register": "studio-sharness-series"
+  },
+  {
+   "id": "sh-e09-real-kernel-in-tab",
+   "text": "E09 is a real Linux kernel in a browser tab running hello",
+   "where": [
+    "sharness.ai llms.txt"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "sharness2-browser",
+     "quote": "`sharness-ai hello` held 6 of 6 in all three.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Own site. Applied by the guest's /init to its child: proves kernel code paths, not a confined host.",
+   "register": "studio-sharness-series"
+  },
+  {
+   "id": "sh-anim-three-explainers",
+   "text": "Three animated explainers in SVG with no script",
+   "where": [
+    "sharness.ai /project/adoption"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "sharness2-home",
+     "quote": "assets/anim/os-of-one-process.svg",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The front page now carries four animated SVGs (one-idea, hello-replay, kernel-in-a-tab, os-of-one-process); CSS animations, no script, reduced-motion respected. The 'three' is v0.5.9's count.",
+   "suggested_wording": "Four animated SVG explainers, CSS only, no script.",
+   "register": "studio-sharness-series"
+  },
+  {
+   "id": "sh-without-with",
+   "text": "the site shows an agent without the harness and with it",
+   "where": [
+    "the editor's ask"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "sharness2-sb-the-last-metre",
+     "quote": "the sealed key is opened on arrival and written, passed and printed in clear.",
+     "supports": "for"
+    },
+    {
+     "source_id": "sharness-evidence",
+     "quote": "With no policy, `wget http://sharness.ai/llms.txt` returned the file",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "No piece is labelled 'without' and 'with'. The contrast is explicit in the storyboard The last metre (panel 3 vs 5 to 7, the fix designed, not built), Hello world inside (grant is everything vs 6 refusals) and the playground network evidence (no policy vs P1). The animations show only the 'with' state.",
+   "suggested_wording": "The storyboards and the playground show what an agent can do without a policy and what it cannot do with one.",
+   "register": "studio-sharness-series"
   },
   {
    "id": "story-r1-solarwinds",

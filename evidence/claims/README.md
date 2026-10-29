@@ -1,12 +1,12 @@
 # The claims register
 
-Built 2026-10-29T16:23Z. 197 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
+Built 2026-10-29T16:25Z. 201 claims. Grades A0 to A6 as in `../METHOD.md`; "holds" says whether the claim as worded on the site matches its evidence.
 
 | Grade | Claims |
 |---|---|
 | A0 | 13 |
 | A1 | 23 |
-| A2 | 73 |
+| A2 | 77 |
 | A3 | 30 |
 | A4 | 11 |
 | A5 | 10 |
@@ -15,8 +15,8 @@ Built 2026-10-29T16:23Z. 197 claims. Grades A0 to A6 as in `../METHOD.md`; "hold
 | Holds | Claims |
 |---|---|
 | does not hold | 3 |
-| holds | 105 |
-| holds in part | 40 |
+| holds | 107 |
+| holds in part | 42 |
 | not checked | 49 |
 
 ## The talk: opening and act one
