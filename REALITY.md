@@ -2,7 +2,7 @@
 
 What exists in this repository, kept current by whoever ships. A thing not listed here does not exist, whatever a brief or an article says.
 
-Last updated 29 October 2026 by dev@the-ultimate-insider.
+Last updated 29 October 2026 by deck@the-ultimate-insider.
 
 ## Site
 - Static site built by `admin/build/build.py` (standard library only) into `_site/`; pages from `src/pages/`, articles from `content/articles/`, static files from `src/static/`.
@@ -18,8 +18,12 @@ Last updated 29 October 2026 by dev@the-ultimate-insider.
 - `.github/workflows/release.yml`: gate on every push; on `dev`/`main` one release job numbers, tags, builds and deploys to GitHub Pages. Not yet run: no release has happened.
 - `admin/build/validate.py`: the gate (checks listed on /about/).
 
+## Team
+- `team/dev/`: dev@the-ultimate-insider (site, build, gate, CI, player).
+- `team/deck/`: deck@the-ultimate-insider (the talk's beats, script and slides).
+
 ## Does not exist yet
-- The agent team (roles beyond `team/dev/`, the board, schedules).
+- The rest of the agent team (further roles, the board, schedules).
 - A `review/` folder.
 - Confirmed demos for the demos slide.
 - The custom domain `the-ultimate-insider.presentation.sgit.ai` pointing at Pages (DNS and the Pages setting are outside this repository).
