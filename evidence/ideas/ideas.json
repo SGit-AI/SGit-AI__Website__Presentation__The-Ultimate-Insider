@@ -1,0 +1,1907 @@
+{
+ "about": "The editor's ideas across newsroom.sgit.ai, sgit.ai and php.oct.2026.newsroom.sgit.ai, with outside evidence for and against",
+ "built": "2026-10-29T02:05Z",
+ "count": 42,
+ "ideas": [
+  {
+   "id": "agents-are-the-ultimate-insider",
+   "idea": "Agents are the insider threat that never scaled: a reasoning engine in a loop with tools, with skills no human or static code insider had, that does damage without needing to be malicious.",
+   "where": [
+    {
+     "slug": "ultimate-insider-three-collisions",
+     "quote": "Agents are the insider threat that never scaled."
+    },
+    {
+     "slug": "ultimate-insider-three-collisions",
+     "quote": "It does not need to be malicious to do damage, and when it is, it does damage at machine speed."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "Not because they are necessarily malicious, but because any sufficiently capable actor with access to important systems can make mistakes or be compromised, and the architecture of containment and control must account for that.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "dtex-ponemon-2025-itbrief",
+     "quote": "as employee negligence remains the biggest driver of losses",
+     "supports": "for",
+     "note": "Human insider data: negligence, not malice, dominates cost. Vendor-commissioned (DTEX/Ponemon), via trade press.",
+     "url": "https://itbrief.com.au/story/insider-risk-costs-soar-as-ai-reshapes-workplace-data",
+     "publisher": "IT Brief (reporting DTEX/Ponemon)",
+     "date": "2026-02"
+    },
+    {
+     "source_id": "willison-lethal-trifecta",
+     "quote": "The lethal trifecta for AI agents: private data, untrusted content, and external communication",
+     "supports": "for",
+     "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+     "publisher": "Simon Willison",
+     "date": "2025-06-16"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "Treating frontier closed and open weight models like insider risks is a way to build such a system.",
+     "supports": "context",
+     "note": "Nadella's unit is the model; the site's unit is one agent in one deployment.",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    }
+   ],
+   "grade": "A4",
+   "strength": "Strong: the CEO of Microsoft now argues the same frame in his own words, and insider-risk data shows non-malicious harm dominates; 'never scaled' itself is a framing, not a measured fact.",
+   "talk_beats": [
+    "three",
+    "definition",
+    "loop",
+    "collision"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "nadella-made-the-same-argument",
+   "idea": "The model-as-insider argument is now mainstream: Satya Nadella's 10 October 2026 post says what this network has argued since 30 September, ending on the same irony read from the other end.",
+   "where": [
+    {
+     "slug": "authority-outside-the-model",
+     "quote": "The argument is now mainstream."
+    },
+    {
+     "slug": "the-same-argument-in-our-words",
+     "quote": "His: the most trustworthy system is the one that needs to trust the model least. Ours: the more you can constrain an agent, the more you can trust it, and the more autonomy you can afford to give it."
+    }
+   ],
+   "kind": "observation",
+   "external_evidence": [
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "In other words, we need to separate the supply of intelligence from the authority over it.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "The most trustworthy Super Intelligence system will not be the one with the model we trust most. It will be the one that enables us to trust the model the least.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "tnw-nadella-insider-risks",
+     "quote": "His post on X drew responses from Microsoft AI’s Mustafa Suleyman and Elon Musk.",
+     "supports": "context",
+     "note": "Independent confirmation that the post is Nadella's; TNW describes it as a post on X, the long form is on snscratchpad.com, which does not name its author on the page.",
+     "url": "https://thenextweb.com/news/nadella-ai-models-insider-risks-emergency-brake",
+     "publisher": "The Next Web",
+     "date": "2026-10-12"
+    }
+   ],
+   "grade": "A5",
+   "strength": "Confirmed: the primary post is captured and every quoted principle is in it; the claim of priority (since 30 September) is the site's own dated record.",
+   "talk_beats": [
+    "three",
+    "brakes"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "prompt-injection-is-structural",
+   "idea": "Models do not separate code from data, so prompt injection may never be fully fixed, and the controls have to assume a document can turn the agent.",
+   "where": [
+    {
+     "slug": "a-policy-beside-the-prompt",
+     "quote": "Models do not separate code from data. Instructions and content arrive in one channel, which is why prompt injection may never be fully fixed."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "ncsc-prompt-injection-not-sqli",
+     "quote": "As there is no inherent distinction between ‘data’ and ‘instruction’, it’s very possible that prompt injection attacks may never be totally mitigated in the way that SQL injection attacks can be.",
+     "supports": "for",
+     "url": "https://www.ncsc.gov.uk/blog-post/prompt-injection-is-not-sql-injection",
+     "publisher": "UK National Cyber Security Centre",
+     "date": "2025-12-08"
+    },
+    {
+     "source_id": "techcrunch-openai-atlas-pi",
+     "quote": "“Prompt injection, much like scams and social engineering on the web, is unlikely to ever be fully ‘solved,’” OpenAI wrote",
+     "supports": "for",
+     "note": "OpenAI's own post returned 403; quoted via TechCrunch.",
+     "url": "https://techcrunch.com/2025/12/22/openai-says-ai-browsers-may-always-be-vulnerable-to-prompt-injection-attacks/",
+     "publisher": "TechCrunch",
+     "date": "2025-12-22"
+    },
+    {
+     "source_id": "attacker-moves-second",
+     "quote": "we bypass 12 recent defenses (based on a diverse set of techniques) with attack success rate above 90% for most; importantly, the majority of defenses originally reported near-zero attack success rates.",
+     "supports": "for",
+     "url": "https://arxiv.org/abs/2510.09023",
+     "publisher": "arXiv (Nasr, Carlini et al.)",
+     "date": "2025-10-10"
+    },
+    {
+     "source_id": "deepmind-camel-prompt-injection",
+     "quote": "CaMeL, a robust defense that creates a protective system layer around the LLM, securing it even when underlying models are susceptible to attacks.",
+     "supports": "against",
+     "note": "Complicates 'never fixed': a design-level layer outside the model can give provable security for a subset of tasks, which is the site's own remedy (controls outside the model).",
+     "url": "https://arxiv.org/abs/2503.18813",
+     "publisher": "arXiv (Google DeepMind)",
+     "date": "2025-03-24"
+    }
+   ],
+   "grade": "A5",
+   "strength": "Strong: a national cyber agency, the largest model vendor and an adaptive-attack study say the same; only by-design architectures outside the model claim provable protection.",
+   "talk_beats": [
+    "loop",
+    "incidents"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "grant-is-not-the-mandate",
+   "idea": "What an agent can reach (the grant, measured) is not what it is for (the mandate); the gap between them is the risk, and an agent inherits everything its role accumulated.",
+   "where": [
+    {
+     "slug": "footprint-and-blast-radius",
+     "quote": "Reach is what it can do, measured. Mandate is what you asked it to do. The gap is the difference, in both directions."
+    },
+    {
+     "slug": "the-same-argument-in-our-words",
+     "quote": "the interesting number is the gap between what a credential allows and what its holder was meant to do. Agents made that gap the whole problem."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "ms-entra-blog-permissions-2023",
+     "quote": "less than 5% of permissions granted are used by workload identities",
+     "supports": "for",
+     "url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/2023-state-of-cloud-permissions-risks-report-now-published/1061397",
+     "publisher": "Microsoft Entra blog",
+     "date": "2023-03-28"
+    },
+    {
+     "source_id": "ms-entra-blog-permissions-2023",
+     "quote": "our research found that less than 2% of permissions granted to super identities are used, and 40% of super admins are workload identities.",
+     "supports": "for",
+     "url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/2023-state-of-cloud-permissions-risks-report-now-published/1061397",
+     "publisher": "Microsoft Entra blog",
+     "date": "2023-03-28"
+    },
+    {
+     "source_id": "ms-multicloud-risk-2024-blog",
+     "quote": "Just 2%",
+     "supports": "context",
+     "note": "The 2024 report gives about 2% of granted permissions used (all identities); the talk's numbers are from the 2023 report and are still the vendor's latest on workload identities in this capture.",
+     "url": "https://www.microsoft.com/en-us/security/blog/2024/05/29/6-insights-from-microsofts-2024-state-of-multicloud-risk-report-to-evolve-your-security-strategy/",
+     "publisher": "Microsoft Security blog",
+     "date": "2024-05-29"
+    },
+    {
+     "source_id": "oidf-agentic-ai-identity",
+     "quote": "ambitions for highly autonomous agents raise complex long-term questions regarding scalable access control, agent-centric identities, AI workload differentiation, and delegated authority.",
+     "supports": "for",
+     "url": "https://arxiv.org/abs/2510.25819",
+     "publisher": "OpenID Foundation (arXiv 2510.25819)",
+     "date": "2025-10-29"
+    }
+   ],
+   "grade": "A4",
+   "strength": "Strong on the facts under it: the vendor's own telemetry shows grants far exceed use; the framing of 'mandate' as a written artifact is the author's.",
+   "talk_beats": [
+    "permissions",
+    "identities",
+    "abp"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "enforcer-test-only-a-boundary-is-a-control",
+   "idea": "A control bounds a grant only if it is enforced by something the grant does not include; typed as boundary, setting, expectation or nothing, only a boundary is a control, and a rule the model keeps is hope.",
+   "where": [
+    {
+     "slug": "footprint-and-blast-radius",
+     "quote": "Barriers are what stands in the way of each row of the gap, typed as a boundary, a setting, an expectation or nothing, and only a boundary is a control."
+    },
+    {
+     "slug": "hope-or-enforcement",
+     "quote": "A rule the model keeps is an expectation: hope. A limit the agent cannot reach is a boundary. Only the second is a control."
+    },
+    {
+     "slug": "the-same-argument-in-our-words",
+     "quote": "His most important idea is our enforcer test."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "anderson-1972-reference-monitor",
+     "quote": "a. The reference validation mechanism must be tamper proof.",
+     "supports": "for",
+     "note": "The 1970s principle Nadella cites: the reference monitor.",
+     "url": "https://csrc.nist.gov/csrc/media/publications/conference-paper/1998/10/08/proceedings-of-the-21st-nissc-1998/documents/early-cs-papers/ande72a.pdf",
+     "publisher": "James P. Anderson / USAF ESD (NIST archive)",
+     "date": "1972-10"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "It’s why the controls that govern what a model can access and what actions it can take must sit outside the model.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "meta-agents-rule-of-two",
+     "quote": "agents must satisfy no more than two of the following three properties within a session to avoid the highest impact consequences of prompt injection.",
+     "supports": "for",
+     "url": "https://ai.meta.com/blog/practical-ai-agent-security/",
+     "publisher": "Meta AI",
+     "date": "2025-10-31"
+    },
+    {
+     "source_id": "deepmind-camel-prompt-injection",
+     "quote": "by enforcing security policies when tools are called",
+     "supports": "for",
+     "url": "https://arxiv.org/abs/2503.18813",
+     "publisher": "arXiv (Google DeepMind)",
+     "date": "2025-03-24"
+    },
+    {
+     "source_id": "techcrunch-openai-atlas-pi",
+     "quote": "The company conceded that “agent mode” in ChatGPT Atlas “expands the security threat s",
+     "supports": "context",
+     "note": "Vendors still invest heavily in model-side defenses (adversarial training); the outside world treats them as one layer, not as the control.",
+     "url": "https://techcrunch.com/2025/12/22/openai-says-ai-browsers-may-always-be-vulnerable-to-prompt-injection-attacks/",
+     "publisher": "TechCrunch",
+     "date": "2025-12-22"
+    }
+   ],
+   "grade": "A5",
+   "strength": "Established security principle (reference monitor, 1972) now restated by Microsoft, Meta and DeepMind for agents; the four-way typing and the hope percentages are the author's own, measured on invented designs.",
+   "talk_beats": [
+    "abp",
+    "brakes"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "agent-logs-are-a-self-report",
+   "idea": "An agent's own logs and account of itself are a self-report, not evidence; evidence needs a record a hook reads, a platform boundary, or an outside test.",
+   "where": [
+    {
+     "slug": "your-agents-logs-are-a-self-report",
+     "quote": "The research agrees. Models that exploited a reward hack admitted it in under 2% of cases."
+    },
+    {
+     "slug": "your-agents-logs-are-a-self-report",
+     "quote": "Evidence has four sources. The agent's account, a record a hook reads, a platform boundary, an outside test."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "anthropic-cot-faithfulness-pdf",
+     "quote": "to exploit the reward hack on > 99% of the prompts, but almost never (< 2%) verbalizes the reward",
+     "supports": "for",
+     "note": "Wording drift: the paper measures verbalisation in the chain of thought, in 5 of 6 synthetic environments, not 'admitting' in logs.",
+     "url": "https://arxiv.org/pdf/2505.05410",
+     "publisher": "arXiv (Anthropic Alignment Science)",
+     "date": "2025-05-08"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "We need to be able to reproduce how an outcome was achieved without relying on the model to attest to it.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "anthropic-cot-faithfulness",
+     "quote": "These results suggest that CoT monitoring is a promising way of noticing undesired behaviors during training and eval",
+     "supports": "against",
+     "note": "The same paper treats CoT monitoring as useful, just not sufficient.",
+     "url": "https://arxiv.org/abs/2505.05410",
+     "publisher": "arXiv (Anthropic Alignment Science)",
+     "date": "2025-05-08"
+    }
+   ],
+   "grade": "A4",
+   "strength": "Well backed: Anthropic's own study and Nadella's principles agree; the site's '<2% admitted' should read 'verbalised in its reasoning, in most test environments'.",
+   "talk_beats": [],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "every-risk-is-already-accepted",
+   "idea": "A risk exists the moment the exposure does, so somebody is already carrying it; there is no deny button, only three doors (accept for an interval, fund, fix), and silence escalates to the holder's boss.",
+   "where": [
+    {
+     "slug": "every-risk-is-already-accepted",
+     "quote": "Every risk your organisation has is already accepted. Somebody is carrying it, today, whether or not anybody signed for it."
+    },
+    {
+     "slug": "every-risk-is-already-accepted",
+     "quote": "There are three doors: accept it for a stated interval, fund the work that reduces it, or fix it. Silence is not a fourth door."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "nist-sp800-37r2",
+     "quote": "understanding or explicitly accepting the organization-wide risks being incurred from such decisions.",
+     "supports": "for",
+     "note": "NIST requires a named official to explicitly accept risk.",
+     "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-37r2.pdf",
+     "publisher": "NIST",
+     "date": "2018-12"
+    },
+    {
+     "source_id": "nist-sp800-39",
+     "quote": "These include: (i) risk acceptance; (ii) risk avoidance; (iii) risk mitigation; (iv) risk sharing; (v) risk transfer; or (vi) a combination of the above.",
+     "supports": "against",
+     "note": "Complicates 'three doors': NIST names avoidance (stop the activity) and sharing or transfer (insurance, contracts) as distinct responses.",
+     "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-39.pdf",
+     "publisher": "NIST",
+     "date": "2011-03"
+    },
+    {
+     "source_id": "nist-sp800-39",
+     "quote": "organizations might accept the risk associated with unfiltered connection to an external communications provider for a limited time",
+     "supports": "for",
+     "note": "Time-boxed acceptance is already in NIST guidance.",
+     "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-39.pdf",
+     "publisher": "NIST",
+     "date": "2011-03"
+    }
+   ],
+   "grade": "A3",
+   "strength": "Partly backed: explicit, named, time-limited acceptance is standard NIST practice; 'no deny button' and 'three doors' narrow the standard set, which also includes avoid and transfer.",
+   "talk_beats": [
+    "licence",
+    "spreadsheets"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "accepted-is-not-acceptable",
+   "idea": "Accepted (an act by a named person on a date) is not acceptable (a threshold); the EU AI Act asks for residual risk to be judged acceptable and never defines the word.",
+   "where": [
+    {
+     "slug": "every-risk-is-already-accepted",
+     "quote": "Accepted is not the same as acceptable. One is an act by a named person on a date. The other is a threshold."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "eu-ai-act-art9",
+     "quote": "the relevant residual risk associated with each hazard, as well as the overall residual risk of the high-risk AI systems is judged to be acceptable.",
+     "supports": "for",
+     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-9",
+     "publisher": "European Commission AI Act Service Desk",
+     "date": "2024-07-12"
+    },
+    {
+     "source_id": "nist-sp800-37r2",
+     "quote": "system and to explicitly accept the risk to agency operations",
+     "supports": "context",
+     "note": "US federal practice joins the two: the authorising official both judges acceptability and accepts, by name.",
+     "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-37r2.pdf",
+     "publisher": "NIST",
+     "date": "2018-12"
+    }
+   ],
+   "grade": "A4",
+   "strength": "Quote checked in the Act; 'never defines' was not checked against Article 3 in this pass, so that half rests on the author.",
+   "talk_beats": [
+    "licence"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "licence-to-operate-that-expires",
+   "idea": "Give each agent a licence to operate (who authorised it, who holds it, the policy, the expiry) that the system suspends when the footprint leaves the mandate, not a quarterly review.",
+   "where": [
+    {
+     "slug": "ultimate-insider-three-collisions",
+     "quote": "for each agent: authority, licensee, instrument, valid until. Accepted risks that expire and must be accepted again."
+    },
+    {
+     "slug": "authority-outside-the-model",
+     "quote": "A named owner and an expiry for the risk that is left."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "nist-sp800-37r2",
+     "quote": "The authorization termination date is established by the authorizing official and indicates when the authorization expires.",
+     "supports": "for",
+     "note": "Authority to operate with an expiry is the US federal model since at least 2010.",
+     "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-37r2.pdf",
+     "publisher": "NIST",
+     "date": "2018-12"
+    },
+    {
+     "source_id": "nist-sp800-37r2",
+     "quote": "Organizations may eliminate the authorization termination date if the system is operating under an ongoing authorization",
+     "supports": "for",
+     "note": "Continuous monitoring replacing the fixed date is NIST's version of 'suspended by the system, not by a quarterly review'.",
+     "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-37r2.pdf",
+     "publisher": "NIST",
+     "date": "2018-12"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "An authorized person should always be able to pause or shut down a model mid-task.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    }
+   ],
+   "grade": "A5",
+   "strength": "Strong precedent: NIST's authorisation to operate already carries a named official, an expiry and an ongoing variant; applying it per agent is the new part.",
+   "talk_beats": [
+    "licence",
+    "way-out"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "autonomy-is-earned-in-levels",
+   "idea": "Autonomy is earned, each level unlocked by evidence that the one below held.",
+   "where": [
+    {
+     "slug": "ultimate-insider-three-collisions",
+     "quote": "write down what it can reach and what stands in the way, and you can give it autonomy inside that."
+    },
+    {
+     "slug": "talk:licence",
+     "quote": "And autonomy is earned the same way: each level unlocked by evidence that the one below held.",
+     "note": "Stated in the talk (talk.json beat licence), not in the source article."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "levels-of-autonomy-ai-agents",
+     "quote": "We argue that an agent's level of autonomy can be treated as a deliberate design decision, separate from its capability and operational environment.",
+     "supports": "for",
+     "url": "https://arxiv.org/abs/2506.12469",
+     "publisher": "arXiv (Feng, McDonald, Zhang)",
+     "date": "2025-06-14"
+    },
+    {
+     "source_id": "levels-of-autonomy-ai-agents",
+     "quote": "We then highlight a potential application of our framework towards AI autonomy certificates to govern agent behavior in single- and multi-agent systems.",
+     "supports": "for",
+     "note": "Autonomy certificates are close to the licence-to-operate idea.",
+     "url": "https://arxiv.org/abs/2506.12469",
+     "publisher": "arXiv (Feng, McDonald, Zhang)",
+     "date": "2025-06-14"
+    }
+   ],
+   "grade": "A2",
+   "strength": "Moderate: academic proposals for autonomy levels and certificates exist; no regulator or standard yet ties levels to evidence that the lower level held.",
+   "talk_beats": [
+    "licence",
+    "way-out"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "brakes-let-a-car-go-fast",
+   "idea": "The more you can constrain an agent, the more you can trust it and the more autonomy you can afford to give it: brakes are what let a car go fast.",
+   "where": [
+    {
+     "slug": "ultimate-insider-three-collisions",
+     "quote": "Brakes are what let a car go fast."
+    },
+    {
+     "slug": "authority-outside-the-model",
+     "quote": "the more you constrain an agent, the more autonomy you can afford to give it."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "anthropic-claude-code-sandboxing",
+     "quote": "In our internal usage, we've found that sandboxing safely reduces permission prompts by 84%. By defining set boundaries within which Claude can work freely, they increase security and agency.",
+     "supports": "for",
+     "note": "A vendor's measured case of the irony: a boundary removed 84% of human prompts.",
+     "url": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+     "publisher": "Anthropic",
+     "date": "2025-10-20"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "Think of it like an emergency brake.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "wikipedia-risk-compensation",
+     "quote": "A study of crashes involving taxicabs in Munich of which half had been equipped with anti-lock brakes noted that crash rate was substantially the same for both types of cab, and concluded this was due to drivers of ABS-equipped cabs taking more risks.",
+     "supports": "against",
+     "note": "Risk compensation: better brakes can be spent on speed rather than safety. The argument needs the autonomy granted to stay inside a measured envelope.",
+     "url": "https://en.wikipedia.org/wiki/Risk_compensation",
+     "publisher": "Wikipedia",
+     "date": null
+    },
+    {
+     "source_id": "deepmind-camel-prompt-injection",
+     "quote": "We demonstrate effectiveness of CaMeL by solving $77\\%$ of tasks with provable security (compared to $84\\%$ with an undefended system) in AgentDojo.",
+     "supports": "against",
+     "note": "Constraint has a measured utility cost.",
+     "url": "https://arxiv.org/abs/2503.18813",
+     "publisher": "arXiv (Google DeepMind)",
+     "date": "2025-03-24"
+    }
+   ],
+   "grade": "A3",
+   "strength": "Plausible and echoed by Anthropic's sandboxing result and Nadella; the car metaphor has no traced origin, and risk-compensation research warns brakes can buy recklessness as well as speed.",
+   "talk_beats": [
+    "brakes"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "footprint-in-the-gap-is-a-near-miss",
+   "idea": "Footprint (what the agent actually did, read afterwards from logs) set against the mandate shows near misses and dormant rows, and for an agent with no written policy it is the fastest honest way to write one.",
+   "where": [
+    {
+     "slug": "footprint-and-blast-radius",
+     "quote": "Footprint in the gap is a near miss."
+    },
+    {
+     "slug": "footprint-and-blast-radius",
+     "quote": "For an agent that has no written policy, it is the fastest honest way to write one"
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "aws-iam-access-analyzer-policy-generation",
+     "quote": "IAM Access Analyzer reviews your AWS CloudTrail logs and generates a",
+     "supports": "for",
+     "note": "Generating least-privilege policy from observed activity is shipped practice for human and workload identities.",
+     "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-policy-generation.html",
+     "publisher": "AWS documentation",
+     "date": null
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "Every meaningful model action must leave tamper-proof human readable evidence.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "ms-entra-blog-permissions-2023",
+     "quote": "the average percentage of inactive workload identities -  at 80% -  has doubled since 2021",
+     "supports": "for",
+     "note": "'Dormant mandate' has a measured counterpart in dormant identities.",
+     "url": "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/2023-state-of-cloud-permissions-risks-report-now-published/1061397",
+     "publisher": "Microsoft Entra blog",
+     "date": "2023-03-28"
+    }
+   ],
+   "grade": "A4",
+   "strength": "Good: log-derived policy is an established cloud practice; calling footprint-in-the-gap a near miss is the author's framing borrowed from safety.",
+   "talk_beats": [
+    "abp"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "blast-radius-includes-the-way-back",
+   "idea": "Blast radius is what a row of reach would cost if used in full, and it has a second axis the industry leaves out, whether there is a way back; a connector twin journals every call so undo becomes a list.",
+   "where": [
+    {
+     "slug": "footprint-and-blast-radius",
+     "quote": "And it has a second axis the industry usually leaves out: whether there is a way back."
+    },
+    {
+     "slug": "connector-twin-before-you-deploy-an-agent",
+     "quote": "Undo becomes a list, not a promise."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "gmail-api-messages-delete",
+     "quote": "Immediately and permanently deletes the specified message. This operation cannot be undone. Prefer messages.trash instead.",
+     "supports": "for",
+     "url": "https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages/delete",
+     "publisher": "Google for Developers",
+     "date": null
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "We must assume a model is compromised and contain it from the start.",
+     "supports": "context",
+     "note": "Nadella's list has containment but no recoverability principle, the gap the site names.",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    }
+   ],
+   "grade": "A6",
+   "strength": "The factual core (some connector actions are irreversible by the platform's own statement) is on the authoritative record; the twin itself is a published design, not a running service.",
+   "talk_beats": [
+    "infrastructure",
+    "incidents"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "the-account-is-the-blast-radius",
+   "idea": "Every connector session runs as the account that authorised it, so the first real control is a dedicated account (mailbox, Claude seat, GitHub) per agent, an identity of its own.",
+   "where": [
+    {
+     "slug": "six-agents-one-inbox",
+     "quote": "The account is the blast radius."
+    },
+    {
+     "slug": "why-my-agents-do-not-run-on-my-laptop",
+     "quote": "Three wishes: an identity per agent, secrets per agent, and a key pair per agent."
+    }
+   ],
+   "kind": "observation",
+   "external_evidence": [
+    {
+     "source_id": "ietf-wimse-aims",
+     "quote": "An agent participating in this framework MUST be assigned exactly one WIMSE identifier, which MAY be a SPIFFE ID.",
+     "supports": "for",
+     "note": "Working-group Internet-Draft, not a standard; expires 19 March 2027.",
+     "url": "https://datatracker.ietf.org/doc/html/draft-ietf-wimse-aims",
+     "publisher": "IETF WIMSE working group",
+     "date": "2026-09"
+    },
+    {
+     "source_id": "msft-entra-agent-id-overview",
+     "quote": "Microsoft Entra Agent ID addresses these needs by providing a unified platform for managing agent identities at enterprise scale.",
+     "supports": "for",
+     "url": "https://learn.microsoft.com/en-us/entra/agent-id/identity-professional/microsoft-entra-agent-identities-for-ai-agents",
+     "publisher": "Microsoft Learn",
+     "date": null
+    },
+    {
+     "source_id": "oidf-agentic-ai-identity",
+     "quote": "The rapid rise of AI agents presents urgent challenges in authentication, authorization, and identity management.",
+     "supports": "for",
+     "url": "https://arxiv.org/abs/2510.25819",
+     "publisher": "OpenID Foundation (arXiv 2510.25819)",
+     "date": "2025-10-29"
+    },
+    {
+     "source_id": "google-workspace-aup",
+     "quote": "to create End User Accounts assigned to business functions rather than to human beings for the purpose of sharing files within or outside of the domain;",
+     "supports": "against",
+     "note": "The AUP limits accounts for business functions; note the prohibition is qualified 'for the purpose of sharing files', which the identity article's quote omits.",
+     "url": "https://workspace.google.com/terms/use_policy.html",
+     "publisher": "Google",
+     "date": null
+    }
+   ],
+   "grade": "A4",
+   "strength": "Strong direction of travel (IETF draft, OpenID Foundation, Microsoft product) for agent identities; per-agent consumer seats collide with vendor terms written for humans.",
+   "talk_beats": [
+    "identities",
+    "infrastructure"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "no-secret-inside-the-identity-provider",
+   "idea": "No secret can live inside an identity provider, because whoever administers login can sign in as anyone; the authority to decrypt has to come from the user's authenticator, and nothing sells login, encrypted storage and agent identity together.",
+   "where": [
+    {
+     "slug": "the-identity-we-wanted-to-give-the-agents",
+     "quote": "No secret can live inside an identity provider, because whoever administers the login can reset a password, mint a token or sign in as anyone."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "w3c-webauthn-l3",
+     "quote": "As a motivating example, PRF outputs could be used as symmetric keys to encrypt user data.",
+     "supports": "for",
+     "url": "https://www.w3.org/TR/webauthn-3/",
+     "publisher": "W3C",
+     "date": "2026"
+    },
+    {
+     "source_id": "apple-private-cloud-compute",
+     "quote": "This data must never be available to anyone other than the user, not even to Ap",
+     "supports": "for",
+     "note": "Apple's published design keeps keys out of the operator's reach, by attestation.",
+     "url": "https://security.apple.com/blog/private-cloud-compute/",
+     "publisher": "Apple Security Research",
+     "date": "2024-06-10"
+    }
+   ],
+   "grade": "A3",
+   "strength": "Supported in mechanism (WebAuthn PRF exists for exactly this, Apple PCC shows the pattern at scale); the market claim that nobody sells all three is the author's research, not checked here.",
+   "talk_beats": [
+    "identities"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "agents-do-not-run-on-my-laptop",
+   "idea": "An operating system has two hard walls, the kernel and the user account; a desktop agent runs inside the one marked you, with your keys and cookies, so agents belong in cloud sessions with a vault as the shared drive.",
+   "where": [
+    {
+     "slug": "why-my-agents-do-not-run-on-my-laptop",
+     "quote": "An operating system has two hard walls, the kernel and the user account."
+    },
+    {
+     "slug": "why-my-agents-do-not-run-on-my-laptop",
+     "quote": "The first vendor's own documentation lists \"most of the machine, including credential files such as ~/.ssh\" as the default read scope of its local sandbox."
+    }
+   ],
+   "kind": "observation",
+   "external_evidence": [
+    {
+     "source_id": "claude-code-sandboxing-docs",
+     "quote": "Add sandbox.credentials entries for credential directories such as ~/.aws and ~/.ssh and for secret environment variables, since the default read policy still allows them",
+     "supports": "for",
+     "url": "https://code.claude.com/docs/en/sandboxing",
+     "publisher": "Anthropic (Claude Code docs)",
+     "date": null
+    },
+    {
+     "source_id": "gitguardian-nx-s1ngularity",
+     "quote": "The attackers specifically targeted configuration files and authentication tokens related to popular AI CLI too",
+     "supports": "for",
+     "note": "August 2025 Nx supply-chain attack used installed AI CLIs to hunt secrets on developer machines.",
+     "url": "https://blog.gitguardian.com/the-nx-s1ngularity-attack-inside-the-credential-leak/",
+     "publisher": "GitGuardian",
+     "date": "2025-08-29"
+    },
+    {
+     "source_id": "anthropic-claude-code-sandboxing",
+     "quote": "By defining set boundaries within which Claude can work freely, they increase security and agency.",
+     "supports": "against",
+     "note": "The vendor's view is that an OS-level sandbox makes local use acceptable; the site's view is that a setting the agent's own process configures is not a boundary.",
+     "url": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+     "publisher": "Anthropic",
+     "date": "2025-10-20"
+    }
+   ],
+   "grade": "A5",
+   "strength": "The factual core (default sandbox reads credential files; attackers already used local AI CLIs) is on the vendor's own record and a documented incident; the conclusion is a practitioner's choice.",
+   "talk_beats": [
+    "infrastructure",
+    "incidents"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "nothing-is-sent-by-an-agent",
+   "idea": "Nothing is sent by an agent: everything lands in Drafts and a person reads, edits and presses send, with any exception a named row in the policy with a mechanism behind it.",
+   "where": [
+    {
+     "slug": "replicating-the-agentic-inbox",
+     "quote": "The rule that never changes. Nothing is sent by an agent."
+    },
+    {
+     "slug": "the-mandate-stack",
+     "quote": "nothing leaves without the person on the right."
+    }
+   ],
+   "kind": "observation",
+   "external_evidence": [
+    {
+     "source_id": "meta-agents-rule-of-two",
+     "quote": "agents must satisfy no more than two of the following three properties within a session",
+     "supports": "for",
+     "note": "Removing 'communicate externally' from the agent is one of Meta's three ways to satisfy the rule.",
+     "url": "https://ai.meta.com/blog/practical-ai-agent-security/",
+     "publisher": "Meta AI",
+     "date": "2025-10-31"
+    },
+    {
+     "source_id": "anthropic-claude-code-sandboxing",
+     "quote": "In our internal usage, we've found that sandboxing safely reduces permission prompts by 84%.",
+     "supports": "against",
+     "note": "Human gates have a cost the vendors are working to remove; at volume a human 'send' can become a rubber stamp.",
+     "url": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+     "publisher": "Anthropic",
+     "date": "2025-10-20"
+    }
+   ],
+   "grade": "A2",
+   "strength": "A practitioner's rule with clear support from Meta's design rule; its cost at scale (approval fatigue) is the open question.",
+   "talk_beats": [],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "where-is-the-why",
+   "idea": "An approval prompt that shows owner, repository and access but not the session, the step or the purpose makes the person the author of a decision whose basis they could not see; the fixes that worked put the why into the prompt.",
+   "where": [
+    {
+     "slug": "where-is-the-why",
+     "quote": "Allow makes the person the author of a decision whose basis they could not see."
+    },
+    {
+     "slug": "where-is-the-why",
+     "quote": "The fixes that worked put the why into the prompt."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "ms-mfa-number-matching",
+     "quote": "Number matching is a key security upgrade to traditional second-factor notifications in Authenticator.",
+     "supports": "for",
+     "note": "Microsoft made number matching mandatory after push-fatigue attacks: context added to the prompt.",
+     "url": "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-mfa-number-match",
+     "publisher": "Microsoft Learn",
+     "date": null
+    },
+    {
+     "source_id": "anthropic-claude-code-sandboxing",
+     "quote": "a more secure place for developers to work, while also allowing Claude to run more autonomously and with fewer permission prompts.",
+     "supports": "context",
+     "note": "The vendor's answer to prompt fatigue is fewer prompts behind a boundary, not richer prompts.",
+     "url": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+     "publisher": "Anthropic",
+     "date": "2025-10-20"
+    }
+   ],
+   "grade": "A3",
+   "strength": "Backed by the MFA precedent; no agent vendor yet ships a 'why card', and the vendor trend is to remove prompts rather than enrich them.",
+   "talk_beats": [
+    "licence"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "a-policy-beside-the-prompt",
+   "idea": "Beside the system prompt and the prompt, an agent should take an Agent Behaviour Policy written to a published standard, which the vendor acknowledges, enforces where it can, reports against and answers for.",
+   "where": [
+    {
+     "slug": "a-policy-beside-the-prompt",
+     "quote": "Beside the system prompt and the prompt, an agent should take an Agent Behaviour Policy, written to a published standard, which the vendor acknowledges, enforces where it can, reports against, and answers for."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "Independent controls: Orgs should be able to independently determine what a model can access and what actions it can take.",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "establish industry standards where existing ones are insufficient",
+     "supports": "for",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    },
+    {
+     "source_id": "aiuc-1-standard",
+     "quote": "The technical certification for agent security.",
+     "supports": "context",
+     "note": "A third-party agent standard exists, tied to insurance, but it certifies the vendor's agent, not a deployer's per-agent policy.",
+     "url": "https://www.aiuc-1.com/",
+     "publisher": "Artificial Intelligence Underwriting Company",
+     "date": "2026-10-15"
+    }
+   ],
+   "grade": "A2",
+   "strength": "Weak to moderate: calls for standards and independent controls are mainstream, but no vendor has agreed to accept, enforce and answer for a customer-written behaviour policy.",
+   "talk_beats": [
+    "abp"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "risk-belongs-to-the-deployment",
+   "idea": "Risk is a property of one agent in one deployment, not of the model, and zooming into any real agent's behaviour policy you find the company's business logic, which vendors cannot model for each customer.",
+   "where": [
+    {
+     "slug": "the-same-argument-in-our-words",
+     "quote": "His unit is the model; ours is one agent in one deployment, because the same model is harmless in one setup and serious in another."
+    },
+    {
+     "slug": "authority-outside-the-model",
+     "quote": "risk is a property of one agent in one setup, not of the model."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "nist-ai-rmf-100-1",
+     "quote": "social context in which it is deployed.",
+     "supports": "for",
+     "note": "NIST AI RMF treats AI risk as socio-technical and context-dependent.",
+     "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+     "publisher": "NIST",
+     "date": "2023-01"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "Treating frontier closed and open weight models like insider risks",
+     "supports": "against",
+     "note": "The most prominent framing of the same argument puts the model, not the deployment, as the unit.",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    }
+   ],
+   "grade": "A3",
+   "strength": "Consistent with NIST's context-based framing; the 'business logic' half is the author's argument and untested outside this network.",
+   "talk_beats": [
+    "abp"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "aviation-style-reporting",
+   "idea": "Aviation got safe because crashes became news and near misses could be reported safely; cyber and AI have nothing like it, which is why we do not see more of the agent incidents that happen.",
+   "where": [
+    {
+     "slug": "a-policy-beside-the-prompt",
+     "quote": "Aviation got safe because crashes became news."
+    },
+    {
+     "slug": "ultimate-insider-three-collisions",
+     "quote": "The private record is worse, because nobody has to report."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "nasa-asrs-program-briefing",
+     "quote": "Intake in 2025 averaged about 2,329 reports per week or 10,094 reports per month.",
+     "supports": "for",
+     "note": "About 121,000 a year, above the talk's 'about a hundred thousand'.",
+     "url": "https://asrs.arc.nasa.gov/docs/ASRS_ProgramBriefing.pdf",
+     "publisher": "NASA ASRS",
+     "date": "2025-12"
+    },
+    {
+     "source_id": "nasa-asrs-program-briefing",
+     "quote": "ASRS has securely processed over 2.3 million reports in its 50-year",
+     "supports": "for",
+     "note": "The talk's '1.8 million so far' is out of date against NASA's current briefing.",
+     "url": "https://asrs.arc.nasa.gov/docs/ASRS_ProgramBriefing.pdf",
+     "publisher": "NASA ASRS",
+     "date": "2025-12"
+    },
+    {
+     "source_id": "nasa-asrs-immunity",
+     "quote": "The FAA will not use any reports submitted to NASA under the ASRS (or information derived therefrom) in any enforcement action",
+     "supports": "for",
+     "url": "https://asrs.arc.nasa.gov/overview/immunity.html",
+     "publisher": "NASA ASRS",
+     "date": null
+    },
+    {
+     "source_id": "iata-2025-safety-report",
+     "quote": "A decade ago, the rate stood at one fatal accident for every 3.5 million flights (2012-2016). Today, it is one fatal accident for every 5.6 million flights (2021-2025).",
+     "supports": "for",
+     "url": "https://www.iata.org/en/pressroom/2026-releases/2026-03-09-01/",
+     "publisher": "IATA",
+     "date": "2026-03-09"
+    },
+    {
+     "source_id": "iata-2025-safety-report",
+     "quote": "There were eight fatal accidents in 2025.",
+     "supports": "context",
+     "note": "IATA counts 8; the site's 12 is the Aviation Safety Network's count, which the article discloses.",
+     "url": "https://www.iata.org/en/pressroom/2026-releases/2026-03-09-01/",
+     "publisher": "IATA",
+     "date": "2026-03-09"
+    },
+    {
+     "source_id": "eu-ai-act-art73",
+     "quote": "not later than 15 days after the provider or, where applicable, the deployer, becomes aware of the serious incident.",
+     "supports": "against",
+     "note": "Mandatory AI incident reporting exists in law, so 'nobody has to report' is too strong for high-risk AI in the EU.",
+     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-73",
+     "publisher": "European Commission AI Act Service Desk",
+     "date": "2024-07-12"
+    },
+    {
+     "source_id": "ca-sb53-22757-13",
+     "quote": "a frontier developer shall report any critical safety incident pertaining to one or more of its frontier models to the Office of Emergency Services within 15 days of discovering the critical safety incident.",
+     "supports": "against",
+     "note": "Also too strong for frontier developers in California; but these reports are exempt from public records and cover a narrow list of incidents, so they do not become news.",
+     "url": "https://california.public.law/codes/business_and_professions_code_section_22757.13",
+     "publisher": "California Business and Professions Code (public.law)",
+     "date": "2025-09-29"
+    },
+    {
+     "source_id": "eu-ai-omnibus-adopted",
+     "quote": "The AI Act’s core obligations on providers and deployers of high-risk AI systems were due to become applicable in August 2026. The AI Omnibus extends these deadlines until:",
+     "supports": "for",
+     "note": "Extended to 2 December 2027 (standalone) and 2 August 2028 (embedded). Article 73 reporting attaches to high-risk systems, so it is in practice deferred too; that last step is inference, not stated in this capture.",
+     "url": "https://www.addleshawgoddard.com/en/insights/insights-briefings/2026/technology/eu-ai-act-ai-omnibus-formally-adopted/",
+     "publisher": "Addleshaw Goddard",
+     "date": "2026-07-01"
+    },
+    {
+     "source_id": "oecd-ai-incident-framework",
+     "quote": "Hazards Monitor",
+     "supports": "context",
+     "note": "The OECD runs an AI incidents and hazards monitor and a common reporting framework, voluntary and built from public reports.",
+     "url": "https://oecd.ai/en/dashboards/policy-initiatives/common-reporting-framework-of-ai-incidents-8118",
+     "publisher": "OECD.AI Policy Navigator",
+     "date": "2025"
+    }
+   ],
+   "grade": "A4",
+   "strength": "Strong on aviation; the 'nobody has to report' half needs qualifying: EU Article 73 and California SB 53 create duties, but they are narrow, confidential or deferred to 2027, so the public record stays thin.",
+   "talk_beats": [
+    "unreported"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "independent-investigation-of-platform-outages",
+   "idea": "A fault that reaches every customer of a platform at once deserves an aviation-style independent inquiry that tells all three stories (what happened, why the system allowed it, why the fix was not paid for), and vaults now make the evidence affordable.",
+   "where": [
+    {
+     "slug": "the-investigation-github-owes-its-customers",
+     "quote": "The first is what happened. The second is why the system allowed it. The third is why the fix was not paid for."
+    },
+    {
+     "slug": "the-investigation-github-owes-its-customers",
+     "quote": "What the record will say. Delays, degraded availability, resolved."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "csrb-senators-reinstate",
+     "quote": "The CSRB’s investigation into the Salt Typhoon compromises of U.S. telecommunication firms, launched in 2024, was effectively terminated on January 20, 2025",
+     "supports": "against",
+     "note": "The one US body built on the NTSB model for cyber incidents was disbanded mid-inquiry: the political precedent cuts against the proposal's feasibility, though not its merit.",
+     "url": "https://cyberscoop.com/four-senate-democrats-call-on-dhs-to-reinstate-cyber-safety-review-board-membership/",
+     "publisher": "CyberScoop",
+     "date": "2025-05-30"
+    },
+    {
+     "source_id": "githubstatus-2026-10-05-mirror",
+     "quote": "The incident was caused by a partial networking failure that disrupted connectivity between one of our on-premises datacenter regions and a subset of cloud-hosted regional database and storage services.",
+     "supports": "against",
+     "note": "GitHub's own record named a cause and impact figures (14.3% of runs delayed over five minutes), more than 'delays, degraded, resolved', and less than a global loss of deploys.",
+     "url": "https://pulsetic.com/status/github/incidents/144883/",
+     "publisher": "Pulsetic mirror of githubstatus.com",
+     "date": "2026-10-05"
+    },
+    {
+     "source_id": "aws-dynamodb-oct-2025-summary",
+     "quote": "The root cause of this issue was a latent race condition in the DynamoDB DNS management system that resulted in an incorrect empty DNS record",
+     "supports": "context",
+     "note": "The largest operators do publish detailed first stories; the second and third stories remain untold, as the article argues.",
+     "url": "https://aws.amazon.com/message/101925/",
+     "publisher": "AWS",
+     "date": "2025-10"
+    }
+   ],
+   "grade": "A2",
+   "strength": "Mixed: the aviation model is real and the third story is genuinely absent, but the US cyber review board was disbanded and GitHub's own note is more specific than the article predicted.",
+   "talk_beats": [
+    "outages",
+    "unreported"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "infrastructure-falls-over-on-its-own",
+   "idea": "The infrastructure that has to contain agents falls over on its own: the largest cloud and network operators had multi-hour global outages from a DNS race and an oversized configuration file.",
+   "where": [
+    {
+     "slug": "ultimate-insider-three-collisions",
+     "quote": "And it falls over on its own"
+    }
+   ],
+   "kind": "measured",
+   "external_evidence": [
+    {
+     "source_id": "aws-dynamodb-oct-2025-summary",
+     "quote": "The root cause of this issue was a latent race condition in the DynamoDB DNS management system that resulted in an incorrect empty DNS record for the service’s regional endpoint (dynamodb.us-east-1.amazonaws.com) that the automation failed to repair.",
+     "supports": "for",
+     "url": "https://aws.amazon.com/message/101925/",
+     "publisher": "AWS",
+     "date": "2025-10"
+    },
+    {
+     "source_id": "cloudflare-18-nov-2025-outage",
+     "quote": "That feature file, in turn, doubled in size. The larger-than-expected feature file was then propagated to all the machines that make up our network.",
+     "supports": "for",
+     "url": "https://blog.cloudflare.com/18-november-2025-outage/",
+     "publisher": "Cloudflare",
+     "date": "2025-11-18"
+    }
+   ],
+   "grade": "A6",
+   "strength": "Established: both operators' own post-incident reports state the causes.",
+   "talk_beats": [
+    "outages"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "liability-should-move-to-the-vendor",
+   "idea": "Payments got safe when liability moved to the companies; an explicit prohibition in a written policy that the agent breaks should move liability from the deployer to the platform, and the law is moving that way.",
+   "where": [
+    {
+     "slug": "a-policy-beside-the-prompt",
+     "quote": "Payments got safe because liability moved to the companies."
+    },
+    {
+     "slug": "the-policy-draws-the-liability-line",
+     "quote": "An explicit prohibition the agent breaks should move liability to the platform."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "uk-psr-app-dashboard",
+     "quote": "88% (£316m) of the money lost to APP scams has been reimbursed to victims. For comparison, UK Finance reported a 61% reimbursement rate in 2024.",
+     "supports": "for",
+     "url": "https://www.psr.org.uk/information-for-consumers/app-scams-reimbursement-dashboard",
+     "publisher": "UK Payment Systems Regulator",
+     "date": "2026-07-30"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "A model provider’s assurances do not relieve us of that responsibility.",
+     "supports": "against",
+     "note": "The vendor CEO places responsibility on the deployer, the opposite allocation.",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    }
+   ],
+   "grade": "A3",
+   "strength": "The payments precedent is on the regulator's record; the EU Product Liability Directive (software as a product from 9 December 2026) supports the direction but was not captured (EUR-Lex blocked), and vendors' own framing keeps responsibility with the deployer.",
+   "talk_beats": [],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "insurers-as-forcing-function",
+   "idea": "Because every row of a behaviour policy is capped and named, it can be priced, split and backed with capital: a payout for every row, with enforced controls lowering the premium.",
+   "where": [
+    {
+     "slug": "insuring-agents-the-whole-story",
+     "quote": "Because every row is capped and named, a policy can be priced, split and backed with capital by arithmetic."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "armilla-lloyds-ai-cover",
+     "quote": "Insurers at Lloyd’s of London have launched a product to cover companies for losses caused by malfunctioning artificial intelligence tools",
+     "supports": "for",
+     "url": "https://www.armilla.ai/resources/insurers-launch-cover-for-losses-caused-by-ai-chatbot-errors",
+     "publisher": "Armilla AI (republishing Financial Times)",
+     "date": "2025-05-11"
+    },
+    {
+     "source_id": "aiuc-1-standard",
+     "quote": "AIUC-1 unlocks enterprise adoption.",
+     "supports": "for",
+     "note": "An underwriter-maintained agent standard: certification as the condition for cover.",
+     "url": "https://www.aiuc-1.com/",
+     "publisher": "Artificial Intelligence Underwriting Company",
+     "date": "2026-10-15"
+    },
+    {
+     "source_id": "techcrunch-insurers-ai-exclusions",
+     "quote": "Major insurers including Great American, Chubb, and W. R. Berkley are asking U.S. regulators for permission to exclude widespread AI-related liabilities from corporate policies.",
+     "supports": "against",
+     "url": "https://techcrunch.com/2025/11/23/ai-is-too-risky-to-insure-say-people-whose-job-is-insuring-risk/",
+     "publisher": "TechCrunch (reporting the Financial Times)",
+     "date": "2025-11-23"
+    },
+    {
+     "source_id": "techcrunch-insurers-ai-exclusions",
+     "quote": "What they can’t handle is an agentic AI mishap that triggers 10,000 losses at once.",
+     "supports": "against",
+     "note": "Correlated loss across one model's customers is the insurers' objection; row-level policies do not remove it.",
+     "url": "https://techcrunch.com/2025/11/23/ai-is-too-risky-to-insure-say-people-whose-job-is-insuring-risk/",
+     "publisher": "TechCrunch (reporting the Financial Times)",
+     "date": "2025-11-23"
+    }
+   ],
+   "grade": "A3",
+   "strength": "Mixed: specialist cover and an insurer-linked standard exist, while large carriers are moving to exclude AI because of correlated losses; insurance as forcing function is real but not yet priced per policy row.",
+   "talk_beats": [
+    "licence",
+    "brakes"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "risk-management-too-slow-so-pull-the-plug",
+   "idea": "Risk management runs on spreadsheets reviewed quarterly; it cannot see what the agent can reach, cannot fund the controls, and so the answer becomes pull the plug.",
+   "where": [
+    {
+     "slug": "ultimate-insider-three-collisions",
+     "quote": "It cannot see what the agent can reach, so it cannot decide whether to allow it, so it cannot fund the controls, so the answer becomes: pull the plug."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "gartner-agentic-40pct-wmedia",
+     "quote": "more than 40 percent of agentic AI projects could be canceled by the end of 2027, due to escalating costs, unclear business value or inadequate risk controls.",
+     "supports": "for",
+     "note": "Gartner's own release was 403; this is a faithful secondary. Risk controls are one of three causes, not the main one.",
+     "url": "https://w.media/over-40-percent-of-agentic-ai-projects-could-face-the-axe-by-end-of-2027-gartner/",
+     "publisher": "W.Media (reporting Gartner)",
+     "date": "2025-06-27"
+    },
+    {
+     "source_id": "nadella-models-insider-risks",
+     "quote": "Containment: We must assume a model is compromised and contain it from the start.",
+     "supports": "context",
+     "url": "https://snscratchpad.com/posts/models-as-insider-risks/",
+     "publisher": "Satya Nadella (sn scratchpad)",
+     "date": "2026-10-10"
+    }
+   ],
+   "grade": "A2",
+   "strength": "The cancellation forecast is Gartner's (a prediction, and cost and value are listed first); the causal chain from spreadsheets to cancellation is the author's argument.",
+   "talk_beats": [
+    "spreadsheets",
+    "collision"
+   ],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "risks-are-fractal",
+   "idea": "Risks are fractal: a board line opens into business, operational and technical risks, each with its own holder, down to the configuration file that makes it true, which a fractal semantic graph can carry at every altitude.",
+   "where": [
+    {
+     "slug": "every-risk-is-already-accepted",
+     "quote": "Risks are fractal. A board line such as \"loss of customer funds\" opens into business, operational and technical risks, each with its own holder, down to the configuration file that makes it true."
+    },
+    {
+     "slug": "introducing-fractal-semantic-graphs",
+     "quote": "worked from a risk register to a TCP packet"
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "nist-sp800-39",
+     "quote": "the three tiers of organization, mission/business processes, and information systems;",
+     "supports": "for",
+     "note": "NIST's multitier model is the established, coarser version (three tiers, not arbitrary depth).",
+     "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-39.pdf",
+     "publisher": "NIST",
+     "date": "2011-03"
+    }
+   ],
+   "grade": "A2",
+   "strength": "Partial: multi-level risk is standard (NIST tiers), but arbitrary-depth graphs from board to bytes have no outside adoption yet.",
+   "talk_beats": [],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "custom-uis-per-moment",
+   "idea": "Custom interfaces are not the exception: every message has a graph, so it can be shaped for the reader's moment, and each such interface is an agent surface that gets a policy.",
+   "where": [
+    {
+     "slug": "custom-uis-are-not-the-exception",
+     "quote": "Custom interfaces are not the exception."
+    }
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "source_id": "google-generative-ui",
+     "quote": "Our research on generative UI, also referred to as generative interfaces, comes to life today in the Gemini app through an experiment called dynamic view and in AI Mode in Google Search.",
+     "supports": "for",
+     "url": "https://research.google/blog/generative-ui-a-rich-custom-visual-interactive-user-experience-for-any-prompt/",
+     "publisher": "Google Research",
+     "date": "2025-11-18"
+    }
+   ],
+   "grade": "A2",
+   "strength": "The direction is shared by Google's generative UI work; governing each generated interface with a policy is not yet discussed outside this network.",
+   "talk_beats": [],
+   "register": "newsroom-ideas"
+  },
+  {
+   "id": "vault-host-cannot-read",
+   "idea": "Encrypted vaults where the host cannot read the data: files are encrypted on the client (AES-256-GCM) and the server stores ciphertext under opaque IDs, so the storage provider is not in the trust path.",
+   "where": [
+    "sgit.ai/llms.txt",
+    "sgit.ai/security/index.md",
+    "article:how-ruv-sgit-works"
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "url": "https://support.apple.com/en-us/102651",
+     "publisher": "Apple",
+     "date": null,
+     "quote": "End-to-end encrypted data can be decrypted only on your trusted devices where you’re signed in to your Apple Account. No one else can access your end-to-end encrypted data - not even Apple",
+     "supports": "for"
+    },
+    {
+     "url": "https://eprint.iacr.org/2024/1616",
+     "publisher": "IACR ePrint 2024/1616 (Albrecht, Backendal, Coppola, Paterson)",
+     "date": "2024-10-10",
+     "quote": "We unveil severe cryptographic vulnerabilities in four of them. Our attacks invalidate the marketing claims made by the providers of these systems",
+     "supports": "against"
+    },
+    {
+     "url": "https://mega-awry.io/",
+     "publisher": "ETH Zurich (MEGA: Malleable Encryption Goes Awry)",
+     "date": "2022-06",
+     "quote": "We show that MEGA's system does not protect its users against a malicious server and present five distinct attacks, which together allow for a full compromise of the confidentiality of user files.",
+     "supports": "against"
+    },
+    {
+     "url": "https://sgit.ai/security/index.md",
+     "publisher": "sgit.ai (own site)",
+     "date": null,
+     "quote": "the key hierarchy derives a *structure key* (one-way from the read key) designed to separate access to vault metadata from access to file contents. Today, vault objects are encrypted under the read key",
+     "supports": "context"
+    }
+   ],
+   "grade": "A2",
+   "strength": "Precedent is strong (Apple ADP and others ship client-side encryption at scale), but the published record on E2EE cloud storage is that malicious-server attacks break most designs; sgit's claim rests on its own documentation and its own plaintext probe (0 of 1,010 fragments, a sample), with no independent cryptographic audit captured. The server still sees vault ID, object sizes and timing, by sgit's own account.",
+   "talk_beats": [
+    "demos",
+    "infrastructure"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "agents-with-published-keys",
+   "idea": "Every agent session makes its own key pair and publishes the public half (key.json plus QR), so actions can be attributed and secrets sealed to a specific session; the push is the authorisation.",
+   "where": [
+    "CLAUDE.md (this repo)",
+    "pki.sgit.ai",
+    "sgit.ai/docs/agent-contact.md",
+    "article:running-this-agent-team#identity-keys-and-vaults"
+   ],
+   "kind": "observation",
+   "external_evidence": [
+    {
+     "url": "https://spiffe.io/docs/latest/spiffe-about/overview/",
+     "publisher": "SPIFFE project",
+     "date": null,
+     "quote": "The heart of these specifications is the one that defines short lived cryptographic identity documents – called SVIDs via a simple API",
+     "supports": "for"
+    },
+    {
+     "url": "https://datatracker.ietf.org/doc/draft-klrc-aiagent-auth/",
+     "publisher": "IETF (individual draft, draft-klrc-aiagent-auth-03)",
+     "date": "2026-09-09",
+     "quote": "It leverages existing standards such as the Workload Identity in Multi-System Environments (WIMSE) architecture and OAuth 2.0 family of specifications.",
+     "supports": "context"
+    },
+    {
+     "url": "https://openid.net/new-whitepaper-tackles-ai-agent-identity-challenges/",
+     "publisher": "OpenID Foundation",
+     "date": "2025-10-07",
+     "quote": "Standards organizations must accelerate the development of protocols that formalize new concepts around agent identity and delegation",
+     "supports": "for"
+    },
+    {
+     "url": "https://learn.microsoft.com/en-us/entra/agent-id/what-are-agent-identities",
+     "publisher": "Microsoft Learn",
+     "date": null,
+     "quote": "Microsoft Entra Agent ID is a product within Microsoft Entra that provides the platform for creating and managing agent identities and agent identity blueprints.",
+     "supports": "context"
+    }
+   ],
+   "grade": "A3",
+   "strength": "The direction (per-agent cryptographic identity) is where standards bodies and vendors are going, so the idea is mainstream. The specific mechanism (self-generated, self-published session keys trusted because the editor confirmed a fingerprint) is the team's own practice; it gives attribution, not attestation or containment, and the team itself notes no pki.sgit.ai root is pinned.",
+   "talk_beats": [
+    "infrastructure",
+    "identities",
+    "licence"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "nhi-run-vs-rent",
+   "idea": "The agent identity question splits into agents you run and agents you rent; the NHI industry (SPIFFE, workload IAM, brokers) only answers the first, so for rented agents the honest answer is a broad credential and hope.",
+   "where": [
+    "nhi.sgit.ai",
+    "nhi.sgit.ai/thesis",
+    "sgit.ai/network/nhi.md",
+    "talk:infrastructure"
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "url": "https://aembit.io/blog/everyone-wants-spiffe-almost-no-one-can-afford-to-build-it-right/",
+     "publisher": "Aembit (broker vendor, interested party)",
+     "date": null,
+     "quote": "the SPIRE implementation is a significant multi-year engineering project with compounding operational costs. It still does not solve the SaaS access problem, legacy credential types, or AI agent identity on its own.",
+     "supports": "for"
+    },
+    {
+     "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-coding-agent-cicd-secrets-20260808-csa/",
+     "publisher": "Cloud Security Alliance Labs",
+     "date": "2026-08-08",
+     "quote": "disclosed, at Black Hat USA 2026 on August 5, that a GitHub issue opened by an account with no repository privileges was enough to reach CI runner secrets in the vendors’ own repositories",
+     "supports": "for"
+    },
+    {
+     "url": "https://owasp.github.io/www-project-non-human-identities-top-10/2025/",
+     "publisher": "OWASP",
+     "date": "2025",
+     "quote": "Improper Offboarding",
+     "supports": "context"
+    },
+    {
+     "url": "https://learn.microsoft.com/en-us/entra/agent-id/what-are-agent-identities",
+     "publisher": "Microsoft Learn",
+     "date": null,
+     "quote": "Agent ID is available for all Microsoft Entra customers.",
+     "supports": "against"
+    },
+    {
+     "url": "https://auth0.com/ai",
+     "publisher": "Auth0 (Okta)",
+     "date": null,
+     "quote": "on behalf of human users, teams end up building one-off integrations that don’t scale. Define permissions once and apply them across multiple systems.",
+     "supports": "against"
+    }
+   ],
+   "grade": "A3",
+   "strength": "Well argued and partly evidenced (SPIFFE cost, Black Hat 2026 CI-secrets disclosure). 'Every product answers only the first' is too absolute: Entra Agent ID and Auth0 for AI Agents target agents on vendor platforms and delegated, on-behalf-of access, which is a partial answer for rented agents; their fit to Claude Code or Codex specifically is not shown either way. The site itself discloses it is a participant.",
+   "talk_beats": [
+    "infrastructure",
+    "identities"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "grant-is-the-closure",
+   "idea": "An agent's real authorisation is the transitive closure of what its credential reaches (inbox access is every account resettable by email), not the words of the grant; hope is not a control.",
+   "where": [
+    "nhi.sgit.ai/hope",
+    "talk:permissions",
+    "risks.sgit.ai (blast radius and authorization closure)"
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
+     "publisher": "NIST SP 800-207",
+     "date": "2020-08",
+     "quote": "Zero trust assumes there is no implicit trust granted to assets or user accounts based",
+     "supports": "for"
+    }
+   ],
+   "grade": "A3",
+   "strength": "Consistent with zero-trust doctrine and with least-privilege data the talk cites (Microsoft 2023, not re-captured here). The closure framing itself is the author's; no external paper captured measures closure for agents.",
+   "talk_beats": [
+    "permissions",
+    "infrastructure"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "pki-2019-keyserver-failure",
+   "idea": "Good public key repositories existed and were destroyed: the June 2019 SKS certificate-flooding attack exploited append-to-anyone's-key and never-delete; the successor dropped third-party signatures and with them the web of trust. Hence four registry rules (owner-only writes, revocation as signed append, size bounds, every entry signed).",
+   "where": [
+    "pki.sgit.ai",
+    "pki.sgit.ai/failure",
+    "pki.sgit.ai/rules",
+    "talk:infrastructure"
+   ],
+   "kind": "event",
+   "external_evidence": [
+    {
+     "url": "https://gist.github.com/rjhansen/67ab921ffb4084c865b3618d6955275f",
+     "publisher": "Robert J. Hansen",
+     "date": "2019-06",
+     "quote": "This attack exploited a defect in the OpenPGP protocol itself in order to \"poison\" rjh and dkg's OpenPGP certificates.",
+     "supports": "for"
+    },
+    {
+     "url": "https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2019-13050",
+     "publisher": "NIST NVD",
+     "date": "2019-06-29",
+     "quote": "Retrieving data from this network may cause a persistent denial of service, because of a Certificate Spamming Attack.",
+     "supports": "for"
+    },
+    {
+     "url": "https://keys.openpgp.org/about",
+     "publisher": "keys.openpgp.org",
+     "date": null,
+     "quote": "The identity information in an OpenPGP key is only distributed with consent.",
+     "supports": "context"
+    }
+   ],
+   "grade": "A5",
+   "strength": "The event is confirmed by the victim's own account and the NVD record. The capture of keys.openpgp.org's About page does not itself state that third-party signatures are stripped; that half rests on pki.sgit.ai's citations, not re-checked here. The four rules are a design (position), published before the registry exists; the register shows 0 real public keys.",
+   "talk_beats": [
+    "infrastructure"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "abp-reach-mandate-gap-barrier",
+   "idea": "An Agent Behaviour Policy writes down the grant (measured reach), the mandate (what it is for), the delta between them, and for every delta row the barrier typed as boundary, setting, expectation or none; only a boundary (enforced above the grant, out of the agent's reach) is a control.",
+   "where": [
+    "riskmandate.ai/abp.html",
+    "sgit.ai/demos/vaults/kit-bag",
+    "talk:abp",
+    "article:running-this-agent-team#principles"
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
+     "publisher": "NIST SP 800-207",
+     "date": "2020-08",
+     "quote": "Policy enforcement point (PEP): This system is responsible for enabling, monitoring,",
+     "supports": "for"
+    },
+    {
+     "url": "https://riskmandate.ai/abp.html",
+     "publisher": "RiskMandate (own site)",
+     "date": null,
+     "quote": "A control bounds a grant only if it is enforced by something the grant does not include.",
+     "supports": "context"
+    }
+   ],
+   "grade": "A3",
+   "strength": "The core test (a control must sit outside the subject's own grant) is the reference-monitor and zero-trust PEP idea, which is long established. The four-kind barrier vocabulary is RiskMandate's own; no external standard captured uses it. Applied honestly in this repo's own guide (principles marked control vs expectation).",
+   "talk_beats": [
+    "abp",
+    "way-out"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "licence-to-operate",
+   "idea": "Make the risk decision in advance: a licence to operate per agent naming authority, licensee, instrument (the ABP) and an expiry, with each condition beside what enforces it; accepted risks expire and must be accepted again.",
+   "where": [
+    "riskmandate.ai/licence-to-operate.html",
+    "risks.sgit.ai",
+    "talk:licence"
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "url": "https://artificialintelligenceact.eu/article/26/",
+     "publisher": "EU AI Act Article 26 (via artificialintelligenceact.eu)",
+     "date": "2024",
+     "quote": "Deployers of high-risk AI systems shall take appropriate technical and organisational measures to ensure they use such systems in accordance with the instructions for use",
+     "supports": "for"
+    },
+    {
+     "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+     "publisher": "NIST",
+     "date": "2023-01-26",
+     "quote": "The NIST AI Risk Management Framework (AI RMF) is intended for voluntary use",
+     "supports": "context"
+    },
+    {
+     "url": "https://riskmandate.ai/licence-to-operate.html",
+     "publisher": "RiskMandate (own site)",
+     "date": null,
+     "quote": "What does not exist is the countersigned form - a licence somebody outside your organisation would accept as evidence - which is what step three needs and what we have not built.",
+     "supports": "against"
+    }
+   ],
+   "grade": "A2",
+   "strength": "Regulation points the same way (named deployer obligations, oversight), but no regulator or standard captured requires a per-agent expiring licence. The cited page says the licence is 'not a control, it is a record of a decision' and that automatic suspension is not described there; risks.sgit.ai states '0 lines of code implementing any of it'.",
+   "talk_beats": [
+    "licence",
+    "way-out",
+    "brakes"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "risk-acceptance-interval",
+   "idea": "You cannot deny a risk, only say how long you accept it: a named human underwrites an existing exposure for an interval (1h to 6m), and an unaccepted risk is critical.",
+   "where": [
+    "risks.sgit.ai",
+    "talk:licence",
+    "talk:spreadsheets"
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "url": "https://risks.sgit.ai/",
+     "publisher": "risks.sgit.ai (own site)",
+     "date": null,
+     "quote": "0 lines of code implementing any of it. The engine is not built the grep returns zero",
+     "supports": "context"
+    }
+   ],
+   "grade": "A2",
+   "strength": "A coherent inversion with no external adopter captured; the site is honest that nothing implements it.",
+   "talk_beats": [
+    "licence",
+    "spreadsheets"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "standards-as-graphs",
+   "idea": "Standards, regulations and risks should be held as semantic graphs (fractal: every node opens into a graph with its own ontology), from the text of a law down to a threat in one method.",
+   "where": [
+    "graphs.sgit.ai",
+    "sgit.ai/demos/fractal-graphs"
+   ],
+   "kind": "position",
+   "external_evidence": [
+    {
+     "url": "https://pages.nist.gov/OSCAL/",
+     "publisher": "NIST OSCAL",
+     "date": null,
+     "quote": "It provides open, machine-readable formats available in XML, JSON, and YAML that streamline control-based risk assessments.",
+     "supports": "for"
+    },
+    {
+     "url": "https://www.opencre.org/",
+     "publisher": "OWASP OpenCRE",
+     "date": null,
+     "quote": "Open CRE - Open Cybersecurity Requirement Expression: Link security requirements across standards and frameworks.",
+     "supports": "for"
+    }
+   ],
+   "grade": "A4",
+   "strength": "That controls and standards are being made machine-readable and cross-linked is established (OSCAL, OpenCRE). The fractal-graph grammar and its claimed depth are the author's own and the site lists rungs 'still modelled rather than imported'.",
+   "talk_beats": [
+    "spreadsheets",
+    "way-out"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "agent-contact-protocol",
+   "idea": "Agents that run websites contact each other through a contact file at /.well-known/sgit-agents.json and an encrypted append-lane inbox; messages are read only if encrypted to the recipient, signed, and from an allow-listed domain.",
+   "where": [
+    "sgit.ai/docs/agent-contact.md",
+    "sgit.ai/agents"
+   ],
+   "kind": "observation",
+   "external_evidence": [
+    {
+     "url": "https://datatracker.ietf.org/doc/draft-klrc-aiagent-auth/",
+     "publisher": "IETF individual draft",
+     "date": "2026-09-09",
+     "quote": "Rather than defining new protocols, this document describes how existing and widely deployed standards can be applied or extended",
+     "supports": "context"
+    }
+   ],
+   "grade": "A2",
+   "strength": "A network-internal protocol (v0.1, approved 29 September 2026); no external adoption captured. Standards work prefers extending OAuth/WIMSE over new protocols, which is a contrast worth noting.",
+   "talk_beats": [
+    "demos"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "nfrs-from-the-inside",
+   "idea": "The non-functional requirements (version control, reliability, resilience, security, backups, consistency, explainability, documentation) are where agent deployments fail; backups have no written doctrine.",
+   "where": [
+    "nfrs.sgit.ai"
+   ],
+   "kind": "observation",
+   "external_evidence": [],
+   "grade": "A0",
+   "strength": "No external evidence gathered; it is an internal hub. Relevant to talk:infrastructure (recovery gap) only by analogy.",
+   "talk_beats": [
+    "infrastructure"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "ai-finds-vulnerabilities",
+   "idea": "AI now finds serious vulnerabilities at a pace that changes defence: php2shell was found with AI help by several independent teams.",
+   "where": [
+    "php.oct.2026.newsroom.sgit.ai/questions/why-big-news",
+    "php site facts ai-found, four-reporters, lorenc-ai-found"
+   ],
+   "kind": "event",
+   "external_evidence": [
+    {
+     "url": "https://www.wiz.io/blog/php2shell-php-rce",
+     "publisher": "Wiz Research",
+     "date": "2026-10-21",
+     "quote": "We used Wiz Atlas , Gemini 4 Argon and GPT-5.6 Sol throughout this research.",
+     "supports": "for"
+    },
+    {
+     "url": "https://calif.io/php2shell/",
+     "publisher": "Calif",
+     "date": "2026-10-21",
+     "quote": "No special harness, or access to models that weren't generally available to everyone were used in the initial bug discovery.",
+     "supports": "for"
+    },
+    {
+     "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+     "publisher": "The PHP Foundation",
+     "date": "2026-10-21",
+     "quote": "the team has published 15 CVEs since July 1st and worked through more than 100 reports that turned out to be invalid, duplicates, or not reproducible.",
+     "supports": "context"
+    },
+    {
+     "url": "https://www.darpa.mil/news/2025/aixcc-results",
+     "publisher": "DARPA",
+     "date": "2025-08",
+     "quote": "teams also discovered 18 real, non-synthetic vulnerabilities that are being responsibly disclosed to open source project maintainers.",
+     "supports": "for"
+    },
+    {
+     "url": "https://projectzero.google/2024/10/from-naptime-to-big-sleep.html",
+     "publisher": "Google Project Zero",
+     "date": "2024-11",
+     "quote": "Today, we're excited to share the first real-world vulnerability discovered by the Big Sleep agent : an exploitable stack buffer underflow in SQLite",
+     "supports": "for"
+    },
+    {
+     "url": "https://daniel.haxx.se/blog/2024/01/02/the-i-in-llm-stands-for-intelligence/",
+     "publisher": "Daniel Stenberg (curl)",
+     "date": "2024-01-02",
+     "quote": "Let me show you the most significant effect of AI on curl as of today – with examples.",
+     "supports": "against"
+    }
+   ],
+   "grade": "A5",
+   "strength": "Strong: two independent finders (Calif, Wiz) each say AI was used, the PHP Foundation (recipient) corroborates and credits OpenAI Codex Security, and DARPA/Project Zero give a pre-2026 track record. Counterweight: AI also floods maintainers with invalid reports (curl; PHP's 100+ invalid). Note the 2024 Quarkslab audit had already surfaced the OOM issue without proving exploitability: AI's contribution was exploitation as much as discovery (Wiz says so).",
+   "talk_beats": [
+    "outages",
+    "loop",
+    "collision"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "zero-day-dissolves-controls",
+   "idea": "Infrastructure cannot hold: a critical flaw in a base layer makes every control above it a stopgap, to the point where governments advise switching systems off.",
+   "where": [
+    "talk:outages",
+    "php.oct.2026.newsroom.sgit.ai/questions/take-offline",
+    "php site facts offline-*"
+   ],
+   "kind": "event",
+   "external_evidence": [
+    {
+     "url": "https://www.php.net/archive/2026.php",
+     "publisher": "PHP Group",
+     "date": "2026-10-21",
+     "quote": "There are no complete mitigations, updating is the only safe choice.",
+     "supports": "for"
+    },
+    {
+     "url": "https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php",
+     "publisher": "UK NCSC",
+     "date": "2026-10-22",
+     "quote": "If you are unable to apply the temporary mitigations, or applying them would take too long, you should consider taking the system offline until it can be fully mitigated.",
+     "supports": "for"
+    },
+    {
+     "url": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+     "publisher": "CISA (read via WebFetch)",
+     "date": "2026-10-21",
+     "quote": "should take PHP-based systems offline until they can be patched or updated.",
+     "supports": "for"
+    },
+    {
+     "url": "https://cert.europa.eu/publications/security-advisories/2026-018/",
+     "publisher": "CERT-EU",
+     "date": "2026-10-21",
+     "quote": "Where that is not feasible, organisations should consider isolating internet-facing applications from public networks until a fix is applied and verified.",
+     "supports": "for"
+    },
+    {
+     "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+     "publisher": "CISA KEV",
+     "date": "2026-10-26",
+     "quote": "\"dateAdded\": \"2026-10-26\"",
+     "supports": "for"
+    }
+   ],
+   "grade": "A6",
+   "strength": "The agencies' own records carry the take-offline advice (CISA, NCSC; NSA via the php site's capture only). Caveat for the talk's wording: php2shell was a coordinated disclosure with patches released at disclosure, so it is not a zero-day in the ToolShell sense; pre-disclosure exploitation rests on one second-hand report (Amazon honeypot via The Hacker News). As of 28 October no named organisation has said it was compromised (php site). It is better evidence for 'patch-or-switch-off is the only control' than for 'controls dissolved'.",
+   "talk_beats": [
+    "outages",
+    "collision",
+    "infrastructure"
+   ],
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "agent-newsroom-method",
+   "idea": "A multi-agent newsroom can produce a large, sourced, self-correcting publication fast if every sentence is tied to hashed captures in an evidence vault and an independent fact-check desk grades every claim (A0 to A6) and opens tickets; the desk found the site's own claims overstated.",
+   "where": [
+    "php.oct.2026.newsroom.sgit.ai/method",
+    "/factcheck",
+    "/updates/2026-10-22T2003Z",
+    "/team",
+    "/admin/agents/roles"
+   ],
+   "kind": "observation",
+   "external_evidence": [
+    {
+     "url": "https://updates.php.oct.2026.newsroom.sgit.ai/updates/2026-10-22T2003Z/index.md",
+     "publisher": "php.oct.2026.newsroom.sgit.ai (own site)",
+     "date": "2026-10-22",
+     "quote": "The site went from nothing to 391 pages in about ten hours, and its own fact-check desk found that 11 of its 70 claims say more than their evidence.",
+     "supports": "for"
+    },
+    {
+     "url": "https://php.oct.2026.newsroom.sgit.ai/factcheck/index.md",
+     "publisher": "php.oct.2026.newsroom.sgit.ai (own site)",
+     "date": "2026-10-28",
+     "quote": "**70 of 70 claims graded**, last run Run-9 against vault commit `a7ab84771dfc`. **10** can be relied on without reservation",
+     "supports": "for"
+    },
+    {
+     "url": "https://php.oct.2026.newsroom.sgit.ai/method/index.md",
+     "publisher": "php.oct.2026.newsroom.sgit.ai (own site)",
+     "date": "2026-10-28",
+     "quote": "A private, encrypted sgit vault, opened at 2026-10-22T08:03Z, written to by 8 agents and the editor. It holds 675 sources and 741 captures at commit `75668aedfb6d`.",
+     "supports": "for"
+    },
+    {
+     "url": "https://team.php.oct.2026.newsroom.sgit.ai/admin/agents/roles/index.md",
+     "publisher": "php.oct.2026.newsroom.sgit.ai (own site)",
+     "date": "2026-10-28",
+     "quote": "29 members, 27 of them agents.",
+     "supports": "context"
+    }
+   ],
+   "grade": "A2",
+   "strength": "All figures are the site's own records (self-reported, not independently audited); the private vault cannot be inspected, only its published hash manifest. The method is unusually transparent about its own errors, which is the strongest evidence for the editor's claim. Team-size figures disagree across its own pages (see claim php-team-size).",
+   "talk_beats": [
+    "demos",
+    "brakes"
+   ],
+   "register": "sgit-php-ideas"
+  }
+ ]
+}

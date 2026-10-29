@@ -1,0 +1,96 @@
+{
+ "about": "Newer editions of the numbers the talk uses",
+ "built": "2026-10-29T02:05Z",
+ "figures": [
+  {
+   "id": "dtex-cost-insider-2026",
+   "talk_figure": "$17.4M average annual cost of insider risk (2025 report)",
+   "newer_figure": "$19.5M average annual cost (2026 report, data for 2025), up 20% over two years; negligence $10.3M; 67 days to contain",
+   "source": "https://www.dtex.ai/newsroom/press-releases/insider-risk-costs-rise-as-ai-creates-new-blind-spots/",
+   "source_ids": [
+    "fig-dtex-2026-press",
+    "fig-ponemon-2026-blog"
+   ],
+   "date": "2026-02-24",
+   "quote": "The average annual cost of insider risk reached $19.5 million in 2025, up 20% over two years, while the average time to contain an incident fell to a record low.",
+   "recommendation": "Update to $19.5M, cite '2026 Cost of Insider Risks Global Report, Ponemon/DTEX' (354 organisations, 8,750 interviews). Negligence at $10.3M (+17%) suits 'not attacks, just agents being agents'. Grade A2 (one sponsor-commissioned survey, checked capture)."
+  },
+  {
+   "id": "cyberark-identity-landscape-2026",
+   "talk_figure": "82 machine identities per human (CyberArk 2025)",
+   "newer_figure": "109:1 (2026 Identity Security Landscape, now published by Palo Alto Networks after the CyberArk acquisition; n=2,930)",
+   "source": "https://origin-www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/reports/2026-identity-security-landscape-report.pdf",
+   "source_ids": [
+    "fig-idira-2026-pdf",
+    "fig-idira-2026-landscape"
+   ],
+   "date": "2026",
+   "quote": "Organizations are currently contending with an average of 109 machine identities for every human. AI agents are the fastest-growing subset of that population.",
+   "recommendation": "Update to 109:1 and attribute to 'Palo Alto Networks (formerly CyberArk) 2026 Identity Security Landscape'. Same page: 96% say human identities have access far beyond their roles. Vendor survey, A2."
+  },
+  {
+   "id": "verizon-dbir-2026",
+   "talk_figure": "~60% human element, 30% third party (DBIR 2025)",
+   "newer_figure": "Human element 62% (from 60%); third-party involvement 48% of breaches (up 60% from 30%)",
+   "source": "https://www.verizon.com/business/resources/T7a1/reports/2026-dbir-data-breach-investigations-report.pdf",
+   "source_ids": [
+    "fig-dbir-2026-pdf",
+    "fig-dbir-2026-esp",
+    "fig-dbir-2026-abnormal"
+   ],
+   "date": "2026 (May/June)",
+   "quote": "Human element was present in 62% of breaches, a slight increase from the previous year’s 60%. ... breaches with third-party involvement have increased by 60% from last year’s dataset, reaching 48% of total breaches.",
+   "recommendation": "Update both. 48% third party is a big jump and strengthens the 'delegated access' beat (Drift, Vercel/Context.ai are 2025-26 examples). Careful: ransomware is also 48% of breaches in the same report; do not confuse. Primary PDF captured, A6 for the figure as Verizon's."
+  },
+  {
+   "id": "gartner-agentic-2026",
+   "talk_figure": "Over 40% of agentic AI projects canceled by end of 2027 (Gartner, 25 June 2025)",
+   "newer_figure": "No revision of the 40% cancellation forecast found. New: by 2027, 40% of enterprises will demote or decommission autonomous AI agents due to governance gaps identified only after production incidents (26 May 2026). Also: 70% of enterprises will abandon agentic AI built by vendor forward-deployed engineering by 2028 (29 Sept 2026).",
+   "source": "https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure",
+   "source_ids": [
+    "fig-gartner-2026-05-26-mirror",
+    "fig-gartner-2026-05-26-insurancecanada",
+    "fig-gartner-2026-09-29-mirror"
+   ],
+   "date": "2026-05-26",
+   "quote": "Gartner predicts that by 2027, 40% of enterprises will demote or decommission autonomous AI agents due to governance gaps identified only after production incidents occur.",
+   "recommendation": "Keep the 2025 figure (still current) and add the May 2026 one: it ties cancellations to production incidents, which is exactly the talk's argument. gartner.com returns 403; captured from Gartner's own gcom.pdo.aws.gartner.com mirror plus a republication. It is a prediction: label 'guess', not measured."
+  },
+  {
+   "id": "csa-agent-identity-2026",
+   "talk_figure": "(new) agent permissions / NHI survey",
+   "newer_figure": "73% expect agents to become vital within a year; 68% cannot clearly distinguish human from AI agent activity (CSA, March 2026)",
+   "source": "https://cloudsecurityalliance.org/press-releases/2026/03/24/more-than-two-thirds-of-organizations-cannot-clearly-distinguish-ai-agent-from-human-actions",
+   "source_ids": [
+    "fig-csa-agent-identity"
+   ],
+   "date": "2026-03-24",
+   "quote": "Seventy-three percent of organizations expect AI agents to become vital within the next year, yet 68% can’t clearly distinguish between human and AI agent activity",
+   "recommendation": "Good for 'your logs are a self-report' / attribution beat. Survey, A2."
+  },
+  {
+   "id": "1password-agent-permissions-2026",
+   "talk_figure": "(new) agent permissions survey",
+   "newer_figure": "33% of developers using agents say their company had an incident tied to overprivileged NHIs; 40% grant persistent access; agents at 41% of orgs reach more than approved (1Password, n=1,000, fielded 26 May to 3 June 2026)",
+   "source": "https://waxell.ai/blog/ai-agents-twice-approved-data-1password-survey",
+   "source_ids": [
+    "fig-1password-waxell"
+   ],
+   "date": "2026-06",
+   "quote": "Among developers who use agents, 33% said their company had a breach or security incident tied to overprivileged non-human identities.",
+   "recommendation": "Promising but captured only through a vendor blog summarising 1Password's survey (A1). Fetch 1Password's own release before using."
+  },
+  {
+   "id": "gartner-guardian-agents-2026",
+   "talk_figure": "(new)",
+   "newer_figure": "Reported Gartner Market Guide for Guardian Agents (25 Feb 2026) claim that through 2028 at least 80% of unauthorised AI agent transactions will be caused by internal policy violations rather than malicious attacks",
+   "source": "https://thehackernews.com/2026/03/5-learnings-from-first-ever-gartner.html",
+   "source_ids": [
+    "fig-gartner-guardian-thn"
+   ],
+   "date": "2026-02-25",
+   "quote": "On February 25, 2026, Gartner published its inaugural Market Guide for Guardian Agents",
+   "recommendation": "Would be the perfect support for 'not attacks, just agents being agents', but the 80% wording was only seen in a vendor press release that returned 403; the captured THN piece confirms the guide exists, not the 80% figure. A1 until captured."
+  }
+ ]
+}

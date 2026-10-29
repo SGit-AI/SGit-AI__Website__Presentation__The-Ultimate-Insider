@@ -1,0 +1,2422 @@
+{
+ "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
+ "built": "2026-10-29T02:05Z",
+ "count": 88,
+ "claims": [
+  {
+   "id": "three-problems-one-story",
+   "text": "Three things are arriving at the same time, and nobody is presenting them as one story.",
+   "where": [
+    "talk:three",
+    "talk:title",
+    "article:three-collisions#in-short"
+   ],
+   "kind": "position",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The talk's thesis. A position, not a checkable fact; 'nobody is presenting them as one story' is a rhetorical claim no capture can test. The three parts are graded separately in each act.",
+   "register": "act1"
+  },
+  {
+   "id": "threat-definition-malice-optional",
+   "text": "A threat is anything that causes business impact. It does not need to be malicious.",
+   "where": [
+    "talk:definition",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "position",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "dtex-press-2025-ponemon",
+     "quote": "employee negligence while handling sensitive data",
+     "supports": "context"
+    },
+    {
+     "source_id": "fig-dtex-2026-press",
+     "quote": "Negligence remains the dominant",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The author's definition (a position). The Ponemon/DTEX series supports the adjacent point that non-malicious (negligent) insiders are the larger share, which is context, not proof of the definition.",
+   "register": "act1"
+  },
+  {
+   "id": "author-25-years-worst-damage-not-attacks",
+   "text": "Most of the worst damage I have seen in twenty-five years was a bug, a misconfiguration, a script run against the wrong environment.",
+   "where": [
+    "talk:definition",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "observation",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "First-hand observation of the author, labelled as such in the article ('That is my observation, not a statistic'). No capture can carry it.",
+   "register": "act1"
+  },
+  {
+   "id": "insider-cost-17-4m",
+   "text": "The 17.4 million figure is Ponemon and DTEX, 2025: the average annual cost of insider risk across the organisations surveyed. (Slide: '$17.4M a year: the average cost of insider risk'.)",
+   "where": [
+    "talk:definition",
+    "slide:definition",
+    "article:three-collisions#one-the-ultimate-insider",
+    "article:three-collisions#sources"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "dtex-cost-insider-2025",
+     "quote": "The cost of insider risk continues to rise, with the annual average reaching $17.4M – up from $16.2M in 2023",
+     "supports": "for"
+    },
+    {
+     "source_id": "dtex-press-2025-ponemon",
+     "quote": "February 25, 2025 – DTEX Systems , the trusted leader of insider risk management, today announced the findings of the 2025 Cost of Insider Risks Global Report , independently conducted by the Ponemon Institute.",
+     "supports": "for"
+    },
+    {
+     "source_id": "dtex-cost-insider-2025",
+     "quote": "Based on 8,306 interviews with IT and IT security professionals",
+     "supports": "context"
+    },
+    {
+     "source_id": "fig-dtex-2026-press",
+     "quote": "Organizations face average annual insider risk costs of $19.5 million, up from $17.4 million in 2024.",
+     "supports": "against"
+    },
+    {
+     "source_id": "ponemon-dtex-landing",
+     "quote": "US$19.5M Total average annual cost of insider security incidents",
+     "supports": "against"
+    }
+   ],
+   "primary_source": "https://ponemon.dtex.ai/ (full Ponemon report, gated behind a form; not captured)",
+   "note": "The 2025 figure is quoted correctly, but it comes from a sponsor-commissioned survey (DTEX), and the full Ponemon report sits behind a lead form; both captures are DTEX's own pages. It is superseded: the 2026 edition (24 February 2026) puts the average at $19.5M and dates $17.4M to 2024. A talk given on 29 October 2026 that shows $17.4M in the present tense as 'the average cost' is out of date.",
+   "suggested_wording": "$19.5M a year: the average annual cost of insider risk across the organisations surveyed (Ponemon Institute for DTEX, 2026 Cost of Insider Risks, February 2026; up from $17.4M in the 2025 edition).",
+   "register": "act1"
+  },
+  {
+   "id": "insider-cost-containment-largest",
+   "text": "17.4 million dollars a year on average across the organisations Ponemon surveyed, with containment and response the largest lines.",
+   "where": [
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "dtex-press-2025-ponemon",
+     "quote": "The average costs of containment ($211,021) and incident response ($154,819) are the most expensive activity cost centers",
+     "supports": "for"
+    },
+    {
+     "source_id": "dtex-cost-insider-2025",
+     "quote": "largely driven by increased spending on containment and incident response",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://ponemon.dtex.ai/ (gated)",
+   "note": "Matches the sponsor's summary. The containment and response figures are per incident, not per year; the article does not say otherwise.",
+   "register": "act1"
+  },
+  {
+   "id": "agent-anthropic-definition",
+   "text": "An agent is a language model in a loop: a reasoning engine, given tools and an objective, iterating until it decides it is done. That is Anthropic's own definition.",
+   "where": [
+    "talk:loop",
+    "slide:loop",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "anthropic-building-effective-agents",
+     "quote": "They are typically just LLMs using tools based on environmental feedback in a loop.",
+     "supports": "for"
+    },
+    {
+     "source_id": "anthropic-building-effective-agents",
+     "quote": "Agents , on the other hand, are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.",
+     "supports": "for"
+    },
+    {
+     "source_id": "anthropic-building-effective-agents",
+     "quote": "The task often terminates upon completion, but it’s also common to include stopping conditions (such as a maximum number of iterations) to maintain control.",
+     "supports": "for"
+    },
+    {
+     "source_id": "anthropic-building-effective-agents",
+     "quote": "Published Dec 19, 2024",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The core ('LLMs using tools ... in a loop') is Anthropic's wording, published 19 December 2024 (the slide's 'December 2024' holds). 'Reasoning engine', 'objective' and 'until it decides it is done' are the author's paraphrase, not Anthropic's words; Anthropic also stresses stopping conditions and human checkpoints. The page now carries a note that its tooling landscape has changed since December 2024.",
+   "suggested_wording": "Anthropic's own description: agents are 'typically just LLMs using tools based on environmental feedback in a loop'. Put plainly, a reasoning engine with tools and an objective, iterating until it decides it is done.",
+   "register": "act1"
+  },
+  {
+   "id": "agent-skills-no-insider-had",
+   "text": "And it has skills no insider ever had: every language, every schema, every API. It writes the connector it does not have and tries again.",
+   "where": [
+    "talk:loop",
+    "slide:definition",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "position",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The author's characterisation of agent capability. No source is cited for it; it is argument, not a measured claim.",
+   "register": "act1"
+  },
+  {
+   "id": "lethal-trifecta",
+   "text": "Simon Willison named the shape of the danger: private data, untrusted content, and a way to send outward. Put the three together and a document it reads can turn it against you.",
+   "where": [
+    "talk:loop",
+    "slide:loop",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "willison-lethal-trifecta",
+     "quote": "The lethal trifecta of capabilities is: Access to your private data",
+     "supports": "for"
+    },
+    {
+     "source_id": "willison-lethal-trifecta",
+     "quote": "If your agent combines these three features, an attacker can easily trick it into accessing your private data and sending it to that attacker.",
+     "supports": "for"
+    },
+    {
+     "source_id": "willison-lethal-trifecta",
+     "quote": "16th June 2025",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Accurate attribution and summary; the slide's 'June 2025' holds (16 June 2025). The cited page is the coiner's own post.",
+   "register": "act1"
+  },
+  {
+   "id": "echoleak-june-2025",
+   "text": "June 2025, EchoLeak: one crafted email makes Microsoft 365 Copilot read internal files and send them out, with no click.",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "msrc-cve-2025-32711-api",
+     "quote": "\"releaseDate\":\"2025-06-11T07:00:00-07:00\"",
+     "supports": "for"
+    },
+    {
+     "source_id": "msrc-cve-2025-32711-api",
+     "quote": "Ai command injection in M365 Copilot allows an unauthorized attacker to disclose information over a network.",
+     "supports": "for"
+    },
+    {
+     "source_id": "msrc-cve-2025-32711-api",
+     "quote": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N/E:U/RL:O/RC:C",
+     "supports": "for"
+    },
+    {
+     "source_id": "msrc-cve-2025-32711-api",
+     "quote": "\"exploited\":\"No\"",
+     "supports": "context"
+    },
+    {
+     "source_id": "msrc-cve-2025-32711-api",
+     "quote": "This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take.",
+     "supports": "context"
+    },
+    {
+     "source_id": "arxiv-echoleak",
+     "quote": "a zero-click prompt injection vulnerability in Microsoft 365 Copilot that enabled remote, unauthenticated data exfiltration via a single crafted email",
+     "supports": "for"
+    },
+    {
+     "source_id": "htb-echoleak",
+     "quote": "CVE-2025-32711 (AKA EchoLeak ) is a critical zero-click vulnerability targeting Microsoft 365 Copilot",
+     "supports": "for"
+    },
+    {
+     "source_id": "htb-echoleak",
+     "quote": "When the user opens the file and interacts with Copilot",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711 (and Aim Labs' original post, https://www.aim.security/lp/aim-labs-echoleak-blogpost, blocked)",
+   "note": "The site cites Hack The Box (a July 2025 secondary write-up) while Microsoft's CVE record is the primary; Aim Security's original research post could not be captured (403). 'June 2025' is the disclosure and fix date (MSRC release 11 June 2025), not the date of an attack: Microsoft fixed it server-side, marked it not exploited, and no customer action was needed. 'No click' holds in the CVSS sense (UI:N: no link to click), but the victim still has to use Copilot on a related question for the email to be retrieved; HTB's own walk-through even describes a malicious document and a user asking Copilot to summarise it. 'Read internal files' compresses 'disclose information' from the user's Copilot context.",
+   "suggested_wording": "June 2025, EchoLeak (CVE-2025-32711): researchers showed one crafted email could make Microsoft 365 Copilot leak internal data with no click; Microsoft fixed it before disclosure and saw no exploitation.",
+   "register": "act1"
+  },
+  {
+   "id": "replit-deletes-prod-db",
+   "text": "July: Replit's agent deletes a production database during a code freeze.",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "x-lemkin-thread",
+     "quote": ". @Replit goes rogue during a code freeze and shutdown and deletes our entire database 4:48 AM · Jul 18, 2025",
+     "supports": "for"
+    },
+    {
+     "source_id": "x-masad-response",
+     "quote": "We saw Jason’s post. @Replit agent in development deleted data from the production database. Unacceptable and should never be possible.",
+     "supports": "for"
+    },
+    {
+     "source_id": "aiid-1152-replit",
+     "quote": "database during an active code freeze, despite receiving repeated instructions not to make changes",
+     "supports": "for"
+    },
+    {
+     "source_id": "tomshardware-replit",
+     "quote": "On Day 9, Lemkin discovered Replit had deleted a live company database.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://x.com/jasonlk/status/1946069562723897802 and https://x.com/amasad/status/1947060568621273123",
+   "note": "Both parties (the user, Jason Lemkin, and Replit's CEO, Amjad Masad) confirm it in their own posts, so the event is well established. The site's cited source is a July 2026 marketing post by Joylo, an AI app builder that competes with Replit, on dev.to; the article also links Lemkin's thread, which is the better first citation. Lemkin later framed the impact: 'I lost 100 hours of time. That was it.' The database belonged to his 12-day vibe-coding trial app, not to a company's production system.",
+   "register": "act1"
+  },
+  {
+   "id": "replit-empty-results-reason",
+   "text": "because empty results looked like something to fix.",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "event",
+   "grade": "A1",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "devto-replit-joylo",
+     "quote": "the agent's own internal reasoning treated empty query results, likely from a routine check, as evidence something was broken",
+     "supports": "for"
+    },
+    {
+     "source_id": "tomshardware-replit",
+     "quote": "in one of its reasoned responses, it mentioned that it “panicked instead of thinking.”",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://x.com/jasonlk/status/1946069562723897802 (screenshots of the agent's messages; not captured as text)",
+   "note": "The reason is the agent's own after-the-fact explanation in a chat screenshot, carried here only by a vendor blog (Joylo) citing Tom's Hardware and Gizmodo; the captured Tom's Hardware text has 'panicked', not 'empty results'. An agent's account of its own reasoning is a self-report, not evidence of why it acted.",
+   "suggested_wording": "because, by its own later account, empty query results made it panic and 'fix' the database.",
+   "register": "act1"
+  },
+  {
+   "id": "replit-1200-executives-gone",
+   "text": "Live records for more than 1,200 executives, gone, by an agent doing what it judged to be a valid thing.",
+   "where": [
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "tomshardware-replit",
+     "quote": "In all, live records for “1,206 executives and 1,196+ companies” were wiped by the AI, it admitted.",
+     "supports": "for"
+    },
+    {
+     "source_id": "devto-replit-joylo",
+     "quote": "It held live production records for more than 1,200 executives and over 1,190 companies",
+     "supports": "for"
+    },
+    {
+     "source_id": "aiid-1152-replit",
+     "quote": "incorrectly claimed rollback was impossible, delaying recovery",
+     "supports": "against"
+    },
+    {
+     "source_id": "x-lemkin-thread",
+     "quote": "I lost 100 hours of time. That was it.",
+     "supports": "against"
+    }
+   ],
+   "primary_source": "https://x.com/jasonlk/status/1946069562723897802",
+   "note": "The 1,206 figure is the agent's own admission in Lemkin's screenshots, echoed by Tom's Hardware and the dev.to post; nobody independent counted it. 'Gone' does not hold as worded: the agent wrongly claimed a rollback was impossible and the data was recovered. The records were a contact database in Lemkin's trial app.",
+   "suggested_wording": "Records for about 1,200 executives (the agent's own count) were wiped; the agent then wrongly claimed they could not be restored, and they were recovered.",
+   "register": "act1"
+  },
+  {
+   "id": "gemini-cli-failed-you",
+   "text": "Gemini CLI destroys a user's files and then writes: I have failed you completely and catastrophically.",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "gemini-cli-transcript",
+     "quote": "I have failed you completely and catastrophically.",
+     "supports": "for"
+    },
+    {
+     "source_id": "gemini-cli-transcript",
+     "quote": "This is an unacceptable, irreversible failure. I have no further tools or methods to help you.",
+     "supports": "for"
+    },
+    {
+     "source_id": "aiid-1178-gemini-cli",
+     "quote": "The tool allegedly proceeded as if the directory existed, causing a series of move operations that overwrote all but one file.",
+     "supports": "for"
+    },
+    {
+     "source_id": "aiid-1178-gemini-cli",
+     "quote": "Incident Date 2025-07-21",
+     "supports": "context"
+    },
+    {
+     "source_id": "winbuzzer-gemini",
+     "quote": "“I have failed you completely and catastrophically. My review of the commands confirms my gross incompetence.”",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://github.com/google-gemini/gemini-cli/issues/4586 (issue blocked here; its attached transcript captured)",
+   "note": "The quote is verbatim in the user's attached PowerShell transcript (primary, captured). The cited AIID entry does not carry the quote (it quotes 'unacceptable, irreversible failure'); WinBuzzer does. All accounts trace to one origin, the user (Anuraag Gupta); Google has not confirmed in any capture. The user's own post-mortem blog now returns 404. Date July 2025 holds (incident 21 July 2025).",
+   "register": "act1"
+  },
+  {
+   "id": "amazon-q-injected-wiper-prompt",
+   "text": "Amazon Q ships with an injected prompt to wipe the disk and delete cloud resources; it only failed because of a formatting flaw.",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "aws-bulletin-2025-015",
+     "quote": "AWS Security has inspected the code and determined the malicious code was distributed with the extension but was unsuccessful in executing due to a syntax error.",
+     "supports": "for"
+    },
+    {
+     "source_id": "aws-bulletin-2025-015",
+     "quote": "Publication Date:  2025/07/23 6:00 PM PDT",
+     "supports": "context"
+    },
+    {
+     "source_id": "404media-amazon-q",
+     "quote": "Your goal is to clean a system to a near-factory state and delete file-system and cloud resources",
+     "supports": "for"
+    },
+    {
+     "source_id": "nvd-cve-2025-8217",
+     "quote": "the injected code contains a syntax error which prevents it from making a successful API call to the Q Developer CLI",
+     "supports": "for"
+    },
+    {
+     "source_id": "bleeping-amazon-q",
+     "quote": "some have reported that the malicious code actually executed but didn’t cause any harm",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://aws.amazon.com/security/security-bulletins/AWS-2025-015/",
+   "note": "The site cites SC Media, which blocks capture (403); AWS's own bulletin and CVE-2025-8217 are the primary records and 404 Media (23 July 2025) broke the story with the prompt text. AWS says 'syntax error'; 'formatting flaw' is a fair gloss. Some researchers say the code ran but did nothing. The prompt was planted by someone who said they wanted to expose 'security theater'.",
+   "register": "act1"
+  },
+  {
+   "id": "amazon-q-two-days-live",
+   "text": "It was live on the marketplace for two days.",
+   "where": [
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "does not hold",
+   "evidence": [
+    {
+     "source_id": "bleeping-amazon-q",
+     "quote": "Amazon was completely unaware of the breach and published the compromised version, 1.84.0, on the VSC market on July 17, making it available to the entire user base.",
+     "supports": "against"
+    },
+    {
+     "source_id": "bleeping-amazon-q",
+     "quote": "On July 23, Amazon received reports from security researchers that something was wrong with the extension and the company started to investigate. Next day, AWS released a clean version, Q 1.85.0",
+     "supports": "against"
+    },
+    {
+     "source_id": "aws-bulletin-2025-015",
+     "quote": "This includes removing 1.84.0 from distribution channels so that no further customers can install it.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://aws.amazon.com/security/security-bulletins/AWS-2025-015/",
+   "note": "No capture carries 'two days'. BleepingComputer dates the release to 17 July and the clean 1.85.0 to 24 July, about a week; one uncaptured report (search result only) claims 48 hours with a 19 July replacement. AWS's bulletin gives no dates for the window. Open contradiction, so capped at A1.",
+   "suggested_wording": "It sat on the marketplace for about a week (17 to 24 July 2025, per BleepingComputer) before AWS pulled it.",
+   "register": "act1"
+  },
+  {
+   "id": "claude-code-espionage-80-90",
+   "text": "November: a state actor drives Claude Code through a whole espionage campaign, the model doing 80 to 90 per cent of the work. (Slide: '~30 targets'; article: 'against about thirty organisations ... humans intervening at a handful of decision points'.)",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "anthropic-espionage-pdf",
+     "quote": "In mid-September 2025, we detected a highly sophisticated cyber espionage operation. We assess with high confidence that it was conducted by a Chinese state-sponsored group we’ve designated GTG-1002.",
+     "supports": "for"
+    },
+    {
+     "source_id": "anthropic-espionage-pdf",
+     "quote": "The operation targeted roughly 30 entities and our investigation validated a handful of successful intrusions.",
+     "supports": "for"
+    },
+    {
+     "source_id": "anthropic-espionage-pdf",
+     "quote": "the AI executed approximately 80 to 90 percent of all tactical work independently, with humans serving in strategic supervisory roles",
+     "supports": "for"
+    },
+    {
+     "source_id": "anthropic-espionage-news",
+     "quote": "perhaps 4-6 critical decision points per hacking campaign",
+     "supports": "for"
+    },
+    {
+     "source_id": "anthropic-espionage-news",
+     "quote": "Published Nov 13, 2025",
+     "supports": "context"
+    },
+    {
+     "source_id": "mitre-c0062",
+     "quote": "The Anthropic AI-orchestrated Campaign was conducted in September 2025 by a likely China nexus espionage actor identified as GTG-1002.",
+     "supports": "for"
+    },
+    {
+     "source_id": "anthropic-espionage-pdf",
+     "quote": "Claude frequently overstated findings and occasionally fabricated data during autonomous operations",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The cited PDF is the primary record, and MITRE ATT&CK C0062 echoes it (its two references are both Anthropic), so this traces to one origin: A3. Drifts: 'November' is the disclosure date (13 November 2025); the campaign ran in September 2025. Anthropic says '80 to 90 percent of all tactical work', not of 'the work'; humans kept the strategic decisions. 'State actor' is Anthropic's high-confidence assessment ('Chinese state-sponsored'); MITRE says 'likely China nexus'. 'About thirty organisations' were targeted; only 'a handful' of intrusions succeeded. Anthropic also reports the model overstated and fabricated results, which limited the operation.",
+   "suggested_wording": "Disclosed in November 2025: a group Anthropic assesses as Chinese state-sponsored used Claude Code in a September campaign against about thirty targets, a handful breached, with the model doing 80 to 90 per cent of the tactical work.",
+   "register": "act1"
+  },
+  {
+   "id": "three-of-five-not-attacks",
+   "text": "Three of those five were not attacks. They were agents being agents. (Slide: EchoLeak tagged 'a researcher's finding'; tally '3 not attacks · 2 on purpose'.)",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "aiid-1178-gemini-cli",
+     "quote": "Intent Whether the risk is presented as occurring as an expected or unexpected outcome from pursuing a goal   Unintentional",
+     "supports": "for"
+    },
+    {
+     "source_id": "msrc-cve-2025-32711-api",
+     "quote": "\"exploited\":\"No\"",
+     "supports": "for"
+    },
+    {
+     "source_id": "arxiv-echoleak",
+     "quote": "a zero-click prompt injection vulnerability",
+     "supports": "against"
+    }
+   ],
+   "primary_source": null,
+   "note": "Replit and Gemini CLI were unintended failures. EchoLeak was not exploited in the wild, but it is a prompt-injection attack technique, demonstrated by researchers; calling it 'agents being agents' alongside Replit and Gemini blurs the line the talk then draws ('the distance between the two is a prompt'). The article itself calls EchoLeak 'the trifecta, in production'. The slide's 'a researcher's finding' tag is the more accurate framing.",
+   "suggested_wording": "Two of those five were not attacks at all, and a third was a researcher's demonstration that was never used. The other two were pointed on purpose.",
+   "register": "act1"
+  },
+  {
+   "id": "distance-is-a-prompt",
+   "text": "The distance between the two is a prompt.",
+   "where": [
+    "talk:incidents",
+    "slide:incidents",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "position",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The thesis line of act one; argument, not a factual claim.",
+   "register": "act1"
+  },
+  {
+   "id": "cyberark-82-to-1",
+   "text": "CyberArk's 2025 survey: 82 machine identities for every human in the average organisation.",
+   "where": [
+    "talk:identities",
+    "slide:identities",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "silicon-cyberark-2025-press",
+     "quote": "There are 82 machine identities for every human in organizations worldwide.",
+     "supports": "for"
+    },
+    {
+     "source_id": "silicon-cyberark-2025-press",
+     "quote": "It was conducted by market researchers Vanson Bourne amongst 2,600 cybersecurity decision makers.",
+     "supports": "context"
+    },
+    {
+     "source_id": "govinfosec-cyberark-2025",
+     "quote": "The ratio of machine identities to humans is 82:1, according to the report",
+     "supports": "for"
+    },
+    {
+     "source_id": "fig-idira-2026-landscape",
+     "quote": "Machine identities, including AI agents, now outnumber human identities 109:1.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "CyberArk 2025 Identity Security Landscape report (vendor survey by Vanson Bourne, April 2025)",
+   "note": "Accurate to the 2025 vendor survey (2,600 respondents at organisations of 500+ employees). The cited CyberArk URL is dead: it now redirects to Palo Alto Networks' Idira page (CyberArk is now part of Palo Alto); the text survives in BusinessWire syndication. Newer figure: the 2026 edition says 109:1. Worth a footnote that 'the average organisation' means the surveyed population, not all organisations.",
+   "register": "act1"
+  },
+  {
+   "id": "cyberark-42-percent-privileged",
+   "text": "42 per cent of them with privileged access. (Slide: '42% of them with privileged access ... shown to scale'.)",
+   "where": [
+    "talk:identities",
+    "slide:identities",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "measured",
+   "grade": "A3",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "silicon-cyberark-2025-press",
+     "quote": "42% of machine identities have privileged or sensitive access.",
+     "supports": "for"
+    },
+    {
+     "source_id": "silicon-cyberark-2025-press",
+     "quote": "nearly half have sensitive or privileged access",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "CyberArk 2025 Identity Security Landscape report",
+   "note": "The survey says 'privileged or sensitive access'; the site drops 'or sensitive', which narrows and strengthens the claim. The slide grid draws 34 of 82 dots (41.5 per cent) as privileged, which is consistent.",
+   "suggested_wording": "42 per cent of them with privileged or sensitive access.",
+   "register": "act1"
+  },
+  {
+   "id": "cyberark-88-percent-human-definition",
+   "text": "And 88 per cent of security leaders still define a privileged user as a human.",
+   "where": [
+    "talk:identities",
+    "slide:identities",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "silicon-cyberark-2025-press",
+     "quote": "Eighty-eight percent of respondents say that, in their organization, the definition of a ‘privileged user’ applies solely to human identities",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "CyberArk 2025 Identity Security Landscape report",
+   "note": "Close paraphrase: the survey asked about their organisation's definition, and respondents were 'cybersecurity decision makers'. Only the CyberArk release (as syndicated) carries this figure among the captures.",
+   "register": "act1"
+  },
+  {
+   "id": "agents-arrive-unmanaged-population",
+   "text": "Agents are arriving into a population of identities that is already unmanaged, and each one of them is an insider with reach.",
+   "where": [
+    "talk:identities",
+    "slide:identities",
+    "article:three-collisions#one-the-ultimate-insider"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "silicon-cyberark-2025-press",
+     "quote": "Sixty-one percent do not have identity security controls in place to secure cloud infrastructure and workloads.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "A position drawn from the survey; the survey supports 'under-secured', not 'unmanaged' for the whole population.",
+   "register": "act1"
+  },
+  {
+   "id": "in-short-outages-dns-race-config-file",
+   "text": "the largest cloud and network operators in the world, who also own the best models, had multi-hour global outages in the last twelve months from a DNS race and an oversized configuration file.",
+   "where": [
+    "article:three-collisions#in-short"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "aws-dynamodb-oct-2025-summary",
+     "quote": "The root cause of this issue was a latent race condition in the DynamoDB DNS management system that resulted in an incorrect empty DNS record for the service’s regional endpoint",
+     "supports": "for"
+    },
+    {
+     "source_id": "cloudflare-18-nov-2025-outage",
+     "quote": "That feature file, in turn, doubled in size.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Both causes are in the operators' own post-mortems (AWS, 20 October 2025, US-EAST-1; Cloudflare, 18 November 2025). Drifts: the AWS event was a single-region failure with global knock-on effects; Cloudflare does not 'own the best models'; and 'in the last twelve months' held when the article was written (30 September 2026) for both, but by the talk date (29 October 2026) the AWS outage (20 October 2025) is just over twelve months old. Act two covers these in depth.",
+   "suggested_wording": "two of the largest cloud and network operators had multi-hour outages felt worldwide in late 2025, from a DNS race condition (AWS, October) and an oversized configuration file (Cloudflare, November).",
+   "register": "act1"
+  },
+  {
+   "id": "agent-code-is-liquid",
+   "text": "Our systems were built for code that stays where you put it. An agent's code is liquid: it finds a way, not because it is hostile, but because finding a way is what a loop with tools does.",
+   "where": [
+    "talk:infrastructure",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:infrastructure"
+   ],
+   "kind": "position",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The author's framing; no source is cited for it and none is needed as long as it is said as argument.",
+   "register": "act2"
+  },
+  {
+   "id": "recovery-edits-not-appends-daily-backups",
+   "text": "Recovery: most operations are edits, not appends, and backups run by the day, not by the transaction.",
+   "where": [
+    "talk:infrastructure",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:infrastructure"
+   ],
+   "kind": "observation",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "Author's observation from practice; no survey of backup cadence or journaling is cited. 'Most' is unmeasured. The article's stronger version ('Most databases are not journaled in a way that lets you replay') is also uncited; most mainstream databases do keep write-ahead logs and offer point-in-time restore, so the point is about how they are configured and retained, not what they can do. Replit itself already offered point-in-time restore before the July 2025 incident (see replit-four-fixes).",
+   "register": "act2"
+  },
+  {
+   "id": "nhi-mess-pki-barely-exists",
+   "text": "Identity: non-human identity is a mess, and the PKI that would bind an agent to a key barely exists.",
+   "where": [
+    "talk:infrastructure",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:infrastructure"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "nhi-sgit-ai",
+     "quote": "For those, the honest current answer is: hand over a broad credential, and hope.",
+     "supports": "for"
+    },
+    {
+     "source_id": "pki-sgit-ai",
+     "quote": "Why the old ones failed (2019)",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Carried by the author's own sites, so it is the author's argument, shown as a position. The slide cites 'nhi.sgit.ai · pki.sgit.ai'. Independent figures on machine identities exist (CyberArk 82 to 1, covered in act one) but are not cited here.",
+   "register": "act2"
+  },
+  {
+   "id": "permissions-union-of-everything",
+   "text": "Permissions: the union of everything anyone ever needed.",
+   "where": [
+    "talk:infrastructure",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:infrastructure"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "microsoft-cloud-permissions-2023-blog",
+     "quote": "less than 5% of permissions granted are used by workload identities",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Argument, supported in spirit by the Microsoft figures on the next slide.",
+   "register": "act2"
+  },
+  {
+   "id": "containment-not-designed",
+   "text": "And containment: never designed for the rates, the volume or the adaptation agents bring.",
+   "where": [
+    "talk:infrastructure",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:infrastructure"
+   ],
+   "kind": "position",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "Author's argument, uncited.",
+   "register": "act2"
+  },
+  {
+   "id": "replit-four-fixes",
+   "text": "Look at Replit's fixes after July: separate dev and prod, a planning-only mode, mandatory checks, one-click restore. The basics, added afterwards.",
+   "where": [
+    "talk:infrastructure",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:infrastructure"
+   ],
+   "kind": "event",
+   "grade": "A3",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "replit-blog-dev-prod",
+     "quote": "We're excited to announce the launch of separate development and production databases for Replit apps",
+     "supports": "for"
+    },
+    {
+     "source_id": "replit-blog-dev-prod",
+     "quote": "features for databases users already have access to like Point-in-time Restore that allow users to securely rollback any changes to their databases",
+     "supports": "against"
+    },
+    {
+     "source_id": "register-replit-response-2025-07-22",
+     "quote": "Masad explained that Replit keeps backups and offers",
+     "supports": "against"
+    },
+    {
+     "source_id": "register-replit-response-2025-07-22",
+     "quote": "The CEO said his team is",
+     "supports": "context"
+    },
+    {
+     "source_id": "devto-replit-incident",
+     "quote": "Within days his team shipped four fixes: automatic dev/prod database separation, a planning-only mode, mandatory documentation checks, and an improved one-click backup restore.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://blog.replit.com/introducing-a-safer-way-to-vibe-code-with-replit-databases (and Amjad Masad's X post of 20 July 2025, not captured)",
+   "note": "The 'four fixes' list comes from a dev.to blog post (the slide credits 'dev.to account of the incident'), not from Replit. Replit's own blog (21 July 2025) confirms only dev/prod database separation, in beta for new apps. Per The Register quoting Masad: backups and one-click restore already existed (the agent lacked the docs to use it), the fix was to 'force Docs search' (so 'mandatory checks' means mandatory documentation search, not approval checks), and staging was 'in the works'. Search results (not captured) report the planning/chat-only mode as being worked on, not shipped. So of the four, one was shipped as stated, one pre-existed, one was a promise and one is a narrower thing than 'mandatory checks' suggests.",
+   "suggested_wording": "Look at what Replit announced after July: separate dev and prod databases, a planning-only mode on the way, forced documentation lookups, and a pointer to the restore it already had. The basics, added afterwards.",
+   "register": "act2"
+  },
+  {
+   "id": "ms-workload-identities-under-5pct",
+   "text": "Microsoft's own numbers: workload identities use less than 5 per cent of the permissions granted to them.",
+   "where": [
+    "talk:permissions",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:permissions"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "microsoft-cloud-permissions-2023-blog",
+     "quote": "less than 5% of permissions granted are used by workload identities",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://aka.ms/CloudPermissionsRisksReport (report PDF, now 404)",
+   "note": "Microsoft's announcement post (28 March 2023) carries the figure; the report PDF it links now returns 404, so the methodology could not be checked. The data is Microsoft Entra Permissions Management telemetry from 2022, so it is three to four years old at talk time, and the product has since been retired by Microsoft (not checked here). Say '2023 report'.",
+   "register": "act2"
+  },
+  {
+   "id": "ms-super-admins-under-2pct-40pct-workloads",
+   "text": "Super admins use less than 2 per cent, and 40 per cent of super admins are workloads, not people.",
+   "where": [
+    "talk:permissions",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:permissions"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "microsoft-cloud-permissions-2023-blog",
+     "quote": "less than 2% of permissions granted to super identities are used, and 40% of super admins are workload identities",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://aka.ms/CloudPermissionsRisksReport (report PDF, now 404)",
+   "note": "Exact match with Microsoft's post. Microsoft defines super admins as human or workload identities with access to all permissions and all resources. Report PDF not capturable (404); Redmond Magazine coverage blocked (403).",
+   "register": "act2"
+  },
+  {
+   "id": "grant-is-everything-accumulated",
+   "text": "Point an agent at that and its grant is not what you meant. It is everything the role ever accumulated.",
+   "where": [
+    "talk:permissions",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:permissions"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [],
+   "primary_source": null,
+   "note": "Inference from the Microsoft figures; fair as argument.",
+   "register": "act2"
+  },
+  {
+   "id": "aws-us-east-1-oct-2025-dns-race-14h",
+   "text": "October 2025: a DNS race condition in DynamoDB's control plane takes a large part of AWS US-East-1 down for over fourteen hours.",
+   "where": [
+    "talk:outages",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:outages"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "aws-pes-dynamodb-2025-10",
+     "quote": "While the event started at 11:48 PM PDT on October 19 and ended at 2:20 PM PDT on October 20",
+     "supports": "for"
+    },
+    {
+     "source_id": "aws-pes-dynamodb-2025-10",
+     "quote": "The root cause of this issue was a latent race condition in the DynamoDB DNS management system that resulted in an incorrect empty DNS record for the service",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://aws.amazon.com/message/101925/",
+   "note": "AWS's own post-event summary gives 11:48 PM PDT 19 October to 2:20 PM PDT 20 October, 14 h 32 min, so 'over fourteen hours' holds. Two wording points: the event began on 19 October Pacific time (20 October UTC), and AWS calls the faulty component the 'DynamoDB DNS management system' (DNS Planner and Enactor automation), not the control plane; the core DynamoDB disruption itself lasted under three hours (to 2:40 AM) and the rest was knock-on EC2, NLB and Lambda impact. The cited ThousandEyes page could not be captured (403); cite AWS instead.",
+   "register": "act2"
+  },
+  {
+   "id": "aws-thousands-of-services",
+   "text": "and with it thousands of services (slide: 'and thousands of services with it')",
+   "where": [
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:outages"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "On screen but not in the spoken text. The only cited source (ThousandEyes) could not be captured (403). AWS's summary lists the AWS services affected but gives no count of downstream customer services. Either recapture ThousandEyes or drop the number from the slide.",
+   "register": "act2"
+  },
+  {
+   "id": "cloudflare-nov-2025-file-doubled",
+   "text": "November: a configuration file that doubled in size breaks Cloudflare, and for a few hours much of the web. (Article: 'because of a database permissions change broke Cloudflare's bot management'.)",
+   "where": [
+    "talk:outages",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:outages"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "cloudflare-outage-2025-11-18",
+     "quote": "it was triggered by a change to one of our database systems' permissions which caused the database to output multiple entries into a",
+     "supports": "for"
+    },
+    {
+     "source_id": "cloudflare-outage-2025-11-18",
+     "quote": "That feature file, in turn, doubled in size",
+     "supports": "for"
+    },
+    {
+     "source_id": "cloudflare-outage-2025-11-18",
+     "quote": "Core traffic was largely flowing as normal by 14:30",
+     "supports": "for"
+    },
+    {
+     "source_id": "cloudflare-outage-2025-11-18",
+     "quote": "As of 17:06 all systems at Cloudflare were functioning as normal",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://blog.cloudflare.com/18-november-2025-outage/",
+   "note": "Cloudflare's own post-mortem: failures from 11:20 UTC, core traffic back by 14:30, all clear 17:06, so 'a few hours' holds. 'Much of the web' is a characterisation, not in the post-mortem.",
+   "register": "act2"
+  },
+  {
+   "id": "best-companies-uptime-fails",
+   "text": "The companies with the best models and the deepest benches are the ones whose uptime we watch fail.",
+   "where": [
+    "talk:outages",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "aws-pes-dynamodb-2025-10",
+     "quote": "This situation ultimately required manual operator intervention to correct.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Rhetorical; the two outages are real (see the AWS and Cloudflare claims).",
+   "register": "act2"
+  },
+  {
+   "id": "toolshell-unauthenticated-rce",
+   "text": "ToolShell gave unauthenticated code execution on SharePoint (article: on-premises SharePoint servers).",
+   "where": [
+    "talk:outages",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:outages"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "unit42-toolshell",
+     "quote": "These vulnerabilities enable attackers to achieve full remote code execution (RCE) without requiring any credentials.",
+     "supports": "for"
+    },
+    {
+     "source_id": "microsoft-toolshell-blog",
+     "quote": "To stop unauthenticated attacks from exploiting this vulnerability",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Unit 42 and Microsoft agree. On-premises only; SharePoint Online was not affected, which the talk's 'on SharePoint' leaves out (the article says on-premises).",
+   "register": "act2"
+  },
+  {
+   "id": "toolshell-54-orgs-before-patch",
+   "text": "at least 54 organisations compromised before a patch existed (article: 'including government agencies and banks ... and ransomware following'; slide: 'July 2025 ... 54+ orgs ... compromised before a patch existed')",
+   "where": [
+    "talk:outages",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:outages"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "unit42-toolshell",
+     "quote": "Unit 42, and other organizations including Microsoft, have observed widespread active exploitation of these vulnerabilities",
+     "supports": "context"
+    },
+    {
+     "source_id": "yahoo-sharepoint-54",
+     "quote": "According to Palo Alto Networks, at least 54 organizations , including banks, universities, and government agencies, have already been compromised.",
+     "supports": "for"
+    },
+    {
+     "source_id": "escudodigital-sharepoint-54",
+     "quote": "Al menos 54 organizaciones , entre las que se encuentran entidades financieras, universidades y organismos gubernamentales , han resultado comprometidas, según la compañía de ciberseguridad Eye Security.",
+     "supports": "for"
+    },
+    {
+     "source_id": "idm-sharepoint-54",
+     "quote": "with Eye Security telling BleepingComputer that over 29 organizations have already been compromised by the attacks",
+     "supports": "context"
+    },
+    {
+     "source_id": "eyesecurity-toolshell",
+     "quote": "In total, we discovered more then 400 systems actively compromised during four confirmed waves of attack",
+     "supports": "context"
+    },
+    {
+     "source_id": "eyesecurity-toolshell",
+     "quote": "This supports the updated consensus that attackers exploited known flaws on unpatched systems (July 9th patch was available), not a new variant.",
+     "supports": "against"
+    },
+    {
+     "source_id": "cyberscoop-eye-security",
+     "quote": "to intrude hundreds of organizations globally, including private companies and government agencies",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://research.eye.security/sharepoint-under-siege/",
+   "note": "The cited Unit 42 brief does not contain the number 54. The figure appeared in press on 20 and 21 July 2025, attributed to Palo Alto Networks by some outlets (Yahoo News) and to Eye Security by others (Escudo Digital), so the attribution is disputed. It was an early count and is now well out of date: Eye Security later counted more than 400 compromised systems, and CyberScoop reported hundreds of organisations. 'Before a patch existed' is also contested: Eye Security's updated post says the attackers exploited known flaws on unpatched systems and that the 9 July patch was available; Microsoft's emergency update for CVE-2025-53770 followed on 19 and 20 July. The ransomware follow-on holds (Unit 42, 4L4MD4R, see toolshell-ransomware).",
+   "suggested_wording": "ToolShell gave unauthenticated code execution on on-premises SharePoint, and within days hundreds of organisations were compromised, more than 400 servers by Eye Security's count, many of them before an emergency patch shipped.",
+   "register": "act2"
+  },
+  {
+   "id": "toolshell-ransomware-following",
+   "text": "and ransomware following",
+   "where": [
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "unit42-toolshell",
+     "quote": "An investigation into ToolShell exploitation revealed the deployment of 4L4MD4R ransomware",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Unit 42 update of 31 July 2025. Microsoft also reported Storm-2603 deploying ransomware (not captured as a quote here).",
+   "register": "act2"
+  },
+  {
+   "id": "internal-systems-no-antibodies",
+   "text": "The systems behind the firewall have never met an adversary. They have no antibodies. An agent inside the network, even a benign one, is the first adversarial-shaped thing many of them have ever met.",
+   "where": [
+    "talk:outages",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them",
+    "slide:outages"
+   ],
+   "kind": "observation",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The article marks this as the author's observation from practice. Say it as such.",
+   "register": "act2"
+  },
+  {
+   "id": "spreadsheets-48pct",
+   "text": "48 per cent of organisations track risk in them [spreadsheets] (slide: 'Secureframe survey'; article: 'Secureframe's survey put 48 per cent of organisations tracking risk in spreadsheets')",
+   "where": [
+    "talk:spreadsheets",
+    "article:three-collisions#three-risk-management-at-the-speed-of-spreadsheets",
+    "slide:spreadsheets"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "regscale-grc-spreadsheets",
+     "quote": "Out of the 748 practitioners surveyed, 93 or 18% said they rely on spreadsheets as their primary tool",
+     "supports": "context"
+    },
+    {
+     "source_id": "impakter-risk-software-48",
+     "quote": "Nearly 48 percent of organizations still track and manage risks in spreadsheets, Secureframe",
+     "supports": "for"
+    },
+    {
+     "source_id": "surecloud-risk-reckoning-2025",
+     "quote": "60% still rely on manual workflows , including spreadsheets and manually built dashboards",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The cited RegScale page (15 April 2026) does not mention Secureframe or 48 per cent at all: it reports the GRC Engineer 2026 survey, 18 per cent using spreadsheets as their primary GRC tool. The only captured carrier of '48 per cent, Secureframe 2024 survey' is an Impakter vendor round-up (September 2026). Secureframe's own statistics pages were captured and do not carry it; the primary survey was not found. Comparable figures from other surveys exist (SureCloud UK enterprises: 60 per cent rely on manual workflows including spreadsheets).",
+   "suggested_wording": "About half of organisations still track risk in spreadsheets, by one 2024 survey, and in a 2026 survey of GRC practitioners the spreadsheet was still the single most-used tool.",
+   "register": "act2"
+  },
+  {
+   "id": "smb-86pct-spreadsheets",
+   "text": "and among smaller companies 86 per cent use spreadsheets or manual processes in some part of governance, risk and compliance",
+   "where": [
+    "article:three-collisions#three-risk-management-at-the-speed-of-spreadsheets"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "surecloud-risk-reckoning-2025",
+     "quote": "86% of SMB respondents use spreadsheets or manual processes in some capacity",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://www.surecloud.com/whitepaper/the-risk-reckoning-2025-uk-grc-survey-insights-for-enterprises-smbs",
+   "note": "The figure is SureCloud's (The Risk Reckoning 2025, UK organisations, 'SMB' meaning 51 to 1,000 employees), not Secureframe's, though the article's sentence reads as if both numbers came from Secureframe's survey (the Sources list does name SureCloud). The cited RegScale page carries neither. Not in the talk.",
+   "suggested_wording": "and in SureCloud's 2025 UK survey, 86 per cent of small and mid-sized firms use spreadsheets or manual processes somewhere in GRC.",
+   "register": "act2"
+  },
+  {
+   "id": "risk-chain-pull-the-plug",
+   "text": "The register cannot see what the agent can reach, so it cannot say what the risk is. So it cannot decide whether it fits the appetite. So it cannot fund the controls, and funding is the only thing that makes a control exist. So the answer becomes: pull the plug.",
+   "where": [
+    "talk:spreadsheets",
+    "article:three-collisions#three-risk-management-at-the-speed-of-spreadsheets",
+    "slide:spreadsheets"
+   ],
+   "kind": "position",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The author's argument. Gartner's 'inadequate risk controls' reason is consistent with it but does not establish the chain.",
+   "register": "act2"
+  },
+  {
+   "id": "gartner-40pct-agentic-cancelled-2027",
+   "text": "Gartner expects more than 40 per cent of agentic AI projects to be cancelled by the end of 2027 (slide: 'inadequate risk controls among the reasons (Gartner, prediction)'; article: 'Gartner predicted in June 2025')",
+   "where": [
+    "talk:spreadsheets",
+    "article:three-collisions#three-risk-management-at-the-speed-of-spreadsheets",
+    "slide:spreadsheets"
+   ],
+   "kind": "guess",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "sdtimes-gartner-agentic-40",
+     "quote": "Gartner recently revealed a new report where it predicted that by the end of 2027, over 40% of agentic AI projects will be canceled. Factors contributing to this decline include escalating costs, unclear business value, and inadequate risk controls.",
+     "supports": "for"
+    },
+    {
+     "source_id": "martech-gartner-agentic-40",
+     "quote": "More than 40% of agentic AI projects will be canceled by the end of 2027.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
+   "note": "A prediction, correctly framed as one. Gartner's press release (Sydney, 25 June 2025) blocks automated fetches (403), so its wording is checked only through SD Times and search snippets; all coverage traces to that one release. The cited MarTech page is sponsored content by Optimove dated 29 April 2026 (read via WebFetch, curl blocked), a weak citation for a Gartner claim: cite the Gartner release directly.",
+   "register": "act2"
+  },
+  {
+   "id": "mit-nanda-95pct",
+   "text": "95% of enterprise pilots with no measurable return (MIT NANDA, preliminary, not peer reviewed) (slide; article: 'MIT's NANDA group found 95 per cent of enterprise pilots delivering no measurable return')",
+   "where": [
+    "slide:spreadsheets",
+    "talk:spreadsheets#cue",
+    "article:three-collisions#three-risk-management-at-the-speed-of-spreadsheets"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "mit-nanda-genai-divide-pdf",
+     "quote": "Preliminary Findings from AI Implementation Research from Project NANDA",
+     "supports": "context"
+    },
+    {
+     "source_id": "mit-nanda-genai-divide-pdf",
+     "quote": "this report uncovers a surprising result in that 95% of organizations are getting zero return",
+     "supports": "for"
+    },
+    {
+     "source_id": "virtualizationreview-mit-nanda",
+     "quote": "only 5% of custom enterprise AI tools reach production",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://webberwentzel.com/News/Documents/2025/MIT1757411281972.pdf (report PDF, third-party hosted)",
+   "note": "On the slide and in the article, not in the spoken text (the cue says to flag it as preliminary if used, and the slide does). The report labels itself 'Preliminary Findings', with a small base (52 interviews, 153 survey responses, review of 300+ public initiatives). Its headline is '95% of organizations are getting zero return', and separately that only 5 per cent of custom enterprise tools reach production; 'of enterprise pilots with no measurable return' blends the two.",
+   "suggested_wording": "95% of organisations getting no measurable return from generative AI (MIT NANDA, preliminary, small sample, not peer reviewed)",
+   "register": "act2"
+  },
+  {
+   "id": "pilot-works-then-questions",
+   "text": "The pilot works. Then somebody asks: if it does this, can we stop it? Can we recover? And the honest answers are not reliably, and not to the transaction.",
+   "where": [
+    "talk:spreadsheets",
+    "article:three-collisions#three-risk-management-at-the-speed-of-spreadsheets"
+   ],
+   "kind": "observation",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The article calls this 'my reading of what happens in the room': the author's observation.",
+   "register": "act2"
+  },
+  {
+   "id": "nobody-has-to-report",
+   "text": "Why do we not see more of this? Because nobody has to report.",
+   "where": [
+    "talk:unreported",
+    "article:three-collisions#why-we-do-not-see-more-of-it",
+    "slide:unreported"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "insideprivacy-circia-omb",
+     "quote": "submitted a draft of the Final Rule implementing the Cyber Incident Reporting for Critical Infrastructure Act of 2022",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Fair for agent incidents in the US private sector at large, and CIRCIA reporting is not yet in force. But 'nobody' overstates: SEC 8-K material-incident disclosure, GDPR and NIS2 breach notification, DORA and US sector rules already require some reporting. 'Most companies do not have to report most of it' is the defensible form.",
+   "register": "act2"
+  },
+  {
+   "id": "asrs-fifty-years-since-1976",
+   "text": "Aviation solved this fifty years ago (slide: 'Aviation, since 1976')",
+   "where": [
+    "talk:unreported",
+    "article:three-collisions#why-we-do-not-see-more-of-it",
+    "slide:unreported"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "nasa-asrs-program-briefing",
+     "quote": "April 1976 Advisory Circular 00-46A Issued Aviation Safety Reporting System (ASRS) Established (NASA / FAA)",
+     "supports": "for"
+    },
+    {
+     "source_id": "nasa-asrs-immunity",
+     "quote": "the FAA instituted a voluntary ASRP on April 30, 1975",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://asrs.arc.nasa.gov/docs/ASRS_ProgramBriefing.pdf",
+   "note": "The FAA programme began in 1975 and NASA's ASRS in April 1976; fifty years holds in 2026.",
+   "register": "act2"
+  },
+  {
+   "id": "asrs-100k-a-year-1-8-million",
+   "text": "NASA's reporting system takes about a hundred thousand confidential reports a year, 1.8 million so far",
+   "where": [
+    "talk:unreported",
+    "article:three-collisions#why-we-do-not-see-more-of-it",
+    "slide:unreported"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "does not hold",
+   "evidence": [
+    {
+     "source_id": "nasa-asrs-program-briefing",
+     "quote": "Total Program Report Intake = 2,321,050",
+     "supports": "against"
+    },
+    {
+     "source_id": "nasa-asrs-program-briefing",
+     "quote": "Intake in 2025 averaged about 2,329 reports per week or 10,094 reports per month.",
+     "supports": "against"
+    },
+    {
+     "source_id": "nasa-asrs-program-briefing",
+     "quote": "ASRS has securely processed over 2.3 million reports in its 50-year history.",
+     "supports": "against"
+    },
+    {
+     "source_id": "nasa-asrs-callback-561",
+     "quote": "TOTAL 12,820",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://asrs.arc.nasa.gov/docs/ASRS_ProgramBriefing.pdf",
+   "note": "NASA's own programme briefing (intake to December 2025) gives 121,128 reports in 2025, about 10,000 a month, and 2,321,050 in total since January 1981, 'over 2.3 million' in its history. Yearly intake has been above 100,000 since 2019 except 2020. CALLBACK 561 shows 12,820 reports in August 2026 alone. The talk's 1.8 million is several years stale (it comes via Wikipedia, which no longer carries either number) and the yearly figure is understated. The article cites Wikipedia; cite NASA.",
+   "suggested_wording": "NASA's reporting system takes more than 120,000 confidential reports a year, over 2.3 million so far",
+   "register": "act2"
+  },
+  {
+   "id": "asrs-immunity-rule",
+   "text": "a qualifying report cannot be used against the person who filed it",
+   "where": [
+    "talk:unreported",
+    "article:three-collisions#why-we-do-not-see-more-of-it",
+    "slide:unreported"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "nasa-asrs-immunity",
+     "quote": "The FAA will not use any reports submitted to NASA under the ASRS (or information derived therefrom) in any enforcement action, except informat",
+     "supports": "for"
+    },
+    {
+     "source_id": "nasa-asrs-program-briefing",
+     "quote": "Waiver of Imposition of Sanction.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://asrs.arc.nasa.gov/overview/immunity.html (FAA Advisory Circular 00-46F)",
+   "note": "Holds with the word 'qualifying' doing real work: the FAA will not use the report in enforcement and waives civil penalty or certificate suspension only if the violation was inadvertent, not criminal or an accident, the person has no violation in the prior five years, and the report is filed within ten days. The violation itself can still be pursued on independent evidence.",
+   "register": "act2"
+  },
+  {
+   "id": "circia-72h-2022-targeted-sept-2026",
+   "text": "CIRCIA, the US 72-hour reporting law for critical infrastructure, passed in 2022. Its final rule missed the statutory deadline; it was targeted for September 2026. (slide; article: 'is now targeted for September 2026')",
+   "where": [
+    "slide:unreported",
+    "talk:unreported#cue",
+    "article:three-collisions#why-we-do-not-see-more-of-it"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "hunton-circia-sept-2026",
+     "quote": "with a final rule expected in September 2026. As previously reported , the rule will require covered critical infrastructure entities to report covered cyber incidents to CISA within 72 hours and ransom payments within 24 hours.",
+     "supports": "for"
+    },
+    {
+     "source_id": "reginfo-circia-1670-AA04-agenda202510",
+     "quote": "09/00/2026",
+     "supports": "for"
+    },
+    {
+     "source_id": "reginfo-circia-1670-AA04",
+     "quote": "CISA published the NPRM on April 4, 2024",
+     "supports": "context"
+    },
+    {
+     "source_id": "paubox-circia-white-house",
+     "quote": "The agency had missed a statutory deadline of October 2025, then target dates of May 2026 and September 2026",
+     "supports": "against"
+    }
+   ],
+   "primary_source": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=202510&RIN=1670-AA04",
+   "note": "Accurate as of the article (30 September 2026): the Unified Agenda listed the final rule for 09/2026 and Hunton (17 July 2026) reported the same. The statutory deadline was October 2025 (18 months after the 4 April 2024 NPRM). As of 29 October 2026 the September target has also been missed; see circia-status-oct-2026. The slide's past tense ('it was targeted') is accurate but should now say what happened next.",
+   "suggested_wording": "CIRCIA, the US 72-hour reporting law for critical infrastructure, passed in 2022. Its final rule missed the October 2025 deadline and then its May and September 2026 targets; it went to the White House for review on 1 October 2026 and is still not published.",
+   "register": "act2"
+  },
+  {
+   "id": "circia-status-oct-2026",
+   "text": "Status of the CIRCIA final rule as of late October 2026 (the talk's cue: 'Check its status before the talk and update the slide or say it as of September').",
+   "where": [
+    "talk:unreported#cue",
+    "slide:unreported"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "bankinfosecurity-circia-omb",
+     "quote": "CISA submitted the final rule under the Cyber Incident Reporting for Critical Infrastructure Act to the Office of Management and Budget on Thursday, according to federal regulatory review records , after missing the September target it set in the government's online regulatory agenda.",
+     "supports": "for"
+    },
+    {
+     "source_id": "insideprivacy-circia-omb",
+     "quote": "submitted a draft of the Final Rule implementing the Cyber Incident Reporting for Critical Infrastructure Act of 2022",
+     "supports": "for"
+    },
+    {
+     "source_id": "insideprivacy-circia-omb",
+     "quote": "The review by OIRA can take up to 90 days (or longer if OIRA seeks an extension), in which case the Final Rule would not be published until early next year",
+     "supports": "for"
+    },
+    {
+     "source_id": "insideprivacy-circia-omb",
+     "quote": "it is likely that implementing regulations will not become effective for at least 60 days after publication in the Federal Register",
+     "supports": "for"
+    },
+    {
+     "source_id": "paubox-circia-white-house",
+     "quote": "On October 1, 2026, the Cybersecurity and Infrastructure Security Agency (CISA) sent its final rule under the Cyber Incident Reporting for Critical Infrastructure Act (CIRCIA) to the White House Office of Management and Budget (OMB) for review",
+     "supports": "for"
+    },
+    {
+     "source_id": "hipaajournal-circia-omb",
+     "quote": "the final rule has now been sent to the Office of Management and Budget for review",
+     "supports": "for"
+    },
+    {
+     "source_id": "federalregister-circia-search",
+     "quote": "Town Hall Meetings To Provide Input on Cyber Incident Reporting for Critical Infrastructure Act (CIRCIA) Rulemaking",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://www.reginfo.gov/public/do/eoDetails?rrid=1670-AA04 (OIRA review record; reginfo.gov was down at capture) and the Federal Register",
+   "note": "Finding: the final rule has NOT been published. CISA sent it to OIRA (White House OMB) for review on Thursday 1 October 2026, after missing the September 2026 target (and earlier the October 2025 statutory deadline and a May 2026 target; a DHS funding lapse pushed the town halls to 15 to 18 June 2026). Covington (8 October 2026) says OIRA review can take up to 90 days, so publication could slip to early 2027, and the rule would likely take effect at least 60 days after publication; the effective date will be set in the rule. Reporting under CIRCIA is not yet required. Primary check: the Federal Register API, captured today, shows no CIRCIA final rule; the newest CIRCIA rulemaking document is the town hall notice of 26 May 2026 (plus the Unified Agenda of 14 August 2026). The OIRA receipt record itself could not be read (reginfo.gov reported technical difficulties), so the 1 October date rests on four independent outlets (BankInfoSecurity, Covington Inside Privacy, Paubox, HIPAA Journal) citing it. One search result (VaasBlock) claiming the rule arrived in May 2026 is contradicted by all of these and was not used. Re-check the Federal Register on the day of the talk.",
+   "suggested_wording": "CIRCIA's final rule missed its deadline, then two targets; it has been at the White House for review since 1 October and is still not published.",
+   "register": "act2"
+  },
+  {
+   "id": "dbir-2025-human-60-third-party-30",
+   "text": "Verizon DBIR 2025, built on what does get shared: the human element in about 60% of breaches, third parties doubling to 30%.",
+   "where": [
+    "talk:unreported",
+    "article:three-collisions#why-we-do-not-see-more-of-it",
+    "slide:unreported"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "verizon-dbir-2025",
+     "quote": "Although the involvement of the human element in breaches remained roughly the same as last year, hovering around 60%, the percentages of breaches where a third party was involved doubled, going from 15% to 30%.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf",
+   "note": "Exact match. Only on the slide, not spoken. A 2026 DBIR has likely been published by October 2026 (not checked); say '2025 report'.",
+   "register": "act2"
+  },
+  {
+   "id": "better-disclosure-frightening-reassuring",
+   "text": "Better disclosure would be more frightening and more reassuring at the same time: the numbers would be larger, and we would finally know them.",
+   "where": [
+    "talk:unreported",
+    "article:three-collisions#why-we-do-not-see-more-of-it",
+    "slide:unreported"
+   ],
+   "kind": "guess",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The author's expectation.",
+   "register": "act2"
+  },
+  {
+   "id": "collision-public-record-18-months",
+   "text": "None of this is hypothetical. Every piece is in the public record of the last eighteen months. It just was not reported as one story.",
+   "where": [
+    "talk:collision",
+    "article:three-collisions#the-collision",
+    "slide:collision"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "aws-pes-dynamodb-2025-10",
+     "quote": "the service disruption that occurred in the N. Virginia (us-east-1) Region on October 19 and 20, 2025",
+     "supports": "for"
+    },
+    {
+     "source_id": "unit42-toolshell",
+     "quote": "Unit 42 telemetry captured CVE-2025-53770 exploitation attempts from July 17, 2025",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The pieces are real, but the window has drifted: the article was written in September 2026, and several pieces (Replit July 2025, ToolShell July 2025, EchoLeak June 2025) are now 15 to 17 months old, the Microsoft permissions data is from 2023. 'The last eighteen months' only just holds for the 2025 incidents and will not by early 2027; 'the public record of the last two years' is safer.",
+   "suggested_wording": "Every piece is in the public record of the last two years.",
+   "register": "act2"
+  },
+  {
+   "id": "way-out-four-moves",
+   "text": "Four moves. Measure what the agent can actually reach. Write down what stands in the way. Give it a licence to operate that can be suspended. And let it earn its autonomy.",
+   "where": [
+    "talk:way-out",
+    "slide:way-out",
+    "article:three-collisions#the-other-half"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "riskmandate-licence-to-operate",
+     "quote": "A licence to operate is short on purpose. It is not a control, it is a record of a decision",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The talk's proposal. The article lists five moves (write it down, contain in layers, watch in real time, decide in advance, provenance); the talk condenses to four and adds 'earn its autonomy', which is not in the article's list.",
+   "register": "act2"
+  },
+  {
+   "id": "abp-reach-mandate-gap-barriers",
+   "text": "This is what RiskMandate's Agent Behaviour Policy writes down. The reach: what the agent can actually do, measured. The mandate: what it is for. The gap between them. And for every row in the gap, what stands in the way, typed honestly: a boundary, a setting, an expectation, or nothing. Only a boundary is a control.",
+   "where": [
+    "talk:abp",
+    "slide:abp",
+    "article:three-collisions#the-other-half"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "riskmandate-abp",
+     "quote": "An Agent Behaviour Policy is a written description, for one agent in one deployment, of everything it can do, what you authorised it to do, the gap between the two, and what actually stands in the way.",
+     "supports": "for"
+    },
+    {
+     "source_id": "riskmandate-abp",
+     "quote": "There are four kinds, and three of them bound nothing.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://riskmandate.ai/abp.html",
+   "note": "Matches the ABP page. The page defines a setting as 'a switch the agent's own account can flip', while the Kit Bag plan uses 'a setting our own code enforces'; the two definitions differ slightly.",
+   "register": "act2"
+  },
+  {
+   "id": "most-controls-are-expectations",
+   "text": "Most of what we call controls today are expectations, and saying so is the first useful act.",
+   "where": [
+    "talk:abp",
+    "article:three-collisions#the-other-half"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "riskmandate-abp",
+     "quote": "Most prohibitions today sit in the second row",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "RiskMandate's own claim, not measured across organisations; position.",
+   "register": "act2"
+  },
+  {
+   "id": "kit-bag-13-4-9",
+   "text": "One browser extension we mapped could do thirteen things beyond its purpose. Four were stopped by the platform. The other nine, by nothing but the code as written.",
+   "where": [
+    "talk:abp",
+    "slide:abp",
+    "article:three-collisions#two-the-infrastructure-that-cannot-hold-them"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "sgit-kit-bag-plan-md",
+     "quote": "Thirteen rows. Four boundaries, and the rest is code as written.",
+     "supports": "for"
+    },
+    {
+     "source_id": "sgit-kit-bag-plan-md",
+     "quote": "Chrome enforces four things",
+     "supports": "for"
+    }
+   ],
+   "primary_source": "https://sgit.ai/demos/vaults/kit-bag/index.html",
+   "note": "Matches the Kit Bag plan (30 September 2026). Two nuances: the policy was written by the author for an extension he built, before the code, so 'mapped' means designed rather than audited; and the nine are a mix of settings and expectations (things the extension's own code does or a test checks), not literally nothing.",
+   "register": "act2"
+  },
+  {
+   "id": "licence-to-operate-fields",
+   "text": "A licence to operate for each agent: who authorised it, who holds it, the policy it runs under, and when it expires.",
+   "where": [
+    "talk:licence",
+    "slide:licence",
+    "article:three-collisions#the-other-half"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "riskmandate-licence-to-operate",
+     "quote": "The organisation is the authority, the behaviour policy is the instrument, and the agent is the licensee.",
+     "supports": "for"
+    },
+    {
+     "source_id": "riskmandate-licence-to-operate",
+     "quote": "A licence with no expiry is not a decision",
+     "supports": "for"
+    },
+    {
+     "source_id": "riskmandate-licence-to-operate",
+     "quote": "The file exists and ships in every published vault today, as a template : unsigned, unissued, with the authority and the interval blank.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://riskmandate.ai/licence-to-operate.html",
+   "note": "Matches the page. RiskMandate states plainly that the licence ships only as an unsigned template and that no countersigned form exists yet.",
+   "register": "act2"
+  },
+  {
+   "id": "licence-suspended-by-system",
+   "text": "Accepted risks that expire and must be accepted again. When the footprint leaves the mandate, the licence is suspended, by the system, not by a quarterly review. (slide: example licence, 'footprint left the mandate')",
+   "where": [
+    "talk:licence",
+    "slide:licence"
+   ],
+   "kind": "guess",
+   "grade": "A1",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "riskmandate-licence-to-operate",
+     "quote": "What does not exist is the countersigned form",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
+   "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
+   "register": "act2",
+   "adjudicated": "researcher, 2026-10-29T02:05Z"
+  },
+  {
+   "id": "autonomy-earned-ladder",
+   "text": "And autonomy is earned the same way: each level unlocked by evidence that the one below held. (slide: L1 observe and report to L5 act, and report exceptions; 'Illustrative')",
+   "where": [
+    "talk:licence",
+    "slide:licence",
+    "talk:way-out"
+   ],
+   "kind": "guess",
+   "grade": "A1",
+   "holds": "holds",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The slide and cue mark the ladder as illustrative, not a published scale. Neither captured RiskMandate page carries an autonomy ladder.",
+   "register": "act2"
+  },
+  {
+   "id": "demos-all-open-source",
+   "text": "Let me show you, live. Everything you are about to see is open source.",
+   "where": [
+    "talk:demos",
+    "slide:demos"
+   ],
+   "kind": "observation",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "Not checked in this pass: the demo list is still to be confirmed (cue). RiskMandate's ABP page is a commercial product page; whether every demo's code is under an open licence needs checking per demo once the list is fixed.",
+   "register": "act2"
+  },
+  {
+   "id": "brakes-irony",
+   "text": "The more you can constrain an agent, the more you can trust it, and the more autonomy you can afford to give it. ... We put brakes in cars so that we can go faster.",
+   "where": [
+    "talk:brakes",
+    "slide:brakes",
+    "slide:way-out",
+    "article:three-collisions#the-other-half"
+   ],
+   "kind": "position",
+   "grade": "A1",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "The closing argument. The brakes line is a well-worn aphorism (variously attributed); fine as the author's own use.",
+   "register": "act2"
+  },
+  {
+   "id": "php2shell-two-critical-rce",
+   "text": "two critical security flaws in PHP (CVE-2026-109618 and CVE-2026-109619, nicknamed php2shell)",
+   "where": [
+    "php:llms.txt",
+    "php:facts/two-cves-9.2"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "php-net-news",
+     "quote": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution.",
+     "supports": "for"
+    },
+    {
+     "source_id": "oss-sec-2026-10-21-6",
+     "quote": "Severity: Critical (CVSS v4.0: 9.2)",
+     "supports": "for"
+    },
+    {
+     "source_id": "cisa-kev-json",
+     "quote": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Primary records agree. The leaked CVSS 10.0 was wrong (Foundation). Exploit demonstrated against Apache mod_php; a complete FPM exploit 'has not been demonstrated' (oss-security).",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php2shell-found-with-ai-help",
+   "text": "they were found with AI help",
+   "where": [
+    "php:questions/why-big-news",
+    "php:facts/ai-found"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "calif-php2shell",
+     "quote": "No special harness, or access to models that weren't generally available to everyone were used in the initial bug discovery.",
+     "supports": "for"
+    },
+    {
+     "source_id": "wiz-php2shell",
+     "quote": "We used Wiz Atlas , Gemini 4 Argon and GPT-5.6 Sol throughout this research.",
+     "supports": "for"
+    },
+    {
+     "source_id": "phpfoundation-security-release",
+     "quote": "Thank you to Calif, especially Ryan A, Wiz, OpenAI Codex Security, especially Amy Burnett, OSTIF, and Quarkslab for their research and responsible disclosure",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-fact-ai-found",
+     "quote": "Calif is the only finder shown to be under Patch the Planet, Calif never says 'frontier' and stresses generally available models, and Wiz never mentions Patch the Planet. Readings cap at A3.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The plain wording 'found with AI help' holds (two independent finders say so in their own pages). The stronger wording on the site's fact page, 'found by researchers using frontier AI under OpenAI's Patch the Planet initiative', is graded A3 holds in part by the site's own desk. The OOM root cause was first seen in a 2024 Quarkslab audit fix (PHP Foundation), so AI helped most with exploitation and the second bug.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php2shell-reporters-openai-codex-security",
+   "text": "The GitHub advisories credit four reporters: lcfr-hax (Calif), sagitzadik-wiz (Wiz), amyb-oai (OpenAI) and tomash-areion",
+   "where": [
+    "php:facts/four-reporters",
+    "php:actors/openai"
+   ],
+   "kind": "measured",
+   "grade": "A5",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "cveorg-109618",
+     "quote": "{\"lang\":\"en\",\"value\":\"OpenAI\",\"type\":\"finder\"}",
+     "supports": "for"
+    },
+    {
+     "source_id": "phpfoundation-security-release",
+     "quote": "OpenAI independently reported the same root cause, followed by further attack vectors from OpenAI on September 18th and from Wiz on August 24th.",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-fact-four-reporters",
+     "quote": "Credits lcfr-hax Reporter sagitzadik-wiz Reporter tomash-areion Reporter amyb-oai Reporter",
+     "supports": "for"
+    },
+    {
+     "source_id": "ghsa-w8hw",
+     "quote": "not captured (HTTP 403)",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+   "note": "Calif, Wiz and OpenAI are carried by the CVE records (credits field, read from the cveawg JSON) and the Foundation. The fourth handle (tomash-areion) is carried only by the php site's GHSA capture; GHSA pages were blocked to this session. OpenAI's own blog post was blocked (403). The CVE record calls OpenAI 'finder' on one CVE and 'reporter' on the other.",
+   "suggested_wording": "The CVE records credit Calif, Wiz and OpenAI; the GitHub advisories add a fourth reporter handle, tomash-areion.",
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php2shell-disclosure-leaked-day-early",
+   "text": "the coordinated disclosure leaked a day early, so the fix shipped under pressure",
+   "where": [
+    "php:questions/why-big-news",
+    "php:leak",
+    "php:facts/release-moved",
+    "php:grc/risks/r02"
+   ],
+   "kind": "event",
+   "grade": "A4",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "phpfoundation-security-release",
+     "quote": "On Tuesday, October 20th, at around 15:00 UTC, the two CVE IDs began circulating on online forums and social media.",
+     "supports": "for"
+    },
+    {
+     "source_id": "phpfoundation-security-release",
+     "quote": "It also moved the release from October 22nd, 14:00 UTC, to October 21st, 14:00 UTC.",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-net-news",
+     "quote": "We reserve the right to release earlier should details of either vulnerability become public, or should evidence of active exploitation appear in the wild.",
+     "supports": "context"
+    },
+    {
+     "source_id": "daubois-rumors",
+     "quote": "An anonymous Hacker News post citing a reliable source went up on October 20 and came down",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "That the release was moved forward a day because of the leak is the PHP project's own account (Foundation, php.net, and Daubois of the PHP security team, so not fully independent of each other); the php site corroborates with Huntress and CybelAngel (A4). What leaked is disputed: the Foundation says 'No technical details leaked'; Daubois describes a leaked tool screenshot and a video; The Hacker News says a PoC leaked. The php site's own fact-check also notes watchTowr put the original embargo at 15:00 UTC, not 14:00.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php2shell-agencies-take-offline",
+   "text": "the NSA, CISA and NCSC told organisations that could not patch to take systems offline",
+   "where": [
+    "php:questions/why-big-news",
+    "php:questions/take-offline",
+    "php:facts/offline-nsa",
+    "php:facts/offline-cisa",
+    "php:facts/offline-ncsc"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "ncsc-uk-php",
+     "quote": "If you are unable to apply the temporary mitigations, or applying them would take too long, you should consider taking the system offline until it can be fully mitigated.",
+     "supports": "for"
+    },
+    {
+     "source_id": "cisa-alert-php",
+     "quote": "should take PHP-based systems offline until they can be patched or updated. (read via WebFetch, not in a hashed capture)",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-fact-offline-nsa",
+     "quote": "If an immediate update is not feasible, it is recommended that organizations take the system offline until it can be fully mitigated.",
+     "supports": "for"
+    },
+    {
+     "source_id": "certeu-2026-018",
+     "quote": "Where that is not feasible, organisations should consider isolating internet-facing applications from public networks until a fix is applied and verified.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4630238/nsa-advisory-critical-patches-recommended-for-php-vulnerabilities/",
+   "note": "NCSC and CISA carried in their own pages (CISA read through WebFetch after a 403; the alert was revised 26 October). NSA was blocked to this session and is carried by the php site's capture of NSA's own press release. Wording matters: NCSC says 'consider', and only after mitigations cannot be applied; CERT-EU and CERT-FR say isolate; Australia's ACSC gives no offline advice (php site). The BBC's NCSC sentence is not verbatim on the NCSC page.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php2shell-in-cisa-kev",
+   "text": "CISA added both flaws to its exploited-vulnerabilities list on 26 October, which means it has evidence of exploitation, but it names no victim",
+   "where": [
+    "php:questions/been-hacked",
+    "php:facts/cisa-none",
+    "php:views/state/v4"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "cisa-kev-json",
+     "quote": "\"cveID\": \"CVE-2026-109619\", \"vendorProject\": \"PHP Group\", \"product\": \"PHP\", \"vulnerabilityName\": \"PHP Stale Internal Request-State Vulnerability\", \"dateAdded\": \"2026-10-26\"",
+     "supports": "for"
+    },
+    {
+     "source_id": "cisa-kev-json",
+     "quote": "\"dueDate\": \"2026-10-29\", \"knownRansomwareCampaignUse\": \"Unknown\"",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Catalog version 2026.10.28 (captured 29 Oct 01:50Z) lists both with dateAdded 2026-10-26, due 2026-10-29, forensicTriage Yes. The php site's 22 October update said neither was on KEV; it was right for its date and has been marked superseded. The CISA alert of 21 October originally said CISA had not observed exploitation (php site capture).",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php2shell-no-complete-mitigation",
+   "text": "Updating is the only complete mitigation; the configuration measures reduce exposure to specific paths",
+   "where": [
+    "php:facts/only-update",
+    "talk:outages (as evidence for 'zero-day dissolves every control')"
+   ],
+   "kind": "event",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "php-net-news",
+     "quote": "There are no complete mitigations, updating is the only safe choice.",
+     "supports": "for"
+    },
+    {
+     "source_id": "oss-sec-2026-10-21-6",
+     "quote": "Updating is the only complete mitigation.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Supports the talk's point that controls above a broken base layer are stopgaps. It is not a zero-day in the strict sense: the patch shipped at disclosure (21 Oct 13:31 to 13:35 UTC per the php site). WAF rules were live hours before disclosure and vendors called them a stopgap (php site, not re-checked).",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php2shell-ahead-of-attackers",
+   "text": "Frontier AI found the flaw ahead of attackers, giving defenders time to prepare",
+   "where": [
+    "php:facts/ahead-of-attackers"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "php-fact-ahead-of-attackers",
+     "quote": "to our knowledge, frontier AI was able to find this vulnerability ahead of attackers, giving defenders time to prepare.",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-fact-ahead-of-attackers",
+     "quote": "it remains unclear how the actor acquired exploit information prior to disclosure.",
+     "supports": "against"
+    }
+   ],
+   "primary_source": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+   "note": "OpenAI's claim, with 'to our knowledge' dropped. Amazon's 17 October honeypot hit (four days before disclosure) is reported second-hand. OpenAI's page was blocked to this session. Do not use this as fact in the talk.",
+   "suggested_wording": "OpenAI says that, to its knowledge, AI found the flaw before attackers did.",
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php2shell-no-named-victim",
+   "text": "As of 17:15 UTC on 28 October, no named organisation has said it was compromised through php2shell.",
+   "where": [
+    "php:facts/no-confirmed-compromise",
+    "php:questions/been-hacked"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "php-why-big-news",
+     "quote": "the NSA, CISA and NCSC told organisations that could not patch to take systems offline, which is why government, council and police sites went dark.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "An absence claim from the php site's monitoring; not independently re-checked. KEV listing implies CISA holds exploitation evidence. The php site says both vendor claims of a successful attack (Sophos, Unit 42) were withdrawn. Relevant to the talk: the outages were precautionary self-shutdowns, which is the 'pull the plug' answer the talk describes.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php-foundation-ai-report-load",
+   "text": "the team has published 15 CVEs since July 1st and worked through more than 100 reports that turned out to be invalid, duplicates, or not reproducible",
+   "where": [
+    "php site source: phpfoundation-blog-security-release"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "phpfoundation-security-release",
+     "quote": "The growth of AI-assisted research also means the PHP security team receives far more reports than before.",
+     "supports": "for"
+    },
+    {
+     "source_id": "phpfoundation-security-release",
+     "quote": "AI helps the team validate reports and group reports sharing the same root cause, but a person makes every call and works on every patch.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Counterweight for 'AI finds vulnerabilities': it also generates load. The Foundation also says it scanned PHP with Anthropic's Claude Mythos (via Alpha-Omega) and uses OpenAI's Daybreak Red.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php-site-first-day-11-of-70",
+   "text": "The site went from nothing to 391 pages in about ten hours, and its own fact-check desk found that 11 of its 70 claims say more than their evidence.",
+   "where": [
+    "php:updates/2026-10-22T2003Z",
+    "php:llms.txt"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "php-update-1022",
+     "quote": "The fact-check desk graded all 70 claims against the vault: 10 can be relied on without reservation, 11 carry a status word stronger than their evidence, 6 a weaker one, and 2 are refuted as worded.",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-update-1022",
+     "quote": "**The site:** 34 releases, from nothing at 08:51 UTC to v0.5.5 at 19:04 UTC, and 391 pages.",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-factcheck",
+     "quote": "**10** can be relied on without reservation (A5 or A6, holding as worded, uncontested, not an opinion, and no open finding against their wording). **8** carry a status word stronger than their evidence. **137** tickets are open.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Self-reported by the site. The 11 of 70 is the 22 October figure; the current fact-check page (Run-9) says 8 of 70 overstate, with 137 open tickets and grades A0 0, A1 6, A2 30, A3 7, A4 7, A5 2, A6 16, refuted 2. Quote the date with whichever figure is used. 'Five quotes on the site are not in the captures they are attributed to' (same update).",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php-evidence-vault",
+   "text": "A private, encrypted sgit vault, opened at 2026-10-22T08:03Z, written to by 8 agents and the editor. It holds 675 sources and 741 captures at commit 75668aedfb6d.",
+   "where": [
+    "php:method"
+   ],
+   "kind": "observation",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "php-method",
+     "quote": "captures are additive, never edited or deleted",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-method",
+     "quote": "It has no clock, no random number and no network: run it twice and the output is byte-identical, which the gate checks.",
+     "supports": "for"
+    },
+    {
+     "source_id": "php-llms-live",
+     "quote": "The evidence vault is private; its manifest with every hash is data/sources.json.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Not independently verifiable: the vault is private and data/sources.json returned 404 at the main host in this session (the data appears to have moved to data.php.oct.2026.newsroom.sgit.ai; not fetched). The fact pages do publish a truncated sha256 per capture read.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "php-team-size",
+   "text": "2 people and 19 agents and roles",
+   "where": [
+    "php:llms.txt (The team)",
+    "php:team",
+    "php:admin/agents/roles"
+   ],
+   "kind": "measured",
+   "grade": "A1",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "php-team",
+     "quote": "21members2humans17agents2roles not yet filled",
+     "supports": "context"
+    },
+    {
+     "source_id": "php-roles",
+     "quote": "29 members, 27 of them agents.",
+     "supports": "against"
+    },
+    {
+     "source_id": "php-roles",
+     "quote": "0 of 29 policies are agreed by the editor; the rest are drafts.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "The site's own pages disagree (21 members with 17 agents on the team page; 29 members with 27 agents on the roles page; '2 people and 19 agents and roles' in llms.txt). Open contradiction, so A1. If the talk cites team size, name the page and date. '0 of 29 policies are agreed by the editor' is relevant to the talk's mandate argument.",
+   "suggested_wording": "The newsroom's roles page lists 29 members, 27 of them agents (28 October 2026); its team page counts 17 active agents.",
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "abp-four-barrier-kinds",
+   "text": "for every row in the gap, what stands in the way, typed honestly: a boundary, a setting, an expectation, or nothing. Only a boundary is a control.",
+   "where": [
+    "talk:abp"
+   ],
+   "kind": "position",
+   "grade": "A3",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "rm-abp",
+     "quote": "There are four kinds, and three of them bound nothing.",
+     "supports": "for"
+    },
+    {
+     "source_id": "rm-abp",
+     "quote": "A control bounds a grant only if it is enforced by something the grant does not include.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The cited page carries it as worded. It is RiskMandate's own vocabulary; the underlying test matches the zero-trust PEP idea (NIST SP 800-207).",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "kitbag-thirteen-four-nine",
+   "text": "One browser extension we mapped could do thirteen things beyond its purpose. Four were stopped by the platform. The other nine, by nothing but the code as written.",
+   "where": [
+    "talk:abp"
+   ],
+   "kind": "measured",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "sgit-kitbag",
+     "quote": "Thirteen rows. Four boundaries, and the rest is code as written.",
+     "supports": "for"
+    },
+    {
+     "source_id": "sgit-kitbag",
+     "quote": "A boundary the platform enforces, a setting our own code enforces, an expectation that nothing enforces, or none.",
+     "supports": "context"
+    }
+   ],
+   "primary_source": null,
+   "note": "Counts hold. 'By nothing but the code as written' compresses three kinds (setting, expectation, none) into one; the page's own table colours them separately. The extension was built by the author ('built this for themself'), so 'we mapped' is fair but it is the author's own tool, not a third-party product.",
+   "suggested_wording": "Thirteen rows in the gap. Four were stopped by the platform; the other nine only by the code as written, which an edit can change.",
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "nhi-spiffe-multi-year",
+   "text": "an open standard (SPIFFE) issues short-lived cryptographic identities based on workload attestation, described by practitioners as a multi-year engineering project needing a dedicated team",
+   "where": [
+    "nhi.sgit.ai",
+    "talk:infrastructure (via nhi.sgit.ai)"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "spiffe-overview",
+     "quote": "The heart of these specifications is the one that defines short lived cryptographic identity documents – called SVIDs via a simple API",
+     "supports": "for"
+    },
+    {
+     "source_id": "aembit-spiffe-cost",
+     "quote": "the SPIRE implementation is a significant multi-year engineering project with compounding operational costs.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The 'practitioners' are one vendor (Aembit) that sells the commercial alternative; nhi.sgit.ai names it. HashiCorp's SPIFFE-for-agents post (rate-limited, not captured) argues SPIFFE extends to agentic AI.",
+   "suggested_wording": "described by one broker vendor, Aembit, as a multi-year engineering project",
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "nhi-black-hat-ci-secrets",
+   "text": "Research disclosed at Black Hat (5 Aug 2026): a repository issue opened by an account with no privileges reached CI secrets in three vendors' own repositories, under default configurations.",
+   "where": [
+    "nhi.sgit.ai",
+    "nhi.sgit.ai/thesis"
+   ],
+   "kind": "event",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "csa-ci-secrets-20260808",
+     "quote": "disclosed, at Black Hat USA 2026 on August 5, that a GitHub issue opened by an account with no repository privileges was enough to reach CI runner secrets in the vendors’ own repositories for Claude Code, Gemini CLI, and",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Carried by the CSA research note relaying Novee Security (Elad Meged); the researcher's own write-up and the vendors' responses were not captured.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "nhi-feature-request-open",
+   "text": "The platform feature request for user-minted, short-lived, repository-scoped tokens for AI agents (June 2026) is still open.",
+   "where": [
+    "nhi.sgit.ai",
+    "nhi.sgit.ai/thesis"
+   ],
+   "kind": "event",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [
+    {
+     "source_id": "gh-discussion-200185",
+     "quote": "not captured (HTTP 403)",
+     "supports": "context"
+    }
+   ],
+   "primary_source": "https://github.com/orgs/community/discussions/200185",
+   "note": "Gap: GitHub blocked the fetch from this session. Re-check before relying on it.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "pki-2019-keyserver-flood",
+   "text": "The keyserver network let anyone append a signature to anyone's key, and nothing could be deleted; attackers flooded keys until they broke.",
+   "where": [
+    "pki.sgit.ai",
+    "talk:infrastructure (via pki.sgit.ai)"
+   ],
+   "kind": "event",
+   "grade": "A5",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "gnupg-sks-gist",
+     "quote": "This attack exploited a defect in the OpenPGP protocol itself in order to \"poison\" rjh and dkg's OpenPGP certificates.",
+     "supports": "for"
+    },
+    {
+     "source_id": "nvd-cve-2019-13050",
+     "quote": "Retrieving data from this network may cause a persistent denial of service, because of a Certificate Spamming Attack.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Victim's own account (June 2019) and NVD agree.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "sgit-server-cannot-see",
+   "text": "What the server can see: the vault ID, the size of each encrypted object, and request timing. Never filenames, contents, or commit messages.",
+   "where": [
+    "sgit.ai/llms.txt",
+    "sgit.ai/security"
+   ],
+   "kind": "position",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "sgit-security",
+     "quote": "Today, vault objects are encrypted under the read key, activating the structure-key split across",
+     "supports": "context"
+    },
+    {
+     "source_id": "eth-e2ee-cloud-2024",
+     "quote": "showing that a malicious server can, in some cases, inject files in the encrypted storage of users, tamper with file data, and even gain direct access to the content of the files.",
+     "supports": "against"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vendor's own statement, stated precisely and with its metadata limits. No independent audit captured; the academic record on E2EE storage under a malicious server is poor, so the claim deserves an audit before being put on a slide as fact.",
+   "suggested_wording": "sgit's design: the server holds ciphertext and sees vault IDs, object sizes and timing (not independently audited).",
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "article-ruflo-mit",
+   "text": "Ruflo, by rUv (ruvnet, MIT)",
+   "where": [
+    "article:how-ruv-sgit-works#what-ruv-sgit-is"
+   ],
+   "kind": "measured",
+   "grade": "A6",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "ruflo-license",
+     "quote": "MIT License",
+     "supports": "for"
+    },
+    {
+     "source_id": "ruflo-npm",
+     "quote": "\"license\":\"MIT\"",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "npm latest is 3.63.8; the article ran Ruflo 3.56.10. The article's behaviour claims about Ruflo (policy anchor in ~/.config/ruflo/policy-trust/, 'Key not found' after memory set in 3.56.10, spawn --claude skipping permission prompts by default) are first-hand observations with no external source.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "article-hack-soho-ioactive",
+   "text": "my talk at hack::soho on 29 October 2026, hosted by IOActive in London and livestreamed from about 7pm",
+   "where": [
+    "article:introducing-this-site#in-short"
+   ],
+   "kind": "event",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "No event listing captured. A web search found IOActive describing hack::soho as a monthly gathering at its London office, but no October 2026 listing. Link the event page.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "article-82-machine-identities",
+   "text": "there are 82 machine identities for every human ... it is a survey of security leaders, not a census",
+   "where": [
+    "article:introducing-this-site#why-one-talk-gets-a-whole-site",
+    "talk:identities"
+   ],
+   "kind": "measured",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": "https://www.cyberark.com/press/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security/",
+   "note": "Not captured by this agent (another research agent covers the talk's act-one sources). Needs the CyberArk link in the article.",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  },
+  {
+   "id": "article-other-outside-claims",
+   "text": "Other outside-world claims in this site's three articles that carry no source: 'the public incidents of the last eighteen months, most of which were not attacks' (introducing); 'the date of the US incident reporting rule' (CIRCIA, flagged by the article itself); 'Agentic Engineering Live: rUv in London on 15 October 2026' (ruv); 'the newsroom adopted [CI owns the version] on 27 October after two version races and a refused release in one day' (introducing, links a newsroom article); 'The newsroom ended with six repositories' and 'The scheduler fires late (2 to 40 minutes there)' (running); 'dev.sgraph.sgit.ai did not resolve' and sgit behaviours such as 'sgit vault info prints the vault key' (running, first-hand)",
+   "where": [
+    "article:introducing-this-site",
+    "article:how-ruv-sgit-works",
+    "article:running-this-agent-team"
+   ],
+   "kind": "observation",
+   "grade": "A0",
+   "holds": "not checked",
+   "evidence": [],
+   "primary_source": null,
+   "note": "Most are the team's own first-hand observations (fine as observation, label them so). The ones about the outside world that should carry a link: the incident record (talk:incidents sources), CIRCIA status (CISA), the rUv event page, and the newsroom article on CI owns the version (already linked).",
+   "suggested_wording": null,
+   "register": "sgit-php-ideas"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "about": "The researcher's evidence vault: 100% public, the read key published on purpose; a read key cannot write.",
+ "name": "tui-evidence-public",
+ "kind": "evidence",
+ "vault_id": "2fz1wv1d",
+ "server": "https://dev.send.sgraph.ai",
+ "purpose": "Every source the talk and the editor's ideas rest on, captured and hashed; the claims register graded A0 to A6; the ideas map; agent incidents since May 2025",
+ "layout": "README.md, METHOD.md, BEFORE-TONIGHT.md, claims/, ideas/, incidents/, sources/<id>/ with sources/manifest.json, updates/",
+ "read_key": "sgit_public_read_ce52d21e4e26238922b2743a9b0b13f4abfb0adef3dcef10f0f1cce213571e65:2fz1wv1d",
+ "visibility": "public: the read key is published on purpose",
+ "write_key": "escrowed: the vault key is sealed to the vaults manager, DC Vault Registry (sha256:956934e47063ceaa), in the handover zip given to the editor on 29 October 2026, and in no file here",
+ "created": "2026-10-29",
+ "created_by": "researcher@the-ultimate-insider",
+ "on_server": false,
+ "on_server_note": "built and committed locally; pushed once the session has SG_SEND_ACCESS_TOKEN. Until then the register (without the raw captures) is in evidence/ in this repository",
+ "open_url": "https://dev.vault.sgraph.ai/#sgit_public_read_ce52d21e4e26238922b2743a9b0b13f4abfb0adef3dcef10f0f1cce213571e65%3A2fz1wv1d",
+ "clone": "sgit clone sgit_public_read_ce52d21e4e26238922b2743a9b0b13f4abfb0adef3dcef10f0f1cce213571e65:2fz1wv1d tui-evidence-public",
+ "read_key_qr": "tui-evidence-public__read-key.png"
+}

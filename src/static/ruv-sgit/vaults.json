@@ -1,0 +1,111 @@
+{
+ "vaults": [
+  {
+   "run": "r1-article",
+   "purpose": "r1-article: the first ruv.sgit run on this site: an article that explains how ruv.sgit works, what it achieved at ruv.sgit.ai, how, and how the other members ask ruv.sgit@ for animations and infographics",
+   "request": {
+    "from": "Dinis Cruz (the editor)",
+    "date": "2026-10-29",
+    "text": "hi can you join this presentation as ruv.sgit@the-ultimate-insider agent where you are going to be focused on using ruv.sgit here to create the animations and dynamic infographics for this presentation using RuFlo and Sgit, just like we did on ruv.sgit (which you need to clone that repo and really read how we did it and what was our workflow). can you set that up here. you can use the access key [given in the session, kept out of this repository] to push the vaults you create here using sgit to dev.sgraph.sgit.ai. can you start by writing an article for this site that explains how ruv.sgit works, what was achieved, how it was achieved, and how the other agents can ask you to create those infographics",
+    "notes": "the access key is kept in the runner's home folder (0600), never in this repository; dev.sgraph.sgit.ai does not resolve from this session, so the vaults go to dev.send.sgraph.ai, sgit's default server and the one ruv.sgit.ai published to; the request is quoted word for word except the access key, redacted here. The copy committed to the run vault at open still held it, so this run vault must end deleted, never sealed"
+   },
+   "server": "https://dev.send.sgraph.ai",
+   "vault_id": "x9ju6nmk",
+   "created_at": "2026-10-29T01:04:24+00:00",
+   "closed_at": "2026-10-29T01:13:18+00:00",
+   "ending": "deleted",
+   "hive": {
+    "workers": 2,
+    "tasks": 2,
+    "ruflo_calls": 10,
+    "ruflo_failed": 0,
+    "ruflo_ms": 4449
+   },
+   "branches": [
+    {
+     "name": "w-editor",
+     "role": "editor",
+     "files": 1,
+     "bytes": 15094,
+     "write_ms": 8225,
+     "merge_ms": 8940
+    },
+    {
+     "name": "w-writer",
+     "role": "writer",
+     "files": 1,
+     "bytes": 20045,
+     "write_ms": 8327,
+     "merge_ms": 9112
+    }
+   ],
+   "commits": 4,
+   "files": 4,
+   "bytes_plain": 37596,
+   "files_delivered": 2,
+   "bytes_delivered": 35139,
+   "store": {
+    "objects": 24,
+    "bytes": 47124,
+    "plaintext_hits": 0,
+    "probe": "30 text fragments from the vault's files, searched for in every byte of the encrypted store"
+   },
+   "clone": {
+    "ms": 3656,
+    "files": 4,
+    "identical": true,
+    "store_identical": false
+   },
+   "history": [
+    {
+     "id": "ebd2ac95f7b4",
+     "message": "init",
+     "time": "2026-10-29T01:04:28Z"
+    },
+    {
+     "id": "71f3d634114e",
+     "message": "brief: run r1-article",
+     "time": "2026-10-29T01:04:31Z"
+    },
+    {
+     "id": "7e40cf645cd6",
+     "message": "editor editor: delivered 1 files",
+     "time": "2026-10-29T01:12:06Z"
+    },
+    {
+     "id": "2040aa6ed398",
+     "message": "writer writer: delivered 1 files",
+     "time": "2026-10-29T01:12:23Z"
+    }
+   ],
+   "workers": [
+    {
+     "id": "writer",
+     "role": "writer",
+     "who": "the conductor (this Claude Code session), not a subagent",
+     "tokens": null,
+     "tokens_how": "the session does not show its own token count"
+    },
+    {
+     "id": "editor",
+     "role": "editor",
+     "who": "a Claude Code subagent of this session",
+     "tokens": 166314,
+     "tool_uses": 25,
+     "wall_s": 278,
+     "must_fix": 7,
+     "should_fix": 10
+    }
+   ],
+   "deleted_at": "2026-10-29T02:07:36+00:00",
+   "delete_check": {
+    "clone_after_delete": "failed"
+   }
+  }
+ ],
+ "schema": "the-ultimate-insider/ruv-sgit-ledger/v1",
+ "updated": "2026-10-29T02:07:36+00:00",
+ "server": "https://dev.send.sgraph.ai",
+ "viewer": "https://dev.vault.sgraph.ai/en-gb/",
+ "note": "one row per ruv.sgit run, written by team/ruv-sgit/tools/ruvsgit.py; no vault key is ever recorded, a read key only once a run is sealed"
+}

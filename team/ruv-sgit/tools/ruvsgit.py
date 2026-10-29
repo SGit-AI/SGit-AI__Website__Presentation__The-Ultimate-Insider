@@ -12,8 +12,8 @@
 #                                  write, then destroy the vault key, so the run's vault can never change again
 #   delete  RUN                    the other ending: delete the vault on the server, check a clone with the key now fails
 #
-# The vault key and the server token live only in RUVSGIT_HOME (mode 0600), go to sgit on stdin, and are never printed,
-# logged or committed. Every sgit and ruflo call is timed into the run's evidence. Standard library only.
+# The vault key and the server token live only in RUVSGIT_HOME (mode 0600) and are never printed, logged or committed. Vault keys
+# go to sgit on stdin; the token goes as --token, the only way sgit 0.27.0 takes it. Every sgit and ruflo call is timed into the run's evidence. Standard library only.
 
 import hashlib
 import json
@@ -186,7 +186,9 @@ def close(run, workers_json):
     R.ruflo('queen', ['daemon', 'stop'])
     st = R.state
     st['closed_at'] = now()
-    entry = {'run': run, 'purpose': st['purpose'], 'request': st['request'], 'server': SERVER, 'vault_id': st['vault_id'],
+    spec  = RUNS / f'{run}.spec.json'                                 # the repository's copy, where a secret in a request is redacted;
+    req   = json.loads(spec.read_text()).get('request', {}) if spec.exists() else {}   # the run's own state may still hold it
+    entry = {'run': run, 'purpose': st['purpose'], 'request': req, 'server': SERVER, 'vault_id': st['vault_id'],
              'created_at': st['created_at'], 'closed_at': st['closed_at'], 'ending': None,
              'hive': {'workers': sum(1 for x in st['ruflo'] if 'hive-mind spawn' in x['cmd'] and x['rc'] == 0),
                       'tasks': sum(1 for x in st['ruflo'] if 'hive-mind task' in x['cmd'] and x['rc'] == 0),
