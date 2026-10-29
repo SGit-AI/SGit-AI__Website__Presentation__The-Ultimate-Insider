@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T03:11Z. 343 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T03:15Z. 344 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -67,6 +67,7 @@ Built 2026-10-29T03:11Z. 343 sources; `manifest.json` has every file's SHA-256. 
 | [cyberscoop-eye-security](https://cyberscoop.com/tag/eye-security/) | CyberScoop | news | 2026-10-29T01:51:15Z | 200 | partial: tag page only, carries the article headline and standfirst, not the article | 3 |
 | [darpa-aixcc](https://www.darpa.mil/news/2025/aixcc-results) | DARPA | primary | 2026-10-29T01:55:01Z | 200 | full | 4 |
 | [daubois-rumors](https://daubois.dev/blog/cve-2026-109618-php2shell-rumors/) | Alexandre Daubois (PHP security team, personal blog) | primary | 2026-10-29T01:52:53Z | 200 | full | 4 |
+| [decisions-lane-research-2026-10-29](https://sgit.ai/api/append-lanes.md (and the pages listed in evidence/proposals/editor-decisions-deck.md, Sources)) | sgit.ai, pki.sgit.ai, php.oct.2026.newsroom.sgit.ai | own-site | 2026-10-29T03:15:00Z | 200 | full: one folder of raw pages, each file hashed | 57 |
 | [deepmind-camel-prompt-injection](https://arxiv.org/abs/2503.18813) | arXiv (Google DeepMind) | primary | 2026-10-29T01:53:32Z | 200 | full | 5 |
 | [devto-replit-incident](https://dev.to/joylo/why-replits-ai-agent-deleted-a-production-database-389p) | dev.to (joylo) | blog | 2026-10-29T01:50:29Z | 200 | full | 3 |
 | [devto-replit-joylo](https://dev.to/joylo/why-replits-ai-agent-deleted-a-production-database-389p) | Joylo (kris estigoy) on DEV Community | blog | 2026-10-29T01:50:21Z | 200 | full | 3 |

@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T03:11Z",
- "count": 343,
+ "built": "2026-10-29T03:15Z",
+ "count": 344,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -1729,9 +1729,9 @@
      "name": "page.html",
      "sha256_as_fetched": "245045974c4874215be81692da549834d8404a2929109429fc211e1e4726d838",
      "bytes_as_fetched": 90316,
-     "redacted": 4,
-     "sha256": "f4a820d2fb0a136c9e251b261a8a2e408ed23dd50818ac9738232e0c14047fe5",
-     "bytes": 90212
+     "redacted": 7,
+     "sha256": "15a25b4b49f8cabc00605f383823a70d586388dee05adfcf85a761a0bfbf5d15",
+     "bytes": 90068
     },
     {
      "name": "page.txt",
@@ -2591,6 +2591,438 @@
    "recorded_by": "sgit-php-ideas"
   },
   {
+   "id": "decisions-lane-research-2026-10-29",
+   "url": "https://sgit.ai/api/append-lanes.md (and the pages listed in evidence/proposals/editor-decisions-deck.md, Sources)",
+   "final_url": null,
+   "publisher": "sgit.ai, pki.sgit.ai, php.oct.2026.newsroom.sgit.ai",
+   "title": "Append lanes, the editor's published key, the PHP newsroom's signed feedback: the pages the decisions-deck design rests on",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T03:15:00Z",
+   "http_status": 200,
+   "capture": "full: one folder of raw pages, each file hashed",
+   "recorded_by": "rechecks",
+   "files": [
+    {
+     "name": "diniscruz.ai_.well-known_sgit-agents.json",
+     "sha256_as_fetched": "8c7e5c4e29c9f964686eae3519e55416a70cb2dbc2ed22eeb4af7ff4fc936ed4",
+     "bytes_as_fetched": 6374,
+     "sha256": "8c7e5c4e29c9f964686eae3519e55416a70cb2dbc2ed22eeb4af7ff4fc936ed4",
+     "bytes": 6374
+    },
+    {
+     "name": "fbk.md",
+     "sha256_as_fetched": "cbe87e3af2b1dc64adce229553e37971070e4bcbb040d60ffb1ea0585bf9ea2f",
+     "bytes_as_fetched": 8654,
+     "redacted": 2,
+     "sha256": "8d02d85343669421872aa2aa1b3cbeeb7b73d205427f6d459ea222683b55bbe6",
+     "bytes": 8648
+    },
+    {
+     "name": "newsroom.sgit.ai_.well-known_security.txt",
+     "sha256_as_fetched": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes_as_fetched": 9379,
+     "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes": 9379
+    },
+    {
+     "name": "newsroom.sgit.ai_.well-known_sgit-agents.json",
+     "sha256_as_fetched": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes_as_fetched": 9379,
+     "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes": 9379
+    },
+    {
+     "name": "newsroom.sgit.ai_agents_index.md",
+     "sha256_as_fetched": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes_as_fetched": 9379,
+     "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes": 9379
+    },
+    {
+     "name": "newsroom.sgit.ai_llms.txt",
+     "sha256_as_fetched": "55fe7f9f3c27289be0687ed8d9201ce8fa971da31903042a390ad847472970b9",
+     "bytes_as_fetched": 61601,
+     "sha256": "55fe7f9f3c27289be0687ed8d9201ce8fa971da31903042a390ad847472970b9",
+     "bytes": 61601
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_appsec_advisories_SA-2026-012_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_appsec_advisories_SA-2026-014_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_appsec_advisories_SA-2026-024_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_appsec_advisories_SA-2026-026_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_briefs_",
+     "sha256_as_fetched": "1cbed7fb20348f0d6a21467858189871a15e853f283e3b334487002b9110d485",
+     "bytes_as_fetched": 584,
+     "sha256": "1cbed7fb20348f0d6a21467858189871a15e853f283e3b334487002b9110d485",
+     "bytes": 584
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_briefs_2026-10-22__telemetry-over-an-append-lane.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_briefs_2026-10-22__telemetry-over-an-append-lane_",
+     "sha256_as_fetched": "749d0d05e739cdfd3821d64819b94539cc35027cf1b84ee0f10182275b3e76e0",
+     "bytes_as_fetched": 806,
+     "sha256": "749d0d05e739cdfd3821d64819b94539cc35027cf1b84ee0f10182275b3e76e0",
+     "bytes": 806
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_briefs_2026-10-22__telemetry-over-an-append-lane_index.html",
+     "sha256_as_fetched": "749d0d05e739cdfd3821d64819b94539cc35027cf1b84ee0f10182275b3e76e0",
+     "bytes_as_fetched": 806,
+     "sha256": "749d0d05e739cdfd3821d64819b94539cc35027cf1b84ee0f10182275b3e76e0",
+     "bytes": 806
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_briefs_2026-10-22__telemetry-over-an-append-lane_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_admin_telemetry_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_assets_ask_ask.js",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_assets_feedback_identity.js",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_collaborators_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_feedback_briefs_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_feedback_uf-001_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_join_index.md",
+     "sha256_as_fetched": "4225558da7c554914749f6944216e9b8cc0dd53a076440734f17c4b557a268c2",
+     "bytes_as_fetched": 2971,
+     "sha256": "4225558da7c554914749f6944216e9b8cc0dd53a076440734f17c4b557a268c2",
+     "bytes": 2971
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_llms.txt",
+     "sha256_as_fetched": "6ed1cec11823c6a64ca4ed63c5c14a5efe228ae21ac90ab17056681432df577c",
+     "bytes_as_fetched": 361467,
+     "redacted": 26,
+     "sha256": "e84367458eb1c3ef73028fd63e04ed666969ae090e9493b000534e6709d82a10",
+     "bytes": 361354
+    },
+    {
+     "name": "php.oct.2026.newsroom.sgit.ai_review_index.md",
+     "sha256_as_fetched": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes_as_fetched": 10118,
+     "sha256": "a077a647124cc915196d4a0b0836aebd71f538c4261e63f89270e762668dbaaa",
+     "bytes": 10118
+    },
+    {
+     "name": "pki.sgit.ai_",
+     "sha256_as_fetched": "f8ce9a65038a83866ef20ed4e838a32180c9450a88ad59a1047d4ed7d05880e5",
+     "bytes_as_fetched": 19060,
+     "redacted": 2,
+     "sha256": "075e4324c1122fc714d5dd9165ea893d163d526cf77ae32a80015a951776f120",
+     "bytes": 19052
+    },
+    {
+     "name": "pki.sgit.ai_directory_anchors.json",
+     "sha256_as_fetched": "0dd6b031ab84b0a0695420539283f725339f923e42a003be6d19b77600259207",
+     "bytes_as_fetched": 455,
+     "sha256": "0dd6b031ab84b0a0695420539283f725339f923e42a003be6d19b77600259207",
+     "bytes": 455
+    },
+    {
+     "name": "pki.sgit.ai_directory_index.json",
+     "sha256_as_fetched": "e83cd65e975ddcb03da667111ec308ee5e4068d0bedf0da4a7766794b716e722",
+     "bytes_as_fetched": 35659,
+     "sha256": "e83cd65e975ddcb03da667111ec308ee5e4068d0bedf0da4a7766794b716e722",
+     "bytes": 35659
+    },
+    {
+     "name": "pki.sgit.ai_handover.md",
+     "sha256_as_fetched": "00545a14806f4ba4021114529e85eea118f15456c0c7ef998e6da5ef911618d3",
+     "bytes_as_fetched": 7450,
+     "sha256": "00545a14806f4ba4021114529e85eea118f15456c0c7ef998e6da5ef911618d3",
+     "bytes": 7450
+    },
+    {
+     "name": "pki.sgit.ai_id_index.json",
+     "sha256_as_fetched": "866eb58a0d1c8e79f972bb1154b624fc345fa0869a950a2af1abddef177c668f",
+     "bytes_as_fetched": 788,
+     "sha256": "866eb58a0d1c8e79f972bb1154b624fc345fa0869a950a2af1abddef177c668f",
+     "bytes": 788
+    },
+    {
+     "name": "pki.sgit.ai_llms.txt",
+     "sha256_as_fetched": "08f1d2148118f57b92bc7fdb7b0f5a234ce172ee3adb94a47557d4b3f5652ed7",
+     "bytes_as_fetched": 62302,
+     "sha256": "08f1d2148118f57b92bc7fdb7b0f5a234ce172ee3adb94a47557d4b3f5652ed7",
+     "bytes": 62302
+    },
+    {
+     "name": "pki.sgit.ai_sso_index.html",
+     "sha256_as_fetched": "eeee6031bdb05875718b070013095ff12d8ba7104f39df6770d5437d8fd37f1f",
+     "bytes_as_fetched": 8933,
+     "sha256": "eeee6031bdb05875718b070013095ff12d8ba7104f39df6770d5437d8fd37f1f",
+     "bytes": 8933
+    },
+    {
+     "name": "pki.sgit.ai_sso_index.md",
+     "sha256_as_fetched": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes_as_fetched": 9379,
+     "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes": 9379
+    },
+    {
+     "name": "pki.sgit.ai_vault_",
+     "sha256_as_fetched": "3270dcce831795de6d6f4d001559f31a296d50133b5da555626bb0f3bc725c38",
+     "bytes_as_fetched": 9138,
+     "sha256": "3270dcce831795de6d6f4d001559f31a296d50133b5da555626bb0f3bc725c38",
+     "bytes": 9138
+    },
+    {
+     "name": "pki_id_dinis.json",
+     "sha256_as_fetched": "645c28688db706122d15ba0f27d0560ffef16a56f7f5ad1f3acfdeac2d6e8633",
+     "bytes_as_fetched": 3154,
+     "sha256": "645c28688db706122d15ba0f27d0560ffef16a56f7f5ad1f3acfdeac2d6e8633",
+     "bytes": 3154
+    },
+    {
+     "name": "riskmandate.ai_.well-known_sgit-agents.json",
+     "sha256_as_fetched": "27fd5f896faa2b0bf862e8e0ee83a107097d9560a9b1b9c5ab3150d867fe258b",
+     "bytes_as_fetched": 3966,
+     "redacted": 5,
+     "sha256": "a4398e373e568143645abdfa00fab83cc7e306afb3dc376ad3634eb56c14393b",
+     "bytes": 3858
+    },
+    {
+     "name": "sgit.ai_.well-known_security.txt",
+     "sha256_as_fetched": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes_as_fetched": 9379,
+     "sha256": "b620507312c5e97566a3c6cfaf99144fefc18a0da7d941401dfa0f5f58fb0368",
+     "bytes": 9379
+    },
+    {
+     "name": "sgit.ai_.well-known_sgit-agents.json",
+     "sha256_as_fetched": "a5e3fcb5a50ef8b7029823c37217f93998e65d861d8df984b87c2e1ba3589e22",
+     "bytes_as_fetched": 6003,
+     "redacted": 9,
+     "sha256": "e59d6ce91343f40103736b6eb63171471234b53a0f5a16eabe425223c0a94391",
+     "bytes": 5903
+    },
+    {
+     "name": "sgit.ai_agents_index.md",
+     "sha256_as_fetched": "49fcd341bd8800c41894df6bc504f999a19124e8769b664af759486b12474a3e",
+     "bytes_as_fetched": 9856,
+     "redacted": 11,
+     "sha256": "e8c552468078aaf6f25f5d2bcc1d6d5f65eaad224e55b2cb9e7c0f02d3846bec",
+     "bytes": 9847
+    },
+    {
+     "name": "sgit.ai_api_append-lanes.md",
+     "sha256_as_fetched": "37e517e8654ca22d902fae6da0e5dc8e31966f095984911f66bff3f738b88c72",
+     "bytes_as_fetched": 9753,
+     "redacted": 1,
+     "sha256": "f82e23fa442d8c73f9c6f7e2cc6989000810293179d7e80068dc9c696cf713ac",
+     "bytes": 9755
+    },
+    {
+     "name": "sgit.ai_docs_agent-contact.md",
+     "sha256_as_fetched": "56ff9990bd7af68a27096a3fc3bd076ff81ae9b09c15e8d4dbb0e6a3f09bedfd",
+     "bytes_as_fetched": 22793,
+     "redacted": 3,
+     "sha256": "ebb08d696b64375fc5369c5dcb8499f6b932df5243706c0705072d3ee03e4b8b",
+     "bytes": 22761
+    },
+    {
+     "name": "sgit.ai_docs_append-lane-messaging.md",
+     "sha256_as_fetched": "a189666fc2dc16c2b2453a9b76e2dd9ba4f6217f7b9223cac765242851f8b356",
+     "bytes_as_fetched": 39370,
+     "redacted": 1,
+     "sha256": "0b6d6b13079c60ce23734a34c4852a0d5c6a3ab86d5399a1f608a117aa400428",
+     "bytes": 39372
+    },
+    {
+     "name": "sgit.ai_docs_briefs_vault-telemetry-append-lanes.md",
+     "sha256_as_fetched": "7ceeba683383a0106d6e42e0669402d36bc0c560ec44d74d61ab496f21306eaa",
+     "bytes_as_fetched": 16388,
+     "sha256": "7ceeba683383a0106d6e42e0669402d36bc0c560ec44d74d61ab496f21306eaa",
+     "bytes": 16388
+    },
+    {
+     "name": "sgit.ai_docs_pki.md",
+     "sha256_as_fetched": "97ce73fff1f62bd0a6a9dc7e79daa924fc3426994450074db7dd2af2053eddcc",
+     "bytes_as_fetched": 7291,
+     "sha256": "97ce73fff1f62bd0a6a9dc7e79daa924fc3426994450074db7dd2af2053eddcc",
+     "bytes": 7291
+    },
+    {
+     "name": "sgit.ai_docs_vault_sg-bridge.md",
+     "sha256_as_fetched": "5a104d9916336b84184961931d19811593fc49d045ea979fe18ec336f5c67ce6",
+     "bytes_as_fetched": 6931,
+     "sha256": "5a104d9916336b84184961931d19811593fc49d045ea979fe18ec336f5c67ce6",
+     "bytes": 6931
+    },
+    {
+     "name": "sgit.ai_llms.txt",
+     "sha256_as_fetched": "70940581e28aae30b60d7fc6371599a0f0181ed3b66e2888933877ca81f15dff",
+     "bytes_as_fetched": 290040,
+     "redacted": 6,
+     "sha256": "1153d2f650093a913da2e0ba54ffe168f76fce63e81fde94d74dd01add2d1e64",
+     "bytes": 290040
+    },
+    {
+     "name": "sgit.newsroom.sgit.ai_keys_agents.json",
+     "sha256_as_fetched": "2b2a039710c36bace2be3218382c89916a6897e688e4a9af708228200cf7cf0e",
+     "bytes_as_fetched": 2875,
+     "sha256": "2b2a039710c36bace2be3218382c89916a6897e688e4a9af708228200cf7cf0e",
+     "bytes": 2875
+    },
+    {
+     "name": "tb.md",
+     "sha256_as_fetched": "b5ea072626941fb617df2369d358451fe7832bc3147b2bce736e77deba78f92b",
+     "bytes_as_fetched": 32082,
+     "redacted": 17,
+     "sha256": "3e06feba627bb43a78ebc3e08a9b3059d02b038a6edfb4e0dd76a50daca6df95",
+     "bytes": 31960
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_admin_appsec_advisories_SA-2026-012_index.md",
+     "sha256_as_fetched": "a238074edf300a65b68dcf27b85cb9e4d1acef40e19ec6ee0d18dd51d93de051",
+     "bytes_as_fetched": 2669,
+     "redacted": 2,
+     "sha256": "044e7326da8d59f3b9db48f0a1e236c8c465e12c822a28e2604286760e27382f",
+     "bytes": 2659
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_admin_appsec_advisories_SA-2026-014_index.md",
+     "sha256_as_fetched": "6ef3e8137fed5e6198b0f61a150830bf12dae1a58251723735258c4cef80ea12",
+     "bytes_as_fetched": 2340,
+     "redacted": 2,
+     "sha256": "a0ea19261aa86f448bd2613af1d7592a48ec1fa3c7089d897182da2977cfcef7",
+     "bytes": 2330
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_admin_appsec_advisories_SA-2026-024_index.md",
+     "sha256_as_fetched": "8cc6662dd5b3a86b927b589ede3af400544966aff41a52222f77ff7e1e87dd30",
+     "bytes_as_fetched": 1899,
+     "redacted": 1,
+     "sha256": "56dc39ce99dc62696dd52ef53d6265d040cc3a1f421311efc4b6d546df028ea0",
+     "bytes": 1894
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_admin_appsec_advisories_SA-2026-026_index.md",
+     "sha256_as_fetched": "64fb612d78e7c293081665a27ea2b09e6c80da1e46b3c8ff8d6e54506cf9db1a",
+     "bytes_as_fetched": 1879,
+     "redacted": 1,
+     "sha256": "2106a14a4ba5f72b053e3482c36b2b5c476910d3593502c55b7f0456ff1df96e",
+     "bytes": 1874
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_admin_briefs_2026-10-22__telemetry-over-an-append-lane_index.md",
+     "sha256_as_fetched": "d724b1140cc9afb5d57d6675e02b2f6bb3885df3ed8e57a796e32b1cdeb98fc0",
+     "bytes_as_fetched": 6137,
+     "redacted": 1,
+     "sha256": "7de0a123762595204020bb41be7a88b6a514e7a1fbdf93c480cf6165b53179c7",
+     "bytes": 6137
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_admin_telemetry_index.md",
+     "sha256_as_fetched": "b7039bfee9b9f35408fddcc0692e579c437e73ec58da099cb0b95562515ec8fe",
+     "bytes_as_fetched": 12148,
+     "sha256": "b7039bfee9b9f35408fddcc0692e579c437e73ec58da099cb0b95562515ec8fe",
+     "bytes": 12148
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_collaborators_index.md",
+     "sha256_as_fetched": "f701ae213851d918b8c1d186d086d143108b4e26ad972a00e1141cadccabfd31",
+     "bytes_as_fetched": 11331,
+     "redacted": 2,
+     "sha256": "1ceceeaf4947f193bc525a035cda9b423771bf1aae1b45b7f89418d39779f32d",
+     "bytes": 11327
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_feedback_uf-001_index.md",
+     "sha256_as_fetched": "7ceebd7f1486341042ad8d5e2746155252a4b10e0e51976bbda6a5faf624e474",
+     "bytes_as_fetched": 15162,
+     "redacted": 5,
+     "sha256": "350f8eaf6fb1ebcf83145ecb0381303f4700ced391d4288677e0a2e72aec2648",
+     "bytes": 15162
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_join_index.md",
+     "sha256_as_fetched": "1a7adf4a2bea38e1ff97dc7801cabc1c2f2d6fec0b578c649380ba99a1c05f03",
+     "bytes_as_fetched": 10143,
+     "sha256": "1a7adf4a2bea38e1ff97dc7801cabc1c2f2d6fec0b578c649380ba99a1c05f03",
+     "bytes": 10143
+    },
+    {
+     "name": "team.php.oct.2026.newsroom.sgit.ai_review_index.md",
+     "sha256_as_fetched": "1a7adf4a2bea38e1ff97dc7801cabc1c2f2d6fec0b578c649380ba99a1c05f03",
+     "bytes_as_fetched": 10143,
+     "sha256": "1a7adf4a2bea38e1ff97dc7801cabc1c2f2d6fec0b578c649380ba99a1c05f03",
+     "bytes": 10143
+    }
+   ]
+  },
+  {
    "id": "deepmind-camel-prompt-injection",
    "url": "https://arxiv.org/abs/2503.18813",
    "final_url": "https://arxiv.org/abs/2503.18813",
@@ -3139,15 +3571,16 @@
      "name": "page.html",
      "sha256_as_fetched": "f14556ce13f654d3cc3385006cd0ee3b4c33a8c459cb0af344023ec0c234a273",
      "bytes_as_fetched": 190474,
-     "redacted": 6,
-     "sha256": "75bb4eb1de16a3216501708c8afd567b3fa82cc57ea01d8c1ea0dd387fcd7f0a",
+     "redacted": 7,
+     "sha256": "7e9be48925e1dac9d29fc9a508dcd5eb23e54ebc5604f2bf90f4643f0192d26f",
      "bytes": 190146
     },
     {
      "name": "page.txt",
      "sha256_as_fetched": "e8c33bf279777741aa245b862e71c4c515847d8e57498e929770b8daccd1f050",
      "bytes_as_fetched": 34898,
-     "sha256": "e8c33bf279777741aa245b862e71c4c515847d8e57498e929770b8daccd1f050",
+     "redacted": 1,
+     "sha256": "4cc6b43f41218e2bc6c2a22fe747f322ee575dfcf3b7dbf952bb95ac5832cd94",
      "bytes": 34898
     },
     {
@@ -3852,9 +4285,9 @@
      "name": "page.html",
      "sha256_as_fetched": "46cac22786e8b4e640b1927152a2ca26e272aa5876cb7a245a2bb772b694b69b",
      "bytes_as_fetched": 232280,
-     "redacted": 1,
-     "sha256": "3417215577ea33709ee88159a0f6fb75854145266c6d62954f9eb5d1bcc23231",
-     "bytes": 231871
+     "redacted": 3,
+     "sha256": "93cf245c9887cbebbc0540d31d4f78bfd47c4d3e5483b526186dfd773725df2a",
+     "bytes": 231863
     },
     {
      "name": "page.txt",
@@ -4744,8 +5177,9 @@
      "name": "page.html",
      "sha256_as_fetched": "41bac008b505dea2936ad556d2c605a917fbfa244857c8db80dd88be39900b69",
      "bytes_as_fetched": 465046,
-     "sha256": "41bac008b505dea2936ad556d2c605a917fbfa244857c8db80dd88be39900b69",
-     "bytes": 465046
+     "redacted": 10,
+     "sha256": "d023902a7139ccae3d7b7e8493c5bd11c391ffe6c2a4bb9d5165162712f27338",
+     "bytes": 462878
     },
     {
      "name": "page.txt",
@@ -5754,9 +6188,9 @@
      "name": "page.html",
      "sha256_as_fetched": "b74e2b355996c48b15931000a076e8b5c1cd140853325063d505b86411694b29",
      "bytes_as_fetched": 105144,
-     "redacted": 5,
-     "sha256": "99cad6d1519e6b585ea388899e97d92a5021d4f687925fad9b8518d5a63d64ee",
-     "bytes": 105051
+     "redacted": 8,
+     "sha256": "a904641a0aa60269f29ea44c8825ab41b9ecbbc259da555f60f148fc7bb50e40",
+     "bytes": 104907
     },
     {
      "name": "page.txt",
@@ -6990,8 +7424,9 @@
      "name": "page.html",
      "sha256_as_fetched": "92f92fd9f47de65169037051276172934fe69aff2b886425fc91019aa39895f9",
      "bytes_as_fetched": 433072,
-     "sha256": "92f92fd9f47de65169037051276172934fe69aff2b886425fc91019aa39895f9",
-     "bytes": 433072
+     "redacted": 1,
+     "sha256": "024f10dd4adc8f5e65d08ca229763b337f9c0c02c99263da19730c1f0d983f52",
+     "bytes": 432650
     },
     {
      "name": "page.txt",
@@ -7234,8 +7669,9 @@
      "name": "page.html",
      "sha256_as_fetched": "c3a65a5b415a8ae24e82ca75e5480c46333c421ff8baaff360cc82edbecfca08",
      "bytes_as_fetched": 433072,
-     "sha256": "c3a65a5b415a8ae24e82ca75e5480c46333c421ff8baaff360cc82edbecfca08",
-     "bytes": 433072
+     "redacted": 1,
+     "sha256": "9a90c5479651ae2ec9b30c824dcb08058a4cbaec801100995fdb9a72d1328e50",
+     "bytes": 432650
     },
     {
      "name": "page.txt",

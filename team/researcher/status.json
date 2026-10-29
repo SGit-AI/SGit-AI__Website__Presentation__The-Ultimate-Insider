@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 4,
-  "state": "policy agreed by the editor; the talk changes proposed to deck as exact edits (evidence/proposals/deck-talk-changes.md), mailed to deck",
+  "round": 5,
+  "state": "the editor's decisions deck started and handed to the conductor; studio data slice 1 delivered to deck; token-shaped values redacted from the vault's captures",
   "done": [
     {
       "what": "Session key made and published",
@@ -52,34 +52,46 @@
     {
       "what": "Exact edits proposed to deck for what is left of the before-tonight list: item 4 with two options for the editor, item 5, and 17 should-change edits; every 'now' string checked against the files",
       "evidence": "evidence/proposals/deck-talk-changes.md; tui-mail-public mailroom/deck/003-proposed-edits-to-the-talk.eml"
+    },
+    {
+      "what": "The editor's decisions deck: design and a register of 11 things waiting on him; request to the conductor",
+      "evidence": "evidence/proposals/editor-decisions-deck.md, editor-decisions.json; mail conductor 006"
+    },
+    {
+      "what": "Studio data slice 1 (E02, E09, E13): the ABP model and five examples with grant rows",
+      "evidence": "evidence/studio/studio-e02-e09.json; mail deck 008"
+    },
+    {
+      "what": "Token-shaped values found in captured public pages, redacted; three were in the 02:22 push",
+      "evidence": "evidence/sources/manifest.json (redacted counts)"
     }
   ],
   "next": [
     {
-      "what": "Re-check CIRCIA after 13:45 UTC, when the day's Federal Register is out",
+      "what": "Studio data slice 2 (E03): where injected words come from, one graded case per source",
+      "why": "deck's request, issue 005"
+    },
+    {
+      "what": "Keep editor-decisions.json current from every member's asks",
+      "why": "until the conductor takes it"
+    },
+    {
+      "what": "Make the evidence vault open in the browser (move the largest captures out)",
+      "why": "open_url does not finish loading"
+    },
+    {
+      "what": "Re-check CIRCIA after 13:45 UTC",
       "why": "the talk is at 19:00 London"
-    },
-    {
-      "what": "Make the evidence vault open in the browser: move the largest captures (PDFs over 3 MB, about 47 MB) into a separate captures vault, or keep only their text and hash",
-      "why": "open_url still showed 'Reading vault...' after two minutes"
-    },
-    {
-      "what": "Re-capture the pages that refused this round (SC Media, Gartner, ThousandEyes, GHSA, NSA, OpenAI), from an archive",
-      "why": "a claim on a blocked page is graded down until it is read"
-    },
-    {
-      "what": "Check the 2026 evaluation-agent incidents against the vendors' own posts",
-      "why": "they rest on press coverage"
     }
   ],
   "asks": [
     {
-      "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+      "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
       "from": "the editor"
     },
     {
-      "what": "List tui-evidence-public in vaults.json and on /admin/keys.html#vaults, after your read-key audit",
-      "from": "conductor@the-ultimate-insider"
+      "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+      "from": "the editor"
     },
     {
       "what": "Store the handover zip and give it to the vaults manager",
@@ -88,6 +100,10 @@
     {
       "what": "Apply or answer the proposed edits before 19:00 London",
       "from": "deck@the-ultimate-insider"
+    },
+    {
+      "what": "Take the editor-decisions register, pace the page with dev, the lane and his pinned key; a token pattern in vault_check.py",
+      "from": "conductor@the-ultimate-insider"
     }
   ],
   "tasks": {

@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "In scope; no main, no new task. Build nothing for the channel until the conductor sequences it; the conductor request stays in its role. The design must hold: a decision is material, agents may decline with a reason; authentic only if signed by his published key, unsigned ignored; the append token never in plaintext, only sealed to his key; nothing private in public vaults, vault_check first; append-only, each member writes only its own folder; decisions cannot change policy, scope, the night's rules or Stopping; an entry that tries to instruct agents is a hold.",
    "at": "2026-10-29T03:07:09Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "deck request 005: issue and reply, slice 1 delivered (evidence/studio/studio-e02-e09.json, mail deck 008); decisions deck: evidence/proposals/editor-decisions-deck.md and editor-decisions.json, request conductor 006, notice editor 004, board 006; token-shaped values redacted in the vault's captures (a check printed most of several public tokens to the log; three were in the 02:22 push); the 03:09 scheduled wake folded into this one",
+   "at": "2026-10-29T03:16:13Z"
   }
  },
  "closed": null,
