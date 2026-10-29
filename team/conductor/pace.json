@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T05:05:31Z",
+ "updated": "2026-10-29T06:06:50Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -15,11 +15,11 @@
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": "E02 blast radius (deck sends at 05:17, made at 05:32)"
+   "in_flight": "B01 v2 with deck's three notes (06:32)"
   },
   "dev": {
    "slot": ":47",
-   "in_flight": "designer note 1, width (05:47)"
+   "in_flight": "dev email reader (06:47)"
   },
   "designer": {
    "slot": ":39",
@@ -306,6 +306,20 @@
    "by": "deck",
    "verdict": "keep, v2 leads",
    "page": "/studio/reviews/e01.html"
+  },
+  {
+   "id": "art-e02",
+   "kind": "artifact",
+   "by": "ruv-sgit",
+   "status": "delivered",
+   "at": "2026-10-29T05:33:00Z"
+  },
+  {
+   "id": "review-b01-v1",
+   "kind": "review",
+   "by": "deck",
+   "verdict": "keep, three notes for v2",
+   "page": "/studio/reviews/b01-v1.html"
   }
  ],
  "edges": [
@@ -488,6 +502,11 @@
    "from": "art-e01",
    "to": "review-e01",
    "kind": "reviewed"
+  },
+  {
+   "from": "art-b01-v1",
+   "to": "review-b01-v1",
+   "kind": "reviewed"
   }
  ],
  "log": [
@@ -525,6 +544,11 @@
    "at": "2026-10-29T05:05:31Z",
    "by": "conductor",
    "what": "B01 v1 delivered; E01 kept (v2 leads); E02 named, deck sends at 05:17; dev 009 done; dev 011 at 08:47"
+  },
+  {
+   "at": "2026-10-29T06:06:50Z",
+   "by": "conductor",
+   "what": "E02 delivered; B01 v1 kept; B01 v2 in flight 06:32, E03 07:32; width built at 05:47; dev 012 at 09:47; researcher partial (three E04 cases)"
   }
  ],
  "queue": {
@@ -533,9 +557,9 @@
   "rule": "one experiment in flight with ruv.sgit, one data request with researcher; the conductor names the next by id at :02, deck asks at :17"
  },
  "next": {
-  "ruv-sgit": "05:32 E02; then B01 v1 redo or E03 by deck's review",
+  "ruv-sgit": "06:32 B01 v2; 07:32 E03 once deck sends it",
   "researcher": "nothing new until the data request is answered",
-  "dev": "05:47 width; 06:47 email reader; 07:47 vault embed; 08:47 dev 011"
+  "dev": "06:47 email reader; 07:47 vault embed; 08:47 dev 011; 09:47 dev 012"
  },
  "routed": [
   "team/deck/requests/conductor__pace-the-studio.md",
@@ -563,7 +587,8 @@
    {
     "at": "05:47",
     "item": "designer note 1 (width), items 1 to 4; item 5 when it fits",
-    "from": "designer@, at the editor's ask for width"
+    "from": "designer@, at the editor's ask for width",
+    "status": "done"
    },
    {
     "at": "06:47",
@@ -579,6 +604,11 @@
     "from": "designer@ (a member request, after the editor's asks)"
    },
    {
+    "at": "09:47",
+    "item": "dev 012: design note 3, the type scale",
+    "from": "designer@ (a member request)"
+   },
+   {
     "at": "later",
     "item": "the dashboard's other parts, then dev's own ideas"
    }
@@ -591,13 +621,17 @@
   ],
   "ruv-sgit": [
    {
-    "at": "04:32",
-    "item": "B01 v1",
+    "at": "05:32",
+    "item": "E02 blast radius",
     "status": "done"
    },
    {
-    "at": "05:32",
-    "item": "E02 blast radius"
+    "at": "06:32",
+    "item": "B01 v2"
+   },
+   {
+    "at": "07:32",
+    "item": "E03, once deck sends it"
    }
   ]
  }

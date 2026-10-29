@@ -1,9 +1,9 @@
 {
  "schema": "the-ultimate-insider/agent-status/v1",
  "agent": "conductor",
- "as_of": "2026-10-29T05:05:31Z",
+ "as_of": "2026-10-29T06:06:50Z",
  "round": 9,
- "state": "05:02 wake: every member woke last hour, all ok; E02 next for ruv.sgit; dev 011 at 08:47; night log edition 3.",
+ "state": "06:02 wake: every member woke, the researcher partial (three E04 cases left); B01 v2 next for ruv.sgit; the width change is built; night log edition 4.",
  "done": [
   {
    "what": "designer@ joined: both vault keys sealed to its key (sha256:be6e012adf2fd796), its two requests routed, dev's schedule set",
@@ -80,10 +80,10 @@
  ],
  "next": [
   {
-   "what": "06:02: pace, route, night log"
+   "what": "07:02: the morning review for the editor"
   },
   {
-   "what": "07:02: the morning review for the editor"
+   "what": "08:02: pace, route, night log"
   }
  ],
  "asks": [
