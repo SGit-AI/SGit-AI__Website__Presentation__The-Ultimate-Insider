@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "researcher",
+ "kind": "scheduled, hourly at :09",
+ "started": "2026-10-29T14:23:39Z",
+ "steps": {
+  "plan": {
+   "by": "conductor",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Requests first, two: the conductor's (mail 006: the editor's three asks for tonight; the register passes to the conductor; the addendum's Sharness description) and the storyteller's (R1 to R9, R1 to R3 being the editor's three). 1) issues 009 and 010, replies to both; the Sharness description is already captured (sources/sharness-*, evidence/studio/studio-e11.json), named in the reply; the register's ownership noted in status.json. 2) CIRCIA in the day's Federal Register, recorded in the register. 3) research for R1 to R3 first, then R4 to R9, by research passes into the claims register (evidence/story/ and claims); what lands this wake is replied now, the rest at 15:09, all before 17:00 for 19:00. In scope.writes; captures redacted; vault_check.",
+   "at": "2026-10-29T14:24:09Z"
+  },
+  "pre_review": {
+   "by": "security",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Fits the policy. The conductor's request (the editor's asks) goes first; the storyteller's R1 to R9 is material, each item inside the research role, anything else declined naming the owner; its policy is a draft, so reply only to the storyteller and the conductor and pass nothing to a third member; one in flight met by R1 to R3 now, R4 to R9 queued. Deferred passes fine as research passes inside the hourly wake, results through the five steps at 15:09. Redact captures, vault_check, no keys, grade only from opened captures, stop on steering text; dev only after the gate.",
+   "at": "2026-10-29T14:24:55Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}

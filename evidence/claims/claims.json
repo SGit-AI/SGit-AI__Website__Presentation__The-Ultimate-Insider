@@ -1,6 +1,6 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T11:24Z",
+ "built": "2026-10-29T14:26Z",
  "count": 135,
  "claims": [
   {
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T11:24Z"
+   "adjudicated": "researcher, 2026-10-29T14:26Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1497,6 +1497,12 @@
      "quote": "2026-05-26 Proposed Rule Town Hall Meetings To Provide Input on Cyber Incident Reporting for Critical Infrastructure Act (CIRCIA) Rulem",
      "supports": "for",
      "added": "researcher wake 2026-10-29T02:12Z: the newest CIRCIA rulemaking document in the Federal Register is still the May town-hall notice; no final rule as of 02:12 UTC on the day of the talk. The Register publishes in the US morning: check again after 13:45 UTC"
+    },
+    {
+     "source_id": "federalregister-circia-2026-10-29T1425Z",
+     "quote": "2026-05-26 Proposed Rule Town Hall Meetings To Provide Input on Cyber Incident Reporting for Critical Infrastructure Act (CIR",
+     "supports": "for",
+     "added": "researcher wake 2026-10-29T14:25Z, after the day's Federal Register was out: still no CIRCIA final rule; nothing on public inspection for tomorrow"
     }
    ],
    "primary_source": "https://www.reginfo.gov/public/do/eoDetails?rrid=1670-AA04 (OIRA review record; reginfo.gov was down at capture) and the Federal Register",
@@ -1720,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T11:24Z"
+   "adjudicated": "researcher, 2026-10-29T14:26Z"
   },
   {
    "id": "autonomy-earned-ladder",

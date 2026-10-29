@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T11:24Z. 388 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T14:26Z. 428 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -97,6 +97,7 @@ Built 2026-10-29T11:24Z. 388 sources; `manifest.json` has every file's SHA-256. 
 | [eu-pld-2024-2853](https://eur-lex.europa.eu/eli/dir/2024/2853/oj/eng) | EUR-Lex | primary | None | 202 | failed: EUR-Lex returned 202 with empty body (bot challenge); facts seen only in search summaries | 0 |
 | [eyesecurity-toolshell](https://labs.eye.security/sharepoint-under-siege/) | Eye Security | primary | 2026-10-29T01:51:16Z | 200 | full | 3 |
 | [federalregister-circia-2026-10-29T0212Z](https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=CIRCIA&order=newest&per_page=8) | Federal Register (US Office of the Federal Register) | primary | 2026-10-29T02:12:24Z | 200 | full | 1 |
+| [federalregister-circia-2026-10-29T1425Z](https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=CIRCIA&order=newest&per_page=8 (and public-inspection-documents.json, term Cyber Incident Reporting)) | Federal Register (US Office of the Federal Register) | primary | 2026-10-29T14:25:05Z | 200 | full | 2 |
 | [federalregister-circia-search](https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=CIRCIA&order=newest&per_page=10) | Federal Register (API) | primary | 2026-10-29T01:51:49Z | 200 | full (JSON search result, newest first) | 3 |
 | [fig-1password-waxell](https://waxell.ai/blog/ai-agents-twice-approved-data-1password-survey) |  | blog | 2026-10-29T01:52:01Z | 200 | full | 4 |
 | [fig-csa-agent-identity](https://cloudsecurityalliance.org/press-releases/2026/03/24/more-than-two-thirds-of-organizations-cannot-clearly-distinguish-ai-agent-from-human-actions) |  | vendor-survey | 2026-10-29T01:52:01Z | 200 | full | 4 |
@@ -371,6 +372,45 @@ Built 2026-10-29T11:24Z. 388 sources; `manifest.json` has every file's SHA-256. 
 | [sharness-status](https://sharness.ai/evidence/status/index.md) | sharness.ai (Dinis Cruz and his agents) | own-site | 2026-10-29T06:15:00Z | 200 | full | 2 |
 | [silicon-cyberark-2025-press](https://www.silicon.co.uk/press-release/machine-identities-outnumber-humans-by-more-than-80-to-1-new-report-exposes-the-exponential-threats-of-fragmented-identity-security) | Silicon UK (BusinessWire syndication of CyberArk release) | vendor-survey | 2026-10-29T01:55:11Z | 200 | full | 3 |
 | [spiffe-overview](https://spiffe.io/docs/latest/spiffe-about/overview/) | SPIFFE project (CNCF) | primary | 2026-10-29T01:50:50Z | 200 | full | 4 |
+| [story-abp-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-ap-deloitte-australia-ai-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-ap-deloitte-australia-ai-2025-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [story-ayinde-haringey-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-bates-horizon-judgment-6](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-bbc-phe-excel-2020](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-cisa-aa20-352a](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-cisa-aa20-352a-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [story-esa-ariane501-report](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-gao-legacy-2025](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-gtig-ai-threat-tracker](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-herndon-ash-pollin-2013](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-jpm-task-force-2013](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-jpm-task-force-2013-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [story-mandiant-unc5537-snowflake](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-mata-avianca-sanctions-2023](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-msrc-midnight-blizzard-2024](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-msrc-midnight-blizzard-2024-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [story-ncsc-ai-2027](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-newsroom-application-bp](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-newsroom-approve-at-altitude](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-newsroom-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-newsroom-llms-full](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-newsroom-process-bp](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-newsroom-three-policies](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-riskmandate-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-sec-knight-capital-order](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-sec-knight-capital-order-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [story-sec-solarwinds-8k-2020](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-sec-solarwinds-8k-2020-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [story-sgit-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-uber-security-update-2022](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-uber-security-update-2022-wayback](None) |  | None | None | None | unlisted: a capture folder no record names | 3 |
+| [story-ux-059](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-ux-060](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-ux-061](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-ux-sgit-home](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-ux-sgit-llms](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
+| [story-whitehouse-neuberger-2021-02-17](None) |  | None | None | None | unlisted: a capture folder no record names | 4 |
 | [surecloud-risk-reckoning-2025](https://www.surecloud.com/whitepaper/the-risk-reckoning-2025-uk-grc-survey-insights-for-enterprises-smbs) | SureCloud | vendor-survey | 2026-10-29T01:50:29Z | 200 | full | 3 |
 | [techcrunch-insurers-ai-exclusions](https://techcrunch.com/2025/11/23/ai-is-too-risky-to-insure-say-people-whose-job-is-insuring-risk/) | TechCrunch (reporting the Financial Times) | news | 2026-10-29T01:53:32Z | 200 | full | 5 |
 | [techcrunch-openai-atlas-pi](https://techcrunch.com/2025/12/22/openai-says-ai-browsers-may-always-be-vulnerable-to-prompt-injection-attacks/) | TechCrunch | news | 2026-10-29T01:53:31Z | 200 | full | 5 |

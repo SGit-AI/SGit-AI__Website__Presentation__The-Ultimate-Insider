@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T11:24Z",
- "count": 388,
+ "built": "2026-10-29T14:26Z",
+ "count": 428,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -4140,6 +4140,35 @@
      "bytes_as_fetched": 17712,
      "sha256": "51d40a98a8ee45ded614856d416bff3090c01d12457be62f972f8bb17d3d9ba9",
      "bytes": 17712
+    }
+   ]
+  },
+  {
+   "id": "federalregister-circia-2026-10-29T1425Z",
+   "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=CIRCIA&order=newest&per_page=8 (and public-inspection-documents.json, term Cyber Incident Reporting)",
+   "final_url": null,
+   "publisher": "Federal Register (US Office of the Federal Register)",
+   "title": "Federal Register API: newest CIRCIA documents, and documents on public inspection, 29 October 2026 14:25 UTC",
+   "kind": "primary",
+   "published": null,
+   "captured_at": "2026-10-29T14:25:05Z",
+   "http_status": 200,
+   "capture": "full",
+   "recorded_by": "rechecks",
+   "files": [
+    {
+     "name": "page.json",
+     "sha256_as_fetched": "51d40a98a8ee45ded614856d416bff3090c01d12457be62f972f8bb17d3d9ba9",
+     "bytes_as_fetched": 17712,
+     "sha256": "51d40a98a8ee45ded614856d416bff3090c01d12457be62f972f8bb17d3d9ba9",
+     "bytes": 17712
+    },
+    {
+     "name": "pi.json",
+     "sha256_as_fetched": "cd207d74d780e51c0cd6c6692385addb8c997256217434ccb74465685c19eb17",
+     "bytes_as_fetched": 91,
+     "sha256": "cd207d74d780e51c0cd6c6692385addb8c997256217434ccb74465685c19eb17",
+     "bytes": 91
     }
    ]
   },
@@ -15153,6 +15182,1339 @@
    ],
    "capture": "full",
    "recorded_by": "sgit-php-ideas"
+  },
+  {
+   "id": "story-abp-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "f620197abd9852c3ecb79febf1053a79120c2a1c326879033e90ad1c0921dfc8",
+     "bytes_as_fetched": 694,
+     "sha256": "f620197abd9852c3ecb79febf1053a79120c2a1c326879033e90ad1c0921dfc8",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "8ef9351c4688ab3c06c27aecc8e78092f0fc4a7946fc8698fcf5262231fea02c",
+     "bytes_as_fetched": 311,
+     "sha256": "8ef9351c4688ab3c06c27aecc8e78092f0fc4a7946fc8698fcf5262231fea02c",
+     "bytes": 311
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes_as_fetched": 62669,
+     "sha256": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes": 62669
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes_as_fetched": 62669,
+     "sha256": "f67b0692c82868677c5ad457a2fd648c6290bacf5dc1a144d7ad572bb9ba454d",
+     "bytes": 62669
+    }
+   ]
+  },
+  {
+   "id": "story-ap-deloitte-australia-ai-2025",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d2a7a90edfd95b82c33d508ede237812adc2c8ac6b38a88389c1a4ba56986fb0",
+     "bytes_as_fetched": 2204,
+     "redacted": 1,
+     "sha256": "d970659db2ba84901afa2c38fea4d2a009d392fbe35734ecc0bd86738dcf3fab",
+     "bytes": 1869
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d749452877129dc597669497e4d32c81a1992d900e7b38087a3c91a7fedfc681",
+     "bytes_as_fetched": 450,
+     "sha256": "d749452877129dc597669497e4d32c81a1992d900e7b38087a3c91a7fedfc681",
+     "bytes": 450
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d827a61f8e7b38bcab54a7015e1382c521d6881a76216afa1e71de87ffca8388",
+     "bytes_as_fetched": 5746,
+     "sha256": "d827a61f8e7b38bcab54a7015e1382c521d6881a76216afa1e71de87ffca8388",
+     "bytes": 5746
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d44c878b16cb238c3c267f979438cd2a940ab62532af72961dde5e9cda9b23a4",
+     "bytes_as_fetched": 17,
+     "sha256": "d44c878b16cb238c3c267f979438cd2a940ab62532af72961dde5e9cda9b23a4",
+     "bytes": 17
+    }
+   ]
+  },
+  {
+   "id": "story-ap-deloitte-australia-ai-2025-wayback",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes_as_fetched": 39,
+     "sha256": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes": 39
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "424b6204062d500a94b10228715fab80f630a73b5b862fbe75fb1d34d268f435",
+     "bytes_as_fetched": 432,
+     "sha256": "424b6204062d500a94b10228715fab80f630a73b5b862fbe75fb1d34d268f435",
+     "bytes": 432
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    }
+   ]
+  },
+  {
+   "id": "story-ayinde-haringey-2025",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "0ec0837ca72f91ee3e0e61733424503a1dc770ab8ba5fa329d235377e8876124",
+     "bytes_as_fetched": 562,
+     "sha256": "0ec0837ca72f91ee3e0e61733424503a1dc770ab8ba5fa329d235377e8876124",
+     "bytes": 562
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9d1d6a1b542a8098856aab80bfe03f1b5644f7003cfb2a4cac08d2b2823a342e",
+     "bytes_as_fetched": 511,
+     "sha256": "9d1d6a1b542a8098856aab80bfe03f1b5644f7003cfb2a4cac08d2b2823a342e",
+     "bytes": 511
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "ce58af64c81ca4e4125f5e1aa6ebf75d99e73ee7ef9943d75a09d04d0c9f5fcd",
+     "bytes_as_fetched": 440235,
+     "sha256": "ce58af64c81ca4e4125f5e1aa6ebf75d99e73ee7ef9943d75a09d04d0c9f5fcd",
+     "bytes": 440235
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "90fa35bffccf878476238ab6f23ad8076191d09f6bb8c26badef6c0314d5220c",
+     "bytes_as_fetched": 101086,
+     "sha256": "90fa35bffccf878476238ab6f23ad8076191d09f6bb8c26badef6c0314d5220c",
+     "bytes": 101086
+    }
+   ]
+  },
+  {
+   "id": "story-bates-horizon-judgment-6",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "856ef903fff00d241c5d23d786412ce525636c0db3c1cebcb56c4fa3fd146dc6",
+     "bytes_as_fetched": 564,
+     "sha256": "856ef903fff00d241c5d23d786412ce525636c0db3c1cebcb56c4fa3fd146dc6",
+     "bytes": 564
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "b73ef7af1e832427d81e828e1e2d3a820007a25a0c1ab1218b6f6c954522aa99",
+     "bytes_as_fetched": 430,
+     "sha256": "b73ef7af1e832427d81e828e1e2d3a820007a25a0c1ab1218b6f6c954522aa99",
+     "bytes": 430
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "65c65586199bcecec16cb6d920f4bbfe0f6d5d4f8eadd03d73d9de6ef652cea1",
+     "bytes_as_fetched": 2201648,
+     "sha256": "65c65586199bcecec16cb6d920f4bbfe0f6d5d4f8eadd03d73d9de6ef652cea1",
+     "bytes": 2201648
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e03965fc57ef657887e0c06c7c546dbcda90f8190e817173b9ef4bcd69a9b551",
+     "bytes_as_fetched": 1124740,
+     "sha256": "e03965fc57ef657887e0c06c7c546dbcda90f8190e817173b9ef4bcd69a9b551",
+     "bytes": 1124740
+    }
+   ]
+  },
+  {
+   "id": "story-bbc-phe-excel-2020",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "f19df1c9d95c319d8319535f493859f7c00ef8907baabacb564a9f38284dbb76",
+     "bytes_as_fetched": 5362,
+     "sha256": "f19df1c9d95c319d8319535f493859f7c00ef8907baabacb564a9f38284dbb76",
+     "bytes": 5362
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "82e0c31705882714a193ba5a4834ab4e52b5c6108b53fbe0f470226385057b2e",
+     "bytes_as_fetched": 342,
+     "sha256": "82e0c31705882714a193ba5a4834ab4e52b5c6108b53fbe0f470226385057b2e",
+     "bytes": 342
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "62c2792246373722c82a1d1a713d4e531df9aa3a1ea73b96a0a8d0f3ee556000",
+     "bytes_as_fetched": 443949,
+     "sha256": "62c2792246373722c82a1d1a713d4e531df9aa3a1ea73b96a0a8d0f3ee556000",
+     "bytes": 443949
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "306dbbb8105306e7425b065482aea6aab293c9a347398e29265ac6c5b7a5a02f",
+     "bytes_as_fetched": 10238,
+     "sha256": "306dbbb8105306e7425b065482aea6aab293c9a347398e29265ac6c5b7a5a02f",
+     "bytes": 10238
+    }
+   ]
+  },
+  {
+   "id": "story-cisa-aa20-352a",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "ab8dec1677c19382331cb6f9ecc7f2aebfb98a4390bbfa064bb9aceaf1b37d51",
+     "bytes_as_fetched": 339,
+     "sha256": "ab8dec1677c19382331cb6f9ecc7f2aebfb98a4390bbfa064bb9aceaf1b37d51",
+     "bytes": 339
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "1272e4c37ac188cf97c06a65a39129d7145d58fce8bc9fb3750208eebd21722f",
+     "bytes_as_fetched": 377,
+     "sha256": "1272e4c37ac188cf97c06a65a39129d7145d58fce8bc9fb3750208eebd21722f",
+     "bytes": 377
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3557b90621cded28f2fa0a8d8e3e260649d6b1928d65bdb7d88c9165816779eb",
+     "bytes_as_fetched": 432,
+     "sha256": "3557b90621cded28f2fa0a8d8e3e260649d6b1928d65bdb7d88c9165816779eb",
+     "bytes": 432
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cb982e1cbf781660376e817dda51d91dc78e0381f997c47392893e8bf56ee15b",
+     "bytes_as_fetched": 257,
+     "sha256": "cb982e1cbf781660376e817dda51d91dc78e0381f997c47392893e8bf56ee15b",
+     "bytes": 257
+    }
+   ]
+  },
+  {
+   "id": "story-cisa-aa20-352a-wayback",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes_as_fetched": 39,
+     "sha256": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes": 39
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c5f0f117a644e275615378b1feef6690a4f0aa56201d91aec02f9acbd350504b",
+     "bytes_as_fetched": 375,
+     "sha256": "c5f0f117a644e275615378b1feef6690a4f0aa56201d91aec02f9acbd350504b",
+     "bytes": 375
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    }
+   ]
+  },
+  {
+   "id": "story-esa-ariane501-report",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "2084f6def714277509891606b05cc93cda63ffb53910c1ca4045657239c14ce9",
+     "bytes_as_fetched": 489,
+     "sha256": "2084f6def714277509891606b05cc93cda63ffb53910c1ca4045657239c14ce9",
+     "bytes": 489
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "69cc5a08551b0af833a47fa8909f4ef662bda373d5f2879a8c0903176e82a192",
+     "bytes_as_fetched": 362,
+     "sha256": "69cc5a08551b0af833a47fa8909f4ef662bda373d5f2879a8c0903176e82a192",
+     "bytes": 362
+    },
+    {
+     "name": "page.pdf",
+     "sha256_as_fetched": "a2c2ee1f22e41eb0e43a1cd230b735be3b6b88c404391d595b9dfb8f3c8f7a86",
+     "bytes_as_fetched": 2168608,
+     "sha256": "a2c2ee1f22e41eb0e43a1cd230b735be3b6b88c404391d595b9dfb8f3c8f7a86",
+     "bytes": 2168608
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3145aa55a01a70f7e2f8603ac9c64e90a3985b0a61048089ccfcd4405b808206",
+     "bytes_as_fetched": 60,
+     "sha256": "3145aa55a01a70f7e2f8603ac9c64e90a3985b0a61048089ccfcd4405b808206",
+     "bytes": 60
+    }
+   ]
+  },
+  {
+   "id": "story-gao-legacy-2025",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "952686c40bf113781acd7b6e311d279be60065d9c2b5eafe17d69cc3e39bbad8",
+     "bytes_as_fetched": 275,
+     "sha256": "952686c40bf113781acd7b6e311d279be60065d9c2b5eafe17d69cc3e39bbad8",
+     "bytes": 275
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9331ec35a91363f852bfbfb2bd4afc32fe1687367574b7de5e74d45a3e43a519",
+     "bytes_as_fetched": 328,
+     "sha256": "9331ec35a91363f852bfbfb2bd4afc32fe1687367574b7de5e74d45a3e43a519",
+     "bytes": 328
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "90abaa133a4dccbca826a6dbfa6ba7d82ba64ee832f40f15c6e45c49d311c95b",
+     "bytes_as_fetched": 397,
+     "sha256": "90abaa133a4dccbca826a6dbfa6ba7d82ba64ee832f40f15c6e45c49d311c95b",
+     "bytes": 397
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d6b1a3ea08b8504a3c28fa1713a8b515fc92bdf37a669e165f6a1b30d0169359",
+     "bytes_as_fetched": 230,
+     "sha256": "d6b1a3ea08b8504a3c28fa1713a8b515fc92bdf37a669e165f6a1b30d0169359",
+     "bytes": 230
+    }
+   ]
+  },
+  {
+   "id": "story-gtig-ai-threat-tracker",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "96f300c3ec653f45e643036ee89f263498025dd8723e8ed59d0dea82189e3a31",
+     "bytes_as_fetched": 2008,
+     "redacted": 1,
+     "sha256": "dd2c100c603961455c66ac1a80c39d9c37c6bf18d01bdc92073cf9f9d7bbe727",
+     "bytes": 1639
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "764a793720cf364c8272d7018808b3129a27f4b603214e31710e87e241470045",
+     "bytes_as_fetched": 443,
+     "sha256": "764a793720cf364c8272d7018808b3129a27f4b603214e31710e87e241470045",
+     "bytes": 443
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "427980330638c1667f5f69c53b7c184f06d76f47ee9b2a78270a1a4c6b40af12",
+     "bytes_as_fetched": 396216,
+     "sha256": "427980330638c1667f5f69c53b7c184f06d76f47ee9b2a78270a1a4c6b40af12",
+     "bytes": 396216
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a40d9f1efb5ab5ee5909a80e8332c548c08ad07e73d98461fbcd19f87f9615b7",
+     "bytes_as_fetched": 35656,
+     "sha256": "a40d9f1efb5ab5ee5909a80e8332c548c08ad07e73d98461fbcd19f87f9615b7",
+     "bytes": 35656
+    }
+   ]
+  },
+  {
+   "id": "story-herndon-ash-pollin-2013",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "15e484ac3701477ec69579748c513dbaf8d4cc7f1061b7c7a06ba0b2f81c5523",
+     "bytes_as_fetched": 416,
+     "sha256": "15e484ac3701477ec69579748c513dbaf8d4cc7f1061b7c7a06ba0b2f81c5523",
+     "bytes": 416
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5249f18d1f35ead4f41d309fd58a77d8403bb9f35db29a830921304c2053427b",
+     "bytes_as_fetched": 420,
+     "sha256": "5249f18d1f35ead4f41d309fd58a77d8403bb9f35db29a830921304c2053427b",
+     "bytes": 420
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4c51ed3dd4ad60bed7c12353a2c5bb111071a8726e2f0e68a73457840890a3ec",
+     "bytes_as_fetched": 573,
+     "sha256": "4c51ed3dd4ad60bed7c12353a2c5bb111071a8726e2f0e68a73457840890a3ec",
+     "bytes": 573
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0dd069a05899de88d5838c19f392f9ced46db39cf064e6ae0b4190f9e4acd662",
+     "bytes_as_fetched": 124,
+     "sha256": "0dd069a05899de88d5838c19f392f9ced46db39cf064e6ae0b4190f9e4acd662",
+     "bytes": 124
+    }
+   ]
+  },
+  {
+   "id": "story-jpm-task-force-2013",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "13b6e2c3774604bef2894c7cbe6f84986d4158c96bd0c18c6ba9cbdb2a5bcc15",
+     "bytes_as_fetched": 314,
+     "sha256": "13b6e2c3774604bef2894c7cbe6f84986d4158c96bd0c18c6ba9cbdb2a5bcc15",
+     "bytes": 314
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "814073ae1a03fefe540d790897bd88a43cf1c2ba1c95e95182f14ab1fea72833",
+     "bytes_as_fetched": 413,
+     "sha256": "814073ae1a03fefe540d790897bd88a43cf1c2ba1c95e95182f14ab1fea72833",
+     "bytes": 413
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b9679296793a605859f899c89d05bde699aa9081538dbe30a7ae9bff72630827",
+     "bytes_as_fetched": 4819,
+     "redacted": 2,
+     "sha256": "67b1aa15bbf7a0833351145e6f3f9ffe980d1b8c3eacd06496712569ec715709",
+     "bytes": 4819
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c2e1bbbd04c35d676eaa54f6f677180dd7564010f3675df15c29a3eb0b72a05c",
+     "bytes_as_fetched": 3011,
+     "redacted": 1,
+     "sha256": "70f458993cc6beb6d3411b2d556a768ab1cdd0ce41644c7495f44c40794697a7",
+     "bytes": 3011
+    }
+   ]
+  },
+  {
+   "id": "story-jpm-task-force-2013-wayback",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes_as_fetched": 39,
+     "sha256": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes": 39
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "280caae0ef96e2cfdce4693c4e21dfa3f3eabdaf1ed1465c8b757511768ffcb8",
+     "bytes_as_fetched": 410,
+     "sha256": "280caae0ef96e2cfdce4693c4e21dfa3f3eabdaf1ed1465c8b757511768ffcb8",
+     "bytes": 410
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    }
+   ]
+  },
+  {
+   "id": "story-mandiant-unc5537-snowflake",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "4f64cdb2111bbcb2a82c0e0d28afdae595799c3d78b716f0bbe9b7d126b75b6d",
+     "bytes_as_fetched": 2000,
+     "redacted": 1,
+     "sha256": "036e86be4ba4c333b2b9826ebc1a789982e0d124a822dfc87b3a35a6c5de7cda",
+     "bytes": 1631
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "c63e8db108a542330bf6f3fd0c8a44906d23ccdeca3451e47f9a9ca16785ef30",
+     "bytes_as_fetched": 463,
+     "sha256": "c63e8db108a542330bf6f3fd0c8a44906d23ccdeca3451e47f9a9ca16785ef30",
+     "bytes": 463
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "6202bd220adacf13798d9689ae0c2d1acb034af620ea1cc11431ab7bf3772fb3",
+     "bytes_as_fetched": 268566,
+     "sha256": "6202bd220adacf13798d9689ae0c2d1acb034af620ea1cc11431ab7bf3772fb3",
+     "bytes": 268566
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e117fda40ce050e321acc537d7212a3841300515e8eaad858dcd5a7abefa2d4f",
+     "bytes_as_fetched": 15818,
+     "sha256": "e117fda40ce050e321acc537d7212a3841300515e8eaad858dcd5a7abefa2d4f",
+     "bytes": 15818
+    }
+   ]
+  },
+  {
+   "id": "story-mata-avianca-sanctions-2023",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "76f3b2b3328abae12f89e7875e8e90285d94410674e6e0ae16b679696502fe4a",
+     "bytes_as_fetched": 625,
+     "sha256": "76f3b2b3328abae12f89e7875e8e90285d94410674e6e0ae16b679696502fe4a",
+     "bytes": 625
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "667f478a37995d0b38af51124bee0ff3f7d00e8bbee688abf24546e82714dd8b",
+     "bytes_as_fetched": 399,
+     "sha256": "667f478a37995d0b38af51124bee0ff3f7d00e8bbee688abf24546e82714dd8b",
+     "bytes": 399
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+     "bytes_as_fetched": 1,
+     "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+     "bytes": 1
+    }
+   ]
+  },
+  {
+   "id": "story-msrc-midnight-blizzard-2024",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "0d5cc48544e0b435cdbb24b0e4717e0880b4357bc3bdf096d9dd772197a09550",
+     "bytes_as_fetched": 1319,
+     "redacted": 2,
+     "sha256": "b35a40bc493bf5c52eb6ad5b3fe21d5c6c2a5263401cb0acabe13820286b6469",
+     "bytes": 1180
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "49fb83c55c394f4480c9b11d2ef45cc5ad77a10f47c22887a99f1ff63630f9d3",
+     "bytes_as_fetched": 429,
+     "sha256": "49fb83c55c394f4480c9b11d2ef45cc5ad77a10f47c22887a99f1ff63630f9d3",
+     "bytes": 429
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f602b90a64a52ae74cfb87e04413f681f654bf9f0d56c86e93bdc7df9f233f38",
+     "bytes_as_fetched": 92900,
+     "sha256": "f602b90a64a52ae74cfb87e04413f681f654bf9f0d56c86e93bdc7df9f233f38",
+     "bytes": 92900
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c40efc1c85cb95cc8cf88ba20cff8f44a2c80d35ccec1036ae9f0c9b304ddb08",
+     "bytes_as_fetched": 3840,
+     "sha256": "c40efc1c85cb95cc8cf88ba20cff8f44a2c80d35ccec1036ae9f0c9b304ddb08",
+     "bytes": 3840
+    }
+   ]
+  },
+  {
+   "id": "story-msrc-midnight-blizzard-2024-wayback",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes_as_fetched": 39,
+     "sha256": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes": 39
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "3c6fb2b8af48a1a5795b356d60dd31a9bb438f6967964c561a90269a4f0bf53b",
+     "bytes_as_fetched": 484,
+     "sha256": "3c6fb2b8af48a1a5795b356d60dd31a9bb438f6967964c561a90269a4f0bf53b",
+     "bytes": 484
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    }
+   ]
+  },
+  {
+   "id": "story-ncsc-ai-2027",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "9d831549005dc1a6cd94b7e485584cd764a3e533159409ec84c6eba513929812",
+     "bytes_as_fetched": 672,
+     "sha256": "9d831549005dc1a6cd94b7e485584cd764a3e533159409ec84c6eba513929812",
+     "bytes": 672
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "6cd633e46380aa53ee45de6ac1b6c99c0ea0b40b83cf77bf2a6b595738514910",
+     "bytes_as_fetched": 383,
+     "sha256": "6cd633e46380aa53ee45de6ac1b6c99c0ea0b40b83cf77bf2a6b595738514910",
+     "bytes": 383
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "072e5db963906ba69d2ee041b4c21ddffe364490fe8fb5128a2d77968659e48e",
+     "bytes_as_fetched": 248008,
+     "sha256": "072e5db963906ba69d2ee041b4c21ddffe364490fe8fb5128a2d77968659e48e",
+     "bytes": 248008
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "bbd0f13fe7acc641d228be3f217070fef1c662ca8c854ac7faf579e900c45c96",
+     "bytes_as_fetched": 16268,
+     "sha256": "bbd0f13fe7acc641d228be3f217070fef1c662ca8c854ac7faf579e900c45c96",
+     "bytes": 16268
+    }
+   ]
+  },
+  {
+   "id": "story-newsroom-application-bp",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d01e78c005ad9d266cf91d994f379f6bfcaa7a37f178fa2f7c29ffd67a8f87ba",
+     "bytes_as_fetched": 718,
+     "sha256": "d01e78c005ad9d266cf91d994f379f6bfcaa7a37f178fa2f7c29ffd67a8f87ba",
+     "bytes": 718
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "203fc6c52356d278b2f683c0cf2b0285997e4cc290905d2e4656c0eccf76e7d5",
+     "bytes_as_fetched": 407,
+     "sha256": "203fc6c52356d278b2f683c0cf2b0285997e4cc290905d2e4656c0eccf76e7d5",
+     "bytes": 407
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d94faab00c92ea091d07fc4b5b073ea164e2e3014a585da00ef5f7b44e39426c",
+     "bytes_as_fetched": 25981,
+     "sha256": "d94faab00c92ea091d07fc4b5b073ea164e2e3014a585da00ef5f7b44e39426c",
+     "bytes": 25981
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9db0bdc02bf62fd98196a86e2a94e1555fc093072ea552aeee752ed394c7b855",
+     "bytes_as_fetched": 25908,
+     "sha256": "9db0bdc02bf62fd98196a86e2a94e1555fc093072ea552aeee752ed394c7b855",
+     "bytes": 25908
+    }
+   ]
+  },
+  {
+   "id": "story-newsroom-approve-at-altitude",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a0bd9a8f01675a0d52cdd951d83f93f48b57a6c2c4e54cb5984e155c2148c531",
+     "bytes_as_fetched": 718,
+     "sha256": "a0bd9a8f01675a0d52cdd951d83f93f48b57a6c2c4e54cb5984e155c2148c531",
+     "bytes": 718
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "7800b99d581b1d8430d76135b09882f53e985f5606423f5d949bb88cbd47d4fd",
+     "bytes_as_fetched": 390,
+     "sha256": "7800b99d581b1d8430d76135b09882f53e985f5606423f5d949bb88cbd47d4fd",
+     "bytes": 390
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c671c6ade6ad56892321348c3d9942cc8c76e036e33c1f0e5253365710e6ff22",
+     "bytes_as_fetched": 20092,
+     "redacted": 2,
+     "sha256": "4218e891253bea3f8c6ed1af26672afac3b84737936d76b247cb34d583c0f9b1",
+     "bytes": 20084
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "9a27cf4263d69c2c67531b2cd9d9e22c36383c8e14354cd5b21d14bc83d2de88",
+     "bytes_as_fetched": 20030,
+     "redacted": 2,
+     "sha256": "9673eae8320a1558416091eac0284866d1f24fe04571f2db6a4963ac20cea944",
+     "bytes": 20022
+    }
+   ]
+  },
+  {
+   "id": "story-newsroom-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "b5aa3279e0cef90acfb6cce833039ed36feedbd8cafbc00fc2202f8757be330e",
+     "bytes_as_fetched": 693,
+     "sha256": "b5aa3279e0cef90acfb6cce833039ed36feedbd8cafbc00fc2202f8757be330e",
+     "bytes": 693
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "37a158050f4a70a3d2d9d179bfbe65334a66e94027b2b5f455480e2aa16a0bad",
+     "bytes_as_fetched": 326,
+     "sha256": "37a158050f4a70a3d2d9d179bfbe65334a66e94027b2b5f455480e2aa16a0bad",
+     "bytes": 326
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1337379607c0b35dd2206569d38332a9c3dbcbd8fb2f160fed7b69eeed4f80d3",
+     "bytes_as_fetched": 61601,
+     "sha256": "1337379607c0b35dd2206569d38332a9c3dbcbd8fb2f160fed7b69eeed4f80d3",
+     "bytes": 61601
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "2e323aba19bf7fa852b2e00c5df56031407add5a4bf9464014ac207b7c14f806",
+     "bytes_as_fetched": 60498,
+     "sha256": "2e323aba19bf7fa852b2e00c5df56031407add5a4bf9464014ac207b7c14f806",
+     "bytes": 60498
+    }
+   ]
+  },
+  {
+   "id": "story-newsroom-llms-full",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "576e7c74e639fa93067b1268426c118fa241ae3573c547fe5daf458d9e3596fc",
+     "bytes_as_fetched": 696,
+     "sha256": "576e7c74e639fa93067b1268426c118fa241ae3573c547fe5daf458d9e3596fc",
+     "bytes": 696
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "177b900327f0d1c6242a75ab29fd2d3833993d77b01cbe74f51b71d265950cc5",
+     "bytes_as_fetched": 342,
+     "sha256": "177b900327f0d1c6242a75ab29fd2d3833993d77b01cbe74f51b71d265950cc5",
+     "bytes": 342
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "79f7645f6ad6d670a5c93e2a83c6b8809c5afae5384341e185f8753d61ce2aca",
+     "bytes_as_fetched": 306243,
+     "sha256": "79f7645f6ad6d670a5c93e2a83c6b8809c5afae5384341e185f8753d61ce2aca",
+     "bytes": 306243
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0876800f6651995cf99f235a857bff5ab59c8fa60b3b0bd1c4eefbf45d19d2ba",
+     "bytes_as_fetched": 201592,
+     "sha256": "0876800f6651995cf99f235a857bff5ab59c8fa60b3b0bd1c4eefbf45d19d2ba",
+     "bytes": 201592
+    }
+   ]
+  },
+  {
+   "id": "story-newsroom-process-bp",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "71411999d502f7caa6bf3216bdf84aa7c7d1b574cb8b91bb02a1691c4ab87312",
+     "bytes_as_fetched": 718,
+     "sha256": "71411999d502f7caa6bf3216bdf84aa7c7d1b574cb8b91bb02a1691c4ab87312",
+     "bytes": 718
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "44d6c7f9901fb7b0521ada809c6f9c4ec27a56f18131d2d7f0ca89857b045d99",
+     "bytes_as_fetched": 395,
+     "sha256": "44d6c7f9901fb7b0521ada809c6f9c4ec27a56f18131d2d7f0ca89857b045d99",
+     "bytes": 395
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1f32c65f6f27159214f26f687263c0f6e784df56612df452ae850564b924e2bb",
+     "bytes_as_fetched": 18982,
+     "sha256": "1f32c65f6f27159214f26f687263c0f6e784df56612df452ae850564b924e2bb",
+     "bytes": 18982
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "cc103a17909bc2e7548691a1337491210d6df49fa87ba1b1e1ed3d267dee0831",
+     "bytes_as_fetched": 18913,
+     "sha256": "cc103a17909bc2e7548691a1337491210d6df49fa87ba1b1e1ed3d267dee0831",
+     "bytes": 18913
+    }
+   ]
+  },
+  {
+   "id": "story-newsroom-three-policies",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "602c87f1cdfeba541821431713584bc179cbe86812556263c6d03af51a35d8b5",
+     "bytes_as_fetched": 693,
+     "sha256": "602c87f1cdfeba541821431713584bc179cbe86812556263c6d03af51a35d8b5",
+     "bytes": 693
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "8a498d75d6d7993ebb933e77734d40cd857009741f803a8764999601db4f2ff2",
+     "bytes_as_fetched": 401,
+     "sha256": "8a498d75d6d7993ebb933e77734d40cd857009741f803a8764999601db4f2ff2",
+     "bytes": 401
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a10763b1f1afb88d151cfc4c23d8966b7637c789d0f4291cb4ed9586846e10e3",
+     "bytes_as_fetched": 23497,
+     "redacted": 2,
+     "sha256": "47b07a4552cab1b7b4afd9b4d44c85f497901ca907915c37b8830d501dbd0064",
+     "bytes": 23489
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "977601c308f7ac30d18c0b3ee042228f207cd37cc596e94f6512b8fcc6a07be0",
+     "bytes_as_fetched": 23427,
+     "redacted": 2,
+     "sha256": "b7bac73646253ec665378464da61919983fc918b3efd4ceea601f79257a1393f",
+     "bytes": 23419
+    }
+   ]
+  },
+  {
+   "id": "story-riskmandate-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e00e131c57a55cb4e31caa3e0099b9bd70f5786086c44342b247b0bae220b6cf",
+     "bytes_as_fetched": 696,
+     "sha256": "e00e131c57a55cb4e31caa3e0099b9bd70f5786086c44342b247b0bae220b6cf",
+     "bytes": 696
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "134d8f73bd8eac9a633d0a5b37768a8ae751db05059b51d92356e770eced0244",
+     "bytes_as_fetched": 325,
+     "sha256": "134d8f73bd8eac9a633d0a5b37768a8ae751db05059b51d92356e770eced0244",
+     "bytes": 325
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d83c0ced042425843601f38e495f796a265b47345d54afd140a371c87168b096",
+     "bytes_as_fetched": 74620,
+     "redacted": 2,
+     "sha256": "57df220e698fa7baace2ff09dd3390803f5456155b1f7afcacb93c94b0c52bd5",
+     "bytes": 74612
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d83c0ced042425843601f38e495f796a265b47345d54afd140a371c87168b096",
+     "bytes_as_fetched": 74620,
+     "redacted": 2,
+     "sha256": "57df220e698fa7baace2ff09dd3390803f5456155b1f7afcacb93c94b0c52bd5",
+     "bytes": 74612
+    }
+   ]
+  },
+  {
+   "id": "story-sec-knight-capital-order",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "5c3b205c1de8470a5d3ad947434b60ef88cea3d309e69177f2b4813ce9d5278a",
+     "bytes_as_fetched": 335,
+     "sha256": "5c3b205c1de8470a5d3ad947434b60ef88cea3d309e69177f2b4813ce9d5278a",
+     "bytes": 335
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5c5ee41f3e89122f5912240581e37f8756a9d77a048009da5ca9999ac66d3705",
+     "bytes_as_fetched": 362,
+     "sha256": "5c5ee41f3e89122f5912240581e37f8756a9d77a048009da5ca9999ac66d3705",
+     "bytes": 362
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d407b58c3179dc450a9b1d9a7c015fd9ea41b5790548afddea62c15934a78173",
+     "bytes_as_fetched": 1925,
+     "sha256": "d407b58c3179dc450a9b1d9a7c015fd9ea41b5790548afddea62c15934a78173",
+     "bytes": 1925
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "7b8923bec87a8c448032d7089aa44b2bf369b3f5f5e2d722e74262a110ec817b",
+     "bytes_as_fetched": 383,
+     "sha256": "7b8923bec87a8c448032d7089aa44b2bf369b3f5f5e2d722e74262a110ec817b",
+     "bytes": 383
+    }
+   ]
+  },
+  {
+   "id": "story-sec-knight-capital-order-wayback",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes_as_fetched": 39,
+     "sha256": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes": 39
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e0c471518081519f5e7fda12fbe86f2620a21c97824d4341226809e0317fa6f7",
+     "bytes_as_fetched": 359,
+     "sha256": "e0c471518081519f5e7fda12fbe86f2620a21c97824d4341226809e0317fa6f7",
+     "bytes": 359
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    }
+   ]
+  },
+  {
+   "id": "story-sec-solarwinds-8k-2020",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "5c544f66eb002ac1f6e2557a2da5f5eee6c1a19690f5552e23d3af2f9c2e727b",
+     "bytes_as_fetched": 314,
+     "sha256": "5c544f66eb002ac1f6e2557a2da5f5eee6c1a19690f5552e23d3af2f9c2e727b",
+     "bytes": 314
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ba26e26b1d70e3be997531519e8acc53559f7f7ea89975b14636776bf9b6e1c9",
+     "bytes_as_fetched": 418,
+     "sha256": "ba26e26b1d70e3be997531519e8acc53559f7f7ea89975b14636776bf9b6e1c9",
+     "bytes": 418
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "9bf01cdc1be1ac2735d88281b148d567ec196b80a13122ba8392af2fe66c8de8",
+     "bytes_as_fetched": 4818,
+     "redacted": 2,
+     "sha256": "27e3b18e3ea41d4e4aeb65e0c9b3a1d201447eb92a58f2c07f6bcaef4e6428c8",
+     "bytes": 4818
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a26345c36466a45fd642a8e32a2da87022a61c36f420501fefdafc974ebf6106",
+     "bytes_as_fetched": 3010,
+     "redacted": 1,
+     "sha256": "5bae34df83d97d6e925921f2efc7a2deb752484f9f4b507ae83911a748491e42",
+     "bytes": 3010
+    }
+   ]
+  },
+  {
+   "id": "story-sec-solarwinds-8k-2020-wayback",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes_as_fetched": 39,
+     "sha256": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes": 39
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5ddc7cbe35362f5e4337c98608a69383747f6227f104686a8815668434a1a4cd",
+     "bytes_as_fetched": 415,
+     "sha256": "5ddc7cbe35362f5e4337c98608a69383747f6227f104686a8815668434a1a4cd",
+     "bytes": 415
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    }
+   ]
+  },
+  {
+   "id": "story-sgit-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "a42fd67686c7a89875f966cb9889bbc65f93ffc17a12a1815a6654dad0f6f4ea",
+     "bytes_as_fetched": 696,
+     "sha256": "a42fd67686c7a89875f966cb9889bbc65f93ffc17a12a1815a6654dad0f6f4ea",
+     "bytes": 696
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "33b87ca6590cd361cf6a66fa8d2c590d6374c580986330a381c449a713d4786e",
+     "bytes_as_fetched": 305,
+     "sha256": "33b87ca6590cd361cf6a66fa8d2c590d6374c580986330a381c449a713d4786e",
+     "bytes": 305
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "70940581e28aae30b60d7fc6371599a0f0181ed3b66e2888933877ca81f15dff",
+     "bytes_as_fetched": 290040,
+     "redacted": 6,
+     "sha256": "1153d2f650093a913da2e0ba54ffe168f76fce63e81fde94d74dd01add2d1e64",
+     "bytes": 290040
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "92e55d89a243cc87463fcfe466018397e259b3054b88c4ffdfa39ac3518bedee",
+     "bytes_as_fetched": 289922,
+     "redacted": 6,
+     "sha256": "67b98673d7a8684b5f52ee1d651e5d86b6a3cfa94ced2470f0bfd380b83d07da",
+     "bytes": 289922
+    }
+   ]
+  },
+  {
+   "id": "story-uber-security-update-2022",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d13e6be9ab1063cb82cccb5cae4e43a3b8565c94a649f6bf0131210ed6265795",
+     "bytes_as_fetched": 1511,
+     "redacted": 5,
+     "sha256": "2fe116553684e4ca7b4f7a77e18513a6d49832201253a57a577f00867365ad8f",
+     "bytes": 788
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "df9311e7a64b563065f60d58759be465eaa841058b6d682a71862c42c9352ca0",
+     "bytes_as_fetched": 361,
+     "sha256": "df9311e7a64b563065f60d58759be465eaa841058b6d682a71862c42c9352ca0",
+     "bytes": 361
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e41e45f8e465e3f5edf3f9074174cdce0c3729088aa43cf6fef154ab069c0f7d",
+     "bytes_as_fetched": 14,
+     "sha256": "e41e45f8e465e3f5edf3f9074174cdce0c3729088aa43cf6fef154ab069c0f7d",
+     "bytes": 14
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e9dc6fb62e76744caadd79ece6678016260e298888a3dddc6bbed9cb6380e086",
+     "bytes_as_fetched": 15,
+     "sha256": "e9dc6fb62e76744caadd79ece6678016260e298888a3dddc6bbed9cb6380e086",
+     "bytes": 15
+    }
+   ]
+  },
+  {
+   "id": "story-uber-security-update-2022-wayback",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes_as_fetched": 39,
+     "sha256": "e8686a973844835d982b4caba4113ca34f4af19b383cc4c595c1d18c649ce310",
+     "bytes": 39
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "569645459663ab5824e472bc1647e2c1268bc3cae3114bdbb7a1f51f4ce9cc0c",
+     "bytes_as_fetched": 344,
+     "sha256": "569645459663ab5824e472bc1647e2c1268bc3cae3114bdbb7a1f51f4ce9cc0c",
+     "bytes": 344
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes_as_fetched": 0,
+     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+     "bytes": 0
+    }
+   ]
+  },
+  {
+   "id": "story-ux-059",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "d4ed841a608acafd19ca91ce7d763a368e8963a3aca95f8ba84a72981aa6e18e",
+     "bytes_as_fetched": 716,
+     "sha256": "d4ed841a608acafd19ca91ce7d763a368e8963a3aca95f8ba84a72981aa6e18e",
+     "bytes": 716
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0f6b5440475d48bb8a5bacd7e6179fdd72d691bedb24acf1bc0e13a47f33062f",
+     "bytes_as_fetched": 329,
+     "sha256": "0f6b5440475d48bb8a5bacd7e6179fdd72d691bedb24acf1bc0e13a47f33062f",
+     "bytes": 329
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "1fd49d4004dfe3b16c57c77cb90f89056fc13b3fb635a0cec929487353348495",
+     "bytes_as_fetched": 4055,
+     "sha256": "1fd49d4004dfe3b16c57c77cb90f89056fc13b3fb635a0cec929487353348495",
+     "bytes": 4055
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "1fd49d4004dfe3b16c57c77cb90f89056fc13b3fb635a0cec929487353348495",
+     "bytes_as_fetched": 4055,
+     "sha256": "1fd49d4004dfe3b16c57c77cb90f89056fc13b3fb635a0cec929487353348495",
+     "bytes": 4055
+    }
+   ]
+  },
+  {
+   "id": "story-ux-060",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "ded16232faf5f6697f304804d7b830cc829d7783fccb61ee85f60af57e5f843b",
+     "bytes_as_fetched": 694,
+     "sha256": "ded16232faf5f6697f304804d7b830cc829d7783fccb61ee85f60af57e5f843b",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "165adc96ee57a3396868578234d67d84fe2e00cb26b6c90c4ba2db5019a876f8",
+     "bytes_as_fetched": 329,
+     "sha256": "165adc96ee57a3396868578234d67d84fe2e00cb26b6c90c4ba2db5019a876f8",
+     "bytes": 329
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "acdec2908aebde7768fbdf2bc1648e84f1a8d919136c1d5e7f22286ea093c69f",
+     "bytes_as_fetched": 2783,
+     "sha256": "acdec2908aebde7768fbdf2bc1648e84f1a8d919136c1d5e7f22286ea093c69f",
+     "bytes": 2783
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "acdec2908aebde7768fbdf2bc1648e84f1a8d919136c1d5e7f22286ea093c69f",
+     "bytes_as_fetched": 2783,
+     "sha256": "acdec2908aebde7768fbdf2bc1648e84f1a8d919136c1d5e7f22286ea093c69f",
+     "bytes": 2783
+    }
+   ]
+  },
+  {
+   "id": "story-ux-061",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "58530e5e9b151c514635dc85a6d8f0cf16eae369b6e65ec4c50368ef2570d04d",
+     "bytes_as_fetched": 696,
+     "sha256": "58530e5e9b151c514635dc85a6d8f0cf16eae369b6e65ec4c50368ef2570d04d",
+     "bytes": 696
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "5b8c60790fc0f24d6751dda7f2fe8fee64e923f16ad40e33b4efdff8f082fdab",
+     "bytes_as_fetched": 329,
+     "sha256": "5b8c60790fc0f24d6751dda7f2fe8fee64e923f16ad40e33b4efdff8f082fdab",
+     "bytes": 329
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "ea111b3b981d229786bed99012209281121c34facbac1e3710ff9499ca03d16d",
+     "bytes_as_fetched": 2705,
+     "sha256": "ea111b3b981d229786bed99012209281121c34facbac1e3710ff9499ca03d16d",
+     "bytes": 2705
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "ea111b3b981d229786bed99012209281121c34facbac1e3710ff9499ca03d16d",
+     "bytes_as_fetched": 2705,
+     "sha256": "ea111b3b981d229786bed99012209281121c34facbac1e3710ff9499ca03d16d",
+     "bytes": 2705
+    }
+   ]
+  },
+  {
+   "id": "story-ux-sgit-home",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "ca8962f25459c36d14972f3be298142ab31dca5eff11dd620f726f533f98261a",
+     "bytes_as_fetched": 693,
+     "sha256": "ca8962f25459c36d14972f3be298142ab31dca5eff11dd620f726f533f98261a",
+     "bytes": 693
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "748f2e95e33a814858b5b7131550babf45e91eae88e119c9ece77a4586d5dcb0",
+     "bytes_as_fetched": 296,
+     "sha256": "748f2e95e33a814858b5b7131550babf45e91eae88e119c9ece77a4586d5dcb0",
+     "bytes": 296
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e80d82e4eb75fbd920e89571c39fc2c3c7284bbde9b3682b152861ec512ecb09",
+     "bytes_as_fetched": 20100,
+     "sha256": "e80d82e4eb75fbd920e89571c39fc2c3c7284bbde9b3682b152861ec512ecb09",
+     "bytes": 20100
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4847cc11e66293d1b20503dcf1dd362be477d870a3b044edceaf89a839193bc9",
+     "bytes_as_fetched": 5290,
+     "sha256": "4847cc11e66293d1b20503dcf1dd362be477d870a3b044edceaf89a839193bc9",
+     "bytes": 5290
+    }
+   ]
+  },
+  {
+   "id": "story-ux-sgit-llms",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "634763855752de32e65c6ade4a437905ea364e4f954949b1f977b0cddd25633c",
+     "bytes_as_fetched": 694,
+     "sha256": "634763855752de32e65c6ade4a437905ea364e4f954949b1f977b0cddd25633c",
+     "bytes": 694
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "80e5e879d960062e5085471c1f43b713fef0a8ec48385898d4a0150230f69fd7",
+     "bytes_as_fetched": 313,
+     "sha256": "80e5e879d960062e5085471c1f43b713fef0a8ec48385898d4a0150230f69fd7",
+     "bytes": 313
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c0d93a0f979ea24923111ec3ab6e15dfe683ec5b08132d3a4bb6272c6b92fc2f",
+     "bytes_as_fetched": 15234,
+     "sha256": "c0d93a0f979ea24923111ec3ab6e15dfe683ec5b08132d3a4bb6272c6b92fc2f",
+     "bytes": 15234
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4cfe0ba77ff76b8228c5cd30d65e6f9ab27b7cf415eb682b9aaf588fa45e4a8b",
+     "bytes_as_fetched": 15133,
+     "sha256": "4cfe0ba77ff76b8228c5cd30d65e6f9ab27b7cf415eb682b9aaf588fa45e4a8b",
+     "bytes": 15133
+    }
+   ]
+  },
+  {
+   "id": "story-whitehouse-neuberger-2021-02-17",
+   "url": null,
+   "capture": "unlisted: a capture folder no record names",
+   "files": [
+    {
+     "name": "headers.txt",
+     "sha256_as_fetched": "4368d8e66de5a63de70db0525caba39e4f69d1d142f7056fe9cae8104d2c6a9b",
+     "bytes_as_fetched": 855,
+     "sha256": "4368d8e66de5a63de70db0525caba39e4f69d1d142f7056fe9cae8104d2c6a9b",
+     "bytes": 855
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "abfe17ad78b3f96d848020e5dc90b11a5cd507ab40f0ce42b5e4248a55d0e294",
+     "bytes_as_fetched": 728,
+     "sha256": "abfe17ad78b3f96d848020e5dc90b11a5cd507ab40f0ce42b5e4248a55d0e294",
+     "bytes": 728
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "13216f655d890a6f6a0c58d24e45bb1c9c99f1f951efa3dc2ae3a45588d16f54",
+     "bytes_as_fetched": 208329,
+     "sha256": "13216f655d890a6f6a0c58d24e45bb1c9c99f1f951efa3dc2ae3a45588d16f54",
+     "bytes": 208329
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3a2215395b893e2c5901247b4e7191078632c6733683853c60f7ec40cc9511b0",
+     "bytes_as_fetched": 67385,
+     "sha256": "3a2215395b893e2c5901247b4e7191078632c6733683853c60f7ec40cc9511b0",
+     "bytes": 67385
+    }
+   ]
   },
   {
    "id": "surecloud-risk-reckoning-2025",
