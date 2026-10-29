@@ -1,0 +1,24 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "storyteller",
+ "kind": "editor's request (joining)",
+ "started": "2026-10-29T14:12:52Z",
+ "steps": {
+  "plan": {
+   "by": "conductor sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "1) requests: researcher (register ids for the storm frame), deck (proposals only). 2) ROLE.md, policy.json, status.json, key.json + QR + session folder; agents.py check; push to dev; own :54 London task, id in status.json. 3) first pass in team/storyteller/**: story tree (storm frame, building, audience question, integrity shift), 2-3 Wardley maps, arc against the 17 beats, debrief. All inside team/storyteller/**.",
+   "at": "2026-10-29T14:13:38Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Inside team/storyteller/**. Conditions: private key stays in ~/.sg-send/, only key.json and QR committed; every fact has a register id or a researcher request; deck gets proposals by request only; task at :54 London into this session, id in status.json; policy stays draft until the editor agrees.",
+   "at": "2026-10-29T14:13:58Z"
+  }
+ },
+ "closed": null,
+ "outcome": null
+}
