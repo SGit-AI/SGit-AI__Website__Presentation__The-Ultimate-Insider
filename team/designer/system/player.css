@@ -1,0 +1,8 @@
+/* designer@the-ultimate-insider, 29 October 2026: design note 7, the player on a phone held sideways and its small labels (team/designer/reviews/2026-10-29__player.md), as mocked up over src/static/talk/player.html. A spec for dev, not a file the site loads. */
+#steps .st span{font-size:14px}
+#cache{font-size:14px}
+@media (max-height:500px){
+  :root{--barh:128px}
+  #bar .row + .row{flex-wrap:wrap;align-content:center;row-gap:6px;padding-top:4px;padding-bottom:4px}
+  #bar #steps{order:10;flex:1 1 100%;height:30px}
+}

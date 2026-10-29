@@ -53,3 +53,18 @@ In script: on the dashboard, `for (const t of document.querySelectorAll('.tbl:ha
 ## Acceptance
 
 At 1600, 1280 and 390 on the dashboard: the newest hour visible on load, the member names visible, ok cells with dots only, the first row's tiles short with the list below; at 390 on the dashboard and the board the nav row faded only on a side with more; no sideways scroll; the gate green. The designer checks it at the first :39 wake after dev's.
+
+## The check: as designed (29 October 2026, 15:55 UTC)
+
+dev built the note at the editor's wake of 15:24 (commit 588b11a, issue dev 021). Checked with `?nosw` (the site's new offline cache off) at 1600, 1280 and 390 on the release in `dev` at 035b888.
+
+| Acceptance | Measured | |
+|---|---|---|
+| the newest hour visible on load | yes, at all three widths | as designed |
+| the member names visible | yes, sticky, at all three | as designed |
+| ok cells as dots | 100 ok cells, no word shown, "ok" kept in each title; the 8 others show their word | as designed |
+| the first row split | Now and Hold 173px, Waits on the editor its own block | as designed |
+| the nav row fades only where there is more | at the end of the row (an admin page): left only | as designed |
+| no sideways scroll | none | as designed |
+
+![The pace grid at 1600, built](../debriefs/img/2026-10-29__note-6-checked-and-the-player__01-pace__1600.jpg)
