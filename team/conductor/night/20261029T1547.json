@@ -1,0 +1,672 @@
+{
+ "schema": "the-ultimate-insider/night/v1",
+ "since": "2026-10-29T15:13:59Z",
+ "until": "2026-10-29T15:47:16Z",
+ "wakes": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T15:15:04Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T151504Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Plan by the member (the file states its own routing; the editor waits). The editor's file 1-editor-decisions-1500.md, handed over in this session (the 'earlier' folder in the zip is byte-identical to what is committed): 1) commit it to team/conductor/briefs/2026-10-29__editor/ with a short note in conductor-notes.md of what the review found (the team is seven members with keys, not eight; v0.1.107"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T15:20:10Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T152010Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Plan by the member, a one-number change at the editor's word: 'lift that cap, which in fact it should be 45 minutes for the agents that run every hour, since if the next agent doesn't pick it up in the run in the same hour, it will pick it up on the next one'. 1) team/conductor/WAKE.md: the work step 'at most 45 minutes' in the table and the checklist, with the editor's reason; members' wakes may "
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T15:22:43Z",
+   "kind": "editor's request",
+   "outcome": "ok",
+   "record": "team/conductor/wakes/20261029T152243Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "partial"
+   },
+   "plan": "Plan by the member at the editor's word ('can you create the briefs for the motion@ and studio@ agents and can you give me here their first prompts'). Split so that no file has two owners and nothing in flight is duplicated: ruv.sgit keeps the programme (E05 to E14, its redos, stages on its pieces); motion@ makes the new story animations deck requests (the building, could have been worse, the inte"
+  },
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T15:46:11Z",
+   "kind": "editor's request",
+   "outcome": "open",
+   "record": "team/conductor/wakes/20261029T154611Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": null,
+    "post_review": null,
+    "post_check": null
+   },
+   "plan": "Plan by the member (the editor asked to check that all is working; ROLE items 2 and 5): 1) seal both vault keys to motion@ (key from its own commit f1cbca0, sha256:d2bd2d8029971854) and studio@ (8d208d3, sha256:cc6cd6e2e5425109) with vault_handover.py --to-member, zips in the scratchpad only, for the editor. 2) Route their three repository requests verbatim into the mail vault (team/motion/request"
+  },
+  {
+   "agent": "dev",
+   "started": "2026-10-29T15:24:12Z",
+   "kind": "the editor's wake, in session",
+   "outcome": "ok",
+   "record": "team/dev/wakes/20261029T152412Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "Amended by dev with the editor's word of 15:25 (yes to the offline cache). 1. The offline cache: src/static/sw.js, outside dev's policy and owned by no member; dev adds it to scope.writes on the editor's word; network-first for pages and data, cache-then-refresh for scripts, styles, images and slides, versioned by release, a kill switch (sw.json at the root), same-origin GETs only (never the vault"
+  },
+  {
+   "agent": "motion",
+   "started": "2026-10-29T15:27:33Z",
+   "kind": "onboarding, editor's chat",
+   "outcome": "ok",
+   "record": "team/motion/wakes/20261029T152733Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "1. Ask deck first: team/motion/requests/deck__the-building.md (no team/deck/requests/motion__*.md yet, no To-motion commits, no HOLD). 2. Create team/motion/ROLE.md (names start.py and banner.py), policy.json (writes team/motion/**, src/static/motion/**, src/pages/motion/**), status.json; the session key (key.json, key.png, sessions/<id>/); gate; push to dev; create the hourly :24 London task name"
+  },
+  {
+   "agent": "studio",
+   "started": "2026-10-29T15:28:05Z",
+   "kind": "onboarding, first session at the editor's word",
+   "outcome": "ok",
+   "record": "team/studio/wakes/20261029T152805Z.json",
+   "verdicts": {
+    "plan": "go",
+    "pre_review": "go",
+    "work": "done",
+    "post_review": "clean",
+    "post_check": "as-planned"
+   },
+   "plan": "0 (setup at the editor's word, before the work): team/studio/ ROLE.md, policy.json (draft), status.json, session key (key.json, key.png, sessions/<id>/), own :12 task with its id in status.json. 1. Requests: none (no team/*/requests/studio__*, no To-studio trailers; no vault key yet). 2. First port, the ABP slides: abp.json, rules.json, report.json copied unmodified with the source commit in SOURC"
+  }
+ ],
+ "commits": [
+  {
+   "agent": "studio",
+   "sha": "6e30bfc",
+   "at": "2026-10-29T15:42:42+00:00",
+   "subject": "@studio: close the first wake (five steps, as planned)",
+   "changed": 1
+  },
+  {
+   "agent": "studio",
+   "sha": "a475790",
+   "at": "2026-10-29T15:42:25+00:00",
+   "subject": "@studio: wake record: the work step",
+   "changed": 1
+  },
+  {
+   "agent": "studio",
+   "sha": "4b547e6",
+   "at": "2026-10-29T15:42:00+00:00",
+   "subject": "@studio: debrief, status, and two requests: deck (what landed) and dev (the engine's iPad fit)",
+   "changed": 12
+  },
+  {
+   "agent": "studio",
+   "sha": "c3ce566",
+   "at": "2026-10-29T15:40:21+00:00",
+   "subject": "@studio: first two ports from ruv.sgit.ai: the ABP slide and studio v4, the policy gate",
+   "changed": 15
+  },
+  {
+   "agent": "dev",
+   "sha": "615ed68",
+   "at": "2026-10-29T15:38:46+00:00",
+   "subject": "@dev: close the editor's 15:24 wake record (five steps, as planned)",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "a20e207",
+   "at": "2026-10-29T15:37:25+00:00",
+   "subject": "@dev: motion/lab/ and studio-ports/lab/ are full-screen piece areas, like studio/lab/",
+   "changed": 3
+  },
+  {
+   "agent": "dev",
+   "sha": "588b11a",
+   "at": "2026-10-29T15:35:49+00:00",
+   "subject": "@dev: the site's offline cache, the viewer for one piece, and design note 6",
+   "changed": 16
+  },
+  {
+   "agent": "motion",
+   "sha": "cf17db9",
+   "at": "2026-10-29T15:32:40+00:00",
+   "subject": "@motion: front matter on the joining debrief, so the build reads it",
+   "changed": 1
+  },
+  {
+   "agent": "motion",
+   "sha": "34b8aef",
+   "at": "2026-10-29T15:32:08+00:00",
+   "subject": "@motion: close the joining wake: five steps recorded, debrief",
+   "changed": 2
+  },
+  {
+   "agent": "studio",
+   "sha": "8d208d3",
+   "at": "2026-10-29T15:31:55+00:00",
+   "subject": "@studio: join the team: role, draft policy, status, session key and the :12 wake",
+   "changed": 9
+  },
+  {
+   "agent": "motion",
+   "sha": "f1cbca0",
+   "at": "2026-10-29T15:31:01+00:00",
+   "subject": "@motion: join the team: role, policy (proposed), session key, the :24 task, and the building's request to deck",
+   "changed": 10
+  },
+  {
+   "agent": "conductor",
+   "sha": "04a23c3",
+   "at": "2026-10-29T15:26:23+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, partial (the pieces' folders moved under lab/ mid-wake)",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "f00734f",
+   "at": "2026-10-29T15:25:40+00:00",
+   "subject": "@conductor: briefs and first prompts for motion@ (the story animations) and studio@ (ports from ruv.sgit.ai)",
+   "changed": 6
+  },
+  {
+   "agent": "researcher",
+   "sha": "2fc7af6",
+   "at": "2026-10-29T15:25:17+00:00",
+   "subject": "@researcher: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "researcher",
+   "sha": "533575e",
+   "at": "2026-10-29T15:22:51+00:00",
+   "subject": "@researcher: E05 pivoting and the Pilates agent, found: deck's six items complete",
+   "changed": 13
+  },
+  {
+   "agent": "conductor",
+   "sha": "f1b5b1c",
+   "at": "2026-10-29T15:22:16+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "545a473",
+   "at": "2026-10-29T15:21:31+00:00",
+   "subject": "@conductor: the work step's limit is 45 minutes, at the editor's word (it was 8)",
+   "changed": 7
+  },
+  {
+   "agent": "researcher",
+   "sha": "0fe1e69",
+   "at": "2026-10-29T15:20:03+00:00",
+   "subject": "@researcher: data for the last pieces: E03 per source, E07 a deployment, E06 the soft inside, E02 no danger rating",
+   "changed": 11
+  },
+  {
+   "agent": "dev",
+   "sha": "6738ecc",
+   "at": "2026-10-29T15:18:10+00:00",
+   "subject": "@dev: close the 15:10 wake record (five steps, as planned)",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "95cc76c",
+   "at": "2026-10-29T15:17:24+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "dev",
+   "sha": "f20cfa8",
+   "at": "2026-10-29T15:16:48+00:00",
+   "subject": "@dev: the player's build mode: the editor's running order, every slide and studio piece, presented at once",
+   "changed": 9
+  },
+  {
+   "agent": "conductor",
+   "sha": "78d517d",
+   "at": "2026-10-29T15:16:37+00:00",
+   "subject": "@conductor: the editor's decisions of 15:00 committed and routed: the frame, act three, seven new beats",
+   "changed": 5
+  },
+  {
+   "agent": "conductor",
+   "sha": "a6ff52c",
+   "at": "2026-10-29T15:15:00+00:00",
+   "subject": "@conductor: wake closed: go, go, done, clean, as-planned",
+   "changed": 1
+  },
+  {
+   "agent": "conductor",
+   "sha": "0457627",
+   "at": "2026-10-29T15:14:18+00:00",
+   "subject": "@conductor: 15:02 pace: four pieces in one wake, the player ported; the night log and Moments refreshed",
+   "changed": 10
+  }
+ ],
+ "made": [
+  {
+   "page": "studio-ports/abp/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/policy-gate/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/lab/abp/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "studio-ports/lab/policy-gate/index.html",
+   "by": "studio"
+  },
+  {
+   "page": "talk/engine/view.html",
+   "by": "dev"
+  },
+  {
+   "page": "talk/player.html",
+   "by": "dev"
+  },
+  {
+   "page": "articles/how-this-talk-was-built.html",
+   "by": "conductor"
+  },
+  {
+   "page": "articles/running-this-agent-team.html",
+   "by": "conductor"
+  },
+  {
+   "page": "articles/moments.html",
+   "by": "conductor"
+  }
+ ],
+ "shots": [
+  {
+   "page": "studio-ports/lab/abp/index.html",
+   "img": "night-20261029T1547-1.png"
+  },
+  {
+   "page": "studio-ports/lab/policy-gate/index.html",
+   "img": "night-20261029T1547-2.png"
+  },
+  {
+   "page": "articles/how-this-talk-was-built.html",
+   "img": "night-20261029T1547-3.png"
+  },
+  {
+   "page": "articles/running-this-agent-team.html",
+   "img": "night-20261029T1547-4.png"
+  }
+ ],
+ "mail": [
+  {
+   "at": "2026-10-29T15:15:59Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The editor's decisions of 15:00: the opening, act three, beats 3a to 3g, four animation requests in order"
+  },
+  {
+   "at": "2026-10-29T15:15:59Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "request",
+   "subject": "The editor's decisions of 15:00: the worm era, accidents against attacks, Replit, GTIG"
+  },
+  {
+   "at": "2026-10-29T15:15:59Z",
+   "sender": "conductor",
+   "to": "storyteller",
+   "kind": "request",
+   "subject": "The editor's decisions of 15:00 on your three questions, and seven new beats"
+  },
+  {
+   "at": "2026-10-29T15:15:59Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "notice",
+   "subject": "For awareness: four animations coming from deck after the editor's 15:00 decisions"
+  },
+  {
+   "at": "2026-10-29T15:16:48Z",
+   "sender": "dev",
+   "to": "deck",
+   "kind": "update",
+   "subject": "The player's build mode is live: the editor's running order, and how it reaches you"
+  },
+  {
+   "at": "2026-10-29T15:20:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Re: data for the last pieces: taken, three passes running, a reply per item as it lands"
+  },
+  {
+   "at": "2026-10-29T15:21:21Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "notice",
+   "subject": "The work step's limit is now 45 minutes, at the editor's word (it was 8)"
+  },
+  {
+   "at": "2026-10-29T15:21:21Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "notice",
+   "subject": "The work step's limit is now 45 minutes, at the editor's word (it was 8)"
+  },
+  {
+   "at": "2026-10-29T15:21:21Z",
+   "sender": "conductor",
+   "to": "designer",
+   "kind": "notice",
+   "subject": "The work step's limit is now 45 minutes, at the editor's word (it was 8)"
+  },
+  {
+   "at": "2026-10-29T15:21:21Z",
+   "sender": "conductor",
+   "to": "researcher",
+   "kind": "notice",
+   "subject": "The work step's limit is now 45 minutes, at the editor's word (it was 8)"
+  },
+  {
+   "at": "2026-10-29T15:21:21Z",
+   "sender": "conductor",
+   "to": "storyteller",
+   "kind": "notice",
+   "subject": "The work step's limit is now 45 minutes, at the editor's word (it was 8)"
+  },
+  {
+   "at": "2026-10-29T15:21:21Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "notice",
+   "subject": "The work step's limit is now 45 minutes, at the editor's word (it was 8)"
+  },
+  {
+   "at": "2026-10-29T15:24:19Z",
+   "sender": "conductor",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Two new animators joining: the story animations go to motion@, the ruv.sgit.ai ports to studio@"
+  },
+  {
+   "at": "2026-10-29T15:24:19Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Two new animators joining: please add motion/ and studio-ports/ to the gate's standalone list"
+  },
+  {
+   "at": "2026-10-29T15:24:19Z",
+   "sender": "conductor",
+   "to": "ruv.sgit",
+   "kind": "notice",
+   "subject": "Two animators join beside you: the story animations and the ruv.sgit.ai ports move to them"
+  },
+  {
+   "at": "2026-10-29T15:25:24Z",
+   "sender": "conductor",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Correction: the standalone areas are motion/lab/ and studio-ports/lab/"
+  },
+  {
+   "at": "2026-10-29T15:35:00Z",
+   "sender": "motion",
+   "to": "deck",
+   "kind": "request",
+   "subject": "The building: your request, its beat and its numbers"
+  },
+  {
+   "at": "2026-10-29T15:35:49Z",
+   "sender": "dev",
+   "to": "deck",
+   "kind": "update",
+   "subject": "The viewer is live, at talk/engine/view.html?id= (not talk/view.html)"
+  },
+  {
+   "at": "2026-10-29T15:35:49Z",
+   "sender": "dev",
+   "to": "designer",
+   "kind": "reply",
+   "subject": "Re: Design note 6 is built"
+  },
+  {
+   "at": "2026-10-29T15:35:49Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "notice",
+   "subject": "For every member: the site now has an offline cache, and how to turn it off"
+  },
+  {
+   "at": "2026-10-29T15:37:25Z",
+   "sender": "dev",
+   "to": "conductor",
+   "kind": "reply",
+   "subject": "Re: motion/lab/ and studio-ports/lab/: in"
+  },
+  {
+   "at": "2026-10-29T15:40:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Data for the last pieces, item 3 of 6: E03 per source, outside or inside, second-order"
+  },
+  {
+   "at": "2026-10-29T15:40:00Z",
+   "sender": "ruv.sgit",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Relayed from the editor: go to town on SHarness (without and with, the live Linux in the browser, a storyline); please write the brief"
+  },
+  {
+   "at": "2026-10-29T15:45:00Z",
+   "sender": "researcher",
+   "to": "deck",
+   "kind": "reply",
+   "subject": "Data for the last pieces, items 4 to 6 of 6: E07 a deployment, E06 the soft inside, E02's danger rating"
+  },
+  {
+   "at": "2026-10-29T15:45:00Z",
+   "sender": "studio",
+   "to": "deck",
+   "kind": "request",
+   "subject": "Landed: two ports from ruv.sgit.ai on the engine (the ABP slide and studio v4, the policy gate); where do they sit?"
+  },
+  {
+   "at": "2026-10-29T15:45:00Z",
+   "sender": "studio",
+   "to": "dev",
+   "kind": "request",
+   "subject": "Engine: on an iPad, a piece opened on its own is not scaled (fit() reads innerWidth 1280); a one-line CSS fix"
+  }
+ ],
+ "problems": [
+  {
+   "agent": "conductor",
+   "started": "2026-10-29T15:22:43Z",
+   "outcome": "ok",
+   "verdicts": {
+    "post_check": "partial"
+   },
+   "record": "team/conductor/wakes/20261029T152243Z.json"
+  }
+ ],
+ "holds": [],
+ "asks": {
+  "conductor": [
+   {
+    "what": "Read the overnight banners and records in the morning; lift any hold or narrow the hours",
+    "from": "the editor"
+   },
+   {
+    "what": "Once the lane exists: seal its read key to the conductor's key (never paste it in a chat or file)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or move the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload 2026-10-29__conductor__vault-keys-for-storyteller.zip into the storyteller's session",
+    "from": "the editor"
+   },
+   {
+    "what": "Confirm 'newsroom.esquito.ai' = newsroom.sgit.ai and 'attrition' = commoditisation on the Wardley maps; 'Empower', 'the billing', which blast radius",
+    "from": "the editor"
+   },
+   {
+    "what": "Upload the motion and studio vault-key zips into their sessions",
+    "from": "the editor"
+   }
+  ],
+  "deck": [
+   {
+    "what": "Morning: /studio/reviews/ (eleven reviews; B01 v2, E04 v2 and E02 v3 ready) and /studio/programme.html; pieces that load data need the site served",
+    "from": "the editor"
+   },
+   {
+    "what": "before-tonight: decide the slide items while the deck is frozen, item 4 (three of five not attacks) first",
+    "from": "the editor",
+    "issue": "before-tonight, blocked"
+   },
+   {
+    "what": "Agree or change the draft policy.json",
+    "from": "the editor"
+   }
+  ],
+  "designer": [],
+  "dev": [
+   {
+    "from": "dev",
+    "to": "the editor",
+    "what": "Give the conductor's session its two sealed files from the lane handover zip"
+   }
+  ],
+  "motion": [
+   {
+    "to": "deck",
+    "what": "the building's request: go or changes on the picture, the claims, the beat and duration",
+    "where": "team/motion/requests/deck__the-building.md"
+   },
+   {
+    "to": "editor",
+    "what": "agree team/motion/policy.json (status proposed)"
+   },
+   {
+    "to": "conductor",
+    "what": "seal the two vault keys to motion's key (team/motion/key.json); mark the motion row of schedule.json running with the task id"
+   },
+   {
+    "to": "dev",
+    "what": "motion/lab/ in the gate's standalone list (requested by the conductor)"
+   }
+  ],
+  "researcher": [
+   {
+    "what": "D02: what an answer you sign on the decisions page means (A binding, B material, C binding for a chosen option)",
+    "from": "the editor"
+   },
+   {
+    "what": "D12: keep the evidence vault's history, or rotate the vault",
+    "from": "the editor"
+   },
+   {
+    "what": "Item 4, 'three of those five were not attacks': option A (two of five) or option B (swap EchoLeak for OpenAI Codex, July 2026)",
+    "from": "the editor"
+   },
+   {
+    "what": "Store the handover zip and give it to the vaults manager",
+    "from": "the editor"
+   },
+   {
+    "what": "Apply or answer the proposed edits before 19:00 London",
+    "from": "deck@the-ultimate-insider"
+   }
+  ],
+  "ruv-sgit": [
+   {
+    "what": "Review E11, E07, E10 and E13 v1",
+    "from": "deck@the-ultimate-insider"
+   },
+   {
+    "what": "Store the handover zips: r2 (covers r4, r6), r3, r5 (covers r7, r12), r8, r9 (covers r11), r10, r13, r14, r15, r16",
+    "from": "the editor"
+   }
+  ],
+  "storyteller": [
+   {
+    "what": "read team/storyteller/story/tree.md (open questions at the end): the frame, act three, and whether 'the outside is in balance' survives R5",
+    "from": "the editor"
+   },
+   {
+    "what": "seal the two vault keys to this session's key (team/storyteller/key.json)",
+    "from": "conductor"
+   },
+   {
+    "what": "agree policy.json; name the projects behind 'Empower' and 'the billing'",
+    "from": "the editor"
+   }
+  ],
+  "studio": [
+   {
+    "what": "agree team/studio/policy.json (a draft from the brief)",
+    "from": "the editor"
+   },
+   {
+    "what": "the sealed vault keys for tui-issues-public and tui-mail-public",
+    "from": "the conductor"
+   },
+   {
+    "what": "the engine's iPad fit: body{position:fixed;inset:0} in slide.css",
+    "from": "dev"
+   },
+   {
+    "what": "the sorting of ruv.sgit.ai's pieces, and where the two ports sit",
+    "from": "deck"
+   }
+  ]
+ }
+}

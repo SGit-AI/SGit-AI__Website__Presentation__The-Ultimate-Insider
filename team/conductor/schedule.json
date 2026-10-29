@@ -80,7 +80,7 @@
    "agent": "motion",
    "minute": "24",
    "cron": "CRON_TZ=Europe/London 24 * * * *",
-   "status": "proposed by the conductor, 29 October 2026 15:25 UTC: the editor creates the task in motion's own session once it has joined",
+   "status": "running: task trig_01GM4cSLdDMfUPmuZaAhzZTw, hourly at :24, into motion's own session (created 29 October 2026 15:29 to 15:31 UTC)",
    "job": "the new story animations, one request at a time from deck (team/conductor/briefs/2026-10-29__onboarding-motion.md)",
    "prompt": "as the other members' prompt, with the name motion"
   },
@@ -88,7 +88,7 @@
    "agent": "studio",
    "minute": "12",
    "cron": "CRON_TZ=Europe/London 12 * * * *",
-   "status": "proposed by the conductor, 29 October 2026 15:25 UTC: the editor creates the task in studio's own session once it has joined",
+   "status": "running: task trig_01BHZUxmfsn1jcddZzrATr1a, hourly at :12, into studio's own session (created 29 October 2026 15:29 to 15:31 UTC)",
    "job": "ports and adaptations of ruv.sgit.ai's pieces as deck sorts them (team/conductor/briefs/2026-10-29__onboarding-studio.md)",
    "prompt": "as the other members' prompt, with the name studio"
   }
