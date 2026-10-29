@@ -207,5 +207,31 @@
       rec.start(); micBtn.textContent = 'Stop'; micBtn.classList.add('rec'); say('Listening… press Stop when you are done.')
     } catch (e) { say('No microphone: ' + e.message, true) }
   }
+  // a narrow API for the player's build mode (same site): queue a note, send what is queued, count, and whether the lane is
+  // open on this device. It returns only ids, counts and booleans: never the token, the OpenRouter key or the stored notes.
+  // A page that sets data-pane="api" on <html> gets the API and no pane of its own (the player has its own controls).
+  window.TuiLane = Object.freeze({
+    keep: function (n) {
+      n = n || {}
+      var id = Date.now().toString(36) + Math.random().toString(36).slice(2, 6), all = notes()
+      all.push({ id: id, kind: String(n.kind || 'note').slice(0, 40), page: String(n.page || location.pathname).slice(0, 300), title: String(n.title || document.title).slice(0, 300),
+                 phrase: String(n.phrase || '').slice(0, 600), text: String(n.text || '').slice(0, 20000), at: new Date().toISOString(), sent: null })
+      saveNotes(all); if (root) paint()
+      return id
+    },
+    pending: function () { return notes().filter(function (x) { return !x.sent }).length },
+    ready: function () { return !!store.get(K.token) },
+    send: async function () {
+      var token = store.get(K.token), n = notes(), sent = 0
+      if (!token) return { sent: 0, left: n.filter(function (x) { return !x.sent }).length, ok: false }
+      for (var i = 0; i < n.length; i++) {
+        if (n[i].sent) continue
+        try { await sendOne(n[i], token); n[i].sent = new Date().toISOString(); saveNotes(n); sent++ } catch (e) { break }
+      }
+      if (root) paint()
+      return { sent: sent, left: n.filter(function (x) { return !x.sent }).length, ok: true }
+    }
+  })
+  if (document.documentElement.dataset.pane === 'api') return
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', build); else build()
 })()
