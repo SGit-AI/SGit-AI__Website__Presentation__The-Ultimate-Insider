@@ -7,6 +7,8 @@
     // the side navigation starts closed on a phone, so each page shows its own heading first (designer@, design note 1, item 5);
     // it is rendered open, so a wide screen shows it even without script
     if (window.matchMedia && !matchMedia('(min-width:861px)').matches) document.querySelectorAll('.side > details[open]').forEach(function (d) { d.removeAttribute('open') })
+    // on a phone the links are one row that scrolls: bring the current section's link into view (design note 2)
+    if (window.matchMedia && !matchMedia('(min-width:701px)').matches) { var cur = document.querySelector('nav.main a[aria-current]'); if (cur) cur.parentNode.scrollLeft = cur.offsetLeft - cur.parentNode.offsetLeft - 16 }
     var btn = document.querySelector('button.theme')
     if (!btn) return
     btn.addEventListener('click', function () {

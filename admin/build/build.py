@@ -207,7 +207,9 @@ class Site_Build:
     def chrome(self, rel, title, description, body, kind='page'):
         root  = self.root_of(rel)
         name  = self.config['name']
-        nav   = ''.join(f'<a href="{root}{href}"{" aria-current=\"page\"" if href == rel else ""}>{label}</a>' for label, href in self.config['nav'])
+        hrefs = [href for _, href in self.config['nav']]                # the page's own link, or else its section's (design note 2)
+        here  = rel if rel in hrefs else next((h for h in hrefs if '/' in h and rel.startswith(h.rsplit('/', 1)[0] + '/')), None)
+        nav   = ''.join(f'<a href="{root}{href}"{(" aria-current=\"page\"" if href == rel else " aria-current=\"true\"") if href == here else ""}>{label}</a>' for label, href in self.config['nav'])
         full  = title if rel == 'index.html' else f'{title} · {self.config["short"]}'
         canon = self.config['url'] + '/' + rel
         md    = Path(rel).with_suffix('.md').name
