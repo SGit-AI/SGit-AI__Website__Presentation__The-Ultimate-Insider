@@ -83,9 +83,9 @@
       "id": "unreported", "act": "The turn", "dur": 90,
       "title": "Why we do not see more of it",
       "slide": { "src": "slides/unreported/index.html" },
-      "say": "Why do we not see more of this? Because nobody has to report. Aviation solved this fifty years ago: NASA's reporting system takes about a hundred thousand confidential reports a year, 1.8 million so far, and a qualifying report cannot be used against the person who filed it. Pilots report near misses because it is safe to. Cyber has nothing like it. Better disclosure would be more frightening and more reassuring at the same time: the numbers would be larger, and we would finally know them.",
-      "cue": "CIRCIA: the article (September 2026) had the final rule targeted for September 2026. Check its status before the talk and update the slide or say it as of September.",
-      "sources": [["NASA ASRS", "https://en.wikipedia.org/wiki/Aviation_Safety_Reporting_System"], ["CIRCIA timing, Hunton", "https://www.hunton.com/privacy-and-cybersecurity-law-blog/cisa-plans-to-finalize-cyber-incident-reporting-regulations-in-september-2026"], ["Verizon DBIR 2025", "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"]]
+      "say": "Why do we not see more of this? Because nobody has to report. Aviation solved this fifty years ago: NASA's reporting system takes more than 120,000 confidential reports a year, over 2.3 million so far, and a qualifying report cannot be used against the person who filed it. Pilots report near misses because it is safe to. Cyber has nothing like it. Better disclosure would be more frightening and more reassuring at the same time: the numbers would be larger, and we would finally know them.",
+      "cue": "CIRCIA, as of 29 October: the final rule missed September and went to the White House for review on 1 October; not published. The researcher re-checks the Federal Register after 13:45 UTC; if it has been published, say so instead.",
+      "sources": [["NASA ASRS programme briefing", "https://asrs.arc.nasa.gov/docs/ASRS_ProgramBriefing.pdf"], ["CIRCIA to the White House, BankInfoSecurity", "https://www.bankinfosecurity.com/cisa-sends-final-circia-rule-to-white-house-for-review-a-33008"], ["Verizon DBIR 2025", "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf"]]
     },
     {
       "id": "collision", "act": "The turn", "dur": 90,
@@ -111,7 +111,7 @@
       "id": "licence", "act": "The way out", "dur": 120,
       "title": "A licence to operate, that can be suspended",
       "slide": { "src": "slides/licence/index.html" },
-      "say": "Then make the risk decision in advance, and put a name and a date on it. A licence to operate for each agent: who authorised it, who holds it, the policy it runs under, and when it expires. Accepted risks that expire and must be accepted again. When the footprint leaves the mandate, the licence is suspended, by the system, not by a quarterly review. And autonomy is earned the same way: each level unlocked by evidence that the one below held.",
+      "say": "Then make the risk decision in advance, and put a name and a date on it. A licence to operate for each agent: who authorised it, who holds it, the policy it runs under, and when it expires. Accepted risks that expire and must be accepted again. When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today a licence is a record of a decision, with a name and an expiry; the suspension is what we are building towards. And autonomy is earned the same way: each level unlocked by evidence that the one below held.",
       "cue": "The licence on screen is an example; the autonomy ladder is illustrative, not a published scale.",
       "sources": [["RiskMandate, licence to operate", "https://riskmandate.ai/licence-to-operate.html"]]
     },

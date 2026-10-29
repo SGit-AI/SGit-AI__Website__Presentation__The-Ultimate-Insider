@@ -2,25 +2,88 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "deck",
   "as_of": "2026-10-29",
-  "round": 2,
-  "state": "round 2 closed: the studio is open with briefs B01 and B02 for ruv.sgit; policy drafted; hourly task created into this session, first wake 02:17 UTC",
-  "task": {"id": "trig_01XFzjV1p3aAVqnRhEizJKV5", "cron": "CRON_TZ=Europe/London 17 * * * *", "session": "session_01Kw9UwBB1wNV9hwXCcQAzKn", "created": "2026-10-29T02:13:54Z", "prompt": "runs.deck.prompt in team/conductor/schedule.json, word for word"},
+  "round": 3,
+  "state": "wake 1 (02:17 London) closed: session key published; researcher's before-tonight request taken; three of its five must-change items done (ASRS figures, CIRCIA status, licence wording)",
+  "task": {
+    "id": "trig_01XFzjV1p3aAVqnRhEizJKV5",
+    "cron": "CRON_TZ=Europe/London 17 * * * *",
+    "session": "session_01Kw9UwBB1wNV9hwXCcQAzKn",
+    "created": "2026-10-29T02:13:54Z",
+    "prompt": "runs.deck.prompt in team/conductor/schedule.json, word for word"
+  },
   "done": [
-    {"what": "Joined as deck@the-ultimate-insider; the role split with dev agreed by the editor", "evidence": "team/deck/ROLE.md, team/dev/ROLE.md"},
-    {"what": "The studio: hub, how it works, techniques, the briefs shelf", "evidence": "/studio/"},
-    {"what": "Briefs B01 One story, not three and B02 The distance is a prompt, with the incidents data", "evidence": "/studio/briefs/, src/static/studio/data/incidents.json"},
-    {"what": "Hourly wake at :17 London created from this session", "evidence": "trig_01XFzjV1p3aAVqnRhEizJKV5"}
+    {
+      "what": "Joined as deck@the-ultimate-insider; the role split with dev agreed by the editor",
+      "evidence": "team/deck/ROLE.md, team/dev/ROLE.md"
+    },
+    {
+      "what": "The studio: hub, how it works, techniques, the briefs shelf",
+      "evidence": "/studio/"
+    },
+    {
+      "what": "Briefs B01 One story, not three and B02 The distance is a prompt, with the incidents data",
+      "evidence": "/studio/briefs/, src/static/studio/data/incidents.json"
+    },
+    {
+      "what": "Hourly wake at :17 London created from this session",
+      "evidence": "trig_01XFzjV1p3aAVqnRhEizJKV5"
+    },
+    {
+      "what": "deck's session key, published",
+      "evidence": "team/deck/key.json, team/deck/sessions/session_01Kw9UwBB1wNV9hwXCcQAzKn/"
+    },
+    {
+      "what": "before-tonight 1 to 3: unreported (ASRS 121,128 in 2025, over 2.3 million; CIRCIA at the White House since 1 October) and licence (should be suspended)",
+      "evidence": "src/static/talk/slides/unreported/index.html, src/static/talk/talk.json"
+    }
   ],
   "next": [
-    {"what": "Make and publish this session's key", "why": "CLAUDE.md: every session does"},
-    {"what": "Send B01 and B02 to ruv.sgit as requests", "why": "schedule.json: work is asked for through the mail vault, or team/deck/requests/ until deck holds its key"},
-    {"what": "Agree with ruv.sgit where studio versions live: studio/lab/ (the studio pages) or src/static/ruv-sgit/ (its policy)", "why": "the two disagree; ruv.sgit's policy wins until changed"},
-    {"what": "Settle the two incidents-slide questions with the editor and the researcher", "why": "three of five not attacks (EchoLeak); about 30 targets is not in the script"}
+    {
+      "what": "before-tonight 4: three of five not attacks (EchoLeak was a researcher's demonstration)",
+      "why": "the line act one turns on: the editor decides the wording; deck proposes the researcher's safer line",
+      "issue": "before-tonight",
+      "due": "2026-10-29T17:00:00Z"
+    },
+    {
+      "what": "before-tonight 5: definition and identities to the 2026 editions ($19.5m, 109 to 1), after reading both captures",
+      "why": "the 42 per cent may differ in the 2026 edition",
+      "issue": "before-tonight",
+      "due": "2026-10-29T17:00:00Z"
+    },
+    {
+      "what": "before-tonight, should-change list: incidents (espionage dates, EchoLeak wording), loop, outages (ToolShell 54), spreadsheets (48 per cent, Gartner), collision, infrastructure, abp",
+      "why": "evidence/BEFORE-TONIGHT.md",
+      "issue": "before-tonight"
+    },
+    {
+      "what": "Send B01 and B02 to ruv.sgit as requests, and agree where versions live (studio/lab/ or src/static/ruv-sgit/)",
+      "why": "the studio's first work"
+    }
   ],
   "asks": [
-    {"what": "Agree or change the draft policy.json", "from": "the editor"},
-    {"what": "Record deck's task in schedule.json", "from": "conductor@"}
+    {
+      "what": "Decide the incidents line: keep 'three of those five were not attacks', or say 'two were agents being agents, one a researcher showing what an attacker could do, two were attacks'",
+      "from": "the editor"
+    },
+    {
+      "what": "Agree or change the draft policy.json",
+      "from": "the editor"
+    },
+    {
+      "what": "Record deck's task in schedule.json",
+      "from": "conductor@"
+    },
+    {
+      "what": "Update the sources page for ASRS (NASA's briefing) and CIRCIA (at the White House since 1 October)",
+      "from": "dev@ (holds src/pages/sources/)"
+    }
   ],
   "tokens": null,
-  "policy": {"outside_scope": 0, "out_of_scope_requests": 0, "pushbacks": 0, "overrides": 0, "injection_seen": 0}
+  "policy": {
+    "outside_scope": 0,
+    "out_of_scope_requests": 0,
+    "pushbacks": 0,
+    "overrides": 0,
+    "injection_seen": 0
+  }
 }
