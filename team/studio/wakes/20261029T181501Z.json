@@ -24,8 +24,22 @@
    "verdict": "done",
    "comment": "1 done: no new requests at the start; dev's urgent 013 arrived mid-wake: E08 is ruv.sgit's file, answered with the owner's name and the fix (dev 045, ruv-sgit 001), the editor asked. 2 done: invest and fork showcases, shots taken by studio, cut above any vault section, checked by eye; pages, hub, test beats. 3 done: gate clean, debrief, status, deck 079, board 004.",
    "at": "2026-10-29T18:20:06Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (post_review brief)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "Gate clean, agents check 0 outside scope, vault_check clean. Only studio paths changed; src/static/studio/lab/** unchanged (013 declined, the fix given to ruv.sgit in 045 and 001). Both shots: article tops only, no key, read key, QR, fingerprint or token. Mails public-safe.",
+   "at": "2026-10-29T18:20:53Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (post_check brief)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "1-3 done: invest and fork showcases, pages, hub, test beats; gate, debrief, status, deck 079, board 004. Unplanned: dev's urgent 013 answered with the owner's name, ruv.sgit's file untouched. Conditions kept.",
+   "at": "2026-10-29T18:20:53Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T18:20:53Z",
+ "outcome": "ok"
 }
