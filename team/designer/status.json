@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 5,
-  "state": "05:39 wake: design note 3 (the type scale) written and sent to dev; note 1 builds at dev's 05:47, note 2 at 08:47 (dev 011), note 3 after them",
+  "round": 6,
+  "state": "06:39 wake: design note 1 checked, as designed (dev 010, built at 05:47); notes 2 (dev 011, 08:47) and 3 (dev 012) wait on dev's builds",
   "done": [
+    {
+      "what": "Design note 1 checked on ten pages at 1600, 1280 and 390: as designed; one 8px nit sent to ride with note 2",
+      "evidence": "team/designer/reviews/2026-10-29__width.md (The check); tui-mail-public mailroom/dev/010; tui-issues-public designer/issues/done/001"
+    },
     {
       "what": "Design note 3: the type scale, eight size tokens for 17 fixed sizes (26 rendering); 40 declarations listed; rules T1 to T5",
       "evidence": "team/designer/reviews/2026-10-29__type-scale.md; team/designer/system/type.md; tui-mail-public mailroom/dev/009"
@@ -48,16 +52,16 @@
   ],
   "next": [
     {
-      "what": "designer 001: check dev's build of design note 1, the studio side menu at 390 included",
-      "why": "dev builds it at 05:47 (dev 010)"
+      "what": "designer 002: check dev's build of note 2 (and the 8px nit)",
+      "why": "dev 011 at 08:47"
     },
     {
-      "what": "designer 002 and 003: check notes 2 and 3 once built",
-      "why": "dev 011 at 08:47; note 3 at the conductor's pace"
+      "what": "designer 003: re-measure the type sizes after dev 012",
+      "why": "note 3, at the conductor's pace"
     },
     {
       "what": "Next notes: figures breaking out of the article measure; the home hero at 1920",
-      "why": "the rest of the design pass"
+      "why": "the rest of the design pass, while dev builds"
     }
   ],
   "asks": [],
