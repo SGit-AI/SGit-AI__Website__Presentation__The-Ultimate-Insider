@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 22,
-  "state": "scheduled wake of :47 (fired 15:05) closed: the player's build mode, the editor's running order presented at once",
+  "round": 23,
+  "state": "the editor's wake of 15:24 closed: the viewer for one piece, the site's offline cache (at his word), design note 6",
   "done": [
+    {
+      "what": "The viewer (talk/engine/view.html), the site's offline cache (sw.js, with a kill switch), design note 6 on the dashboard and the phone's nav row",
+      "evidence": "src/static/talk/engine/view.html, src/static/sw.js, sw.json, assets/theme.js, site.css, dashboard.js; team/dev/debriefs/2026-10-29__the-viewer-the-offline-cache-and-note-6.md"
+    },
     {
       "what": "The player's build mode: every slide and studio piece in one list, drag or ↑ ↓, show or hide, a length and a comment each, presented at once; comments and the order sent through the editor's lane",
       "evidence": "src/static/talk/player.html, assets/pane.js (TuiLane), admin/build/build.py (talk/pieces.json); team/dev/debriefs/2026-10-29__the-build-mode.md"
@@ -72,12 +76,12 @@
   ],
   "next": [
     {
-      "what": "the viewer, talk/view.html?src=",
-      "why": "deck's request (dev 019)"
+      "what": "the home page's framing line (the perfect storm)",
+      "why": "the editor's brief; waits for deck's words"
     },
     {
-      "what": "design note 6 (dev 021)",
-      "why": "designer request, when slotted"
+      "what": "after 19:00: the dashboard parts 4 and 5, dev 003 and 004",
+      "why": "pace.json"
     }
   ],
   "asks": [
@@ -85,11 +89,6 @@
       "from": "dev",
       "to": "the editor",
       "what": "Give the conductor's session its two sealed files from the lane handover zip"
-    },
-    {
-      "from": "dev",
-      "to": "the editor",
-      "what": "An offline cache for the talk (a service worker at the site root, network-first, scoped, versioned, with a kill switch): yes or no, and who owns it"
     }
   ],
   "tokens": null,

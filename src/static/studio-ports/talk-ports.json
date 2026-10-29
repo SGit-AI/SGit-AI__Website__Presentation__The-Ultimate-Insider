@@ -1,0 +1,30 @@
+{
+ "title": "studio@'s ports, on the player",
+ "subtitle": "A test timeline: each port as one beat, so the player can start, stop, step and seek it. Not the talk: the talk's timeline is deck's talk.json.",
+ "event": "hack::soho",
+ "speaker": "Dinis Cruz",
+ "status": "a test timeline kept by studio@the-ultimate-insider",
+ "source": "Each port's sources are on its page under /studio-ports/",
+ "beats": [
+  {
+   "id": "port-abp",
+   "act": "Ports from ruv.sgit.ai",
+   "dur": 30,
+   "title": "What an Agent Behaviour Policy is",
+   "slide": {
+    "src": "../studio-ports/lab/abp/index.html"
+   },
+   "say": "Port of ruv.sgit.ai's slide 7 (run r8-explain)."
+  },
+  {
+   "id": "port-policy-gate",
+   "act": "Ports from ruv.sgit.ai",
+   "dur": 40,
+   "title": "Studio v4: the policy gate",
+   "slide": {
+    "src": "../studio-ports/lab/policy-gate/index.html"
+   },
+   "say": "Port of ruv.sgit.ai's studio v4 (studio run 1)."
+  }
+ ]
+}

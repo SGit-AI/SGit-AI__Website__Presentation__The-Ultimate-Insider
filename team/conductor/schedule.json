@@ -75,6 +75,22 @@
    "job": "the talk's arc: the story tree, Wardley maps, the arc against the beats; proposals to deck and fact requests to the researcher by mail (team/conductor/briefs/2026-10-29__editor/storyteller-brief.md)",
    "why": ":54 sees the hour's work; the conductor routes its mail at :02 and deck reads it at :17",
    "prompt": "as the other members' prompt, with the name storyteller"
+  },
+  {
+   "agent": "motion",
+   "minute": "24",
+   "cron": "CRON_TZ=Europe/London 24 * * * *",
+   "status": "proposed by the conductor, 29 October 2026 15:25 UTC: the editor creates the task in motion's own session once it has joined",
+   "job": "the new story animations, one request at a time from deck (team/conductor/briefs/2026-10-29__onboarding-motion.md)",
+   "prompt": "as the other members' prompt, with the name motion"
+  },
+  {
+   "agent": "studio",
+   "minute": "12",
+   "cron": "CRON_TZ=Europe/London 12 * * * *",
+   "status": "proposed by the conductor, 29 October 2026 15:25 UTC: the editor creates the task in studio's own session once it has joined",
+   "job": "ports and adaptations of ruv.sgit.ai's pieces as deck sorts them (team/conductor/briefs/2026-10-29__onboarding-studio.md)",
+   "prompt": "as the other members' prompt, with the name studio"
   }
  ],
  "not_scheduled": [

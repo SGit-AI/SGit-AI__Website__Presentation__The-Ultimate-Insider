@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 16,
-  "state": "wake 14:09: the editor's three asks and the storyteller's R1 to R9 delivered (evidence/story/); R5 does not hold, R2 has no clean split, no agent case of wrong values in a system of record found; CIRCIA still unpublished",
+  "round": 17,
+  "state": "wake 15:09: deck's six items for the programme's last pieces delivered (E05 pivoting, the Pilates agent found, E03 per source, E07, E06, E02 no danger rating)",
   "done": [
     {
       "what": "Session key made and published",
@@ -120,6 +120,10 @@
     {
       "what": "Facts for the story: the editor's three asks and R1 to R9, into the claims register",
       "evidence": "evidence/story/story-r1-r3.json, story-r4-r9.json; mail conductor 009; team/researcher/requests/storyteller__facts-delivered.md"
+    },
+    {
+      "what": "Deck's six items: E05 pivoting, the Pilates agent (found, a gym class), E03 per source with outside or inside, E07 a deployment, E06 the soft inside, E02 no danger rating",
+      "evidence": "evidence/studio/studio-e05.json, studio-e03b.json, studio-e06-e07-e02b.json; mail deck 038 to 041"
     }
   ],
   "next": [

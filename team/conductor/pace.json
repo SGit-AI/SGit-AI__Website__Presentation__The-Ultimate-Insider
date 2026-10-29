@@ -1,7 +1,7 @@
 {
  "schema": "the-ultimate-insider/pace/v1",
  "about": "The night's flow as a graph, kept by the conductor at every :02 wake and drawn by dev: themes, ideas, requests, artifacts and reviews as nodes; proposes, picks, asks, delivers and reviews as edges. The brief: team/conductor/briefs/2026-10-29__the-next-hours.md.",
- "updated": "2026-10-29T15:16:31Z",
+ "updated": "2026-10-29T15:24:14Z",
  "rules": {
   "in_flight_per_producer": 1,
   "new_requests_per_producer_per_wake": 1,
@@ -15,7 +15,7 @@
   },
   "ruv-sgit": {
    "slot": ":32",
-   "in_flight": "E05, E06, E08, E12, E14 (parallel builders, at the editor's word); the story pieces from deck; stages as it touches pieces"
+   "in_flight": "E12, E08, E14, E05, E06 (parallel builders); redos and stages on its own pieces; the story animations now go to motion@"
   },
   "dev": {
    "slot": ":47",
@@ -28,6 +28,14 @@
   "storyteller": {
    "slot": ":54",
    "in_flight": "fold the editor's 15:00 decisions into the tree, maps for 3e and 3f, the sequence to deck"
+  },
+  "motion": {
+   "slot": ":24 (proposed)",
+   "in_flight": "joining; then the building, from deck"
+  },
+  "studio": {
+   "slot": ":12 (proposed)",
+   "in_flight": "joining; then the ABP slides and studio v4 from ruv.sgit.ai"
   }
  },
  "nodes": [
@@ -868,6 +876,11 @@
    "at": "2026-10-29T15:20:49Z",
    "by": "conductor",
    "what": "the work's limit is 45 minutes, at the editor's word (was 8); the split of ruv.sgit set aside for now"
+  },
+  {
+   "at": "2026-10-29T15:24:14Z",
+   "by": "conductor",
+   "what": "motion@ (new story animations) and studio@ (ports from ruv.sgit.ai) briefed at the editor's word; ruv.sgit keeps the programme"
   }
  ],
  "queue": {
