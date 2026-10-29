@@ -2,6 +2,7 @@
 /* One slide = one 1280x720 canvas (#cv), scaled to fit and letterboxed. Every element is placed in canvas pixels. */
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;background:var(--bg);color:var(--text);overflow:hidden;font:20px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{position:fixed;inset:0}   /* a piece opened on its own on an iPad: the 1280px canvas must not widen the layout viewport before fit() scales it (studio@, 29 October) */
 #cv{position:absolute;left:0;top:0;width:1280px;height:720px;transform-origin:0 0;overflow:hidden}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .serif{font-family:Georgia,"Times New Roman",serif}

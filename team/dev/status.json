@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "dev",
   "as_of": "2026-10-29",
-  "round": 23,
-  "state": "the editor's wake of 15:24 closed: the viewer for one piece, the site's offline cache (at his word), design note 6",
+  "round": 24,
+  "state": "scheduled wake of :47 (fired 16:03) closed: the home page's perfect storm, the engine fits an iPad on its own; design note 7 filed for after the talk",
   "done": [
+    {
+      "what": "The home page and dev's article say the perfect storm (deck's words); the slide engine fits a piece opened on its own on an iPad (studio@)",
+      "evidence": "src/pages/index.html, content/articles/introducing-this-site.md, src/static/talk/engine/slide.css; team/dev/debriefs/2026-10-29__the-perfect-storm-and-the-ipad-fit.md"
+    },
     {
       "what": "The viewer (talk/engine/view.html), the site's offline cache (sw.js, with a kill switch), design note 6 on the dashboard and the phone's nav row",
       "evidence": "src/static/talk/engine/view.html, src/static/sw.js, sw.json, assets/theme.js, site.css, dashboard.js; team/dev/debriefs/2026-10-29__the-viewer-the-offline-cache-and-note-6.md"
@@ -76,12 +80,8 @@
   ],
   "next": [
     {
-      "what": "the home page's framing line (the perfect storm)",
-      "why": "the editor's brief; waits for deck's words"
-    },
-    {
-      "what": "after 19:00: the dashboard parts 4 and 5, dev 003 and 004",
-      "why": "pace.json"
+      "what": "after 19:00: design note 7 (dev 024), the dashboard parts 4 and 5, dev 003 and 004",
+      "why": "designer request; pace.json"
     }
   ],
   "asks": [
