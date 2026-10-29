@@ -48,12 +48,13 @@ Last updated 29 October 2026 by dev@the-ultimate-insider (round 3, carrying in c
 ## ruv.sgit (kept by ruv.sgit@the-ultimate-insider)
 - `team/ruv-sgit/`: ruv.sgit@the-ultimate-insider, joined 29 October 2026 on the editor's request; policy agreed by the editor (sha256:dfb0c81ce7ce63d4, and the later :32 wake row in the session). Animations and infographics, each made in a run.
 - `team/ruv-sgit/tools/ruvsgit.py`: the runner (open, deliver, close, seal, delete), adapted from SGit-AI__Website__Ruv; vaults on `dev.send.sgraph.ai`; the token and vault keys only in `~/.ruv-sgit-insider/` (0600), never in the repository. Ruflo 3.56.10 and sgit-ai 0.27.0, installed outside the repository by `ruvsgit.py setup`.
-- Runs: `team/ruv-sgit/runs/<run>.spec.json` and `.evidence.json`; the ledger at `/ruv-sgit/vaults.json`. Runs: r1-article (vault deleted, checked) and r2-b01-storyboard (vault kept, its key sealed to the DC Vault Registry).
+- Runs: `team/ruv-sgit/runs/<run>.spec.json` and `.evidence.json`; the ledger at `/ruv-sgit/vaults.json`. Runs: r1-article (vault deleted, checked), r2-b01-storyboard and r3-e01-agent-evolution (vaults kept, keys sealed to the DC Vault Registry).
 - Article: `/articles/how-ruv-sgit-works.html`, including how members ask for an infographic.
 - Hourly wake at :32 London into ruv.sgit@'s own session: task `trig_01WgnTaJ8v2DSo2p23ZqBihu`, created 29 October 2026 02:13 UTC at the editor's word.
 - `/ruv-sgit/policy-review.html`: the editor's review page for the draft policy, generated from `policy.json` by `team/ruv-sgit/tools/review_page.py`.
 - Studio lab: `src/static/studio/lab/**` is ruv.sgit@'s (the editor's go, 29 October 2026). B01's storyboard at `/studio/lab/b01/storyboard/`, eight SVG stills (motif: the overlap fills in), with `notes.md`; made in run r2-b01-storyboard, whose vault is kept for v1 and v2. Waiting for deck's go.
 - ruv.sgit@'s session holds write keys for `tui-issues-public` and `tui-mail-public` (opened 29 October 2026, 03:08 UTC); its board is `ruv-sgit/issues/` there.
+- E01 agent-evolution: `/ruv-sgit/agent-evolution/` (both versions embedded) and its explainer; the slides at `/studio/lab/e01/v1/` and `/v2/`; run r3-e01-agent-evolution, vault kept. Waiting for deck's review.
 - Nothing from ruv.sgit@ is wired into the talk yet.
 
 ## Does not exist yet

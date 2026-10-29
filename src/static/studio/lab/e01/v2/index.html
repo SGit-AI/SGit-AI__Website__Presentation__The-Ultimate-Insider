@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E01 v2: what an agent is, reach in motion</title>
+<link rel="stylesheet" href="../../../../talk/engine/slide.css">
+<script src="../../../../talk/engine/slide.js"></script>
+<style>
+#cnv{position:absolute;left:0;top:0;width:1280px;height:720px}
+#cap{position:absolute;left:60px;top:118px;width:420px}
+#cap .n{font:800 20px system-ui;letter-spacing:.14em;text-transform:uppercase;color:var(--agent)}
+#cap .t{font:700 34px/1.15 Georgia,serif;color:var(--head);margin:6px 0 8px}
+#cap .s{font-size:22px;line-height:1.3;color:var(--text)}
+#dots{position:absolute;left:60px;top:330px;display:flex;gap:10px}
+#dots i{width:26px;height:6px;border-radius:3px;background:var(--line2)}
+#dots i.on{background:var(--agent)}
+#quote{position:absolute;left:60px;width:460px;bottom:22px;font:italic 21px/1.3 Georgia,serif;color:var(--head)}
+#quote span{display:block;font-style:normal;color:var(--dim);font-size:20px;margin-top:6px}
+</style>
+</head>
+<body>
+<div id="cv" data-end="52">
+  <p class="kk a">Studio experiment E01 · v2, driven</p>
+  <div class="hl" data-in="0">What an agent is: <em>each step added reach.</em></div>
+  <canvas id="cnv" width="1280" height="720" aria-label="A chat model at the centre gains tools, a loop, our systems and other agents; the shaded reach grows at every step"></canvas>
+  <div id="cap"><div class="n" id="capn"></div><div class="t" id="capt"></div><div class="s" id="caps"></div></div>
+  <div id="dots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div id="quote" data-in="22">"LLMs using tools based on environmental feedback in a loop."<span>Anthropic, Building effective agents. The steps are a sketch, in order, without dates; the shapes are illustrative.</span></div>
+  <div class="bar"><i></i></div>
+</div>
+<script>
+(function () {
+  'use strict'
+  var STEPS = [
+    [1, 'A chat model', 'It answers in a box: text in, text out. It can touch nothing.'],
+    [8, 'One tool', 'It can look something up. Its first reach outside the box.'],
+    [14, 'Many tools', 'Files, a shell, a browser, mail. Each one is a way to act.'],
+    [20, 'The loop', 'It acts, looks at the result and acts again, until it decides it is done.'],
+    [29, 'Integrated', 'Our accounts, our tokens, our other systems. Its reach is now ours.'],
+    [37, 'Agents calling agents', 'Today\'s agentic flows: it hands work to agents with reach of their own.']
+  ]
+  var CX = 870, CY = 420
+  var TOOLS = [['search', -90, 100], ['files', -30, 118], ['shell', 30, 118], ['browser', 150, 118], ['mail', 210, 118]]
+  var SYS = [['accounts', -62, 192], ['tokens', 62, 192], ['systems', 180, 192]]
+  var PEERS = [[-122, 222], [0, 222], [122, 222]]
+  var css = getComputedStyle(document.documentElement), col = function (n) { return css.getPropertyValue(n).trim() }
+  var ctx = document.getElementById('cnv').getContext('2d')
+  var pol = function (a, r, ox, oy) { a = a * Math.PI / 180; return [(ox || CX) + r * Math.cos(a), (oy || CY) + r * Math.sin(a)] }
+  var lastStep = -1
+
+  function node(x, y, r, label, k, fill) {
+    if (k <= 0) return
+    ctx.globalAlpha = k
+    ctx.beginPath(); ctx.arc(x, y, r * (0.6 + 0.4 * k), 0, 7)
+    ctx.fillStyle = fill || col('--panel'); ctx.fill(); ctx.lineWidth = 2.5; ctx.strokeStyle = col('--agent'); ctx.stroke()
+    if (label) { ctx.fillStyle = col('--head'); ctx.font = '700 20px system-ui'; ctx.textAlign = 'center'; ctx.fillText(label, x, y < CY - 60 ? y - r - 10 : y + r + 24) }
+    ctx.globalAlpha = 1
+  }
+  function edge(a, b, k, dash) {
+    if (k <= 0) return
+    ctx.globalAlpha = k * .8; ctx.strokeStyle = col('--agent'); ctx.lineWidth = 2; ctx.setLineDash(dash ? [6, 7] : [])
+    ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k); ctx.stroke()
+    ctx.setLineDash([]); ctx.globalAlpha = 1
+  }
+  function pulse(a, b, f) {                                         // a call out and its result back: f in [0,1)
+    var g = f < .5 ? f * 2 : 2 - f * 2, x = a[0] + (b[0] - a[0]) * g, y = a[1] + (b[1] - a[1]) * g
+    ctx.beginPath(); ctx.arc(x, y, 6, 0, 7); ctx.fillStyle = f < .5 ? col('--agent') : col('--head'); ctx.fill()
+  }
+
+  window.SLIDE_RENDER = function (t, S) {
+    var k = function (a, d) { return S.ease(S.seg(t, a, a + (d || .8))) }
+    ctx.clearRect(0, 0, 1280, 720)
+    // the reach: one shaded disc whose radius follows the steps
+    var R = [0, 56, 112, 148, 158, 222, 290], r = 0
+    for (var i = 0; i < 6; i++) r = S.lerp(r, R[i + 1], k(STEPS[i][0], 1.4))
+    if (r > 0) { var g = ctx.createRadialGradient(CX, CY, 0, CX, CY, r); g.addColorStop(0, col('--agent-t')); g.addColorStop(1, 'rgba(0,0,0,0)')
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(CX, CY, r, 0, 7); ctx.fill()
+      ctx.globalAlpha = .5; ctx.setLineDash([4, 8]); ctx.strokeStyle = col('--agent'); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.arc(CX, CY, r, 0, 7); ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha = 1
+      ctx.fillStyle = col('--dim'); ctx.font = '600 20px system-ui'; ctx.textAlign = 'center'; ctx.fillText('reach (illustrative)', CX, CY - r - 8) }
+    var C = [CX, CY]
+    // tools: one at step 2, the rest at step 3
+    TOOLS.forEach(function (tl, j) { var p = pol(tl[1], tl[2]), a = j === 0 ? 8.4 : 14.4 + j * .5; edge(C, p, k(a)); node(p[0], p[1], 16, tl[0], k(a + .2)) })
+    // the loop: from step 4, calls go out to a tool and come back, one after another, without end
+    if (t >= 21) { var cyc = (t - 21) / 1.6, j = Math.floor(cyc) % TOOLS.length; pulse(C, pol(TOOLS[j][1], TOOLS[j][2]), cyc % 1)
+      ctx.globalAlpha = k(20.4); ctx.strokeStyle = col('--agent'); ctx.lineWidth = 4; ctx.setLineDash([12, 9]); ctx.lineDashOffset = -t * 30
+      ctx.beginPath(); ctx.arc(CX, CY, 62, 0, 7); ctx.stroke(); ctx.setLineDash([]); ctx.lineDashOffset = 0; ctx.globalAlpha = 1 }
+    // integrated: our systems, joined to the model
+    SYS.forEach(function (s, j) { var p = pol(s[1], s[2]), a = 29.4 + j * .6; edge(C, p, k(a), true); node(p[0], p[1], 18, s[0], k(a + .3), col('--panel2')) })
+    if (t >= 31) { var c2 = (t - 31) / 2.2, s2 = SYS[Math.floor(c2) % 3]; pulse(C, pol(s2[1], s2[2]), c2 % 1) }
+    // agents calling agents: peers with small tools of their own
+    PEERS.forEach(function (pe, j) { var p = pol(pe[0], pe[1]), a = 37.4 + j * .8; edge(C, p, k(a), true); node(p[0], p[1], 20, j === 1 ? 'agent' : '', k(a + .3), col('--agent-t'))
+      for (var m = 0; m < 3; m++) { var q = pol(pe[0] + (m - 1) * 40, 44, p[0], p[1]); edge(p, q, k(a + .6 + m * .2)); node(q[0], q[1], 6, '', k(a + .7 + m * .2)) } })
+    if (t >= 40) { var c3 = (t - 40) / 1.8, pe = PEERS[Math.floor(c3) % 3]; pulse(C, pol(pe[0], pe[1]), c3 % 1) }
+    // the model itself, last, on top
+    ctx.fillStyle = col('--panel'); ctx.strokeStyle = col('--head'); ctx.lineWidth = 3; ctx.globalAlpha = k(1)
+    ctx.beginPath(); ctx.roundRect ? ctx.roundRect(CX - 52, CY - 24, 104, 48, 10) : ctx.rect(CX - 52, CY - 24, 104, 48); ctx.fill(); ctx.stroke()
+    ctx.fillStyle = col('--head'); ctx.font = '700 20px system-ui'; ctx.textAlign = 'center'; ctx.fillText('model', CX, CY + 7); ctx.globalAlpha = 1
+    // the caption: the current step only
+    var cur = -1; STEPS.forEach(function (s, i) { if (t >= s[0]) cur = i })
+    if (cur !== lastStep) { lastStep = cur
+      S.$('capn').textContent = cur < 0 ? '' : 'Step ' + (cur + 1) + ' of 6'; S.$('capt').textContent = cur < 0 ? '' : STEPS[cur][1]; S.$('caps').textContent = cur < 0 ? '' : STEPS[cur][2]
+      document.querySelectorAll('#dots i').forEach(function (d, i) { d.className = i <= cur ? 'on' : '' }) }
+  }
+})()
+</script>
+</body>
+</html>
