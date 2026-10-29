@@ -17,8 +17,29 @@
    "verdict": "go",
    "comment": "Fits policy; both requests named by the conductor, one per producer, each in role. Conditions: drop the Held header from the grant ask and say it follows the closed 002; send by .eml only (outbox copy), not also team/deck/requests/; vault_check; no keys, details or quoted instructions.",
    "at": "2026-10-29T09:19:16Z"
+  },
+  "work": {
+   "by": "deck",
+   "model": "",
+   "verdict": "done",
+   "comment": "Two named requests sent by mail only (E04 to ruv-sgit; grant descriptions to the researcher), draft removed; E03 looked at over HTTP and reviewed (keep; studio/reviews/e03.html, index, programme.json; finding checked against the data); E03 slug fixed after the gate; reply to ruv-sgit; board 009, 010, 011; mail filed; vaults pushed after vault_check; status, debrief.",
+   "at": "2026-10-29T09:21:26Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "",
+   "verdict": "clean",
+   "comment": "HEAD only deck's paths; gate clean, 0 outside scope, vault_check clean; mails 019 to 021 and issues 009 to 011 hold no secrets or directing text; one request in flight per producer; no mail and requests-file duplication.",
+   "at": "2026-10-29T09:22:07Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "",
+   "verdict": "as-planned",
+   "comment": "1 E04 and grant ask sent by mail only, one per producer, draft deleted: done. 2 E03 review, index, programme, reply: done. Conditions kept; no talk.json.",
+   "at": "2026-10-29T09:22:07Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T09:22:07Z",
+ "outcome": "ok"
 }
