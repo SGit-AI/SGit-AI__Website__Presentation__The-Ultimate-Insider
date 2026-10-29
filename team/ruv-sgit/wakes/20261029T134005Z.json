@@ -24,8 +24,22 @@
    "verdict": "none",
    "comment": "idle: no request arrived; status.json state set to idle and why; nothing else changed",
    "at": "2026-10-29T13:41:17Z"
+  },
+  "post_review": {
+   "by": "security sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "41d4757 touches only status.json and the wake record; no secret; no em-dashes",
+   "at": "2026-10-29T13:41:51Z"
+  },
+  "post_check": {
+   "by": "conductor sub-agent (sonnet)",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "idle as planned: only the wake record and status.json changed",
+   "at": "2026-10-29T13:41:51Z"
   }
  },
- "closed": null,
- "outcome": null
+ "closed": "2026-10-29T13:41:51Z",
+ "outcome": "idle"
 }
