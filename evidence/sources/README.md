@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T02:05Z. 324 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T02:12Z. 325 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -64,6 +64,7 @@ Built 2026-10-29T02:05Z. 324 sources; `manifest.json` has every file's SHA-256. 
 | [eu-ai-omnibus-adopted](https://www.addleshawgoddard.com/en/insights/insights-briefings/2026/technology/eu-ai-act-ai-omnibus-formally-adopted/) | Addleshaw Goddard | secondary | 2026-10-29T01:53:32Z | 200 | full | 5 |
 | [eu-pld-2024-2853](https://eur-lex.europa.eu/eli/dir/2024/2853/oj/eng) | EUR-Lex | primary | None | 202 | failed: EUR-Lex returned 202 with empty body (bot challenge); facts seen only in search summaries | 0 |
 | [eyesecurity-toolshell](https://labs.eye.security/sharepoint-under-siege/) | Eye Security | primary | 2026-10-29T01:51:16Z | 200 | full | 3 |
+| [federalregister-circia-2026-10-29T0212Z](https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=CIRCIA&order=newest&per_page=8) | Federal Register (US Office of the Federal Register) | primary | 2026-10-29T02:12:24Z | 200 | full | 1 |
 | [federalregister-circia-search](https://www.federalregister.gov/api/v1/documents.json?conditions%5Bterm%5D=CIRCIA&order=newest&per_page=10) | Federal Register (API) | primary | 2026-10-29T01:51:49Z | 200 | full (JSON search result, newest first) | 3 |
 | [fig-1password-waxell](https://waxell.ai/blog/ai-agents-twice-approved-data-1password-survey) |  | blog | 2026-10-29T01:52:01Z | 200 | full | 4 |
 | [fig-csa-agent-identity](https://cloudsecurityalliance.org/press-releases/2026/03/24/more-than-two-thirds-of-organizations-cannot-clearly-distinguish-ai-agent-from-human-actions) |  | vendor-survey | 2026-10-29T01:52:01Z | 200 | full | 4 |

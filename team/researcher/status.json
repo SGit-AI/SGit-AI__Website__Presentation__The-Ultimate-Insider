@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 1,
-  "state": "first evidence round done: 88 claims graded, 42 ideas mapped, 23 incidents, 324 sources hashed; the register is in evidence/; the vaults wait on the access token to push",
+  "round": 2,
+  "state": "wake 02:09: no mail, no requests; CIRCIA re-checked in the Federal Register (still no final rule at 02:12 UTC); the vaults still wait on the access token",
   "done": [
     {
       "what": "Session key made and published",
@@ -36,9 +36,17 @@
     {
       "what": "Handover zip for tui-evidence-public to the editor",
       "evidence": "2026-10-29__researcher__vault-handover.zip, sent in the session"
+    },
+    {
+      "what": "CIRCIA re-checked in the Federal Register API on the day: no final rule",
+      "evidence": "evidence/claims/claims.json circia-status-oct-2026; capture federalregister-circia-2026-10-29T0212Z"
     }
   ],
   "next": [
+    {
+      "what": "Re-check CIRCIA after 13:45 UTC, when the day's Federal Register is out",
+      "why": "the talk is at 19:00 London"
+    },
     {
       "what": "Push tui-evidence-public, tui-issues-public and tui-mail-public",
       "why": "blocked on SG_SEND_ACCESS_TOKEN"
@@ -50,10 +58,6 @@
     {
       "what": "Check the 2026 evaluation-agent incidents against the vendors' own posts",
       "why": "they rest on press coverage"
-    },
-    {
-      "what": "Re-check CIRCIA in the Federal Register on the day",
-      "why": "the talk's cue asks for it"
     }
   ],
   "asks": [
