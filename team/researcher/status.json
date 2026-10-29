@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "researcher",
   "as_of": "2026-10-29",
-  "round": 19,
-  "state": "wake 17:09: the editor's work catalogued (PKI first, newsrooms, SGit, SHarness, ruv.sgit; 67 showcase crops), the public vaults for embeds, the blast-radius index",
+  "round": 20,
+  "state": "wake 18:09: how we keep it safe checked (four corrections, to motion and deck by 18:15); open source, investors and security products hit in PHP October, for part 2",
   "done": [
     {
       "what": "Session key made and published",
@@ -132,6 +132,10 @@
     {
       "what": "Wake 17:09: the editor's work section catalogue and parts 2 and 3 survey",
       "evidence": "evidence/studio/studio-work-pki.json, studio-work-newsrooms.json, studio-work-sgit-sharness.json, studio-blast-radius.json, evidence/studio/img/"
+    },
+    {
+      "what": "Wake 18:09: the team's security claims checked against the record; open source strategy, investors, security products in PHP October",
+      "evidence": "evidence/studio/how-we-keep-it-safe-check.md, evidence/studio/studio-open-source-investors.json"
     }
   ],
   "next": [

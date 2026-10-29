@@ -1,7 +1,7 @@
 {
  "about": "Every source captured for the evidence vault, with the SHA-256 of every file as it is in this vault",
- "built": "2026-10-29T17:33Z",
- "count": 659,
+ "built": "2026-10-29T18:20Z",
+ "count": 696,
  "sources": [
   {
    "id": "404media-amazon-q",
@@ -24411,6 +24411,1687 @@
     }
    ],
    "recorded_by": "studio-work-newsrooms"
+  },
+  {
+   "id": "wos-nr-desk-strategy",
+   "url": "https://newsroom.sgit.ai/desks/strategy.html",
+   "final_url": "https://newsroom.sgit.ai/desks/strategy.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Strategy & startups: the desk",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:14:54Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4b60a8d100a69a2f576c4bee083243a4fd9d0d49fe4101e71ca5d72a8024a0dd",
+     "bytes_as_fetched": 375,
+     "sha256": "4b60a8d100a69a2f576c4bee083243a4fd9d0d49fe4101e71ca5d72a8024a0dd",
+     "bytes": 375
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "467e4778df11fd57b898aba7245d96b104e48a93816f6125ecd94b3c1ee03658",
+     "bytes_as_fetched": 61763,
+     "sha256": "467e4778df11fd57b898aba7245d96b104e48a93816f6125ecd94b3c1ee03658",
+     "bytes": 61763
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "209d934975e3ef1310965b3b1a4bd685956653d3f3fbfa4ac6501947fcd8b42e",
+     "bytes_as_fetched": 33989,
+     "sha256": "209d934975e3ef1310965b3b1a4bd685956653d3f3fbfa4ac6501947fcd8b42e",
+     "bytes": 33989
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "b00ad4ddea9383b01f5d61c62dd0609541d19164882931fa6ecc0ccb069160ad",
+     "bytes_as_fetched": 76,
+     "sha256": "b00ad4ddea9383b01f5d61c62dd0609541d19164882931fa6ecc0ccb069160ad",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-eyeballs-get-cheap",
+   "url": "https://newsroom.sgit.ai/articles/the-eyeballs-get-cheap.html",
+   "final_url": "https://newsroom.sgit.ai/articles/the-eyeballs-get-cheap.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The eyeballs get cheap",
+   "kind": "own-site",
+   "published": "2026-10-14",
+   "captured_at": "2026-10-29T18:14:52Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ee29956a48cb4528432b8051af837a0e0b0c9a974f34beb1d66b971cc9786133",
+     "bytes_as_fetched": 414,
+     "sha256": "ee29956a48cb4528432b8051af837a0e0b0c9a974f34beb1d66b971cc9786133",
+     "bytes": 414
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0ad6b55fda53b1771b0c4e42323090da20bf456dcd52e9aa7e45fbda03678f6f",
+     "bytes_as_fetched": 48981,
+     "redacted": 2,
+     "sha256": "7e7b70f4a4f36bfec60e7c9c0455185c4beaa66c9a9f033bfa416caf2b4ce963",
+     "bytes": 48973
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "27e6ab4ab5093fd1715cd1cd0dc136f23f70e41b436b2bca2e4e3529197c0515",
+     "bytes_as_fetched": 19651,
+     "redacted": 1,
+     "sha256": "2af7719ef3ebbd5afd5ef4028f88e8ffaecaf40e2a9576ce92aecd0ab94e4263",
+     "bytes": 19647
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c85cd306e9622ee843d4915ad09b86d529d1542e0cbde73495b9cabaaebd02bc",
+     "bytes_as_fetched": 76,
+     "sha256": "c85cd306e9622ee843d4915ad09b86d529d1542e0cbde73495b9cabaaebd02bc",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-fork-next-door",
+   "url": "https://newsroom.sgit.ai/articles/the-fork-next-door.html",
+   "final_url": "https://newsroom.sgit.ai/articles/the-fork-next-door.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The fork next door",
+   "kind": "own-site",
+   "published": "2026-10-16",
+   "captured_at": "2026-10-29T18:14:51Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "4ce8d679ae2e4fa14eb89fc402b5c9ac9631312c9ec94f964fd4fa331f73894b",
+     "bytes_as_fetched": 402,
+     "sha256": "4ce8d679ae2e4fa14eb89fc402b5c9ac9631312c9ec94f964fd4fa331f73894b",
+     "bytes": 402
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "96e9939ee98a75c7676fd3f5d717776d4bb21331d2db4e8936326d7cbfb357cc",
+     "bytes_as_fetched": 62539,
+     "redacted": 2,
+     "sha256": "d96495b96ea0cdc8df66886958add9b1319bfb7df93199f5386bcf3174113d62",
+     "bytes": 62531
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c448d617ede86266dfc315cbb624c3073c9b9f6b8842a2fac59b6b16942ef6b2",
+     "bytes_as_fetched": 27336,
+     "redacted": 1,
+     "sha256": "b7e767fe8ea03f86ac904ed2eb484c54a607c2991177ab4b76667d408a18472c",
+     "bytes": 27332
+    },
+    {
+     "name": "region-hero.png",
+     "sha256_as_fetched": "78047ffbee8ea49cc1f236ff811d0d57c06a5bd3ec9b3834328917faa9d34ea5",
+     "bytes_as_fetched": 158829,
+     "sha256": "78047ffbee8ea49cc1f236ff811d0d57c06a5bd3ec9b3834328917faa9d34ea5",
+     "bytes": 158829
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "4d6ac563836fc00f3db5272ad655488ddaf19b83bc6424d56d19cd3883bbc6fa",
+     "bytes_as_fetched": 76,
+     "sha256": "4d6ac563836fc00f3db5272ad655488ddaf19b83bc6424d56d19cd3883bbc6fa",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-fund-it-with-time",
+   "url": "https://newsroom.sgit.ai/articles/fund-it-with-time.html",
+   "final_url": "https://newsroom.sgit.ai/articles/fund-it-with-time.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Fund it with time",
+   "kind": "own-site",
+   "published": "2026-10-19",
+   "captured_at": "2026-10-29T18:14:53Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "327f57b90a66aca314c1b5ea361a651aaddbc25b55570f521f9cfe6ba6fffc33",
+     "bytes_as_fetched": 403,
+     "sha256": "327f57b90a66aca314c1b5ea361a651aaddbc25b55570f521f9cfe6ba6fffc33",
+     "bytes": 403
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "b68c99d43fe3f1c1aaf129da0138185487e15cdf6173c4fb84bc5bed411c6093",
+     "bytes_as_fetched": 45947,
+     "sha256": "b68c99d43fe3f1c1aaf129da0138185487e15cdf6173c4fb84bc5bed411c6093",
+     "bytes": 45947
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "24ef85c709d5d8aba40b1078a20a6717972dd50ba2de3cf500a3ad90a28d1c9a",
+     "bytes_as_fetched": 16838,
+     "sha256": "24ef85c709d5d8aba40b1078a20a6717972dd50ba2de3cf500a3ad90a28d1c9a",
+     "bytes": 16838
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "67dc394788c0b8e1df5fb7b5e022054a521dbbfdbffcdf0a5167a2ce88cf5102",
+     "bytes_as_fetched": 76,
+     "sha256": "67dc394788c0b8e1df5fb7b5e022054a521dbbfdbffcdf0a5167a2ce88cf5102",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-investor-sgit-ai",
+   "url": "https://newsroom.sgit.ai/articles/investor-sgit-ai.html",
+   "final_url": "https://newsroom.sgit.ai/articles/investor-sgit-ai.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "investor.sgit.ai: a brief for a website where investors and founders use our tools",
+   "kind": "own-site",
+   "published": "2026-10-28",
+   "captured_at": "2026-10-29T18:14:52Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "88096b0ab2553f24128997dbc7200782935294a68dc014981b38e201a28499c1",
+     "bytes_as_fetched": 400,
+     "sha256": "88096b0ab2553f24128997dbc7200782935294a68dc014981b38e201a28499c1",
+     "bytes": 400
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "aa0fbbcebd10177eafb8e0a6e61659c62dd7dcf13282797bfcc88fec1eb7ef1c",
+     "bytes_as_fetched": 48242,
+     "redacted": 2,
+     "sha256": "4a6156efa00b74f4a049fc76e27a625b7aade21eeced5650d63b711e12dbc498",
+     "bytes": 48234
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "08284176b25e524e0ee28a93562c86a7c615122216208097b0500801493d3046",
+     "bytes_as_fetched": 19030,
+     "redacted": 1,
+     "sha256": "ea46d4dcfdd38e3bd4a61ebdd1e6b106f25946e8f61d9b482ae44ac8514eef27",
+     "bytes": 19026
+    },
+    {
+     "name": "region-hero.png",
+     "sha256_as_fetched": "a2c8fb588c5b520df995db45eb7832fbbe17613f5c69d309c43b491f3fc50d39",
+     "bytes_as_fetched": 182562,
+     "sha256": "a2c8fb588c5b520df995db45eb7832fbbe17613f5c69d309c43b491f3fc50d39",
+     "bytes": 182562
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "73188086b0e8791890521a950c8d8b92720e84ea253689fa88bcd7da386f7de7",
+     "bytes_as_fetched": 76,
+     "sha256": "73188086b0e8791890521a950c8d8b92720e84ea253689fa88bcd7da386f7de7",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-maintenance-deficit",
+   "url": "https://newsroom.sgit.ai/articles/the-maintenance-deficit-with-evidence.html",
+   "final_url": "https://newsroom.sgit.ai/articles/the-maintenance-deficit-with-evidence.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The maintenance deficit, with evidence",
+   "kind": "own-site",
+   "published": "2026-10-23",
+   "captured_at": "2026-10-29T18:14:52Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "9f277549db56cdf52686f1829ce6c3f72ad81e54952c5d040a26cab5cc944d55",
+     "bytes_as_fetched": 445,
+     "sha256": "9f277549db56cdf52686f1829ce6c3f72ad81e54952c5d040a26cab5cc944d55",
+     "bytes": 445
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e4d1e6706a49b3279773b0286129e6df58e795a8c96ce0f039d80376a46e4842",
+     "bytes_as_fetched": 46892,
+     "sha256": "e4d1e6706a49b3279773b0286129e6df58e795a8c96ce0f039d80376a46e4842",
+     "bytes": 46892
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "71e766334ef3ca8615d52b09eb94a31eba8e3edef70243bad072f7fdd3126ac6",
+     "bytes_as_fetched": 17129,
+     "sha256": "71e766334ef3ca8615d52b09eb94a31eba8e3edef70243bad072f7fdd3126ac6",
+     "bytes": 17129
+    },
+    {
+     "name": "region-hero.png",
+     "sha256_as_fetched": "a706846bd3009378a0e1c4168b653e16886b97ed7cec7b15064c37505c79e799",
+     "bytes_as_fetched": 574289,
+     "sha256": "a706846bd3009378a0e1c4168b653e16886b97ed7cec7b15064c37505c79e799",
+     "bytes": 574289
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "bd3c1b51825fbcc3904e8a0c6a5b3cb87fed110c59cccbf4701d683ec18b8302",
+     "bytes_as_fetched": 76,
+     "sha256": "bd3c1b51825fbcc3904e8a0c6a5b3cb87fed110c59cccbf4701d683ec18b8302",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-open-source-keep-it",
+   "url": "https://newsroom.sgit.ai/articles/open-source-so-you-keep-it.html",
+   "final_url": "https://newsroom.sgit.ai/articles/open-source-so-you-keep-it.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Open source what you build, even while you are employed",
+   "kind": "own-site",
+   "published": "2026-10-19",
+   "captured_at": "2026-10-29T18:14:52Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "d4167bdd523822292b66003126db7a5ff717cc63c6ecce010379561dbf5a28f6",
+     "bytes_as_fetched": 423,
+     "sha256": "d4167bdd523822292b66003126db7a5ff717cc63c6ecce010379561dbf5a28f6",
+     "bytes": 423
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4b7ce0c0954935e1b813fd0c24b3620960e10ed2a54b2e168b8c8139c271342d",
+     "bytes_as_fetched": 47147,
+     "sha256": "4b7ce0c0954935e1b813fd0c24b3620960e10ed2a54b2e168b8c8139c271342d",
+     "bytes": 47147
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "eead84745a399d024bbba925bf0f51ad43d3634180d5e706822003657490bc8e",
+     "bytes_as_fetched": 17695,
+     "sha256": "eead84745a399d024bbba925bf0f51ad43d3634180d5e706822003657490bc8e",
+     "bytes": 17695
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "c44ac268e6bde3dd9078db445da6549c4da6005f343f4f5cc96d1939a86b5739",
+     "bytes_as_fetched": 76,
+     "sha256": "c44ac268e6bde3dd9078db445da6549c4da6005f343f4f5cc96d1939a86b5739",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-open-source-not-free",
+   "url": "https://newsroom.sgit.ai/articles/open-source-is-not-free.html",
+   "final_url": "https://newsroom.sgit.ai/articles/open-source-is-not-free.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Open source is not free: who pays to keep the long tail working?",
+   "kind": "own-site",
+   "published": "2026-10-10",
+   "captured_at": "2026-10-29T18:14:51Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "192545751acccd95c6dce909b1362683eaaf6f78c09e0d1e7f6150d0d639981f",
+     "bytes_as_fetched": 418,
+     "sha256": "192545751acccd95c6dce909b1362683eaaf6f78c09e0d1e7f6150d0d639981f",
+     "bytes": 418
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "7bee2989e0bc208971a713fff5ee7692b13bd3b3c17fc54aa63cca9cdf32261c",
+     "bytes_as_fetched": 61026,
+     "sha256": "7bee2989e0bc208971a713fff5ee7692b13bd3b3c17fc54aa63cca9cdf32261c",
+     "bytes": 61026
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "dbfff7b7d914a941aa19d43de570202400f3c07b61a275f079deff71158a0f36",
+     "bytes_as_fetched": 31054,
+     "sha256": "dbfff7b7d914a941aa19d43de570202400f3c07b61a275f079deff71158a0f36",
+     "bytes": 31054
+    },
+    {
+     "name": "region-where-the-money-flows.png",
+     "sha256_as_fetched": "8ac946e72c6f3f4ab7d5c60e548bf17372e76a960de380d295182079befa0059",
+     "bytes_as_fetched": 132226,
+     "sha256": "8ac946e72c6f3f4ab7d5c60e548bf17372e76a960de380d295182079befa0059",
+     "bytes": 132226
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "58a7209a48f613f85b318f48612f8d4fb51c61d9b82e32a9722fc3fc7ff74bce",
+     "bytes_as_fetched": 76,
+     "sha256": "58a7209a48f613f85b318f48612f8d4fb51c61d9b82e32a9722fc3fc7ff74bce",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-seed-companies",
+   "url": "https://newsroom.sgit.ai/mvps/seed-companies.html",
+   "final_url": "https://newsroom.sgit.ai/mvps/seed-companies.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The seed companies",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:14:54Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "44794332ac39e897e56637b4861ddca884636a4f838d04ae4e907f516ccb4a71",
+     "bytes_as_fetched": 386,
+     "sha256": "44794332ac39e897e56637b4861ddca884636a4f838d04ae4e907f516ccb4a71",
+     "bytes": 386
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a8189679d875ab4e37ec37ed9c13a93ba63b5450c305fd4d89ee7766e1a9ff95",
+     "bytes_as_fetched": 25095,
+     "sha256": "a8189679d875ab4e37ec37ed9c13a93ba63b5450c305fd4d89ee7766e1a9ff95",
+     "bytes": 25095
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c391977752a103efa7910330b2d220ffafa382eeb0ff9fc240307e84de300238",
+     "bytes_as_fetched": 12844,
+     "sha256": "c391977752a103efa7910330b2d220ffafa382eeb0ff9fc240307e84de300238",
+     "bytes": 12844
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "cd7aedeae63397abb67ef4794a565e98ff17b580e9ff9f444276a0d4039e103c",
+     "bytes_as_fetched": 76,
+     "sha256": "cd7aedeae63397abb67ef4794a565e98ff17b580e9ff9f444276a0d4039e103c",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-sell-dont-issue",
+   "url": "https://newsroom.sgit.ai/articles/sell-dont-issue.html",
+   "final_url": "https://newsroom.sgit.ai/articles/sell-dont-issue.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Sell, don't issue",
+   "kind": "own-site",
+   "published": "2026-10-16",
+   "captured_at": "2026-10-29T18:14:53Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "51bb2d0ae9cd45b6f7bcfc2a2a28f6c4a05d0af92d01823536c792b7063b49b7",
+     "bytes_as_fetched": 397,
+     "sha256": "51bb2d0ae9cd45b6f7bcfc2a2a28f6c4a05d0af92d01823536c792b7063b49b7",
+     "bytes": 397
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c6851b4dd3719354cb61a7d92c6f5fd68214373a620ddf2af91e04c4a4b00977",
+     "bytes_as_fetched": 63384,
+     "redacted": 2,
+     "sha256": "f57044ac2a147d94b121dcee175239d83778f75af657154bc8e5f372567ab3f3",
+     "bytes": 63376
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8cc627e6b96949146d455d3895b67c4083a72bb75ed586fa7034440c554f522b",
+     "bytes_as_fetched": 29052,
+     "redacted": 1,
+     "sha256": "26a73d3dbad95c4f45f9f0b4aced3d364fe318b441630feb026421c25570491f",
+     "bytes": 29048
+    },
+    {
+     "name": "region-hero.png",
+     "sha256_as_fetched": "1bd7f893b99ed1a9c6adb6d7069f8b13440197fbd083404c4e3f5671bf3141dc",
+     "bytes_as_fetched": 138808,
+     "sha256": "1bd7f893b99ed1a9c6adb6d7069f8b13440197fbd083404c4e3f5671bf3141dc",
+     "bytes": 138808
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6b9b8eb425d393f62bbf381102b0bb4d51c5cf4755f664e5d4554730a026f582",
+     "bytes_as_fetched": 76,
+     "sha256": "6b9b8eb425d393f62bbf381102b0bb4d51c5cf4755f664e5d4554730a026f582",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-value-of-constraints",
+   "url": "https://newsroom.sgit.ai/articles/the-value-of-constraints.html",
+   "final_url": "https://newsroom.sgit.ai/articles/the-value-of-constraints.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The value of constraints",
+   "kind": "own-site",
+   "published": "2026-10-16",
+   "captured_at": "2026-10-29T18:14:52Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "73792d5f1ac573d0757d076cebf538494e4afd865909d00b13eb475f5f716a17",
+     "bytes_as_fetched": 420,
+     "sha256": "73792d5f1ac573d0757d076cebf538494e4afd865909d00b13eb475f5f716a17",
+     "bytes": 420
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "c1e761af412f31e073a20d2a92116d90ce3f849c53089c3f6263bab5260df745",
+     "bytes_as_fetched": 50704,
+     "redacted": 2,
+     "sha256": "84bb5510aa3c631b70f761455d6fa4853c1c13341ea4d65fe9a93f32dadf99db",
+     "bytes": 50696
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3db4364791d679e963dbbfbff37f0d0fd79b73bae597960fbf313b24dd0df101",
+     "bytes_as_fetched": 20774,
+     "redacted": 1,
+     "sha256": "114be8e2929c623faa05538d8b7e62d5d8f3e7e2a1cc9c522d082a18b26ca1a8",
+     "bytes": 20770
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d3c112ae41da4a373b35fc552478cc44e21484441c96fa6653a6a4d6b1b6e6e4",
+     "bytes_as_fetched": 76,
+     "sha256": "d3c112ae41da4a373b35fc552478cc44e21484441c96fa6653a6a4d6b1b6e6e4",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-what-open-source-is",
+   "url": "https://newsroom.sgit.ai/articles/what-open-source-is-and-is-not.html",
+   "final_url": "https://newsroom.sgit.ai/articles/what-open-source-is-and-is-not.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "What open source is, and what it is not",
+   "kind": "own-site",
+   "published": "2026-10-12",
+   "captured_at": "2026-10-29T18:14:51Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "dfe7bc11358e92f6cfa6c6e9acb4cee8b4c03b6265198275d865cd7e91661351",
+     "bytes_as_fetched": 431,
+     "sha256": "dfe7bc11358e92f6cfa6c6e9acb4cee8b4c03b6265198275d865cd7e91661351",
+     "bytes": 431
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0e5d52a84d31f789e49322dd8f53bf1aa8669cf3c4b4fa31859335c0a5243c00",
+     "bytes_as_fetched": 48297,
+     "redacted": 2,
+     "sha256": "761419edf19a77003252e946db9b90fd83fad0c18dfdd7d2ff0636aca30a04d5",
+     "bytes": 48289
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "a235ad6fb0bb6b2cdc1a408ea2f7f5d81447adda1874369d5b0740f2cd18d60f",
+     "bytes_as_fetched": 19830,
+     "redacted": 1,
+     "sha256": "58eaab452870696ef692bedd1d4a478219825e013a1073b810d4787235efdec2",
+     "bytes": 19826
+    },
+    {
+     "name": "region-hero.png",
+     "sha256_as_fetched": "9a6f9df63115e3c0aecf381967eecb2dcf783938fe22b89ec50c2427c079b690",
+     "bytes_as_fetched": 186800,
+     "sha256": "9a6f9df63115e3c0aecf381967eecb2dcf783938fe22b89ec50c2427c079b690",
+     "bytes": 186800
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "839e0c5119a9fec3f33979c072df5e8e7d3cd8ee59e7853f5e8b339d732f8943",
+     "bytes_as_fetched": 76,
+     "sha256": "839e0c5119a9fec3f33979c072df5e8e7d3cd8ee59e7853f5e8b339d732f8943",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-nr-where-to-invest",
+   "url": "https://newsroom.sgit.ai/articles/where-to-invest-in-sgit.html",
+   "final_url": "https://newsroom.sgit.ai/articles/where-to-invest-in-sgit.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Where to invest in sgit",
+   "kind": "own-site",
+   "published": "2026-10-28",
+   "captured_at": "2026-10-29T18:14:53Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "71960a7ae5e82b82b574f968bc5d652f53805372112d0420a8fec377d2ef5f7f",
+     "bytes_as_fetched": 413,
+     "sha256": "71960a7ae5e82b82b574f968bc5d652f53805372112d0420a8fec377d2ef5f7f",
+     "bytes": 413
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "6a7fcb2d1903941fa435299dbd48f075c405cc1cb069b36cbdda68364242180b",
+     "bytes_as_fetched": 49313,
+     "sha256": "6a7fcb2d1903941fa435299dbd48f075c405cc1cb069b36cbdda68364242180b",
+     "bytes": 49313
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "3a94448064d92a5d93a03c60f0a2a1571d57586e46e8134fcd3817fc6cbf4bc1",
+     "bytes_as_fetched": 19812,
+     "sha256": "3a94448064d92a5d93a03c60f0a2a1571d57586e46e8134fcd3817fc6cbf4bc1",
+     "bytes": 19812
+    },
+    {
+     "name": "region-hero.png",
+     "sha256_as_fetched": "46fac4c82cd380cd59f35a33381d74e920c467d80ca353300d86f49f6ef9e812",
+     "bytes_as_fetched": 133530,
+     "sha256": "46fac4c82cd380cd59f35a33381d74e920c467d80ca353300d86f49f6ef9e812",
+     "bytes": 133530
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2859197b9cf461ae1c36b9baf200670c4302f41ed53ef0cc672ee636e1fb1a62",
+     "bytes_as_fetched": 76,
+     "sha256": "2859197b9cf461ae1c36b9baf200670c4302f41ed53ef0cc672ee636e1fb1a62",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-os-founders",
+   "url": "https://open-source.sgit.ai/founders/index.html",
+   "final_url": "https://open-source.sgit.ai/founders/index.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Owning the code, or opening it: guidance for founders",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:18:09Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e1972ab27ac5bf8aa548d44818fc25fb76e2250ebacc29a35c2ee31409b826f5",
+     "bytes_as_fetched": 376,
+     "sha256": "e1972ab27ac5bf8aa548d44818fc25fb76e2250ebacc29a35c2ee31409b826f5",
+     "bytes": 376
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "21eba527d0d6881ce6aefb57e34ad392571ac8045964c64b8f649b20703994d7",
+     "bytes_as_fetched": 23994,
+     "sha256": "21eba527d0d6881ce6aefb57e34ad392571ac8045964c64b8f649b20703994d7",
+     "bytes": 23994
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "85627fc3a6860fc7bb4238c0a2ff52e9f1696aff3ebd9af21c3f4e9b948be35d",
+     "bytes_as_fetched": 13587,
+     "sha256": "85627fc3a6860fc7bb4238c0a2ff52e9f1696aff3ebd9af21c3f4e9b948be35d",
+     "bytes": 13587
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "96b79a767780d9113c2911a53cc93473da881429daad1e5964df8f04d48ac11a",
+     "bytes_as_fetched": 76,
+     "sha256": "96b79a767780d9113c2911a53cc93473da881429daad1e5964df8f04d48ac11a",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-os-funding",
+   "url": "https://open-source.sgit.ai/funding/index.html",
+   "final_url": "https://open-source.sgit.ai/funding/index.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Funding: three proposals, compared for the first time, and a position",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:18:09Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "027affd78174869e337b0981c1473fab4a231fb61af920ba72f6e5561af414d8",
+     "bytes_as_fetched": 373,
+     "sha256": "027affd78174869e337b0981c1473fab4a231fb61af920ba72f6e5561af414d8",
+     "bytes": 373
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "28d56740cf7e9a398131731346a84b0fbd588801ed706a513c495fe8063a41f2",
+     "bytes_as_fetched": 17483,
+     "sha256": "28d56740cf7e9a398131731346a84b0fbd588801ed706a513c495fe8063a41f2",
+     "bytes": 17483
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "bdd5580346d3ca769035c2aa4a8ffb8e1f34deceebc13cc20aab74eedd9c9ede",
+     "bytes_as_fetched": 9220,
+     "sha256": "bdd5580346d3ca769035c2aa4a8ffb8e1f34deceebc13cc20aab74eedd9c9ede",
+     "bytes": 9220
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "42dc433eb38d01759694bd8df597828108932b6a6a9cbab4dc9d1561db1052de",
+     "bytes_as_fetched": 76,
+     "sha256": "42dc433eb38d01759694bd8df597828108932b6a6a9cbab4dc9d1561db1052de",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-os-home",
+   "url": "https://open-source.sgit.ai/index.html",
+   "final_url": "https://open-source.sgit.ai/index.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Open source is a strategy. It is not a charity.",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:18:08Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ed4ebe72b0f7c38c80524d96b2beb7c33ca58318c31b39d08ca187df88c05b45",
+     "bytes_as_fetched": 354,
+     "sha256": "ed4ebe72b0f7c38c80524d96b2beb7c33ca58318c31b39d08ca187df88c05b45",
+     "bytes": 354
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "75e063062d28c21e05347ed5b6c8e5ea1bb0a33889a51baa143095c7f4f58da3",
+     "bytes_as_fetched": 29380,
+     "sha256": "75e063062d28c21e05347ed5b6c8e5ea1bb0a33889a51baa143095c7f4f58da3",
+     "bytes": 29380
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "63034c1a6d7dc882bff585ae74feec1c930da3dd422e6c59c0dc26e8e68cc83c",
+     "bytes_as_fetched": 16342,
+     "sha256": "63034c1a6d7dc882bff585ae74feec1c930da3dd422e6c59c0dc26e8e68cc83c",
+     "bytes": 16342
+    },
+    {
+     "name": "region-title.png",
+     "sha256_as_fetched": "398f4c58bf49a8cdccf373670f63a9e494ec081258801fdd2d5eeb303b476cce",
+     "bytes_as_fetched": 88867,
+     "sha256": "398f4c58bf49a8cdccf373670f63a9e494ec081258801fdd2d5eeb303b476cce",
+     "bytes": 88867
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "2ad027ba4c70bf718a0b66e178a6c1539d81f13b3738bd3dd4f0be1f7547aed2",
+     "bytes_as_fetched": 76,
+     "sha256": "2ad027ba4c70bf718a0b66e178a6c1539d81f13b3738bd3dd4f0be1f7547aed2",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-os-position",
+   "url": "https://open-source.sgit.ai/views/index.html",
+   "final_url": "https://open-source.sgit.ai/views/index.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The position: open source is a strategy, not a charity",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:18:08Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "45eae669468c17b53285321aa528373cbfc9d160df175c3167e426d1865b691f",
+     "bytes_as_fetched": 370,
+     "sha256": "45eae669468c17b53285321aa528373cbfc9d160df175c3167e426d1865b691f",
+     "bytes": 370
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "63e774ca05348794546796ee984d04c290bb86f409073c79ef51c34ddf756a77",
+     "bytes_as_fetched": 19431,
+     "sha256": "63e774ca05348794546796ee984d04c290bb86f409073c79ef51c34ddf756a77",
+     "bytes": 19431
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "41f39214f7ad41b994a7f5d9c761c42edb384694d4bfd42bad7ea0dd8af183b2",
+     "bytes_as_fetched": 11050,
+     "sha256": "41f39214f7ad41b994a7f5d9c761c42edb384694d4bfd42bad7ea0dd8af183b2",
+     "bytes": 11050
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "1fd690e30137915fa8945833d0ba65340d2d2e731bf23f0ee4d1659d2a4d7d62",
+     "bytes_as_fetched": 76,
+     "sha256": "1fd690e30137915fa8945833d0ba65340d2d2e731bf23f0ee4d1659d2a4d7d62",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-os-survivability",
+   "url": "https://open-source.sgit.ai/survivability/index.html",
+   "final_url": "https://open-source.sgit.ai/survivability/index.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Survivability is not a property of the licence file",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:18:09Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "8d950a63cf2ffe827e53d56e7ec9f8535ab1c1077ce745fd768e0d056b73d7c1",
+     "bytes_as_fetched": 391,
+     "sha256": "8d950a63cf2ffe827e53d56e7ec9f8535ab1c1077ce745fd768e0d056b73d7c1",
+     "bytes": 391
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "bfbbdd28ba1a8b4d39adf8b1cd4b59e192af7fc1e594c7c0aae0b04abb2ed3cd",
+     "bytes_as_fetched": 15596,
+     "sha256": "bfbbdd28ba1a8b4d39adf8b1cd4b59e192af7fc1e594c7c0aae0b04abb2ed3cd",
+     "bytes": 15596
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "549ba2445468a7e009fe8aa1a0f831704540828f9b704e594f47bfe03f6b7e09",
+     "bytes_as_fetched": 7766,
+     "sha256": "549ba2445468a7e009fe8aa1a0f831704540828f9b704e594f47bfe03f6b7e09",
+     "bytes": 7766
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f6f4c71362da45415d5984dddd0967dbd7b8b13d481252e2291c669186d2f035",
+     "bytes_as_fetched": 76,
+     "sha256": "f6f4c71362da45415d5984dddd0967dbd7b8b13d481252e2291c669186d2f035",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-os-villagers",
+   "url": "https://open-source.sgit.ai/views/villagers.html",
+   "final_url": "https://open-source.sgit.ai/views/villagers.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Somebody has to be the villagers: maintenance as a market",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:18:10Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "bfe29484d0f031e1788c245ce83b60c7a207f3752e1cc16a826475926114a19e",
+     "bytes_as_fetched": 379,
+     "sha256": "bfe29484d0f031e1788c245ce83b60c7a207f3752e1cc16a826475926114a19e",
+     "bytes": 379
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "e3eb527c31bcaa9c5f3662c3c7ad8173336fd3ab7055257ed647987ef8ce6eb0",
+     "bytes_as_fetched": 14841,
+     "sha256": "e3eb527c31bcaa9c5f3662c3c7ad8173336fd3ab7055257ed647987ef8ce6eb0",
+     "bytes": 14841
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8a4ed46e268bf786af78c77499f5830f01d6cca4440a54509dd37fc290c8414a",
+     "bytes_as_fetched": 7182,
+     "sha256": "8a4ed46e268bf786af78c77499f5830f01d6cca4440a54509dd37fc290c8414a",
+     "bytes": 7182
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "f1628b77eacdd179d244ebfbe5a79a5ff90581164794c6d6c0eb79618a2ff5a7",
+     "bytes_as_fetched": 76,
+     "sha256": "f1628b77eacdd179d244ebfbe5a79a5ff90581164794c6d6c0eb79618a2ff5a7",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-dream-research",
+   "url": "https://php.oct.2026.newsroom.sgit.ai/articles/dream-research-rooted-25-servers/",
+   "final_url": "https://php.oct.2026.newsroom.sgit.ai/articles/dream-research-rooted-25-servers/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "A vendor says a campaign rooted 25 servers, two days before we saw it",
+   "kind": "own-site",
+   "published": "2026-10-29",
+   "captured_at": "2026-10-29T18:14:55Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "cc305cefc3be896b86d79c106c0ba18aa498b254b5c5c523aba6b53bcb309631",
+     "bytes_as_fetched": 449,
+     "sha256": "cc305cefc3be896b86d79c106c0ba18aa498b254b5c5c523aba6b53bcb309631",
+     "bytes": 449
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "2109f9b67bedc208d1fca8d701dc048a1e239fbf23b18ad4ac507728d5b4263d",
+     "bytes_as_fetched": 65240,
+     "redacted": 2,
+     "sha256": "f9c1f8a922f93619f8fda204f526fbd20da50c7ad646b0fab5154b6b19c6298a",
+     "bytes": 65220
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f097e2382b98467e22cb027caf17233e9d88191106652155292352f45b2a8d37",
+     "bytes_as_fetched": 25955,
+     "redacted": 2,
+     "sha256": "55b14ac070775c8b26ccebd80c7d72e99b0d220d371a4499a9872c0827f0279d",
+     "bytes": 25935
+    },
+    {
+     "name": "region-title.png",
+     "sha256_as_fetched": "1425b95fad71752b65b4fb20e5de7de7231053378f48330ae27e6d12a8c66337",
+     "bytes_as_fetched": 188443,
+     "sha256": "1425b95fad71752b65b4fb20e5de7de7231053378f48330ae27e6d12a8c66337",
+     "bytes": 188443
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "8c51df6d672fd3becee72afc19790b9ccf31f2f681ce7197ced6c15a8dfa56b7",
+     "bytes_as_fetched": 76,
+     "sha256": "8c51df6d672fd3becee72afc19790b9ccf31f2f681ce7197ced6c15a8dfa56b7",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-pulse",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "What else is going on: Pulse",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:15:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "227f88962e6c0b3a81d54c3d40f5b6169685e1b2d0d4ba5da2c3407b59324429",
+     "bytes_as_fetched": 378,
+     "sha256": "227f88962e6c0b3a81d54c3d40f5b6169685e1b2d0d4ba5da2c3407b59324429",
+     "bytes": 378
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "f1a03bd6c9ab9184a4520346db28d9c9425a8f0e1a987d0e4066e4e7b68e954a",
+     "bytes_as_fetched": 63295,
+     "sha256": "f1a03bd6c9ab9184a4520346db28d9c9425a8f0e1a987d0e4066e4e7b68e954a",
+     "bytes": 63295
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "708cf560033f60f0e6b8a602ebad57924904d0581bd3ad39938dd02e4472b3d3",
+     "bytes_as_fetched": 10128,
+     "sha256": "708cf560033f60f0e6b8a602ebad57924904d0581bd3ad39938dd02e4472b3d3",
+     "bytes": 10128
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "650ab9e5b59ba0802b2f7255a653b0017fed87450f5270d1d550d36de1201417",
+     "bytes_as_fetched": 76,
+     "sha256": "650ab9e5b59ba0802b2f7255a653b0017fed87450f5270d1d550d36de1201417",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-pulse-beyondtrust",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-102764/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-102764/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Pulse: BeyondTrust Remote Support",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:15:29Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0e2ba1ed91c52a061f69e5ab3b1422b3cdbc983dcf8605cfd5763a9c990949d3",
+     "bytes_as_fetched": 422,
+     "sha256": "0e2ba1ed91c52a061f69e5ab3b1422b3cdbc983dcf8605cfd5763a9c990949d3",
+     "bytes": 422
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "0b10b9464c94b5158d69914c27bffac91aed1ab0a10ba1d8f6fe8917bea9a49c",
+     "bytes_as_fetched": 39445,
+     "redacted": 1,
+     "sha256": "67179cf850ee099ffe06f9e9e1c6c8d1f1244795a4ae1f874d531817abb748b9",
+     "bytes": 39449
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "0168a0224d49fee60f1ed82206499fef13730d62b3c53c534a3d9462df122ced",
+     "bytes_as_fetched": 8555,
+     "redacted": 1,
+     "sha256": "b1a7d8c66c33faae0ac92fd5d1ff5fbf039c5d679049062f1cada30f178e5481",
+     "bytes": 8559
+    },
+    {
+     "name": "region-title.png",
+     "sha256_as_fetched": "0af69abac98b6059936fd6fb8eb517b1db20e33f91b77fabc45c781f2376994f",
+     "bytes_as_fetched": 94880,
+     "sha256": "0af69abac98b6059936fd6fb8eb517b1db20e33f91b77fabc45c781f2376994f",
+     "bytes": 94880
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "d83d8885f8996e8128aa4bfc28b107ff28cb24d973cac93998bb53413a48a330",
+     "bytes_as_fetched": 76,
+     "sha256": "d83d8885f8996e8128aa4bfc28b107ff28cb24d973cac93998bb53413a48a330",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-pulse-cisco-seg",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-76519/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-76519/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Pulse: Cisco Secure Email Gateway",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:15:29Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "618c958a3d529a45e24740bc1df8e810ebb6c8c32f98c656e0a47848724e7023",
+     "bytes_as_fetched": 418,
+     "sha256": "618c958a3d529a45e24740bc1df8e810ebb6c8c32f98c656e0a47848724e7023",
+     "bytes": 418
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "79ac09369ab7126676550e877c851db06fe1b11c2a2c7c1ff23b49236571f8cc",
+     "bytes_as_fetched": 37821,
+     "redacted": 1,
+     "sha256": "627131bfdb97fb157acdeba15d9efbae43cf30ece004bb524f0cd5aea3ec5de2",
+     "bytes": 37822
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "abcb1a3ca5ab9cadfa4880f9f56a61ce72a77e0da485c448b0519940b79691d6",
+     "bytes_as_fetched": 7674,
+     "redacted": 1,
+     "sha256": "5853955ddcc221e4ca0f03818e1808ea3260adbfebae5b0da654ff15ce24f1ef",
+     "bytes": 7675
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "21d26c4b2baf98a077bdfc8050c27f10c04b59b5b4d4ae3de8cfca1c671b0caa",
+     "bytes_as_fetched": 76,
+     "sha256": "21d26c4b2baf98a077bdfc8050c27f10c04b59b5b4d4ae3de8cfca1c671b0caa",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-pulse-fortinet",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2025-61624/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2025-61624/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Pulse: Fortinet multiple products",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:15:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f60dc366c4a65555088b2f1588b4aabd7afb8bbf0600bc69b7dff22a0bc0ec39",
+     "bytes_as_fetched": 417,
+     "sha256": "f60dc366c4a65555088b2f1588b4aabd7afb8bbf0600bc69b7dff22a0bc0ec39",
+     "bytes": 417
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d89d0c794ecd2747bd7086a35138aa90ac5c0ffd2721cd1ab926b14ccc2442f5",
+     "bytes_as_fetched": 38738,
+     "redacted": 2,
+     "sha256": "6b6ebde78f5aae031191208175512825b688bc7faca2791ab621ea82c7b979c5",
+     "bytes": 38740
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "f18ed6e0ef394429ef933b6090ad5f1b809b19f74cc2f1100521c251a4f12357",
+     "bytes_as_fetched": 8068,
+     "redacted": 2,
+     "sha256": "a2839ea94933a79168422192c69ae419ee85f0b4695dd8e17a032e9f366559c4",
+     "bytes": 8070
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "49d0806276aad923d17573956d63eb38f65b7fd43e618c732d09d9d345022c29",
+     "bytes_as_fetched": 76,
+     "sha256": "49d0806276aad923d17573956d63eb38f65b7fd43e618c732d09d9d345022c29",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-pulse-ivanti",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-104935/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-104935/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Pulse: Ivanti Connect Secure (VPN)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:15:29Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "a23628fcb3c3af5f9764eace0b4f28611f21f1f951fdf3c6dc848bb8f0d18f80",
+     "bytes_as_fetched": 417,
+     "sha256": "a23628fcb3c3af5f9764eace0b4f28611f21f1f951fdf3c6dc848bb8f0d18f80",
+     "bytes": 417
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "42493b99f065eda197ca9900049d33d803b20e590c2290fa1cafd569e5178d52",
+     "bytes_as_fetched": 37815,
+     "sha256": "42493b99f065eda197ca9900049d33d803b20e590c2290fa1cafd569e5178d52",
+     "bytes": 37815
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "8a8e6925cd67b55bcaae43bc6424aa7f585cba1421032b137f1453888ac2324a",
+     "bytes_as_fetched": 7688,
+     "sha256": "8a8e6925cd67b55bcaae43bc6424aa7f585cba1421032b137f1453888ac2324a",
+     "bytes": 7688
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "4852a7467e868e0372fcbbc1efaa0abf1ddf170430e4ed5672b0e50debfa5778",
+     "bytes_as_fetched": 76,
+     "sha256": "4852a7467e868e0372fcbbc1efaa0abf1ddf170430e4ed5672b0e50debfa5778",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-pulse-panos",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-0322/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-0322/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Pulse: Palo Alto Networks PAN-OS",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:15:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "e9c75d120b7356390582145fd504d611e61ea4d38d3d5b6a2c7b1976888e0c6b",
+     "bytes_as_fetched": 412,
+     "sha256": "e9c75d120b7356390582145fd504d611e61ea4d38d3d5b6a2c7b1976888e0c6b",
+     "bytes": 412
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "a74389d5fb195f28f2d4e6f07394bf4a031e0efaaae75a824dc9647a0d39dfdc",
+     "bytes_as_fetched": 38870,
+     "redacted": 2,
+     "sha256": "b336d3d7f015b5ef2dcf83fde50b0fd056aaead298e3eb974d5e165b2dfd359a",
+     "bytes": 38864
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "d730716ac87393763dcee3666c1a8c62b8cf94064fc2e56f7dfa3d9a04c11006",
+     "bytes_as_fetched": 8225,
+     "redacted": 2,
+     "sha256": "bfe9adf35531fc1c9b8f49179c4ac05c946fb5964e5d0d267fd246bdf90d54ab",
+     "bytes": 8219
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a4911cba77d98f5ebd2b3186f5d1026ce1ef60c6c1b45ed331fbe8cea13a8573",
+     "bytes_as_fetched": 76,
+     "sha256": "a4911cba77d98f5ebd2b3186f5d1026ce1ef60c6c1b45ed331fbe8cea13a8573",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-pulse-siteguard",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-106931/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-106931/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Pulse: EG Secure Solutions SiteGuard Server Edition (WAF)",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:15:29Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0cb80a09168f0ef1b3a0b06ca7aad55fb5212f45ae780f47c8a9ad3f6370851e",
+     "bytes_as_fetched": 420,
+     "sha256": "0cb80a09168f0ef1b3a0b06ca7aad55fb5212f45ae780f47c8a9ad3f6370851e",
+     "bytes": 420
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "4102b20a8e6addb14902c3ad7a90ad660e5e344c147a1f2d6b9c102d171a6c78",
+     "bytes_as_fetched": 39442,
+     "redacted": 2,
+     "sha256": "13148933ee235b97f67a0261c8c8dc185e3c58264dece7bc2aa13c33617df83b",
+     "bytes": 39432
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "96e68104ec5c51661f2e8587e5dc830d23d6a2837848a594766acbbe305040ac",
+     "bytes_as_fetched": 8437,
+     "redacted": 2,
+     "sha256": "4fa4d33ae23b633fe0624efc561e6aceca5f8a56c55446d64925293985569092",
+     "bytes": 8427
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "54d9c4a0c39683904109e39427acd4de50fd104298ca178d36a237ad4623adf3",
+     "bytes_as_fetched": 76,
+     "sha256": "54d9c4a0c39683904109e39427acd4de50fd104298ca178d36a237ad4623adf3",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-src-cypro",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/cypro-php2shell-exploit-roots-firewalls/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/cypro-php2shell-exploit-roots-firewalls/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Source: CyPro, PHP2Shell exploit roots firewalls",
+   "kind": "own-site",
+   "published": "2026-10-28",
+   "captured_at": "2026-10-29T18:15:30Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "33b5ad22aca1c8dc4852ba4bda857f5ad510d980a91d3587ae810d5471c65b9c",
+     "bytes_as_fetched": 466,
+     "sha256": "33b5ad22aca1c8dc4852ba4bda857f5ad510d980a91d3587ae810d5471c65b9c",
+     "bytes": 466
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "8b8256e0144bd362ee296dd8b6426ebf25f5f682c3c09f074e9bbf802e1e1c3c",
+     "bytes_as_fetched": 62653,
+     "redacted": 6,
+     "sha256": "eba2be99027abc34d3a23a18981a0db63db49b7eaa11d35a2e33fe69c967bd80",
+     "bytes": 62623
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "c877e849c6a362a222718a072f8130f749e6156a544e3d60dab76f8325d72084",
+     "bytes_as_fetched": 22480,
+     "redacted": 6,
+     "sha256": "223d999d24eb623493f0404140d84df85b8b23df22cc6a1c5e083cf81a67c87f",
+     "bytes": 22450
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "9ff41b355ad358fc2390cc8523625416d194b445cfcb6532859e955df28ad687",
+     "bytes_as_fetched": 76,
+     "sha256": "9ff41b355ad358fc2390cc8523625416d194b445cfcb6532859e955df28ad687",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-src-paloalto-psirt",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/paloalto-psirt-cve-2026-109618/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/paloalto-psirt-cve-2026-109618/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Source: Palo Alto Networks PSIRT on CVE-2026-109618",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:15:30Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "6d2f1e3a358ed11ae9dea609110e2fcb06ccbebcc94615beaab748b45e4d52bb",
+     "bytes_as_fetched": 457,
+     "sha256": "6d2f1e3a358ed11ae9dea609110e2fcb06ccbebcc94615beaab748b45e4d52bb",
+     "bytes": 457
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "219e3af1bcdc271a26cb56f471e70d748ed801ff4f18e39ab313e1304498779b",
+     "bytes_as_fetched": 40803,
+     "redacted": 2,
+     "sha256": "2e8de3bcde866c3001e1e6d4bbde33743621b5a0cf1fe24d9920ada43680eaed",
+     "bytes": 40795
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "99af2fcce487a2489a5e5fe78356b5101290d417dc07cdd575024740266315a2",
+     "bytes_as_fetched": 9453,
+     "redacted": 2,
+     "sha256": "b471b6b634f327be41c4de6b1a3b30a5c07e459221ed3dfae9b085a5efa3d06b",
+     "bytes": 9445
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "9942aa19de2e31639c9685ec28cd3d650d0b4c807d9d28b9ac943bf76b606fa5",
+     "bytes_as_fetched": 76,
+     "sha256": "9942aa19de2e31639c9685ec28cd3d650d0b4c807d9d28b9ac943bf76b606fa5",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-src-securitynl",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/security-nl-palo-alto-firewalls/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/security-nl-palo-alto-firewalls/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Source: Security.NL, Palo Alto firewalls vulnerable to PHP2Shell",
+   "kind": "own-site",
+   "published": "2026-10-22",
+   "captured_at": "2026-10-29T18:15:30Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0cd9e29afee416fce5fcee7f96d3e9d89ecb67091e99e5620cc80cff34dae9d1",
+     "bytes_as_fetched": 455,
+     "sha256": "0cd9e29afee416fce5fcee7f96d3e9d89ecb67091e99e5620cc80cff34dae9d1",
+     "bytes": 455
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3111de9b002aa77b9d21e1a33ce3bce218a5c574eeffa6a082bf5d2c0e1be48b",
+     "bytes_as_fetched": 39439,
+     "redacted": 3,
+     "sha256": "f1c8b9a9660cd4f984b2fd9d8cec584fb0b2df3a3bb477e7144a6c2a7b7f893b",
+     "bytes": 39424
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "86881187484ceee8fe37c3fa589f02ab740deeb94fb1c8d387f8af709ee57ff5",
+     "bytes_as_fetched": 9336,
+     "redacted": 3,
+     "sha256": "0c510d25dcce2dfa8c75adc045bcfab8d27b061816c25bd965ffe307fa408abf",
+     "bytes": 9321
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "ac80e05c57aee67afa711d358a8e0e5b9cfd04dc092347f210369b9e00a0c7da",
+     "bytes_as_fetched": 76,
+     "sha256": "ac80e05c57aee67afa711d358a8e0e5b9cfd04dc092347f210369b9e00a0c7da",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-src-sonicwall",
+   "url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/sonicwall-php-product-notice/",
+   "final_url": "https://refs.php.oct.2026.newsroom.sgit.ai/sources/sonicwall-php-product-notice/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Source: SonicWall product notice on the PHP flaws",
+   "kind": "own-site",
+   "published": "2026-10-22",
+   "captured_at": "2026-10-29T18:15:30Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "ef4d8f91c6b6ffb95b9f2e2c2a31bfef66cfa56a7381404644662e1e76b29f2e",
+     "bytes_as_fetched": 448,
+     "sha256": "ef4d8f91c6b6ffb95b9f2e2c2a31bfef66cfa56a7381404644662e1e76b29f2e",
+     "bytes": 448
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "fcea8eede07a053c20560445b5b2fdad169e3b26084d4b0d76fdeb705020352f",
+     "bytes_as_fetched": 39095,
+     "redacted": 3,
+     "sha256": "af56ab3d212008f6da232966afe85dd7373fec6a32bd16214753261667be04d1",
+     "bytes": 39080
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "10f0ad62fa8b785a2f98699af6754a54732a1594dd084e0d8c7425b8cf66410f",
+     "bytes_as_fetched": 9053,
+     "redacted": 3,
+     "sha256": "3179cd8233ba5d92025c0144a66d4818d628b9b265753617be2216b9fc3e3188",
+     "bytes": 9038
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "6ffc6e0b530d6d7cd80076df5d24b7e287ace0c8e675cc36845fa00095bbf86b",
+     "bytes_as_fetched": 76,
+     "sha256": "6ffc6e0b530d6d7cd80076df5d24b7e287ace0c8e675cc36845fa00095bbf86b",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-state-v1",
+   "url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v1/",
+   "final_url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v1/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The state of affairs on 23 October: firewalls in the blast radius",
+   "kind": "own-site",
+   "published": "2026-10-23",
+   "captured_at": "2026-10-29T18:15:27Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "eb89ef9ad217b95fbf370b1eb8efa98db100224fdfa751fe15ae54915711a00b",
+     "bytes_as_fetched": 405,
+     "sha256": "eb89ef9ad217b95fbf370b1eb8efa98db100224fdfa751fe15ae54915711a00b",
+     "bytes": 405
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "905d45527129d4e57ca338f869f229ff70846835bd06c2995c72544ec14d9d6f",
+     "bytes_as_fetched": 61637,
+     "sha256": "905d45527129d4e57ca338f869f229ff70846835bd06c2995c72544ec14d9d6f",
+     "bytes": 61637
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "22e08e8dd471545bad887e6604375d998c63765e864339b2da21e3ba375c88af",
+     "bytes_as_fetched": 16256,
+     "sha256": "22e08e8dd471545bad887e6604375d998c63765e864339b2da21e3ba375c88af",
+     "bytes": 16256
+    },
+    {
+     "name": "region-security-products.png",
+     "sha256_as_fetched": "1817dd465de0909663d4fe4550472f873465bd7c15211d2ea91a43882db49f99",
+     "bytes_as_fetched": 113651,
+     "sha256": "1817dd465de0909663d4fe4550472f873465bd7c15211d2ea91a43882db49f99",
+     "bytes": 113651
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "a5142cfa01787497415ac9bac5ec3133d9b31e547113eaea6e5a4c9e07c8d0ef",
+     "bytes_as_fetched": 76,
+     "sha256": "a5142cfa01787497415ac9bac5ec3133d9b31e547113eaea6e5a4c9e07c8d0ef",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-state-v3",
+   "url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v3/",
+   "final_url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v3/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The state of affairs on 24 October: a vendor withdraws the first claim of a break-in",
+   "kind": "own-site",
+   "published": "2026-10-24",
+   "captured_at": "2026-10-29T18:15:27Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "a0c6eb134cd858db721fab5dd42aeab74a093ce088fee0e8492a40df2f6ea42d",
+     "bytes_as_fetched": 405,
+     "sha256": "a0c6eb134cd858db721fab5dd42aeab74a093ce088fee0e8492a40df2f6ea42d",
+     "bytes": 405
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "d87c9d30c3d9b73a8e97701bd8e55ab5a76ce84227d0921496398c9497ef09e4",
+     "bytes_as_fetched": 61798,
+     "sha256": "d87c9d30c3d9b73a8e97701bd8e55ab5a76ce84227d0921496398c9497ef09e4",
+     "bytes": 61798
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "01014ab6e452d1cc9f8cb0f5c93aadd4c4cee49c1337b7eb34547e453a0004e4",
+     "bytes_as_fetched": 16305,
+     "sha256": "01014ab6e452d1cc9f8cb0f5c93aadd4c4cee49c1337b7eb34547e453a0004e4",
+     "bytes": 16305
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "623bed2d97380f38345c566a53b458df383f038124f595b839dbdfc03fac779b",
+     "bytes_as_fetched": 76,
+     "sha256": "623bed2d97380f38345c566a53b458df383f038124f595b839dbdfc03fac779b",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-php-state-v5",
+   "url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v5/",
+   "final_url": "https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v5/",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The state of affairs on 27 October: both vendor claims of a break-in withdrawn",
+   "kind": "own-site",
+   "published": "2026-10-27",
+   "captured_at": "2026-10-29T18:15:28Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f975b089b6912875d6baa84e71df0272fa807679b4d495541c82bb89e1f679a0",
+     "bytes_as_fetched": 405,
+     "sha256": "f975b089b6912875d6baa84e71df0272fa807679b4d495541c82bb89e1f679a0",
+     "bytes": 405
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "71277f183b55f88e45db9e1712c90327678c3507944b740008cbb655d3048cd5",
+     "bytes_as_fetched": 67167,
+     "redacted": 2,
+     "sha256": "b64b4dcbeef390f725b92973f2761056d38d9476ddc969fa9c6f1f1a68a1fbfc",
+     "bytes": 67157
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "fe222433f73efec836d12b8a546feb5637028d5a5885146866ec18bab236f029",
+     "bytes_as_fetched": 19338,
+     "redacted": 2,
+     "sha256": "df8d02a9a5ac00e9fa8795ce52bdf468cb11f56d167c7aaa7eb36ff27442af1b",
+     "bytes": 19328
+    },
+    {
+     "name": "region-vendor-claims.png",
+     "sha256_as_fetched": "a4f1d491b03ad252e10c856d044e22b3f32d4db3847c10bb8477fbb382b3ba59",
+     "bytes_as_fetched": 133032,
+     "sha256": "a4f1d491b03ad252e10c856d044e22b3f32d4db3847c10bb8477fbb382b3ba59",
+     "bytes": 133032
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "ec97297ab5b2cbbcad2e4ce95fed61d7089616ed730835a5cab31f870f9aa3a7",
+     "bytes_as_fetched": 76,
+     "sha256": "ec97297ab5b2cbbcad2e4ce95fed61d7089616ed730835a5cab31f870f9aa3a7",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-sg-investors",
+   "url": "https://sgit.ai/investors/index.html",
+   "final_url": "https://sgit.ai/investors/index.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "sgit.ai, for investors",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:14:54Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "390fb61cdd3cc219b886b9e3ed2e1b5842670dd2deb9d87691efe64b68f0e08f",
+     "bytes_as_fetched": 355,
+     "sha256": "390fb61cdd3cc219b886b9e3ed2e1b5842670dd2deb9d87691efe64b68f0e08f",
+     "bytes": 355
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "3f425fb16f525f1f58453a4ebd81210dfaeb70f980ba676ea5279c5d30284a5b",
+     "bytes_as_fetched": 29688,
+     "sha256": "3f425fb16f525f1f58453a4ebd81210dfaeb70f980ba676ea5279c5d30284a5b",
+     "bytes": 29688
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "93cb7bcaf88170e025e6ddb240d5c86157d8c5e077c5a8daaad6d7d6e08de0c9",
+     "bytes_as_fetched": 10532,
+     "sha256": "93cb7bcaf88170e025e6ddb240d5c86157d8c5e077c5a8daaad6d7d6e08de0c9",
+     "bytes": 10532
+    },
+    {
+     "name": "region-title.png",
+     "sha256_as_fetched": "de52a057126c4d61b0e01520ec2326a2771191d84690edb9ec08cb864a7c0532",
+     "bytes_as_fetched": 111988,
+     "sha256": "de52a057126c4d61b0e01520ec2326a2771191d84690edb9ec08cb864a7c0532",
+     "bytes": 111988
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "4ffb24f98b6fae5ea86d7aa0ba9aef8eebc2759e16a50dcb63fc3743b015d6dd",
+     "bytes_as_fetched": 76,
+     "sha256": "4ffb24f98b6fae5ea86d7aa0ba9aef8eebc2759e16a50dcb63fc3743b015d6dd",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-sg-network",
+   "url": "https://sgit.ai/network/index.html",
+   "final_url": "https://sgit.ai/network/index.html",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "The sgit.ai network",
+   "kind": "own-site",
+   "published": null,
+   "captured_at": "2026-10-29T18:14:55Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "0fbcd04971e90660b7661f15194a7b3224b9457873cae405bc6d14a2060f1af2",
+     "bytes_as_fetched": 349,
+     "sha256": "0fbcd04971e90660b7661f15194a7b3224b9457873cae405bc6d14a2060f1af2",
+     "bytes": 349
+    },
+    {
+     "name": "page.html",
+     "sha256_as_fetched": "671447d3505562af9e00afcc08230fcdb4e78384ed59f6ea097359dcf2eeb313",
+     "bytes_as_fetched": 72590,
+     "sha256": "671447d3505562af9e00afcc08230fcdb4e78384ed59f6ea097359dcf2eeb313",
+     "bytes": 72590
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "4bcdd8939fdc7d937ee58885849cb2180b79408c8029c79f951cfda807d6956e",
+     "bytes_as_fetched": 18732,
+     "sha256": "4bcdd8939fdc7d937ee58885849cb2180b79408c8029c79f951cfda807d6956e",
+     "bytes": 18732
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "e7a085f508bd24a3594afe6ee0413292ac285c2405cbf1a20cf6fecab9294717",
+     "bytes_as_fetched": 76,
+     "sha256": "e7a085f508bd24a3594afe6ee0413292ac285c2405cbf1a20cf6fecab9294717",
+     "bytes": 76
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-sg-summit-investors",
+   "url": "https://sgit.ai/summit/investors.md",
+   "final_url": "https://sgit.ai/summit/investors.md",
+   "publisher": "Dinis Cruz / sgit.ai network",
+   "title": "Investors: how does your firm share data with its portfolio?",
+   "kind": "own-site",
+   "published": "2026-09",
+   "captured_at": "2026-10-29T18:14:54Z",
+   "http_status": 200,
+   "files": [
+    {
+     "name": "index.md",
+     "sha256_as_fetched": "81d985ec57d60522bef9ff65475304297ef7edf1e8cbba721babba8f1ff720f5",
+     "bytes_as_fetched": 3410,
+     "redacted": 2,
+     "sha256": "6abd5ed3acd124cbac837c5e0e9ef5296e0496520cd234c85b840ee92ff75796",
+     "bytes": 3406
+    },
+    {
+     "name": "meta.json",
+     "sha256_as_fetched": "f58adf80f8f7c6cb277826723530b8f682f62286516e53f8ff4ce9737f6e1c5b",
+     "bytes_as_fetched": 362,
+     "sha256": "f58adf80f8f7c6cb277826723530b8f682f62286516e53f8ff4ce9737f6e1c5b",
+     "bytes": 362
+    },
+    {
+     "name": "page.txt",
+     "sha256_as_fetched": "81d985ec57d60522bef9ff65475304297ef7edf1e8cbba721babba8f1ff720f5",
+     "bytes_as_fetched": 3410,
+     "redacted": 2,
+     "sha256": "6abd5ed3acd124cbac837c5e0e9ef5296e0496520cd234c85b840ee92ff75796",
+     "bytes": 3406
+    },
+    {
+     "name": "sha256.txt",
+     "sha256_as_fetched": "b44f190c0e2a1c841d47e7a9cbc6374db5fc4c6dd1b0edd6792fd9dd682354bd",
+     "bytes_as_fetched": 75,
+     "sha256": "b44f190c0e2a1c841d47e7a9cbc6374db5fc4c6dd1b0edd6792fd9dd682354bd",
+     "bytes": 75
+    }
+   ],
+   "recorded_by": "studio-open-source-investors"
   },
   {
    "id": "wpki-about-pki-agent",

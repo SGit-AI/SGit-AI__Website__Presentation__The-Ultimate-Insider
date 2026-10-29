@@ -1,7 +1,7 @@
 {
  "about": "The claims register: each claim the talk, its article and the site make, graded A0 to A6 (METHOD.md)",
- "built": "2026-10-29T17:33Z",
- "count": 303,
+ "built": "2026-10-29T18:20Z",
+ "count": 320,
  "claims": [
   {
    "id": "three-problems-one-story",
@@ -1244,7 +1244,7 @@
    "primary_source": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
    "note": "Upgraded at 11:27 UTC on 29 October: Gartner's own release (Sydney, 25 June 2025) captured from a Gartner host carries the claim word for word, with risk controls as the third of three reasons after cost and value. A prediction: the grade is for what Gartner said, not for the future. Cite Gartner, not the MarTech page (sponsored content).",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T17:33Z"
+   "adjudicated": "researcher, 2026-10-29T18:20Z"
   },
   {
    "id": "mit-nanda-95pct",
@@ -1726,7 +1726,7 @@
    "note": "Two passes disagreed (A1 holds in part; A0 does not hold); the researcher read the capture riskmandate-licence-to-operate/page.txt: the names, the instrument and the expiry are there ('somebody's name is on it and it expires'), automatic suspension is not, and the page says 'It is not a control, it is a record of a decision'. The suspension is the talk's design proposal, not something the cited page describes or anything ships.",
    "suggested_wording": "When the footprint leaves the mandate, the licence should be suspended by the system, not by a quarterly review. Today the licence is a record of a decision with a name and an expiry; the suspension is what we are building towards.",
    "register": "act2",
-   "adjudicated": "researcher, 2026-10-29T17:33Z"
+   "adjudicated": "researcher, 2026-10-29T18:20Z"
   },
   {
    "id": "autonomy-earned-ladder",
@@ -4430,6 +4430,346 @@
    "note": "True of the launcher above the agent and its manifest. Since 28 Oct 2026 a first slice (sharness-ai shell) runs on the CLI's dev and is in v0.2.0 on PyPI per the status page, and the one-process form (sharness-ai run) is runnable. A security review on 29 Oct found and fixed a background process outliving the shell (SR-30).",
    "suggested_wording": "the launcher above the agent is designed, not built (a first slice for one shell runs since 28 October 2026)",
    "register": "studio-e11"
+  },
+  {
+   "id": "wos-c01",
+   "text": "The editor's open source site states that what is sold is trust.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-os-home",
+     "quote": "We play the game of empowering the user and being the reputable source of trust. We are selling trust.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c02",
+   "text": "The editor argues technology is not the moat.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-os-home",
+     "quote": "Technology is not the moat.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c03",
+   "text": "sgit's business model: the code is free; the running service is sold.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-sg-investors",
+     "quote": "The code is free. What is sold is the running service, and the trust that comes with running it well.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c04",
+   "text": "Anyone can fork, and that protects founders, customers and investors from each other.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-nr-fork-next-door",
+     "quote": "Each corner is protected from the others by the same thing: anyone can fork.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c05",
+   "text": "Germany's PHP platform spend against its contribution to PHP security is a 241 to 1 maintenance deficit (Dion Wiggins' figure, as reported).",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-nr-maintenance-deficit",
+     "quote": "a maintenance deficit ratio of 241 to 1",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Figure is Dion Wiggins'; not checked against the German budget",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c06",
+   "text": "The recommendation for investment in sgit is to fund the hub, keep the format open and sell self-host support.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-nr-where-to-invest",
+     "quote": "My answer: fund the hub (SGitHub), keep the format open, sell self-host support as the bridge.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c07",
+   "text": "investor.sgit.ai is a proposal for investors and founders with deal rooms as vaults.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-nr-investor-sgit-ai",
+     "quote": "Deal rooms as vaults.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "A brief; the site is not built (investor.sgit.ai did not resolve at capture)",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c08",
+   "text": "The evaluation framework for GenAI security startups scores inline risk and open source among seven criteria.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-nr-investor-sgit-ai",
+     "quote": "inline risk, business context, model survivability, open source and deployment sovereignty",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c09",
+   "text": "Ten security and network products were marked vulnerable to php2shell in the NCSC-NL inventory as of 23 October.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-state-v1",
+     "quote": "Ten security and network products are confirmed vulnerable.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vulnerable, not exploited; inventory is NCSC-NL's, not re-checked",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c10",
+   "text": "Dream Research reports 24 firewalls taken in a php2shell chain; unconfirmed.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-dream-research",
+     "quote": "It reports 24 firewalls taken.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "One vendor's account; the page itself says nobody has confirmed it",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c11",
+   "text": "Nobody has confirmed the Dream Research account.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-php-dream-research",
+     "quote": "No victim, firewall vendor, US agency, CISA or PHP team has confirmed any of it.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c12",
+   "text": "Both security vendors that claimed a php2shell compromise withdrew the claim.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-php-state-v5",
+     "quote": "Both security vendors that said php2shell had been used in a successful attack have withdrawn it",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c13",
+   "text": "Palo Alto PAN-OS 10.2 to 12.2 is affected by the PHP flaws.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-php-src-paloalto-psirt",
+     "quote": "PAN-OS 10.2 to 12.2 affected: PHP inside firewalls (primary)",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "The page is the newsroom's copy of the vendor advisory",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c14",
+   "text": "BeyondTrust Remote Support was exploited as a zero-day by a suspected China-nexus actor, per the vendor.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-pulse-beyondtrust",
+     "quote": "A suspected China-nexus espionage actor exploited a zero-day vulnerability",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vendor statement quoted by Pulse; not checked against the vendor page",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c15",
+   "text": "EG Secure Solutions says exploitation of SiteGuard Server Edition is confirmed.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-pulse-siteguard",
+     "quote": "The vendor stating exploitation has already been confirmed",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Pulse's reading of the vendor's Japanese alert",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c16",
+   "text": "Palo Alto reports very limited exploitation of the PAN-OS management interface flaw (CVE-2026-0322).",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds in part",
+   "evidence": [
+    {
+     "source_id": "wos-php-pulse-panos",
+     "quote": "Very limited exploitation has been observed targeting the Palo Alto Networks management interface.",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "Vendor text as recorded by Pulse",
+   "register": "studio-open-source-investors"
+  },
+  {
+   "id": "wos-c17",
+   "text": "SonicWall found no use of PHP in its listed products.",
+   "where": [
+    "catalogue"
+   ],
+   "kind": "own-site",
+   "grade": "A2",
+   "holds": "holds",
+   "evidence": [
+    {
+     "source_id": "wos-php-src-sonicwall",
+     "quote": "found no use of PHP in the following products",
+     "supports": "for"
+    }
+   ],
+   "primary_source": null,
+   "note": "",
+   "register": "studio-open-source-investors"
   },
   {
    "id": "sh-e09-28-5s",

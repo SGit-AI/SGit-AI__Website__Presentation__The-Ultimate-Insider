@@ -17,6 +17,13 @@
    "verdict": "go",
    "comment": "Writes in evidence/studio/ and team/researcher/ (inside scope.writes); mail to motion@ and deck, public forever: no vault id, read key, fingerprint, key QR, proxy, container internals, token, registry hashes, nothing on credentials beyond what ROLE.md already publishes; full isolation and Reach claims marked as stated; 032 public fetches, no technique; vault_check before vault commits.",
    "at": "2026-10-29T18:13:33Z"
+  },
+  "work": {
+   "by": "researcher",
+   "model": "claude-opus-5-5",
+   "verdict": "done",
+   "comment": "033 by 18:15: nine claims checked, four corrections, mail to motion@ and deck. 032: 37 rows, 10 security-product cases, investor pages (proposed, not built); mail to deck, studio@ via requests. Issues 017, 018 done. Sync script fixed after it removed hand-written studio files (restored before commit).",
+   "at": "2026-10-29T18:23:50Z"
   }
  },
  "closed": null,

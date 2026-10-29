@@ -1,6 +1,6 @@
 # Sources
 
-Built 2026-10-29T17:33Z. 659 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
+Built 2026-10-29T18:20Z. 696 sources; `manifest.json` has every file's SHA-256. A capture is what the page said when it was fetched.
 
 | Source | Publisher | Kind | Fetched | HTTP | Capture | Files |
 |---|---|---|---|---|---|---|
@@ -597,6 +597,43 @@ Built 2026-10-29T17:33Z. 659 sources; `manifest.json` has every file's SHA-256. 
 | [wnews-php-timeline](https://php.oct.2026.newsroom.sgit.ai/timeline/) | PHP October 2026, a story site of the SGit Newsroom (php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:15:37Z | 200 |  | 5 |
 | [wnews-php-updates](https://updates.php.oct.2026.newsroom.sgit.ai/updates/) | PHP October 2026, a story site of the SGit Newsroom (updates.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:03Z | 200 |  | 4 |
 | [wnews-php-verifier](https://team.php.oct.2026.newsroom.sgit.ai/team/verifier/) | PHP October 2026, a story site of the SGit Newsroom (team.php.oct.2026.newsroom.sgit.ai) | own-site | 2026-10-29T17:16:02Z | 200 |  | 4 |
+| [wos-nr-desk-strategy](https://newsroom.sgit.ai/desks/strategy.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:54Z | 200 |  | 4 |
+| [wos-nr-eyeballs-get-cheap](https://newsroom.sgit.ai/articles/the-eyeballs-get-cheap.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:52Z | 200 |  | 4 |
+| [wos-nr-fork-next-door](https://newsroom.sgit.ai/articles/the-fork-next-door.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:51Z | 200 |  | 5 |
+| [wos-nr-fund-it-with-time](https://newsroom.sgit.ai/articles/fund-it-with-time.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:53Z | 200 |  | 4 |
+| [wos-nr-investor-sgit-ai](https://newsroom.sgit.ai/articles/investor-sgit-ai.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:52Z | 200 |  | 5 |
+| [wos-nr-maintenance-deficit](https://newsroom.sgit.ai/articles/the-maintenance-deficit-with-evidence.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:52Z | 200 |  | 5 |
+| [wos-nr-open-source-keep-it](https://newsroom.sgit.ai/articles/open-source-so-you-keep-it.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:52Z | 200 |  | 4 |
+| [wos-nr-open-source-not-free](https://newsroom.sgit.ai/articles/open-source-is-not-free.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:51Z | 200 |  | 5 |
+| [wos-nr-seed-companies](https://newsroom.sgit.ai/mvps/seed-companies.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:54Z | 200 |  | 4 |
+| [wos-nr-sell-dont-issue](https://newsroom.sgit.ai/articles/sell-dont-issue.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:53Z | 200 |  | 5 |
+| [wos-nr-value-of-constraints](https://newsroom.sgit.ai/articles/the-value-of-constraints.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:52Z | 200 |  | 4 |
+| [wos-nr-what-open-source-is](https://newsroom.sgit.ai/articles/what-open-source-is-and-is-not.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:51Z | 200 |  | 5 |
+| [wos-nr-where-to-invest](https://newsroom.sgit.ai/articles/where-to-invest-in-sgit.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:53Z | 200 |  | 5 |
+| [wos-os-founders](https://open-source.sgit.ai/founders/index.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:18:09Z | 200 |  | 4 |
+| [wos-os-funding](https://open-source.sgit.ai/funding/index.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:18:09Z | 200 |  | 4 |
+| [wos-os-home](https://open-source.sgit.ai/index.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:18:08Z | 200 |  | 5 |
+| [wos-os-position](https://open-source.sgit.ai/views/index.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:18:08Z | 200 |  | 4 |
+| [wos-os-survivability](https://open-source.sgit.ai/survivability/index.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:18:09Z | 200 |  | 4 |
+| [wos-os-villagers](https://open-source.sgit.ai/views/villagers.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:18:10Z | 200 |  | 4 |
+| [wos-php-dream-research](https://php.oct.2026.newsroom.sgit.ai/articles/dream-research-rooted-25-servers/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:55Z | 200 |  | 5 |
+| [wos-php-pulse](https://refs.php.oct.2026.newsroom.sgit.ai/pulse/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:28Z | 200 |  | 4 |
+| [wos-php-pulse-beyondtrust](https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-102764/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:29Z | 200 |  | 5 |
+| [wos-php-pulse-cisco-seg](https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-76519/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:29Z | 200 |  | 4 |
+| [wos-php-pulse-fortinet](https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2025-61624/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:28Z | 200 |  | 4 |
+| [wos-php-pulse-ivanti](https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-104935/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:29Z | 200 |  | 4 |
+| [wos-php-pulse-panos](https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-0322/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:28Z | 200 |  | 4 |
+| [wos-php-pulse-siteguard](https://refs.php.oct.2026.newsroom.sgit.ai/pulse/cve-2026-106931/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:29Z | 200 |  | 4 |
+| [wos-php-src-cypro](https://refs.php.oct.2026.newsroom.sgit.ai/sources/cypro-php2shell-exploit-roots-firewalls/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:30Z | 200 |  | 4 |
+| [wos-php-src-paloalto-psirt](https://refs.php.oct.2026.newsroom.sgit.ai/sources/paloalto-psirt-cve-2026-109618/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:30Z | 200 |  | 4 |
+| [wos-php-src-securitynl](https://refs.php.oct.2026.newsroom.sgit.ai/sources/security-nl-palo-alto-firewalls/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:30Z | 200 |  | 4 |
+| [wos-php-src-sonicwall](https://refs.php.oct.2026.newsroom.sgit.ai/sources/sonicwall-php-product-notice/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:30Z | 200 |  | 4 |
+| [wos-php-state-v1](https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v1/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:27Z | 200 |  | 5 |
+| [wos-php-state-v3](https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v3/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:27Z | 200 |  | 4 |
+| [wos-php-state-v5](https://updates.php.oct.2026.newsroom.sgit.ai/views/state/v5/) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:15:28Z | 200 |  | 5 |
+| [wos-sg-investors](https://sgit.ai/investors/index.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:54Z | 200 |  | 5 |
+| [wos-sg-network](https://sgit.ai/network/index.html) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:55Z | 200 |  | 4 |
+| [wos-sg-summit-investors](https://sgit.ai/summit/investors.md) | Dinis Cruz / sgit.ai network | own-site | 2026-10-29T18:14:54Z | 200 |  | 4 |
 | [wpki-about-pki-agent](https://pki.sgit.ai/about/pki-agent.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:25Z | 200 |  | 4 |
 | [wpki-agents](https://pki.sgit.ai/agents/index.html) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:24Z | 200 |  | 6 |
 | [wpki-art-access-keys](https://pki.sgit.ai/articles/handing-out-access-keys.md) | pki.sgit.ai (sgit project, Dinis Cruz) | own-site | 2026-10-29T17:14:26Z | 200 |  | 4 |
