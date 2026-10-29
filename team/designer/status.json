@@ -2,9 +2,13 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "designer",
   "as_of": "2026-10-29",
-  "round": 12,
-  "state": "12:39 wake: design note 5 checked, as designed (dev 014); all five notes of the first pass built and checked; rule T2 holds on all 114 pages; the third circle's label decided and sent to dev (designer 006)",
+  "round": 13,
+  "state": "13:39 wake: the second pass started: the dashboard, the mail reader, the studio's lab pages and the phone's nav row measured; five findings decided, note 6 (the dashboard and the nav row) next; the third circle's label is dev 016",
   "done": [
+    {
+      "what": "The second pass, first slice: the dashboard, mail reader and lab pages at 1600/1280/390; five findings, most visible first, each with a decision",
+      "evidence": "team/designer/reviews/2026-10-29__second-pass.md; tui-issues-public designer/issues/open/007"
+    },
     {
       "what": "Design note 5 checked at five widths: as designed. All five notes of the first pass built and checked. T2 on all 114 pages: 0 lowercase texts under 14px. The third circle's label decided (up 20 units)",
       "evidence": "team/designer/reviews/2026-10-29__home-hero.md (The check; The label dev raised); __type-scale.md; tui-mail-public mailroom/dev/019"
@@ -76,12 +80,16 @@
   ],
   "next": [
     {
-      "what": "designer 006: check the third circle's label once built",
-      "why": "a two-attribute edit, at the conductor's pace"
+      "what": "designer 007: design note 6, the dashboard's wake grid and first row, the nav row's edges: mock up, measure, send to dev",
+      "why": "the second pass's findings 1 to 3"
     },
     {
-      "what": "A second pass: the dashboards, the mail reader, the studio's lab pages, the nav row's left edge at 390",
-      "why": "the parts the first pass did not reach"
+      "what": "Ask deck for a portrait hint on the studio's lab pages",
+      "why": "the second pass's finding 4"
+    },
+    {
+      "what": "designer 006: check the third circle's label after dev 016",
+      "why": "scheduled by dev"
     }
   ],
   "asks": [],
