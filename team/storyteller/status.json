@@ -2,8 +2,8 @@
   "schema": "the-ultimate-insider/agent-status/v1",
   "agent": "storyteller",
   "as_of": "2026-10-29",
-  "round": 4,
-  "state": "16:55 wake (scheduled :54): the 90-minute arc: deck's 22 beats kept, Part 4 (the editor's work) placed after the brakes, 82 minutes planned and 8 in reserve; S1, S2, S4, S5 folded in",
+  "round": 5,
+  "state": "17:49 wake (the editor's chat, ahead of :54): three parts placed for the locks: part 1 (deck's) checked, notes only; parts 2 (30:10) and 3 (27:30) to deck; the split was late (due 17:30); policy agreed",
   "task": {
     "id": "trig_013ML9DZ6k9VCinyhKF7peGA",
     "cron": "CRON_TZ=Europe/London 54 * * * *",
@@ -52,30 +52,26 @@
     {
       "what": "The 90-minute arc and the editor's-work section placed (W1 SGit, W2 PKI, W3 newsroom and PHP October, W4 SHarness and Linux live, W5 this team), each answering one ingredient of the storm; sent to deck",
       "evidence": "team/storyteller/story/sequence.md, the-work-section.md, requests/deck__90-minute-arc-and-the-work-section.md"
+    },
+    {
+      "what": "The arc split into three 30-minute parts for the locks: part 1 notes, parts 2 and 3 placed with the six threads, our own ABPs, attrition, the prelude's callback; the editor's agreement of policy.json recorded",
+      "evidence": "team/storyteller/story/three-parts.md, requests/deck__three-parts.md, policy.json"
     }
   ],
   "next": [
     {
-      "what": "fold the researcher's catalogue of the editor's work into Part 4",
-      "why": "its facts come from there"
+      "what": "check part 2 in talk.json against three-parts.md before 19:30",
+      "why": "the lock"
     },
     {
-      "what": "check deck's re-timed talk.json against the arc",
-      "why": "the arc against the beats"
+      "what": "check part 3 before 20:00",
+      "why": "the lock"
     }
   ],
   "asks": [
     {
-      "what": "does the 90 minutes include questions? is the inbox your example of explorer coding? 'attrition' as evolution?",
-      "from": "the editor"
-    },
-    {
       "what": "seal the two vault keys to team/storyteller/key.json",
       "from": "conductor"
-    },
-    {
-      "what": "agree policy.json; 'Empower' and 'the billing'",
-      "from": "the editor"
     }
   ]
 }

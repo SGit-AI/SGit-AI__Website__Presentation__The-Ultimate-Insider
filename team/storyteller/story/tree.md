@@ -200,6 +200,6 @@ Spreadsheets that become applications, wired to agents, are dangerous at scale. 
 
 ## Still open with the editor
 
-- "attrition" in 3e: taken as **evolution** (Wardley's axis) until the conductor confirms.
-- "Empower" and "the billing" in the list of projects.
+- "attrition" in 3e: **answered** (17:15): the friction that holds a component back from commodity; used in that sense in `maps/README.md` and `three-parts.md`.
+- "Empower" and "the billing": **dropped** (the editor, 17:15).
 - The talk is 90 minutes (16:30): does that include questions? `sequence.md` (fourth edition) plans 82 minutes and keeps 8 in reserve.
