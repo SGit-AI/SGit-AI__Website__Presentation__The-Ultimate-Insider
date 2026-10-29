@@ -42,9 +42,11 @@ async function keep(req, res) {
   if (res && res.ok && res.status === 200 && res.type === 'basic') { const c = await caches.open(CACHE); await c.put(req, res.clone()) }
   return res
 }
-async function networkFirst(req) {
-  try { return await keep(req, await fetch(req)) }
-  catch (e) { const hit = await caches.match(req, { ignoreSearch: req.mode === 'navigate' }); if (hit) return hit; throw e }
+async function networkFirst(req) {   // the network, but a slow or broken one waits at most 3 s when the cache has the page (the editor, 18:10)
+  const net = fetch(req).then(res => keep(req, res))
+  const hit = await caches.match(req, { ignoreSearch: req.mode === 'navigate' })
+  if (!hit) return net
+  return Promise.race([net.catch(() => hit), new Promise(res => setTimeout(() => res(hit), 3000))])
 }
 async function cacheThenRefresh(req, ev) {
   const hit = await caches.match(req)

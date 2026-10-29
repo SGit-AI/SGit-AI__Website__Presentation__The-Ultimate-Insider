@@ -716,6 +716,9 @@ function tick(now) {
     if (!b0.extra && nt >= MAIN - 0.05) { nt = MAIN - 0.05; playing = false; held = false }   // the end of the deck: stop, in any mode; extras only with » or →
     else if (hold && nt >= end - 0.05 && t < end - 0.05) { nt = end - 0.05; held = true }    // hold at the end of the slide
     if (b0.extra && nt >= end) { nt = end - 0.05; held = true }                          // extras always hold
+    if (typeof stopAt === 'number' && (stopAt < t - 0.01 || beatAt(stopAt) !== ix0)) stopAt = null   // a seek or a slide change elsewhere: no stale hold
+    if (stopAt === 'first' && (frameReady || b0.slide.layout !== 'iframe') && beatAt(nt) === ix0) { const st = stepsOf(b0); stopAt = b0.at + (st[1] ? st[1].t - 0.05 : b0.dur - 0.4) }
+    if (typeof stopAt === 'number' && nt >= stopAt) { nt = stopAt; playing = false; stopAt = null }   // a step played from its start holds on its built frame
     t = Math.min(TOTAL, nt)
   }
   const ix = beatAt(t), b = B[ix]
@@ -762,7 +765,7 @@ addEventListener('message', e => {
   send()
 })
 
-function goBeat(ix) { ix = Math.max(0, Math.min(B.length - 1, ix)); t = B[ix].at; held = false; if (ix !== beatIx) beatIx = -1 }
+function goBeat(ix) { ix = Math.max(0, Math.min(B.length - 1, ix)); t = B[ix].at; held = false; stopAt = null; if (ix !== beatIx) beatIx = -1 }
 // every step has two stops: its start, and its end (just before the next step starts, so its part is fully built).
 // Moving to an end pauses there, so you can talk over the finished picture. Going back always pauses. Nothing here starts
 // playback: only ▶ or Space does.
@@ -776,15 +779,24 @@ function stops(b) {
   })
   return out
 }
+// → plays the next step from its start, so its animation shows, and holds on its built frame; pressed again it goes
+// straight to the next one, so no gap is waited out. Playing, it stays playing (the editor, 18:10)
+let stopAt = null
 function step(dir) {
   const ix = beatAt(t), b = B[ix], local = t - b.at, sp = stops(b)
   if (review) { goBeat(ix + dir); return }
+  if (dir > 0 && b.slide.layout === 'iframe') {
+    const st = stepsOf(b), i = st.findIndex(x => x.t > local + 0.05)
+    if (i >= 0) { t = b.at + st[i].t; held = false; if (!playing || stopAt != null) { playing = true; stopAt = b.at + (st[i + 1] ? st[i + 1].t - 0.05 : b.dur - 0.4) } return }
+    const was = playing && stopAt == null; goBeat(ix + 1); if (!was) { playing = true; stopAt = 'first' } return
+  }
+  stopAt = null
   let to = null
   if (dir > 0) to = sp.find(x => x.t > local + 0.05)
   else to = [...sp].reverse().find(x => x.t < local - 0.15)
-  if (to) { t = b.at + to.t; held = false; if (to.end || dir < 0) playing = false; return }
+  if (to) { t = b.at + to.t; held = false; return }   // a step never stops the play (the editor, 18:10): playing goes on playing
   if (dir > 0) goBeat(ix + 1)
-  else if (ix > 0) { const pb = B[ix - 1]; beatIx = -1; t = pb.at + Math.max(0, pb.dur - 0.4); held = false; playing = false }   // the previous slide's built end: its steps are not loaded yet, and stops() would read this slide's (the editor, 18:05: back did not always work)
+  else if (ix > 0) { const pb = B[ix - 1]; beatIx = -1; t = pb.at + Math.max(0, pb.dur - 0.4); held = false }   // the previous slide's built end: its steps are not loaded yet, and stops() would read this slide's (the editor, 18:05: back did not always work)
 }
 function onKey(e) {
   if (!talk) return
