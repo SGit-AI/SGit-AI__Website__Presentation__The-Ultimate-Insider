@@ -1,0 +1,614 @@
+[
+ {
+  "t": "0:05",
+  "who": "host",
+  "beat": "title",
+  "text": "Thank you all for coming tonight, and thank you for all the support for hack::soho over the years. It's amazing to see the turnout.\n\nThis evening it's my honour to present Dinis Cruz, who will be taking you into the ultimate insider: the AI agent. After the talk we will do some Q and A, so just raise your hand and I'll give you the microphone."
+ },
+ {
+  "t": "1:21",
+  "who": "editor",
+  "beat": "title",
+  "text": "While they're setting up: those of you who know me know I usually write my slides on the way to the presentation. This is one of those talks where I got my agentic team to write the slides on the way to the presentation. Every one of those little marks you can see from five o'clock to six o'clock is literally a commit made by the agentic team that I set up.\n\nIf you want to play with it, I've been publishing newsroom.sgit.ai. You're going to hear SGit a lot: it's an encrypted version of Git that I wrote, and I highly recommend you take a look at it. It is one of the underpinning open source projects I have, and I've mapped a really cool way to track incidents there. There's a massive agentic team on it too. Everything I do is open source, and it's not just open source: you can actually see everything. You can read how everything works, the story, the about page, even the management team behind it.\n\nI'm really experimenting with ways to communicate information, so I'd love your feedback: different users, different views, security for example. This is me getting into provenance and agentic flows, with a human driving. This is not about replacing humans. It is about empowering humans to do work that before didn't scale."
+ },
+ {
+  "t": "1:21",
+  "who": "editor",
+  "beat": "title",
+  "text": "The presentation is online at this URL, the Ultimate Insider presentation, and here are the slides. What's really cool these days is that you can create all sorts of environments. Instead of PowerPoint, Keynote or Google Slides, I have my own presentation tool, again open source, and it's really powerful to be able to say \"I want to work like this\" and then have a UI that matches it.\n\nI've been focusing on AI for the last couple of years. I was fortunate enough to work as a CISO, then as a CTO, and I had an exit, which has allowed me to spend a lot of time on this. I've been publishing a whole bunch of open source projects, which I highly recommend you do too. I've now reached what I think is my peak performance: I've never been as productive. And it's not just productivity: I have a level of quality, of mapping, of orchestration and of capability that I never had before.\n\nThere is a lot of hype around AI, and that doesn't help; much of it is driven by the money to be made from the hype. But for those of us with grey hair or grey beards, who have been around security for a long time, I think we have a different perspective. We've seen a lot of this, and we've seen what it looks like when things really get serious. We're not there yet, but there's a lot of interesting value here."
+ },
+ {
+  "t": "5:09",
+  "who": "editor",
+  "beat": "title",
+  "text": "So I want to talk about what I call the ultimate insider, which is where I think the real damage is going to come from."
+ },
+ {
+  "t": "5:09",
+  "who": "editor",
+  "beat": "m03",
+  "text": "And just to give you an idea of how this presentation was made: my journey into agentic work has been a very engineering approach. I never liked the idea of taking a bunch of agents, which are fundamentally Claude in a loop or whatever LLM you want to use, throwing them in a box, closing the lid, shaking it up, and coming back a couple of hours later asking what they've done. For me that doesn't have enough determinism or enough explainability. So I've been working my way towards a high degree of explainability, which I think I've finally reached, and I'm going to show you.\n\nThis presentation was created in probably a day, a day and a half, and it was all built by an agentic team with me driving it. That's the important thing: this is not \"close the lid and hope for the best\". I provided probably 50,000 to 100,000 words of voice memos, of guidance and information. It was created with a very high quality, deterministic workflow, markdown everywhere, fully documented, where I orchestrate each of these agents to work together. I wired this up at about two o'clock this morning, and this whole UI was created like this."
+ },
+ {
+  "t": "5:09",
+  "who": "editor",
+  "beat": "m03",
+  "text": "Every one of these is an agent, and an agent is easy to explain. It is fundamentally a session, a Claude session or a ChatGPT session, that has a prompt, a very good description, a lot of guidance and a lot of memory, held in these markdown files, and you run it in a loop. That's it. It has a set of tasks, and it stops.\n\nSo I have my conductor, who manages everything. The researcher gets the facts and passes them to the studio, which connects a lot of the pieces. The deck writes the deck, and motion does a lot of the animations. I'm also using rUv's work: does anybody here know rUv, or Ruflo? He does a lot of agentic work and has consistently been ahead of Claude for the last year and a half, so you should definitely check it out. I use some of it here: it orchestrates LLM agents in a powerful way. Then the designer maps it and gives it to the dev, and there's storytelling, and a whole workflow.\n\nBecause I work in corporate environments and I manage teams, I structured this the same way I structure my teams, and that's how to think about it. This doesn't mean I need fewer humans. It means that if humans had worked with me on this project, they would have been ten times more effective, and I could have scaled them a lot more. I didn't create any of the animations you will see in this presentation. I gave a brief to the conductor, sometimes I worked with the deck, and I have a storyteller, who also does my Wardley maps: I have to have Wardley maps."
+ },
+ {
+  "t": "8:38",
+  "who": "editor",
+  "beat": "m03",
+  "text": "Then the designer briefs the studio, the studio briefs motion, they do their work, the researcher makes sure everything is right, the dev does any work needed, and the deck agent puts it all together. You create one of these for each project, and for me this is the future. When I talk later about creating new cybersecurity startups and new companies, which all of you should be doing, this is what I mean you should be operating on."
+ },
+ {
+  "t": "8:38",
+  "who": "editor",
+  "beat": "prelude",
+  "text": "Some of these slides I've barely seen, because they were still working on them, so this is going to be fun. Everything is online: you can see it all on this website, and the whole flow as it goes."
+ },
+ {
+  "t": "8:38",
+  "who": "editor",
+  "beat": "three",
+  "text": "So let's talk about this insider. I want to be clear: I'm focusing on the agents running inside the company, not on the outside, and you'll see why. I don't worry too much about the outside. I worry about the agents running inside the company, because they are going to add a huge amount of value, but they also look very dangerous. They will be the insider threat that we never had.\n\nWhen I became a CISO, I mapped insider threat and thought: this is crazy, the number of people in this company who can cause damage is ridiculous, including the cybersecurity team. If you do a risk assessment of a cybersecurity team for compromise and damage, it's probably one of the most dangerous teams in the building. But to a large degree it never happened, and there are a lot of reasons why.\n\nNow we have these insiders, which are agents. We have infrastructure that was built for static environments, and we have decision making that is still based on spreadsheets. When you combine them, we have a massive perfect storm coming. And the challenge is that these insiders behave in a way we have not seen before."
+ },
+ {
+  "t": "8:38",
+  "who": "editor",
+  "beat": "definition",
+  "text": "The way I look at it, a threat is anything that causes business impact, and malice is optional. If you look at the last year, most damage was not caused by malicious attacks. Most damage is still caused by bugs, by situations, by users. In corporate, if you look at a company's incidents, the number caused by malicious actors is still quite low.\n\nThe agent brings the ability to work in a loop, in every language, to write the connection, and to work at machine speed. I say malice is optional because agents can still become malicious: they are still vulnerable to prompt injection. But a lot of the time you don't need that for them to cause a huge amount of damage in the organisation. From a threat point of view it doesn't matter whether the agent was benign. What matters is that it caused a huge amount of damage."
+ },
+ {
+  "t": "8:38",
+  "who": "editor",
+  "beat": "s-e01",
+  "text": "Here's a really cool example of what an agent is. It started as a nice chat model: that's where we started. Then we started to give it things."
+ },
+ {
+  "t": "12:08",
+  "who": "editor",
+  "beat": "s-e01",
+  "text": "We gave it tools: this was early ChatGPT and Claude. Then we gave it access to files, browsers, email and so on, and it kept growing. Now we have a loop, where the agent can go round and round, and that is what an agent ultimately is: an LLM with a bunch of tools connected. Then of course we connect it to more things: accounts, systems, management tools, and then other agents. This is what we need to protect. It's the world we now have, with agents calling agents, and it becomes a very problematic environment."
+ },
+ {
+  "t": "12:08",
+  "who": "editor",
+  "beat": "loop",
+  "text": "For an agent, it's a model with tools, what it sees, and repeat. And there's what has been called the lethal trifecta: private data, untrusted content and a way to send it out. If you align those in one agent, you have a really big problem, because you have a way to access sensitive information, a way to read data you don't trust, and a way to send it out. It's not by far the biggest problem you have, but it's a very powerful perfect storm if you have it."
+ },
+ {
+  "t": "12:08",
+  "who": "editor",
+  "beat": "s-e03",
+  "text": "One of the things I'm working on a lot is this idea of what the agent can actually do, because that is very important. In this case, everything it reads is a potential prompt injection: the emails, the calendar invites, the shared documents, the support tickets, the web pages, the web forms, and everything it builds with. Every one of those is a potential injection point, because ultimately it's all one big prompt. We still have not solved the separation of code and data in our agents, which is crazy. We spent decades of cybersecurity and technology separating code and data, and now data is code. And the agent has access to all of that information, which is a massive problem."
+ },
+ {
+  "t": "12:08",
+  "who": "editor",
+  "beat": "s-e08",
+  "text": "This is how the lethal trifecta goes: you read a document from an untrusted source, and it goes all the way out. Ideally you want to limit what your agents can do, and protect this."
+ },
+ {
+  "t": "12:08",
+  "who": "editor",
+  "beat": "limits",
+  "text": "Now let's look at some real-world examples of this actually happening. You might know some of them, and they are a good example of what's coming. But these are only the ones we know about, because we still live in a world where most companies don't have to report what actually happens. I think there are much bigger problems that are underreported, because we still don't have a lot of regulation that forces companies to publish what happened. We should have what the airline industry has.\n\nAnd I think this is the big theme. If you've been in cybersecurity for a long time, there have been lots of moments where we thought something was going to change the industry, that it was a big deal, and then not a lot changed. Of course there's been progress: I think we actually know how to secure things these days. But it hasn't fundamentally changed."
+ },
+ {
+  "t": "15:50",
+  "who": "editor",
+  "beat": "limits",
+  "text": "I think agents are going to change all this, because agents are going to be entities running inside the corporate environment that can cause a great deal of damage. And just as important, they also add so much value that the business has to adopt them, because the productivity gains are off the charts. Not in the sense of throwing agents at the business, letting everybody spend tokens and then discovering you spent a lot of money. It's the same as the internet, mobile and the cloud: it takes a while to figure out the actual workflows, but it adds a huge amount of value.\n\nSo here's some of what has happened. There was the Replit agent, which was supposed to stop and didn't: there was a code freeze, and it went and ran against the databases. There's Cursor, which just kept going. Gemini went around a control: it simply bypassed it. And then there was AWS Kiro, which broke through the flow. These are things that have already happened that we know about, where the agents are causing a lot of damage by themselves."
+ },
+ {
+  "t": "15:50",
+  "who": "editor",
+  "beat": "no-worm-era",
+  "text": "And I wanted to put this here: right now, with all the hype, most of the big outbreaks in the last year have not been caused by agents. That's not to say it isn't coming, but there is a huge amount of hype flying around. We are an industry that is very good at exploiting things, though, so we can all see what's coming."
+ },
+ {
+  "t": "15:50",
+  "who": "editor",
+  "beat": "building",
+  "text": "This is a really cool animation of what happens. Normal users come in and do things: they go where they're supposed to go. Every now and then one finds the gold that isn't supposed to be there, but they also tend to stop. It's a fairly benign environment, and the amount of damage that actually happens is reasonably limited. Agents come with far more volume. They also change, going from users to agents, and they eventually find the gold. That's the big difference: the agent doesn't stop.\n\nA good example is a compromised AWS account. If you've done incident response, how many times have you gone in and thought: if they had turned left instead of right, if they had looked in that region, or that bucket, or that EC2 instance, the crown jewels were there. But because of their business model, because of what they wanted, because of their motivations, they never found it. An agent will, and it will do it even if it's benign, because it has an objective. It might think: I'm out of budget, let me kill off all these EC2 instances so I can boot up mine, because that's my most important thing. It just keeps going, and that's a problem from a security point of view."
+ },
+ {
+  "t": "15:50",
+  "who": "editor",
+  "beat": "s-e05",
+  "text": "Here's another example. You have npm, you get onto a victim's machine, the Claude agent is called, the machine is searched for secrets, and they are published on the internet. In this case I don't think it was really a vulnerability being exploited: it was AI-orchestrated, where somebody poisoned the package, Claude Code ran it, and then you had a whole chain of exploitation. But we don't know what happened next, because companies are not reporting what happens on the inside."
+ },
+ {
+  "t": "19:27",
+  "who": "editor",
+  "beat": "incidents",
+  "text": "That is still a problem. And there's a lot happening: you can see the pattern. Deleting production, destroying user files, shipping with injection, prompt injection, and so on. The point is where we put the agents. And these are some of the biggest companies in the world, with some of the best budgets, the best capabilities and the best security teams, and they still can't get some of these things right."
+ },
+ {
+  "t": "19:27",
+  "who": "editor",
+  "beat": "m02",
+  "text": "Just to drive that point home: when there was the Midnight Blizzard compromise at Microsoft, it could have compromised everything, but they went after a couple of corporate accounts. Again, look at what was possible. With Amazon Q, it was unsuccessful only because of the syntax.\n\nOne of the mistakes we still make in our industry, and by our industry I mean the business model of software and how it works, is that we don't explore what could have happened. We say a bunch of emails got compromised, but all they did was this, so we close it, instead of asking what else was possible. We look at the consequence, but we don't look at the capability. The aviation industry works very differently. Agents, because of their behaviour, and because they work and fail differently from a human, for good and for bad, will force us to look at this.\n\nI'm going to talk a lot about the mandate, what you want the agent to do, against what the agent can actually do in this workflow. A lot of the time we only look at what happened instead of what could have happened. Some companies do this better than others, but I still feel it's a big misstep."
+ },
+ {
+  "t": "19:27",
+  "who": "editor",
+  "beat": "inside",
+  "text": "So, as you would expect, here's a Wardley map. If this is the first time you've seen one: Wardley maps are the best thing I have learned in the last decade. This is absolutely how I think. It gives me peace, it allows me to strategise, and it's probably the best systems thinking I have come across. Simon Wardley released everything under Creative Commons, and there's a good community. Fundamentally, you map the system, this needs this, which needs this, and then you map evolution: usually genesis, custom built, product and commodity.\n\nOne of the cases I'm making now is that I think open source is going to become extremely secure. Open source and proprietary software were always in an interesting balance. Open source was clearly more efficient, because you can see the code, read it and try it, and it was usually more mature in deployment, but there weren't enough paid eyeballs on it. Closed software was highly inefficient, but in a way had more money to pay. So there was a balance, and not much strong evidence that one was better than the other. What's fair to say is that whoever had more eyeballs became more secure."
+ },
+ {
+  "t": "23:09",
+  "who": "editor",
+  "beat": "inside",
+  "text": "Eyeballs also have to do with popularity and how effective the review is. But now, with LLMs, we can do code reviews far more effectively. I now do code reviews and security assessments at a level of quality I could only dream of when I was doing them quasi manually. You still need the expert to drive the security analysis, but I am very efficient. So I think open source quality is going to move this way.\n\nThe problem is the legacy apps and internal systems, which will stay back there, because they are not exposed to the outside world. There are legacy apps that people do not even have the source code for, or nobody knows how to build, or nobody knows how it works. In a Wardley map way, things move as they mature, and that is where you can plan: I know the threat is going to come in here. The user is being attacked either from the internet or by the agents, and the agents are going to become far more productised and commoditised from a weaponisation point of view.\n\nThis is what I was talking about. The outside has always lived in a sort of balance. The outside gets probed, and we build a lot of walls around it, even multiple levels. The problem is the applications running inside the organisation, and that is my key point. Those apps, and by the way a lot of security tools fall into that category too, are now going to be extremely vulnerable to agents running inside the network, where in a lot of places we still have not done proper network segmentation, and we do not have proper databases or integrity. It is a massive issue."
+ },
+ {
+  "t": "23:09",
+  "who": "editor",
+  "beat": "s-e06",
+  "text": "In a way, the outside tends to be regulated by its natural antibodies, while on the inside we do not tend to focus as much, which is again where the threat is going to come from."
+ },
+ {
+  "t": "23:09",
+  "who": "editor",
+  "beat": "identities",
+  "text": "If you think about it, the agents will arrive into a population that is already massively undermanaged. I would challenge you to find an organisation that has good control over its identity management, its risk management, its access control, its permissions, even its identities. It is really hard to do with the tooling and capability we have today.\n\nThat is the world the agents arrive in: a world where we do not have, I would argue, fit for purpose infrastructure and capability to handle them, especially from an authentication and authorisation point of view. Role based security is still a massive issue."
+ },
+ {
+  "t": "23:09",
+  "who": "editor",
+  "beat": "permissions",
+  "text": "Here is one of the things I work on: what we grant versus what we use. A lot of the time we give our agents and our actors inside all these capabilities, but they only need a little bit. The same with admins: we end up giving a massive set of permissions when the admins only need a little bit.\n\nThen we say we have been very successful because we can do admin on demand, where you elevate your privileges from nothing to admin. But you now have everything. You have the ability to destroy the entire company at that moment in time, which is pretty crazy when you think about it. So that is the problem: right now we massively overprivilege this stuff."
+ },
+ {
+  "t": "26:55",
+  "who": "editor",
+  "beat": "s-e02",
+  "text": "A lot of it is caused by technology, by development, by loops, by CI pipelines. It is not easy to do this properly today. And the blast radius is massive. The way I think about it, the blast radius of an agent is everything it reaches. It is not what you think it does, it is all of that. You might think your agent changes the project and commits to the repo, but at that moment in time it can do all of that. That is why I do not run agents on my laptop. Even something as simple as giving an agent access to your GitHub repo: the number of things that agent can do at that moment, even just with write privileges, is enormous.\n\nWe think we want this, and the agent gets all of that. And the agent will proactively, even in a non malicious way, try to find all this stuff in order to do its task, and that is where it can cause a huge amount of damage. You have probably seen it already when working with an agent: \"Whoa, why did you do that?\"\n\nThis is one of the most important concepts for me: the moment of authorisation is the moment of the grant. When you give an agent access to your database, at that moment you gave it access to destroy your database. If you give it access to your inbox, you gave that agent permission to read every one of your emails, email everybody, figure out how to reset all your passwords that use email as a backup, and, if you have a folder structure, blow up your entire folder infrastructure. That is the moment of authorisation. So when people say the agent hallucinated, I say no, you had already given it this permission.\n\nThe game plan here, which I do not go too much into, is to give this to the business. You go to the business and say: accept the risk of unlimited financial liability, accept the risk that this agent can blow up your entire database and bring your company offline. I guarantee very few business owners would accept that risk. But that is what is happening today, and that is the connection we need to make."
+ },
+ {
+  "t": "26:55",
+  "who": "editor",
+  "beat": "infrastructure",
+  "text": "So the infrastructure we have was built for code that stays where you put it. Our entire infrastructure assumed: I am protecting against this, I know the code is there, I know the code is not going to change, and it is all good. But agents do not behave like that. The agent will find ways, it will be creative with the range you give it, and sometimes it will even elevate privileges. We have an infrastructure that cannot sustain what agents can now do to it, which is quite problematic."
+ },
+ {
+  "t": "26:55",
+  "who": "editor",
+  "beat": "s-e07",
+  "text": "Here is an example: a CI job and a browser extension. The agent can check out the tree, which is what you wanted it to do. But the runner can delete files, read any file, change it, commit things. The word I came to use for what you want is the mandate."
+ },
+ {
+  "t": "30:40",
+  "who": "editor",
+  "beat": "s-e07",
+  "text": "I want the agent to change this, read the project and run programs as the account. That is what I want the agent to do in that CI pipeline. But because of the credentials we gave it, it can do all that other stuff: commit to the repository, delete files, read any file, change any file. And it does not help that the infrastructure does not give us the level of granularity we need.\n\nThe same with a browser extension. You install it and think it is pretty cool, let me give my agent access to it. Now it can read every page you visit, act in accounts logged in as you, and reach any host on the internet. So what happens when an agent, with your account and your privileges, starts to attack other companies?\n\nOne of the examples we had: a user asked an agent plugged into a browser to book a Pilates class. The agent navigated the site and found the class was full. It looked around, found a link to unregister from a class, worked out that it was an insecure direct object reference, and realised it could remove other attendees. So that is what it did. It came back and said: good news, I got you into the class, all I did was remove the other people from the waiting list and put you in. From the agent's point of view that makes total sense, because you gave it the permission to do that, and in this case the website was vulnerable. It becomes very interesting to ask who is liable here: the website that had the vulnerability, the agent that did it, or the user who gave the instruction?"
+ },
+ {
+  "t": "30:40",
+  "who": "editor",
+  "beat": "integrity",
+  "text": "This is something I have been saying for a while. We all talk about ransomware and all the problems in cybersecurity, but most of the time it was a compromise of availability and confidentiality.\n\nI remember being at a big financial organisation in Canary Wharf, where we had shown a whole bunch of vulnerabilities. Business users are always very interesting, because once you tell them what you can do, they come up with scenarios far worse than you thought. I usually ask this question: at what point would you no longer trust your entire database? Is it 5 per cent, 20 per cent, 50 per cent? If a financial data set has been corrupted to the point where you do not know what is valid, how far until you say you cannot do anything? The numbers are usually very low. If you mistrust 5 per cent or 2 per cent of your data, and more importantly you do not know how much, because it could be two, five or ten, it is usually game over.\n\nSame with your calendar or your email. If your calendar suddenly has 5,000 new entries, or 500 entries modified, when do you say you cannot use it any more? So integrity is far worse. But in the past it never really fitted the business model of the attackers, and when it did happen it was predictable."
+ },
+ {
+  "t": "34:10",
+  "who": "editor",
+  "beat": "integrity",
+  "text": "This thing deleted the database or corrupted these folders, but we know the pattern. So I think integrity is a far worse problem than confidentiality or availability, and that is what is coming our way. If you lose the integrity of your data, it is a massive problem."
+ },
+ {
+  "t": "34:10",
+  "who": "editor",
+  "beat": "s-b01-collision",
+  "text": "So, like I said, put the three together. We now have a new entity on the inside, which is basically an employee working at machine speed: the agent, which now has business capability. We have an infrastructure that cannot tell you what it did, cannot stop, replay or contain what happens. And we have a decision process that runs on spreadsheets, does not act in real time and is really slow. That is what I call the insider problem, and that is the massive issue we have right now.\n\nSo that was part one. Before going on: any questions or comments?"
+ },
+ {
+  "t": "35:23",
+  "who": "room",
+  "beat": "s-b01-collision",
+  "text": "When you ask an agent to do a small task and, to achieve it, it has access to all of your information, whose responsibility is it to limit that capability?"
+ },
+ {
+  "t": "35:51",
+  "who": "editor",
+  "beat": "s-b01-collision",
+  "text": "Who is responsible for limiting the capability? The way I think about it, we have to understand how business works. Business works on budget, on time, on focus, on risk. In cybersecurity we sometimes think we can go to the business and say this is bad, but for the business to fix something, it has to stop doing something else.\n\nSo I start answering that question with: who is holding the risk? You have to gamify this, and the risk has to be owned. If someone is deploying an agent, then the person who manages it, the person they report to, the C level executive and the board all now have to accept that the agent can destroy the database. That happens today, but we do not let it flow through. So the first part of the answer is making sure that every person in that chain accepts it, because the higher you go, the more they say: fix this, I am not going to accept this risk.\n\nWhat I do with risk acceptance, which I highly recommend, is not to give the executives a choice. I say the risk already exists, because the agent is deployed; all you can decide is whether you want to fund the fix. Then you have a positive model, with energy, focus and money going into reducing that scope. It does not mean you will reduce the scope, but at least you have a fighting chance of reducing the cost."
+ },
+ {
+  "t": "37:23",
+  "who": "room",
+  "beat": "s-b01-collision",
+  "text": "So are you saying the bottleneck for adopting these kinds of solutions is education?"
+ },
+ {
+  "t": "37:32",
+  "who": "editor",
+  "beat": "s-b01-collision",
+  "text": "No, I do not buy that. That is what we always said in cybersecurity: if people were just aware of the risks, let us run awareness programmes. In a way, the business is very good at understanding risk.\n\nTake the PHP issue I have been tracking. Five days ago the message was that the sky was falling: patch everywhere. It was on the BBC homepage: 70 per cent of internet applications are vulnerable. But even then, the business sits down and asks: how many of these do we have? A couple. How bad can it be? And the interesting question: how many companies have been reported as exploited by the PHP vulnerability so far?"
+ },
+ {
+  "t": "38:39",
+  "who": "room",
+  "beat": "s-b01-collision",
+  "text": "Zero."
+ },
+ {
+  "t": "38:40",
+  "who": "editor",
+  "beat": "s-b01-collision",
+  "text": "You gave it away. Yes, isn't that remarkable from a security point of view? So the business, in a strange way, knows. The biggest lesson I learned when I started sitting in board meetings and risk committees was how big the business actually operates. I remember realising my risk was this small compared to what the business has to deal with. So you have to put it into perspective. Not that it is not real, but you have to align it with the business. It is not education, it is reality.\n\nWhat is happening now is that agents are going to change reality, especially because there is a business driver to deploy agents front and centre. The executives see the opportunity and push to deploy all these agents. I do not buy that they do not understand: we do a really bad job in our industry when we say executives are not clever. My experience with boards and executives is that the higher up the chain, the cleverer they are, with some exceptions. They are super focused and they understand.\n\nSo now that team is pushing agentic down. What we need to do is go up and say: here are the risks you are buying, and if you do not fund this properly, we end up with massive damage to the business. But if you get it right, you can dramatically change your business. And I am going to come to this, because if you think we have apps now, wait until the next phase of agentic."
+ },
+ {
+  "t": "40:25",
+  "who": "room",
+  "beat": "s-b01-collision",
+  "text": "I do not see the fundamental difference between this and identity management and least privilege. An agent is just like another human, and all the identity management practice for humans applies. Large enterprises are undisciplined with identity management, but it is not a fundamental paradigm shift, other than that an agent goes everywhere all at once, so the blast radius is greater because it moves so quickly. The same solutions and practices still apply."
+ },
+ {
+  "t": "41:04",
+  "who": "editor",
+  "beat": "s-b01-collision",
+  "text": "We, as an industry, have never been more important. In application security, network security and every aspect of security, I feel we have been in the lower divisions, and now we are in the Premiership. Everything I have been doing for the last 30 years of cybersecurity is needed times ten. In fact, what is stopping the agentic revolution from really taking hold right now is that people cannot trust it. I will give you the punchline at the end of my slides: we have brakes in cars so we can go faster.\n\nSo a lot of the technology we developed is exactly what we need. The problem is that it never scaled very well, it is not fit for purpose in most cases, and it needs the next generation, which I hope some of you will build, and build companies around. Identity management systems are in a poor state. The difference is that we were never called to attention, never made accountable for our claims, because the attackers were never that sophisticated.\n\nSo yes, the agent is like an employee, but an employee with a mission, with every language on the planet in its tool belt. It can write scripts, it will keep going, it will be creative, it will not stop when it hits a problem, and it will not understand the damage it is creating. It is still an entity, but a very different entity from what we had before, and it is across the entire organisation. Imagine if that person from production, or HR, or even cybersecurity became one of the most elite hackers on the planet. How much damage would they do, even without being malicious, with that level of proactivity? So I agree, but that is why I say we now need to really scale up."
+ },
+ {
+  "t": "41:04",
+  "who": "editor",
+  "beat": "team",
+  "text": "This is one of the key points I was trying to make here. This slide needs a bit of work: I created a vision, and my agent did a couple of rounds to execute it.\n\nLook at this whole AI apocalypse idea, that AI is going to destroy the internet and hack everything. I used to have a party trick at Black Hat, or even here. Take a random section of this room, or go to DEF CON or any conference, put 20 random people at a dinner and ask: if you really wanted to do damage on the internet, if you were really unhappy where you work, could you make headline news? Invariably, a number of people would say yes, that is doable, especially if they worked together. I have been doing this for about 20 years.\n\nSo the interesting question is why it has not happened. A lot of it is the motivation of the attackers. And I think we, as an industry, have been very good at giving good jobs to the people who can do it, so they think: I make enough money legally, why go to the dark side? There was a kind of order."
+ },
+ {
+  "t": "44:42",
+  "who": "editor",
+  "beat": "team",
+  "text": "The people who could do it were not motivated to, and they were clever enough to realise that if they wanted to make a lot of money, there were legal ways to do it instead of going criminal. That is where we were.\n\nBut look at what I have created here from an AI point of view: an agentic team that runs off a brief and now works by itself. It is self improving, not in an AGI way, that is science fiction, but in terms of doing the work. If I turned what I did here on a target, can you imagine the damage it would do? The question is not why what I have here is special. The question is why it has not happened. This has been possible for the last two years: you could have done a variation of it with earlier versions of ChatGPT. But there is a lot more to an attack than the capability: you need the commercial model. Which is why I think the real danger is not criminal exploitation, it is benign agents going rogue."
+ },
+ {
+  "t": "44:42",
+  "who": "editor",
+  "beat": "spreadsheets",
+  "text": "So now we are going to see why what we have right now is a warm up for what is coming next. I have been making the case that we have all these agents to control, and we think that universe is this size. The problem is that the business has, for a long time, had the worst deal: all most executives had was a spreadsheet, at every layer of the organisation. Even when you give them all these tools, they use spreadsheets. You run security teams: I bet you have critical information processes on spreadsheets. And every single spreadsheet is a failure of the technology you have.\n\nWhen people talk about vibe coding, I think that is very diminishing. I call it explorer coding. In Wardley maps you have the explorers, who do the experiments, the villagers, who turn that into a product, and the town planners, who make it a commodity, and you are going to hear me talk about them. What is going to happen is that every single person in the business, including you, is now going to develop applications. Look at what has happened with Claude, with ChatGPT, with Lovable, and that is just the warm up. I think it is amazing.\n\nIn the past, a person with a business problem could only build a spreadsheet. The nice thing about a spreadsheet is that the damage you can do is very limited: it barely works across two or three people. I am sure you know the joke of the budget file called budget 2026, final, revised, this is the one, approved, final changes. That is a failure of version control, using a piece of technology not designed for the purpose. It kind of worked because there were no malicious players and not much damage in the middle.\n\nNow all our users are going to operate here. They are going to take the business problem and build an app, and by building an app they bring it into this environment."
+ },
+ {
+  "t": "48:30",
+  "who": "editor",
+  "beat": "spreadsheets",
+  "text": "Which, by the way, is where I think a lot of the opportunity is. If you want to build a business, build it on the handover of everything that the security teams, the business teams or the identity and access management teams are building, and productise that. The ones I think are going to struggle are the big vendors with what I call rent-based businesses: they sell the big licences and the big annual recurring deals, and they are very expensive. The opportunity is to take whatever people are building and productise it, make it better, give it that extra something. Every app we have is going to need one of these.\n\nSpreadsheets are a great example of what happens when the business is empowered. Now the business is empowered to create applications. Imagine if every single spreadsheet in the business was an app, and now you have to protect that. We almost had that once, with Visual Basic, VBA for Office and all the automation, and it was so bad that the security model was simply to get rid of it. That shows how sometimes, from a security point of view, we say: that is too dangerous, let's ban it. How did we deal with dangerous macros? We banned macros across the business.\n\nThat is not possible any more, because every one of those spreadsheets is becoming an application, and an application that adds a lot of business value. Compare the productivity of working in a spreadsheet with working in an app customised for your needs: there is no comparison. That is what is coming."
+ },
+ {
+  "t": "48:30",
+  "who": "editor",
+  "beat": "way-out",
+  "text": "So what I want to talk about now is how you control that. In the first part I said we are going to have a whole lot of agents and a whole lot of apps that can cause a lot of damage, because our infrastructure is not fit for purpose. In this part I want to talk about what I am working on, and how I think we are going to solve this problem. I think it is solvable, with best practices, and the things we talked about are doable.\n\nA lot of you are probably working on projects where you are being asked: what are my agents doing? How can I control them? How can I limit the blast radius? How can I make people accountable? This is how I handle it. You measure what the agent can actually reach, you map out what stands in the way, and you start thinking in terms of a licence to operate. What the agent earns is autonomy."
+ },
+ {
+  "t": "48:30",
+  "who": "editor",
+  "beat": "abp",
+  "text": "The idea is that you give the agent autonomy based on how much trust you can give it. And that trust is fundamentally about the delta between the reach, which is what it can do, and the mandate, which is what you want it to do, what the business wants it to do. That gap is the problem. That is where the hallucinations occur, and that is what you want to reduce to the minimum. You want the reach to match the mandate."
+ },
+ {
+  "t": "51:57",
+  "who": "editor",
+  "beat": "abp",
+  "text": "Because if it does not, that is where the exploit occurs. And it gets more interesting, because you actually have to map the behaviour you want. What I am going to talk about now is what I call the Agent Behaviour Policy, which is open source, so you can all use it.\n\nFor me, the way you control this is to start mapping a policy for what the agent can do, and the best thing about policies is that the business understands policies. I know most of you hate policies, but that is because until now policies were poor: they were documents nobody read. You have probably not even read the ones you are supposed to read in your own domain. They never scaled, because they were not a graph, they were not customised, they were not efficient and they were not connected to the real world.\n\nNow we can make policies scale. That, to me, is exactly how we solve this problem: with policies that are dynamic, that adjust to reality and even to what you intended to do. We can do now what we could not do in the past."
+ },
+ {
+  "t": "51:57",
+  "who": "editor",
+  "beat": "s-e09",
+  "text": "So let's look at how it works. A behaviour policy fundamentally maps the mandate: what the agent is authorised to do, and what we expect it to do. That is easy to find out, because you just state the objective of the agent and what it is supposed to do. Then you need to map the grant. I want my agent to change the project and commit. But the agent can reach any host on the internet, can push, can sign commits, can act in accounts with its credentials, can publish packages. This probably sounds familiar.\n\nYou cannot protect this until you understand what you have. So you start by defining it, then you create risks for all of it, you give them to the business, and you see them fund the fixes. Imagine you go to a CTO and say: that agent you want us to deploy for productivity, to do our code reviews, the one the executives are excited about, can you sign off on the fact that it can do all of this? I keep coming back to this, but it is how business works: you have to make executives accountable for the decisions they make. The business signs off on what the agent is for, but the agent can do all of that.\n\nThen you go into what stands in the way, which is where it gets interesting, because often nothing stands in the way. The Agent Behaviour Policy is a written policy per role that says what the agent can do: it can read files, it can execute this, this needs approval, it cannot do that."
+ },
+ {
+  "t": "51:57",
+  "who": "editor",
+  "beat": "s-port-abp",
+  "text": "So then, as the agent does its work, you get this environment."
+ },
+ {
+  "t": "55:16",
+  "who": "editor",
+  "beat": "s-port-abp",
+  "text": "A lot of the time the gap is caused by the fact that if I allow the agent to connect to a particular place, I am also giving it the ability to send an email, or to write a file. I give it the ability to read the credentials because I allow it to read a file. So you start to understand the delta between what you want your agent to do and what it can actually do, and the behaviour policy is a way to map it. I am going to show you technology you can deploy today to make this happen.\n\nThis one was created by Claude Code running Ruflo, an orchestration framework by another developer that spins up an environment with what it calls the queen. The queen manages all the sub-agents and delegates the work, and when they finish, it puts the result in my SGit vault and sends it out. Here you see a normal execution, where your agents, the coder, the tester, the researcher and so on, can do all of this."
+ },
+ {
+  "t": "55:16",
+  "who": "editor",
+  "beat": "s-port-gate",
+  "text": "Now we put a policy in place. Some of these actions go through, some now need approval, and some will not work at all. That is what we want: an environment where, when these agents are working, we have defined the policy of what we want them to do.\n\nAnd the important thing is that we could always have done this, but it never scaled. I used to give presentations about graphs and connecting things, and I did some interesting work in Jira, but I knew very few people in the world could do any of it. Even I could not implement what I was describing, because the engineering, the code and the budget needed for those graphs and structures made it impossible. Now we can.\n\nWhen I talk about how I use LLMs: there are examples with an LLM inline, but the best way to do this is with zero LLMs inline. The best way is deterministic code, because code is the only way to have a chance of being deterministic. The power is that we can now use LLMs to define those deterministic paths, to define how we want this to operate. That, for me, is very powerful, and it is the future."
+ },
+ {
+  "t": "55:16",
+  "who": "editor",
+  "beat": "s-port-journey",
+  "text": "So we can now build things like this. We can define the journeys we want and say: that is the one I want. If the agent tries to do something it is not supposed to do, something it has no mandate for, it gets denied. We can create these flows and workflows in these environments, and in this particular case, it needs approval.\n\nFor me, this is a sane way to deploy agents: you have the paths you allow, the paths you do not allow, and the paths that need approval, another pair of eyes."
+ },
+ {
+  "t": "58:53",
+  "who": "editor",
+  "beat": "s-port-journey",
+  "text": "The good news is that we can now scale this mapping, because no business application has an infinite number of permutations. Even if there are 50, 100 or 500, we can now map them out, which is extremely powerful."
+ },
+ {
+  "t": "58:53",
+  "who": "editor",
+  "beat": "s-port-abp-review",
+  "text": "What you see now is what I did when I was onboarding my team, the team that built this slide deck. This one, for example, is for ruv.sgit, the agent that builds animations. It has a policy. I now use QR codes to communicate: the agent asks for what it wants, and I have to approve it, change it or question it, and in the end I give that to the agent as its mandate. I was able to do this for every agent I had, and define the scope of what each one can do, which again is extremely powerful."
+ },
+ {
+  "t": "58:53",
+  "who": "editor",
+  "beat": "s-e10",
+  "text": "So we have a policy. The policy says what I want the agent to do, what the agent can do, and the gap, which is the damage. The next question is: what stops that damage from occurring? This goes back to how you actually protect it. Normally there is nothing in the way. If you just run an LLM without policies, the agent goes straight to the outside world, or goes around whatever is there."
+ },
+ {
+  "t": "1:00:40",
+  "who": "editor",
+  "beat": "s-e10",
+  "text": "What we map here starts with none, which is nothing. By none I mean you are running Claude, ChatGPT, your own agent or your own workflow with no policy in place. There is no control; you just hope. I call that hope-based security: you hope the agent will not go off piste.\n\nThe second, which is quite effective today but very dangerous, is giving the agent a written policy to follow, written in prose: \"Whatever you do, please do not delete the database,\" in your prompt. There are lots of problems with that. With memory, especially now that context gets compacted, that bit can be lost, which is why it eventually does it. But it works quite well in some ways. The third is a hook, a semi-agentic environment that enforces the rule, and that works quite well. The best is when it is enforced outside the agent, which is what I highly recommend.\n\nThe first is not a control, the second the agent can go around, the third the agent can find, and the fourth is a control that holds. The blind spots were the cases where the agent hit one of these settings and went around it: I cannot reach the internet from here, so I will go from there. Those are the four ways to think about it. But even just having the expectation works very well. On RiskMandate there is already plenty that lets you create policies that at least tell your agent what you do not want to happen, which is already important."
+ },
+ {
+  "t": "1:00:40",
+  "who": "editor",
+  "beat": "s-e13",
+  "text": "Then there are the published examples: a coding agent with confirmations, the same coding agent with no confirmations, a connected browser, browser extensions and a CI job. You give each one a grant, but it comes with a lot more, so the damage it can do is massive. And it depends on where you run it. It is again the question of what is actually preventing this from happening."
+ },
+ {
+  "t": "1:00:40",
+  "who": "editor",
+  "beat": "licence",
+  "text": "What I then say is: once you have a behaviour policy and you understand it, you can give your agents a licence to operate. Fundamentally, we need to start treating agents as entities. I think we are going to have to have an insurance policy for every single agent, because that is how business works. Every agent has to have a licence to operate: the boundaries, the environments the agent operates in, including observability, connected tools, everything that happens. If any of that changes, the agent loses its licence to operate and you need to take it off the network.\n\nPeople also ask: how do I know the agent is still working tomorrow, or next month, the way I thought it was, when things change? The licence to operate should catch that. That is how I map it, and there is also the idea that the agent can learn."
+ },
+ {
+  "t": "1:04:22",
+  "who": "editor",
+  "beat": "s-e14",
+  "text": "Depending on how it behaves, you can have licences to operate where you start small and have gates: on day one it can do this, once that has happened it can do this. But if it steps outside, at any point, we stop the agent flying. That is where it gets more interesting: thinking in terms of licences to operate for your agents."
+ },
+ {
+  "t": "1:04:22",
+  "who": "editor",
+  "beat": "s-port-pki",
+  "text": "And a lot of this goes back to your identity systems. We need to solve PKI, public and private key infrastructure. It was a very good idea that the industry should not throw away just because it is hard to do. It did not scale, but it is the best way to operate. These days every one of my agents has a public and private key, and I publish the public one. If you want a business to build, I think this would be a great one.\n\nEvery one of my agents, including me and the people I work with, has a public and private key. We communicate with them: we can encrypt things, share secrets and sign all the messages. A key is given to every agent session. I am operating in a world where you do not have one key, you have dozens, all signed, with multiple personas, and the PKI is fundamental for all of this to work."
+ },
+ {
+  "t": "1:05:54",
+  "who": "room",
+  "beat": "s-port-pki",
+  "text": "Is this similar to AWS's policy-based access control, but a more dynamic version of it? Would you have an orchestrating agent that dynamically assigns tools bound to a policy?"
+ },
+ {
+  "t": "1:06:01",
+  "who": "editor",
+  "beat": "s-port-pki",
+  "text": "Yes, the Cedar work. Cedar is a really good policy language."
+ },
+ {
+  "t": "1:06:33",
+  "who": "editor",
+  "beat": "s-port-pki",
+  "text": "I agree. I would just say that I want that formula to be deterministic, so I do not think there should be an agent at runtime making the decisions. You create a policy beforehand that defines it, which is different. And now we can scale that, because we can map the sequence of events."
+ },
+ {
+  "t": "1:06:56",
+  "who": "room",
+  "beat": "s-port-pki",
+  "text": "There is a Cedar engine for automated reasoning, and it is quite powerful: it is mathematically proven."
+ },
+ {
+  "t": "1:07:07",
+  "who": "editor",
+  "beat": "s-port-pki",
+  "text": "Cedar, yes. The problem until now is that we never scaled those engines, because the complexity was too great. This ages me, but does anyone know .NET Code Access Security? I think it is one of the best things that came out of Microsoft. I spent a long time arguing publicly that Microsoft should focus more on it, and I eventually gave up, as the Java Security Manager was also given up. But it was a good idea: you enforce permissions in code, all the way up and down.\n\nSo PKI is massive, and a key part of my solution, because without it you do not know who the agents are and you have no idea of the flow."
+ },
+ {
+  "t": "1:07:07",
+  "who": "editor",
+  "beat": "demos",
+  "text": "Everything I have talked about is live and open source. You have the Agent Behaviour Policies on RiskMandate. The vault: everything is held on SGit, which is an encrypted version of Git. You have the permission gates, and you have this team of agents. In fact, this presentation is probably a good way to learn how all of this works.\n\nI have a company called RiskMandate, which commercialises the policies. It is all open source, but we help companies create the policies and collaborate. Let's talk, because I think it is a good business model."
+ },
+ {
+  "t": "1:07:07",
+  "who": "editor",
+  "beat": "s-sharness-one-idea",
+  "text": "Because this is a more technical crowd, here is one of the challenges I have had with the policies. Customers challenge me: you have a policy, but if I give the policy to the agent, the agent can go around it, and if you give it to a hook, the agent can change the hook. Until last week my answer was: let's look at what you have, and whatever you have, we can go around it. When I looked at what is out there, it is still very messy, very proprietary, and it does not do what it is supposed to do.\n\nSo I built one. It is remarkable what is possible these days: I took a couple of days last week and built this, and I invite all of you to use it and try to break it. It is what I call a process behaviour policy: a harness for the agent's processes. I designed it from scratch, asking: if I were going to build the best process behaviour environment I could, what would it look like? Then I worked with Claude and we implemented it. It helps that I already have a large body of work, thinking and examples behind it.\n\nWhat it says is: if you have an agent running inside this environment and it tries to do things, block what it should not do. It is a harness at process level that prevents the agent from doing what it is not supposed to do. This is the real policy and real enforcement: I do not want the agent attacking the internet, so I do not give it access to the internet; I do not want it reading my entire file system, so I give it only some things."
+ },
+ {
+  "t": "1:07:07",
+  "who": "editor",
+  "beat": "s-sharness-os",
+  "text": "This lets me apply the policy at process level, which is really powerful. It means the agent now runs inside SHarness, with secure environments for the file system, the network, the LLM and Bash."
+ },
+ {
+  "t": "1:10:46",
+  "who": "editor",
+  "beat": "s-sharness-os",
+  "text": "What is happening here is that the agent is running on something I wish a lot of the LLM platforms had done. Think of it as a container. It is Linux, and this is why it is so cool: the agent is spun up as a unique random user that has no privileges. Everything is stripped out of the operating system, so unless you have a zero day on Linux, you should not be able to get out.\n\nIt has zero access, but it can talk, over TLS, with certificates that were issued and only exist in that environment. If it needs to talk to the file system, it does not hit the file system: it hits this process. If it needs the internet, it goes here. If its LLM call needs to go out, it goes there. And if it needs a secret, it goes to the KMS to get the secret, and then the request is made.\n\nThe coolest thing is that because it is HTTPS, it can all run on one machine, or it can become distributed, which is a much better way of doing it. So what you have is a process that by itself can do almost nothing. It can just talk to a couple of ports."
+ },
+ {
+  "t": "1:12:04",
+  "who": "room",
+  "beat": "s-sharness-os",
+  "text": "Question from the room: this works at the file and network level, since everything in Linux is a file. But if the agent is accessing a database, how do you inspect the payload? The payload could be a drop database."
+ },
+ {
+  "t": "1:12:23",
+  "who": "editor",
+  "beat": "s-sharness-os",
+  "text": "I love your question, because I asked the same thing, and then we designed for it. I started like this, and I liked it, but then: what if I want to talk to a database? What you do not see here, but I have designed, is that this network can connect to a SHarness database component, and that can connect to, say, MySQL.\n\nAnd because it is policies, I can put a policy in there that says: you can only connect to that SQL database, to that table, to that field, and by the way, you can only put positive numbers in there. So I can go all the way down to the detail of the application in the policy I am writing."
+ },
+ {
+  "t": "1:13:14",
+  "who": "room",
+  "beat": "s-sharness-os",
+  "text": "A comment from the room: so, like Vault, you could issue an on-the-fly username with a two-minute lifetime and very strict policies, and have that happen transparently. He agrees: exactly, like what Vault does."
+ },
+ {
+  "t": "1:13:29",
+  "who": "editor",
+  "beat": "s-sharness-os",
+  "text": "But what is very powerful here is that you have to be able to describe the business policy. I started from the point that whatever I design has to understand the behaviour. I actually had a whole debate with Claude about this: is this a control? Is it a system? And I said no, this is behaviour, because that is what we are encoding.\n\nThis one is simple; it actually has more levels, and that is the whole point. On the file system, you want to be able to say: do not access the entire file, access this part, read only, and you can only change this part of the file. The coolest thing is that we can now write that as a policy, and write those checks in place."
+ },
+ {
+  "t": "1:14:10",
+  "who": "room",
+  "beat": "s-sharness-os",
+  "text": "Question from the room: have you written a container, or have you written hooks into the process itself?"
+ },
+ {
+  "t": "1:14:19",
+  "who": "editor",
+  "beat": "s-sharness-os",
+  "text": "I need to find a better way to describe this. Linux already has container technology built in, and I am using that. I start with a unique random user that has no privileges, and we can even control the amount of memory it has, because Linux gives you that. So it is like a container. Technically you can run it inside a container, and for some cases that probably makes sense. I would probably run some of it on AWS Nitro, the AWS hardened environment.\n\nThe point was to think about the only way it could talk. I started with IPC, and then I thought: why not just talk over TCP? I got Claude to do a case study on the performance implications of running all of this on TCP, and it came back with about 25 milliseconds of overhead. So now all of this can run on one computer, or each part on a different one, or all of them on the same computer, in fact in the same cloud session."
+ },
+ {
+  "t": "1:15:40",
+  "who": "room",
+  "beat": "s-sharness-os",
+  "text": "A suggestion from the room: the QUIC protocol might be better."
+ },
+ {
+  "t": "1:15:43",
+  "who": "editor",
+  "beat": "s-sharness-os",
+  "text": "That would be interesting. But the power of using TLS is that you have mutual TLS authentication, a mature environment. What is not shown here is that we create a unique CA that everybody trusts, and I give the certificates to all the agents. It is a good model, because it lets you control by policy what each part is supposed to do. Here is the example you were talking about: when I want to go to an LLM, this understands that, and I go to the KMS to get the secret I need to make the LLM call.\n\nThis is what runs today. Please go and check it out; I would love your feedback. Break it. This lets me say, when I talk about Agent Behaviour Policies: I have a great place for you to run the agents, because now I can control them. And everything I do is open source. I do not want to be inline in my business; I know inline is very dangerous. But this is already working pretty well, and you can go and grab it."
+ },
+ {
+  "t": "1:15:43",
+  "who": "editor",
+  "beat": "live-sharness-linux",
+  "text": "Then I wanted to try this for real. If you go to the SHarness site, you can see this running in a Linux environment that runs in a browser. You can run a full Linux distribution in a browser. When I tested this, I have tests that run inside a Linux distribution in a browser, inside a cloud session, or inside your own browser. So I am able to confirm that all of this holds.\n\nThis is literally Linux running in my browser, so when you look at the SHarness examples, you see a real Linux kernel running this. I think that is a really good, secure way of doing some things. Imagine you are a payload and you find yourself in a harness, inside a Linux distribution, inside the browser. Getting out of that would be a bit harder than other things.\n\nI use Landlock for the containment; Landlock is one of the techniques. So you can see, in this case, it can read the user folder, write to temp, write in the workspace, connect out, the memory cap, and so on. It runs in 25 or 30 seconds. This is what I use to test the whole thing."
+ },
+ {
+  "t": "1:15:43",
+  "who": "editor",
+  "beat": "s-sharness-components",
+  "text": "Here is the part that is remarkable. I started this because I needed a KMS. My journey was: I had all these vaults, and I got to the point where I had two agents in two different sessions. One creates a QR code of its public key. I give that QR code to the next agent. That agent encrypts the vault key into another QR code, which I give back to the first agent. That is cool, but the QR code still gets saved, the vault key still gets saved. So I asked myself: how can I do a KMS?"
+ },
+ {
+  "t": "1:19:12",
+  "who": "editor",
+  "beat": "s-sharness-components",
+  "text": "It needs to be held in a process, and it cannot be the same process Claude is running in, because then it could figure it out. So I built this whole thing, which again shows the power of what I call explorer coding today."
+ },
+ {
+  "t": "1:19:12",
+  "who": "editor",
+  "beat": "live-sharness-playground",
+  "text": "You can go to the SHarness site and map all of this and access it. There is still a lot of the boundary we want to explore. I think there are a lot of good checks in it, but it needs to be hardened. To be honest, even in these early days, the checks work pretty well."
+ },
+ {
+  "t": "1:19:12",
+  "who": "editor",
+  "beat": "s-sharness",
+  "text": "So here is what happens. With no policy, which is today, you hit the kernel, you go out, you get DNS, and everything is allowed. That is without the harness: the agent can do all of that. With the harness, it cannot. I will go through some of these quickly."
+ },
+ {
+  "t": "1:19:12",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "One thing I want to show you quickly: I have also built encrypted vaults. I do not have the time to go through it, but what you see here is an application running inside an encrypted file system, fully interactive, that you can manipulate. I use it for a lot of my work now. It is what my agents use to communicate: memory and storage for agents."
+ },
+ {
+  "t": "1:20:47",
+  "who": "room",
+  "beat": "live-vault-risk-mandate",
+  "text": "Question from the room: how do you enforce access to specific endpoints, for example giving an agent AWS access but only to certain endpoints, or SQL Server or MySQL access but only to certain tables? Is there a provider for that, and how is it expressed in the policy?"
+ },
+ {
+  "t": "1:21:08",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "You can write one of those. The policy says exactly what you want it to say, and then either you already have a provider or you write one. The provider is just following the network and inspecting TCP requests, so what you describe is not that hard.\n\nOn AWS, the other part I did not describe is that I already have the concept of a twin: I have added digital twins, for example an S3 digital twin. It is an in-memory version, so the app may think it is operating on S3 when it is not, and then I can swap in the real one. And I can also enforce everything you just described."
+ },
+ {
+  "t": "1:21:52",
+  "who": "room",
+  "beat": "live-vault-risk-mandate",
+  "text": "A suggestion from the room: do a dry run against the digital twin to record the operations you want, and then turn those into the real AWS policy."
+ },
+ {
+  "t": "1:22:02",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "Yes. Sometimes you just let the digital twin record, then the traffic goes through, and you know what you want. But the point is that you have to capture the behaviour you want. You start where you started: I only want it to call that method on AWS, to do this, in this context, at this time of day, in this sequence of events. All of that is now the policy.\n\nAnd it is a policy that LLMs are very good at writing, that you can visualise, sign off and get risk acceptance for. Eventually the idea is that you get insurance on top of that: if the agents are doing this, and you have a policy for it, we can now insure the amount of damage they can do to a database, because we know it has been locked down by the policy."
+ },
+ {
+  "t": "1:22:49",
+  "who": "room",
+  "beat": "live-vault-risk-mandate",
+  "text": "A comment from the room: this seems to fit well with the mesh VPNs used for zero trust; you could implement it on top of them."
+ },
+ {
+  "t": "1:22:55",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "Absolutely, you can implement this on top. The problem I had with a lot of mesh VPNs is that they only solve part of the problem. They are very good at saying: I can only access that room in that building, and no other rooms or buildings. But they cannot control what happens inside the room. You have to go all the way to the actual behaviour you want inside there.\n\nMy logic is to use the best technology for each part. The mesh VPN sits on top of this, and under it, because it gets you from there to here. But you still need a way to control what happens before and after, and that is a policy."
+ },
+ {
+  "t": "1:23:39",
+  "who": "room",
+  "beat": "live-vault-risk-mandate",
+  "text": "Question from the room: that leaves the problem of the policies themselves. Where are they controlled, who manages them, and with what level of access?"
+ },
+ {
+  "t": "1:23:48",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "I agree, and that is where it all failed in the past. I came from static analysis tools, and we never solved the policy problem. But now we can. I am now doing policy management in a way I never could before."
+ },
+ {
+  "t": "1:24:01",
+  "who": "room",
+  "beat": "live-vault-risk-mandate",
+  "text": "Follow-up from the room: the policy may work, but is there something you have not shown that secures the maintenance and management of the policy itself?"
+ },
+ {
+  "t": "1:24:11",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "For me, you need to map whatever process you want, and then you can build that stack. What you are describing is a business process inside the company. That needs to be mapped out, and then we can codify it.\n\nThis is where existing tooling does not do this well, because it assumes you work in a particular way, with a particular structure, and pushes everything down into its product. So my point is: define what you mean by policy management, and then we can build it, somebody will productise it, and then it becomes a commodity."
+ },
+ {
+  "t": "1:24:46",
+  "who": "room",
+  "beat": "live-vault-risk-mandate",
+  "text": "A comment from the room: so it is its own use case."
+ },
+ {
+  "t": "1:24:50",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "It would have to be, because it is business specific. But if you look at Wardley maps, what you do is commoditise a lot of the components, so by the time you get to your business process, you are plugging together different bits of Lego. And you have to connect it to risk management, because that is what gives you the analysis to operate; that is what gives you the hook."
+ },
+ {
+  "t": "1:25:13",
+  "who": "room",
+  "beat": "live-vault-risk-mandate",
+  "text": "Question from the room: the policy seems quite clever. Could that be a problem? If there is an issue with your AI provider, network connections might not be established because it cannot work out that the policy should allow them."
+ },
+ {
+  "t": "1:25:37",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "This is where I go back to my view: the only sane way to run real-world business processes is not to have LLMs in the middle. You use them to generate the policies, and then it becomes deterministic. I would challenge you to find use cases where, with enough rounds of refactoring, you cannot get there.\n\nIf you have AI in the middle, it should be for orchestration or translation. I use a lot of semantic graphs, and it is fine to use AI to translate them for different audiences: here is a view of my reality based on your role, your language, your culture, what you want. That is a good use of AI. But the anchor is still facts; it is still evidence. And it scales, and it is not that expensive."
+ },
+ {
+  "t": "1:26:36",
+  "who": "room",
+  "beat": "live-vault-risk-mandate",
+  "text": "Question from the room: what language did you implement it in?"
+ },
+ {
+  "t": "1:26:41",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "The first version was in Python."
+ },
+ {
+  "t": "1:27:10",
+  "who": "editor",
+  "beat": "live-vault-risk-mandate",
+  "text": "If you go back in my history, I built something called the O2 platform, when I was working at Ounce Labs, which was bought by IBM; IBM AppScan was Ounce Labs in the past. I had a title along the lines of director of engineering or research. What I realised was that I had an engine that could give me a graph of the code. Change a setting and you got a dump. So I took the dump and worked with these graphs, and I looked at the rules. This is the problem with static analysis: it is limited because it does not have context.\n\nI got to the point where I would delete all the rules from the database, spend time connecting the dots, and get remarkable traces. Historically, cybersecurity companies have had a nice moat, and they always treated policy customisation as proprietary, not something you build from the ground up. I wanted to create custom policies from the ground up, and when I did, I had the most beautiful traces: a Spring configuration that told me where the attack surface was, then the interfaces, then the database and back. Massive traces that let me really understand what was going on.\n\nBut at the time it did not scale; these engines struggled even to scan the code. Now we are in a different phase: we can scale static analysis and we can scale the connections. I have a project on one of my sites where I was implementing a secrets manager, and I built a graph that goes from the use cases, the user stories and the actions, to the API, the methods, the classes and the code, with a line through the whole thing. If you want to build a static analysis tool today, that is how I would do it, and there is a document that explains it.\n\nI remember testing SharePoint, doing an assessment, and realising it was so complex from a permissions point of view that I wanted a static analysis engine just to understand it. Historically we never scaled policy management, so our tools were always limited in the value they provided. Now that is changing. This is a good example: I can now create policies all the way down to the process, all the way down to the business function, connected all the way down to the execution."
+ }
+]

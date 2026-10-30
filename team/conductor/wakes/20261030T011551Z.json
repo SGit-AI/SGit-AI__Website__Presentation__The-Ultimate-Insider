@@ -1,0 +1,37 @@
+{
+ "schema": "the-ultimate-insider/wake/v1",
+ "agent": "conductor",
+ "kind": "editor's chat",
+ "started": "2026-10-30T01:15:51Z",
+ "steps": {
+  "plan": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "The talk as given: the transcript cleaned by four sub-agents and each passage set beside its v0.2.0 slide; screenshots per beat; generator admin/tools/talk_record.py; article content/articles/the-talk-as-given.md (added to the conductor's own policy at the editor's request); the debrief recorded as brief 11 with its asks as proposals only; push to dev, v0.2.0 frozen; the hold stays. Amended: the pre-review conditions (anonymous audience; removals noted generically; raw transcript never in the repo; no key in shots; vault_check and secrets grep; no em-dashes; the unpublished project never named; v0.2.0 frozen; dev only).",
+   "at": "2026-10-30T01:16:27Z"
+  },
+  "pre_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "go",
+   "comment": "Re-review: all nine conditions adopted; also grep the final diff and repository for the unpublished project and em-dashes.",
+   "at": "2026-10-30T01:17:04Z"
+  },
+  "work": {
+   "by": "conductor",
+   "model": "opus",
+   "verdict": "done",
+   "comment": "The talk as given: 102 cleaned passages (four sub-agents; audience anonymous; language and disparaging remarks removed, noted generically; nothing added) set beside 46 of the 58 v0.2.0 slides, the 12 not reached at the end; 58 slide shots checked (live slides show placeholders only, QR codes are page links, no key); admin/tools/talk_record.py; the article added to the conductor's policy at the editor's request; brief 11, the editor's debrief, proposals only; grep: no dashes, secrets or the unpublished project; build and gate clean.",
+   "at": "2026-10-30T01:24:36Z"
+  }
+ },
+ "closed": null,
+ "outcome": null,
+ "history": [
+  {
+   "at": "01:17Z",
+   "what": "pre-review said change: adopted all nine conditions into the plan; re-review go."
+  }
+ ]
+}
