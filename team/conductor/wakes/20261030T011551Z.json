@@ -24,10 +24,24 @@
    "verdict": "done",
    "comment": "The talk as given: 102 cleaned passages (four sub-agents; audience anonymous; language and disparaging remarks removed, noted generically; nothing added) set beside 46 of the 58 v0.2.0 slides, the 12 not reached at the end; 58 slide shots checked (live slides show placeholders only, QR codes are page links, no key); admin/tools/talk_record.py; the article added to the conductor's policy at the editor's request; brief 11, the editor's debrief, proposals only; grep: no dashes, secrets or the unpublished project; build and gate clean.",
    "at": "2026-10-30T01:24:36Z"
+  },
+  "post_review": {
+   "by": "security sub-agent",
+   "model": "sonnet",
+   "verdict": "clean",
+   "comment": "All 102 passages read: audience anonymous, no swearing or disparaging remarks, no key or vault id, no dashes, no publishing plans; 7 shots viewed (placeholders on live slides, page-link QR only); HTML escaped. The conductor's own grep covered the unpublished project and secrets.",
+   "at": "2026-10-30T01:25:44Z"
+  },
+  "post_check": {
+   "by": "plan sub-agent",
+   "model": "sonnet",
+   "verdict": "as-planned",
+   "comment": "Every planned item done; raw transcript not in the repo; v0.2.0 untouched; nothing unplanned.",
+   "at": "2026-10-30T01:25:44Z"
   }
  },
- "closed": null,
- "outcome": null,
+ "closed": "2026-10-30T01:25:44Z",
+ "outcome": "ok",
  "history": [
   {
    "at": "01:17Z",
